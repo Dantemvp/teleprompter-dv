@@ -35,22 +35,26 @@
   .beat{font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:20px 0 8px;}
   .row{display:flex; gap:10px; margin-bottom:12px;}
   .row.right{flex-direction:row-reverse;}
-  .avatar{width:30px; height:30px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700;}
-  .row .avatar{background:var(--gray-bg); color:var(--gray-dark);}
-  .row.right .avatar{background:var(--teal-soft); color:var(--teal-darker);}
+  .avatar{width:30px; height:30px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; background:var(--gray-bg); color:var(--gray-dark);}
+  .row.right .avatar, .row.solo .avatar{background:var(--teal-soft); color:var(--teal-darker);}
   .bubblewrap{max-width:82%;}
-  .bubble{padding:10px 14px; border-radius:14px; font-size:15px;}
-  .row .bubble{background:#efede4;}
-  .row.right .bubble{background:var(--teal-bg); color:var(--teal-darker);}
+  .row.solo .bubblewrap{max-width:100%;}
+  .bubble{padding:10px 14px; border-radius:14px; font-size:15px; background:#efede4;}
+  .row.right .bubble, .row.solo .bubble{background:var(--teal-bg); color:var(--teal-darker);}
   .nota{font-size:12px; color:var(--muted); margin:4px 6px 0;}
   .row.right .nota{text-align:right;}
-  body.hide-notas .nota, body.hide-notas .beat{display:none;}
+  body.hide-notas .nota{display:none;}
   .toolrow{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:18px;}
   pre.plain{white-space:pre-wrap; background:#fff; border:1px solid var(--line); border-radius:12px; padding:18px; font-size:14px; font-family:inherit;}
-  .card{background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:12px;}
+  .card{background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 18px; margin-bottom:10px;}
   .card h3{font-size:15px; font-weight:600; margin-bottom:2px;}
   .card p{font-size:12px; color:var(--muted);}
   .card .actions{display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;}
+  .recblock{margin-bottom:26px;}
+  .rechead{display:flex; align-items:baseline; gap:10px; margin-bottom:12px; border-bottom:1px solid var(--line); padding-bottom:6px;}
+  .rechead h2{font-size:17px; font-weight:600;}
+  .rechead span{font-size:12px; color:var(--muted);}
+  .codebadge{display:inline-flex; align-items:center; justify-content:center; min-width:52px; padding:4px 10px; border-radius:8px; background:var(--teal-darker); color:#fff; font-size:12px; font-weight:700; letter-spacing:.04em; flex-shrink:0;}
   textarea{width:100%; min-height:180px; font:inherit; font-size:13px; padding:12px; border:1px solid var(--line); border-radius:12px; background:#fff; resize:vertical;}
   .hint{font-size:12px; color:var(--muted); margin:8px 0 14px;}
   .toast{position:fixed; bottom:24px; left:50%; transform:translateX(-50%); background:var(--ink); color:#fff; font-size:13px; padding:9px 18px; border-radius:10px; opacity:0; transition:opacity .25s; pointer-events:none; z-index:99;}
@@ -93,6 +97,12 @@ const $ = s => document.querySelector(s);
 const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const toast = m => { const t=$('#toast'); t.textContent=m; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1800); };
 const copy = (txt,msg) => navigator.clipboard.writeText(txt).then(()=>toast(msg||'Copiado'));
+const base = () => location.origin + location.pathname;
+
+const LEGACY = {
+  'podcast-01-aliwell-son-para-todos': ['ale-paz-mx27k','r2-01'],
+  'podcast-02-brackets-vs-aliwell': ['ale-paz-mx27k','r2-02']
+};
 
 function parseGuion(src){
   const g = {title:'Guion', meta:[], lines:[]};
@@ -104,7 +114,7 @@ function parseGuion(src){
     if (line.startsWith('> ')) { g.meta.push(line.slice(2).trim()); continue; }
     if (line.startsWith('## ')) { g.lines.push({beat:line.slice(3).trim()}); last=null; continue; }
     if (line.startsWith('//')) { if(last) last.nota = (last.nota?last.nota+' ':'')+line.slice(2).trim(); continue; }
-    const m = line.match(/^([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑ .]{1,24}?):\s+(.*)$/);
+    const m = line.match(/^([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑ0-9 .]{1,24}?):\s+(.*)$/);
     if (m){ last = {speaker:m[1].trim(), text:m[2].trim()}; g.lines.push(last); }
     else if (last && last.text){ last.text += ' ' + line; }
   }
@@ -126,21 +136,21 @@ function plainText(g){
   return out.trim();
 }
 
-function renderGuion(g, canonical){
+function renderGuion(g, canonical, backHref){
   const spk = speakerOrder(g);
+  const solo = spk.length < 2;
   let conv = '';
   for (const l of g.lines){
     if (l.beat){ conv += `<p class="beat">${esc(l.beat)}</p>`; continue; }
     const idx = spk.indexOf(l.speaker);
-    const right = idx === 1;
-    const initials = l.speaker.slice(0,3);
-    conv += `<div class="row ${right?'right':''}"><div class="avatar">${esc(initials)}</div><div class="bubblewrap"><div class="bubble">${esc(l.text)}</div>${l.nota?`<p class="nota">${esc(l.nota)}</p>`:''}</div></div>`;
+    const cls = solo ? 'solo' : (idx===1 ? 'right' : '');
+    conv += `<div class="row ${cls}"><div class="avatar">${esc(l.speaker.slice(0,3))}</div><div class="bubblewrap"><div class="bubble">${esc(l.text)}</div>${l.nota?`<p class="nota">${esc(l.nota)}</p>`:''}</div></div>`;
   }
   const chips = g.meta.map(m=>`<span class="chip g">${esc(m)}</span>`).join('');
   $('#app').innerHTML = `
     <header class="site"><div class="logo">DV</div><div><h1>${esc(g.title)}</h1><p>Consultora DV · plan de grabación</p></div></header>
     <div class="meta-chips">${chips}</div>
-    <div class="refbar">Link de referencia: <code>${esc(canonical)}</code> <button class="mini" onclick="copy('${canonical.replace(/'/g,"\\'")}','Link copiado')">Copiar link</button> <a href="./" style="font-size:12px;">← todos los guiones</a></div>
+    <div class="refbar">Link de referencia: <code>${esc(canonical)}</code> <button class="mini" onclick="copy('${canonical.replace(/'/g,"\\'")}','Link copiado')">Copiar link</button> ${backHref?`<a href="${backHref}" style="font-size:12px;">← todos mis guiones</a>`:''}</div>
     <div class="tabs">
       <button class="on" data-v="conv">Conversación</button>
       <button data-v="plain">Texto plano</button>
@@ -169,11 +179,29 @@ function renderGuion(g, canonical){
   });
 }
 
+function renderClient(data, token){
+  const blocks = (data.grabaciones||[]).map(rec => {
+    const cards = rec.guiones.map(it => {
+      const url = base() + '?c=' + token + '&g=' + it.slug;
+      const cod = it.slug.toUpperCase();
+      return `<div class="card"><div style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}</h3><p>${esc(it.info||'')}</p></div></div>
+        <div class="actions"><a href="?c=${token}&g=${it.slug}"><button class="primary mini">Abrir guion</button></a>
+        <button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button></div></div>`;
+    }).join('');
+    return `<div class="recblock"><div class="rechead"><h2>${esc(rec.rec)} · ${esc(rec.nombre||'Grabación')}</h2><span>${esc(rec.fecha||'')}${rec.locacion?' · '+esc(rec.locacion):''}</span></div>${cards}</div>`;
+  }).join('');
+  $('#app').innerHTML = `
+    <header class="site"><div class="logo">DV</div><div><h1>${esc(data.cliente)}</h1><p>Tus guiones de grabación · Consultora DV</p></div></header>
+    <p class="hint" style="margin:14px 0 26px;">Guarda este link: aquí aparecerán todas tus grabaciones. Cada guion tiene vista de lectura, texto plano y teleprompter.</p>
+    ${blocks || '<p class="hint">Aún no hay guiones publicados para este cliente.</p>'}`;
+}
+
 let tpAnim = null, tpPlaying = false;
 function openTP(g, spk){
   const t = $('#tptext');
+  const solo = spk.length < 2;
   t.innerHTML = g.lines.filter(l=>!l.beat).map(l=>{
-    const cls = spk.indexOf(l.speaker)===1 ? 'spk2' : 'spk1';
+    const cls = (solo || spk.indexOf(l.speaker)===1) ? 'spk2' : 'spk1';
     return `<div class="l ${cls}"><span class="who">${esc(l.speaker)}</span>${esc(l.text)}</div>`;
   }).join('');
   t.style.fontSize = $('#tpsize').value + 'px';
@@ -206,27 +234,17 @@ document.addEventListener('keydown', e => {
   if (e.code === 'Escape'){ $('#tp').classList.remove('on'); setPlay(false); }
 });
 
-async function renderHome(){
-  let list = [];
-  try { list = await (await fetch('guiones/index.json')).json(); } catch(e){}
-  const cards = list.map(it => {
-    const url = location.origin + location.pathname + '?g=' + it.slug;
-    return `<div class="card"><h3>${esc(it.titulo)}</h3><p>${esc(it.info||'')}</p>
-      <div class="actions"><a href="?g=${it.slug}"><button class="primary mini">Abrir guion</button></a>
-      <button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button></div></div>`;
-  }).join('') || '<p class="hint">Aún no hay guiones publicados.</p>';
+function renderHome(){
   $('#app').innerHTML = `
     <header class="site"><div class="logo">DV</div><div><h1>Guiones · Consultora DV</h1><p>Teleprompter y planeación de grabación</p></div></header>
-    <h2 style="font-size:15px; font-weight:600; margin:26px 0 12px;">Guiones publicados</h2>
-    ${cards}
-    <h2 style="font-size:15px; font-weight:600; margin:30px 0 6px;">Pegar un guion suelto</h2>
-    <p class="hint">Pega el diálogo (PERSONAJE: línea · "//" para indicaciones · "## " para beats) y genera un link compartible sin subir nada al repositorio.</p>
-    <textarea id="paste" placeholder="# Título del guion&#10;> Cliente: ...&#10;ENTREVISTADOR: ...&#10;DRA: ...&#10;// indicación de dirección"></textarea>
+    <p class="hint" style="margin:16px 0 30px;">Si eres cliente de la consultora, entra con el link personal que te compartió tu estratega. Ahí viven todas tus grabaciones y guiones.</p>
+    <h2 style="font-size:15px; font-weight:600; margin:0 0 6px;">Pegar un guion suelto</h2>
+    <p class="hint">Pega el diálogo (PERSONAJE: línea · "//" para indicaciones · "## " para secciones) y genera un link compartible al instante.</p>
+    <textarea id="paste" placeholder="# Título del guion&#10;> Cliente: ...&#10;DRA: ...&#10;// indicación de dirección"></textarea>
     <div class="toolrow" style="margin-top:10px;"><button class="primary" id="genlink">Generar link</button><button id="prev">Previsualizar</button></div>`;
   $('#genlink').onclick = () => {
     const v = $('#paste').value.trim(); if(!v) return toast('Pega un guion primero');
-    const url = location.origin + location.pathname + '#d=' + LZString.compressToEncodedURIComponent(v);
-    copy(url,'Link generado y copiado');
+    copy(base() + '#d=' + LZString.compressToEncodedURIComponent(v), 'Link generado y copiado');
   };
   $('#prev').onclick = () => {
     const v = $('#paste').value.trim(); if(!v) return toast('Pega un guion primero');
@@ -239,16 +257,26 @@ async function boot(){
   const q = new URLSearchParams(location.search);
   if (location.hash.startsWith('#d=')){
     const src = LZString.decompressFromEncodedURIComponent(location.hash.slice(3));
-    if (src){ renderGuion(parseGuion(src), location.href); return; }
+    if (src){ renderGuion(parseGuion(src), location.href, null); return; }
   }
-  if (q.get('g')){
-    const slug = q.get('g').replace(/[^a-z0-9\-_]/gi,'');
+  let c = q.get('c') ? q.get('c').replace(/[^a-z0-9\-_]/gi,'') : null;
+  let g = q.get('g') ? q.get('g').replace(/[^a-z0-9\-_]/gi,'') : null;
+  if (!c && g && LEGACY[g]){ [c, g] = LEGACY[g]; }
+  if (c && g){
     try{
-      const r = await fetch('guiones/' + slug + '.md');
+      const r = await fetch('clientes/' + c + '/' + g + '.md');
       if (!r.ok) throw 0;
-      renderGuion(parseGuion(await r.text()), location.origin + location.pathname + '?g=' + slug);
+      renderGuion(parseGuion(await r.text()), base() + '?c=' + c + '&g=' + g, '?c=' + c);
       return;
-    }catch(e){ $('#app').innerHTML = '<p style="padding:40px 0">Guion no encontrado. <a href="./">Volver al índice</a></p>'; return; }
+    }catch(e){ $('#app').innerHTML = '<p style="padding:40px 0">Guion no encontrado. Revisa el link con tu estratega.</p>'; return; }
+  }
+  if (c){
+    try{
+      const r = await fetch('clientes/' + c + '/index.json');
+      if (!r.ok) throw 0;
+      renderClient(await r.json(), c);
+      return;
+    }catch(e){ $('#app').innerHTML = '<p style="padding:40px 0">Cliente no encontrado. Revisa el link con tu estratega.</p>'; return; }
   }
   renderHome();
 }

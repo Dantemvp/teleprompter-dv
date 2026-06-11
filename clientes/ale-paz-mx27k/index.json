@@ -1,0 +1,15 @@
+{
+  "cliente": "Dra. Alejandra Paz",
+  "grabaciones": [
+    {
+      "rec": "R2",
+      "nombre": "Segunda grabación",
+      "fecha": "16/06/2026",
+      "locacion": "Consultorio · set podcast",
+      "guiones": [
+        { "slug": "r2-01", "titulo": "Podcast — Alineadores Aliwell, ¿son para todos?", "info": "80–90 seg · formato Podcast Consulta" },
+        { "slug": "r2-02", "titulo": "Podcast — Brackets vs Aliwell, ¿cuál es mejor?", "info": "80–90 seg · formato Podcast Consulta" }
+      ]
+    }
+  ]
+}
