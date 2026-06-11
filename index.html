@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Guiones · Consultora DV</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
+<style>
+  :root{
+    --teal:#1D9E75; --teal-dark:#0F6E56; --teal-darker:#04342C; --teal-bg:#E1F5EE; --teal-soft:#9FE1CB;
+    --gray-bg:#F1EFE8; --gray-dark:#444441; --ink:#1c1c1a; --muted:#76756e; --line:#e3e1d8; --paper:#fbfaf7;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--paper); color:var(--ink); line-height:1.6;}
+  .wrap{max-width:760px; margin:0 auto; padding:28px 18px 80px;}
+  header.site{display:flex; align-items:center; gap:12px; margin-bottom:6px;}
+  .logo{width:38px; height:38px; border-radius:50%; background:var(--teal-bg); color:var(--teal-dark); display:flex; align-items:center; justify-content:center; font-weight:600; font-size:13px; flex-shrink:0;}
+  header.site h1{font-size:19px; font-weight:600;}
+  header.site p{font-size:13px; color:var(--muted);}
+  a{color:var(--teal-dark);}
+  .meta-chips{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 4px;}
+  .chip{font-size:12px; padding:4px 12px; border-radius:8px; background:var(--teal-bg); color:var(--teal-dark);}
+  .chip.g{background:var(--gray-bg); color:var(--gray-dark);}
+  .refbar{display:flex; align-items:center; gap:8px; margin:10px 0 18px; font-size:12px; color:var(--muted); flex-wrap:wrap;}
+  .refbar code{background:var(--gray-bg); padding:3px 8px; border-radius:6px; font-size:11px; max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:inline-block; vertical-align:middle;}
+  button{font:inherit; font-size:13px; padding:7px 14px; border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--ink); cursor:pointer;}
+  button:hover{background:var(--gray-bg);}
+  button.primary{background:var(--teal-dark); border-color:var(--teal-dark); color:#fff;}
+  button.primary:hover{background:var(--teal-darker);}
+  button.mini{font-size:11px; padding:3px 10px;}
+  .tabs{display:flex; gap:6px; border-bottom:1px solid var(--line); margin:6px 0 22px;}
+  .tabs button{border:none; background:none; border-radius:8px 8px 0 0; padding:9px 14px; color:var(--muted); border-bottom:2px solid transparent;}
+  .tabs button.on{color:var(--teal-darker); border-bottom-color:var(--teal); font-weight:600; background:none;}
+  .beat{font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:20px 0 8px;}
+  .row{display:flex; gap:10px; margin-bottom:12px;}
+  .row.right{flex-direction:row-reverse;}
+  .avatar{width:30px; height:30px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700;}
+  .row .avatar{background:var(--gray-bg); color:var(--gray-dark);}
+  .row.right .avatar{background:var(--teal-soft); color:var(--teal-darker);}
+  .bubblewrap{max-width:82%;}
+  .bubble{padding:10px 14px; border-radius:14px; font-size:15px;}
+  .row .bubble{background:#efede4;}
+  .row.right .bubble{background:var(--teal-bg); color:var(--teal-darker);}
+  .nota{font-size:12px; color:var(--muted); margin:4px 6px 0;}
+  .row.right .nota{text-align:right;}
+  body.hide-notas .nota, body.hide-notas .beat{display:none;}
+  .toolrow{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:18px;}
+  pre.plain{white-space:pre-wrap; background:#fff; border:1px solid var(--line); border-radius:12px; padding:18px; font-size:14px; font-family:inherit;}
+  .card{background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin-bottom:12px;}
+  .card h3{font-size:15px; font-weight:600; margin-bottom:2px;}
+  .card p{font-size:12px; color:var(--muted);}
+  .card .actions{display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;}
+  textarea{width:100%; min-height:180px; font:inherit; font-size:13px; padding:12px; border:1px solid var(--line); border-radius:12px; background:#fff; resize:vertical;}
+  .hint{font-size:12px; color:var(--muted); margin:8px 0 14px;}
+  .toast{position:fixed; bottom:24px; left:50%; transform:translateX(-50%); background:var(--ink); color:#fff; font-size:13px; padding:9px 18px; border-radius:10px; opacity:0; transition:opacity .25s; pointer-events:none; z-index:99;}
+  .toast.show{opacity:1;}
+  #tp{position:fixed; inset:0; background:#0e0f0e; color:#f5f4ef; display:none; z-index:50;}
+  #tp.on{display:block;}
+  #tpscroll{position:absolute; inset:0; overflow-y:auto; padding:45vh 6vw;}
+  #tptext{max-width:880px; margin:0 auto;}
+  #tptext .l{margin-bottom:1.2em;}
+  #tptext .who{display:block; font-size:.42em; letter-spacing:.12em; opacity:.55; margin-bottom:.15em;}
+  #tptext .l.spk1{color:#8a8a82;}
+  #tptext .l.spk2{color:#fff;}
+  #tptext .l.spk2 .who{color:var(--teal-soft); opacity:1;}
+  #tpbar{position:fixed; left:0; right:0; bottom:0; display:flex; gap:14px; align-items:center; padding:12px 18px; background:rgba(14,15,14,.92); flex-wrap:wrap; z-index:51;}
+  #tpbar label{font-size:11px; color:#8a8a82; display:flex; align-items:center; gap:8px;}
+  #tpbar input[type=range]{width:110px; accent-color:var(--teal);}
+  #tpbar button{background:#1d1f1d; border-color:#333; color:#eee;}
+  .mirror #tptext{transform:scaleX(-1);}
+  @media(max-width:520px){ .bubblewrap{max-width:88%;} .wrap{padding-top:18px;} }
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+
+<div id="tp">
+  <div id="tpscroll"><div id="tptext"></div></div>
+  <div id="tpbar">
+    <button id="tpplay" class="primary">▶ Iniciar</button>
+    <label>Velocidad <input type="range" id="tpspeed" min="10" max="200" value="55"></label>
+    <label>Tamaño <input type="range" id="tpsize" min="22" max="80" value="44"></label>
+    <button id="tpmirror" class="mini">Espejo</button>
+    <button id="tprestart" class="mini">Reiniciar</button>
+    <button id="tpexit" class="mini">Salir (Esc)</button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const toast = m => { const t=$('#toast'); t.textContent=m; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1800); };
+const copy = (txt,msg) => navigator.clipboard.writeText(txt).then(()=>toast(msg||'Copiado'));
+
+function parseGuion(src){
+  const g = {title:'Guion', meta:[], lines:[]};
+  let last = null;
+  for (let raw of src.split('\n')){
+    const line = raw.trim();
+    if (!line) continue;
+    if (line.startsWith('# ')) { g.title = line.slice(2).trim(); continue; }
+    if (line.startsWith('> ')) { g.meta.push(line.slice(2).trim()); continue; }
+    if (line.startsWith('## ')) { g.lines.push({beat:line.slice(3).trim()}); last=null; continue; }
+    if (line.startsWith('//')) { if(last) last.nota = (last.nota?last.nota+' ':'')+line.slice(2).trim(); continue; }
+    const m = line.match(/^([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑ .]{1,24}?):\s+(.*)$/);
+    if (m){ last = {speaker:m[1].trim(), text:m[2].trim()}; g.lines.push(last); }
+    else if (last && last.text){ last.text += ' ' + line; }
+  }
+  return g;
+}
+
+function speakerOrder(g){
+  const seen = [];
+  for (const l of g.lines) if (l.speaker && !seen.includes(l.speaker)) seen.push(l.speaker);
+  return seen;
+}
+
+function plainText(g){
+  let out = g.title.toUpperCase() + '\n' + g.meta.join('  ·  ') + '\n\n';
+  for (const l of g.lines){
+    if (l.beat) continue;
+    out += l.speaker + ': ' + l.text + '\n\n';
+  }
+  return out.trim();
+}
+
+function renderGuion(g, canonical){
+  const spk = speakerOrder(g);
+  let conv = '';
+  for (const l of g.lines){
+    if (l.beat){ conv += `<p class="beat">${esc(l.beat)}</p>`; continue; }
+    const idx = spk.indexOf(l.speaker);
+    const right = idx === 1;
+    const initials = l.speaker.slice(0,3);
+    conv += `<div class="row ${right?'right':''}"><div class="avatar">${esc(initials)}</div><div class="bubblewrap"><div class="bubble">${esc(l.text)}</div>${l.nota?`<p class="nota">${esc(l.nota)}</p>`:''}</div></div>`;
+  }
+  const chips = g.meta.map(m=>`<span class="chip g">${esc(m)}</span>`).join('');
+  $('#app').innerHTML = `
+    <header class="site"><div class="logo">DV</div><div><h1>${esc(g.title)}</h1><p>Consultora DV · plan de grabación</p></div></header>
+    <div class="meta-chips">${chips}</div>
+    <div class="refbar">Link de referencia: <code>${esc(canonical)}</code> <button class="mini" onclick="copy('${canonical.replace(/'/g,"\\'")}','Link copiado')">Copiar link</button> <a href="./" style="font-size:12px;">← todos los guiones</a></div>
+    <div class="tabs">
+      <button class="on" data-v="conv">Conversación</button>
+      <button data-v="plain">Texto plano</button>
+      <button data-v="tp">Teleprompter</button>
+    </div>
+    <div id="v-conv">
+      <div class="toolrow"><button class="mini" id="toggleNotas">Ocultar indicaciones</button></div>
+      ${conv}
+    </div>
+    <div id="v-plain" style="display:none">
+      <div class="toolrow"><button class="primary" id="copyPlain">Copiar para Google Docs</button></div>
+      <pre class="plain">${esc(plainText(g))}</pre>
+    </div>`;
+
+  $('#toggleNotas').onclick = () => {
+    document.body.classList.toggle('hide-notas');
+    $('#toggleNotas').textContent = document.body.classList.contains('hide-notas') ? 'Mostrar indicaciones' : 'Ocultar indicaciones';
+  };
+  $('#copyPlain').onclick = () => copy(plainText(g),'Guion copiado · pégalo en Google Docs');
+  document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => {
+    if (b.dataset.v === 'tp') { openTP(g, spk); return; }
+    document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    $('#v-conv').style.display = b.dataset.v==='conv' ? '' : 'none';
+    $('#v-plain').style.display = b.dataset.v==='plain' ? '' : 'none';
+  });
+}
+
+let tpAnim = null, tpPlaying = false;
+function openTP(g, spk){
+  const t = $('#tptext');
+  t.innerHTML = g.lines.filter(l=>!l.beat).map(l=>{
+    const cls = spk.indexOf(l.speaker)===1 ? 'spk2' : 'spk1';
+    return `<div class="l ${cls}"><span class="who">${esc(l.speaker)}</span>${esc(l.text)}</div>`;
+  }).join('');
+  t.style.fontSize = $('#tpsize').value + 'px';
+  $('#tp').classList.add('on');
+  $('#tpscroll').scrollTop = 0;
+  setPlay(false);
+}
+function setPlay(p){
+  tpPlaying = p;
+  $('#tpplay').textContent = p ? '❚❚ Pausa' : '▶ Iniciar';
+  if (p && !tpAnim) tick();
+}
+function tick(){
+  tpAnim = requestAnimationFrame(()=>{ tpAnim=null;
+    if (!tpPlaying) return;
+    const sc = $('#tpscroll');
+    sc.scrollTop += $('#tpspeed').value / 60;
+    if (sc.scrollTop + sc.clientHeight >= sc.scrollHeight - 2) { setPlay(false); return; }
+    tick();
+  });
+}
+$('#tpplay').onclick = () => setPlay(!tpPlaying);
+$('#tpsize').oninput = e => $('#tptext').style.fontSize = e.target.value + 'px';
+$('#tpmirror').onclick = () => $('#tp').classList.toggle('mirror');
+$('#tprestart').onclick = () => { $('#tpscroll').scrollTop = 0; setPlay(false); };
+$('#tpexit').onclick = () => { $('#tp').classList.remove('on'); setPlay(false); };
+document.addEventListener('keydown', e => {
+  if (!$('#tp').classList.contains('on')) return;
+  if (e.code === 'Space'){ e.preventDefault(); setPlay(!tpPlaying); }
+  if (e.code === 'Escape'){ $('#tp').classList.remove('on'); setPlay(false); }
+});
+
+async function renderHome(){
+  let list = [];
+  try { list = await (await fetch('guiones/index.json')).json(); } catch(e){}
+  const cards = list.map(it => {
+    const url = location.origin + location.pathname + '?g=' + it.slug;
+    return `<div class="card"><h3>${esc(it.titulo)}</h3><p>${esc(it.info||'')}</p>
+      <div class="actions"><a href="?g=${it.slug}"><button class="primary mini">Abrir guion</button></a>
+      <button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button></div></div>`;
+  }).join('') || '<p class="hint">Aún no hay guiones publicados.</p>';
+  $('#app').innerHTML = `
+    <header class="site"><div class="logo">DV</div><div><h1>Guiones · Consultora DV</h1><p>Teleprompter y planeación de grabación</p></div></header>
+    <h2 style="font-size:15px; font-weight:600; margin:26px 0 12px;">Guiones publicados</h2>
+    ${cards}
+    <h2 style="font-size:15px; font-weight:600; margin:30px 0 6px;">Pegar un guion suelto</h2>
+    <p class="hint">Pega el diálogo (PERSONAJE: línea · "//" para indicaciones · "## " para beats) y genera un link compartible sin subir nada al repositorio.</p>
+    <textarea id="paste" placeholder="# Título del guion&#10;> Cliente: ...&#10;ENTREVISTADOR: ...&#10;DRA: ...&#10;// indicación de dirección"></textarea>
+    <div class="toolrow" style="margin-top:10px;"><button class="primary" id="genlink">Generar link</button><button id="prev">Previsualizar</button></div>`;
+  $('#genlink').onclick = () => {
+    const v = $('#paste').value.trim(); if(!v) return toast('Pega un guion primero');
+    const url = location.origin + location.pathname + '#d=' + LZString.compressToEncodedURIComponent(v);
+    copy(url,'Link generado y copiado');
+  };
+  $('#prev').onclick = () => {
+    const v = $('#paste').value.trim(); if(!v) return toast('Pega un guion primero');
+    location.hash = '#d=' + LZString.compressToEncodedURIComponent(v);
+    boot();
+  };
+}
+
+async function boot(){
+  const q = new URLSearchParams(location.search);
+  if (location.hash.startsWith('#d=')){
+    const src = LZString.decompressFromEncodedURIComponent(location.hash.slice(3));
+    if (src){ renderGuion(parseGuion(src), location.href); return; }
+  }
+  if (q.get('g')){
+    const slug = q.get('g').replace(/[^a-z0-9\-_]/gi,'');
+    try{
+      const r = await fetch('guiones/' + slug + '.md');
+      if (!r.ok) throw 0;
+      renderGuion(parseGuion(await r.text()), location.origin + location.pathname + '?g=' + slug);
+      return;
+    }catch(e){ $('#app').innerHTML = '<p style="padding:40px 0">Guion no encontrado. <a href="./">Volver al índice</a></p>'; return; }
+  }
+  renderHome();
+}
+window.addEventListener('hashchange', boot);
+boot();
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+# Podcast Consulta 02 — Brackets vs Aliwell, ¿cuál es mejor?
+> Cliente: Dra. Alejandra Paz
+> Duración: 80–90 seg
+> Locación: Set podcast · consultorio
+> Idea central: el aparato no se elige por moda, se elige con diagnóstico
+
+## Beat 1 · La pregunta
+ENTREVISTADOR: Doctora, la pelea del siglo: ¿brackets o alineadores? ¿Cuál es mejor?
+// Arranque en frío con el versus directo. Es el gancho más buscado del nicho.
+
+## Beat 2 · La analogía
+DRA: ¿Tú usas lentes?
+// Contra-pregunta inmediata, sin pausa.
+ENTREVISTADOR: Sí, de armazón.
+DRA: ¿Y por qué no de contacto, si no se notan?
+// Tono curioso, ceja levantada.
+ENTREVISTADOR: Pues... hay que cuidarlos mucho. Me da flojera.
+// Risa honesta. Este momento humaniza. Corte rápido.
+DRA: Acabas de responder tu propia pregunta.
+// Pausa de un segundo después de la línea. Zoom in. Momento clip del video.
+
+## Beat 3 · El aterrizaje
+DRA: Los dos mueven dientes. El bracket va pegado: trabaja 24 horas aunque tú te olvides de que existe. El alineador no se nota y no te lastima, pero depende de ti 22 horas al día.
+// B-roll: brackets en modelo dental, luego alineador. Subtítulos resaltan "24 horas" y "22 horas".
+
+## Beat 4 · La verdad incómoda
+ENTREVISTADOR: ¿Entonces el alineador es para gente disciplinada?
+DRA: Y para ciertos casos. Hay movimientos donde el alineador es más cómodo y más estético: espacios, dientes girados, apiñamiento ligero. Y hay mordidas complicadas donde el bracket sigue mandando.
+// Corazón del video. Zoom in lento. Palabra clave: "el bracket sigue mandando".
+
+## Beat 5 · El filtro
+ENTREVISTADOR: ¿Y si yo llego a su consultorio pidiendo alineadores?
+DRA: Primero veo tu caso. El error más caro en ortodoncia es elegir el aparato por moda. El aparato se elige con una radiografía enfrente. Si tu caso es para Aliwell, qué mejor. Si pide brackets, te explico por qué y tú decides con la verdad completa.
+// Única mención de Aliwell. Insert: radiografía panorámica, 1 seg.
+
+## Beat 6 · Cierre y CTA
+DRA: Llevo 30 años colocando los dos. El mejor aparato es el que termina tu tratamiento a tiempo y sin sorpresas. ¿Quieres saber cuál te toca? Agenda tu valoración con tu doctora Ale Paz, y sígueme para decidir informado.
+// Rompe la cuarta pared solo aquí. Corte seco al logo, sin música épica.
