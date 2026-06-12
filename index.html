@@ -68,6 +68,10 @@
   .card h3{font-size:15px; font-weight:600; margin-bottom:2px;}
   .card p{font-size:12px; color:var(--muted);}
   .card .actions{display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;}
+  .card.done{background:var(--teal-bg); border-color:var(--teal-soft);}
+  .donechip{display:none; font-size:11px; background:var(--teal-dark); color:#fff; padding:3px 9px; border-radius:6px; align-self:center; white-space:nowrap;}
+  .card.done .donechip{display:inline-block;}
+  .card.done .btnGrabado{background:var(--teal-dark); border-color:var(--teal-dark); color:#fff;}
   .recblock{margin-bottom:26px;}
   .rechead{display:flex; align-items:baseline; gap:10px; margin-bottom:12px; border-bottom:1px solid var(--line); padding-bottom:6px;}
   .rechead h2{font-size:17px; font-weight:600;}
@@ -140,6 +144,7 @@ const copy = (txt,msg) => navigator.clipboard.writeText(txt).then(()=>toast(msg|
 const base = () => location.origin + location.pathname;
 const DASH_TOKEN = 'dv-mando-9q2k7x';
 const SAVE_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/save';
+const STATUS_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/status';
 
 function askPassword(title){
   return new Promise(resolve => {
@@ -379,20 +384,55 @@ function renderGuion(g, canonical, backHref, opts){
 }
 
 function renderClient(data, token){
-  const blocks = (data.grabaciones||[]).map(rec => {
+  const blocks = (data.grabaciones||[]).map((rec, ri) => {
+    const total = (rec.guiones||[]).length;
+    const done = (rec.guiones||[]).filter(x=>x.grabado).length;
     const cards = rec.guiones.map(it => {
       const url = base() + '?c=' + token + '&g=' + it.slug;
       const cod = it.slug.toUpperCase();
-      return `<div class="card"><div style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}</h3><p>${esc(it.info||'')}</p></div></div>
+      const toggle = STATUS_ENDPOINT ? `<button class="mini btnGrabado" data-slug="${attr(it.slug)}" data-grabado="${it.grabado?1:0}">${it.grabado?'✓ Grabado':'Marcar grabado'}</button>` : '';
+      return `<div class="card${it.grabado?' done':''}" data-card="${attr(it.slug)}" data-rec="${ri}"><div style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}</h3><p>${esc(it.info||'')}</p></div><span class="donechip">✓ Grabado</span></div>
         <div class="actions"><a href="?c=${token}&g=${it.slug}"><button class="primary mini">Abrir guion</button></a>
-        <button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button></div></div>`;
+        <button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}</div></div>`;
     }).join('');
-    return `<div class="recblock"><div class="rechead"><h2>${esc(rec.rec)} · ${esc(rec.nombre||'Grabación')}</h2><span>${esc(rec.fecha||'')}${rec.locacion?' · '+esc(rec.locacion):''}</span></div>${cards}</div>`;
+    return `<div class="recblock"><div class="rechead"><h2>${esc(rec.rec)} · ${esc(rec.nombre||'Grabación')}</h2><span>${esc(rec.fecha||'')}${rec.locacion?' · '+esc(rec.locacion):''} · <span class="donecount" data-rec="${ri}">${done}/${total} grabados</span></span></div>${cards}</div>`;
   }).join('');
   $('#app').innerHTML = `
     <header class="site"><div class="logo">DV</div><div><h1>${esc(data.cliente)}</h1><p>Tus guiones de grabación · Consultora DV</p></div></header>
-    <p class="hint" style="margin:14px 0 26px;">Guarda este link: aquí aparecerán todas tus grabaciones. Cada guion tiene vista de lectura, texto plano y teleprompter.</p>
+    <p class="hint" style="margin:14px 0 26px;">Guarda este link: aquí aparecerán todas tus grabaciones. Marca cada guion como grabado con la palomita.</p>
     ${blocks || '<p class="hint">Aún no hay guiones publicados para este cliente.</p>'}`;
+  document.querySelectorAll('.btnGrabado').forEach(b => b.onclick = () => toggleGrabado(token, b));
+}
+
+async function toggleGrabado(token, btn){
+  const slug = btn.dataset.slug;
+  const next = btn.dataset.grabado !== '1';
+  let pw = sessionStorage.getItem('dvpw');
+  if (!pw){ pw = await askPassword('Contraseña para marcar grabado'); if (pw === null) return; }
+  const old = btn.textContent;
+  btn.disabled = true; btn.textContent = 'Guardando...';
+  try {
+    const r = await fetch(STATUS_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ password: pw, client: token, slug, grabado: next }) });
+    if (r.status === 401){ sessionStorage.removeItem('dvpw'); throw new Error('Contraseña incorrecta'); }
+    if (!r.ok) throw new Error(await r.text());
+    sessionStorage.setItem('dvpw', pw);
+    btn.dataset.grabado = next ? '1' : '0';
+    btn.textContent = next ? '✓ Grabado' : 'Marcar grabado';
+    const card = document.querySelector(`.card[data-card="${CSS.escape(slug)}"]`);
+    if (card){
+      card.classList.toggle('done', next);
+      const ri = card.dataset.rec;
+      const cards = document.querySelectorAll(`.card[data-rec="${ri}"]`);
+      const d = [...cards].filter(c=>c.classList.contains('done')).length;
+      const cnt = document.querySelector(`.donecount[data-rec="${ri}"]`);
+      if (cnt) cnt.textContent = `${d}/${cards.length} grabados`;
+    }
+    toast(next ? 'Marcado como grabado ✓ (visible en ~1 min)' : 'Desmarcado');
+  } catch (e){
+    toast('Error: ' + (e.message||e));
+    btn.textContent = old;
+  }
+  btn.disabled = false;
 }
 
 async function renderAdmin(data, token){
@@ -404,7 +444,7 @@ async function renderAdmin(data, token){
       nGuiones = recs.reduce((a,r)=>a+(r.guiones||[]).length, 0);
     }catch(e){}
     const portal = base() + '?c=' + cl.token;
-    const recChips = recs.map(r=>`<span class="chip g">${esc(r.rec)} · ${esc((r.guiones||[]).length+' guiones')}${r.fecha?' · '+esc(r.fecha):''}</span>`).join('');
+    const recChips = recs.map(r=>{ const t=(r.guiones||[]).length, d=(r.guiones||[]).filter(x=>x.grabado).length; return `<span class="chip g">${esc(r.rec)} · ${t} guiones · ${d}/${t} grabados</span>`; }).join('');
     return `<div class="card">
       <div style="display:flex; gap:12px; align-items:flex-start;">
         <span class="codebadge" style="min-width:auto;">${esc(String(nGuiones))}</span>
