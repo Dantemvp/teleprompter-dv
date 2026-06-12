@@ -139,7 +139,7 @@ const toast = m => { const t=$('#toast'); t.textContent=m; t.classList.add('show
 const copy = (txt,msg) => navigator.clipboard.writeText(txt).then(()=>toast(msg||'Copiado'));
 const base = () => location.origin + location.pathname;
 const DASH_TOKEN = 'dv-mando-9q2k7x';
-const SAVE_ENDPOINT = ''; // URL de la función de Vercel, ej. https://teleprompter-dv.vercel.app/api/save
+const SAVE_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/save';
 
 function askPassword(title){
   return new Promise(resolve => {
