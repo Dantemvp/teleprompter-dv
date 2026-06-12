@@ -44,6 +44,11 @@
   .nota{font-size:12px; color:var(--muted); margin:4px 6px 0;}
   .row.right .nota{text-align:right;}
   body.hide-notas .nota{display:none;}
+  body.editing .bubble, body.editing .nota, body.editing .beat, body.editing h1[contenteditable="true"]{outline:1.5px dashed var(--teal); outline-offset:3px; border-radius:8px;}
+  body.editing .bubble:focus, body.editing .nota:focus, body.editing .beat:focus, body.editing h1:focus{outline:2px solid var(--teal);}
+  .editbar{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:16px; padding:10px 14px; background:var(--teal-bg); border-radius:10px;}
+  .editbar span{font-size:12px; color:var(--teal-dark); margin-right:4px;}
+  .banner{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:16px; padding:10px 14px; background:#FAEEDA; border-radius:10px; font-size:12px; color:#854F0B;}
   .toolrow{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:18px;}
   pre.plain{white-space:pre-wrap; background:#fff; border:1px solid var(--line); border-radius:12px; padding:18px; font-size:14px; font-family:inherit;}
   .card{background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 18px; margin-bottom:10px;}
@@ -136,34 +141,59 @@ function plainText(g){
   return out.trim();
 }
 
-function renderGuion(g, canonical, backHref){
+function toMarkdown(g){
+  let out = '# ' + g.title + '\n';
+  g.meta.forEach(m => out += '> ' + m + '\n');
+  g.lines.forEach(l => {
+    if (l.beat){ out += '\n## ' + l.beat + '\n'; return; }
+    out += '\n' + l.speaker + ': ' + l.text + '\n';
+    if (l.nota) out += '// ' + l.nota + '\n';
+  });
+  return out.trim() + '\n';
+}
+function downloadMd(name, text){
+  const blob = new Blob([text], {type:'text/markdown;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
+}
+const EDIT_PW = '1qaz2wsx3EDC';
+
+function renderGuion(g, canonical, backHref, opts){
+  opts = opts || {};
   const spk = speakerOrder(g);
   const solo = spk.length < 2;
   let conv = '';
-  for (const l of g.lines){
-    if (l.beat){ conv += `<p class="beat">${esc(l.beat)}</p>`; continue; }
+  g.lines.forEach((l, i) => {
+    if (l.beat){ conv += `<p class="beat" data-li="${i}">${esc(l.beat)}</p>`; return; }
     const idx = spk.indexOf(l.speaker);
     const cls = solo ? 'solo' : (idx===1 ? 'right' : '');
-    conv += `<div class="row ${cls}"><div class="avatar">${esc(l.speaker.slice(0,3))}</div><div class="bubblewrap"><div class="bubble">${esc(l.text)}</div>${l.nota?`<p class="nota">${esc(l.nota)}</p>`:''}</div></div>`;
-  }
+    conv += `<div class="row ${cls}"><div class="avatar">${esc(l.speaker.slice(0,3))}</div><div class="bubblewrap"><div class="bubble" data-li="${i}">${esc(l.text)}</div>${l.nota?`<p class="nota" data-li="${i}">${esc(l.nota)}</p>`:''}</div></div>`;
+  });
   const chips = g.meta.map(m=>`<span class="chip g">${esc(m)}</span>`).join('');
+  const banner = opts.edited ? `<div class="banner"><span>✎ Estás viendo tu versión editada (guardada en este equipo).</span><button class="mini" id="dlEdited">Descargar .md para publicar</button><button class="mini" id="discardEdit">Descartar cambios</button></div>` : '';
   $('#app').innerHTML = `
     <header class="site"><div class="logo">DV</div><div><h1>${esc(g.title)}</h1><p>Consultora DV · plan de grabación</p></div></header>
     <div class="meta-chips">${chips}</div>
     <div class="refbar">Link de referencia: <code>${esc(canonical)}</code> <button class="mini" onclick="copy('${canonical.replace(/'/g,"\\'")}','Link copiado')">Copiar link</button> ${backHref?`<a href="${backHref}" style="font-size:12px;">← todos mis guiones</a>`:''}</div>
+    ${banner}
     <div class="tabs">
       <button class="on" data-v="conv">Conversación</button>
       <button data-v="plain">Texto plano</button>
       <button data-v="tp">Teleprompter</button>
     </div>
     <div id="v-conv">
-      <div class="toolrow"><button class="mini" id="toggleNotas">Ocultar indicaciones</button></div>
+      <div class="toolrow"><button class="mini" id="toggleNotas">Ocultar indicaciones</button><button class="mini" id="editBtn">✎ Editar</button></div>
+      <div class="editbar" id="editbar" style="display:none"><span>Modo edición · toca el texto y corrígelo</span><button class="primary mini" id="saveEdit">Guardar</button><button class="mini" id="dlEdit">Descargar .md</button><button class="mini" id="cancelEdit">Cancelar</button></div>
       ${conv}
     </div>
     <div id="v-plain" style="display:none">
       <div class="toolrow"><button class="primary" id="copyPlain">Copiar para Google Docs</button></div>
       <pre class="plain">${esc(plainText(g))}</pre>
     </div>`;
+
+  const fileName = (opts.slug || g.title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')) + '.md';
 
   $('#toggleNotas').onclick = () => {
     document.body.classList.toggle('hide-notas');
@@ -177,6 +207,46 @@ function renderGuion(g, canonical, backHref){
     $('#v-conv').style.display = b.dataset.v==='conv' ? '' : 'none';
     $('#v-plain').style.display = b.dataset.v==='plain' ? '' : 'none';
   });
+
+  if (opts.edited){
+    $('#dlEdited').onclick = () => downloadMd(fileName, toMarkdown(g));
+    $('#discardEdit').onclick = () => {
+      if (opts.localKey && confirm('¿Descartar tus cambios locales y volver a la versión publicada?')){
+        localStorage.removeItem(opts.localKey); boot();
+      }
+    };
+  }
+
+  const setEditable = on => {
+    const h1 = document.querySelector('header.site h1');
+    h1.contentEditable = on;
+    document.querySelectorAll('.bubble[data-li], .nota[data-li], .beat[data-li]').forEach(el => el.contentEditable = on);
+    document.body.classList.toggle('editing', on);
+    $('#editbar').style.display = on ? 'flex' : 'none';
+    $('#editBtn').style.display = on ? 'none' : '';
+  };
+  const collect = () => {
+    g.title = document.querySelector('header.site h1').innerText.replace(/\s*\n\s*/g,' ').trim();
+    document.querySelectorAll('.bubble[data-li]').forEach(el => g.lines[+el.dataset.li].text = el.innerText.replace(/\s*\n\s*/g,' ').trim());
+    document.querySelectorAll('.nota[data-li]').forEach(el => g.lines[+el.dataset.li].nota = el.innerText.replace(/\s*\n\s*/g,' ').trim());
+    document.querySelectorAll('.beat[data-li]').forEach(el => g.lines[+el.dataset.li].beat = el.innerText.replace(/\s*\n\s*/g,' ').trim());
+  };
+
+  $('#editBtn').onclick = () => {
+    const p = prompt('Contraseña de edición:');
+    if (p === null) return;
+    if (p !== EDIT_PW){ toast('Contraseña incorrecta'); return; }
+    setEditable(true);
+  };
+  $('#cancelEdit').onclick = () => boot();
+  $('#dlEdit').onclick = () => { collect(); downloadMd(fileName, toMarkdown(g)); };
+  $('#saveEdit').onclick = () => {
+    collect();
+    const md = toMarkdown(g);
+    if (opts.localKey) localStorage.setItem(opts.localKey, md);
+    toast('Cambios guardados en este equipo');
+    renderGuion(parseGuion(md), canonical, backHref, Object.assign({}, opts, {edited: !!opts.localKey}));
+  };
 }
 
 function renderClient(data, token){
@@ -303,7 +373,10 @@ async function boot(){
     try{
       const r = await fetch('clientes/' + c + '/' + g + '.md');
       if (!r.ok) throw 0;
-      renderGuion(parseGuion(await r.text()), base() + '?c=' + c + '&g=' + g, '?c=' + c);
+      const fetched = await r.text();
+      const localKey = 'dvedit:' + c + '/' + g;
+      const override = localStorage.getItem(localKey);
+      renderGuion(parseGuion(override || fetched), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, edited: !!override});
       return;
     }catch(e){ $('#app').innerHTML = '<p style="padding:40px 0">Guion no encontrado. Revisa el link con tu estratega.</p>'; return; }
   }
