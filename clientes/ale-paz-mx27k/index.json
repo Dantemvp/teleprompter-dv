@@ -7,21 +7,82 @@
       "fecha": "16/06/2026",
       "locacion": "Consultorio · set podcast + talking head",
       "guiones": [
-        { "slug": "r2-01", "titulo": "Podcast — Alineadores Aliwell, ¿son para todos?", "info": "80–90 seg · formato Podcast Consulta" },
-        { "slug": "r2-02", "titulo": "Podcast — Brackets vs Aliwell, ¿cuál es mejor?", "info": "80–90 seg · formato Podcast Consulta" },
-        { "slug": "r2-03", "titulo": "Cuánto cuesta y cuánto tardas", "info": "20–40 seg · talking head · faltan precios" },
-        { "slug": "r2-04", "titulo": "Así alineamos tu sonrisa sin un solo bracket", "info": "20–40 seg · talking head · proceso" },
-        { "slug": "r2-05", "titulo": "Comer con alineadores invisibles", "info": "20–40 seg · talking head · listicle" },
-        { "slug": "r2-06", "titulo": "Nunca empieces alineadores con estas 3 condiciones", "info": "20–40 seg · talking head" },
-        { "slug": "r2-07", "titulo": "Nunca te hagas un diseño de sonrisa con estas 3 condiciones", "info": "20–40 seg · carillas" },
-        { "slug": "r2-08", "titulo": "Nunca te hagas carillas con estas 3 condiciones", "info": "20–40 seg · carillas" },
-        { "slug": "r2-09", "titulo": "Materiales de diseño de sonrisa, ¿cuál te conviene?", "info": "20–40 seg · carillas" },
-        { "slug": "r2-10", "titulo": "Ranking de materiales para tu diseño de sonrisa", "info": "20–40 seg · carillas" },
-        { "slug": "r2-11", "titulo": "¿Cuánto vale un implante en 2026?", "info": "20–40 seg · implantes · faltan precios" },
-        { "slug": "r2-12", "titulo": "¿Implante o puente dental?", "info": "20–40 seg · implantes · falta precio" },
-        { "slug": "r2-13", "titulo": "Implante o puente, rápido", "info": "20–40 seg · implantes · falta precio" },
-        { "slug": "r2-14", "titulo": "Implantes: del 1 al 10", "info": "20–40 seg · implantes" },
-        { "slug": "r2-15", "titulo": "¿Por qué el implante se paga en dos partes?", "info": "20–40 seg · implantes · falta precio" }
+        {
+          "slug": "r2-01",
+          "titulo": "Podcast — Alineadores Aliwell, ¿son para todos?",
+          "info": "80–90 seg · formato Podcast Consulta",
+          "grabado": true
+        },
+        {
+          "slug": "r2-02",
+          "titulo": "Podcast — Brackets vs Aliwell, ¿cuál es mejor?",
+          "info": "80–90 seg · formato Podcast Consulta"
+        },
+        {
+          "slug": "r2-03",
+          "titulo": "Cuánto cuesta y cuánto tardas",
+          "info": "20–40 seg · talking head · faltan precios"
+        },
+        {
+          "slug": "r2-04",
+          "titulo": "Así alineamos tu sonrisa sin un solo bracket",
+          "info": "20–40 seg · talking head · proceso"
+        },
+        {
+          "slug": "r2-05",
+          "titulo": "Comer con alineadores invisibles",
+          "info": "20–40 seg · talking head · listicle"
+        },
+        {
+          "slug": "r2-06",
+          "titulo": "Nunca empieces alineadores con estas 3 condiciones",
+          "info": "20–40 seg · talking head"
+        },
+        {
+          "slug": "r2-07",
+          "titulo": "Nunca te hagas un diseño de sonrisa con estas 3 condiciones",
+          "info": "20–40 seg · carillas"
+        },
+        {
+          "slug": "r2-08",
+          "titulo": "Nunca te hagas carillas con estas 3 condiciones",
+          "info": "20–40 seg · carillas"
+        },
+        {
+          "slug": "r2-09",
+          "titulo": "Materiales de diseño de sonrisa, ¿cuál te conviene?",
+          "info": "20–40 seg · carillas"
+        },
+        {
+          "slug": "r2-10",
+          "titulo": "Ranking de materiales para tu diseño de sonrisa",
+          "info": "20–40 seg · carillas"
+        },
+        {
+          "slug": "r2-11",
+          "titulo": "¿Cuánto vale un implante en 2026?",
+          "info": "20–40 seg · implantes · faltan precios"
+        },
+        {
+          "slug": "r2-12",
+          "titulo": "¿Implante o puente dental?",
+          "info": "20–40 seg · implantes · falta precio"
+        },
+        {
+          "slug": "r2-13",
+          "titulo": "Implante o puente, rápido",
+          "info": "20–40 seg · implantes · falta precio"
+        },
+        {
+          "slug": "r2-14",
+          "titulo": "Implantes: del 1 al 10",
+          "info": "20–40 seg · implantes"
+        },
+        {
+          "slug": "r2-15",
+          "titulo": "¿Por qué el implante se paga en dos partes?",
+          "info": "20–40 seg · implantes · falta precio"
+        }
       ]
     }
   ]
