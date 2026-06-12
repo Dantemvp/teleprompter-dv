@@ -1,0 +1,3 @@
+# test cors
+
+DRA: ok
