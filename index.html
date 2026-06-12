@@ -196,6 +196,34 @@ function renderClient(data, token){
     ${blocks || '<p class="hint">Aún no hay guiones publicados para este cliente.</p>'}`;
 }
 
+async function renderAdmin(data, token){
+  const cards = await Promise.all((data.clientes||[]).map(async cl => {
+    let recs = [], nGuiones = 0;
+    try{
+      const idx = await (await fetch('clientes/' + cl.token + '/index.json')).json();
+      recs = idx.grabaciones || [];
+      nGuiones = recs.reduce((a,r)=>a+(r.guiones||[]).length, 0);
+    }catch(e){}
+    const portal = base() + '?c=' + cl.token;
+    const recChips = recs.map(r=>`<span class="chip g">${esc(r.rec)} · ${esc((r.guiones||[]).length+' guiones')}${r.fecha?' · '+esc(r.fecha):''}</span>`).join('');
+    return `<div class="card">
+      <div style="display:flex; gap:12px; align-items:flex-start;">
+        <span class="codebadge" style="min-width:auto;">${esc(String(nGuiones))}</span>
+        <div style="flex:1"><h3>${esc(cl.nombre)}</h3><p>${esc(cl.nicho||'')}</p></div>
+      </div>
+      <div class="meta-chips" style="margin:10px 0 0;">${recChips || '<span class="chip g">Sin guiones aún</span>'}</div>
+      <div class="actions">
+        <a href="?c=${cl.token}"><button class="primary mini">Abrir portal</button></a>
+        <button class="mini" onclick="copy('${portal}','Link del portal copiado · listo para enviar a ${esc(cl.nombre).replace(/'/g,"\\'")}')">Copiar link del cliente</button>
+      </div></div>`;
+  }));
+  $('#app').innerHTML = `
+    <header class="site"><div class="logo">DV</div><div><h1>${esc(data.titulo||'Vault de guiones')}</h1><p>Dashboard del estratega · ${data.clientes.length} clientes</p></div></header>
+    <p class="hint" style="margin:14px 0 24px;">Este link es solo tuyo: no lo compartas con clientes. Desde aquí navegas todos los portales y copias el link que le toca a cada quien.</p>
+    ${cards.join('')}
+    <p class="hint" style="margin-top:24px;"><a href="./">Ir a la página pública (pegar guion suelto)</a></p>`;
+}
+
 let tpAnim = null, tpPlaying = false;
 function openTP(g, spk){
   const t = $('#tptext');
@@ -258,6 +286,15 @@ async function boot(){
   if (location.hash.startsWith('#d=')){
     const src = LZString.decompressFromEncodedURIComponent(location.hash.slice(3));
     if (src){ renderGuion(parseGuion(src), location.href, null); return; }
+  }
+  const adm = q.get('dv') ? q.get('dv').replace(/[^a-z0-9\-_]/gi,'') : null;
+  if (adm){
+    try{
+      const r = await fetch('admin/' + adm + '.json');
+      if (!r.ok) throw 0;
+      await renderAdmin(await r.json(), adm);
+      return;
+    }catch(e){ $('#app').innerHTML = '<p style="padding:40px 0">Dashboard no encontrado.</p>'; return; }
   }
   let c = q.get('c') ? q.get('c').replace(/[^a-z0-9\-_]/gi,'') : null;
   let g = q.get('g') ? q.get('g').replace(/[^a-z0-9\-_]/gi,'') : null;
