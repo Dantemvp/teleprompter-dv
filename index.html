@@ -91,6 +91,13 @@
   #tpbar input[type=range]{width:110px; accent-color:var(--teal);}
   #tpbar button{background:#1d1f1d; border-color:#333; color:#eee;}
   .mirror #tptext{transform:scaleX(-1);}
+  .pwmodal{position:fixed; inset:0; background:rgba(14,15,14,.5); display:none; align-items:center; justify-content:center; z-index:60; padding:18px;}
+  .pwmodal.on{display:flex;}
+  .pwbox{background:var(--paper); border-radius:14px; padding:20px; width:100%; max-width:360px;}
+  .pwtitle{font-size:15px; font-weight:600; margin-bottom:12px;}
+  .pwrow{display:flex; gap:8px; margin-bottom:14px;}
+  .pwrow input{flex:1; font:inherit; font-size:15px; padding:9px 12px; border:1px solid var(--line); border-radius:8px; background:#fff;}
+  .pwactions{display:flex; gap:8px; justify-content:flex-end;}
   @media(max-width:520px){ .bubblewrap{max-width:88%;} .wrap{padding-top:18px;} }
 </style>
 </head>
@@ -110,6 +117,20 @@
 </div>
 <div class="toast" id="toast"></div>
 
+<div id="pwModal" class="pwmodal">
+  <div class="pwbox">
+    <p class="pwtitle" id="pwTitle">Contraseña</p>
+    <div class="pwrow">
+      <input type="password" id="pwInput" autocomplete="off" placeholder="••••••••">
+      <button class="mini" id="pwToggle" type="button" aria-label="Mostrar contraseña">Ver</button>
+    </div>
+    <div class="pwactions">
+      <button class="mini" id="pwCancel" type="button">Cancelar</button>
+      <button class="primary mini" id="pwOk" type="button">Aceptar</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const $ = s => document.querySelector(s);
 const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -117,6 +138,25 @@ const attr = s => (s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'
 const toast = m => { const t=$('#toast'); t.textContent=m; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1800); };
 const copy = (txt,msg) => navigator.clipboard.writeText(txt).then(()=>toast(msg||'Copiado'));
 const base = () => location.origin + location.pathname;
+const DASH_TOKEN = 'dv-mando-9q2k7x';
+const SAVE_ENDPOINT = ''; // URL de la función de Vercel, ej. https://teleprompter-dv.vercel.app/api/save
+
+function askPassword(title){
+  return new Promise(resolve => {
+    const modal = $('#pwModal'), input = $('#pwInput'), toggle = $('#pwToggle');
+    $('#pwTitle').textContent = title || 'Contraseña';
+    input.value = ''; input.type = 'password'; toggle.textContent = 'Ver';
+    modal.classList.add('on');
+    setTimeout(()=>input.focus(), 30);
+    const done = val => { modal.classList.remove('on'); cleanup(); resolve(val); };
+    const onOk = () => done(input.value);
+    const onCancel = () => done(null);
+    const onKey = e => { if(e.key==='Enter') onOk(); if(e.key==='Escape') onCancel(); };
+    const onToggle = () => { const show = input.type==='password'; input.type = show?'text':'password'; toggle.textContent = show?'Ocultar':'Ver'; input.focus(); };
+    function cleanup(){ $('#pwOk').onclick=null; $('#pwCancel').onclick=null; toggle.onclick=null; input.onkeydown=null; }
+    $('#pwOk').onclick = onOk; $('#pwCancel').onclick = onCancel; toggle.onclick = onToggle; input.onkeydown = onKey;
+  });
+}
 
 const LEGACY = {
   'podcast-01-aliwell-son-para-todos': ['ale-paz-mx27k','r2-01'],
@@ -261,7 +301,7 @@ function renderGuion(g, canonical, backHref, opts){
     const speakers = spk.length ? spk : ['DRA','ENTREVISTADOR'];
     const rows = g.lines.map(l => l.beat!==undefined ? editBeatHtml(l.beat) : editLineHtml(l)).join('');
     return `
-      <div class="editbar"><span>Modo edición · agrega, mueve o elimina diálogos</span><button class="primary mini" id="fSave">Guardar</button><button class="mini" id="fDl">Descargar .md</button><button class="mini" id="fCancel">Cancelar</button></div>
+      <div class="editbar"><span>Modo edición · agrega, mueve o elimina diálogos</span>${(SAVE_ENDPOINT && opts.client && opts.slug)?`<button class="primary mini" id="fCloud">☁ Guardar en la nube</button>`:''}<button class="${(SAVE_ENDPOINT && opts.client && opts.slug)?'mini':'primary mini'}" id="fSave">Guardar local</button><button class="mini" id="fDl">Descargar .md</button><button class="mini" id="fCancel">Cancelar</button></div>
       <div class="efield"><label>Título</label><input id="etitle" class="ein" value="${attr(g.title)}"></div>
       <div class="efield"><label>Reel de referencia (URL del Instagram/TikTok que inspira el guion)</label><input id="eref" class="ein" value="${attr(g.ref||'')}" placeholder="https://www.instagram.com/reel/..."></div>
       <datalist id="spklist">${speakers.map(s=>`<option value="${attr(s)}">`).join('')}</datalist>
@@ -287,8 +327,8 @@ function renderGuion(g, canonical, backHref, opts){
     g.ref = document.querySelector('#eref').value.trim() || null;
   };
 
-  $('#editBtn').onclick = () => {
-    const p = prompt('Contraseña de edición:');
+  $('#editBtn').onclick = async () => {
+    const p = await askPassword('Contraseña de edición');
     if (p === null) return;
     if (p !== EDIT_PW){ toast('Contraseña incorrecta'); return; }
     $('#v-edit').innerHTML = buildForm();
@@ -304,6 +344,25 @@ function renderGuion(g, canonical, backHref, opts){
       if (opts.localKey) localStorage.setItem(opts.localKey, md);
       toast('Cambios guardados en este equipo');
       renderGuion(parseGuion(md), canonical, backHref, Object.assign({}, opts, {edited: !!opts.localKey}));
+    };
+    const cloudBtn = $('#fCloud');
+    if (cloudBtn) cloudBtn.onclick = async () => {
+      if (!SAVE_ENDPOINT || !opts.client || !opts.slug){ toast('Guardado en la nube no configurado'); return; }
+      collectForm();
+      const pw = await askPassword('Contraseña para publicar en la nube');
+      if (pw === null) return;
+      const md = toMarkdown(g);
+      cloudBtn.disabled = true; cloudBtn.textContent = 'Publicando...';
+      try {
+        const r = await fetch(SAVE_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ password: pw, client: opts.client, slug: opts.slug, content: md }) });
+        if (!r.ok) throw new Error(await r.text());
+        if (opts.localKey) localStorage.setItem(opts.localKey, md);
+        toast('Publicado en la nube ✓ Visible para todos en ~1 min');
+        renderGuion(parseGuion(md), canonical, backHref, Object.assign({}, opts, {edited: true}));
+      } catch (err) {
+        cloudBtn.disabled = false; cloudBtn.textContent = '☁ Guardar en la nube';
+        toast('Error al publicar: ' + (err.message||err));
+      }
     };
     $('#addLine').onclick = () => $('#erows').insertAdjacentHTML('beforeend', editLineHtml(null));
     $('#addBeat').onclick = () => $('#erows').insertAdjacentHTML('beforeend', editBeatHtml(''));
@@ -409,7 +468,14 @@ function renderHome(){
     <h2 style="font-size:15px; font-weight:600; margin:0 0 6px;">Pegar un guion suelto</h2>
     <p class="hint">Pega el diálogo (PERSONAJE: línea · "//" para indicaciones · "## " para secciones) y genera un link compartible al instante.</p>
     <textarea id="paste" placeholder="# Título del guion&#10;> Cliente: ...&#10;DRA: ...&#10;// indicación de dirección"></textarea>
-    <div class="toolrow" style="margin-top:10px;"><button class="primary" id="genlink">Generar link</button><button id="prev">Previsualizar</button></div>`;
+    <div class="toolrow" style="margin-top:10px;"><button class="primary" id="genlink">Generar link</button><button id="prev">Previsualizar</button></div>
+    <p class="hint" style="margin-top:30px; border-top:1px solid var(--line); padding-top:18px;"><button class="mini" id="adminAccess">🔑 Acceso estratega</button></p>`;
+  $('#adminAccess').onclick = async () => {
+    const p = await askPassword('Acceso al dashboard de Consultora DV');
+    if (p === null) return;
+    if (p !== EDIT_PW){ toast('Contraseña incorrecta'); return; }
+    location.search = '?dv=' + DASH_TOKEN;
+  };
   $('#genlink').onclick = () => {
     const v = $('#paste').value.trim(); if(!v) return toast('Pega un guion primero');
     copy(base() + '#d=' + LZString.compressToEncodedURIComponent(v), 'Link generado y copiado');
@@ -445,8 +511,9 @@ async function boot(){
       if (!r.ok) throw 0;
       const fetched = await r.text();
       const localKey = 'dvedit:' + c + '/' + g;
-      const override = localStorage.getItem(localKey);
-      renderGuion(parseGuion(override || fetched), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, edited: !!override});
+      let override = localStorage.getItem(localKey);
+      if (override && override.trim() === fetched.trim()){ localStorage.removeItem(localKey); override = null; }
+      renderGuion(parseGuion(override || fetched), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: !!override});
       return;
     }catch(e){ $('#app').innerHTML = '<p style="padding:40px 0">Guion no encontrado. Revisa el link con tu estratega.</p>'; return; }
   }
