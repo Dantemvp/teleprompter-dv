@@ -5,10 +5,14 @@
       "rec": "R2",
       "nombre": "Segunda grabación",
       "fecha": "16/06/2026",
-      "locacion": "Consultorio · set podcast",
+      "locacion": "Consultorio · set podcast + talking head",
       "guiones": [
         { "slug": "r2-01", "titulo": "Podcast — Alineadores Aliwell, ¿son para todos?", "info": "80–90 seg · formato Podcast Consulta" },
-        { "slug": "r2-02", "titulo": "Podcast — Brackets vs Aliwell, ¿cuál es mejor?", "info": "80–90 seg · formato Podcast Consulta" }
+        { "slug": "r2-02", "titulo": "Podcast — Brackets vs Aliwell, ¿cuál es mejor?", "info": "80–90 seg · formato Podcast Consulta" },
+        { "slug": "r2-03", "titulo": "Cuánto cuesta y cuánto tardas", "info": "20–40 seg · talking head · faltan precios" },
+        { "slug": "r2-04", "titulo": "Así alineamos tu sonrisa sin un solo bracket", "info": "20–40 seg · talking head · proceso" },
+        { "slug": "r2-05", "titulo": "Comer con alineadores invisibles", "info": "20–40 seg · talking head · listicle" },
+        { "slug": "r2-06", "titulo": "Nunca empieces alineadores con estas 3 condiciones", "info": "20–40 seg · talking head" }
       ]
     }
   ]
