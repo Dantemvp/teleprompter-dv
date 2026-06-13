@@ -163,6 +163,19 @@ function askPassword(title){
   });
 }
 
+function rememberedPw(){ return localStorage.getItem('dvpw'); }
+function forgetPw(){ localStorage.removeItem('dvpw'); }
+async function unlock(title){
+  if (rememberedPw() === EDIT_PW) return EDIT_PW;          // equipo ya reconocido
+  const p = await askPassword(title);
+  if (p === null) return null;
+  if (p !== EDIT_PW){ toast('Contraseña incorrecta'); return null; }
+  localStorage.setItem('dvpw', p);                         // recordar este equipo
+  return p;
+}
+const lockHtml = () => rememberedPw() === EDIT_PW ? ' · <a href="#" class="lockBtn">🔒 bloquear este equipo</a>' : '';
+function wireLock(){ document.querySelectorAll('.lockBtn').forEach(b => b.onclick = e => { e.preventDefault(); forgetPw(); toast('Equipo bloqueado · pedirá contraseña de nuevo'); boot(); }); }
+
 const LEGACY = {
   'podcast-01-aliwell-son-para-todos': ['ale-paz-mx27k','r2-01'],
   'podcast-02-brackets-vs-aliwell': ['ale-paz-mx27k','r2-02']
@@ -333,9 +346,8 @@ function renderGuion(g, canonical, backHref, opts){
   };
 
   $('#editBtn').onclick = async () => {
-    const p = await askPassword('Contraseña de edición');
-    if (p === null) return;
-    if (p !== EDIT_PW){ toast('Contraseña incorrecta'); return; }
+    const p = await unlock('Contraseña de edición');
+    if (!p) return;
     $('#v-edit').innerHTML = buildForm();
     document.querySelector('.tabs').style.display = 'none';
     $('#v-conv').style.display = 'none';
@@ -354,12 +366,13 @@ function renderGuion(g, canonical, backHref, opts){
     if (cloudBtn) cloudBtn.onclick = async () => {
       if (!SAVE_ENDPOINT || !opts.client || !opts.slug){ toast('Guardado en la nube no configurado'); return; }
       collectForm();
-      const pw = await askPassword('Contraseña para publicar en la nube');
-      if (pw === null) return;
+      const pw = await unlock('Contraseña para publicar en la nube');
+      if (!pw) return;
       const md = toMarkdown(g);
       cloudBtn.disabled = true; cloudBtn.textContent = 'Publicando...';
       try {
         const r = await fetch(SAVE_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ password: pw, client: opts.client, slug: opts.slug, content: md }) });
+        if (r.status === 401){ forgetPw(); throw new Error('Contraseña incorrecta, intenta de nuevo'); }
         if (!r.ok) throw new Error(await r.text());
         if (opts.localKey) localStorage.setItem(opts.localKey, md);
         toast('Publicado en la nube ✓ Visible para todos en ~1 min');
@@ -399,23 +412,23 @@ function renderClient(data, token){
   }).join('');
   $('#app').innerHTML = `
     <header class="site"><div class="logo">DV</div><div><h1>${esc(data.cliente)}</h1><p>Tus guiones de grabación · Consultora DV</p></div></header>
-    <p class="hint" style="margin:14px 0 26px;">Guarda este link: aquí aparecerán todas tus grabaciones. Marca cada guion como grabado con la palomita.</p>
+    <p class="hint" style="margin:14px 0 26px;">Guarda este link: aquí aparecerán todas tus grabaciones. Marca cada guion como grabado con la palomita.${lockHtml()}</p>
     ${blocks || '<p class="hint">Aún no hay guiones publicados para este cliente.</p>'}`;
   document.querySelectorAll('.btnGrabado').forEach(b => b.onclick = () => toggleGrabado(token, b));
+  wireLock();
 }
 
 async function toggleGrabado(token, btn){
   const slug = btn.dataset.slug;
   const next = btn.dataset.grabado !== '1';
-  let pw = sessionStorage.getItem('dvpw');
-  if (!pw){ pw = await askPassword('Contraseña para marcar grabado'); if (pw === null) return; }
+  const pw = await unlock('Contraseña para marcar grabado');
+  if (!pw) return;
   const old = btn.textContent;
   btn.disabled = true; btn.textContent = 'Guardando...';
   try {
     const r = await fetch(STATUS_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ password: pw, client: token, slug, grabado: next }) });
-    if (r.status === 401){ sessionStorage.removeItem('dvpw'); throw new Error('Contraseña incorrecta'); }
+    if (r.status === 401){ forgetPw(); throw new Error('Contraseña incorrecta'); }
     if (!r.ok) throw new Error(await r.text());
-    sessionStorage.setItem('dvpw', pw);
     btn.dataset.grabado = next ? '1' : '0';
     btn.textContent = next ? '✓ Grabado' : 'Marcar grabado';
     const card = document.querySelector(`.card[data-card="${CSS.escape(slug)}"]`);
@@ -458,9 +471,10 @@ async function renderAdmin(data, token){
   }));
   $('#app').innerHTML = `
     <header class="site"><div class="logo">DV</div><div><h1>${esc(data.titulo||'Vault de guiones')}</h1><p>Dashboard del estratega · ${data.clientes.length} clientes</p></div></header>
-    <p class="hint" style="margin:14px 0 24px;">Este link es solo tuyo: no lo compartas con clientes. Desde aquí navegas todos los portales y copias el link que le toca a cada quien.</p>
+    <p class="hint" style="margin:14px 0 24px;">Este link es solo tuyo: no lo compartas con clientes. Desde aquí navegas todos los portales y copias el link que le toca a cada quien.${lockHtml()}</p>
     ${cards.join('')}
     <p class="hint" style="margin-top:24px;"><a href="./">Ir a la página pública (pegar guion suelto)</a></p>`;
+  wireLock();
 }
 
 let tpAnim = null, tpPlaying = false;
@@ -511,11 +525,11 @@ function renderHome(){
     <div class="toolrow" style="margin-top:10px;"><button class="primary" id="genlink">Generar link</button><button id="prev">Previsualizar</button></div>
     <p class="hint" style="margin-top:30px; border-top:1px solid var(--line); padding-top:18px;"><button class="mini" id="adminAccess">🔑 Acceso estratega</button></p>`;
   $('#adminAccess').onclick = async () => {
-    const p = await askPassword('Acceso al dashboard de Consultora DV');
-    if (p === null) return;
-    if (p !== EDIT_PW){ toast('Contraseña incorrecta'); return; }
+    const p = await unlock('Acceso al dashboard de Consultora DV');
+    if (!p) return;
     location.search = '?dv=' + DASH_TOKEN;
   };
+  wireLock();
   $('#genlink').onclick = () => {
     const v = $('#paste').value.trim(); if(!v) return toast('Pega un guion primero');
     copy(base() + '#d=' + LZString.compressToEncodedURIComponent(v), 'Link generado y copiado');
