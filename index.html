@@ -83,8 +83,8 @@
   .toast.show{opacity:1;}
   #tp{position:fixed; inset:0; background:#0e0f0e; color:#f5f4ef; display:none; z-index:50;}
   #tp.on{display:block;}
-  #tpscroll{position:absolute; inset:0; overflow-y:auto; padding:45vh 6vw;}
-  #tptext{max-width:880px; margin:0 auto;}
+  #tpscroll{position:absolute; inset:0; overflow-y:auto; padding:45vh var(--tpmar,6vw);}
+  #tptext{max-width:none; margin:0 auto;}
   #tptext .l{margin-bottom:1.2em;}
   #tptext .who{display:block; font-size:.42em; letter-spacing:.12em; opacity:.55; margin-bottom:.15em;}
   #tptext .l.spk1{color:#8a8a82;}
@@ -114,6 +114,7 @@
     <button id="tpplay" class="primary">▶ Iniciar</button>
     <label>Velocidad <input type="range" id="tpspeed" min="10" max="200" value="55"></label>
     <label>Tamaño <input type="range" id="tpsize" min="22" max="80" value="44"></label>
+    <label>Margen <input type="range" id="tpmargin" min="0" max="30" value="6"></label>
     <button id="tpmirror" class="mini">Espejo</button>
     <button id="tprestart" class="mini">Reiniciar</button>
     <button id="tpexit" class="mini">Salir (Esc)</button>
@@ -506,6 +507,7 @@ function tick(){
 }
 $('#tpplay').onclick = () => setPlay(!tpPlaying);
 $('#tpsize').oninput = e => $('#tptext').style.fontSize = e.target.value + 'px';
+$('#tpmargin').oninput = e => $('#tpscroll').style.setProperty('--tpmar', e.target.value + 'vw');
 $('#tpmirror').onclick = () => $('#tp').classList.toggle('mirror');
 $('#tprestart').onclick = () => { $('#tpscroll').scrollTop = 0; setPlay(false); };
 $('#tpexit').onclick = () => { $('#tp').classList.remove('on'); setPlay(false); };
