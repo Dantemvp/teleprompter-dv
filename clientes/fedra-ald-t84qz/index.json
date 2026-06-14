@@ -45,7 +45,8 @@
         {
           "slug": "r9-08",
           "titulo": "Difícil vs agotador",
-          "info": "20–40 seg"
+          "info": "20–40 seg",
+          "grabado": true
         },
         {
           "slug": "r9-09",
