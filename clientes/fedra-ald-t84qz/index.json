@@ -25,7 +25,8 @@
         {
           "slug": "r9-04",
           "titulo": "Cucharada por cucharada",
-          "info": "20–40 seg"
+          "info": "20–40 seg",
+          "grabado": true
         },
         {
           "slug": "r9-05",
