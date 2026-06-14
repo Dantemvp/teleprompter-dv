@@ -70,7 +70,8 @@
         {
           "slug": "r9-11",
           "titulo": "El músculo, tu segundo corazón",
-          "info": "20–40 seg"
+          "info": "20–40 seg",
+          "grabado": true
         }
       ]
     }
