@@ -83,6 +83,21 @@
           "titulo": "¿Por qué el implante se paga en dos partes?",
           "info": "20–40 seg · implantes · falta precio",
           "grabado": false
+        },
+        {
+          "slug": "r2-16",
+          "titulo": "Tu boca te avisa (señales)",
+          "info": "40–60 seg · síntoma→causa · general"
+        },
+        {
+          "slug": "r2-17",
+          "titulo": "Señales de que necesitas alinear tus dientes",
+          "info": "40–60 seg · síntoma→causa · ortodoncia"
+        },
+        {
+          "slug": "r2-18",
+          "titulo": "La excusa vs. la realidad",
+          "info": "40–60 seg · excusa→realidad"
         }
       ]
     }
