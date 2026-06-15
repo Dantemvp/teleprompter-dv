@@ -6,7 +6,9 @@
       "nombre": "Tercera grabación",
       "fecha": "Por definir",
       "locacion": "Por definir",
-      "guiones": []
+      "guiones": [
+        { "slug": "r3-01", "titulo": "Crema Reparadora de Noche (Hydroglow)", "info": "30–50 seg · talking head / voz de marca", "grabado": false }
+      ]
     }
   ]
 }
