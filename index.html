@@ -32,6 +32,10 @@
   .tabs{display:flex; gap:6px; border-bottom:1px solid var(--line); margin:6px 0 22px;}
   .tabs button{border:none; background:none; border-radius:8px 8px 0 0; padding:9px 14px; color:var(--muted); border-bottom:2px solid transparent;}
   .tabs button.on{color:var(--teal-darker); border-bottom-color:var(--teal); font-weight:600; background:none;}
+  .locbar{background:var(--gray-bg); padding:8px 12px; border-radius:10px;}
+  .locpick{border:1px solid var(--teal); background:#fff; color:var(--teal-dark); border-radius:999px; cursor:pointer;}
+  .locpick.on{background:var(--teal); color:#fff; font-weight:600;}
+  .locchip{font-size:11px; padding:2px 9px; border-radius:999px; background:var(--teal); color:#fff; margin-left:6px;}
   .beat{font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:20px 0 8px;}
   .row{display:flex; gap:10px; margin-bottom:12px;}
   .row.right{flex-direction:row-reverse;}
@@ -149,6 +153,8 @@ const DASH_TOKEN = 'dv-mando-9q2k7x';
 const SAVE_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/save';
 const STATUS_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/status';
 const DELETE_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/delete';
+// Clientes con selector de locutor (quién presenta el guion). Solo aplica a estos tokens.
+const LOCUTORES = { 'skin-club-e67ff4': ['Nat', 'Kaori', 'Diego'] };
 
 function askPassword(title){
   return new Promise(resolve => {
@@ -256,11 +262,14 @@ function renderGuion(g, canonical, backHref, opts){
   const chips = g.meta.map(m=>`<span class="chip g">${esc(m)}</span>`).join('');
   const banner = opts.edited ? `<div class="banner"><span>✎ Estás viendo tu versión editada (guardada en este equipo).</span><button class="mini" id="dlEdited">Descargar .md para publicar</button><button class="mini" id="discardEdit">Descartar cambios</button></div>` : '';
   const refblock = g.ref ? `<div class="refbar refreel"><span>🎬 Reel de referencia:</span> <a href="${attr(g.ref)}" target="_blank" rel="noopener">Ver inspiración ↗</a> <button class="mini" onclick="copy('${g.ref.replace(/'/g,"\\'")}','Link copiado')">Copiar</button></div>` : '';
+  const founders = (opts.client && LOCUTORES[opts.client]) ? LOCUTORES[opts.client] : null;
+  const locbar = founders ? `<div class="refbar locbar"><span>🎙️ Locutor:</span> ${founders.map(n=>`<button class="mini locpick${opts.locutor===n?' on':''}" data-loc="${attr(n)}">${esc(n)}</button>`).join(' ')} ${opts.locutor?'':'<span style="color:var(--muted)">sin asignar</span>'}</div>` : '';
   $('#app').innerHTML = `
     <header class="site"><div class="logo">DV</div><div><h1>${esc(g.title)}</h1><p>Consultora DV · plan de grabación</p></div></header>
     <div class="meta-chips">${chips}</div>
     <div class="refbar">Link de referencia: <code>${esc(canonical)}</code> <button class="mini" onclick="copy('${canonical.replace(/'/g,"\\'")}','Link copiado')">Copiar link</button> ${backHref?`<a href="${backHref}" style="font-size:12px;">← todos mis guiones</a>`:''}</div>
     ${refblock}
+    ${locbar}
     ${banner}
     <div class="tabs">
       <button class="on" data-v="conv">Conversación</button>
@@ -284,6 +293,7 @@ function renderGuion(g, canonical, backHref, opts){
     $('#toggleNotas').textContent = document.body.classList.contains('hide-notas') ? 'Mostrar indicaciones' : 'Ocultar indicaciones';
   };
   $('#copyPlain').onclick = () => copy(plainText(g),'Guion copiado · pégalo en Google Docs');
+  if (founders) document.querySelectorAll('.locpick').forEach(b => b.onclick = () => setLocutor(opts.client, opts.slug, b));
   document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => {
     if (b.dataset.v === 'tp') { openTP(g, spk); return; }
     document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('on'));
@@ -409,7 +419,8 @@ function renderClient(data, token){
       const cod = it.slug.toUpperCase();
       const toggle = STATUS_ENDPOINT ? `<button class="mini btnGrabado" data-slug="${attr(it.slug)}" data-grabado="${it.grabado?1:0}">${it.grabado?'✓ Grabado':'Marcar grabado'}</button>` : '';
       const del = (DELETE_ENDPOINT && rememberedPw()===EDIT_PW) ? `<button class="mini btnDel" data-slug="${attr(it.slug)}" data-cod="${attr(cod)}">Eliminar</button>` : '';
-      return `<div class="card${it.grabado?' done':''}" data-card="${attr(it.slug)}" data-rec="${ri}"><div style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}</h3><p>${esc(it.info||'')}</p></div><span class="donechip">✓ Grabado</span></div>
+      const loc = (LOCUTORES[token] && it.locutor) ? `<span class="locchip">🎙️ ${esc(it.locutor)}</span>` : '';
+      return `<div class="card${it.grabado?' done':''}" data-card="${attr(it.slug)}" data-rec="${ri}"><div style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}${loc}</h3><p>${esc(it.info||'')}</p></div><span class="donechip">✓ Grabado</span></div>
         <div class="actions"><a href="?c=${token}&g=${it.slug}"><button class="primary mini">Abrir guion</button></a>
         <button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${del}</div></div>`;
     }).join('');
@@ -479,6 +490,26 @@ async function toggleGrabado(token, btn){
     btn.textContent = old;
   }
   btn.disabled = false;
+}
+
+async function setLocutor(token, slug, btn){
+  const name = btn.dataset.loc;
+  const already = btn.classList.contains('on');
+  const next = already ? '' : name;            // volver a tocar el mismo = desasignar
+  const pw = await unlock('Contraseña para asignar locutor');
+  if (!pw) return;
+  document.querySelectorAll('.locpick').forEach(x => x.classList.remove('on'));
+  if (next) btn.classList.add('on');
+  const lk = 'dvloc:' + token + '/' + slug;
+  if (next) localStorage.setItem(lk, next); else localStorage.removeItem(lk);
+  try {
+    const r = await fetch(STATUS_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ password: pw, client: token, slug, locutor: next }) });
+    if (r.status === 401){ forgetPw(); throw new Error('Contraseña incorrecta'); }
+    if (!r.ok) throw new Error(await r.text());
+    toast(next ? ('Locutor: ' + next + ' (visible en ~1 min)') : 'Locutor desasignado');
+  } catch (e){
+    toast('Guardado en este equipo · nube: ' + (e.message||e));
+  }
 }
 
 async function renderAdmin(data, token){
@@ -601,7 +632,16 @@ async function boot(){
       const localKey = 'dvedit:' + c + '/' + g;
       let override = localStorage.getItem(localKey);
       if (override && override.trim() === fetched.trim()){ localStorage.removeItem(localKey); override = null; }
-      renderGuion(parseGuion(override || fetched), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: !!override});
+      let locutor = null;
+      if (LOCUTORES[c]){
+        try{
+          const ix = await (await fetch('clientes/' + c + '/index.json?t=' + Date.now())).json();
+          (ix.grabaciones||[]).forEach(rec => (rec.guiones||[]).forEach(it => { if (it.slug === g && it.locutor) locutor = it.locutor; }));
+        }catch(e){}
+        const local = localStorage.getItem('dvloc:' + c + '/' + g);
+        if (local !== null) locutor = local || null;
+      }
+      renderGuion(parseGuion(override || fetched), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: !!override, locutor});
       return;
     }catch(e){ $('#app').innerHTML = '<p style="padding:40px 0">Guion no encontrado. Revisa el link con tu estratega.</p>'; return; }
   }

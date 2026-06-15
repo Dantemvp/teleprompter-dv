@@ -12,7 +12,7 @@ export default async function handler(req, res){
 
   let body = req.body;
   if (typeof body === 'string') { try { body = JSON.parse(body); } catch { body = {}; } }
-  const { password, client, slug, grabado } = body || {};
+  const { password, client, slug, grabado, locutor } = body || {};
 
   if (!process.env.EDIT_PASSWORD || password !== process.env.EDIT_PASSWORD)
     return res.status(401).send('Contraseña incorrecta');
@@ -37,16 +37,23 @@ export default async function handler(req, res){
 
     let found = false;
     (data.grabaciones || []).forEach(rec => (rec.guiones || []).forEach(g => {
-      if (g.slug === slug) { g.grabado = !!grabado; found = true; }
+      if (g.slug === slug) {
+        if ('grabado' in body) g.grabado = !!grabado;
+        if ('locutor' in body) g.locutor = locutor ? String(locutor).slice(0, 40) : null;
+        found = true;
+      }
     }));
     if (!found) return res.status(404).send('Guion no encontrado en el índice');
 
+    const msg = ('locutor' in body)
+      ? `Locutor ${client}/${slug}=${locutor || '(ninguno)'}`
+      : `Marcar ${client}/${slug} grabado=${!!grabado}`;
     const newContent = JSON.stringify(data, null, 2) + '\n';
     const put = await fetch(api, {
       method: 'PUT',
       headers: { ...h, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        message: `Marcar ${client}/${slug} grabado=${!!grabado}`,
+        message: msg,
         content: Buffer.from(newContent, 'utf8').toString('base64'),
         sha: meta.sha
       })
