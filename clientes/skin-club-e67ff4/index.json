@@ -1,0 +1,12 @@
+{
+  "cliente": "The Skin Club",
+  "grabaciones": [
+    {
+      "rec": "R3",
+      "nombre": "Tercera grabación",
+      "fecha": "Por definir",
+      "locacion": "Por definir",
+      "guiones": []
+    }
+  ]
+}
