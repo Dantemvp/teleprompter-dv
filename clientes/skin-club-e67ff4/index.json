@@ -7,7 +7,23 @@
       "fecha": "Por definir",
       "locacion": "Por definir",
       "guiones": [
-        { "slug": "r3-01", "titulo": "Crema Reparadora de Noche (Hydroglow)", "info": "30–50 seg · talking head / voz de marca", "grabado": false }
+        { "slug": "r3-01", "titulo": "Crema Reparadora de Noche (Hydroglow)", "info": "30–50 seg · talking head · día vs noche", "grabado": false },
+        { "slug": "r3-02", "titulo": "Retinol, retinal, bakuchiol… ¿cuál te toca?", "info": "40–60 seg · conversación 2 voces", "grabado": false },
+        { "slug": "r3-03", "titulo": "Le tienes miedo a lavarte la cara", "info": "30–45 seg · mito / reframe", "grabado": false },
+        { "slug": "r3-04", "titulo": "¿Qué skincare debo usar si tengo más de 40?", "info": "30–45 seg · pregunta viral", "grabado": false },
+        { "slug": "r3-05", "titulo": "La industria te vende hype, nosotros función", "info": "30–45 seg · brand story", "grabado": false },
+        { "slug": "r3-06", "titulo": "Ácido hialurónico: lo que la etiqueta no dice", "info": "45–60 seg · autoridad", "grabado": false },
+        { "slug": "r3-07", "titulo": "Voltea tu vitamina C a la luz (test)", "info": "40–55 seg · demo + lead magnet", "grabado": false },
+        { "slug": "r3-08", "titulo": "California prohibió ingredientes que usas", "info": "45–60 seg · regulación + lead magnet", "grabado": false },
+        { "slug": "r3-09", "titulo": "Ingredientes infravalorados que sí funcionan", "info": "45–60 seg · listicle", "grabado": false },
+        { "slug": "r3-10", "titulo": "El azúcar de ayer ya le cobra a tu cara", "info": "40–55 seg · glicación + lead magnet", "grabado": false },
+        { "slug": "r3-11", "titulo": "Péptidos vs retinol: prevención o intensidad", "info": "40–55 seg · versus", "grabado": false },
+        { "slug": "r3-12", "titulo": "La niacinamida está sobreusada", "info": "40–55 seg · hype-buster", "grabado": false },
+        { "slug": "r3-13", "titulo": "El retinol que compras ya es ilegal en Europa", "info": "40–55 seg · shock regulatorio", "grabado": false },
+        { "slug": "r3-14", "titulo": "Tu piel opaca siempre es por lo mismo", "info": "40–55 seg · patrón→receta (estilo Fedra)", "grabado": false },
+        { "slug": "r3-15", "titulo": "El orden correcto de tu skincare", "info": "20–30 seg · ranking rápido (estilo Ale Paz)", "grabado": false },
+        { "slug": "r3-16", "titulo": "Skincare para hombres: 3 pasos y ya", "info": "40–55 seg · unisex / hombres", "grabado": false },
+        { "slug": "r3-17", "titulo": "\"Con agua y jabón basta\" — el mito", "info": "30–45 seg · mito unisex / hombres", "grabado": false }
       ]
     }
   ]
