@@ -116,7 +116,8 @@
           "slug": "r3-18",
           "titulo": "Te califico tu skincare del 1 al 10",
           "info": "30–45 seg · calificación /10 (narrador + voz)",
-          "grabado": false
+          "grabado": false,
+          "locutor": "Kaori"
         },
         {
           "slug": "r3-19",
