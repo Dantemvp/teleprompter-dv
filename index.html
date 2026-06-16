@@ -155,6 +155,8 @@ const STATUS_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/status';
 const DELETE_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/delete';
 // Clientes con selector de locutor (quién presenta el guion). Solo aplica a estos tokens.
 const LOCUTORES = { 'skin-club-e67ff4': ['Nat', 'Kaori', 'Diego'] };
+// Clientes donde el reel de referencia es privado: solo visible si el equipo está logueado (rememberedPw===EDIT_PW).
+const REF_PRIVATE = { 'skin-club-e67ff4': true };
 
 function askPassword(title){
   return new Promise(resolve => {
@@ -261,7 +263,9 @@ function renderGuion(g, canonical, backHref, opts){
   });
   const chips = g.meta.map(m=>`<span class="chip g">${esc(m)}</span>`).join('');
   const banner = opts.edited ? `<div class="banner"><span>✎ Estás viendo tu versión editada (guardada en este equipo).</span><button class="mini" id="dlEdited">Descargar .md para publicar</button><button class="mini" id="discardEdit">Descartar cambios</button></div>` : '';
-  const refblock = g.ref ? `<div class="refbar refreel"><span>🎬 Reel de referencia:</span> <a href="${attr(g.ref)}" target="_blank" rel="noopener">Ver inspiración ↗</a> <button class="mini" onclick="copy('${g.ref.replace(/'/g,"\\'")}','Link copiado')">Copiar</button></div>` : '';
+  const refPrivate = opts.client && REF_PRIVATE[opts.client];      // clientes donde la referencia es solo para el estratega
+  const canSeeRef = !refPrivate || rememberedPw() === EDIT_PW;       // logueado (equipo reconocido) la ve; lector público no
+  const refblock = (g.ref && canSeeRef) ? `<div class="refbar refreel"><span>🎬 Reel de referencia:</span> <a href="${attr(g.ref)}" target="_blank" rel="noopener">Ver inspiración ↗</a> <button class="mini" onclick="copy('${g.ref.replace(/'/g,"\\'")}','Link copiado')">Copiar</button></div>` : '';
   const founders = (opts.client && LOCUTORES[opts.client]) ? LOCUTORES[opts.client] : null;
   const locbar = founders ? `<div class="refbar locbar"><span>🎙️ Locutor:</span> ${founders.map(n=>`<button class="mini locpick${opts.locutor===n?' on':''}" data-loc="${attr(n)}">${esc(n)}</button>`).join(' ')} ${opts.locutor?'':'<span style="color:var(--muted)">sin asignar</span>'}</div>` : '';
   $('#app').innerHTML = `
