@@ -29,37 +29,44 @@ export default async function handler(req, res){
     'X-GitHub-Api-Version': '2022-11-28'
   };
 
+  // Reintenta ante conflictos de SHA (varias escrituras al index.json muy seguidas: grabado + locutor + ediciones).
   try {
-    const cur = await fetch(api, { headers: h });
-    if (cur.status !== 200) return res.status(502).send('No se pudo leer index.json');
-    const meta = await cur.json();
-    const data = JSON.parse(Buffer.from(meta.content, 'base64').toString('utf8'));
+    let lastErr = '';
+    for (let attempt = 0; attempt < 4; attempt++) {
+      const cur = await fetch(api, { headers: h, cache: 'no-store' });
+      if (cur.status !== 200) { lastErr = 'No se pudo leer index.json'; continue; }
+      const meta = await cur.json();
+      const data = JSON.parse(Buffer.from(meta.content, 'base64').toString('utf8'));
 
-    let found = false;
-    (data.grabaciones || []).forEach(rec => (rec.guiones || []).forEach(g => {
-      if (g.slug === slug) {
-        if ('grabado' in body) g.grabado = !!grabado;
-        if ('locutor' in body) g.locutor = locutor ? String(locutor).slice(0, 40) : null;
-        found = true;
-      }
-    }));
-    if (!found) return res.status(404).send('Guion no encontrado en el índice');
+      let found = false;
+      (data.grabaciones || []).forEach(rec => (rec.guiones || []).forEach(g => {
+        if (g.slug === slug) {
+          if ('grabado' in body) g.grabado = !!grabado;
+          if ('locutor' in body) g.locutor = locutor ? String(locutor).slice(0, 40) : null;
+          found = true;
+        }
+      }));
+      if (!found) return res.status(404).send('Guion no encontrado en el índice');
 
-    const msg = ('locutor' in body)
-      ? `Locutor ${client}/${slug}=${locutor || '(ninguno)'}`
-      : `Marcar ${client}/${slug} grabado=${!!grabado}`;
-    const newContent = JSON.stringify(data, null, 2) + '\n';
-    const put = await fetch(api, {
-      method: 'PUT',
-      headers: { ...h, 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        message: msg,
-        content: Buffer.from(newContent, 'utf8').toString('base64'),
-        sha: meta.sha
-      })
-    });
-    if (!put.ok) return res.status(502).send('GitHub: ' + (await put.text()));
-    return res.status(200).json({ ok: true, grabado: !!grabado });
+      const msg = ('locutor' in body)
+        ? `Locutor ${client}/${slug}=${locutor || '(ninguno)'}`
+        : `Marcar ${client}/${slug} grabado=${!!grabado}`;
+      const newContent = JSON.stringify(data, null, 2) + '\n';
+      const put = await fetch(api, {
+        method: 'PUT',
+        headers: { ...h, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: msg,
+          content: Buffer.from(newContent, 'utf8').toString('base64'),
+          sha: meta.sha
+        })
+      });
+      if (put.ok) return res.status(200).json({ ok: true, grabado: !!grabado, locutor: ('locutor' in body) ? (locutor || null) : undefined });
+      // 409/422 = sha desactualizado por otra escritura: reintentar con el sha fresco.
+      if (put.status === 409 || put.status === 422) { lastErr = 'conflicto de versión'; continue; }
+      return res.status(502).send('GitHub: ' + (await put.text()));
+    }
+    return res.status(409).send('No se pudo guardar tras varios intentos: ' + lastErr);
   } catch (e) {
     return res.status(500).send('Error: ' + (e && e.message || e));
   }

@@ -114,6 +114,42 @@
           "titulo": "\"Con agua y jabón basta\" — el mito",
           "info": "30–45 seg · mito unisex / hombres",
           "grabado": false
+        },
+        {
+          "slug": "r3-18",
+          "titulo": "Te califico tu skincare del 1 al 10",
+          "info": "30–45 seg · calificación /10 (narrador + voz)",
+          "grabado": false
+        },
+        {
+          "slug": "r3-19",
+          "titulo": "Skincare: ¿esto o esto?",
+          "info": "30–45 seg · versus rápido (narrador + voz)",
+          "grabado": false
+        },
+        {
+          "slug": "r3-20",
+          "titulo": "Mito o verdad: skincare",
+          "info": "30–45 seg · semáforo rápido (narrador + voz)",
+          "grabado": false
+        },
+        {
+          "slug": "r3-21",
+          "titulo": "Las dudas de skincare que todos tienen",
+          "info": "30–45 seg · pregunta-respuesta (2 voces)",
+          "grabado": false
+        },
+        {
+          "slug": "r3-22",
+          "titulo": "Ranking: lo que de verdad importa",
+          "info": "25–40 seg · ranking 5 a 1 (narrador + voz)",
+          "grabado": false
+        },
+        {
+          "slug": "r3-23",
+          "titulo": "El más___ del skincare",
+          "info": "30–45 seg · superlativos (narrador + voz)",
+          "grabado": false
         }
       ]
     }
