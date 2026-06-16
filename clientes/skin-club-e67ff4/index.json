@@ -143,7 +143,8 @@
           "slug": "r3-22",
           "titulo": "Ranking: lo que de verdad importa",
           "info": "25–40 seg · ranking 5 a 1 (narrador + voz)",
-          "grabado": false
+          "grabado": false,
+          "locutor": "Diego"
         },
         {
           "slug": "r3-23",
