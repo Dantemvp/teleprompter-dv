@@ -2,8 +2,8 @@
   "cliente": "Bianca Aldama Boutique",
   "grabaciones": [
     {
-      "rec": "R5",
-      "nombre": "Quinta grabación",
+      "rec": "R6",
+      "nombre": "Sexta grabación",
       "fecha": "12/06/2026",
       "locacion": "Boutique Bianca Aldama · GDL",
       "guiones": [
@@ -15,7 +15,9 @@
         { "slug": "g-10", "titulo": "Con qué colores combina tu jeans (según su tono)", "info": "15–25 seg · transición · jeans por tono", "tipo": "transicion", "grabado": false },
         { "slug": "g-11", "titulo": "Códigos de vestimenta: llega bien a cualquier evento", "info": "40–60 seg · guionado / autoridad", "tipo": "guion", "grabado": false },
         { "slug": "g-12", "titulo": "Cómo vestirte como una mujer cara", "info": "40–60 seg · guionado / GRWM elegante", "tipo": "guion", "grabado": false },
-        { "slug": "g-13", "titulo": "Fondo de armario: la regla 70/20/10", "info": "20–30 seg · guionado + lead magnet (comenta FONDO)", "tipo": "guion", "grabado": false }
+        { "slug": "g-13", "titulo": "Fondo de armario: la regla 70/20/10", "info": "20–30 seg · guionado + lead magnet (comenta FONDO)", "tipo": "guion", "grabado": false },
+        { "slug": "g-14", "titulo": "Vístete como diseña la naturaleza", "info": "40–55 seg · guionado / autoridad · estilo con intención", "tipo": "guion", "grabado": false },
+        { "slug": "g-15", "titulo": "Zapatos que se ven elegantes (tendencias 2026)", "info": "30–45 seg · guionado / listicle calzado", "tipo": "guion", "grabado": false }
       ]
     }
   ]
