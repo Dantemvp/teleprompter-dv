@@ -7,18 +7,102 @@
       "fecha": "12/06/2026",
       "locacion": "Boutique Bianca Aldama · GDL",
       "guiones": [
-        { "slug": "g-05", "titulo": "Los 7 estilos universales — ¿cuál eres?", "info": "40–60 seg · guionado / listicle", "tipo": "guion", "grabado": false },
-        { "slug": "g-06", "titulo": "Una camisa blanca, 6 estilos", "info": "15–25 seg · transición · 1 prenda → 6 estilos", "tipo": "transicion", "grabado": false },
-        { "slug": "g-07", "titulo": "Unos jeans, 6 estilos", "info": "15–25 seg · transición · 1 prenda → 6 estilos", "tipo": "transicion", "grabado": false },
-        { "slug": "g-08", "titulo": "Un vestido negro, 6 estilos", "info": "15–25 seg · transición · 1 prenda → 6 estilos", "tipo": "transicion", "grabado": false },
-        { "slug": "g-09", "titulo": "Si la naturaleza lo combina, tú también", "info": "15–20 seg · transición visual · macro + outfit", "tipo": "transicion", "grabado": false },
-        { "slug": "g-10", "titulo": "Con qué colores combina tu jeans (según su tono)", "info": "15–25 seg · transición · jeans por tono", "tipo": "transicion", "grabado": false },
-        { "slug": "g-11", "titulo": "Códigos de vestimenta: llega bien a cualquier evento", "info": "40–60 seg · guionado / autoridad", "tipo": "guion", "grabado": false },
-        { "slug": "g-12", "titulo": "Cómo vestirte como una mujer cara", "info": "40–60 seg · guionado / GRWM elegante", "tipo": "guion", "grabado": false },
-        { "slug": "g-13", "titulo": "Fondo de armario: la regla 70/20/10", "info": "20–30 seg · guionado + lead magnet (comenta FONDO)", "tipo": "guion", "grabado": false },
-        { "slug": "g-14", "titulo": "Vístete como diseña la naturaleza", "info": "40–55 seg · guionado / autoridad · estilo con intención", "tipo": "guion", "grabado": false },
-        { "slug": "g-15", "titulo": "Zapatos que se ven elegantes (tendencias 2026)", "info": "30–45 seg · guionado / listicle calzado", "tipo": "guion", "grabado": false },
-        { "slug": "g-16", "titulo": "Usa la tendencia sin volverte un clon", "info": "30–45 seg · guionado / opinión-autoridad", "tipo": "guion", "grabado": false }
+        {
+          "slug": "g-05",
+          "titulo": "Los 7 estilos universales — ¿cuál eres?",
+          "info": "40–60 seg · guionado / listicle",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-06",
+          "titulo": "Una camisa blanca, 6 estilos",
+          "info": "15–25 seg · transición · 1 prenda → 6 estilos",
+          "tipo": "transicion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-07",
+          "titulo": "Unos jeans, 6 estilos",
+          "info": "15–25 seg · transición · 1 prenda → 6 estilos",
+          "tipo": "transicion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-08",
+          "titulo": "Un vestido negro, 6 estilos",
+          "info": "15–25 seg · transición · 1 prenda → 6 estilos",
+          "tipo": "transicion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-09",
+          "titulo": "Si la naturaleza lo combina, tú también",
+          "info": "15–20 seg · transición visual · macro + outfit",
+          "tipo": "transicion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-10",
+          "titulo": "Con qué colores combina tu jeans (según su tono)",
+          "info": "15–25 seg · transición · jeans por tono",
+          "tipo": "transicion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-11",
+          "titulo": "Códigos de vestimenta: llega bien a cualquier evento",
+          "info": "40–60 seg · guionado / autoridad",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-12",
+          "titulo": "Cómo vestirte como una mujer cara",
+          "info": "40–60 seg · guionado / GRWM elegante",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-13",
+          "titulo": "Fondo de armario: la regla 70/20/10",
+          "info": "20–30 seg · guionado + lead magnet (comenta FONDO)",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-14",
+          "titulo": "Vístete como diseña la naturaleza",
+          "info": "40–55 seg · guionado / autoridad · estilo con intención",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-15",
+          "titulo": "Zapatos que se ven elegantes (tendencias 2026)",
+          "info": "30–45 seg · guionado / listicle calzado",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-16",
+          "titulo": "Usa la tendencia sin volverte un clon",
+          "info": "30–45 seg · guionado / opinión-autoridad",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        }
       ]
     }
   ]
