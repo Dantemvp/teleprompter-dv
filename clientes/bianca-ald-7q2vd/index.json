@@ -102,6 +102,100 @@
           "tipo": "guion",
           "grabado": false,
           "categoria": "guion"
+        },
+        {
+          "slug": "tienda-01",
+          "titulo": "Tienda · Clienta feliz → escanea el QR",
+          "info": "skit 2 voces · reseña QR",
+          "categoria": "tienda",
+          "grabado": false
+        },
+        {
+          "slug": "tienda-02",
+          "titulo": "Tienda · Antes de la bolsita → escanea el QR",
+          "info": "skit 2 voces · reseña QR",
+          "categoria": "tienda",
+          "grabado": false
+        },
+        {
+          "slug": "ri-01",
+          "titulo": "Transición INT 01",
+          "info": "transición interior · referencia",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/C97riQEOwKO/",
+          "grabado": false
+        },
+        {
+          "slug": "ri-02",
+          "titulo": "Transición INT · Fashion Nova",
+          "info": "transición interior · referencia",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/fashionnova/reel/DVoLDnWDoZ4/",
+          "grabado": false
+        },
+        {
+          "slug": "ri-03",
+          "titulo": "Transición INT 03",
+          "info": "transición interior · referencia",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DZM8WpRCiHs/",
+          "grabado": false
+        },
+        {
+          "slug": "ri-04",
+          "titulo": "Transición INT 04 · @luseeyalu",
+          "info": "transición interior · referencia",
+          "categoria": "trans-int",
+          "link": "https://www.tiktok.com/@luseeyalu/video/7581876295202639134",
+          "grabado": false
+        },
+        {
+          "slug": "ri-05",
+          "titulo": "Transición INT 05 · con caminadora",
+          "info": "transición interior · referencia",
+          "categoria": "trans-int",
+          "link": "https://www.tiktok.com/@samxbeatrice/video/7571016485397679381",
+          "grabado": false
+        },
+        {
+          "slug": "ri-06",
+          "titulo": "Transición INT 06",
+          "info": "transición interior · referencia",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DSApP0TCZgd/",
+          "grabado": false
+        },
+        {
+          "slug": "ri-07",
+          "titulo": "Transición INT 07",
+          "info": "transición interior · referencia",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DYzN8EpIjvf/",
+          "grabado": false
+        },
+        {
+          "slug": "re-01",
+          "titulo": "Transición EXT 01",
+          "info": "transición exterior · referencia",
+          "categoria": "trans-ext",
+          "link": "https://www.instagram.com/reel/DX1EI_cKTxj/",
+          "grabado": false
+        },
+        {
+          "slug": "re-02",
+          "titulo": "Transición EXT 02",
+          "info": "transición exterior · referencia",
+          "categoria": "trans-ext",
+          "link": "https://www.instagram.com/reel/DYfa_2ZNXef/",
+          "grabado": false
+        },
+        {
+          "slug": "re-03",
+          "titulo": "Transición EXT 03",
+          "info": "transición exterior · referencia",
+          "categoria": "trans-ext",
+          "link": "https://www.instagram.com/reel/DWmZDBWkQ5S/",
+          "grabado": false
         }
       ]
     }

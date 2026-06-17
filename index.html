@@ -48,6 +48,7 @@
   .catname{flex:1;}
   .catcount{font-size:12px; font-weight:500; color:var(--muted); letter-spacing:0;}
   .catblock[open]>summary{border-bottom:1px solid var(--line,#e7e5df); margin-bottom:12px;}
+  .globalnote{background:#fff7cc; border:1px solid #f0d878; color:#6b5800; border-radius:10px; padding:10px 14px; font-size:13px; font-weight:600; margin:0 0 16px;}
   .beat{font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:20px 0 8px;}
   .row{display:flex; gap:10px; margin-bottom:12px;}
   .row.right{flex-direction:row-reverse;}
@@ -176,6 +177,8 @@ const DELETE_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/delete';
 const LOCUTORES = { 'skin-club-e67ff4': ['Nat', 'Kaori', 'Diego'] };
 // Clientes donde el reel de referencia es privado: solo visible si el equipo está logueado (rememberedPw===EDIT_PW).
 const REF_PRIVATE = { 'skin-club-e67ff4': true };
+// Aclaración global por cliente: se muestra como banner en cada guion y en el portal.
+const CLIENT_NOTE = { 'bianca-ald-7q2vd': '📸 No olvidar tomar la foto en el mismo lugar.' };
 
 function askPassword(title){
   return new Promise(resolve => {
@@ -293,6 +296,7 @@ function renderGuion(g, canonical, backHref, opts){
     <div class="refbar">Link de referencia: <code>${esc(canonical)}</code> <button class="mini" onclick="copy('${canonical.replace(/'/g,"\\'")}','Link copiado')">Copiar link</button> ${backHref?`<a href="${backHref}" style="font-size:12px;">← todos mis guiones</a>`:''}</div>
     ${refblock}
     ${locbar}
+    ${(opts.client && CLIENT_NOTE[opts.client]) ? `<div class="globalnote">${esc(CLIENT_NOTE[opts.client])}</div>` : ''}
     ${banner}
     <div class="tabs">
       <button class="on" data-v="conv">Conversación</button>
@@ -437,12 +441,13 @@ function renderGuion(g, canonical, backHref, opts){
 const CATEGORIAS = [
   { key: 'guion',     label: 'GUIONES',                    open: true },
   { key: 'trans-int', label: 'TRANSICIONES · INTERIORES',  open: false },
-  { key: 'trans-ext', label: 'TRANSICIONES · EXTERIORES',  open: false }
+  { key: 'trans-ext', label: 'TRANSICIONES · EXTERIORES',  open: false },
+  { key: 'tienda',    label: 'TIENDA · EMPLEADAS',         open: false }
 ];
 function renderCard(it, token, ri){
   const url = base() + '?c=' + token + '&g=' + it.slug;
   const cod = it.slug.toUpperCase();
-  const esGuion = !it.categoria || it.categoria === 'guion';
+  const esGuion = it.categoria !== 'trans-int' && it.categoria !== 'trans-ext';   // todo lo que tiene .md (guion/tienda) se puede abrir; las transiciones solo llevan link
   const toggle = STATUS_ENDPOINT ? `<button class="mini btnGrabado" data-slug="${attr(it.slug)}" data-grabado="${it.grabado?1:0}">${it.grabado?'✓ Grabado':'Marcar grabado'}</button>` : '';
   const del = (DELETE_ENDPOINT && rememberedPw()===EDIT_PW) ? `<button class="mini btnDel" data-slug="${attr(it.slug)}" data-cod="${attr(cod)}">Eliminar</button>` : '';
   const founders = LOCUTORES[token];
@@ -481,6 +486,7 @@ function renderClient(data, token){
   $('#app').innerHTML = `
     <header class="site"><div class="logo">DV</div><div><h1>${esc(data.cliente)}</h1><p>Tus guiones de grabación · Consultora DV</p></div></header>
     <p class="hint" style="margin:14px 0 26px;">Guarda este link: aquí aparecen tus contenidos por sección. Marca cada uno como grabado con la palomita.${lockHtml()}</p>
+    ${CLIENT_NOTE[token] ? `<div class="globalnote">${esc(CLIENT_NOTE[token])}</div>` : ''}
     ${blocks || '<p class="hint">Aún no hay contenido publicado para este cliente.</p>'}`;
   document.querySelectorAll('.btnGrabado').forEach(b => b.onclick = () => toggleGrabado(token, b));
   document.querySelectorAll('.btnDel').forEach(b => b.onclick = () => deleteGuion(token, b));
