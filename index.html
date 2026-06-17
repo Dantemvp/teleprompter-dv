@@ -105,6 +105,10 @@
   #tpbar input[type=range]{width:110px; accent-color:var(--teal);}
   #tpbar button{background:#1d1f1d; border-color:#333; color:#eee;}
   .mirror #tptext{transform:scaleX(-1);}
+  #tptext .tx{display:inline;}
+  #tp.editing #tptext .tx{outline:1px dashed var(--teal-soft); border-radius:6px; padding:0 .15em; background:rgba(255,255,255,.04);}
+  #tp.editing #tptext .tx:focus{outline:2px solid var(--teal); background:rgba(255,255,255,.08);}
+  #tp.editing{cursor:text;}
   .pwmodal{position:fixed; inset:0; background:rgba(14,15,14,.5); display:none; align-items:center; justify-content:center; z-index:60; padding:18px;}
   .pwmodal.on{display:flex;}
   .pwbox{background:var(--paper); border-radius:14px; padding:20px; width:100%; max-width:360px;}
@@ -126,6 +130,9 @@
     <label>Tamaño <input type="range" id="tpsize" min="22" max="80" value="44"></label>
     <label>Margen <input type="range" id="tpmargin" min="0" max="30" value="6"></label>
     <button id="tpmirror" class="mini">Espejo</button>
+    <button id="tpedit" class="mini" style="display:none">✎ Editar</button>
+    <button id="tpsave" class="primary mini" style="display:none">💾 Guardar</button>
+    <button id="tpcanceledit" class="mini" style="display:none">Cancelar</button>
     <button id="tprestart" class="mini">Reiniciar</button>
     <button id="tpexit" class="mini">Salir (Esc)</button>
   </div>
@@ -295,6 +302,7 @@ function renderGuion(g, canonical, backHref, opts){
     <div id="v-edit" style="display:none"></div>`;
 
   const fileName = (opts.slug || g.title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')) + '.md';
+  TPCTX = { opts, canonical, backHref };   // contexto para editar/guardar desde el teleprompter
 
   $('#toggleNotas').onclick = () => {
     document.body.classList.toggle('hide-notas');
@@ -590,17 +598,56 @@ async function renderAdmin(data, token){
 }
 
 let tpAnim = null, tpPlaying = false;
+let TPCTX = null;   // {g, spk, opts, canonical, backHref} del guion abierto, para guardar ediciones en vivo
 function openTP(g, spk){
+  if (TPCTX){ TPCTX.g = g; TPCTX.spk = spk; } else { TPCTX = { g, spk }; }
   const t = $('#tptext');
   const solo = spk.length < 2;
-  t.innerHTML = g.lines.filter(l=>!l.beat).map(l=>{
+  t.innerHTML = g.lines.map((l, i) => {
+    if (l.beat) return '';
     const cls = (solo || spk.indexOf(l.speaker)===1) ? 'spk2' : 'spk1';
-    return `<div class="l ${cls}"><span class="who">${esc(l.speaker)}</span>${esc(l.text)}</div>`;
+    return `<div class="l ${cls}" data-li="${i}"><span class="who">${esc(l.speaker)}</span><span class="tx">${esc(l.text)}</span></div>`;
   }).join('');
   t.style.fontSize = $('#tpsize').value + 'px';
   $('#tp').classList.add('on');
   $('#tpscroll').scrollTop = 0;
   setPlay(false);
+  setTPEdit(false);
+  $('#tpedit').style.display = (rememberedPw() === EDIT_PW) ? '' : 'none';   // solo admin edita en vivo
+}
+function setTPEdit(on){
+  $('#tp').classList.toggle('editing', on);
+  document.querySelectorAll('#tptext .tx').forEach(sp => sp.contentEditable = on ? 'true' : 'false');
+  $('#tpedit').style.display = on ? 'none' : (rememberedPw()===EDIT_PW ? '' : 'none');
+  $('#tpsave').style.display = on ? '' : 'none';
+  $('#tpcanceledit').style.display = on ? '' : 'none';
+  if (on){ setPlay(false); const first = document.querySelector('#tptext .tx'); if (first) first.focus(); }
+}
+async function saveTPEdits(){
+  const ctx = TPCTX; if (!ctx || !ctx.g) return;
+  document.querySelectorAll('#tptext .l').forEach(el => {
+    const li = parseInt(el.dataset.li, 10);
+    const tx = el.querySelector('.tx');
+    if (!isNaN(li) && tx && ctx.g.lines[li]) ctx.g.lines[li].text = tx.innerText.replace(/\s*\n\s*/g,' ').trim();
+  });
+  const md = toMarkdown(ctx.g);
+  if (ctx.opts && ctx.opts.localKey) localStorage.setItem(ctx.opts.localKey, md);
+  let savedCloud = false;
+  if (SAVE_ENDPOINT && ctx.opts && ctx.opts.client && ctx.opts.slug){
+    const pw = await unlock('Contraseña para guardar en la nube');
+    if (pw){
+      $('#tpsave').disabled = true; $('#tpsave').textContent = 'Guardando...';
+      try {
+        const r = await fetch(SAVE_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ password: pw, client: ctx.opts.client, slug: ctx.opts.slug, content: md }) });
+        if (r.status === 401){ forgetPw(); throw new Error('Contraseña incorrecta'); }
+        if (!r.ok) throw new Error(await r.text());
+        savedCloud = true;
+      } catch (e){ toast('Nube: ' + (e.message||e)); }
+      $('#tpsave').disabled = false; $('#tpsave').textContent = '💾 Guardar';
+    }
+  }
+  setTPEdit(false);
+  toast(savedCloud ? 'Cambios guardados ✓ (nube en ~1 min)' : 'Cambios guardados en este equipo');
 }
 function setPlay(p){
   tpPlaying = p;
@@ -620,10 +667,14 @@ $('#tpplay').onclick = () => setPlay(!tpPlaying);
 $('#tpsize').oninput = e => $('#tptext').style.fontSize = e.target.value + 'px';
 $('#tpmargin').oninput = e => $('#tpscroll').style.setProperty('--tpmar', e.target.value + 'vw');
 $('#tpmirror').onclick = () => $('#tp').classList.toggle('mirror');
+$('#tpedit').onclick = () => setTPEdit(true);
+$('#tpsave').onclick = () => saveTPEdits();
+$('#tpcanceledit').onclick = () => { setTPEdit(false); if (TPCTX) openTP(TPCTX.g, TPCTX.spk); };   // descarta y re-renderiza desde g
 $('#tprestart').onclick = () => { $('#tpscroll').scrollTop = 0; setPlay(false); };
-$('#tpexit').onclick = () => { $('#tp').classList.remove('on'); setPlay(false); };
+$('#tpexit').onclick = () => { setTPEdit(false); $('#tp').classList.remove('on'); setPlay(false); };
 document.addEventListener('keydown', e => {
   if (!$('#tp').classList.contains('on')) return;
+  if ($('#tp').classList.contains('editing')) return;   // no secuestrar teclas mientras se edita
   if (e.code === 'Space'){ e.preventDefault(); setPlay(!tpPlaying); }
   if (e.code === 'Escape'){ $('#tp').classList.remove('on'); setPlay(false); }
 });

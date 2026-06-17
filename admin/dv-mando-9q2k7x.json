@@ -3,6 +3,7 @@
   "clientes": [
     { "token": "ale-paz-mx27k", "nombre": "Dra. Alejandra Paz", "nicho": "Ortodoncia · Dentisania GDL" },
     { "token": "fedra-ald-t84qz", "nombre": "Dra. Fedra Aldama", "nicho": "Bariatría · balance metabólico" },
-    { "token": "skin-club-e67ff4", "nombre": "The Skin Club", "nicho": "Skincare biotecnológico · The New Selflove" }
+    { "token": "skin-club-e67ff4", "nombre": "The Skin Club", "nicho": "Skincare biotecnológico · The New Selflove" },
+    { "token": "bianca-ald-7q2vd", "nombre": "Bianca Aldama Boutique", "nicho": "Moda · boutique de ropa · GDL" }
   ]
 }
