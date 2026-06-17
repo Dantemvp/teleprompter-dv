@@ -14,7 +14,8 @@
         { "slug": "g-09", "titulo": "Si la naturaleza lo combina, tú también", "info": "15–20 seg · transición visual · macro + outfit", "tipo": "transicion", "grabado": false },
         { "slug": "g-10", "titulo": "Con qué colores combina tu jeans (según su tono)", "info": "15–25 seg · transición · jeans por tono", "tipo": "transicion", "grabado": false },
         { "slug": "g-11", "titulo": "Códigos de vestimenta: llega bien a cualquier evento", "info": "40–60 seg · guionado / autoridad", "tipo": "guion", "grabado": false },
-        { "slug": "g-12", "titulo": "Cómo vestirte como una mujer cara", "info": "40–60 seg · guionado / GRWM elegante", "tipo": "guion", "grabado": false }
+        { "slug": "g-12", "titulo": "Cómo vestirte como una mujer cara", "info": "40–60 seg · guionado / GRWM elegante", "tipo": "guion", "grabado": false },
+        { "slug": "g-13", "titulo": "Fondo de armario: la regla 70/20/10", "info": "20–30 seg · guionado + lead magnet (comenta FONDO)", "tipo": "guion", "grabado": false }
       ]
     }
   ]
