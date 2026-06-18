@@ -8,18 +8,18 @@ MARIAN: Ando encantada y les voy a platicar el chisme!! Hay un paso que hago ant
 
 ## Desarrollo
 
-MARIAN: Me recomendaron bastante una marca mexicana, The Skin Club, hecha por biotecnólogos, y me clavé.
+MARIAN: Me recomendaron bastante esta marca mexicana, The Skin Club, es de 3 biotecnólogos, y me clavé.
 
-MARIAN: Limpio mi carita con la espuma de alantoína y aloe, queda limpiecita.
+MARIAN: Limpio mi rostro con la espuma de alantoína y aloe, queda limpiecita, no trae aroma
 
-MARIAN: Un tónico Ultrafresh con aloe, un apapacho que la deja lista.
+MARIAN: y deja la piel lista para el tonico Ultrafresh con aloe, un apapacho que la deja lista, restaura el Ph y nos prepara para el
 
-MARIAN: El suerito de ácido hialurónico con niacinamida me la deja jugosita y empareja el tono.
+MARIAN: Suerito de ácido hialurónico con niacinamida, este me deja la piel jugosita y empareja el tono.
 
-MARIAN: Tantito de vitamina C para las manchitas y darle luz.
+MARIAN: luego Tantito de este suerito de vitamina C para las manchitas de acné o manchitas causadas por el sol y darle luz al rostro.
 
-MARIAN: Sello con la crema en gel, ligerita, y queda lista para el maquillaje.
+MARIAN: Ya quedo asi que Sellemos con la crema en gel, ligerita, y queda la piel lista para el maquillaje.
 
 ## Cierre
 
-MARIAN: Clean beauty, cruelty-free y puro biotech mexicano. Pruébala y me cuentas, hermosa.
+DRA: Así es como se ve el maquillaje aplicado después de una BUENA rutina de skincare… y algo que quiero mencionarte es que esta marca es 100% mexicana, está hecha por biotecnólogos y es libre de crueldad animal. Y nada, si quieres dejar de sufrir con la base de maquillaje, empieza por aquí. P.D, no se cuanto tiempo le queda pero con este codigo (apuntar a algun lado y dejarlo en el copy) te daran descuento!
