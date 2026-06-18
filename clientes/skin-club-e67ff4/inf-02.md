@@ -22,4 +22,4 @@ MARIAN: Ya quedo asi que Sellemos con la crema en gel, ligerita, y queda la piel
 
 ## Cierre
 
-DRA: Así es como se ve el maquillaje aplicado después de una BUENA rutina de skincare… y algo que quiero mencionarte es que esta marca es 100% mexicana, está hecha por biotecnólogos y es libre de crueldad animal. Y nada, si quieres dejar de sufrir con la base de maquillaje, empieza por aquí. P.D, no se cuanto tiempo le queda pero con este codigo (apuntar a algun lado y dejarlo en el copy) te daran descuento!
+MARIAN: Así es como se ve el maquillaje aplicado después de una BUENA rutina de skincare… y algo que quiero mencionarte es que esta marca es 100% mexicana, está hecha por biotecnólogos y es libre de crueldad animal. Y nada, si quieres dejar de sufrir con la base de maquillaje, empieza por aquí. P.D, no se cuanto tiempo le queda pero con este codigo (apuntar a algun lado y dejarlo en el copy) te daran descuento!
