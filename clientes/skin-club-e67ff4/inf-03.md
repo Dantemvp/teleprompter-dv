@@ -8,16 +8,16 @@ MARIAN: Milagrooo, entre tantas marcas esto esta dificil perooo Descubrí una ma
 
 ## Desarrollo
 
-MARIAN: Se llama The Skin Club, la hacen biotecnólogos aquí en México. Clean beauty, cruelty-free y consciente.
+MARIAN: Se llama The Skin Club, la hacen biotecnólogos aquí en México. Clean beauty, cruelty-free y usan mucho ingrediente natural.
 
 MARIAN: Llevo semanas usándola y mi piel anda jugosita, lo juro.
 
-MARIAN: Limpio con la espuma de alantoína y aloe, queda limpiecita sin tirantez.
+MARIAN: Limpio con la espuma de alantoína y aloe, me queda limpiecita sin tirantez. Mira (mostrar close ups del rostro) p.d, no se cuanto le quede pero encontre este codigo, usalo para un descuento
 
-MARIAN: Tónico con aloe, el suerito de ácido hialurónico con niacinamida, y para las manchitas el de vitamina C.
+MARIAN: Tluego el tónico con aloe, el suerito de ácido hialurónico con niacinamida y para las manchitas el de vitamina C.
 
 MARIAN: Sello con la cremita en gel, ligera, y lista.
 
 ## Cierre
 
-MARIAN: Es de aquí, bien hecha y para presumirla. Corre antes de que todas la conozcan.
+MARIAN: Es de aquí, es un club que esta creciendo, esta bien hecha por biotecnologos y si es para presumirse.
