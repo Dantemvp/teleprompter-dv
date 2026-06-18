@@ -12,146 +12,167 @@
           "titulo": "Crema Reparadora de Noche (Hydroglow)",
           "info": "30–50 seg · talking head · día vs noche",
           "grabado": false,
-          "locutor": "Nat"
+          "locutor": "Nat",
+          "categoria": "guion"
         },
         {
           "slug": "r3-02",
           "titulo": "Retinol, retinal, bakuchiol… ¿cuál te toca?",
           "info": "40–60 seg · conversación 2 voces",
           "grabado": true,
-          "locutor": "Kaori"
+          "locutor": "Kaori",
+          "categoria": "guion"
         },
         {
           "slug": "r3-03",
           "titulo": "Le tienes miedo a lavarte la cara",
           "info": "30–45 seg · mito / reframe",
           "grabado": false,
-          "locutor": "Kaori"
+          "locutor": "Kaori",
+          "categoria": "guion"
         },
         {
           "slug": "r3-04",
           "titulo": "¿Qué skincare debo usar si tengo más de 40?",
           "info": "30–45 seg · pregunta viral",
           "grabado": false,
-          "locutor": "Diego"
+          "locutor": "Diego",
+          "categoria": "guion"
         },
         {
           "slug": "r3-06",
           "titulo": "Ácido hialurónico: lo que la etiqueta no dice",
           "info": "45–60 seg · autoridad",
           "grabado": false,
-          "locutor": null
+          "locutor": null,
+          "categoria": "guion"
         },
         {
           "slug": "r3-07",
           "titulo": "Voltea tu vitamina C a la luz (test)",
           "info": "40–55 seg · demo + lead magnet",
           "grabado": false,
-          "locutor": "Kaori"
+          "locutor": "Kaori",
+          "categoria": "guion"
         },
         {
           "slug": "r3-08",
           "titulo": "California prohibió ingredientes que usas",
           "info": "45–60 seg · regulación + lead magnet",
           "grabado": true,
-          "locutor": "Kaori"
+          "locutor": "Kaori",
+          "categoria": "guion"
         },
         {
           "slug": "r3-09",
           "titulo": "Ingredientes infravalorados que sí funcionan",
           "info": "45–60 seg · listicle",
           "grabado": false,
-          "locutor": "Diego"
+          "locutor": "Diego",
+          "categoria": "guion"
         },
         {
           "slug": "r3-10",
           "titulo": "El azúcar de ayer ya le cobra a tu cara",
           "info": "40–55 seg · glicación + lead magnet",
           "grabado": false,
-          "locutor": "Nat"
+          "locutor": "Nat",
+          "categoria": "guion"
         },
         {
           "slug": "r3-11",
           "titulo": "Péptidos vs retinol: prevención o intensidad",
           "info": "40–55 seg · versus",
           "grabado": false,
-          "locutor": null
+          "locutor": null,
+          "categoria": "guion"
         },
         {
           "slug": "r3-12",
           "titulo": "La niacinamida está sobreusada",
           "info": "40–55 seg · hype-buster",
           "grabado": true,
-          "locutor": "Kaori"
+          "locutor": "Kaori",
+          "categoria": "guion"
         },
         {
           "slug": "r3-13",
           "titulo": "El retinol que compras ya es ilegal en Europa",
           "info": "40–55 seg · shock regulatorio",
           "grabado": false,
-          "locutor": "Kaori"
+          "locutor": "Kaori",
+          "categoria": "guion"
         },
         {
           "slug": "r3-15",
           "titulo": "El orden correcto de tu skincare",
           "info": "20–30 seg · ranking rápido (estilo Ale Paz)",
           "grabado": false,
-          "locutor": "Nat"
+          "locutor": "Nat",
+          "categoria": "guion"
         },
         {
           "slug": "r3-16",
           "titulo": "Skincare para hombres: 3 pasos y ya",
           "info": "40–55 seg · unisex / hombres",
           "grabado": false,
-          "locutor": "Diego"
+          "locutor": "Diego",
+          "categoria": "guion"
         },
         {
           "slug": "r3-17",
           "titulo": "\"Con agua y jabón basta\" — el mito",
           "info": "30–45 seg · mito unisex / hombres",
           "grabado": true,
-          "locutor": "Diego"
+          "locutor": "Diego",
+          "categoria": "guion"
         },
         {
           "slug": "r3-18",
           "titulo": "Te califico tu skincare del 1 al 10",
           "info": "30–45 seg · calificación /10 (narrador + voz)",
           "grabado": false,
-          "locutor": "Kaori"
+          "locutor": "Kaori",
+          "categoria": "guion"
         },
         {
           "slug": "r3-19",
           "titulo": "Skincare: ¿esto o esto?",
           "info": "30–45 seg · versus rápido (narrador + voz)",
           "grabado": true,
-          "locutor": "Nat"
+          "locutor": "Nat",
+          "categoria": "guion"
         },
         {
           "slug": "r3-20",
           "titulo": "Mito o verdad: skincare",
           "info": "30–45 seg · semáforo rápido (narrador + voz)",
           "grabado": false,
-          "locutor": "Kaori"
+          "locutor": "Kaori",
+          "categoria": "guion"
         },
         {
           "slug": "r3-21",
           "titulo": "Las dudas de skincare que todos tienen",
           "info": "30–45 seg · pregunta-respuesta (2 voces)",
-          "grabado": true
+          "grabado": true,
+          "categoria": "guion"
         },
         {
           "slug": "r3-22",
           "titulo": "Ranking: lo que de verdad importa",
           "info": "25–40 seg · ranking 5 a 1 (narrador + voz)",
           "grabado": true,
-          "locutor": "Diego"
+          "locutor": "Diego",
+          "categoria": "guion"
         },
         {
           "slug": "r3-23",
           "titulo": "El más___ del skincare",
           "info": "30–45 seg · superlativos (narrador + voz)",
           "grabado": true,
-          "locutor": "Nat"
+          "locutor": "Nat",
+          "categoria": "guion"
         }
       ]
     }

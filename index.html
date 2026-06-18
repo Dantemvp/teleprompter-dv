@@ -438,12 +438,19 @@ function renderGuion(g, canonical, backHref, opts){
   };
 }
 
-const CATEGORIAS = [
-  { key: 'guion',     label: 'GUIONES',                    open: true },
-  { key: 'trans-int', label: 'TRANSICIONES · INTERIORES',  open: false },
-  { key: 'trans-ext', label: 'TRANSICIONES · EXTERIORES',  open: false },
-  { key: 'tienda',    label: 'TIENDA · EMPLEADAS',         open: false }
-];
+// Etiquetas de cada categoría y el orden de secciones por cliente.
+const CAT_LABELS = {
+  'guion':     'GUIONES',
+  'trans-int': 'TRANSICIONES · INTERIORES',
+  'trans-ext': 'TRANSICIONES · EXTERIORES',
+  'tienda':    'TIENDA · EMPLEADAS',
+  'ugc':       'UGC',
+  'influencer':'INFLUENCER'
+};
+const CLIENT_CATS = {
+  'bianca-ald-7q2vd': ['guion', 'trans-int', 'trans-ext', 'tienda'],
+  'skin-club-e67ff4': ['guion', 'ugc', 'influencer']
+};
 function renderCard(it, token, ri){
   const url = base() + '?c=' + token + '&g=' + it.slug;
   const cod = it.slug.toUpperCase();
@@ -465,15 +472,16 @@ function renderCard(it, token, ri){
 }
 function renderClient(data, token){
   const all = (data.grabaciones||[]).flatMap(rec => rec.guiones||[]);
-  const usaCategorias = all.some(g => g.categoria);
+  let cats = CLIENT_CATS[token];
+  if (!cats && all.some(g => g.categoria)) cats = Object.keys(CAT_LABELS).filter(k => all.some(g => (g.categoria||'guion') === k));
   let blocks;
-  if (usaCategorias){
-    blocks = CATEGORIAS.map((cat, ci) => {
-      const items = all.filter(g => (g.categoria||'guion') === cat.key);
+  if (cats){
+    blocks = cats.map((key, ci) => {
+      const items = all.filter(g => (g.categoria||'guion') === key);
       const done = items.filter(x=>x.grabado).length;
       const cards = items.length ? items.map(it => renderCard(it, token, ci)).join('')
-        : `<p class="hint" style="margin:6px 2px 2px;">Aún no hay nada aquí. Pásame título y link y lo agrego.</p>`;
-      return `<details class="catblock"${cat.open?' open':''}><summary><span class="catname">${esc(cat.label)}</span><span class="catcount">${items.length} · <span class="donecount" data-rec="${ci}">${done}/${items.length} grabados</span></span></summary>${cards}</details>`;
+        : `<p class="hint" style="margin:6px 2px 2px;">Aún no hay nada aquí. Pásame el contenido y lo agrego.</p>`;
+      return `<details class="catblock"${ci===0?' open':''}><summary><span class="catname">${esc(CAT_LABELS[key]||key.toUpperCase())}</span><span class="catcount">${items.length} · <span class="donecount" data-rec="${ci}">${done}/${items.length} grabados</span></span></summary>${cards}</details>`;
     }).join('');
   } else {
     blocks = (data.grabaciones||[]).map((rec, ri) => {
