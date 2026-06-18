@@ -173,6 +173,27 @@
           "grabado": true,
           "locutor": "Nat",
           "categoria": "guion"
+        },
+        {
+          "slug": "inf-01",
+          "titulo": "Marian × esposo — hazle creer que él también la necesita",
+          "info": "skit pareja · Marian López",
+          "categoria": "influencer",
+          "grabado": false
+        },
+        {
+          "slug": "inf-02",
+          "titulo": "Marian — mi prep antes de maquillarme",
+          "info": "prep de piel · Marian López",
+          "categoria": "influencer",
+          "grabado": false
+        },
+        {
+          "slug": "inf-03",
+          "titulo": "Marian — el descubrimiento (les paso el chisme)",
+          "info": "storytelling · Marian López",
+          "categoria": "influencer",
+          "grabado": false
         }
       ]
     }
