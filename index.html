@@ -545,7 +545,7 @@ function renderClient(data, token){
 
 async function orgCall(payload, okMsg){
   const pw = await unlock('Contraseña');
-  if (!pw) return false;
+  if (!pw) { toast('Cancelado'); return false; }
   try {
     const r = await fetch(ORGANIZE_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ password: pw, client: CLIENT_TOKEN, ...payload }) });
     if (r.status === 401){ forgetPw(); throw new Error('Contraseña incorrecta'); }
@@ -560,7 +560,12 @@ async function newRecUI(){
     { name:'__nombre', title:'Nombre (opcional)', input:true, placeholder:'Séptima grabación' }
   ]);
   if (!pick || !pick.__rec) return;
-  await orgCall({ action:'add-rec', rec: pick.__rec.trim(), nombre: (pick.__nombre||'').trim() }, 'Grabación creada');
+  const rec = pick.__rec.trim(), nombre = (pick.__nombre||'').trim();
+  const ok = await orgCall({ action:'add-rec', rec, nombre }, 'Grabación creada');
+  if (ok){   // refresco optimista: aparece de inmediato aunque la nube tarde ~1 min
+    (CLIENT_DATA.grabaciones = CLIENT_DATA.grabaciones || []).unshift({ rec, nombre: nombre||rec, fecha:'Por definir', locacion:'', guiones:[] });
+    renderClient(CLIENT_DATA, CLIENT_TOKEN);
+  }
 }
 async function moveItemUI(slug){
   const data = CLIENT_DATA, token = CLIENT_TOKEN; if (!data) return;
@@ -573,7 +578,13 @@ async function moveItemUI(slug){
     { name:'categoria', title:'¿Categoría?', options: cats.map(c => ({ value:c, label: CAT_LABELS[c]||c })), selected: curCat }
   ]);
   if (!pick) return;
-  await orgCall({ action:'move', slug, toRec: pick.toRec, categoria: pick.categoria }, 'Movido a ' + pick.toRec);
+  const ok = await orgCall({ action:'move', slug, toRec: pick.toRec, categoria: pick.categoria }, 'Movido a ' + pick.toRec);
+  if (ok){   // refresco optimista
+    let item = null;
+    (CLIENT_DATA.grabaciones||[]).forEach(g => { const i=(g.guiones||[]).findIndex(x=>x.slug===slug); if(i>=0) item=g.guiones.splice(i,1)[0]; });
+    if (item){ if (pick.categoria) item.categoria = pick.categoria; const t=(CLIENT_DATA.grabaciones||[]).find(g=>g.rec===pick.toRec); if(t){ t.guiones=t.guiones||[]; t.guiones.push(item); } }
+    renderClient(CLIENT_DATA, CLIENT_TOKEN);
+  }
 }
 // Modal genérico de selección: groups = [{name, title, options:[{value,label}], selected} | {name,title,input:true,placeholder}]
 function pickModal(title, groups){
