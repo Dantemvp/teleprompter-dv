@@ -38,6 +38,14 @@
           "tipo": "guion",
           "grabado": false,
           "categoria": "guion"
+        },
+        {
+          "slug": "g-15",
+          "titulo": "Zapatos que se ven elegantes (tendencias 2026)",
+          "info": "30–45 seg · guionado / listicle calzado",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
         }
       ]
     },
@@ -91,14 +99,6 @@
           "slug": "g-14",
           "titulo": "Vístete como diseña la naturaleza",
           "info": "40–55 seg · guionado / autoridad · estilo con intención",
-          "tipo": "guion",
-          "grabado": false,
-          "categoria": "guion"
-        },
-        {
-          "slug": "g-15",
-          "titulo": "Zapatos que se ven elegantes (tendencias 2026)",
-          "info": "30–45 seg · guionado / listicle calzado",
           "tipo": "guion",
           "grabado": false,
           "categoria": "guion"
