@@ -68,7 +68,7 @@
           "titulo": "Con qué colores combina tu jeans (según su tono)",
           "info": "15–25 seg · transición · jeans por tono",
           "tipo": "transicion",
-          "grabado": false,
+          "grabado": true,
           "categoria": "guion"
         },
         {
