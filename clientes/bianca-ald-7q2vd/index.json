@@ -86,6 +86,14 @@
           "categoria": "trans-int",
           "link": "https://www.instagram.com/reel/DYzN8EpIjvf/",
           "grabado": false
+        },
+        {
+          "slug": "re-02",
+          "titulo": "Transición EXT 02",
+          "info": "transición exterior · referencia",
+          "categoria": "trans-ext",
+          "link": "https://www.instagram.com/reel/DYfa_2ZNXef/",
+          "grabado": false
         }
       ]
     },
@@ -187,14 +195,6 @@
           "info": "transición exterior · referencia",
           "categoria": "trans-ext",
           "link": "https://www.instagram.com/reel/DX1EI_cKTxj/",
-          "grabado": false
-        },
-        {
-          "slug": "re-02",
-          "titulo": "Transición EXT 02",
-          "info": "transición exterior · referencia",
-          "categoria": "trans-ext",
-          "link": "https://www.instagram.com/reel/DYfa_2ZNXef/",
           "grabado": false
         },
         {
