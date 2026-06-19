@@ -62,6 +62,14 @@
           "categoria": "trans-int",
           "link": "https://www.instagram.com/fashionnova/reel/DVoLDnWDoZ4/",
           "grabado": false
+        },
+        {
+          "slug": "ri-03",
+          "titulo": "Transición INT 03",
+          "info": "transición interior · referencia",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DZM8WpRCiHs/",
+          "grabado": false
         }
       ]
     },
@@ -140,14 +148,6 @@
           "categoria": "trans-int",
           "link": "https://www.instagram.com/reel/C97riQEOwKO/",
           "grabado": true
-        },
-        {
-          "slug": "ri-03",
-          "titulo": "Transición INT 03",
-          "info": "transición interior · referencia",
-          "categoria": "trans-int",
-          "link": "https://www.instagram.com/reel/DZM8WpRCiHs/",
-          "grabado": false
         },
         {
           "slug": "ri-04",
