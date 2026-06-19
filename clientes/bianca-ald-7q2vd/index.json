@@ -101,6 +101,13 @@
           "info": "skit 2 voces · reseña QR",
           "categoria": "tienda",
           "grabado": false
+        },
+        {
+          "slug": "tienda-02",
+          "titulo": "Tienda · Antes de la bolsita → escanea el QR",
+          "info": "skit 2 voces · reseña QR",
+          "categoria": "tienda",
+          "grabado": false
         }
       ]
     },
@@ -157,13 +164,6 @@
           "tipo": "guion",
           "grabado": false,
           "categoria": "guion"
-        },
-        {
-          "slug": "tienda-02",
-          "titulo": "Tienda · Antes de la bolsita → escanea el QR",
-          "info": "skit 2 voces · reseña QR",
-          "categoria": "tienda",
-          "grabado": false
         },
         {
           "slug": "ri-01",
