@@ -78,6 +78,14 @@
           "categoria": "trans-int",
           "link": "https://www.instagram.com/reel/DSApP0TCZgd/",
           "grabado": false
+        },
+        {
+          "slug": "ri-07",
+          "titulo": "Transición INT 07",
+          "info": "transición interior · referencia",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DYzN8EpIjvf/",
+          "grabado": false
         }
       ]
     },
@@ -172,14 +180,6 @@
           "categoria": "trans-int",
           "link": "https://www.tiktok.com/@samxbeatrice/video/7571016485397679381",
           "grabado": true
-        },
-        {
-          "slug": "ri-07",
-          "titulo": "Transición INT 07",
-          "info": "transición interior · referencia",
-          "categoria": "trans-int",
-          "link": "https://www.instagram.com/reel/DYzN8EpIjvf/",
-          "grabado": false
         },
         {
           "slug": "re-01",
