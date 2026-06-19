@@ -469,9 +469,11 @@ const CLIENT_CATS = {
   'bianca-ald-7q2vd': ['guion', 'trans-int', 'trans-ext', 'tienda'],
   'skin-club-e67ff4': ['guion', 'ugc', 'influencer']
 };
-function renderCard(it, token, ri){
+// Prefijo del código visible (numeración posicional automática por grabación/categoría).
+const CAT_PREFIX = { 'guion':'G', 'trans-int':'I', 'trans-ext':'E', 'tienda':'T', 'ugc':'U', 'influencer':'INF' };
+function renderCard(it, token, ri, codArg){
   const url = base() + '?c=' + token + '&g=' + it.slug;
-  const cod = it.slug.toUpperCase();
+  const cod = codArg || it.slug.toUpperCase();
   const esGuion = it.categoria !== 'trans-int' && it.categoria !== 'trans-ext';   // todo lo que tiene .md (guion/tienda) se puede abrir; las transiciones solo llevan link
   const toggle = STATUS_ENDPOINT ? `<button class="mini btnGrabado" data-slug="${attr(it.slug)}" data-grabado="${it.grabado?1:0}">${it.grabado?'✓ Grabado':'Marcar grabado'}</button>` : '';
   const del = (DELETE_ENDPOINT && rememberedPw()===EDIT_PW) ? `<button class="mini btnDel" data-slug="${attr(it.slug)}" data-cod="${attr(cod)}">Eliminar</button>` : '';
@@ -507,7 +509,7 @@ function renderClient(data, token){
         if (!items.length) return '';
         const myi = si++;
         const done = items.filter(x=>x.grabado).length;
-        return `<details class="catblock sub" open><summary><span class="catname">${esc(CAT_LABELS[key]||key.toUpperCase())}</span><span class="catcount">${items.length} · <span class="donecount" data-rec="${myi}">${done}/${items.length} grabados</span></span></summary>${items.map(it=>renderCard(it,token,myi)).join('')}</details>`;
+        return `<details class="catblock sub" open><summary><span class="catname">${esc(CAT_LABELS[key]||key.toUpperCase())}</span><span class="catcount">${items.length} · <span class="donecount" data-rec="${myi}">${done}/${items.length} grabados</span></span></summary>${items.map((it,idx)=>renderCard(it,token,myi,(CAT_PREFIX[key]||'')+(idx+1))).join('')}</details>`;
       }).join('');
       const total = (g.guiones||[]).length, tdone = (g.guiones||[]).filter(x=>x.grabado).length;
       const body = inner || `<p class="hint" style="margin:6px 2px;">Grabación vacía. Mueve videos aquí con el botón "Mover ⇄" de cada tarjeta.</p>`;
@@ -518,7 +520,7 @@ function renderClient(data, token){
     blocks = cats.map((key, ci) => {
       const items = all.filter(g => (g.categoria||'guion') === key);
       const done = items.filter(x=>x.grabado).length;
-      const cards = items.length ? items.map(it => renderCard(it, token, ci)).join('')
+      const cards = items.length ? items.map((it, idx) => renderCard(it, token, ci, (CAT_PREFIX[key]||'')+(idx+1))).join('')
         : `<p class="hint" style="margin:6px 2px 2px;">Aún no hay nada aquí. Pásame el contenido y lo agrego.</p>`;
       return `<details class="catblock"${ci===0?' open':''}><summary><span class="catname">${esc(CAT_LABELS[key]||key.toUpperCase())}</span><span class="catcount">${items.length} · <span class="donecount" data-rec="${ci}">${done}/${items.length} grabados</span></span></summary>${cards}</details>`;
     }).join('');
@@ -526,7 +528,7 @@ function renderClient(data, token){
     blocks = (data.grabaciones||[]).map((rec, ri) => {
       const total = (rec.guiones||[]).length;
       const done = (rec.guiones||[]).filter(x=>x.grabado).length;
-      const cards = (rec.guiones||[]).map(it => renderCard(it, token, ri)).join('');
+      const cards = (rec.guiones||[]).map((it, idx) => renderCard(it, token, ri, 'G'+(idx+1))).join('');
       return `<div class="recblock"><div class="rechead"><h2>${esc(rec.rec)} · ${esc(rec.nombre||'Grabación')}</h2><span>${esc(rec.fecha||'')}${rec.locacion?' · '+esc(rec.locacion):''} · <span class="donecount" data-rec="${ri}">${done}/${total} grabados</span></span></div>${cards}</div>`;
     }).join('');
   }
