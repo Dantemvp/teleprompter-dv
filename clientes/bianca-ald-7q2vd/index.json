@@ -46,6 +46,14 @@
           "tipo": "guion",
           "grabado": false,
           "categoria": "guion"
+        },
+        {
+          "slug": "g-16",
+          "titulo": "Usa la tendencia sin volverte un clon",
+          "info": "30–45 seg · guionado / opinión-autoridad",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
         }
       ]
     },
@@ -99,14 +107,6 @@
           "slug": "g-14",
           "titulo": "Vístete como diseña la naturaleza",
           "info": "40–55 seg · guionado / autoridad · estilo con intención",
-          "tipo": "guion",
-          "grabado": false,
-          "categoria": "guion"
-        },
-        {
-          "slug": "g-16",
-          "titulo": "Usa la tendencia sin volverte un clon",
-          "info": "30–45 seg · guionado / opinión-autoridad",
           "tipo": "guion",
           "grabado": false,
           "categoria": "guion"
