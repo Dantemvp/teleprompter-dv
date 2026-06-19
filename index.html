@@ -545,6 +545,21 @@ function renderClient(data, token){
   wireLock();
 }
 
+function detKey(d){
+  if (d.classList.contains('recblock2')) return 'R:' + (d.querySelector(':scope > summary .recname')?.textContent || '');
+  const rec = d.closest('.recblock2'); const rn = rec ? (rec.querySelector(':scope > summary .recname')?.textContent || '') : '';
+  return 'C:' + rn + '/' + (d.querySelector(':scope > summary .catname')?.textContent || '');
+}
+// Re-render conservando scroll y qué desplegables estaban abiertos (para no "saltar" al mover/crear).
+function rerenderPreservingState(){
+  if (!CLIENT_DATA) return;
+  const sy = window.scrollY;
+  const allBefore = new Set(), openBefore = new Set();
+  document.querySelectorAll('.recblock2, .catblock').forEach(d => { const k = detKey(d); allBefore.add(k); if (d.open) openBefore.add(k); });
+  renderClient(CLIENT_DATA, CLIENT_TOKEN);
+  document.querySelectorAll('.recblock2, .catblock').forEach(d => { const k = detKey(d); if (allBefore.has(k)) d.open = openBefore.has(k); });
+  window.scrollTo(0, sy);
+}
 async function orgCall(payload, okMsg){
   const pw = await unlock('Contraseña');
   if (!pw) { toast('Cancelado'); return false; }
@@ -566,7 +581,7 @@ async function newRecUI(){
   const ok = await orgCall({ action:'add-rec', rec, nombre }, 'Grabación creada');
   if (ok){   // refresco optimista: aparece de inmediato aunque la nube tarde ~1 min
     (CLIENT_DATA.grabaciones = CLIENT_DATA.grabaciones || []).unshift({ rec, nombre: nombre||rec, fecha:'Por definir', locacion:'', guiones:[] });
-    renderClient(CLIENT_DATA, CLIENT_TOKEN);
+    rerenderPreservingState();
   }
 }
 async function moveItemUI(slug){
@@ -585,7 +600,7 @@ async function moveItemUI(slug){
     let item = null;
     (CLIENT_DATA.grabaciones||[]).forEach(g => { const i=(g.guiones||[]).findIndex(x=>x.slug===slug); if(i>=0) item=g.guiones.splice(i,1)[0]; });
     if (item){ if (pick.categoria) item.categoria = pick.categoria; const t=(CLIENT_DATA.grabaciones||[]).find(g=>g.rec===pick.toRec); if(t){ t.guiones=t.guiones||[]; t.guiones.push(item); } }
-    renderClient(CLIENT_DATA, CLIENT_TOKEN);
+    rerenderPreservingState();
   }
 }
 // Modal genérico de selección: groups = [{name, title, options:[{value,label}], selected} | {name,title,input:true,placeholder}]
@@ -624,6 +639,8 @@ async function deleteGuion(token, btn){
     const r = await fetch(DELETE_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ password: pw, client: token, slug }) });
     if (r.status === 401){ forgetPw(); throw new Error('Contraseña incorrecta'); }
     if (!r.ok) throw new Error(await r.text());
+    // Sincroniza la memoria local para que un re-render posterior no resucite la tarjeta borrada.
+    if (CLIENT_DATA) (CLIENT_DATA.grabaciones||[]).forEach(rg => { rg.guiones = (rg.guiones||[]).filter(x => x.slug!==slug); });
     const card = document.querySelector(`.card[data-card="${CSS.escape(slug)}"]`);
     const ri = card && card.dataset.rec;
     if (card) card.remove();
@@ -653,6 +670,8 @@ async function toggleGrabado(token, btn){
     if (!r.ok) throw new Error(await r.text());
     btn.dataset.grabado = next ? '1' : '0';
     btn.textContent = next ? '✓ Grabado' : 'Marcar grabado';
+    // Sincroniza la memoria local para que un re-render posterior (al mover/crear) no revierta la marca.
+    if (CLIENT_DATA) (CLIENT_DATA.grabaciones||[]).forEach(rg => (rg.guiones||[]).forEach(x => { if (x.slug===slug) x.grabado = next; }));
     const card = document.querySelector(`.card[data-card="${CSS.escape(slug)}"]`);
     if (card){
       card.classList.toggle('done', next);
@@ -724,7 +743,7 @@ async function renderAdmin(data, token){
   const cards = await Promise.all((data.clientes||[]).map(async cl => {
     let recs = [], nGuiones = 0;
     try{
-      const idx = await (await fetch('clientes/' + cl.token + '/index.json')).json();
+      const idx = await (await fetch('clientes/' + cl.token + '/index.json?t=' + Date.now(), { cache:'no-store' })).json();
       recs = idx.grabaciones || [];
       nGuiones = recs.reduce((a,r)=>a+(r.guiones||[]).length, 0);
     }catch(e){}
@@ -877,7 +896,7 @@ async function boot(){
   if (!c && g && LEGACY[g]){ [c, g] = LEGACY[g]; }
   if (c && g){
     try{
-      const r = await fetch('clientes/' + c + '/' + g + '.md');
+      const r = await fetch('clientes/' + c + '/' + g + '.md?t=' + Date.now(), { cache:'no-store' });
       if (!r.ok) throw 0;
       const fetched = await r.text();
       const localKey = 'dvedit:' + c + '/' + g;
@@ -898,7 +917,7 @@ async function boot(){
   }
   if (c){
     try{
-      const r = await fetch('clientes/' + c + '/index.json');
+      const r = await fetch('clientes/' + c + '/index.json?t=' + Date.now(), { cache:'no-store' });
       if (!r.ok) throw 0;
       renderClient(await r.json(), c);
       return;
