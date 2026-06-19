@@ -54,6 +54,14 @@
           "tipo": "guion",
           "grabado": false,
           "categoria": "guion"
+        },
+        {
+          "slug": "ri-02",
+          "titulo": "Transición INT · Fashion Nova",
+          "info": "transición interior · referencia",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/fashionnova/reel/DVoLDnWDoZ4/",
+          "grabado": false
         }
       ]
     },
@@ -132,14 +140,6 @@
           "categoria": "trans-int",
           "link": "https://www.instagram.com/reel/C97riQEOwKO/",
           "grabado": true
-        },
-        {
-          "slug": "ri-02",
-          "titulo": "Transición INT · Fashion Nova",
-          "info": "transición interior · referencia",
-          "categoria": "trans-int",
-          "link": "https://www.instagram.com/fashionnova/reel/DVoLDnWDoZ4/",
-          "grabado": false
         },
         {
           "slug": "ri-03",
