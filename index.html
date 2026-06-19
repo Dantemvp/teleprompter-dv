@@ -193,7 +193,7 @@ const ORGANIZE_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/organize';
 const REC_NESTED = { 'bianca-ald-7q2vd': true };
 // Clientes con selector de locutor (quién presenta el guion). Solo aplica a estos tokens.
 const LOCUTORES = { 'skin-club-e67ff4': ['Nat', 'Kaori', 'Diego'] };
-// Clientes donde el reel de referencia es privado: solo visible si el equipo está logueado (rememberedPw===EDIT_PW).
+// Clientes donde el reel de referencia es privado: solo visible en modo edición (isAdmin()), no para el lector público.
 const REF_PRIVATE = { 'skin-club-e67ff4': true };
 // Aclaración global por cliente: se muestra como banner en cada guion y en el portal.
 const CLIENT_NOTE = { 'bianca-ald-7q2vd': '📸 No olvidar tomar la foto en el mismo lugar.' };
@@ -218,15 +218,28 @@ function askPassword(title){
 function rememberedPw(){ return localStorage.getItem('dvpw'); }
 function forgetPw(){ localStorage.removeItem('dvpw'); }
 async function unlock(title){
-  if (rememberedPw() === EDIT_PW) return EDIT_PW;          // equipo ya reconocido
-  const p = await askPassword(title);
-  if (p === null) return null;
-  if (p !== EDIT_PW){ toast('Contraseña incorrecta'); return null; }
-  localStorage.setItem('dvpw', p);                         // recordar este equipo
-  return p;
+  let pw = rememberedPw();
+  if (pw) return pw;                                       // recordada en este equipo (la valida el servidor)
+  pw = await askPassword(title || 'Contraseña de escritura');
+  if (pw === null) return null;
+  localStorage.setItem('dvpw', pw);                        // si el servidor la rechaza (401) se borra y se vuelve a pedir
+  return pw;
 }
-const lockHtml = () => rememberedPw() === EDIT_PW ? ' · <a href="#" class="lockBtn">🔒 bloquear este equipo</a>' : '';
-function wireLock(){ document.querySelectorAll('.lockBtn').forEach(b => b.onclick = e => { e.preventDefault(); forgetPw(); toast('Equipo bloqueado · pedirá contraseña de nuevo'); boot(); }); }
+// Activa el "modo edición": revela los controles del estratega. El PIN no viaja a ningún servidor.
+async function enableAdmin(){
+  const p = await askPassword('PIN de edición (muestra los controles del estratega)');
+  if (p === null) return false;
+  if (p !== ADMIN_PIN){ toast('PIN incorrecto'); return false; }
+  localStorage.setItem('dvadmin', p);
+  return true;
+}
+const lockHtml = () => isAdmin()
+  ? ' · <a href="#" class="lockBtn">🔒 bloquear este equipo</a>'
+  : ' · <a href="#" class="adminBtn">🔑 modo edición</a>';
+function wireLock(){
+  document.querySelectorAll('.lockBtn').forEach(b => b.onclick = e => { e.preventDefault(); forgetPw(); localStorage.removeItem('dvadmin'); toast('Equipo bloqueado · pedirá PIN y contraseña de nuevo'); boot(); });
+  document.querySelectorAll('.adminBtn').forEach(b => b.onclick = async e => { e.preventDefault(); if (await enableAdmin()){ toast('Modo edición activado'); boot(); } });
+}
 
 const LEGACY = {
   'podcast-01-aliwell-son-para-todos': ['ale-paz-mx27k','r2-01'],
@@ -288,7 +301,12 @@ function downloadMd(name, text){
   document.body.appendChild(a); a.click(); a.remove();
   setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
 }
-const EDIT_PW = '1qaz2wsx3EDC';
+// PIN de UI: solo revela los controles del estratega (mover, eliminar, marcar, nueva grabación…).
+// No da acceso de escritura por sí solo: cada guardado lo valida el servidor con la contraseña real.
+const ADMIN_PIN = 'dvteam';
+function isAdmin(){ return localStorage.getItem('dvadmin') === ADMIN_PIN; }
+// Migración silenciosa: equipos que ya guardaron la contraseña de escritura siguen viendo los controles sin reconfigurar.
+if (localStorage.getItem('dvpw') && localStorage.getItem('dvadmin') !== ADMIN_PIN) localStorage.setItem('dvadmin', ADMIN_PIN);
 
 function renderGuion(g, canonical, backHref, opts){
   opts = opts || {};
@@ -304,7 +322,7 @@ function renderGuion(g, canonical, backHref, opts){
   const chips = g.meta.map(m=>`<span class="chip g">${esc(m)}</span>`).join('');
   const banner = opts.edited ? `<div class="banner"><span>✎ Estás viendo tu versión editada (guardada en este equipo).</span><button class="mini" id="dlEdited">Descargar .md para publicar</button><button class="mini" id="discardEdit">Descartar cambios</button></div>` : '';
   const refPrivate = opts.client && REF_PRIVATE[opts.client];      // clientes donde la referencia es solo para el estratega
-  const canSeeRef = !refPrivate || rememberedPw() === EDIT_PW;       // logueado (equipo reconocido) la ve; lector público no
+  const canSeeRef = !refPrivate || isAdmin();       // logueado (equipo reconocido) la ve; lector público no
   const refblock = (g.ref && canSeeRef) ? `<div class="refbar refreel"><span>🎬 Reel de referencia:</span> <a href="${attr(g.ref)}" target="_blank" rel="noopener">Ver inspiración ↗</a> <button class="mini" onclick="copy('${g.ref.replace(/'/g,"\\'")}','Link copiado')">Copiar</button></div>` : '';
   const founders = (opts.client && LOCUTORES[opts.client]) ? LOCUTORES[opts.client] : null;
   const locbar = founders ? `<div class="refbar locbar"><span>🎙️ Locutor:</span> ${founders.map(n=>`<button class="mini locpick${opts.locutor===n?' on':''}" data-loc="${attr(n)}">${esc(n)}</button>`).join(' ')} ${opts.locutor?'':'<span style="color:var(--muted)">sin asignar</span>'}</div>` : '';
@@ -463,30 +481,37 @@ const CAT_LABELS = {
   'trans-ext': 'TRANSICIONES · EXTERIORES',
   'tienda':    'TIENDA · EMPLEADAS',
   'ugc':       'UGC',
-  'influencer':'INFLUENCER'
+  'influencer':'INFLUENCER',
+  '__otros':   'OTROS'
 };
 const CLIENT_CATS = {
   'bianca-ald-7q2vd': ['guion', 'trans-int', 'trans-ext', 'tienda'],
   'skin-club-e67ff4': ['guion', 'ugc', 'influencer']
 };
 // Prefijo del código visible (numeración posicional automática por grabación/categoría).
-const CAT_PREFIX = { 'guion':'G', 'trans-int':'I', 'trans-ext':'E', 'tienda':'T', 'ugc':'U', 'influencer':'INF' };
+const CAT_PREFIX = { 'guion':'G', 'trans-int':'I', 'trans-ext':'E', 'tienda':'T', 'ugc':'U', 'influencer':'INF', '__otros':'X' };
+// Devuelve los items de una grabación/lista que caen en una categoría; '__otros' captura todo lo que no esté en la lista conocida (para que nada desaparezca).
+function itemsForCat(list, key, known){
+  return key === '__otros'
+    ? list.filter(it => !known.has(it.categoria || 'guion'))
+    : list.filter(it => (it.categoria || 'guion') === key);
+}
 function renderCard(it, token, ri, codArg){
   const url = base() + '?c=' + token + '&g=' + it.slug;
   const cod = codArg || it.slug.toUpperCase();
   const esGuion = it.categoria !== 'trans-int' && it.categoria !== 'trans-ext';   // todo lo que tiene .md (guion/tienda) se puede abrir; las transiciones solo llevan link
   const toggle = STATUS_ENDPOINT ? `<button class="mini btnGrabado" data-slug="${attr(it.slug)}" data-grabado="${it.grabado?1:0}">${it.grabado?'✓ Grabado':'Marcar grabado'}</button>` : '';
-  const del = (DELETE_ENDPOINT && rememberedPw()===EDIT_PW) ? `<button class="mini btnDel" data-slug="${attr(it.slug)}" data-cod="${attr(cod)}">Eliminar</button>` : '';
+  const del = (DELETE_ENDPOINT && isAdmin()) ? `<button class="mini btnDel" data-slug="${attr(it.slug)}" data-cod="${attr(cod)}">Eliminar</button>` : '';
   const founders = LOCUTORES[token];
   let effLoc = it.locutor || null;
   if (founders){ const ls = localStorage.getItem('dvloc:' + token + '/' + it.slug); if (ls !== null) effLoc = ls || null; }
   const loc = (founders && effLoc) ? `<span class="locchip">🎙️ ${esc(effLoc)}</span>` : '';
-  const cardLoc = (founders && rememberedPw()===EDIT_PW)
+  const cardLoc = (founders && isAdmin())
     ? `<div class="cardlocrow"><span class="cardloclbl">🎙️ Locutor:</span>${founders.map(n=>`<button class="mini cardloc${effLoc===n?' on':''}" data-slug="${attr(it.slug)}" data-loc="${attr(n)}">${esc(n)}</button>`).join('')}</div>`
     : '';
   const abrir = esGuion ? `<a href="?c=${token}&g=${it.slug}"><button class="primary mini">Abrir guion</button></a>` : '';
   const ref = it.link ? `<a href="${attr(it.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
-  const mover = (REC_NESTED[token] && rememberedPw()===EDIT_PW) ? `<button class="mini btnMover" data-slug="${attr(it.slug)}">Mover ⇄</button>` : '';
+  const mover = (REC_NESTED[token] && isAdmin()) ? `<button class="mini btnMover" data-slug="${attr(it.slug)}">Mover ⇄</button>` : '';
   return `<div class="card${it.grabado?' done':''}" data-card="${attr(it.slug)}" data-rec="${ri}"><div style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}${loc}</h3><p>${esc(it.info||'')}</p></div><span class="donechip">✓ Grabado</span></div>
     ${cardLoc}
     <div class="actions">${abrir}${ref}<button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${mover}${del}</div></div>`;
@@ -495,17 +520,20 @@ let CLIENT_DATA = null, CLIENT_TOKEN = null;
 function renderClient(data, token){
   CLIENT_DATA = data; CLIENT_TOKEN = token;
   const all = (data.grabaciones||[]).flatMap(rec => rec.guiones||[]);
-  const admin = rememberedPw() === EDIT_PW;
+  const admin = isAdmin();
   let cats = CLIENT_CATS[token];
   if (!cats && all.some(g => g.categoria)) cats = Object.keys(CAT_LABELS).filter(k => all.some(g => (g.categoria||'guion') === k));
   let blocks;
   if (REC_NESTED[token]){
     // Vista anidada: grabación (R6/R7…) → categorías adentro.
-    const order = CLIENT_CATS[token] || Object.keys(CAT_LABELS);
+    const baseOrder = CLIENT_CATS[token] || Object.keys(CAT_LABELS).filter(k => k !== '__otros');
+    const known = new Set(baseOrder);
+    const hasOrphans = (data.grabaciones||[]).some(g => (g.guiones||[]).some(it => !known.has(it.categoria||'guion')));
+    const order = hasOrphans ? baseOrder.concat(['__otros']) : baseOrder;
     let si = 0;
     blocks = (data.grabaciones||[]).map((g, gi) => {
       const inner = order.map(key => {
-        const items = (g.guiones||[]).filter(it => (it.categoria||'guion') === key);
+        const items = itemsForCat(g.guiones||[], key, known);
         if (!items.length) return '';
         const myi = si++;
         const done = items.filter(x=>x.grabado).length;
@@ -517,8 +545,10 @@ function renderClient(data, token){
     }).join('');
     if (admin) blocks = `<button class="primary mini" id="newRecBtn" style="margin:0 0 16px;">➕ Nueva grabación</button>` + blocks;
   } else if (cats){
+    const known = new Set(cats);
+    if (all.some(g => !known.has(g.categoria||'guion'))) cats = cats.concat(['__otros']);
     blocks = cats.map((key, ci) => {
-      const items = all.filter(g => (g.categoria||'guion') === key);
+      const items = itemsForCat(all, key, known);
       const done = items.filter(x=>x.grabado).length;
       const cards = items.length ? items.map((it, idx) => renderCard(it, token, ci, (CAT_PREFIX[key]||'')+(idx+1))).join('')
         : `<p class="hint" style="margin:6px 2px 2px;">Aún no hay nada aquí. Pásame el contenido y lo agrego.</p>`;
@@ -784,12 +814,12 @@ function openTP(g, spk){
   $('#tpscroll').scrollTop = 0;
   setPlay(false);
   setTPEdit(false);
-  $('#tpedit').style.display = (rememberedPw() === EDIT_PW) ? '' : 'none';   // solo admin edita en vivo
+  $('#tpedit').style.display = (isAdmin()) ? '' : 'none';   // solo admin edita en vivo
 }
 function setTPEdit(on){
   $('#tp').classList.toggle('editing', on);
   document.querySelectorAll('#tptext .tx').forEach(sp => sp.contentEditable = on ? 'true' : 'false');
-  $('#tpedit').style.display = on ? 'none' : (rememberedPw()===EDIT_PW ? '' : 'none');
+  $('#tpedit').style.display = on ? 'none' : (isAdmin() ? '' : 'none');
   $('#tpsave').style.display = on ? '' : 'none';
   $('#tpcanceledit').style.display = on ? '' : 'none';
   if (on){ setPlay(false); const first = document.querySelector('#tptext .tx'); if (first) first.focus(); }
@@ -860,9 +890,7 @@ function renderHome(){
     <div class="toolrow" style="margin-top:10px;"><button class="primary" id="genlink">Generar link</button><button id="prev">Previsualizar</button></div>
     <p class="hint" style="margin-top:30px; border-top:1px solid var(--line); padding-top:18px;"><button class="mini" id="adminAccess">🔑 Acceso estratega</button></p>`;
   $('#adminAccess').onclick = async () => {
-    const p = await unlock('Acceso al dashboard de Consultora DV');
-    if (!p) return;
-    location.search = '?dv=' + DASH_TOKEN;
+    if (isAdmin() || await enableAdmin()) location.search = '?dv=' + DASH_TOKEN;
   };
   wireLock();
   $('#genlink').onclick = () => {
