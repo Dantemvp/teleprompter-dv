@@ -14,6 +14,14 @@
           "tipo": "guion",
           "grabado": false,
           "categoria": "guion"
+        },
+        {
+          "slug": "g-09",
+          "titulo": "Si la naturaleza lo combina, tú también",
+          "info": "15–20 seg · transición visual · macro + outfit",
+          "tipo": "transicion",
+          "grabado": false,
+          "categoria": "guion"
         }
       ]
     },
@@ -53,14 +61,6 @@
           "info": "15–25 seg · transición · 1 prenda → 6 estilos",
           "tipo": "transicion",
           "grabado": true,
-          "categoria": "guion"
-        },
-        {
-          "slug": "g-09",
-          "titulo": "Si la naturaleza lo combina, tú también",
-          "info": "15–20 seg · transición visual · macro + outfit",
-          "tipo": "transicion",
-          "grabado": false,
           "categoria": "guion"
         },
         {
