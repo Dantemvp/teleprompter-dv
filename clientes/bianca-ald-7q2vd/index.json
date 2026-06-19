@@ -22,6 +22,14 @@
           "tipo": "transicion",
           "grabado": false,
           "categoria": "guion"
+        },
+        {
+          "slug": "g-11",
+          "titulo": "Códigos de vestimenta: llega bien a cualquier evento",
+          "info": "40–60 seg · guionado / autoridad",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
         }
       ]
     },
@@ -68,14 +76,6 @@
           "titulo": "Con qué colores combina tu jeans (según su tono)",
           "info": "15–25 seg · transición · jeans por tono",
           "tipo": "transicion",
-          "grabado": false,
-          "categoria": "guion"
-        },
-        {
-          "slug": "g-11",
-          "titulo": "Códigos de vestimenta: llega bien a cualquier evento",
-          "info": "40–60 seg · guionado / autoridad",
-          "tipo": "guion",
           "grabado": false,
           "categoria": "guion"
         },
