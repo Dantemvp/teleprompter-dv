@@ -84,7 +84,7 @@
           "titulo": "Unos jeans, 6 estilos",
           "info": "15–25 seg · transición · 1 prenda → 6 estilos",
           "tipo": "transicion",
-          "grabado": false,
+          "grabado": true,
           "categoria": "guion"
         },
         {
