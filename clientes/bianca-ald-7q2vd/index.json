@@ -94,6 +94,13 @@
           "categoria": "trans-ext",
           "link": "https://www.instagram.com/reel/DYfa_2ZNXef/",
           "grabado": false
+        },
+        {
+          "slug": "tienda-01",
+          "titulo": "Tienda · Clienta feliz → escanea el QR",
+          "info": "skit 2 voces · reseña QR",
+          "categoria": "tienda",
+          "grabado": false
         }
       ]
     },
@@ -150,13 +157,6 @@
           "tipo": "guion",
           "grabado": false,
           "categoria": "guion"
-        },
-        {
-          "slug": "tienda-01",
-          "titulo": "Tienda · Clienta feliz → escanea el QR",
-          "info": "skit 2 voces · reseña QR",
-          "categoria": "tienda",
-          "grabado": false
         },
         {
           "slug": "tienda-02",
