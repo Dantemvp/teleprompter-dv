@@ -49,6 +49,21 @@
   .catcount{font-size:12px; font-weight:500; color:var(--muted); letter-spacing:0;}
   .catblock[open]>summary{border-bottom:1px solid var(--line,#e7e5df); margin-bottom:12px;}
   .globalnote{background:#fff7cc; border:1px solid #f0d878; color:#6b5800; border-radius:10px; padding:10px 14px; font-size:13px; font-weight:600; margin:0 0 16px;}
+  .recblock2{border:1px solid var(--line,#e7e5df); border-radius:16px; padding:6px 16px; margin:0 0 18px; background:#fafaf8;}
+  .recblock2>summary{cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; padding:14px 2px; font-weight:800; font-size:18px;}
+  .recblock2>summary::-webkit-details-marker{display:none;}
+  .recblock2>summary::before{content:'▸'; margin-right:10px; transition:transform .15s; color:var(--teal);}
+  .recblock2[open]>summary::before{transform:rotate(90deg);}
+  .recname{flex:1;}
+  .recblock2 .catblock.sub{background:#fff; margin:0 0 12px;}
+  .pickov{position:fixed; inset:0; background:rgba(14,15,14,.55); display:flex; align-items:center; justify-content:center; z-index:60; padding:20px;}
+  .pickbox{background:#fff; border-radius:16px; padding:22px; max-width:420px; width:100%; box-shadow:0 18px 60px rgba(0,0,0,.3);}
+  .pickgroup{margin-bottom:14px;}
+  .pickgroup label{display:block; font-size:12px; color:var(--muted); margin-bottom:6px;}
+  .pickopts{display:flex; flex-wrap:wrap; gap:6px;}
+  .pickopt{border:1px solid var(--teal); background:#fff; color:var(--teal-dark); border-radius:999px; cursor:pointer;}
+  .pickopt.on{background:var(--teal); color:#fff; font-weight:600;}
+  .pickbar{display:flex; justify-content:flex-end; gap:8px; margin-top:8px;}
   .beat{font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:20px 0 8px;}
   .row{display:flex; gap:10px; margin-bottom:12px;}
   .row.right{flex-direction:row-reverse;}
@@ -173,6 +188,9 @@ const DASH_TOKEN = 'dv-mando-9q2k7x';
 const SAVE_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/save';
 const STATUS_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/status';
 const DELETE_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/delete';
+const ORGANIZE_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/organize';
+// Clientes con vista anidada de grabaciones (desplegable R6/R7…) + categorías adentro, con controles de crear/mover (admin).
+const REC_NESTED = { 'bianca-ald-7q2vd': true };
 // Clientes con selector de locutor (quién presenta el guion). Solo aplica a estos tokens.
 const LOCUTORES = { 'skin-club-e67ff4': ['Nat', 'Kaori', 'Diego'] };
 // Clientes donde el reel de referencia es privado: solo visible si el equipo está logueado (rememberedPw===EDIT_PW).
@@ -466,16 +484,37 @@ function renderCard(it, token, ri){
     : '';
   const abrir = esGuion ? `<a href="?c=${token}&g=${it.slug}"><button class="primary mini">Abrir guion</button></a>` : '';
   const ref = it.link ? `<a href="${attr(it.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
+  const mover = (REC_NESTED[token] && rememberedPw()===EDIT_PW) ? `<button class="mini btnMover" data-slug="${attr(it.slug)}">Mover ⇄</button>` : '';
   return `<div class="card${it.grabado?' done':''}" data-card="${attr(it.slug)}" data-rec="${ri}"><div style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}${loc}</h3><p>${esc(it.info||'')}</p></div><span class="donechip">✓ Grabado</span></div>
     ${cardLoc}
-    <div class="actions">${abrir}${ref}<button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${del}</div></div>`;
+    <div class="actions">${abrir}${ref}<button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${mover}${del}</div></div>`;
 }
+let CLIENT_DATA = null, CLIENT_TOKEN = null;
 function renderClient(data, token){
+  CLIENT_DATA = data; CLIENT_TOKEN = token;
   const all = (data.grabaciones||[]).flatMap(rec => rec.guiones||[]);
+  const admin = rememberedPw() === EDIT_PW;
   let cats = CLIENT_CATS[token];
   if (!cats && all.some(g => g.categoria)) cats = Object.keys(CAT_LABELS).filter(k => all.some(g => (g.categoria||'guion') === k));
   let blocks;
-  if (cats){
+  if (REC_NESTED[token]){
+    // Vista anidada: grabación (R6/R7…) → categorías adentro.
+    const order = CLIENT_CATS[token] || Object.keys(CAT_LABELS);
+    let si = 0;
+    blocks = (data.grabaciones||[]).map((g, gi) => {
+      const inner = order.map(key => {
+        const items = (g.guiones||[]).filter(it => (it.categoria||'guion') === key);
+        if (!items.length) return '';
+        const myi = si++;
+        const done = items.filter(x=>x.grabado).length;
+        return `<details class="catblock sub" open><summary><span class="catname">${esc(CAT_LABELS[key]||key.toUpperCase())}</span><span class="catcount">${items.length} · <span class="donecount" data-rec="${myi}">${done}/${items.length} grabados</span></span></summary>${items.map(it=>renderCard(it,token,myi)).join('')}</details>`;
+      }).join('');
+      const total = (g.guiones||[]).length, tdone = (g.guiones||[]).filter(x=>x.grabado).length;
+      const body = inner || `<p class="hint" style="margin:6px 2px;">Grabación vacía. Mueve videos aquí con el botón "Mover ⇄" de cada tarjeta.</p>`;
+      return `<details class="recblock2"${gi===0?' open':''}><summary><span class="recname">🎬 ${esc(g.rec)} · ${esc(g.nombre||'Grabación')}</span><span class="catcount">${total} · ${tdone}/${total} grabados</span></summary>${body}</details>`;
+    }).join('');
+    if (admin) blocks = `<button class="primary mini" id="newRecBtn" style="margin:0 0 16px;">➕ Nueva grabación</button>` + blocks;
+  } else if (cats){
     blocks = cats.map((key, ci) => {
       const items = all.filter(g => (g.categoria||'guion') === key);
       const done = items.filter(x=>x.grabado).length;
@@ -499,7 +538,66 @@ function renderClient(data, token){
   document.querySelectorAll('.btnGrabado').forEach(b => b.onclick = () => toggleGrabado(token, b));
   document.querySelectorAll('.btnDel').forEach(b => b.onclick = () => deleteGuion(token, b));
   document.querySelectorAll('.cardloc').forEach(b => b.onclick = () => setLocutorCard(token, b));
+  document.querySelectorAll('.btnMover').forEach(b => b.onclick = () => moveItemUI(b.dataset.slug));
+  const nr = $('#newRecBtn'); if (nr) nr.onclick = () => newRecUI();
   wireLock();
+}
+
+async function orgCall(payload, okMsg){
+  const pw = await unlock('Contraseña');
+  if (!pw) return false;
+  try {
+    const r = await fetch(ORGANIZE_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ password: pw, client: CLIENT_TOKEN, ...payload }) });
+    if (r.status === 401){ forgetPw(); throw new Error('Contraseña incorrecta'); }
+    if (!r.ok) throw new Error(await r.text());
+    toast(okMsg + ' (se refleja en ~1 min)');
+    return true;
+  } catch (e){ toast('Error: ' + (e.message||e)); return false; }
+}
+async function newRecUI(){
+  const pick = await pickModal('Nueva grabación', [
+    { name:'__rec', title:'Código (ej. R7)', input:true, placeholder:'R7' },
+    { name:'__nombre', title:'Nombre (opcional)', input:true, placeholder:'Séptima grabación' }
+  ]);
+  if (!pick || !pick.__rec) return;
+  await orgCall({ action:'add-rec', rec: pick.__rec.trim(), nombre: (pick.__nombre||'').trim() }, 'Grabación creada');
+}
+async function moveItemUI(slug){
+  const data = CLIENT_DATA, token = CLIENT_TOKEN; if (!data) return;
+  const recs = (data.grabaciones||[]).map(g => g.rec);
+  let curCat = 'guion';
+  (data.grabaciones||[]).forEach(g => (g.guiones||[]).forEach(x => { if (x.slug===slug && x.categoria) curCat = x.categoria; }));
+  const cats = (CLIENT_CATS[token] || Object.keys(CAT_LABELS));
+  const pick = await pickModal('Mover "' + slug + '"', [
+    { name:'toRec', title:'¿A qué grabación?', options: recs.map(r => ({ value:r, label:r })), selected: recs[0] },
+    { name:'categoria', title:'¿Categoría?', options: cats.map(c => ({ value:c, label: CAT_LABELS[c]||c })), selected: curCat }
+  ]);
+  if (!pick) return;
+  await orgCall({ action:'move', slug, toRec: pick.toRec, categoria: pick.categoria }, 'Movido a ' + pick.toRec);
+}
+// Modal genérico de selección: groups = [{name, title, options:[{value,label}], selected} | {name,title,input:true,placeholder}]
+function pickModal(title, groups){
+  return new Promise(resolve => {
+    const chosen = {};
+    groups.forEach(g => { if (!g.input && g.selected!=null) chosen[g.name] = g.selected; });
+    const ov = document.createElement('div'); ov.className = 'pickov';
+    ov.innerHTML = `<div class="pickbox"><h3 style="margin:0 0 12px;">${esc(title)}</h3>${groups.map(g => g.input
+      ? `<div class="pickgroup"><label>${esc(g.title)}</label><input class="ein pickinput" data-name="${attr(g.name)}" placeholder="${attr(g.placeholder||'')}"></div>`
+      : `<div class="pickgroup"><label>${esc(g.title)}</label><div class="pickopts" data-name="${attr(g.name)}">${g.options.map(o=>`<button class="mini pickopt${g.selected===o.value?' on':''}" data-name="${attr(g.name)}" data-val="${attr(o.value)}">${esc(o.label)}</button>`).join('')}</div></div>`
+    ).join('')}<div class="pickbar"><button class="mini" id="pickCancel">Cancelar</button><button class="primary mini" id="pickOk">Confirmar</button></div></div>`;
+    document.body.appendChild(ov);
+    ov.querySelectorAll('.pickopt').forEach(b => b.onclick = () => {
+      ov.querySelectorAll(`.pickopt[data-name="${CSS.escape(b.dataset.name)}"]`).forEach(x=>x.classList.remove('on'));
+      b.classList.add('on'); chosen[b.dataset.name] = b.dataset.val;
+    });
+    const close = val => { ov.remove(); resolve(val); };
+    ov.querySelector('#pickCancel').onclick = () => close(null);
+    ov.querySelector('#pickOk').onclick = () => {
+      ov.querySelectorAll('.pickinput').forEach(i => chosen[i.dataset.name] = i.value);
+      close(chosen);
+    };
+    ov.onclick = e => { if (e.target===ov) close(null); };
+  });
 }
 
 async function deleteGuion(token, btn){
