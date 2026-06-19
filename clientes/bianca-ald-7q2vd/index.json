@@ -156,7 +156,7 @@
           "titulo": "Tienda · Clienta feliz → escanea el QR",
           "info": "skit 2 voces · reseña QR",
           "categoria": "tienda",
-          "grabado": false
+          "grabado": true
         },
         {
           "slug": "tienda-02",
