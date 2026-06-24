@@ -190,7 +190,7 @@ const STATUS_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/status';
 const DELETE_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/delete';
 const ORGANIZE_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/organize';
 // Clientes con vista anidada de grabaciones (desplegable R6/R7…) + categorías adentro, con controles de crear/mover (admin).
-const REC_NESTED = { 'bianca-ald-7q2vd': true };
+const REC_NESTED = { 'bianca-ald-7q2vd': true, 'fedra-ald-t84qz': true };
 // Clientes con selector de locutor (quién presenta el guion). Solo aplica a estos tokens.
 const LOCUTORES = { 'skin-club-e67ff4': ['Nat', 'Kaori', 'Diego'] };
 // Clientes donde el reel de referencia es privado: solo visible en modo edición (isAdmin()), no para el lector público.
@@ -482,14 +482,17 @@ const CAT_LABELS = {
   'tienda':    'TIENDA · EMPLEADAS',
   'ugc':       'UGC',
   'influencer':'INFLUENCER',
+  'idea':      'IDEAS FEDRA',
+  'chusco':    'CHUSCO',
   '__otros':   'OTROS'
 };
 const CLIENT_CATS = {
   'bianca-ald-7q2vd': ['guion', 'trans-int', 'trans-ext', 'tienda'],
-  'skin-club-e67ff4': ['guion', 'ugc', 'influencer']
+  'skin-club-e67ff4': ['guion', 'ugc', 'influencer'],
+  'fedra-ald-t84qz': ['idea', 'guion', 'chusco']
 };
 // Prefijo del código visible (numeración posicional automática por grabación/categoría).
-const CAT_PREFIX = { 'guion':'G', 'trans-int':'I', 'trans-ext':'E', 'tienda':'T', 'ugc':'U', 'influencer':'INF', '__otros':'X' };
+const CAT_PREFIX = { 'guion':'G', 'trans-int':'I', 'trans-ext':'E', 'tienda':'T', 'ugc':'U', 'influencer':'INF', 'idea':'ID', 'chusco':'C', '__otros':'X' };
 // Devuelve los items de una grabación/lista que caen en una categoría; '__otros' captura todo lo que no esté en la lista conocida (para que nada desaparezca).
 function itemsForCat(list, key, known){
   return key === '__otros'
@@ -499,7 +502,7 @@ function itemsForCat(list, key, known){
 function renderCard(it, token, ri, codArg){
   const url = base() + '?c=' + token + '&g=' + it.slug;
   const cod = codArg || it.slug.toUpperCase();
-  const esGuion = it.categoria !== 'trans-int' && it.categoria !== 'trans-ext';   // todo lo que tiene .md (guion/tienda) se puede abrir; las transiciones solo llevan link
+  const esGuion = it.tipo !== 'ref' && it.categoria !== 'trans-int' && it.categoria !== 'trans-ext' && it.categoria !== 'chusco';   // .md abrible; transiciones, chusco y tarjetas de referencia (tipo:ref) solo llevan link
   const toggle = STATUS_ENDPOINT ? `<button class="mini btnGrabado" data-slug="${attr(it.slug)}" data-grabado="${it.grabado?1:0}">${it.grabado?'✓ Grabado':'Marcar grabado'}</button>` : '';
   const del = (DELETE_ENDPOINT && isAdmin()) ? `<button class="mini btnDel" data-slug="${attr(it.slug)}" data-cod="${attr(cod)}">Eliminar</button>` : '';
   const founders = LOCUTORES[token];
