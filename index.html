@@ -540,11 +540,11 @@ function renderClient(data, token){
         if (!items.length) return '';
         const myi = si++;
         const done = items.filter(x=>x.grabado).length;
-        return `<details class="catblock sub" open><summary><span class="catname">${esc(CAT_LABELS[key]||key.toUpperCase())}</span><span class="catcount">${items.length} · <span class="donecount" data-rec="${myi}">${done}/${items.length} grabados</span></span></summary>${items.map((it,idx)=>renderCard(it,token,myi,(CAT_PREFIX[key]||'')+(idx+1))).join('')}</details>`;
+        return `<details class="catblock sub"><summary><span class="catname">${esc(CAT_LABELS[key]||key.toUpperCase())}</span><span class="catcount">${items.length} · <span class="donecount" data-rec="${myi}">${done}/${items.length} grabados</span></span></summary>${items.map((it,idx)=>renderCard(it,token,myi,(CAT_PREFIX[key]||'')+(idx+1))).join('')}</details>`;
       }).join('');
       const total = (g.guiones||[]).length, tdone = (g.guiones||[]).filter(x=>x.grabado).length;
       const body = inner || `<p class="hint" style="margin:6px 2px;">Grabación vacía. Mueve videos aquí con el botón "Mover ⇄" de cada tarjeta.</p>`;
-      return `<details class="recblock2"${gi===0?' open':''}><summary><span class="recname">🎬 ${esc(g.rec)} · ${esc(g.nombre||'Grabación')}</span><span class="catcount">${total} · ${tdone}/${total} grabados</span></summary>${body}</details>`;
+      return `<details class="recblock2"><summary><span class="recname">🎬 ${esc(g.rec)} · ${esc(g.nombre||'Grabación')}</span><span class="catcount">${total} · ${tdone}/${total} grabados</span></summary>${body}</details>`;
     }).join('');
     if (admin) blocks = `<button class="primary mini" id="newRecBtn" style="margin:0 0 16px;">➕ Nueva grabación</button>` + blocks;
   } else if (cats){
@@ -555,7 +555,7 @@ function renderClient(data, token){
       const done = items.filter(x=>x.grabado).length;
       const cards = items.length ? items.map((it, idx) => renderCard(it, token, ci, (CAT_PREFIX[key]||'')+(idx+1))).join('')
         : `<p class="hint" style="margin:6px 2px 2px;">Aún no hay nada aquí. Pásame el contenido y lo agrego.</p>`;
-      return `<details class="catblock"${ci===0?' open':''}><summary><span class="catname">${esc(CAT_LABELS[key]||key.toUpperCase())}</span><span class="catcount">${items.length} · <span class="donecount" data-rec="${ci}">${done}/${items.length} grabados</span></span></summary>${cards}</details>`;
+      return `<details class="catblock"><summary><span class="catname">${esc(CAT_LABELS[key]||key.toUpperCase())}</span><span class="catcount">${items.length} · <span class="donecount" data-rec="${ci}">${done}/${items.length} grabados</span></span></summary>${cards}</details>`;
     }).join('');
   } else {
     blocks = (data.grabaciones||[]).map((rec, ri) => {
@@ -576,6 +576,7 @@ function renderClient(data, token){
   document.querySelectorAll('.btnMover').forEach(b => b.onclick = () => moveItemUI(b.dataset.slug));
   const nr = $('#newRecBtn'); if (nr) nr.onclick = () => newRecUI();
   wireLock();
+  applyOpenState(); wireOpenPersist();
 }
 
 function detKey(d){
@@ -583,14 +584,39 @@ function detKey(d){
   const rec = d.closest('.recblock2'); const rn = rec ? (rec.querySelector(':scope > summary .recname')?.textContent || '') : '';
   return 'C:' + rn + '/' + (d.querySelector(':scope > summary .catname')?.textContent || '');
 }
-// Re-render conservando scroll y qué desplegables estaban abiertos (para no "saltar" al mover/crear).
+// Estado de los desplegables por cliente (caché de sesión):
+// al entrar o recargar el portal → todo cerrado; al regresar (botón atrás desde un guion) → como lo dejaste.
+let RESTORE_OPEN = false;   // lo activa rerenderPreservingState para no perder lo abierto al mover/crear
+const openKey = token => 'dvopen:' + token;
+function loadOpenMap(token){ try { return JSON.parse(sessionStorage.getItem(openKey(token)) || '{}'); } catch(e){ return {}; } }
+function saveOpenMap(token, map){ try { sessionStorage.setItem(openKey(token), JSON.stringify(map)); } catch(e){} }
+function navIsBack(){ try { const e = performance.getEntriesByType('navigation'); return !!e[0] && e[0].type === 'back_forward'; } catch(e){ return false; } }
+function applyOpenState(){
+  if (!CLIENT_TOKEN) return;
+  const dets = document.querySelectorAll('.recblock2, .catblock');
+  if (!dets.length) return;
+  const restore = RESTORE_OPEN || navIsBack();   // restaurar solo al volver atrás o en un re-render interno
+  if (!restore) saveOpenMap(CLIENT_TOKEN, {});    // entrada o recarga: arrancar con todo cerrado
+  const map = restore ? loadOpenMap(CLIENT_TOKEN) : {};
+  dets.forEach(d => { d.open = map[detKey(d)] === true; });
+}
+function wireOpenPersist(){
+  document.querySelectorAll('.recblock2, .catblock').forEach(d => {
+    d.addEventListener('toggle', () => {
+      if (!CLIENT_TOKEN) return;
+      const map = loadOpenMap(CLIENT_TOKEN);
+      map[detKey(d)] = d.open;
+      saveOpenMap(CLIENT_TOKEN, map);
+    });
+  });
+}
+// Re-render conservando scroll y desplegables (al mover/crear no debe "saltar" ni cerrarse).
 function rerenderPreservingState(){
   if (!CLIENT_DATA) return;
   const sy = window.scrollY;
-  const allBefore = new Set(), openBefore = new Set();
-  document.querySelectorAll('.recblock2, .catblock').forEach(d => { const k = detKey(d); allBefore.add(k); if (d.open) openBefore.add(k); });
+  RESTORE_OPEN = true;
   renderClient(CLIENT_DATA, CLIENT_TOKEN);
-  document.querySelectorAll('.recblock2, .catblock').forEach(d => { const k = detKey(d); if (allBefore.has(k)) d.open = openBefore.has(k); });
+  RESTORE_OPEN = false;
   window.scrollTo(0, sy);
 }
 async function orgCall(payload, okMsg){
