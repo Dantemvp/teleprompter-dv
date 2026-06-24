@@ -8,6 +8,65 @@
       "locacion": "Consultorio",
       "guiones": [
         {
+          "slug": "r10-11",
+          "titulo": "Verde, amarillo o rojo: ¿qué paciente eres?",
+          "info": "35–50 seg · marca / personalidad",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r10-12",
+          "titulo": "A los 17 pesaba 110 kilos (historia)",
+          "info": "35–50 seg · fidelización",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r10-08",
+          "titulo": "La pastilla que nunca te voy a recetar (Orlistat)",
+          "info": "35–50 seg · opinión-autoridad",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r10-09",
+          "titulo": "Resistencia a la insulina, explicada",
+          "info": "40–55 seg · explainer + suplementos",
+          "categoria": "idea",
+          "link": "https://www.instagram.com/reel/DXzcgGOoAVe/",
+          "grabado": false
+        },
+        {
+          "slug": "r10-16",
+          "titulo": "Todo esto es prediabetes (y no lo sabías)",
+          "info": "35–50 seg · las 5 etapas + tipos de diabetes",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r10-10",
+          "titulo": "¿El Ozempic da cáncer de tiroides?",
+          "info": "40–55 seg · mito vs evidencia (GLP-1 + pancreatitis)",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r10-14",
+          "titulo": "Mesoterapia sin agujas (MesoJet Gun)",
+          "info": "30–50 seg · día de procedimiento · 3 de 5 protocolos",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r10-13",
+          "titulo": "Botox: mapa de puntos (referencia visual)",
+          "info": "referencia · la dra replica con sus zonas, sin guion",
+          "categoria": "idea",
+          "tipo": "ref",
+          "link": "https://www.instagram.com/reel/DZLHefvpuCO/",
+          "grabado": false
+        },
+        {
           "slug": "r10-01",
           "titulo": "Mis 3 reglas de alimentación",
           "info": "30–45 seg · regla 80-20",
@@ -64,59 +123,6 @@
           "grabado": false
         },
         {
-          "slug": "r10-08",
-          "titulo": "La pastilla que nunca te voy a recetar (Orlistat)",
-          "info": "35–50 seg · opinión-autoridad",
-          "categoria": "guion",
-          "grabado": false
-        },
-        {
-          "slug": "r10-09",
-          "titulo": "Resistencia a la insulina, explicada",
-          "info": "40–55 seg · explainer + suplementos",
-          "categoria": "guion",
-          "link": "https://www.instagram.com/reel/DXzcgGOoAVe/",
-          "grabado": false
-        },
-        {
-          "slug": "r10-10",
-          "titulo": "¿El Ozempic da cáncer de tiroides?",
-          "info": "40–55 seg · mito vs evidencia (GLP-1)",
-          "categoria": "guion",
-          "grabado": false
-        },
-        {
-          "slug": "r10-11",
-          "titulo": "Verde, amarillo o rojo: ¿qué paciente eres?",
-          "info": "35–50 seg · marca / personalidad",
-          "categoria": "idea",
-          "grabado": false
-        },
-        {
-          "slug": "r10-12",
-          "titulo": "A los 17 pesaba 110 kilos (historia)",
-          "info": "35–50 seg · fidelización",
-          "categoria": "idea",
-          "grabado": false
-        },
-        {
-          "slug": "r10-13",
-          "titulo": "Botox: mapa de puntos (referencia visual)",
-          "info": "referencia · la dra replica con sus zonas, sin guion",
-          "categoria": "idea",
-          "tipo": "ref",
-          "link": "https://www.instagram.com/reel/DZLHefvpuCO/",
-          "grabado": false
-        },
-        {
-          "slug": "r10-14",
-          "titulo": "MesoJet Gun: día de procedimiento",
-          "info": "producción · grabar 3 de 5 protocolos · PDF del producto en la carpeta",
-          "categoria": "idea",
-          "tipo": "ref",
-          "grabado": false
-        },
-        {
           "slug": "r10-15",
           "titulo": "¿Pasa a fruncir el seño?",
           "info": "blooper · solo referencia",
@@ -133,72 +139,17 @@
       "fecha": "02/06/2026",
       "locacion": "Consultorio",
       "guiones": [
-        {
-          "slug": "r9-01",
-          "titulo": "La solución se repite — marcadores y su receta",
-          "info": "40–60 seg · lista en pantalla",
-          "grabado": true
-        },
-        {
-          "slug": "r9-02",
-          "titulo": "¿Y cómo lo soluciono, Dra.?",
-          "info": "20–40 seg · reacción al video anterior",
-          "grabado": true
-        },
-        {
-          "slug": "r9-03",
-          "titulo": "Tú le llamas azúcar",
-          "info": "20–40 seg",
-          "grabado": true
-        },
-        {
-          "slug": "r9-04",
-          "titulo": "Cucharada por cucharada",
-          "info": "20–40 seg",
-          "grabado": true
-        },
-        {
-          "slug": "r9-05",
-          "titulo": "Protocolo de movimiento semanal",
-          "info": "20–40 seg",
-          "grabado": true
-        },
-        {
-          "slug": "r9-06",
-          "titulo": "Por qué mis pacientes no tienen Ozempic face",
-          "info": "20–40 seg",
-          "grabado": true
-        },
-        {
-          "slug": "r9-07",
-          "titulo": "Dra., ¿usted cómo se cuida?",
-          "info": "20–40 seg",
-          "grabado": true
-        },
-        {
-          "slug": "r9-08",
-          "titulo": "Difícil vs agotador",
-          "info": "20–40 seg",
-          "grabado": true
-        },
-        {
-          "slug": "r9-09",
-          "titulo": "Experta reacciona: falso o verdadero",
-          "info": "20–40 seg",
-          "grabado": true
-        },
-        {
-          "slug": "r9-10",
-          "titulo": "3 errores con GLP-1",
-          "info": "20–40 seg",
-          "grabado": true
-        },
-        {
-          "slug": "r9-11",
-          "titulo": "El músculo, tu segundo corazón",
-          "info": "20–40 seg",
-          "grabado": true
-        }
+        { "slug": "r9-01", "titulo": "La solución se repite — marcadores y su receta", "info": "40–60 seg · lista en pantalla", "grabado": true },
+        { "slug": "r9-02", "titulo": "¿Y cómo lo soluciono, Dra.?", "info": "20–40 seg · reacción al video anterior", "grabado": true },
+        { "slug": "r9-03", "titulo": "Tú le llamas azúcar", "info": "20–40 seg", "grabado": true },
+        { "slug": "r9-04", "titulo": "Cucharada por cucharada", "info": "20–40 seg", "grabado": true },
+        { "slug": "r9-05", "titulo": "Protocolo de movimiento semanal", "info": "20–40 seg", "grabado": true },
+        { "slug": "r9-06", "titulo": "Por qué mis pacientes no tienen Ozempic face", "info": "20–40 seg", "grabado": true },
+        { "slug": "r9-07", "titulo": "Dra., ¿usted cómo se cuida?", "info": "20–40 seg", "grabado": true },
+        { "slug": "r9-08", "titulo": "Difícil vs agotador", "info": "20–40 seg", "grabado": true },
+        { "slug": "r9-09", "titulo": "Experta reacciona: falso o verdadero", "info": "20–40 seg", "grabado": true },
+        { "slug": "r9-10", "titulo": "3 errores con GLP-1", "info": "20–40 seg", "grabado": true },
+        { "slug": "r9-11", "titulo": "El músculo, tu segundo corazón", "info": "20–40 seg", "grabado": true }
       ]
     }
   ]
