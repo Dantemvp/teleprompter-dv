@@ -320,7 +320,7 @@ function renderGuion(g, canonical, backHref, opts){
     conv += `<div class="row ${cls}"><div class="avatar">${esc(l.speaker.slice(0,3))}</div><div class="bubblewrap"><div class="bubble" data-li="${i}">${esc(l.text)}</div>${l.nota?`<p class="nota" data-li="${i}">${esc(l.nota)}</p>`:''}</div></div>`;
   });
   const chips = g.meta.map(m=>`<span class="chip g">${esc(m)}</span>`).join('');
-  const banner = opts.edited ? `<div class="banner"><span>✎ Estás viendo tu versión editada (guardada en este equipo).</span><button class="mini" id="dlEdited">Descargar .md para publicar</button><button class="mini" id="discardEdit">Descartar cambios</button></div>` : '';
+  const banner = '';   // El guardado va directo a la nube; la copia local es solo un cache optimista que se actualiza solo (~1 min) y se auto-limpia al publicarse.
   const refPrivate = opts.client && REF_PRIVATE[opts.client];      // clientes donde la referencia es solo para el estratega
   const canSeeRef = !refPrivate || isAdmin();       // logueado (equipo reconocido) la ve; lector público no
   const refblock = (g.ref && canSeeRef) ? `<div class="refbar refreel"><span>🎬 Reel de referencia:</span> <a href="${attr(g.ref)}" target="_blank" rel="noopener">Ver inspiración ↗</a> <button class="mini" onclick="copy('${g.ref.replace(/'/g,"\\'")}','Link copiado')">Copiar</button></div>` : '';
@@ -366,14 +366,6 @@ function renderGuion(g, canonical, backHref, opts){
     $('#v-plain').style.display = b.dataset.v==='plain' ? '' : 'none';
   });
 
-  if (opts.edited){
-    $('#dlEdited').onclick = () => downloadMd(fileName, toMarkdown(g));
-    $('#discardEdit').onclick = () => {
-      if (opts.localKey && confirm('¿Descartar tus cambios locales y volver a la versión publicada?')){
-        localStorage.removeItem(opts.localKey); boot();
-      }
-    };
-  }
 
   const editLineHtml = l => {
     const sp = l ? l.speaker : '';
@@ -397,7 +389,7 @@ function renderGuion(g, canonical, backHref, opts){
     const speakers = spk.length ? spk : ['DRA','ENTREVISTADOR'];
     const rows = g.lines.map(l => l.beat!==undefined ? editBeatHtml(l.beat) : editLineHtml(l)).join('');
     return `
-      <div class="editbar"><span>Modo edición · agrega, mueve o elimina diálogos</span>${(SAVE_ENDPOINT && opts.client && opts.slug)?`<button class="primary mini" id="fCloud">☁ Guardar en la nube</button>`:''}<button class="${(SAVE_ENDPOINT && opts.client && opts.slug)?'mini':'primary mini'}" id="fSave">Guardar local</button><button class="mini" id="fDl">Descargar .md</button><button class="mini" id="fCancel">Cancelar</button></div>
+      <div class="editbar"><span>Modo edición · agrega, mueve o elimina diálogos</span>${(SAVE_ENDPOINT && opts.client && opts.slug)?`<button class="primary mini" id="fCloud">☁ Guardar</button>`:`<button class="primary mini" id="fSave">Guardar local</button>`}<button class="mini" id="fDl">Descargar .md</button><button class="mini" id="fCancel">Cancelar</button></div>
       <div class="efield"><label>Título</label><input id="etitle" class="ein" value="${attr(g.title)}"></div>
       <div class="efield"><label>Reel de referencia (URL del Instagram/TikTok que inspira el guion)</label><input id="eref" class="ein" value="${attr(g.ref||'')}" placeholder="https://www.instagram.com/reel/..."></div>
       <datalist id="spklist">${speakers.map(s=>`<option value="${attr(s)}">`).join('')}</datalist>
@@ -433,12 +425,13 @@ function renderGuion(g, canonical, backHref, opts){
     $('#v-edit').style.display = '';
     $('#fCancel').onclick = () => boot();
     $('#fDl').onclick = () => { collectForm(); downloadMd(fileName, toMarkdown(g)); };
-    $('#fSave').onclick = () => {
+    const saveBtn = $('#fSave');
+    if (saveBtn) saveBtn.onclick = () => {
       collectForm();
       const md = toMarkdown(g);
       if (opts.localKey) localStorage.setItem(opts.localKey, md);
       toast('Cambios guardados en este equipo');
-      renderGuion(parseGuion(md), canonical, backHref, Object.assign({}, opts, {edited: !!opts.localKey}));
+      renderGuion(parseGuion(md), canonical, backHref, Object.assign({}, opts, {edited: false}));
     };
     const cloudBtn = $('#fCloud');
     if (cloudBtn) cloudBtn.onclick = async () => {
@@ -453,10 +446,10 @@ function renderGuion(g, canonical, backHref, opts){
         if (r.status === 401){ forgetPw(); throw new Error('Contraseña incorrecta, intenta de nuevo'); }
         if (!r.ok) throw new Error(await r.text());
         if (opts.localKey) localStorage.setItem(opts.localKey, md);
-        toast('Publicado en la nube ✓ Visible para todos en ~1 min');
-        renderGuion(parseGuion(md), canonical, backHref, Object.assign({}, opts, {edited: true}));
+        toast('Guardado ✓ Visible para todos en ~1 min');
+        renderGuion(parseGuion(md), canonical, backHref, Object.assign({}, opts, {edited: false}));
       } catch (err) {
-        cloudBtn.disabled = false; cloudBtn.textContent = '☁ Guardar en la nube';
+        cloudBtn.disabled = false; cloudBtn.textContent = '☁ Guardar';
         toast('Error al publicar: ' + (err.message||err));
       }
     };
@@ -968,7 +961,7 @@ async function boot(){
         const local = localStorage.getItem('dvloc:' + c + '/' + g);
         if (local !== null) locutor = local || null;
       }
-      renderGuion(parseGuion(override || fetched), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: !!override, locutor});
+      renderGuion(parseGuion(override || fetched), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: false, locutor});
       return;
     }catch(e){ $('#app').innerHTML = '<p style="padding:40px 0">Guion no encontrado. Revisa el link con tu estratega.</p>'; return; }
   }
