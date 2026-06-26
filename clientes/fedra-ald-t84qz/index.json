@@ -93,7 +93,7 @@
         {
           "slug": "r10-04",
           "titulo": "Ranking: suplementos para bajar de peso",
-          "info": "35–50 seg · ranking 8→1",
+          "info": "1:00–1:30 · ranking desordenado · directo",
           "categoria": "guion",
           "link": "https://www.instagram.com/reel/DYmuiMGjLQ3/",
           "grabado": false
@@ -101,7 +101,7 @@
         {
           "slug": "r10-05",
           "titulo": "Ranking: suplementos para la longevidad",
-          "info": "35–50 seg · ranking 8→1",
+          "info": "1:00–1:30 · ranking desordenado · directo",
           "categoria": "guion",
           "link": "https://www.instagram.com/reel/DYmuiMGjLQ3/",
           "grabado": false
@@ -130,6 +130,27 @@
           "tipo": "ref",
           "link": "https://www.instagram.com/reel/DY3Rz4PnLSi/",
           "grabado": false
+        },
+        {
+          "slug": "r10-17",
+          "titulo": "Ranking: ejercicios para bajar de peso",
+          "info": "1:00–1:20 · ranking desordenado · directo",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "r10-18",
+          "titulo": "Ranking: bebidas que sabotean tu peso",
+          "info": "1:00–1:20 · ranking desordenado · directo",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "r10-19",
+          "titulo": "Dime tu síntoma y te digo qué puede ser",
+          "info": "0:50–1:10 · síntoma → causa · directo",
+          "grabado": false,
+          "categoria": "guion"
         }
       ]
     },
@@ -139,17 +160,72 @@
       "fecha": "02/06/2026",
       "locacion": "Consultorio",
       "guiones": [
-        { "slug": "r9-01", "titulo": "La solución se repite — marcadores y su receta", "info": "40–60 seg · lista en pantalla", "grabado": true },
-        { "slug": "r9-02", "titulo": "¿Y cómo lo soluciono, Dra.?", "info": "20–40 seg · reacción al video anterior", "grabado": true },
-        { "slug": "r9-03", "titulo": "Tú le llamas azúcar", "info": "20–40 seg", "grabado": true },
-        { "slug": "r9-04", "titulo": "Cucharada por cucharada", "info": "20–40 seg", "grabado": true },
-        { "slug": "r9-05", "titulo": "Protocolo de movimiento semanal", "info": "20–40 seg", "grabado": true },
-        { "slug": "r9-06", "titulo": "Por qué mis pacientes no tienen Ozempic face", "info": "20–40 seg", "grabado": true },
-        { "slug": "r9-07", "titulo": "Dra., ¿usted cómo se cuida?", "info": "20–40 seg", "grabado": true },
-        { "slug": "r9-08", "titulo": "Difícil vs agotador", "info": "20–40 seg", "grabado": true },
-        { "slug": "r9-09", "titulo": "Experta reacciona: falso o verdadero", "info": "20–40 seg", "grabado": true },
-        { "slug": "r9-10", "titulo": "3 errores con GLP-1", "info": "20–40 seg", "grabado": true },
-        { "slug": "r9-11", "titulo": "El músculo, tu segundo corazón", "info": "20–40 seg", "grabado": true }
+        {
+          "slug": "r9-01",
+          "titulo": "La solución se repite — marcadores y su receta",
+          "info": "40–60 seg · lista en pantalla",
+          "grabado": true
+        },
+        {
+          "slug": "r9-02",
+          "titulo": "¿Y cómo lo soluciono, Dra.?",
+          "info": "20–40 seg · reacción al video anterior",
+          "grabado": true
+        },
+        {
+          "slug": "r9-03",
+          "titulo": "Tú le llamas azúcar",
+          "info": "20–40 seg",
+          "grabado": true
+        },
+        {
+          "slug": "r9-04",
+          "titulo": "Cucharada por cucharada",
+          "info": "20–40 seg",
+          "grabado": true
+        },
+        {
+          "slug": "r9-05",
+          "titulo": "Protocolo de movimiento semanal",
+          "info": "20–40 seg",
+          "grabado": true
+        },
+        {
+          "slug": "r9-06",
+          "titulo": "Por qué mis pacientes no tienen Ozempic face",
+          "info": "20–40 seg",
+          "grabado": true
+        },
+        {
+          "slug": "r9-07",
+          "titulo": "Dra., ¿usted cómo se cuida?",
+          "info": "20–40 seg",
+          "grabado": true
+        },
+        {
+          "slug": "r9-08",
+          "titulo": "Difícil vs agotador",
+          "info": "20–40 seg",
+          "grabado": true
+        },
+        {
+          "slug": "r9-09",
+          "titulo": "Experta reacciona: falso o verdadero",
+          "info": "20–40 seg",
+          "grabado": true
+        },
+        {
+          "slug": "r9-10",
+          "titulo": "3 errores con GLP-1",
+          "info": "20–40 seg",
+          "grabado": true
+        },
+        {
+          "slug": "r9-11",
+          "titulo": "El músculo, tu segundo corazón",
+          "info": "20–40 seg",
+          "grabado": true
+        }
       ]
     }
   ]
