@@ -429,7 +429,7 @@ function renderGuion(g, canonical, backHref, opts){
     if (saveBtn) saveBtn.onclick = () => {
       collectForm();
       const md = toMarkdown(g);
-      if (opts.localKey) localStorage.setItem(opts.localKey, md);
+      if (opts.localKey){ localStorage.setItem(opts.localKey, md); localStorage.setItem(opts.localKey + ':t', Date.now()); }
       toast('Cambios guardados en este equipo');
       renderGuion(parseGuion(md), canonical, backHref, Object.assign({}, opts, {edited: false}));
     };
@@ -445,7 +445,7 @@ function renderGuion(g, canonical, backHref, opts){
         const r = await fetch(SAVE_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ password: pw, client: opts.client, slug: opts.slug, content: md }) });
         if (r.status === 401){ forgetPw(); throw new Error('Contraseña incorrecta, intenta de nuevo'); }
         if (!r.ok) throw new Error(await r.text());
-        if (opts.localKey) localStorage.setItem(opts.localKey, md);
+        if (opts.localKey){ localStorage.setItem(opts.localKey, md); localStorage.setItem(opts.localKey + ':t', Date.now()); }
         toast('Guardado ✓ Visible para todos en ~1 min');
         renderGuion(parseGuion(md), canonical, backHref, Object.assign({}, opts, {edited: false}));
       } catch (err) {
@@ -854,7 +854,7 @@ async function saveTPEdits(){
     if (!isNaN(li) && tx && ctx.g.lines[li]) ctx.g.lines[li].text = tx.innerText.replace(/\s*\n\s*/g,' ').trim();
   });
   const md = toMarkdown(ctx.g);
-  if (ctx.opts && ctx.opts.localKey) localStorage.setItem(ctx.opts.localKey, md);
+  if (ctx.opts && ctx.opts.localKey){ localStorage.setItem(ctx.opts.localKey, md); localStorage.setItem(ctx.opts.localKey + ':t', Date.now()); }
   let savedCloud = false;
   if (SAVE_ENDPOINT && ctx.opts && ctx.opts.client && ctx.opts.slug){
     const pw = await unlock('Contraseña para guardar en la nube');
@@ -951,7 +951,13 @@ async function boot(){
       const fetched = await r.text();
       const localKey = 'dvedit:' + c + '/' + g;
       let override = localStorage.getItem(localKey);
-      if (override && override.trim() === fetched.trim()){ localStorage.removeItem(localKey); override = null; }
+      const ots = +localStorage.getItem(localKey + ':t') || 0;
+      // La copia local solo existe para puentear el ~1 min que tarda Pages en publicar.
+      // Se descarta si ya coincide con lo publicado, o si caducó (10 min) — así una copia
+      // vieja nunca tapa una versión más nueva (ni las copias legacy sin marca de tiempo).
+      if (override && (override.trim() === fetched.trim() || (Date.now() - ots) > 600000)){
+        localStorage.removeItem(localKey); localStorage.removeItem(localKey + ':t'); override = null;
+      }
       let locutor = null;
       if (LOCUTORES[c]){
         try{
