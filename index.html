@@ -275,7 +275,8 @@ function speakerOrder(g){
 }
 
 function plainText(g){
-  let out = g.title.toUpperCase() + '\n' + g.meta.join('  ·  ') + '\n\n';
+  const meta = g.meta.filter(m => isAdmin() || !m.trim().startsWith('✱'));   // la leyenda ✱ es solo para el admin
+  let out = g.title.toUpperCase() + '\n' + meta.join('  ·  ') + '\n\n';
   for (const l of g.lines){
     if (l.beat) continue;
     out += l.speaker + ': ' + l.text + '\n\n';
@@ -313,13 +314,15 @@ function renderGuion(g, canonical, backHref, opts){
   const spk = speakerOrder(g);
   const solo = spk.length < 2;
   let conv = '';
+  const adm = isAdmin();   // solo el equipo DV (admin) ve las marcas ✱; la dra y lectores no
   g.lines.forEach((l, i) => {
-    if (l.beat){ conv += `<p class="beat" data-li="${i}">${esc(l.beat)}</p>`; return; }
+    if (l.beat){ const bt = adm ? l.beat : l.beat.replace(/\s*✱\s*$/,''); conv += `<p class="beat" data-li="${i}">${esc(bt)}</p>`; return; }
     const idx = spk.indexOf(l.speaker);
     const cls = solo ? 'solo' : (idx===1 ? 'right' : '');
-    conv += `<div class="row ${cls}"><div class="avatar">${esc(l.speaker.slice(0,3))}</div><div class="bubblewrap"><div class="bubble" data-li="${i}">${esc(l.text)}</div>${l.nota?`<p class="nota" data-li="${i}">${esc(l.nota)}</p>`:''}</div></div>`;
+    const showNota = l.nota && (adm || !l.nota.trim().startsWith('✱'));   // notas que empiezan con ✱ son solo para el admin
+    conv += `<div class="row ${cls}"><div class="avatar">${esc(l.speaker.slice(0,3))}</div><div class="bubblewrap"><div class="bubble" data-li="${i}">${esc(l.text)}</div>${showNota?`<p class="nota" data-li="${i}">${esc(l.nota)}</p>`:''}</div></div>`;
   });
-  const chips = g.meta.map(m=>`<span class="chip g">${esc(m)}</span>`).join('');
+  const chips = g.meta.filter(m => adm || !m.trim().startsWith('✱')).map(m=>`<span class="chip g">${esc(m)}</span>`).join('');
   const banner = '';   // El guardado va directo a la nube; la copia local es solo un cache optimista que se actualiza solo (~1 min) y se auto-limpia al publicarse.
   const refPrivate = opts.client && REF_PRIVATE[opts.client];      // clientes donde la referencia es solo para el estratega
   const canSeeRef = !refPrivate || isAdmin();       // logueado (equipo reconocido) la ve; lector público no
@@ -329,7 +332,7 @@ function renderGuion(g, canonical, backHref, opts){
   $('#app').innerHTML = `
     <header class="site"><div class="logo">DV</div><div><h1>${esc(g.title)}</h1><p>Consultora DV · plan de grabación</p></div></header>
     <div class="meta-chips">${chips}</div>
-    <div class="refbar">Link de referencia: <code>${esc(canonical)}</code> <button class="mini" onclick="copy('${canonical.replace(/'/g,"\\'")}','Link copiado')">Copiar link</button> ${backHref?`<a href="${backHref}" style="font-size:12px;">← todos mis guiones</a>`:''}</div>
+    ${(adm || backHref)?`<div class="refbar">${adm?`<button class="mini" onclick="copy('${canonical.replace(/'/g,"\\'")}','Link copiado')">🔗 Copiar link del guion</button> `:''}${backHref?`<a href="${backHref}" style="font-size:12px;">← todos mis guiones</a>`:''}</div>`:''}
     ${refblock}
     ${locbar}
     ${(opts.client && CLIENT_NOTE[opts.client]) ? `<div class="globalnote">${esc(CLIENT_NOTE[opts.client])}</div>` : ''}
