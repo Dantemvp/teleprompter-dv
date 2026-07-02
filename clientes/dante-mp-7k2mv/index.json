@@ -1,0 +1,37 @@
+{
+  "cliente": "Dante Vega · Marca Personal",
+  "grabaciones": [
+    {
+      "rec": "MP1",
+      "nombre": "Caso Fedra (50K → ban → 65K)",
+      "fecha": "Por definir",
+      "locacion": "Varias · talking head + WTF",
+      "guiones": [
+        {
+          "slug": "wtf-persecucion",
+          "titulo": "WTF persecución — por mi culpa perdió 50K",
+          "info": "45–60 seg · WTF found-footage + CTA a la mitad",
+          "grabado": false
+        },
+        {
+          "slug": "tiktok-ban-palabras",
+          "titulo": "Las 3 palabras que banean cuentas",
+          "info": "30–45 seg · TikTok · amenaza preventiva",
+          "grabado": false
+        },
+        {
+          "slug": "vistas-vs-seguidores",
+          "titulo": "3M vistas → 1K, 1.6M → 65K, ¿por qué?",
+          "info": "40–60 seg · datos + activo de valor",
+          "grabado": false
+        },
+        {
+          "slug": "storytelling-llamada",
+          "titulo": "La peor llamada empezó con un silencio",
+          "info": "40–60 seg · storytelling emocional",
+          "grabado": false
+        }
+      ]
+    }
+  ]
+}
