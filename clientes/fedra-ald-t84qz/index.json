@@ -12,7 +12,7 @@
           "titulo": "Verde, amarillo o rojo: ¿qué paciente eres?",
           "info": "35–50 seg · marca / personalidad",
           "categoria": "idea",
-          "grabado": false
+          "grabado": true
         },
         {
           "slug": "r10-12",
