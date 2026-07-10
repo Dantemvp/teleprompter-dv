@@ -8,6 +8,13 @@
       "locacion": "Consultorio",
       "guiones": [
         {
+          "slug": "r11-01",
+          "titulo": "Bajaron los precios, y te lo paso a ti",
+          "info": "50–60 seg · anuncio con intención",
+          "categoria": "guion",
+          "grabado": false
+        },
+        {
           "slug": "r10-09",
           "titulo": "Resistencia a la insulina, explicada",
           "info": "40–55 seg · explainer + suplementos",
