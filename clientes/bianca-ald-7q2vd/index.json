@@ -2,6 +2,22 @@
   "cliente": "Bianca Aldama Boutique",
   "grabaciones": [
     {
+      "rec": "R8",
+      "nombre": "Octava grabación (El Fuerte)",
+      "fecha": "Por definir",
+      "locacion": "El Fuerte",
+      "guiones": [
+        {
+          "slug": "g-17",
+          "titulo": "El nuevo lujo se viste de gimnasio",
+          "info": "25–35 seg · guionado / autoridad-opinión · tendencia deportivo elegante · lead magnet (comenta LUJO)",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        }
+      ]
+    },
+    {
       "rec": "R7",
       "nombre": "Séptima grabación",
       "fecha": "Por definir",
