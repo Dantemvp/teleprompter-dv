@@ -30,6 +30,38 @@
           "tipo": "guion",
           "grabado": false,
           "categoria": "guion"
+        },
+        {
+          "slug": "ri-08",
+          "titulo": "Transición INT · Efecto spray (CapCut)",
+          "info": "transición interior · ref · spray head-to-toe outfit base→final, overlay+opacidad+máscara horizontal siguiendo el spray",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DZ70bLLtsxJ/",
+          "grabado": false
+        },
+        {
+          "slug": "ri-09",
+          "titulo": "Transición INT 09",
+          "info": "transición interior · referencia",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DalQ5hyR6X3/",
+          "grabado": false
+        },
+        {
+          "slug": "ri-10",
+          "titulo": "Transición INT 10",
+          "info": "transición interior · referencia",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DZsyu4otQwF/",
+          "grabado": false
+        },
+        {
+          "slug": "ri-11",
+          "titulo": "Transición INT 11",
+          "info": "transición interior · referencia",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DZsaEOkx1Fj/",
+          "grabado": false
         }
       ]
     },
