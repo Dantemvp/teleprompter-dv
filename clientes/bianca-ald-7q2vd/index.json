@@ -62,6 +62,22 @@
           "categoria": "trans-int",
           "link": "https://www.instagram.com/reel/DZsaEOkx1Fj/",
           "grabado": false
+        },
+        {
+          "slug": "ri-12",
+          "titulo": "Transición INT 12",
+          "info": "transición interior · referencia",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/Dap6ueYydj0/",
+          "grabado": false
+        },
+        {
+          "slug": "g-20",
+          "titulo": "Qué complementos van con cada vestido",
+          "info": "0:15 · PNGs de prendas / al grano · vestido+complemento · guardar + parte 2",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
         }
       ]
     },
