@@ -2,6 +2,13 @@
   "cliente": "Bianca Aldama Boutique",
   "grabaciones": [
     {
+      "rec": "R9",
+      "nombre": "Novena grabación",
+      "fecha": "Por definir",
+      "locacion": "",
+      "guiones": []
+    },
+    {
       "rec": "R8",
       "nombre": "Octava grabación (El Fuerte)",
       "fecha": "Por definir",
