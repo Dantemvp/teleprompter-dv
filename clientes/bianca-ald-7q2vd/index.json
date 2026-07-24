@@ -110,6 +110,62 @@
           "categoria": "trans-int",
           "link": "https://www.instagram.com/reel/DWB6X5tmOb_/",
           "grabado": false
+        },
+        {
+          "slug": "ri-17",
+          "titulo": "Transición INT 17 · efecto STOP",
+          "info": "transición interior · referencia · efecto 'stop'/freeze con reveal de outfit · usar en muchos tipos de look",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DY42wjvNzYd/",
+          "grabado": false
+        },
+        {
+          "slug": "re-06",
+          "titulo": "Transición EXT 06 · efecto STOP",
+          "info": "transición exterior · referencia · efecto 'stop'/freeze caminando en calle · usar TODOS los outfits para el efecto",
+          "categoria": "trans-ext",
+          "link": "https://www.instagram.com/reel/DZz8tsAMQUq/",
+          "grabado": false
+        },
+        {
+          "slug": "g-31",
+          "titulo": "Sketch: me lo das en S (la talla)",
+          "info": "30–40 seg · sketch actuado + rompe 4ta pared · situación cotidiana talla · lead magnet (comenta TALLA)",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-32",
+          "titulo": "El outfit me quedó mejor que en mi cabeza",
+          "info": "7–12 seg · chusco / texto en pantalla mientras modela · look statement · CTA suave",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-33",
+          "titulo": "Chusco: And Emily? (audio trend)",
+          "info": "12–18 seg · chusco / audio-trend · reveal con actitud · CTA suave",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-34",
+          "titulo": "Chusco: ¿salimos a comer? (transformación)",
+          "info": "12–20 seg · chusco / transformación rápida · admite muchos textos · CTA etiquetar",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-35",
+          "titulo": "Cómo comprar sin abrumarte (podcast)",
+          "info": "30–45 seg · guionado / autoridad · formato podcast 2 voces · insight 'mente confundida nunca compra' · CTA visita",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
         }
       ]
     },
