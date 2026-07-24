@@ -30,6 +30,62 @@
           "categoria": "trans-int",
           "link": "https://www.instagram.com/reel/DafynLRNtNW/",
           "grabado": false
+        },
+        {
+          "slug": "ri-15",
+          "titulo": "Transición INT 15 · Wearing (loop)",
+          "info": "transición interior · referencia · toma 'Wearing' → después entra 'Styling' · NOTA: la primera toma entra/arranca para loopear al inicio",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DTiOmrdD3tb/",
+          "grabado": false
+        },
+        {
+          "slug": "g-23",
+          "titulo": "No me alcanza el dinero",
+          "info": "12–18 seg · chusco / POV-skit · humor gastar en moda · CTA etiquetar",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-24",
+          "titulo": "El peor día, pero mi amiga subió foto",
+          "info": "12–18 seg · chusco / POV-skit · humor 'main character' · CTA etiquetar",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-25",
+          "titulo": "Skit: estoy capacitada para esto",
+          "info": "15–20 seg · chusco / skit 2 voces · asesoría con humor · CTA visita",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-26",
+          "titulo": "1 vestido = 4 estilos",
+          "info": "20–30 seg · guion tipo-transición · versatilidad de una prenda · CTA comentarios (link tb en ri-12 R8)",
+          "tipo": "transicion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-27",
+          "titulo": "El color de accesorio que lo cambia todo",
+          "info": "18–25 seg · al grano · vestido + color de accesorio · traducido inglés · CTA comentarios",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-28",
+          "titulo": "Wearing vs Styling",
+          "info": "13–20 seg · guion tipo-transición · valor del styling · marco: transiciones int = 'Wearing' + entra 'Styling'",
+          "tipo": "transicion",
+          "grabado": false,
+          "categoria": "guion"
         }
       ]
     },
