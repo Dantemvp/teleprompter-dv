@@ -179,7 +179,7 @@
           "titulo": "Cómo comprar sin abrumarte (podcast)",
           "info": "30–45 seg · guionado / autoridad · formato podcast 2 voces · insight 'mente confundida nunca compra' · CTA visita",
           "tipo": "guion",
-          "grabado": false,
+          "grabado": true,
           "categoria": "guion"
         },
         {
