@@ -102,6 +102,14 @@
           "tipo": "transicion",
           "grabado": false,
           "categoria": "guion"
+        },
+        {
+          "slug": "ri-16",
+          "titulo": "Transición INT 16 · Spring trends",
+          "info": "transición interior · referencia · cambios de outfit por tendencia (polka, etc.) con gesto de cambio · interior",
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DWB6X5tmOb_/",
+          "grabado": false
         }
       ]
     },
