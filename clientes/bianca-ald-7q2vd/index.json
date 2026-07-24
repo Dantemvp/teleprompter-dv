@@ -86,6 +86,22 @@
           "tipo": "transicion",
           "grabado": false,
           "categoria": "guion"
+        },
+        {
+          "slug": "g-29",
+          "titulo": "Con qué combina el café",
+          "info": "20–30 seg · al grano · café + matches de color · ustedes arman los looks · CTA comentarios",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-30",
+          "titulo": "1 slip de encaje = 4 estilos",
+          "info": "20–30 seg · guion tipo-transición · versatilidad de un slip · CTA comentarios",
+          "tipo": "transicion",
+          "grabado": false,
+          "categoria": "guion"
         }
       ]
     },
