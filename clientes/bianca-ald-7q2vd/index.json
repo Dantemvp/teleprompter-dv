@@ -6,7 +6,16 @@
       "nombre": "Novena grabación",
       "fecha": "Por definir",
       "locacion": "",
-      "guiones": []
+      "guiones": [
+        {
+          "slug": "g-22",
+          "titulo": "POV: la comprita secreta",
+          "info": "15–20 seg · chusco / POV-skit · esconder la compra del marido · CTA comentarios",
+          "tipo": "guion",
+          "grabado": false,
+          "categoria": "guion"
+        }
+      ]
     },
     {
       "rec": "R8",
