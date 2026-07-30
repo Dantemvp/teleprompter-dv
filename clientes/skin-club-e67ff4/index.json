@@ -11,7 +11,7 @@
           "slug": "r4-01",
           "titulo": "Dime tu problema, te digo el activo natural",
           "info": "30–45 seg · rapid-fire problema→activo · una voz",
-          "grabado": false,
+          "grabado": true,
           "locutor": "Kaori",
           "categoria": "kaori"
         },
