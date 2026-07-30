@@ -2,6 +2,118 @@
   "cliente": "The Skin Club",
   "grabaciones": [
     {
+      "rec": "R4",
+      "nombre": "Cuarta grabación",
+      "fecha": "Por definir",
+      "locacion": "Por definir",
+      "guiones": [
+        {
+          "slug": "r4-01",
+          "titulo": "Dime tu problema, te digo el activo natural",
+          "info": "30–45 seg · rapid-fire problema→activo · una voz",
+          "grabado": false,
+          "locutor": "Kaori",
+          "categoria": "kaori"
+        },
+        {
+          "slug": "r4-02",
+          "titulo": "Dime tu problema, te digo el activo natural (v2 desordenado)",
+          "info": "30–45 seg · rapid-fire · orden barajado",
+          "grabado": false,
+          "locutor": "Nat",
+          "categoria": "nat"
+        },
+        {
+          "slug": "r4-03",
+          "titulo": "Lab vs natural (dúo Diego × Kaori)",
+          "info": "30–45 seg · rapid-fire a dos voces · solo pares con swap",
+          "grabado": false,
+          "locutor": "Diego + Kaori",
+          "categoria": "juntos"
+        },
+        {
+          "slug": "r4-04",
+          "titulo": "Lo que receta el derma vs. lo que usa Skin Club",
+          "info": "30–40 seg · rapid-fire · activo fuerte TACHADO en pantalla + natural hablado",
+          "grabado": false,
+          "locutor": "Kaori",
+          "categoria": "kaori",
+          "link": "https://www.instagram.com/reel/DUl-sQvAYiW/"
+        },
+        {
+          "slug": "r4-05",
+          "titulo": "Anótale (rapid-fire seco)",
+          "info": "20–30 seg · rapid-fire staccato problema→activo",
+          "grabado": false,
+          "locutor": "Diego",
+          "categoria": "diego",
+          "link": "https://www.instagram.com/reel/DZpaDZahSQv/"
+        },
+        {
+          "slug": "r4-06",
+          "titulo": "Estás desperdiciando tu skincare (glicólico / DermaBoost)",
+          "info": "40–55 seg · un ingrediente héroe + lluvia de beneficios",
+          "grabado": false,
+          "locutor": "Nat",
+          "categoria": "nat",
+          "link": "https://www.instagram.com/reel/DYxszCrpNwP/"
+        },
+        {
+          "slug": "r4-07",
+          "titulo": "El cuerpo también existe (HydroDerm)",
+          "info": "40–50 seg · talking head con personalidad · risueña",
+          "grabado": false,
+          "locutor": "Kaori",
+          "categoria": "kaori",
+          "link": "https://vt.tiktok.com/ZS4YJvRDm/"
+        },
+        {
+          "slug": "r4-08",
+          "titulo": "Los sí antes de dormir",
+          "info": "40–55 seg · lista de sí nocturnos · voz masculina directa",
+          "grabado": false,
+          "locutor": "Diego",
+          "categoria": "diego",
+          "link": "https://vt.tiktok.com/ZS4YerXoB/"
+        },
+        {
+          "slug": "r4-09",
+          "titulo": "No hagas esto, mejor esto (empezar skincare)",
+          "info": "30–40 seg · do/don't pairs · para principiantes",
+          "grabado": false,
+          "locutor": "Nat",
+          "categoria": "nat",
+          "link": "https://vt.tiktok.com/ZS4YecPyx/"
+        },
+        {
+          "slug": "r4-10",
+          "titulo": "Errores comunes al lavar la cara",
+          "info": "40–50 seg · lista de errores · risueña",
+          "grabado": false,
+          "locutor": "Kaori",
+          "categoria": "kaori",
+          "link": "https://vt.tiktok.com/ZS4YdYCm9/"
+        },
+        {
+          "slug": "r4-11",
+          "titulo": "¿El tónico sirve? (podcast · dúo)",
+          "info": "40–55 seg · formato podcast · Diego escéptico + Kaori · VOLTEADO pro-UltraFresh",
+          "grabado": false,
+          "locutor": "Diego + Kaori",
+          "categoria": "juntos",
+          "link": "https://vt.tiktok.com/ZS4YdepE9/"
+        },
+        {
+          "slug": "r4-12",
+          "titulo": "Tertulia testimonio — roadmap de preguntas",
+          "info": "guía de set · cómo lograr la confianza + roadmap emocional + shot list",
+          "grabado": false,
+          "locutor": "Tertulia",
+          "categoria": "tertulia"
+        }
+      ]
+    },
+    {
       "rec": "R3",
       "nombre": "Tercera grabación",
       "fecha": "Por definir",
