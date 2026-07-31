@@ -2,6 +2,56 @@
   "cliente": "Bianca Aldama Boutique",
   "grabaciones": [
     {
+      "rec": "R10",
+      "nombre": "Décima grabación",
+      "fecha": "Por definir",
+      "locacion": "Por definir",
+      "guiones": [
+        {
+          "slug": "g-38",
+          "titulo": "Definamos locura (amante de la moda)",
+          "info": "12–18 seg · Chusco / relatable · POV con actitud · CTA suave",
+          "grabado": false,
+          "categoria": "chusco",
+          "tipo": "ref",
+          "link": "https://www.instagram.com/reel/DYDbf3XNtjQ/"
+        },
+        {
+          "slug": "re-07",
+          "titulo": "Transición EXT 07 · Look of the day (transiciones de outfit)",
+          "info": "exterior · cortes cinematográficos entre ángulos",
+          "grabado": false,
+          "categoria": "trans-ext",
+          "link": "https://www.instagram.com/reel/DOZDeyMgGPR/"
+        },
+        {
+          "slug": "re-08",
+          "titulo": "Transición EXT 08 · cambio de outfit al pasar el carro",
+          "info": "exterior · el outfit cambia al pasar un auto",
+          "grabado": false,
+          "categoria": "trans-ext",
+          "link": "https://www.instagram.com/reel/DQISsPakS2M/"
+        },
+        {
+          "slug": "g-39",
+          "titulo": "Justo nos llegó (estilos nuevos siempre)",
+          "info": "15–22 seg · Chusco / skit 2 roles · refuerza Estilos nuevos siempre",
+          "grabado": false,
+          "categoria": "chusco",
+          "tipo": "ref",
+          "link": "https://www.instagram.com/reel/DbTnXqgR54P/"
+        },
+        {
+          "slug": "ri-19",
+          "titulo": "Transición INT 19",
+          "info": "interior · transición a imitar (ver referencia)",
+          "grabado": false,
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/C__MfPoIC_H/"
+        }
+      ]
+    },
+    {
       "rec": "R9",
       "nombre": "Novena grabación",
       "fecha": "Por definir",
