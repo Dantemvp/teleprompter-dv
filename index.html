@@ -84,10 +84,11 @@
   .refreel{background:var(--teal-bg); border-radius:10px; padding:8px 14px;}
   .refreel span{color:var(--teal-dark);}
   .refreel a{color:var(--teal-darker); font-weight:600;}
-  .refpreview{margin-top:8px; width:100%;}
-  .refpreview summary{cursor:pointer; font-size:12px; font-weight:600; color:var(--teal-darker); user-select:none; list-style:none; display:inline-block;}
+  .refpreview{margin-top:8px; max-width:100%;}
+  .refpreview summary{cursor:pointer; font-size:13px; font-weight:600; color:var(--teal-darker); user-select:none; list-style:none; display:inline-block; padding:6px 0;}
   .refpreview summary::-webkit-details-marker{display:none;}
-  .refpreview img{margin-top:8px; max-width:240px; width:100%; border-radius:10px; display:block; box-shadow:0 2px 10px rgba(0,0,0,.12);}
+  .refpreview img{margin-top:8px; width:100%; max-width:260px; height:auto; border-radius:12px; display:block; box-shadow:0 2px 10px rgba(0,0,0,.12);}
+  @media (max-width:600px){ .refpreview img{max-width:min(100%, 320px);} .refpreview summary{font-size:14px; padding:8px 0;} }
   #v-edit .ein{width:100%; font:inherit; font-size:14px; padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:#fff; margin-bottom:6px;}
   #v-edit textarea.etext{min-height:62px; resize:vertical; line-height:1.5;}
   .efield{margin-bottom:12px;}
