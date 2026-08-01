@@ -84,6 +84,10 @@
   .refreel{background:var(--teal-bg); border-radius:10px; padding:8px 14px;}
   .refreel span{color:var(--teal-dark);}
   .refreel a{color:var(--teal-darker); font-weight:600;}
+  .refpreview{margin-top:8px; width:100%;}
+  .refpreview summary{cursor:pointer; font-size:12px; font-weight:600; color:var(--teal-darker); user-select:none; list-style:none; display:inline-block;}
+  .refpreview summary::-webkit-details-marker{display:none;}
+  .refpreview img{margin-top:8px; max-width:240px; width:100%; border-radius:10px; display:block; box-shadow:0 2px 10px rgba(0,0,0,.12);}
   #v-edit .ein{width:100%; font:inherit; font-size:14px; padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:#fff; margin-bottom:6px;}
   #v-edit textarea.etext{min-height:62px; resize:vertical; line-height:1.5;}
   .efield{margin-bottom:12px;}
@@ -255,7 +259,7 @@ function parseGuion(src){
     if (line.startsWith('# ')) { g.title = line.slice(2).trim(); continue; }
     if (line.startsWith('> ')) {
       const meta = line.slice(2).trim();
-      const rm = meta.match(/^referencia:\s*(https?:\/\/\S+)/i);
+      const rm = meta.match(/^referencias?\b[^:]*:\s*(https?:\/\/\S+)/i);
       if (rm){ g.ref = rm[1]; continue; }
       g.meta.push(meta); continue;
     }
@@ -326,7 +330,10 @@ function renderGuion(g, canonical, backHref, opts){
   const banner = '';   // El guardado va directo a la nube; la copia local es solo un cache optimista que se actualiza solo (~1 min) y se auto-limpia al publicarse.
   const refPrivate = opts.client && REF_PRIVATE[opts.client];      // clientes donde la referencia es solo para el estratega
   const canSeeRef = !refPrivate || isAdmin();       // logueado (equipo reconocido) la ve; lector público no
-  const refblock = (g.ref && canSeeRef) ? `<div class="refbar refreel"><span>🎬 Reel de referencia:</span> <a href="${attr(g.ref)}" target="_blank" rel="noopener">Ver inspiración ↗</a> <button class="mini" onclick="copy('${g.ref.replace(/'/g,"\\'")}','Link copiado')">Copiar</button></div>` : '';
+  const thumbBlock = (opts.thumb && canSeeRef) ? `<details class="refpreview"><summary>👁 Ver preview</summary><img src="${attr(opts.thumb)}" alt="preview de la referencia" loading="lazy"></details>` : '';
+  const refblock = (g.ref && canSeeRef)
+    ? `<div class="refbar refreel"><span>🎬 Reel de referencia:</span> <a href="${attr(g.ref)}" target="_blank" rel="noopener">Ver inspiración ↗</a> <button class="mini" onclick="copy('${g.ref.replace(/'/g,"\\'")}','Link copiado')">Copiar</button>${thumbBlock}</div>`
+    : (thumbBlock ? `<div class="refbar refreel"><span>🎬 Referencia:</span>${thumbBlock}</div>` : '');
   const founders = (opts.client && LOCUTORES[opts.client]) ? LOCUTORES[opts.client] : null;
   const locbar = founders ? `<div class="refbar locbar"><span>🎙️ Locutor:</span> ${founders.map(n=>`<button class="mini locpick${opts.locutor===n?' on':''}" data-loc="${attr(n)}">${esc(n)}</button>`).join(' ')} ${opts.locutor?'':'<span style="color:var(--muted)">sin asignar</span>'}</div>` : '';
   $('#app').innerHTML = `
@@ -516,9 +523,10 @@ function renderCard(it, token, ri, codArg){
   const abrir = esGuion ? `<a href="?c=${token}&g=${it.slug}"><button class="primary mini">Abrir guion</button></a>` : '';
   const ref = it.link ? `<a href="${attr(it.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
   const mover = (REC_NESTED[token] && isAdmin()) ? `<button class="mini btnMover" data-slug="${attr(it.slug)}">Mover ⇄</button>` : '';
+  const preview = it.thumb ? `<details class="refpreview"><summary>👁 Ver preview</summary><img src="${attr(it.thumb)}" alt="preview de la referencia" loading="lazy"></details>` : '';
   return `<div class="card${it.grabado?' done':''}" data-card="${attr(it.slug)}" data-rec="${ri}"><div style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}${loc}</h3><p>${esc(it.info||'')}</p></div><span class="donechip">✓ Grabado</span></div>
     ${cardLoc}
-    <div class="actions">${abrir}${ref}<button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${mover}${del}</div></div>`;
+    <div class="actions">${abrir}${ref}<button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${mover}${del}</div>${preview}</div>`;
 }
 let CLIENT_DATA = null, CLIENT_TOKEN = null;
 function renderClient(data, token){
@@ -966,16 +974,16 @@ async function boot(){
       if (override && (override.trim() === fetched.trim() || (Date.now() - ots) > 600000)){
         localStorage.removeItem(localKey); localStorage.removeItem(localKey + ':t'); override = null;
       }
-      let locutor = null;
+      let locutor = null, thumb = null;
+      try{
+        const ix = await (await fetch('clientes/' + c + '/index.json?t=' + Date.now())).json();
+        (ix.grabaciones||[]).forEach(rec => (rec.guiones||[]).forEach(it => { if (it.slug === g){ if (it.locutor) locutor = it.locutor; if (it.thumb) thumb = it.thumb; } }));
+      }catch(e){}
       if (LOCUTORES[c]){
-        try{
-          const ix = await (await fetch('clientes/' + c + '/index.json?t=' + Date.now())).json();
-          (ix.grabaciones||[]).forEach(rec => (rec.guiones||[]).forEach(it => { if (it.slug === g && it.locutor) locutor = it.locutor; }));
-        }catch(e){}
         const local = localStorage.getItem('dvloc:' + c + '/' + g);
         if (local !== null) locutor = local || null;
       }
-      renderGuion(parseGuion(override || fetched), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: false, locutor});
+      renderGuion(parseGuion(override || fetched), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: false, locutor, thumb});
       return;
     }catch(e){ $('#app').innerHTML = '<p style="padding:40px 0">Guion no encontrado. Revisa el link con tu estratega.</p>'; return; }
   }
