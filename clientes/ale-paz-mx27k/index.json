@@ -121,6 +121,49 @@
           "info": "30–50 seg · ranking · alineadores"
         }
       ]
+    },
+    {
+      "rec": "R3",
+      "nombre": "Tercera grabación",
+      "fecha": "04/08/2026",
+      "locacion": "Consultorio · talking head",
+      "guiones": [
+        {
+          "slug": "r3-01",
+          "titulo": "Del 1 al 5: los hábitos que te causan mal aliento",
+          "info": "30–50 seg · califica del 1 al 5 · mal aliento",
+          "ref": "https://www.instagram.com/reel/DbONP1XCLEn/",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r3-01.jpg"
+        },
+        {
+          "slug": "r3-02",
+          "titulo": "Bueno, excelente o descártalo: comidas para tus dientes",
+          "info": "30–45 seg · bueno/excelente/descártalo · alimentación · editor mete imágenes",
+          "ref": "https://www.instagram.com/reel/DS0H2wXie4W/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260804-182707_d6a3b90f-3e04-49f6-b70f-bfb898bb9ca1/thumbnail.jpg"
+        },
+        {
+          "slug": "r3-03",
+          "titulo": "Bueno, excelente o descártalo: tu día con Aliwell",
+          "info": "30–45 seg · bueno/excelente/descártalo · alineadores Aliwell · editor mete imágenes",
+          "ref": "https://www.instagram.com/reel/DS0H2wXie4W/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260804-182707_d6a3b90f-3e04-49f6-b70f-bfb898bb9ca1/thumbnail.jpg"
+        },
+        {
+          "slug": "r3-04",
+          "titulo": "3 momentos en los que cepillarte los dientes te hace daño",
+          "info": "40–50 seg · listicle 3 + dato final · educativo (mito)",
+          "ref": "https://www.instagram.com/reel/DaDQ_jkxmw1/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260804-183521_8c02efac-e7ef-404d-a4ff-1e3133e99c41/thumbnail.jpg"
+        },
+        {
+          "slug": "r3-05",
+          "titulo": "No te cepilles justo después de comer (loop + descripción)",
+          "info": "5–8 seg loop · sin talking head · lo importante va en la descripción · pareja del R3-04",
+          "ref": "https://www.instagram.com/reel/Cc9DdS6gHZ0/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260804-184620_f09db275-f9e1-47eb-84d8-14190535af04/thumbnail.jpg"
+        }
+      ]
     }
   ]
 }
