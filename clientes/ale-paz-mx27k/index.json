@@ -141,7 +141,8 @@
           "titulo": "Bueno, excelente o descártalo: comidas para tus dientes",
           "info": "30–45 seg · bueno/excelente/descártalo · alimentación · editor mete imágenes",
           "ref": "https://www.instagram.com/reel/DS0H2wXie4W/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260804-182707_d6a3b90f-3e04-49f6-b70f-bfb898bb9ca1/thumbnail.jpg"
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260804-182707_d6a3b90f-3e04-49f6-b70f-bfb898bb9ca1/thumbnail.jpg",
+          "grabado": true
         },
         {
           "slug": "r3-03",
