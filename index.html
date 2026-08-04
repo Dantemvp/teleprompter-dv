@@ -195,7 +195,7 @@ const STATUS_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/status';
 const DELETE_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/delete';
 const ORGANIZE_ENDPOINT = 'https://teleprompter-dv.vercel.app/api/organize';
 // Clientes con vista anidada de grabaciones (desplegable R6/R7…) + categorías adentro, con controles de crear/mover (admin).
-const REC_NESTED = { 'bianca-ald-7q2vd': true, 'fedra-ald-t84qz': true, 'skin-club-e67ff4': true };
+const REC_NESTED = { 'bianca-ald-7q2vd': true, 'fedra-ald-t84qz': true, 'skin-club-e67ff4': true, 'ale-paz-mx27k': true };
 // Clientes con selector de locutor (quién presenta el guion). Solo aplica a estos tokens.
 const LOCUTORES = { 'skin-club-e67ff4': ['Nat', 'Kaori', 'Diego'] };
 // Clientes donde el reel de referencia es privado: solo visible en modo edición (isAdmin()), no para el lector público.
@@ -498,7 +498,8 @@ const CAT_LABELS = {
 const CLIENT_CATS = {
   'bianca-ald-7q2vd': ['guion', 'chusco', 'trans-int', 'trans-ext', 'tienda'],
   'skin-club-e67ff4': ['guion', 'kaori', 'diego', 'nat', 'juntos', 'tertulia', 'ugc', 'influencer'],
-  'fedra-ald-t84qz': ['idea', 'guion', 'chusco']
+  'fedra-ald-t84qz': ['idea', 'guion', 'chusco'],
+  'ale-paz-mx27k': ['guion']
 };
 // Prefijo del código visible (numeración posicional automática por grabación/categoría).
 const CAT_PREFIX = { 'guion':'G', 'kaori':'K', 'diego':'D', 'nat':'N', 'juntos':'J', 'tertulia':'TE', 'trans-int':'I', 'trans-ext':'E', 'tienda':'T', 'ugc':'U', 'influencer':'INF', 'idea':'ID', 'chusco':'C', '__otros':'X' };
