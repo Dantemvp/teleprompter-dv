@@ -165,7 +165,8 @@
           "titulo": "No te cepilles justo después de comer (loop + descripción)",
           "info": "5–8 seg loop · sin talking head · lo importante va en la descripción · pareja del R3-04",
           "ref": "https://www.instagram.com/reel/Cc9DdS6gHZ0/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260804-184620_f09db275-f9e1-47eb-84d8-14190535af04/thumbnail.jpg"
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260804-184620_f09db275-f9e1-47eb-84d8-14190535af04/thumbnail.jpg",
+          "grabado": true
         },
         {
           "slug": "r3-06",
