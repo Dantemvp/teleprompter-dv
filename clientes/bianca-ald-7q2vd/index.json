@@ -2,6 +2,64 @@
   "cliente": "Bianca Aldama Boutique",
   "grabaciones": [
     {
+      "rec": "R11",
+      "nombre": "Undécima grabación",
+      "fecha": "Por definir",
+      "locacion": "Por definir",
+      "nota": "SERIE Tendencias OI2026 (máx 2 por grabación). Resto de la REC = contenido funcional/creativo del análisis.",
+      "guiones": [
+        {
+          "slug": "g-46",
+          "titulo": "Serie Tendencias OI2026 · P1: Bambi",
+          "info": "35–50 seg · Serie tendencias · autoridad + styling · comenta BAMBI",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-47",
+          "titulo": "Serie Tendencias OI2026 · P2: Morado regio",
+          "info": "35–45 seg · Serie tendencias · 'nadie la usa aún' · comenta MORADO",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-48",
+          "titulo": "Serie Tendencias OI2026 · P3: Barrel chocolate",
+          "info": "35–45 seg · Serie tendencias · Confianza Radical · comenta DENIM",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-49",
+          "titulo": "Serie Tendencias OI2026 · P4: Chaqueta Napoleón",
+          "info": "35–45 seg · Serie tendencias · 3 escenarios · comenta NAPOLEÓN",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-50",
+          "titulo": "Serie Tendencias OI2026 · P5: Encaje y satín (eventos)",
+          "info": "40–50 seg · Serie tendencias · por ocasión · comenta EVENTO",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-51",
+          "titulo": "Serie Tendencias OI2026 · P6: Blanco Cloud Dancer",
+          "info": "30–40 seg · Serie tendencias · dato Pantone · comenta BLANCO",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-52",
+          "titulo": "Serie Tendencias OI2026 · P7: Calzado",
+          "info": "35–45 seg · Serie tendencias · cierre · comenta ZAPATOS",
+          "grabado": false,
+          "categoria": "guion"
+        }
+      ]
+    },
+    {
       "rec": "R10",
       "nombre": "Décima grabación",
       "fecha": "Por definir",
