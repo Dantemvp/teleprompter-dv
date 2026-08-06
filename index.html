@@ -493,16 +493,17 @@ const CAT_LABELS = {
   'influencer':'INFLUENCER',
   'idea':      'IDEAS FEDRA',
   'chusco':    'CHUSCO',
+  'ganador':   '🏆 GANADORES (inspiración)',
   '__otros':   'OTROS'
 };
 const CLIENT_CATS = {
-  'bianca-ald-7q2vd': ['guion', 'chusco', 'trans-int', 'trans-ext', 'tienda'],
+  'bianca-ald-7q2vd': ['ganador', 'guion', 'chusco', 'trans-int', 'trans-ext', 'tienda'],
   'skin-club-e67ff4': ['guion', 'kaori', 'diego', 'nat', 'juntos', 'tertulia', 'ugc', 'influencer'],
   'fedra-ald-t84qz': ['idea', 'guion', 'chusco'],
   'ale-paz-mx27k': ['guion']
 };
 // Prefijo del código visible (numeración posicional automática por grabación/categoría).
-const CAT_PREFIX = { 'guion':'G', 'kaori':'K', 'diego':'D', 'nat':'N', 'juntos':'J', 'tertulia':'TE', 'trans-int':'I', 'trans-ext':'E', 'tienda':'T', 'ugc':'U', 'influencer':'INF', 'idea':'ID', 'chusco':'C', '__otros':'X' };
+const CAT_PREFIX = { 'guion':'G', 'kaori':'K', 'diego':'D', 'nat':'N', 'juntos':'J', 'tertulia':'TE', 'trans-int':'I', 'trans-ext':'E', 'tienda':'T', 'ugc':'U', 'influencer':'INF', 'idea':'ID', 'chusco':'C', 'ganador':'W', '__otros':'X' };
 // Devuelve los items de una grabación/lista que caen en una categoría; '__otros' captura todo lo que no esté en la lista conocida (para que nada desaparezca).
 function itemsForCat(list, key, known){
   return key === '__otros'
