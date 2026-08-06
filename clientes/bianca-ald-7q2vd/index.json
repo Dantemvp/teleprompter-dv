@@ -195,6 +195,15 @@
           "grabado": false,
           "categoria": "trans-int",
           "link": "https://www.instagram.com/reel/DbTdW2xvxaq/"
+        },
+        {
+          "slug": "g-58",
+          "titulo": "Chusco con cierre a la tienda (variante)",
+          "info": "chusco · relatable + CTA/cierre a tienda · variante nueva de la ref DYDbf3XNtjQ",
+          "grabado": false,
+          "categoria": "chusco",
+          "tipo": "ref",
+          "link": "https://www.instagram.com/reel/DYDbf3XNtjQ/"
         }
       ]
     },
@@ -204,16 +213,6 @@
       "fecha": "Por definir",
       "locacion": "Por definir",
       "guiones": [
-        {
-          "slug": "g-38",
-          "titulo": "Definamos locura (amante de la moda)",
-          "info": "12–18 seg · Chusco / relatable · POV con actitud · CTA suave",
-          "grabado": false,
-          "categoria": "chusco",
-          "tipo": "ref",
-          "link": "https://www.instagram.com/reel/DYDbf3XNtjQ/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260731-061609_42dac775-b387-4dc4-9080-b55651bc5e1a/thumbnail.jpg"
-        },
         {
           "slug": "re-07",
           "titulo": "Transición EXT 07 · Look of the day (transiciones de outfit)",
