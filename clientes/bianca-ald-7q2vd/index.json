@@ -160,6 +160,41 @@
           "grabado": false,
           "categoria": "trans-int",
           "link": "https://www.instagram.com/reel/DZD1ys1RDdF/"
+        },
+        {
+          "slug": "g-55",
+          "titulo": "Chusco (por definir)",
+          "info": "chusco · basado en referencia · Dante define el gag",
+          "grabado": false,
+          "categoria": "chusco",
+          "tipo": "ref",
+          "link": "https://www.instagram.com/reel/DbOj2rco6wa/"
+        },
+        {
+          "slug": "g-56",
+          "titulo": "Chusco (por definir)",
+          "info": "chusco · basado en referencia · Dante define el gag",
+          "grabado": false,
+          "categoria": "chusco",
+          "tipo": "ref",
+          "link": "https://www.instagram.com/reel/DZaSgpnqcp8/"
+        },
+        {
+          "slug": "g-57",
+          "titulo": "Chusco interior (por definir)",
+          "info": "chusco · interior · basado en referencia · Dante define el gag",
+          "grabado": false,
+          "categoria": "chusco",
+          "tipo": "ref",
+          "link": "https://www.instagram.com/reel/DbFKXsATSgP/"
+        },
+        {
+          "slug": "ri-26",
+          "titulo": "Transición INT 26",
+          "info": "transición interior · referencia",
+          "grabado": false,
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DbTdW2xvxaq/"
         }
       ]
     },
