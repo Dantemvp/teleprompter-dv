@@ -136,6 +136,30 @@
           "info": "35–45 seg · Serie tendencias · cierre · comenta ZAPATOS",
           "grabado": false,
           "categoria": "guion"
+        },
+        {
+          "slug": "g-53",
+          "titulo": "¿Por qué se agota tan rápido?",
+          "info": "40–55 seg · UNICORNIO · autoridad de dueña + CTA canal WhatsApp · comenta NUEVO",
+          "grabado": false,
+          "categoria": "guion"
+        },
+        {
+          "slug": "g-54",
+          "titulo": "Chusco (por definir)",
+          "info": "chusco · basado en referencia · Dante define el gag",
+          "grabado": false,
+          "categoria": "chusco",
+          "tipo": "ref",
+          "link": "https://www.instagram.com/reel/DbgpfudywLH/"
+        },
+        {
+          "slug": "ri-25",
+          "titulo": "Transición INT 25 · cambiando el plan con la amiga",
+          "info": "transición interior · referencia · dos amigas cambian de plan/outfit",
+          "grabado": false,
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DZD1ys1RDdF/"
         }
       ]
     },
