@@ -8,7 +8,7 @@
 
 HOOK A: No te voy a decir que esta crema me cambió la vida y me quito puntos negros y todo. Te voy a decir por qué sí la seguí usando despues de la recomendación
 
-HOOK C: Si quieres cuidar tu piel de noche, pero el retinol te intimida, escucha esto.
+HOOK C: Si quieres cuidar tu piel de noche, pero el retinol te irrita o le tienes respeto, escucha esto.
 
 ## Cuerpo
 
