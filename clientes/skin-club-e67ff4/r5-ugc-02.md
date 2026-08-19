@@ -6,9 +6,7 @@
 
 ## Grabar los tres hooks
 
-HOOK A: No te voy a decir que esta crema me cambió la vida. Te voy a decir por qué sí la seguí usando.
-
-HOOK B: Mi reseña honesta de HydroGlow, sin filtro y sin fingir que una crema hace milagros.
+HOOK A: No te voy a decir que esta crema me cambió la vida y me quito puntos negros y todo. Te voy a decir por qué sí la seguí usando despues de la recomendación
 
 HOOK C: Si quieres cuidar tu piel de noche, pero el retinol te intimida, escucha esto.
 
@@ -16,7 +14,7 @@ HOOK C: Si quieres cuidar tu piel de noche, pero el retinol te intimida, escucha
 
 CREADORA: Lo primero que me gustó fue la textura. Se siente nutritiva, pero en mi piel no queda como una capa pesada.
 
-CREADORA: Tiene tetrapéptidos y Vigna aconitifolia, una alternativa botánica al retinol, además de aceite de semilla de uva.
+CREADORA: Tiene tetrapéptidos y Vigna aconitifolia, una alternativa botánica al retinol que normalmente me caia muy pesado, además de aceite de semilla de uva.
 
 CREADORA: Yo la uso como último paso de mi rutina nocturna. Lo que noto al despertar no es una transformación de filtro: es la piel más cómoda, hidratada y con mejor apariencia.
 
