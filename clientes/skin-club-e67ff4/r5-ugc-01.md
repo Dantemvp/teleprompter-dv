@@ -6,9 +6,9 @@
 
 ## Grabar los tres hooks
 
-HOOK A: Pedí skincare mexicano pensando que sería otra compra bonita que iba a abandonar… pero estos son los dos productos que sí se quedaron en mi rutina.
+HOOK A: Despues de que una amiga me insistio mucho para que probara estos productos, estos son los que sí se quedaron en mi rutina.
 
-HOOK B: Esta fue mi experiencia comprando Skin Club y hay dos cosas que genuinamente volvería a pedir.
+HOOK B: Esta fue mi experiencia comprando Skin Club despues de que me los recomendaron
 
 HOOK C: Lo compré por una amiga que estuvo insistiendo
 
