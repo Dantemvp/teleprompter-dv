@@ -8,9 +8,7 @@
 
 HOOK A: Yo estaba tratando mi piel grasa tan agresivamente que cada día se sentía más tirante.
 
-HOOK B: Plot twist: mi piel grasa no necesitaba menos hidratación. Necesitaba que dejara de castigarla.
-
-HOOK C: Si tu cara brilla, pero después de lavarla se siente tiesa, esto te puede estar pasando.
+HOOK C: Si tu cara brilla, pero después de lavarla se siente tiesa, te puede estar pasando esto
 
 ## Cuerpo
 
