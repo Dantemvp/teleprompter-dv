@@ -1,60 +1,37 @@
-# Banco UGC de empleadas — entrevista y tomas generales
-> The Skin Club · R5-UGC-04 · Guía de set · respuestas reales + biblioteca de B-roll
-> Locutoras: Empleada 1 + Empleada 2
-> OBJETIVO: obtener material para testimonios de 15–45 seg y recursos reutilizables.
+# La crema que pensé que menos necesitaba es la que uso diario
+> The Skin Club · R5-UGC-04 · Favorito inesperado + reseña corporal · 25–35 seg
+> Locutora: Creadora UGC 2
+> Formato: rutina después de bañarse / get ready with me
+> Referencia visual: UGC EDITADOS de Kenji y Ubaldo
 
-## Calentamiento sin cámara
+## Grabar los tres hooks
 
-PREGUNTA: ¿Cuánto tiempo llevas trabajando aquí y qué haces normalmente?
+HOOK A: La crema que pensé que menos necesitaba terminó siendo la que uso todos los días.
 
-PREGUNTA: ¿Qué fue lo primero que te sorprendió del laboratorio?
+HOOK B: Mi reseña de HydroDerm como alguien que odia sentirse pegajosa después de ponerse crema.
 
-PREGUNTA: ¿Hay algo del proceso que ahora valores y antes ni imaginabas?
+HOOK C: Me preocupaba muchísimo por hidratar mi cara y mientras tanto mis piernas estaban pidiendo auxilio.
 
-PREGUNTA: ¿Qué producto usas tú de verdad? ¿Cómo lo incorporas a tu rutina?
+## Cuerpo
 
-PREGUNTA: ¿Qué le dirías a una amiga que nunca ha usado Skin Club?
+CREADORA: Yo era constante con el skincare de la cara, pero del cuello para abajo se me olvidaba por completo.
 
-PREGUNTA: ¿Cuál es el momento más satisfactorio de fabricar o preparar un producto?
+CREADORA: Empecé a usar HydroDerm después de bañarme, con la piel todavía ligeramente húmeda, especialmente en piernas, brazos y codos.
 
-PREGUNTA: ¿Qué mito de skincare dejaste de creer desde que trabajas aquí?
+CREADORA: Tiene manteca de karité, urea, aloe y jojoba. Lo que me convenció no fue leer los ingredientes: fue que mi piel se siente suave y cómoda sin tener que esperar una eternidad para vestirme.
 
-## Hooks para responder libremente
+CREADORA: Ahora la tengo junto a la regadera para que hidratarme no dependa de que me acuerde después.
 
-HOOK: Trabajo en una marca de skincare y esto fue lo que más me sorprendió…
+## Cierre
 
-HOOK: Después de ver cómo se fabrica, jamás volví a elegir un producto igual…
+CREADORA: Si también haces una rutina perfecta para tu cara y abandonas el resto del cuerpo, esta es tu señal.
 
-HOOK: El producto de Skin Club que sí tengo en mi propio baño es…
+## B-roll
 
-HOOK: Algo que nadie ve antes de que su skincare llegue a casa es…
+TIP: Toalla, vapor del baño, dispensar producto, macro de textura y aplicación en piernas, brazos y codos.
 
-HOOK: Mi compañera y yo hacemos skincare, pero nuestras rutinas son completamente diferentes…
+TIP: Vestirse inmediatamente después y colocar HydroDerm junto a la regadera o sobre el tocador.
 
-## Tomas generales obligatorias
+## Regla de verdad
 
-TIP: Exterior o entrada del laboratorio; abrir puerta y entrar.
-
-TIP: Colocarse bata, cofia y guantes siguiendo el protocolo real.
-
-TIP: Lavado de manos y preparación del área.
-
-TIP: Planos abierto, medio y detalle de pesado, vertido, mezclado y revisión de textura. Solo procesos autorizados.
-
-TIP: Envases vacíos, llenado, tapas, etiquetas, número de lote y producto terminado.
-
-TIP: Macros de cada textura sobre espátula, dorso de la mano y empaque.
-
-TIP: Cada empleada tomando su producto favorito, aplicándolo y explicándoselo a la otra.
-
-TIP: Ambas trabajando, caminando y riéndose de forma natural. Grabar 10 segundos limpios de cada acción.
-
-## Seguridad editorial
-
-TIP: No mostrar fórmulas, concentraciones, pantallas, documentos ni procesos confidenciales.
-
-TIP: No inventar controles o certificaciones. Nombrar únicamente lo que realmente ocurre en ese laboratorio.
-
-TIP: Evitar promesas médicas, resultados garantizados y frases como “cura”, “elimina para siempre” o “sirve para todos”.
-
-TIP: Si una respuesta suena ensayada, volver a hacer la pregunta y pedirle que se la cuente a su mejor amiga.
+TIP: Ajustar las zonas y la sensación final a su experiencia real. No afirmar que “no queda pegajosa” si en su piel el acabado fue distinto.

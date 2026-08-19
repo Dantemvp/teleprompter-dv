@@ -1,48 +1,37 @@
-# Sí trabajamos aquí y no usamos lo mismo
-> The Skin Club · R5-UGC-03 · UGC a dos voces · experiencia + recomendación · 30–45 seg
-> Locutoras: Empleada 1 + Empleada 2
-> IMPORTANTE: responder primero sin cámara y reemplazar cada corchete con la verdad de cada una.
+# Mi piel era grasa, pero yo la estaba dejando deshidratada
+> The Skin Club · R5-UGC-03 · Testimonio problema → descubrimiento → rutina · 30–45 seg
+> Locutora: Creadora UGC 1
+> Formato: storytime mientras hace su rutina
+> Referencia visual: UGC EDITADOS de Kenji y Ubaldo
 
-## Hook
+## Grabar los tres hooks
 
-EMPLEADA 1: Las dos trabajamos en Skin Club.
+HOOK A: Yo estaba tratando mi piel grasa tan agresivamente que cada día se sentía más tirante.
 
-EMPLEADA 2: Pero no usamos la misma rutina.
+HOOK B: Plot twist: mi piel grasa no necesitaba menos hidratación. Necesitaba que dejara de castigarla.
 
-AMBAS: Porque no tenemos la misma piel.
+HOOK C: Si tu cara brilla, pero después de lavarla se siente tiesa, esto te puede estar pasando.
 
-## Rapid-fire
+## Cuerpo
 
-TEXTO EN PANTALLA: ¿Cómo es tu piel?
+CREADORA: Durante mucho tiempo pensé que sentir la cara rechinando de limpia era algo bueno. Usaba limpiadores muy agresivos y después me saltaba la hidratación porque me daba miedo verme más grasosa.
 
-EMPLEADA 1: La mía es [GRASA / SECA / NORMAL / MIXTA].
+CREADORA: Lo que cambié fue hacer una rutina mucho más simple. Primero uso DeepCleanse para piel grasa, con ácido salicílico, árbol de té y pantenol.
 
-EMPLEADA 2: Y la mía es [GRASA / SECA / NORMAL / MIXTA].
+CREADORA: Después, con la piel todavía un poco húmeda, aplico HydroGlow Serum. Tiene ácido hialurónico y niacinamida, y se siente ligero.
 
-TEXTO EN PANTALLA: ¿Tu producto favorito?
-
-EMPLEADA 1: [PRODUCTO]. Porque [MOTIVO REAL EN UNA FRASE].
-
-EMPLEADA 2: [PRODUCTO]. Porque [MOTIVO REAL EN UNA FRASE].
-
-TEXTO EN PANTALLA: ¿Qué aprendiste trabajando aquí?
-
-EMPLEADA 1: Que [APRENDIZAJE REAL].
-
-EMPLEADA 2: Y que copiarle la rutina a otra persona no significa que también te vaya a funcionar.
+CREADORA: Mi piel no dejó mágicamente de producir grasa. La diferencia es que ya no termino cada limpieza con la cara incómoda y tirante.
 
 ## Cierre
 
-EMPLEADA 1: Mismo laboratorio.
+CREADORA: Tener piel grasa no significa que tengas que vivir con la barrera castigada. Esta fue la rutina que a mí me hizo sentido.
 
-EMPLEADA 2: Dos pieles distintas.
+## B-roll
 
-AMBAS: Dos rutinas diferentes.
+TIP: Hook con close-up de brillo en frente o nariz; cortar a lavado, espuma, secado sin tallar y aplicación del suero.
 
-## Tomas
+TIP: Mostrar una toma antigua o recreada usando demasiado limpiador y tacharla en pantalla.
 
-TIP: Ambas detrás de una mesa; cada una coloca su producto frente a cámara al responder.
+## Regla de verdad
 
-TIP: Grabar también cada respuesta por separado para sacar dos testimonios adicionales.
-
-TIP: Terminar con ambas trabajando o caminando juntas por el laboratorio.
+TIP: Esta historia debe grabarla quien realmente tenga piel grasa o mixta y reconozca la sensación de tirantez. Si ninguna coincide, usar otro guion.

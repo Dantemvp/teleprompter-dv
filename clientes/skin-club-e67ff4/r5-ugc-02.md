@@ -1,35 +1,37 @@
-# El producto que más se acaba en mi baño
-> The Skin Club · R5-UGC-02 · UGC de experiencia personal · 25–35 seg
-> Locutora: Empleada 2
-> Referencias: UGC EDITADOS de Kenji y Ubaldo
-> IMPORTANTE: elegir una sola ruta de producto según lo que ella realmente utiliza.
+# Mi reseña honesta de HydroGlow Crema de Noche
+> The Skin Club · R5-UGC-02 · Reseña personal con pros y para quién sí · 30–40 seg
+> Locutora: Creadora UGC 2
+> Formato: reseña frente al espejo + rutina nocturna
+> Referencia visual: UGC EDITADOS de Kenji y Ubaldo
 
-## Hook
+## Grabar los tres hooks
 
-EMPLEADA 2: Trabajo en Skin Club y este es el producto que más rápido se acaba en mi baño.
+HOOK A: No te voy a decir que esta crema me cambió la vida. Te voy a decir por qué sí la seguí usando.
 
-## Elige una experiencia verdadera
+HOOK B: Mi reseña honesta de HydroGlow, sin filtro y sin fingir que una crema hace milagros.
 
-### Ruta A · DeepCleanse
+HOOK C: Si quieres cuidar tu piel de noche, pero el retinol te intimida, escucha esto.
 
-EMPLEADA 2: Mi piel es grasa y antes sentía que tenía que dejarla súper reseca para que estuviera limpia. DeepCleanse tiene ácido salicílico, árbol de té y pantenol. Lo que más me gusta es que retira la grasa y las impurezas sin dejarme la cara acartonada.
+## Cuerpo
 
-### Ruta B · HydroGlow Serum
+CREADORA: Lo primero que me gustó fue la textura. Se siente nutritiva, pero en mi piel no queda como una capa pesada.
 
-EMPLEADA 2: Mi piel se puede ver brillosa y aun así sentirse deshidratada. Por eso uso HydroGlow Serum sobre la piel ligeramente húmeda. Tiene ácido hialurónico y niacinamida, y me gusta porque se siente ligero y deja mi piel hidratada sin una sensación pesada.
+CREADORA: Tiene tetrapéptidos y Vigna aconitifolia, una alternativa botánica al retinol, además de aceite de semilla de uva.
 
-### Ruta C · HydroDerm
+CREADORA: Yo la uso como último paso de mi rutina nocturna. Lo que noto al despertar no es una transformación de filtro: es la piel más cómoda, hidratada y con mejor apariencia.
 
-EMPLEADA 2: Yo era de las que se acordaban de hidratar la cara, pero nunca el cuerpo. HydroDerm tiene manteca de karité, urea, aloe y jojoba. La uso sobre todo en [ZONA REAL] y me gusta que mi piel se siente [RESULTADO REAL].
+CREADORA: ¿Para quién sí la recomendaría? Para alguien que quiere una crema reparadora de noche y prefiere empezar con una alternativa más gentil.
 
 ## Cierre
 
-EMPLEADA 2: De todos los productos que veo aquí todos los días, este es el que genuinamente siempre vuelvo a usar.
+CREADORA: No promete detener el tiempo. Solo hace muy bien el trabajo por el que yo la compré.
 
-## Tomas
+## B-roll
 
-TIP: Grabar el hook caminando por el laboratorio y detenerse frente a cámara al mostrar el producto.
+TIP: Rostro limpio frente al espejo, abrir el frasco, macro de textura y aplicación en mejillas y frente.
 
-TIP: Producto saliendo de una caja o anaquel, macro de textura y aplicación real.
+TIP: Grabar luz nocturna y una segunda toma al despertar junto a una ventana, sin filtro de belleza.
 
-TIP: Grabar las tres primeras frases en versiones corta y larga para tener cortes de 15 y 30 segundos.
+## Regla de verdad
+
+TIP: Si no la ha usado el tiempo suficiente, sustituir “lo que noto” por una reseña estrictamente sensorial: textura, absorción y acabado.

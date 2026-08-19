@@ -1,33 +1,39 @@
-# Yo no elegí mi rutina por un anuncio
-> The Skin Club · R5-UGC-01 · UGC testimonial dentro del laboratorio · 30–40 seg
-> Locutora: Empleada 1
-> Referencias: UGC EDITADOS de Kenji y Ubaldo
-> IMPORTANTE: conservar únicamente experiencias y procesos que ella realmente haya vivido.
+# Pensé que sería otra compra de skincare que abandonaría
+> The Skin Club · R5-UGC-01 · Experiencia de compra + unboxing · 30–40 seg
+> Locutora: Creadora UGC 1
+> Formato: selfie en casa; jamás mencionar que trabaja para la marca
+> Referencia visual: UGC EDITADOS de Kenji y Ubaldo
 
-## Antes de grabar
+## Grabar los tres hooks
 
-PREGUNTA: ¿Qué producto de Skin Club usas de verdad y qué te gusta de él?
+HOOK A: Pedí skincare mexicano pensando que sería otra compra bonita que iba a abandonar… pero estos son los dos productos que sí se quedaron en mi rutina.
 
-PREGUNTA: ¿Qué fue lo que más te sorprendió cuando comenzaste a trabajar aquí?
+HOOK B: Esta fue mi experiencia comprando Skin Club y hay dos cosas que genuinamente volvería a pedir.
 
-TIP: Sustituir los textos entre corchetes con sus respuestas reales. No memorizar; contar la idea como si se la recomendara a una amiga.
+HOOK C: Lo compré por curiosidad, pero me quedé por lo fácil que fue meterlo en mi rutina.
 
-## Guion base
+## Cuerpo
 
-EMPLEADA 1: Yo no elegí mi rutina por un anuncio. La elegí después de ver cómo hacen los productos que uso.
+CREADORA: Yo siempre terminaba comprando productos sueltos porque estaban de moda, sin saber si tenían sentido juntos.
 
-EMPLEADA 1: Trabajo en Skin Club y todos los días veo [el proceso real que ella conozca: cómo pesan los ingredientes / cómo preparan cada lote / cómo revisan el producto / cómo lo envasan].
+CREADORA: Esta vez elegí según lo que realmente necesitaba mi piel: DeepCleanse para piel grasa y HydroGlow Serum.
 
-EMPLEADA 1: Antes de entrar aquí, yo pensaba que [creencia verdadera]. Pero entendí que una fórmula no es nada más mezclar ingredientes que están de moda. Cada paso tiene una razón.
+CREADORA: La espuma retira la grasa y las impurezas, pero no me deja esa sensación de cara acartonada. Después aplico el suero sobre la piel ligeramente húmeda; se siente ligero y no convierte mi rutina en veinte pasos.
 
-EMPLEADA 1: El producto que más uso es [PRODUCTO], porque mi piel es [TIPO DE PIEL] y me gusta que [EXPERIENCIA SENSORIAL O CAMBIO COSMÉTICO REAL].
+CREADORA: Para mí, lo mejor de la compra no fue tener más productos. Fue encontrar dos que sí puedo usar con constancia.
 
-EMPLEADA 1: Sí, trabajo aquí. Y justamente por eso sé todo lo que ocurre antes de que este producto llegue a tu baño.
+## Cierre
 
-## Tomas
+CREADORA: Si tu piel tiene brillo, pero también se siente tirante, yo empezaría por revisar este combo.
 
-TIP: Hook mirando a cámara con el producto en la mano.
+## B-roll
 
-TIP: Cubrir el desarrollo con bata, lavado de manos, pesado, mezclado, textura y envasado. Mostrar solamente procesos reales y autorizados.
+TIP: Caja cerrada en la puerta o sobre una mesa; abrirla desde POV, sacar ambos productos y retirar sus tapas.
 
-TIP: Cierre nuevamente a cámara, en una zona reconocible del laboratorio.
+TIP: Espuma en la mano, rostro recién lavado, suero sobre piel húmeda y ambos productos en el lavabo.
+
+TIP: No grabar en bata ni mostrar el laboratorio. Debe sentirse como una compra recibida en casa.
+
+## Regla de verdad
+
+TIP: Si ella no realizó la compra o no usa ambos productos, cambiar “pedí/comprando” por “probé” y conservar únicamente las sensaciones que sí pueda respaldar.
