@@ -10,7 +10,7 @@ HOOK A: Despues de que una amiga me insistio mucho para que probara estos produc
 
 HOOK B: Esta fue mi experiencia comprando Skin Club despues de que me los recomendaron
 
-HOOK C: Lo compré por una amiga que estuvo insistiendo
+HOOK C: Compre skinclub por una amiga que estuvo insistiendo y esta es mi reseña
 
 ## Cuerpo
 
