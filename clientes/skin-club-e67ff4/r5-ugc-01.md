@@ -10,13 +10,13 @@ HOOK A: Pedí skincare mexicano pensando que sería otra compra bonita que iba a
 
 HOOK B: Esta fue mi experiencia comprando Skin Club y hay dos cosas que genuinamente volvería a pedir.
 
-HOOK C: Lo compré por curiosidad, pero me quedé por lo fácil que fue meterlo en mi rutina.
+HOOK C: Lo compré por una amiga que estuvo insistiendo
 
 ## Cuerpo
 
-CREADORA: Yo siempre terminaba comprando productos sueltos porque estaban de moda, sin saber si tenían sentido juntos.
+CREADORA: Yo siempre terminaba comprando productos sueltos coreanos porque estaban de moda, sin saber si tenían sentido juntos y anduve probando bastante.
 
-CREADORA: Esta vez elegí según lo que realmente necesitaba mi piel: DeepCleanse para piel grasa y HydroGlow Serum.
+CREADORA: Esta vez elegí asesorada con lo que realmente necesitaba mi piel: DeepCleanse para piel grasa y HydroGlow Serum.
 
 CREADORA: La espuma retira la grasa y las impurezas, pero no me deja esa sensación de cara acartonada. Después aplico el suero sobre la piel ligeramente húmeda; se siente ligero y no convierte mi rutina en veinte pasos.
 
@@ -24,16 +24,6 @@ CREADORA: Para mí, lo mejor de la compra no fue tener más productos. Fue encon
 
 ## Cierre
 
-CREADORA: Si tu piel tiene brillo, pero también se siente tirante, yo empezaría por revisar este combo.
+CREADORA: Asi que ahora yo soy como esa amiga, te recomiendo que los pruebas, dale clic aca abajo y me platicas como te fue ;)
 
 ## B-roll
-
-TIP: Caja cerrada en la puerta o sobre una mesa; abrirla desde POV, sacar ambos productos y retirar sus tapas.
-
-TIP: Espuma en la mano, rostro recién lavado, suero sobre piel húmeda y ambos productos en el lavabo.
-
-TIP: No grabar en bata ni mostrar el laboratorio. Debe sentirse como una compra recibida en casa.
-
-## Regla de verdad
-
-TIP: Si ella no realizó la compra o no usa ambos productos, cambiar “pedí/comprando” por “probé” y conservar únicamente las sensaciones que sí pueda respaldar.
