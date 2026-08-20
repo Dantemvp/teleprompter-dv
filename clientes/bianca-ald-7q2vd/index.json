@@ -288,13 +288,6 @@
       "ventana": "10:00 – 14:00 · 4 h",
       "timeline": [
         {
-          "hora": "09:40",
-          "dur": "antes",
-          "titulo": "Montaje",
-          "tipo": "pausa",
-          "nota": "Tripié marcado en el piso, luz de frente, micrófono de solapa con pila cargada. Dejar colgadas las 4 piezas de las texturas y la sombrilla a la mano. Si esto se hace antes, el día completo cabe."
-        },
-        {
           "hora": "10:00",
           "dur": "35 min",
           "titulo": "Viral / orgánica · toma 1",

@@ -103,10 +103,18 @@
   .tlhora{font-size:17px; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:-.01em;}
   .tldur{font-size:11px; font-weight:700; color:var(--gray-dark); background:var(--gray-bg); padding:2px 8px; border-radius:6px; white-space:nowrap;}
   .tltit{font-size:15px; font-weight:600; margin:2px 0 0; line-height:1.35;}
-  .tlcods{display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 0;}
-  .tlcod{font-size:12px; font-weight:700; letter-spacing:.03em; padding:6px 11px; border-radius:8px; background:var(--teal-darker); color:#fff; border:none; cursor:pointer; min-height:32px;}
-  .tlcod:hover{background:var(--teal-dark);}
-  .tlcod.off{background:var(--gray-bg); color:var(--gray-dark);}
+  .tlcods{display:flex; flex-direction:column; gap:8px; margin:10px 0 0;}
+  .tlitem{display:flex; gap:10px; align-items:flex-start; padding:8px; border:1px solid var(--line); border-radius:11px; background:var(--paper);}
+  .tlitem.off{opacity:.55;}
+  .tlthumb{flex-shrink:0; width:64px; display:block; border-radius:8px; overflow:hidden; background:var(--gray-bg); line-height:0;}
+  .tlthumb img{width:100%; height:auto; aspect-ratio:9/16; object-fit:cover; display:block;}
+  .tlthumb.nothumb{width:64px; aspect-ratio:9/16; display:flex; align-items:center; justify-content:center; font-size:19px; line-height:1;}
+  .tlbody{flex:1; min-width:0;}
+  .tlcod{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.04em; padding:3px 9px; border-radius:7px; background:var(--teal-darker); color:#fff;}
+  .tlname{font-size:13.5px; font-weight:600; margin:5px 0 0; line-height:1.35; overflow-wrap:anywhere;}
+  .tlacts{display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 0;}
+  .tlacts a{text-decoration:none;}
+  .tlacts button{font-size:11.5px; padding:5px 11px; min-height:32px;}
   .tlnota{font-size:13px; color:var(--muted); margin:8px 0 0; line-height:1.5;}
   .tlnota.warn{color:var(--teal-darker); background:var(--teal-bg); padding:8px 11px; border-radius:9px; font-weight:600;}
   .tlprog{font-size:11px; color:var(--muted); font-weight:600; margin-left:auto;}
@@ -115,7 +123,9 @@
     .tl{padding-left:24px;}
     .tlhora{font-size:16px;}
     .tltit{font-size:14.5px;}
-    .tlcod{font-size:12.5px; padding:7px 12px; min-height:36px;}
+    .tlthumb, .tlthumb.nothumb{width:72px;}
+    .tlname{font-size:14px;}
+    .tlacts button{font-size:12.5px; padding:7px 12px; min-height:36px;}
     .tlnota{font-size:13.5px;}
   }
   .refpreview{margin-top:8px; max-width:100%;}
@@ -557,10 +567,23 @@ function renderTimeline(rec, token, codeOf){
     const slugs = b.slugs || [];
     const cards = slugs.map(sl => (rec.guiones||[]).find(x => x.slug === sl)).filter(Boolean);
     const done  = cards.length ? cards.every(c => c.grabado) : false;
+    // Cada item se ve completo aquí mismo: miniatura + código + título + accesos.
+    // Los accesos abren en PESTAÑA NUEVA para no perder el lugar en la línea de tiempo.
     const chips = cards.map(c => {
-      const cod = codeOf(c.slug) || c.slug.toUpperCase();
-      // Ya grabado = chip apagado, para ver de un vistazo qué falta del día.
-      return `<button class="tlcod${c.grabado?' off':''}" data-goto="${attr(c.slug)}" title="${attr(c.titulo)}">${esc(cod)}${c.grabado?' ✓':''}</button>`;
+      const cod  = codeOf(c.slug) || c.slug.toUpperCase();
+      const esGuionItem = c.tipo !== 'ref' && !['trans-int','trans-ext','caminadora','juntas'].includes(c.categoria);
+      const thumb = c.thumb
+        ? `<a class="tlthumb" href="${attr(c.link || '#')}" target="_blank" rel="noopener"><img src="${attr(c.thumb)}" alt="preview" loading="lazy"></a>`
+        : `<span class="tlthumb nothumb">🎬</span>`;
+      const abrir = esGuionItem
+        ? `<a href="?c=${token}&g=${attr(c.slug)}" target="_blank" rel="noopener"><button class="primary mini">Abrir guion ↗</button></a>` : '';
+      const ref = c.link
+        ? `<a href="${attr(c.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
+      return `<div class="tlitem${c.grabado?' off':''}">${thumb}<div class="tlbody">
+        <span class="tlcod">${esc(cod)}${c.grabado?' ✓':''}</span>
+        <p class="tlname">${esc(c.titulo)}</p>
+        <div class="tlacts">${abrir}${ref}</div>
+      </div></div>`;
     }).join('');
     const prog = cards.length > 1 ? `<span class="tlprog">${cards.filter(c=>c.grabado).length}/${cards.length}</span>` : '';
     const nota = b.nota ? `<p class="tlnota${b.warn?' warn':''}">${esc(b.nota)}</p>` : '';
@@ -654,17 +677,6 @@ function renderClient(data, token){
   document.querySelectorAll('.btnDel').forEach(b => b.onclick = () => deleteGuion(token, b));
   document.querySelectorAll('.cardloc').forEach(b => b.onclick = () => setLocutorCard(token, b));
   document.querySelectorAll('.btnMover').forEach(b => b.onclick = () => moveItemUI(b.dataset.slug));
-  // Chips de la línea de tiempo: abren los <details> que envuelven la tarjeta y hacen scroll hasta ella.
-  document.querySelectorAll('.tlcod[data-goto]').forEach(b => b.onclick = () => {
-    const card = document.querySelector(`[data-card="${CSS.escape(b.dataset.goto)}"]`);
-    if (!card) return;
-    let d = card.closest('details');
-    while (d){ d.open = true; d = d.parentElement && d.parentElement.closest('details'); }
-    card.scrollIntoView({behavior:'smooth', block:'center'});
-    card.style.transition = 'box-shadow .3s';
-    card.style.boxShadow = '0 0 0 3px var(--teal)';
-    setTimeout(() => { card.style.boxShadow = ''; }, 1400);
-  });
   const nr = $('#newRecBtn'); if (nr) nr.onclick = () => newRecUI();
   wireLock();
   applyOpenState(); wireOpenPersist();
