@@ -84,6 +84,40 @@
   .refreel{background:var(--teal-bg); border-radius:10px; padding:8px 14px;}
   .refreel span{color:var(--teal-dark);}
   .refreel a{color:var(--teal-darker); font-weight:600;}
+  /* ---- Orden de grabación (línea de tiempo, mobile-first) ---- */
+  .tlblock{border:1px solid var(--line); border-radius:14px; padding:6px 14px; margin:0 0 16px; background:#fff;}
+  .tlblock>summary{cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:10px; padding:12px 2px; font-weight:800; letter-spacing:.03em; flex-wrap:wrap;}
+  .tlblock>summary::-webkit-details-marker{display:none;}
+  .tlblock>summary::before{content:'▸'; margin-right:8px; transition:transform .15s; color:var(--teal);}
+  .tlblock[open]>summary::before{transform:rotate(90deg);}
+  .tlblock[open]>summary{border-bottom:1px solid var(--line); margin-bottom:14px;}
+  .tlwin{font-size:12px; font-weight:600; color:var(--teal-dark); background:var(--teal-bg); padding:4px 10px; border-radius:8px; white-space:nowrap;}
+  .tl{position:relative; padding:2px 0 6px 26px; margin:0;}
+  .tl::before{content:''; position:absolute; left:7px; top:8px; bottom:14px; width:2px; background:var(--line); border-radius:2px;}
+  .tlrow{position:relative; padding:0 0 18px;}
+  .tlrow::before{content:''; position:absolute; left:-24px; top:6px; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid var(--teal); box-sizing:border-box;}
+  .tlrow.done::before{background:var(--teal);}
+  .tlrow.pausa::before{border-color:var(--muted); background:var(--gray-bg);}
+  .tlrow.extra::before{border-color:var(--muted);}
+  .tlhead{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;}
+  .tlhora{font-size:17px; font-weight:800; font-variant-numeric:tabular-nums; letter-spacing:-.01em;}
+  .tldur{font-size:11px; font-weight:700; color:var(--gray-dark); background:var(--gray-bg); padding:2px 8px; border-radius:6px; white-space:nowrap;}
+  .tltit{font-size:15px; font-weight:600; margin:2px 0 0; line-height:1.35;}
+  .tlcods{display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 0;}
+  .tlcod{font-size:12px; font-weight:700; letter-spacing:.03em; padding:6px 11px; border-radius:8px; background:var(--teal-darker); color:#fff; border:none; cursor:pointer; min-height:32px;}
+  .tlcod:hover{background:var(--teal-dark);}
+  .tlcod.off{background:var(--gray-bg); color:var(--gray-dark);}
+  .tlnota{font-size:13px; color:var(--muted); margin:8px 0 0; line-height:1.5;}
+  .tlnota.warn{color:var(--teal-darker); background:var(--teal-bg); padding:8px 11px; border-radius:9px; font-weight:600;}
+  .tlprog{font-size:11px; color:var(--muted); font-weight:600; margin-left:auto;}
+  @media (max-width:600px){
+    .tlblock{padding:4px 11px;}
+    .tl{padding-left:24px;}
+    .tlhora{font-size:16px;}
+    .tltit{font-size:14.5px;}
+    .tlcod{font-size:12.5px; padding:7px 12px; min-height:36px;}
+    .tlnota{font-size:13.5px;}
+  }
   .refpreview{margin-top:8px; max-width:100%;}
   .refpreview summary{cursor:pointer; font-size:13px; font-weight:600; color:var(--teal-darker); user-select:none; list-style:none; display:inline-block; padding:6px 0;}
   .refpreview summary::-webkit-details-marker{display:none;}
@@ -513,6 +547,34 @@ function itemsForCat(list, key, known){
     ? list.filter(it => !known.has(it.categoria || 'guion'))
     : list.filter(it => (it.categoria || 'guion') === key);
 }
+// ---- Orden de grabación: línea de tiempo vertical (mobile-first) ----
+// Lee rec.timeline (array). Cada bloque: {hora, dur, titulo, slugs[], nota, tipo}.
+// tipo: 'pausa' (descanso/colchón) · 'extra' (sin asignar) · undefined (bloque normal).
+function renderTimeline(rec, token, codeOf){
+  const tl = rec.timeline;
+  if (!tl || !tl.length) return '';
+  const rows = tl.map(b => {
+    const slugs = b.slugs || [];
+    const cards = slugs.map(sl => (rec.guiones||[]).find(x => x.slug === sl)).filter(Boolean);
+    const done  = cards.length ? cards.every(c => c.grabado) : false;
+    const chips = cards.map(c => {
+      const cod = codeOf(c.slug) || c.slug.toUpperCase();
+      // Ya grabado = chip apagado, para ver de un vistazo qué falta del día.
+      return `<button class="tlcod${c.grabado?' off':''}" data-goto="${attr(c.slug)}" title="${attr(c.titulo)}">${esc(cod)}${c.grabado?' ✓':''}</button>`;
+    }).join('');
+    const prog = cards.length > 1 ? `<span class="tlprog">${cards.filter(c=>c.grabado).length}/${cards.length}</span>` : '';
+    const nota = b.nota ? `<p class="tlnota${b.warn?' warn':''}">${esc(b.nota)}</p>` : '';
+    const cls = ['tlrow', b.tipo || '', done ? 'done' : ''].filter(Boolean).join(' ');
+    return `<div class="${cls}">
+      <div class="tlhead"><span class="tlhora">${esc(b.hora||'')}</span>${b.dur?`<span class="tldur">${esc(b.dur)}</span>`:''}${prog}</div>
+      <p class="tltit">${esc(b.titulo||'')}</p>
+      ${chips?`<div class="tlcods">${chips}</div>`:''}
+      ${nota}
+    </div>`;
+  }).join('');
+  const win = rec.ventana ? `<span class="tlwin">${esc(rec.ventana)}</span>` : '';
+  return `<details class="tlblock" open><summary><span>🎬 ORDEN DE GRABACIÓN</span>${win}</summary><div class="tl">${rows}</div></details>`;
+}
 function renderCard(it, token, ri, codArg){
   const url = base() + '?c=' + token + '&g=' + it.slug;
   const cod = codArg || it.slug.toUpperCase();
@@ -558,7 +620,10 @@ function renderClient(data, token){
         return `<details class="catblock sub"><summary><span class="catname">${esc(CAT_LABELS[key]||key.toUpperCase())}</span><span class="catcount">${items.length} · <span class="donecount" data-rec="${myi}">${done}/${items.length} grabados</span></span></summary>${items.map((it,idx)=>renderCard(it,token,myi,(CAT_PREFIX[key]||'')+(idx+1))).join('')}</details>`;
       }).join('');
       const total = (g.guiones||[]).length, tdone = (g.guiones||[]).filter(x=>x.grabado).length;
-      const body = inner || `<p class="hint" style="margin:6px 2px;">Grabación vacía. Mueve videos aquí con el botón "Mover ⇄" de cada tarjeta.</p>`;
+      // Mapa slug -> código posicional (G1, C3, I2…), el mismo que se pinta en cada tarjeta.
+      const codMap = {}; order.forEach(key => itemsForCat(g.guiones||[], key, known).forEach((it,idx) => { codMap[it.slug] = (CAT_PREFIX[key]||'') + (idx+1); }));
+      const tlHtml = renderTimeline(g, token, sl => codMap[sl]);
+      const body = (tlHtml + inner) || `<p class="hint" style="margin:6px 2px;">Grabación vacía. Mueve videos aquí con el botón "Mover ⇄" de cada tarjeta.</p>`;
       return `<details class="recblock2"><summary><span class="recname">🎬 ${esc(g.rec)} · ${esc(g.nombre||'Grabación')}</span><span class="catcount">${total} · ${tdone}/${total} grabados</span></summary>${body}</details>`;
     }).join('');
     if (admin) blocks = `<button class="primary mini" id="newRecBtn" style="margin:0 0 16px;">➕ Nueva grabación</button>` + blocks;
@@ -589,6 +654,17 @@ function renderClient(data, token){
   document.querySelectorAll('.btnDel').forEach(b => b.onclick = () => deleteGuion(token, b));
   document.querySelectorAll('.cardloc').forEach(b => b.onclick = () => setLocutorCard(token, b));
   document.querySelectorAll('.btnMover').forEach(b => b.onclick = () => moveItemUI(b.dataset.slug));
+  // Chips de la línea de tiempo: abren los <details> que envuelven la tarjeta y hacen scroll hasta ella.
+  document.querySelectorAll('.tlcod[data-goto]').forEach(b => b.onclick = () => {
+    const card = document.querySelector(`[data-card="${CSS.escape(b.dataset.goto)}"]`);
+    if (!card) return;
+    let d = card.closest('details');
+    while (d){ d.open = true; d = d.parentElement && d.parentElement.closest('details'); }
+    card.scrollIntoView({behavior:'smooth', block:'center'});
+    card.style.transition = 'box-shadow .3s';
+    card.style.boxShadow = '0 0 0 3px var(--teal)';
+    setTimeout(() => { card.style.boxShadow = ''; }, 1400);
+  });
   const nr = $('#newRecBtn'); if (nr) nr.onclick = () => newRecUI();
   wireLock();
   applyOpenState(); wireOpenPersist();

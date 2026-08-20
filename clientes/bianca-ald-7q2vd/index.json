@@ -6,12 +6,12 @@
       "nombre": "Duodécima grabación",
       "fecha": "Por definir",
       "locacion": "Por definir",
-      "nota": "Se la llevan transiciones y chuscos. Estrena VIRAL/ORGÁNICA (formato propio de Bianca con producción), JUNTAS y CAMINADORA. La serie Tendencias OI2026 continúa con g-59.",
+      "nota": "Grabación de 10:00 a 14:00 con descanso. Se la llevan transiciones y chuscos. Estrena VIRAL/ORGÁNICA, JUNTAS y CAMINADORA. La serie Tendencias OI2026 va en la PARTE 6.",
       "guiones": [
         {
           "slug": "g-59",
-          "titulo": "Serie Tendencias OI2026 · P8: las 4 texturas (gamuza, cuadros, chocolate, flecos)",
-          "info": "45–55 seg · CONTINÚA la serie · voz en off + b-roll · reabre g-46…g-52 · comenta TEXTURAS",
+          "titulo": "Serie Tendencias OI2026 · P6: las 4 texturas (gamuza, cuadros, chocolate, flecos)",
+          "info": "45–55 seg · PARTE 6 (grabado hasta la 5) · voz en off + b-roll · comenta TEXTURAS",
           "grabado": false,
           "categoria": "guion",
           "link": "https://vt.tiktok.com/ZSVAGYtse/",
@@ -273,6 +273,168 @@
           "categoria": "juntas",
           "link": "https://www.facebook.com/share/r/1EV4KfWGTk/",
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200957_5786310f-be93-48bd-b1a1-1c7686078c32/thumbnail.jpg"
+        },
+        {
+          "slug": "g-58",
+          "titulo": "Chusco con cierre a la tienda (variante)",
+          "info": "chusco · relatable + CTA/cierre a tienda · venía de R11, Dante lo reprogramó al final de R12",
+          "grabado": false,
+          "categoria": "chusco",
+          "tipo": "ref",
+          "link": "https://www.instagram.com/reel/DYDbf3XNtjQ/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183123_c094a8e2-b9e5-47ca-bfef-dce2e8df7aa5/thumbnail.jpg"
+        }
+      ],
+      "ventana": "10:00 – 14:00 · 4 h",
+      "timeline": [
+        {
+          "hora": "09:40",
+          "dur": "antes",
+          "titulo": "Montaje",
+          "tipo": "pausa",
+          "nota": "Tripié marcado en el piso, luz de frente, micrófono de solapa con pila cargada. Dejar colgadas las 4 piezas de las texturas y la sombrilla a la mano. Si esto se hace antes, el día completo cabe."
+        },
+        {
+          "hora": "10:00",
+          "dur": "35 min",
+          "titulo": "Viral / orgánica · toma 1",
+          "slugs": [
+            "g-68"
+          ],
+          "nota": "El formato de siempre de Bianca, con producción. Bianca habla de corrido, sin cortar. El editor mete los close ups después. Falta definir con qué prenda arranca."
+        },
+        {
+          "hora": "10:35",
+          "dur": "35 min",
+          "titulo": "Viral / orgánica · toma 2",
+          "slugs": [
+            "g-68"
+          ],
+          "nota": "Segunda prenda, mismo molde. Cambiar el rack del fondo para que las dos no se vean iguales."
+        },
+        {
+          "hora": "11:10",
+          "dur": "28 min",
+          "titulo": "Guion · le pedí a la IA un outfit",
+          "slugs": [
+            "g-65"
+          ],
+          "nota": "El más lento de los guiones: son 7 cambios de prenda en el mismo encuadre. Dejar el tripié fijo y no moverlo entre tomas."
+        },
+        {
+          "hora": "11:38",
+          "dur": "3 min",
+          "titulo": "Fotos para la pieza de IA",
+          "slugs": [
+            "g-70"
+          ],
+          "nota": "Aquí no se graba video. Foto de cuerpo completo, de frente, cara neutra, más foto de la prenda sobre fondo limpio. Con eso se genera después."
+        },
+        {
+          "hora": "11:41",
+          "dur": "22 min",
+          "titulo": "Guion · serie tendencias, parte 6",
+          "slugs": [
+            "g-59"
+          ],
+          "nota": "La voz en off se graba aparte. Aquí solo el b-roll de las 4 texturas y el cierre a cuadro."
+        },
+        {
+          "hora": "12:03",
+          "dur": "20 min",
+          "titulo": "Guion · arreglarse para nada en especial",
+          "slugs": [
+            "g-63"
+          ],
+          "nota": "También va con voz en off aparte. Solo b-roll del arreglo: zipper, labial, arete, tacones, espejo y la salida."
+        },
+        {
+          "hora": "12:23",
+          "dur": "15 min",
+          "titulo": "Descanso",
+          "tipo": "pausa",
+          "nota": "Comer algo y retocar. Aprovechar para escuchar el audio de las dos primeras tomas antes de que se vaya el equipo."
+        },
+        {
+          "hora": "12:38",
+          "dur": "35 min",
+          "titulo": "Chuscos, en bloque",
+          "slugs": [
+            "g-62",
+            "g-64",
+            "g-60",
+            "g-61",
+            "g-66",
+            "g-67"
+          ],
+          "nota": "En el orden de la lista. C1 y C2 llevan diálogo actuado, van primero mientras hay energía. C1 se graba afuera, en la banqueta."
+        },
+        {
+          "hora": "13:13",
+          "dur": "10 min",
+          "titulo": "Transiciones juntas",
+          "slugs": [
+            "jun-01",
+            "jun-02"
+          ],
+          "nota": "Las dos, Bianca y Mary."
+        },
+        {
+          "hora": "13:23",
+          "dur": "7 min",
+          "titulo": "Caminadora",
+          "slugs": [
+            "cam-01"
+          ],
+          "nota": "Montar la caminadora durante el descanso para no perder tiempo aquí."
+        },
+        {
+          "hora": "13:30",
+          "dur": "10 min",
+          "titulo": "Transiciones con sombrilla",
+          "slugs": [
+            "re-13",
+            "re-14"
+          ],
+          "warn": true,
+          "nota": "☂️ NECESITAMOS SOMBRILLA. Que alguien la lleve desde en la mañana. Las dos son en exterior, salir juntas."
+        },
+        {
+          "hora": "13:40",
+          "dur": "10 min",
+          "titulo": "Las dos últimas",
+          "slugs": [
+            "g-58",
+            "ri-28"
+          ],
+          "nota": "Las que quedaron pendientes de la primera tanda. Si el tiempo ya se acabó, estas se pasan a la siguiente grabación sin problema."
+        },
+        {
+          "hora": "13:50",
+          "dur": "10 min",
+          "titulo": "Colchón",
+          "tipo": "pausa",
+          "nota": "Margen para repetir la toma que haya salido mal. Es el único colchón del día."
+        },
+        {
+          "hora": "—",
+          "dur": "sin asignar",
+          "titulo": "No entraron en el orden",
+          "tipo": "extra",
+          "slugs": [
+            "g-69",
+            "g-71",
+            "ri-27",
+            "ri-29",
+            "ri-30",
+            "ri-31",
+            "ri-32",
+            "ri-33",
+            "ri-34",
+            "re-11",
+            "re-12"
+          ],
+          "nota": "Quedan listos en el banco. Si sobra tiempo se graban en este orden, y si no, arrancan la siguiente grabación."
         }
       ]
     },
@@ -476,16 +638,6 @@
           "categoria": "trans-int",
           "link": "https://www.instagram.com/reel/DbTdW2xvxaq/",
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-201223_c093e567-4595-48a9-b6fd-9d338c01729d/thumbnail.jpg"
-        },
-        {
-          "slug": "g-58",
-          "titulo": "Chusco con cierre a la tienda (variante)",
-          "info": "chusco · relatable + CTA/cierre a tienda · variante nueva de la ref DYDbf3XNtjQ",
-          "grabado": false,
-          "categoria": "chusco",
-          "tipo": "ref",
-          "link": "https://www.instagram.com/reel/DYDbf3XNtjQ/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183123_c094a8e2-b9e5-47ca-bfef-dce2e8df7aa5/thumbnail.jpg"
         }
       ]
     },
