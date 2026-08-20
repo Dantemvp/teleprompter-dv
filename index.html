@@ -488,6 +488,9 @@ const CAT_LABELS = {
   'tertulia':  'TERTULIA',
   'trans-int': 'TRANSICIONES · INTERIORES',
   'trans-ext': 'TRANSICIONES · EXTERIORES',
+  'caminadora':'TRANSICIONES · CAMINADORA',
+  'juntas':    'JUNTAS · BIANCA + MARY',
+  'viral-organica':'VIRAL / ORGÁNICA',
   'tienda':    'TIENDA · EMPLEADAS',
   'ugc':       'UGC',
   'influencer':'INFLUENCER',
@@ -497,13 +500,13 @@ const CAT_LABELS = {
   '__otros':   'OTROS'
 };
 const CLIENT_CATS = {
-  'bianca-ald-7q2vd': ['ganador', 'guion', 'chusco', 'trans-int', 'trans-ext', 'tienda'],
+  'bianca-ald-7q2vd': ['ganador', 'guion', 'viral-organica', 'chusco', 'trans-int', 'trans-ext', 'caminadora', 'juntas', 'tienda'],
   'skin-club-e67ff4': ['guion', 'kaori', 'diego', 'nat', 'juntos', 'tertulia', 'ugc', 'influencer'],
   'fedra-ald-t84qz': ['idea', 'guion', 'chusco'],
   'ale-paz-mx27k': ['guion']
 };
 // Prefijo del código visible (numeración posicional automática por grabación/categoría).
-const CAT_PREFIX = { 'guion':'G', 'kaori':'K', 'diego':'D', 'nat':'N', 'juntos':'J', 'tertulia':'TE', 'trans-int':'I', 'trans-ext':'E', 'tienda':'T', 'ugc':'U', 'influencer':'INF', 'idea':'ID', 'chusco':'C', 'ganador':'W', '__otros':'X' };
+const CAT_PREFIX = { 'guion':'G', 'kaori':'K', 'diego':'D', 'nat':'N', 'juntos':'J', 'tertulia':'TE', 'trans-int':'I', 'trans-ext':'E', 'caminadora':'CM', 'juntas':'JU', 'viral-organica':'VO', 'tienda':'T', 'ugc':'U', 'influencer':'INF', 'idea':'ID', 'chusco':'C', 'ganador':'W', '__otros':'X' };
 // Devuelve los items de una grabación/lista que caen en una categoría; '__otros' captura todo lo que no esté en la lista conocida (para que nada desaparezca).
 function itemsForCat(list, key, known){
   return key === '__otros'
@@ -513,7 +516,7 @@ function itemsForCat(list, key, known){
 function renderCard(it, token, ri, codArg){
   const url = base() + '?c=' + token + '&g=' + it.slug;
   const cod = codArg || it.slug.toUpperCase();
-  const esGuion = it.tipo !== 'ref' && it.categoria !== 'trans-int' && it.categoria !== 'trans-ext' && it.categoria !== 'chusco';   // .md abrible; transiciones, chusco y tarjetas de referencia (tipo:ref) solo llevan link
+  const esGuion = it.tipo !== 'ref' && !['trans-int','trans-ext','caminadora','juntas'].includes(it.categoria);   // .md abrible; transiciones y tarjetas de referencia (tipo:ref) solo llevan link. Un chusco CON guion (tipo:'md') sí se abre.
   const toggle = STATUS_ENDPOINT ? `<button class="mini btnGrabado" data-slug="${attr(it.slug)}" data-grabado="${it.grabado?1:0}">${it.grabado?'✓ Grabado':'Marcar grabado'}</button>` : '';
   const del = (DELETE_ENDPOINT && isAdmin()) ? `<button class="mini btnDel" data-slug="${attr(it.slug)}" data-cod="${attr(cod)}">Eliminar</button>` : '';
   const founders = LOCUTORES[token];
