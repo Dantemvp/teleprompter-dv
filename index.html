@@ -104,7 +104,8 @@
   .tldur{font-size:11px; font-weight:700; color:var(--gray-dark); background:var(--gray-bg); padding:2px 8px; border-radius:6px; white-space:nowrap;}
   .tltit{font-size:15px; font-weight:600; margin:2px 0 0; line-height:1.35;}
   .tlcods{display:flex; flex-direction:column; gap:8px; margin:10px 0 0;}
-  .tlitem{display:flex; gap:10px; align-items:flex-start; padding:8px; border:1px solid var(--line); border-radius:11px; background:var(--paper);}
+  .tlitem{display:flex; flex-direction:column; padding:8px; border:1px solid var(--line); border-radius:11px; background:var(--paper);}
+  .tlitemtop{display:flex; gap:10px; align-items:flex-start;}
   .tlitem.off{opacity:.55;}
   .tlthumb{flex-shrink:0; width:64px; display:block; border-radius:8px; overflow:hidden; background:var(--gray-bg); line-height:0;}
   .tlthumb img{width:100%; height:auto; aspect-ratio:9/16; object-fit:cover; display:block;}
@@ -118,6 +119,35 @@
   .tlnota{font-size:13px; color:var(--muted); margin:8px 0 0; line-height:1.5;}
   .tlnota.warn{color:var(--teal-darker); background:var(--teal-bg); padding:8px 11px; border-radius:9px; font-weight:600;}
   .tlprog{font-size:11px; color:var(--muted); font-weight:600; margin-left:auto;}
+  /* Barra de avance: se va llenando conforme se marcan piezas como grabadas. */
+  .tlbarwrap{display:flex; align-items:center; gap:9px; width:100%; margin:2px 0 10px;}
+  .tlbar{flex:1; height:9px; border-radius:999px; background:var(--gray-bg); overflow:hidden; box-shadow:inset 0 1px 2px rgba(0,0,0,.07);}
+  .tlbarfill{height:100%; width:0; border-radius:999px; background:linear-gradient(90deg, var(--teal), var(--teal-darker)); transition:width .45s cubic-bezier(.2,.8,.25,1);}
+  .tlbarwrap.full .tlbarfill{background:linear-gradient(90deg, #23a06b, #178055);}
+  .tlpct{font-size:12px; font-weight:800; font-variant-numeric:tabular-nums; color:var(--teal-darker); white-space:nowrap; min-width:74px; text-align:right;}
+  .tlbarwrap.full .tlpct{color:#178055;}
+  /* Prendas sugeridas: cuántos looks necesita la pieza y con qué se arma el rack. */
+  .outfit{margin-top:9px; border:1px solid var(--line); border-radius:11px; background:var(--paper); overflow:hidden;}
+  .outfit>summary{cursor:pointer; list-style:none; display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding:9px 11px; user-select:none;}
+  .outfit>summary::-webkit-details-marker{display:none;}
+  .outfit>summary::before{content:'▸'; color:var(--teal); font-weight:800; transition:transform .15s;}
+  .outfit[open]>summary::before{transform:rotate(90deg);}
+  .outfitn{font-size:11px; font-weight:800; letter-spacing:.03em; padding:3px 9px; border-radius:7px; background:var(--teal-bg); color:var(--teal-darker); white-space:nowrap;}
+  /* flex-basis alto + wrap = si no cabe al lado del contador, se baja a su propio renglón
+     en vez de encogerse y partir las palabras a la mitad. */
+  .outfitst{font-size:12.5px; font-weight:600; color:var(--gray-dark); line-height:1.35; overflow-wrap:break-word; flex:1 1 55%; min-width:0;}
+  @media (max-width:600px){ .outfitst{flex-basis:100%;} }
+  .outfitbody{padding:0 11px 11px;}
+  .outfitlook{margin:8px 0 0; font-size:13px; line-height:1.5;}
+  .outfitlook b{display:block; font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--teal-darker); margin-bottom:2px;}
+  .outfitnota{margin:11px 0 0; font-size:12.5px; line-height:1.5; color:var(--muted); border-left:3px solid var(--line); padding-left:10px;}
+  @media (max-width:600px){
+    .outfit>summary{padding:11px;}
+    .outfitst{font-size:13px;}
+    .outfitlook{font-size:13.5px;}
+    .outfitnota{font-size:13px;}
+    .tlpct{font-size:12.5px;}
+  }
   @media (max-width:600px){
     .tlblock{padding:4px 11px;}
     .tl{padding-left:24px;}
@@ -245,7 +275,9 @@ const LOCUTORES = { 'skin-club-e67ff4': ['Nat', 'Kaori', 'Diego'] };
 // Clientes donde el reel de referencia es privado: solo visible en modo edición (isAdmin()), no para el lector público.
 const REF_PRIVATE = { 'skin-club-e67ff4': true };
 // Aclaración global por cliente: se muestra como banner en cada guion y en el portal.
-const CLIENT_NOTE = { 'bianca-ald-7q2vd': '📸 No olvidar tomar la foto en el mismo lugar.' };
+// Vacío a propósito — ningún cliente tiene recordatorio anclado ahora mismo. Basta con agregar
+// la entrada 'token-cliente': 'texto' para que vuelva a aparecer el banner.
+const CLIENT_NOTE = {};
 
 function askPassword(title){
   return new Promise(resolve => {
@@ -557,10 +589,24 @@ function itemsForCat(list, key, known){
     ? list.filter(it => !known.has(it.categoria || 'guion'))
     : list.filter(it => (it.categoria || 'guion') === key);
 }
+// ---- Prendas sugeridas ----
+// Lee it.outfit = {n, estilo, looks:[{t,p}], nota}. `n` = cuántos looks COMPLETOS
+// (cambios de ropa) necesita la pieza; con eso se arma el rack antes del día.
+function renderOutfit(it){
+  const o = it.outfit;
+  if (!o) return '';
+  const n = o.n != null ? `<span class="outfitn">👗 ${esc(String(o.n))} ${o.n === 1 ? 'look' : 'looks'}</span>` : '';
+  const est = o.estilo ? `<span class="outfitst">${esc(o.estilo)}</span>` : '';
+  const looks = (o.looks || []).map(l =>
+    `<p class="outfitlook"><b>${esc(l.t || '')}</b>${esc(l.p || '')}</p>`).join('');
+  const nota = o.nota ? `<p class="outfitnota">${esc(o.nota)}</p>` : '';
+  return `<details class="outfit"><summary>${n}${est}</summary><div class="outfitbody">${looks}${nota}</div></details>`;
+}
 // ---- Orden de grabación: línea de tiempo vertical (mobile-first) ----
 // Lee rec.timeline (array). Cada bloque: {hora, dur, titulo, slugs[], nota, tipo}.
 // tipo: 'pausa' (descanso/colchón) · 'extra' (sin asignar) · undefined (bloque normal).
-function renderTimeline(rec, token, codeOf){
+// `gi` = índice de la grabación, para poder refrescar la barra de avance sin re-renderizar todo.
+function renderTimeline(rec, token, codeOf, gi){
   const tl = rec.timeline;
   if (!tl || !tl.length) return '';
   const rows = tl.map(b => {
@@ -579,11 +625,19 @@ function renderTimeline(rec, token, codeOf){
         ? `<a href="?c=${token}&g=${attr(c.slug)}" target="_blank" rel="noopener"><button class="primary mini">Abrir guion ↗</button></a>` : '';
       const ref = c.link
         ? `<a href="${attr(c.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
-      return `<div class="tlitem${c.grabado?' off':''}">${thumb}<div class="tlbody">
-        <span class="tlcod">${esc(cod)}${c.grabado?' ✓':''}</span>
-        <p class="tlname">${esc(c.titulo)}</p>
-        <div class="tlacts">${abrir}${ref}</div>
-      </div></div>`;
+      // Se marca como grabado desde aquí mismo, sin bajar a la tarjeta de la categoría.
+      const marcar = STATUS_ENDPOINT
+        ? `<button class="mini btnGrabado" data-slug="${attr(c.slug)}" data-grabado="${c.grabado?1:0}">${c.grabado?'✓ Grabado':'Marcar grabado'}</button>` : '';
+      // Las prendas van FUERA de .tlbody, a lo ancho de la tarjeta: junto a la miniatura
+      // el espacio no alcanza y el texto se parte a media palabra en celular.
+      return `<div class="tlitem${c.grabado?' off':''}" data-tlitem="${attr(c.slug)}">
+        <div class="tlitemtop">${thumb}<div class="tlbody">
+          <span class="tlcod">${esc(cod)}${c.grabado?' ✓':''}</span>
+          <p class="tlname">${esc(c.titulo)}</p>
+          <div class="tlacts">${abrir}${ref}${marcar}</div>
+        </div></div>
+        ${renderOutfit(c)}
+      </div>`;
     }).join('');
     const prog = cards.length > 1 ? `<span class="tlprog">${cards.filter(c=>c.grabado).length}/${cards.length}</span>` : '';
     const nota = b.nota ? `<p class="tlnota${b.warn?' warn':''}">${esc(b.nota)}</p>` : '';
@@ -596,7 +650,56 @@ function renderTimeline(rec, token, codeOf){
     </div>`;
   }).join('');
   const win = rec.ventana ? `<span class="tlwin">${esc(rec.ventana)}</span>` : '';
-  return `<details class="tlblock" open><summary><span>🎬 ORDEN DE GRABACIÓN</span>${win}</summary><div class="tl">${rows}</div></details>`;
+  return `<details class="tlblock" open data-tl="${gi}"><summary><span>🎬 ORDEN DE GRABACIÓN</span>${win}</summary>
+    ${barraHtml(rec)}
+    <div class="tl">${rows}</div></details>`;
+}
+// Barra de avance de una grabación: se llena conforme se marcan piezas como grabadas.
+function barraHtml(rec){
+  const items = rec.guiones || [];
+  const total = items.length, done = items.filter(x => x.grabado).length;
+  const pct = total ? Math.round(done * 100 / total) : 0;
+  return `<div class="tlbarwrap${done && done === total ? ' full' : ''}">
+    <div class="tlbar"><div class="tlbarfill" style="width:${pct}%"></div></div>
+    <span class="tlpct">${done}/${total} · ${pct}%</span>
+  </div>`;
+}
+// Repinta las barras y los items de todas las líneas de tiempo desde CLIENT_DATA,
+// para que marcar algo se refleje al instante sin re-renderizar la página entera.
+function refreshTimelines(){
+  if (!CLIENT_DATA) return;
+  (CLIENT_DATA.grabaciones || []).forEach((rec, gi) => {
+    const items = rec.guiones || [];
+    const sum = document.querySelector(`.catcount[data-recsum="${gi}"]`);
+    if (sum) sum.textContent = `${items.length} · ${items.filter(x => x.grabado).length}/${items.length} grabados`;
+    const block = document.querySelector(`.tlblock[data-tl="${gi}"]`);
+    if (!block) return;
+    const wrap = block.querySelector('.tlbarwrap');
+    if (wrap){
+      const total = items.length, done = items.filter(x => x.grabado).length;
+      const pct = total ? Math.round(done * 100 / total) : 0;
+      wrap.classList.toggle('full', !!done && done === total);
+      wrap.querySelector('.tlbarfill').style.width = pct + '%';
+      wrap.querySelector('.tlpct').textContent = `${done}/${total} · ${pct}%`;
+    }
+    (rec.guiones || []).forEach(it => {
+      const row = block.querySelector(`.tlitem[data-tlitem="${CSS.escape(it.slug)}"]`);
+      if (!row) return;
+      row.classList.toggle('off', !!it.grabado);
+      const cod = row.querySelector('.tlcod');
+      if (cod) cod.textContent = cod.textContent.replace(/ ✓$/, '') + (it.grabado ? ' ✓' : '');
+      const b = row.querySelector('.btnGrabado');
+      if (b && !b.disabled){ b.dataset.grabado = it.grabado ? '1' : '0'; b.textContent = it.grabado ? '✓ Grabado' : 'Marcar grabado'; }
+    });
+    // Punto de la línea de tiempo: se rellena cuando TODO el bloque está grabado.
+    (rec.timeline || []).forEach((b, bi) => {
+      const cards = (b.slugs || []).map(sl => (rec.guiones || []).find(x => x.slug === sl)).filter(Boolean);
+      const row = block.querySelectorAll('.tlrow')[bi];
+      if (row && cards.length) row.classList.toggle('done', cards.every(c => c.grabado));
+      const prog = row && row.querySelector('.tlprog');
+      if (prog && cards.length > 1) prog.textContent = `${cards.filter(c => c.grabado).length}/${cards.length}`;
+    });
+  });
 }
 function renderCard(it, token, ri, codArg){
   const url = base() + '?c=' + token + '&g=' + it.slug;
@@ -617,7 +720,7 @@ function renderCard(it, token, ri, codArg){
   const preview = it.thumb ? `<details class="refpreview"><summary>👁 Ver preview</summary><img src="${attr(it.thumb)}" alt="preview de la referencia" loading="lazy"></details>` : '';
   return `<div class="card${it.grabado?' done':''}" data-card="${attr(it.slug)}" data-rec="${ri}"><div style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}${loc}</h3><p>${esc(it.info||'')}</p></div><span class="donechip">✓ Grabado</span></div>
     ${cardLoc}
-    <div class="actions">${abrir}${ref}<button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${mover}${del}</div>${preview}</div>`;
+    <div class="actions">${abrir}${ref}<button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${mover}${del}</div>${preview}${renderOutfit(it)}</div>`;
 }
 let CLIENT_DATA = null, CLIENT_TOKEN = null;
 function renderClient(data, token){
@@ -645,9 +748,9 @@ function renderClient(data, token){
       const total = (g.guiones||[]).length, tdone = (g.guiones||[]).filter(x=>x.grabado).length;
       // Mapa slug -> código posicional (G1, C3, I2…), el mismo que se pinta en cada tarjeta.
       const codMap = {}; order.forEach(key => itemsForCat(g.guiones||[], key, known).forEach((it,idx) => { codMap[it.slug] = (CAT_PREFIX[key]||'') + (idx+1); }));
-      const tlHtml = renderTimeline(g, token, sl => codMap[sl]);
+      const tlHtml = renderTimeline(g, token, sl => codMap[sl], gi);
       const body = (tlHtml + inner) || `<p class="hint" style="margin:6px 2px;">Grabación vacía. Mueve videos aquí con el botón "Mover ⇄" de cada tarjeta.</p>`;
-      return `<details class="recblock2"><summary><span class="recname">🎬 ${esc(g.rec)} · ${esc(g.nombre||'Grabación')}</span><span class="catcount">${total} · ${tdone}/${total} grabados</span></summary>${body}</details>`;
+      return `<details class="recblock2"><summary><span class="recname">🎬 ${esc(g.rec)} · ${esc(g.nombre||'Grabación')}</span><span class="catcount" data-recsum="${gi}">${total} · ${tdone}/${total} grabados</span></summary>${body}</details>`;
     }).join('');
     if (admin) blocks = `<button class="primary mini" id="newRecBtn" style="margin:0 0 16px;">➕ Nueva grabación</button>` + blocks;
   } else if (cats){
@@ -830,10 +933,14 @@ async function toggleGrabado(token, btn){
     const r = await fetch(STATUS_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ password: pw, client: token, slug, grabado: next }) });
     if (r.status === 401){ forgetPw(); throw new Error('Contraseña incorrecta'); }
     if (!r.ok) throw new Error(await r.text());
-    btn.dataset.grabado = next ? '1' : '0';
-    btn.textContent = next ? '✓ Grabado' : 'Marcar grabado';
     // Sincroniza la memoria local para que un re-render posterior (al mover/crear) no revierta la marca.
     if (CLIENT_DATA) (CLIENT_DATA.grabaciones||[]).forEach(rg => (rg.guiones||[]).forEach(x => { if (x.slug===slug) x.grabado = next; }));
+    // El mismo guion tiene botón en su tarjeta y en la línea de tiempo: se actualizan los dos.
+    document.querySelectorAll(`.btnGrabado[data-slug="${CSS.escape(slug)}"]`).forEach(b => {
+      b.dataset.grabado = next ? '1' : '0';
+      b.textContent = next ? '✓ Grabado' : 'Marcar grabado';
+      b.disabled = false;
+    });
     const card = document.querySelector(`.card[data-card="${CSS.escape(slug)}"]`);
     if (card){
       card.classList.toggle('done', next);
@@ -843,6 +950,7 @@ async function toggleGrabado(token, btn){
       const cnt = document.querySelector(`.donecount[data-rec="${ri}"]`);
       if (cnt) cnt.textContent = `${d}/${cards.length} grabados`;
     }
+    refreshTimelines();
     toast(next ? 'Marcado como grabado ✓ (visible en ~1 min)' : 'Desmarcado');
   } catch (e){
     toast('Error: ' + (e.message||e));

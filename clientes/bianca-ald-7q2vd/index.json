@@ -2,21 +2,122 @@
   "cliente": "Bianca Aldama Boutique",
   "grabaciones": [
     {
-      "rec": "R12",
-      "nombre": "Duodécima grabación",
+      "rec": "R13",
+      "nombre": "Decimotercera grabación",
       "fecha": "Por definir",
       "locacion": "Por definir",
-      "nota": "Grabación de 10:00 a 14:00 con descanso. Se la llevan transiciones y chuscos. Estrena VIRAL/ORGÁNICA, JUNTAS y CAMINADORA. La serie Tendencias OI2026 va en la PARTE 6.",
-      "guiones": [
+      "nota": "Hereda completo lo que no se alcanzó en la R12. 19 piezas por grabar (+1 tarjeta de referencia). El cuello de botella de este día NO es la cámara, son los cambios de ropa: sobre el papel son 39 looks. Encadenando quedan alrededor de 22 prendas reales en el rack. Dos reglas para lograrlo: (1) la salida de una transición es la entrada de la siguiente, (2) ri-27 va al final y por su base giratoria pasa CADA outfit que ya se usó en el día, sin cambios extra.",
+      "ventana": "10:00 – 13:40 · 3 h 40 min · orden provisional",
+      "timeline": [
         {
-          "slug": "g-59",
-          "titulo": "Serie Tendencias OI2026 · P6: las 4 texturas (gamuza, cuadros, chocolate, flecos)",
-          "info": "45–55 seg · PARTE 6 (grabado hasta la 5) · voz en off + b-roll · comenta TEXTURAS",
-          "grabado": false,
-          "categoria": "guion",
-          "link": "https://vt.tiktok.com/ZSVAGYtse/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-182725_873be4e0-9f28-46fb-8c00-92fd084af6c6/thumbnail.jpg"
+          "hora": "10:00",
+          "dur": "20 min",
+          "titulo": "Guion · arreglarse para nada en especial",
+          "slugs": [
+            "g-63"
+          ],
+          "nota": "El que se brincaron en la R12. Voz en off aparte; aquí solo el b-roll del arreglo. Arranca el día en bata para que el \"antes\" ya esté puesto."
         },
+        {
+          "hora": "10:20",
+          "dur": "15 min",
+          "titulo": "Transiciones juntas",
+          "slugs": [
+            "jun-01",
+            "jun-02"
+          ],
+          "nota": "Bianca y Mary. jun-02 es TWINNING, van vestidas idéntico: hay que tener la prenda en dos tallas. Aprovecha que están las dos y graba también ri-31 aquí, aunque en la lista aparezca hasta abajo."
+        },
+        {
+          "hora": "10:35",
+          "dur": "10 min",
+          "titulo": "Caminadora",
+          "slugs": [
+            "cam-01"
+          ],
+          "nota": "Monta la caminadora antes de que empiece el día. Son 3 looks de noche y se camina de verdad, así que zapato que aguante."
+        },
+        {
+          "hora": "10:45",
+          "dur": "12 min",
+          "titulo": "Transiciones con sombrilla",
+          "slugs": [
+            "re-13",
+            "re-14"
+          ],
+          "warn": true,
+          "nota": "☂️ NECESITAMOS SOMBRILLA. Que alguien la lleve desde en la mañana. Las dos son exterior, salen juntas. Junta este bloque con re-12, que también termina en la banqueta."
+        },
+        {
+          "hora": "10:57",
+          "dur": "13 min",
+          "titulo": "Las dos últimas de la R12",
+          "slugs": [
+            "g-58",
+            "ri-28"
+          ],
+          "nota": "ri-28 va a ciegas: no tiene miniatura y GetTranscribe no pudo bajarlo. Ábrelo antes del día o sácalo del plan."
+        },
+        {
+          "hora": "11:10",
+          "dur": "15 min",
+          "titulo": "Descanso",
+          "tipo": "pausa",
+          "nota": "Aquí se revisa audio y se arma el rack de la segunda mitad, que es la pesada en cambios de ropa."
+        },
+        {
+          "hora": "11:25",
+          "dur": "25 min",
+          "titulo": "Guion · mejores y peores inversiones del clóset",
+          "slugs": [
+            "g-69",
+            "vo-02"
+          ],
+          "nota": "Bianca no se cambia: cambian las prendas que muestra. Ten las 6 colgadas en orden de ranking, de peor a mejor, sobre un burro fuera de cuadro."
+        },
+        {
+          "hora": "11:50",
+          "dur": "10 min",
+          "titulo": "IA + transiciones · definir ejecución",
+          "slugs": [
+            "g-71"
+          ],
+          "nota": "No se graba video, son fotos base. Mismo pipeline de 2 pasos del g-70: primero la imagen fija con la prenda real, después se anima."
+        },
+        {
+          "hora": "12:00",
+          "dur": "70 min",
+          "titulo": "Transiciones interiores, en bloque",
+          "slugs": [
+            "ri-29",
+            "ri-30",
+            "ri-31",
+            "ri-32",
+            "ri-33",
+            "ri-34",
+            "ri-27"
+          ],
+          "nota": "El orden de adentro importa: ri-32 y ri-33 comparten la MISMA bata, van pegadas. ri-31 ya lo grabaste en el bloque de juntas. Y ri-27 se deja al final porque su base giratoria se come todos los looks del día."
+        },
+        {
+          "hora": "13:10",
+          "dur": "18 min",
+          "titulo": "Transiciones exteriores",
+          "slugs": [
+            "re-11",
+            "re-12"
+          ],
+          "nota": "re-11 es un solo look pero se ve entero y de cerca: tiene que estar impecable. re-12 cierra llegando a la tienda."
+        },
+        {
+          "hora": "13:28",
+          "dur": "12 min",
+          "titulo": "Colchón",
+          "tipo": "pausa",
+          "nota": "Margen para repetir lo que haya salido mal. A diferencia de la R12, este día sí tiene holgura."
+        }
+      ],
+      "guiones": [
         {
           "slug": "g-63",
           "titulo": "Arreglarse para nada en especial",
@@ -24,7 +125,22 @@
           "grabado": false,
           "categoria": "guion",
           "link": "https://www.instagram.com/reel/Db1C3xMRrhg/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-184123_6bbef7ad-da65-4fe0-bf35-ba5d54feafac/thumbnail.jpg"
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-184123_6bbef7ad-da65-4fe0-bf35-ba5d54feafac/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Elegancia de diario · blanco Cloud Dancer + hombro estructurado",
+            "looks": [
+              {
+                "t": "Antes · casa",
+                "p": "Bata de rizo crema o conjunto de punto color hueso, pelo suelto sin peinar, pies descalzos"
+              },
+              {
+                "t": "Después · arreglada",
+                "p": "Top corsetero o de hombro estructurado negro + pantalón blanco palazzo + botín de punta + arracadas doradas + bolsa estructurada"
+              }
+            ],
+            "nota": "El b-roll son puros close ups (zipper, labial, arete, tacón, espejo). El look tiene que aguantar acercamiento: costura limpia y prenda planchada. La voz en off se graba aparte."
+          }
         },
         {
           "slug": "g-69",
@@ -33,25 +149,22 @@
           "grabado": false,
           "categoria": "guion",
           "link": "https://www.instagram.com/reel/DZp-35DxMBl/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-201005_cd637458-fe44-4767-9d1f-973a0cace037/thumbnail.jpg"
-        },
-        {
-          "slug": "g-65",
-          "titulo": "Le pedí a la IA un outfit y acabé en Cancún",
-          "info": "25–35 seg · HÍBRIDO guion + banco de transiciones · cada error cae en una prenda real",
-          "grabado": false,
-          "categoria": "guion",
-          "link": "https://www.instagram.com/reel/Dbl2dsmBuBr/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-184328_fe72c8d4-d93d-4317-b446-4b31af9af076/thumbnail.jpg"
-        },
-        {
-          "slug": "g-70",
-          "titulo": "IA · Get dressed with me (manos que visten)",
-          "info": "15–20 seg · PIEZA GENERADA CON IA · plan de producción + modelo recomendado · no se graba en tienda",
-          "grabado": false,
-          "categoria": "guion",
-          "link": "https://www.instagram.com/reel/DbwduMsveHU/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200945_9a05155d-b431-4d11-83b2-3460ca8ddd6d/thumbnail.jpg"
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-201005_cd637458-fe44-4767-9d1f-973a0cace037/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Uniforme neutro a cuadro · protagonistas son las prendas",
+            "looks": [
+              {
+                "t": "Bianca a cuadro",
+                "p": "Total black liso: playera de cuello alto + pantalón sastre negro + cinturón fino. Sin estampado, para que el ojo se vaya a la prenda que sostiene"
+              },
+              {
+                "t": "Muestrario (no se viste)",
+                "p": "6 prendas en la mano para el ranking. De peor a mejor: la de moda pasajera → sintético que hace bolitas → prenda de talla incorrecta → jean barrel chocolate → blazer de hombro estructurado → botín de piel"
+              }
+            ],
+            "nota": "Aquí Bianca no se cambia: cambian las PRENDAS que muestra. Ten las 6 colgadas en orden de ranking sobre un burro fuera de cuadro."
+          }
         },
         {
           "slug": "g-71",
@@ -61,16 +174,18 @@
           "categoria": "guion",
           "tipo": "ref",
           "link": "https://www.tiktok.com/@denzelhajema/video/7191063036570930438",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200937_9fca0fe1-68a6-4006-bdc4-ca54d7722736/thumbnail.jpg"
-        },
-        {
-          "slug": "g-68",
-          "titulo": "GUION BASE · Las propuestas que acaban de llegar",
-          "info": "60–90 seg · PLANTILLA reutilizable (pantalón, blusa, conjunto, vestido, calzado) · 1 por semana · CTA por número",
-          "grabado": false,
-          "categoria": "viral-organica",
-          "link": "https://www.facebook.com/share/r/19RTA9vUJw/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200952_aa388506-f6e5-435c-b5ee-b592af31a947/thumbnail.jpg"
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200937_9fca0fe1-68a6-4006-bdc4-ca54d7722736/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Base para generar con IA · fondo limpio",
+            "looks": [
+              {
+                "t": "Foto base",
+                "p": "Look monocromático sin estampado, de cuerpo completo, contra pared lisa. La IA respeta mejor el color plano que el print"
+              }
+            ],
+            "nota": "No se graba video, son fotos. Mismo pipeline de 2 pasos del g-70: primero la imagen fija con la prenda REAL, después se anima. Falta que definas la ejecución."
+          }
         },
         {
           "slug": "vo-02",
@@ -83,10 +198,419 @@
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-201005_cd637458-fe44-4767-9d1f-973a0cace037/thumbnail.jpg"
         },
         {
+          "slug": "g-58",
+          "titulo": "Chusco con cierre a la tienda (variante)",
+          "info": "chusco · relatable + CTA/cierre a tienda · venía de R11, Dante lo reprogramó al final de R12",
+          "grabado": false,
+          "categoria": "chusco",
+          "tipo": "ref",
+          "link": "https://www.instagram.com/reel/DYDbf3XNtjQ/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183123_c094a8e2-b9e5-47ca-bfef-dce2e8df7aa5/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Casual relatable · como llega la clienta",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Jean de pierna ancha + playera básica + tenis. Deliberadamente sencillo: el chusco funciona si se ve cotidiano"
+              }
+            ],
+            "nota": "Viene arrastrando desde la R11. Es el que cierra con CTA a tienda."
+          }
+        },
+        {
+          "slug": "ri-27",
+          "titulo": "Transición INT 27",
+          "info": "transición interior · referencia",
+          "grabado": false,
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/Da7KGqysyoB/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183120_dce42a03-635a-4918-8e47-38efbfc53bc5/thumbnail.jpg",
+          "outfit": {
+            "n": 5,
+            "estilo": "Vitrina giratoria · escaparate de looks",
+            "looks": [
+              {
+                "t": "Formato",
+                "p": "Base giratoria y un look por vuelta. La referencia son 5 looks completos con bolsa y calzado incluidos"
+              },
+              {
+                "t": "Sugeridos",
+                "p": "Vestido midi estampado + bolsa de rafia · Monocromático camel de gamuza · Jean barrel chocolate + knit crudo · Falda de lentejuelas + suéter oversize · Total white con botín alto"
+              }
+            ],
+            "nota": "ESTA ES LA PALANCA DEL DÍA: es una sola armada de cámara que se come todos los looks. Déjala AL FINAL y pasa por la base giratoria cada outfit que ya se usó en las otras piezas. Cero cambios extra de ropa."
+          }
+        },
+        {
+          "slug": "ri-28",
+          "titulo": "Transición INT 28",
+          "info": "SIN MINIATURA · GetTranscribe no pudo descargarlo (4 intentos)",
+          "grabado": false,
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DbYp3zwNqUm/",
+          "outfit": {
+            "n": 2,
+            "estilo": "Por definir · no tenemos miniatura",
+            "looks": [
+              {
+                "t": "Pendiente",
+                "p": "GetTranscribe no pudo descargar el video (4 intentos). Ábrelo tú y me dices qué es, o mándame otro link"
+              }
+            ],
+            "nota": "Es el único item de la R13 que va a ciegas. Si no lo revisas antes, déjalo fuera del día."
+          }
+        },
+        {
+          "slug": "ri-29",
+          "titulo": "Transición INT 29",
+          "info": "transición interior · referencia",
+          "grabado": false,
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/Db6DJsYtC9e/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183117_181925e6-e5af-4744-85a1-aef1caa965b1/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Glam beauty · el reveal es el pelo, no la ropa",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Escote sencillo que no compita con el rostro: halter o cuello redondo en tono nude o negro. Arete grande, pelo con ondas marcadas"
+              }
+            ],
+            "nota": "Es plano cerrado de cara y pelo. No gastes un outfit bueno aquí, se ve del pecho para arriba."
+          }
+        },
+        {
+          "slug": "ri-30",
+          "titulo": "Transición INT 30 · el accidente",
+          "info": "el tropiezo dispara el cambio de outfit",
+          "grabado": false,
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DV11gizjzAC/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183621_7ecfe4a2-0885-4623-9514-457d269c4e93/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Romántico urbano · el tropiezo dispara el cambio",
+            "looks": [
+              {
+                "t": "Antes",
+                "p": "Vestido vino o ciruela de punto + zapato bajo. Cómodo, porque hay movimiento brusco"
+              },
+              {
+                "t": "Después",
+                "p": "Vestido satinado con volante o transparencia sutil + tacón + labial marcado"
+              }
+            ],
+            "nota": "Hay un tropiezo actuado. Que el primer look sea de tela que perdone la caída, y que nadie se lastime: piso seco y zapato bajo en la toma del accidente."
+          }
+        },
+        {
+          "slug": "ri-31",
+          "titulo": "Transición INT 31 · paredes de ropa",
+          "info": "recorre las paredes de ropa pasando la mano, se ríe, voltea a cámara y transiciona",
+          "grabado": false,
+          "categoria": "trans-int",
+          "link": "https://www.instagram.com/reel/DYutqfYO-zz/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-184047_e6526c3f-302d-4c3f-8375-1f560b56d481/thumbnail.jpg",
+          "outfit": {
+            "n": 4,
+            "estilo": "De casa a salir, en dueto · Bianca + Mary",
+            "looks": [
+              {
+                "t": "Antes (las dos)",
+                "p": "Playera holgada y shorts, o toalla en la cabeza. Cara lavada"
+              },
+              {
+                "t": "Después (las dos)",
+                "p": "Dos looks de noche que dialoguen sin ser iguales: una en satín oscuro, la otra en lentejuelas o encaje. Misma familia de color"
+              }
+            ],
+            "nota": "ENCADENA con jun-01 y jun-02: son las mismas dos personas y el mismo vestidor. Grábalas seguidas aunque en la lista estén separadas y te ahorras dos cambios completos."
+          }
+        },
+        {
+          "slug": "ri-32",
+          "titulo": "Transición INT 32 · de bata a lista (espejo)",
+          "info": "bata → vestido, frente al espejo de cuerpo completo",
+          "grabado": false,
+          "categoria": "trans-int",
+          "link": "https://vt.tiktok.com/ZSVUvyDrc/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200939_b41c5de9-0528-486a-9eb5-7b13e7813dd2/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Bata → vestido · espejo de cuerpo completo",
+            "looks": [
+              {
+                "t": "Antes",
+                "p": "Bata blanca de rizo + pantuflas peludas"
+              },
+              {
+                "t": "Después",
+                "p": "Vestido largo negro con abertura o escote cruzado + sandalia de tacón + bolsa mini"
+              }
+            ],
+            "nota": "Misma bata que ri-33. Grábalas pegadas: una sola puesta de bata, dos salidas distintas."
+          }
+        },
+        {
+          "slug": "ri-33",
+          "titulo": "Transición INT 33 · de bata a salir",
+          "info": "bata → look completo con bolsa, sale de cuadro",
+          "grabado": false,
+          "categoria": "trans-int",
+          "link": "https://vt.tiktok.com/ZSVUvHVdg/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200939_1d4305c0-de2f-4a98-b271-014160ee8d2b/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Bata → salida completa · sale de cuadro",
+            "looks": [
+              {
+                "t": "Antes",
+                "p": "La MISMA bata blanca de ri-32"
+              },
+              {
+                "t": "Después",
+                "p": "Abrigo oversize o gabardina camel + bolsa estructurada negra + botín. Look de calle, no de fiesta"
+              }
+            ],
+            "nota": "Es el gemelo de ri-32. La diferencia es que este termina en look de día y sale caminando de cuadro."
+          }
+        },
+        {
+          "slug": "ri-34",
+          "titulo": "Transición INT 34 · espejo",
+          "info": "frente al espejo · Dante mandó 2 links y son el MISMO video",
+          "grabado": false,
+          "categoria": "trans-int",
+          "link": "https://vt.tiktok.com/ZSVUvC8fe/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200945_ca8f0fc5-3a49-40c3-8a14-2f6f04e50ef9/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Monocromático a color · lila de arriba a abajo",
+            "looks": [
+              {
+                "t": "Antes",
+                "p": "Look neutro apagado (beige o gris) para que el contraste pegue"
+              },
+              {
+                "t": "Después",
+                "p": "Monocromático completo: top de volante a un hombro + falda midi con abertura + sandalia de tacón en tono contrastante. La referencia va en lila con magenta"
+              }
+            ],
+            "nota": "El monocromático a color es de lo que más está corriendo. Si no tienes lila, funciona igual en chocolate, vino o verde botella. Lo que no se vale es romper la gama."
+          }
+        },
+        {
+          "slug": "re-11",
+          "titulo": "Transición EXT 11 · dirigiendo la pose",
+          "info": "audio trend que va dictando la pose (gira, posa, toma cafecito)",
+          "grabado": false,
+          "categoria": "trans-ext",
+          "link": "https://www.instagram.com/reel/DcKC2vATPmE/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183257_9dfaffb8-d8b5-4646-b98a-8085110877f8/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Fit check de calle · neutro con un golpe de color",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Bomber o chamarra camel + camisa blanca + pantalón ancho en color fuerte (rojo, en la referencia) + bolsa negra + lentes"
+              }
+            ],
+            "nota": "El audio va dictando la pose: gira, posa, toma el cafecito. Es un solo look pero se ve entero y de cerca, así que tiene que estar impecable. Exterior."
+          }
+        },
+        {
+          "slug": "re-12",
+          "titulo": "Transición EXT 12 · del celular a la tienda",
+          "info": "ve el cel, se molesta y nos vamos físicamente a la tienda",
+          "grabado": false,
+          "categoria": "trans-ext",
+          "link": "https://www.instagram.com/reel/DbZWIi1vU1b/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-184457_14fdf8e8-e05d-4376-ade3-068e36c580d2/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Del celular a la tienda · conjunto de punto",
+            "looks": [
+              {
+                "t": "Antes · en casa",
+                "p": "Ropa de estar, celular en la mano, cara de fastidio"
+              },
+              {
+                "t": "Después · llegando",
+                "p": "Conjunto de punto en tono claro (la referencia va en azul lavanda) + sandalia + bolsas de la tienda en las manos"
+              }
+            ],
+            "nota": "La segunda mitad se graba en la banqueta de la tienda. Aprovecha que ya vas a estar afuera para el bloque de sombrilla."
+          }
+        },
+        {
+          "slug": "re-13",
+          "titulo": "Transición EXT 13 · sombrilla",
+          "info": "transición exterior con sombrilla",
+          "grabado": false,
+          "categoria": "trans-ext",
+          "link": "https://vt.tiktok.com/ZSVUvybNV/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200942_ebffeaf3-ef00-416d-b8d2-d18386568289/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Exterior con sombrilla · la sombrilla tapa el corte",
+            "looks": [
+              {
+                "t": "Antes",
+                "p": "Look de día: jean ancho + knit + tenis"
+              },
+              {
+                "t": "Después",
+                "p": "Look armado: vestido midi o conjunto sastre + tacón"
+              }
+            ],
+            "nota": "☂️ NECESITAMOS SOMBRILLA. Que alguien la lleve desde en la mañana. Es el objeto que tapa el corte, sin ella no hay transición."
+          }
+        },
+        {
+          "slug": "re-14",
+          "titulo": "Transición EXT 14 · sombrilla (variante)",
+          "info": "segunda versión con sombrilla",
+          "grabado": false,
+          "categoria": "trans-ext",
+          "link": "https://vt.tiktok.com/ZSVUvwcCb/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200950_55a481bf-12a4-4fe4-af38-751f89ee805b/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Sombrilla, variante casual · oversize + denim claro",
+            "looks": [
+              {
+                "t": "Antes",
+                "p": "Playera oversize chocolate + jean claro de pierna ancha + tenis"
+              },
+              {
+                "t": "Después",
+                "p": "Cambio a gamuza: chamarra o falda de ante camel + botín"
+              }
+            ],
+            "nota": "Misma sombrilla y misma locación que re-13. Salen juntas, se graban seguidas."
+          }
+        },
+        {
+          "slug": "cam-01",
+          "titulo": "Caminadora 01",
+          "info": "CATEGORÍA NUEVA · transición sobre caminadora · antecedente: ri-05 de R6",
+          "grabado": false,
+          "categoria": "caminadora",
+          "link": "https://www.instagram.com/reel/DcMJdYitSRI/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183402_4d1e5986-66d5-4337-9862-d83f073d269c/thumbnail.jpg",
+          "outfit": {
+            "n": 3,
+            "estilo": "Pasarela de noche sobre caminadora",
+            "looks": [
+              {
+                "t": "Formato",
+                "p": "Caminadora encendida y un corte por look. Mínimo 3, ideal 4"
+              },
+              {
+                "t": "Sugeridos",
+                "p": "Halter de animal print + falda mini negra + medias + botín de punta · Vestido de lentejuelas + tacón · Total black con hombro estructurado + botín alto"
+              }
+            ],
+            "nota": "Monta la caminadora ANTES de arrancar el día, no en el momento. Zapato firme: se camina de verdad. Si el tacón no aguanta, se hace de la rodilla para arriba."
+          }
+        },
+        {
+          "slug": "jun-01",
+          "titulo": "Juntas 01 · Bianca + Mary",
+          "info": "CATEGORÍA NUEVA · transición de las dos juntas",
+          "grabado": false,
+          "categoria": "juntas",
+          "link": "https://vt.tiktok.com/ZSVUvxFQc/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200947_3cfbda8f-f23c-408e-ba19-d20de0f9df51/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Dueto coordinado · misma gama, distinta prenda",
+            "looks": [
+              {
+                "t": "Bianca",
+                "p": "Pantalón sastre + blusa de satín en tono tierra"
+              },
+              {
+                "t": "Mary",
+                "p": "Vestido o falda midi en la misma gama tierra. Que se lean como conjunto sin ser copia"
+              }
+            ],
+            "nota": "Encadena con jun-02 y ri-31: son las mismas dos personas, se graban las tres seguidas."
+          }
+        },
+        {
+          "slug": "jun-02",
+          "titulo": "Juntas 02 · interior",
+          "info": "transición juntas, interior · a este le fue muy bien",
+          "grabado": false,
+          "categoria": "juntas",
+          "link": "https://www.facebook.com/share/r/1EV4KfWGTk/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200957_5786310f-be93-48bd-b1a1-1c7686078c32/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Twinning · look IDÉNTICO en las dos",
+            "looks": [
+              {
+                "t": "Bianca y Mary, igual",
+                "p": "Body o top blanco de tirante ancho + jean de pierna ancha con dobladillo volteado + tacón nude. Exactamente el mismo look en las dos"
+              }
+            ],
+            "nota": "A este le fue muy bien y el motivo es el twinning: la gracia es que van vestidas IGUAL, no coordinadas. Necesitas la prenda en dos tallas. Confírmalo antes del día."
+          }
+        }
+      ]
+    },
+    {
+      "rec": "R12",
+      "nombre": "Duodécima grabación",
+      "fecha": "Por definir",
+      "locacion": "Por definir",
+      "nota": "CERRADA. Se grabó la línea de tiempo completa hasta el G1 y después todo el bloque de chuscos. El G2 (arreglarse para nada en especial) se brincó, y juntas, caminadora, sombrilla, las dos últimas y los que no entraron en el orden se pasaron completos a la R13.",
+      "guiones": [
+        {
+          "slug": "g-68",
+          "titulo": "GUION BASE · Las propuestas que acaban de llegar",
+          "info": "60–90 seg · PLANTILLA reutilizable (pantalón, blusa, conjunto, vestido, calzado) · 1 por semana · CTA por número",
+          "grabado": true,
+          "categoria": "viral-organica",
+          "link": "https://www.facebook.com/share/r/19RTA9vUJw/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200952_aa388506-f6e5-435c-b5ee-b592af31a947/thumbnail.jpg"
+        },
+        {
+          "slug": "g-65",
+          "titulo": "Le pedí a la IA un outfit y acabé en Cancún",
+          "info": "25–35 seg · HÍBRIDO guion + banco de transiciones · cada error cae en una prenda real",
+          "grabado": true,
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/Dbl2dsmBuBr/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-184328_fe72c8d4-d93d-4317-b446-4b31af9af076/thumbnail.jpg"
+        },
+        {
+          "slug": "g-70",
+          "titulo": "IA · Get dressed with me (manos que visten)",
+          "info": "15–20 seg · PIEZA GENERADA CON IA · plan de producción + modelo recomendado · no se graba en tienda",
+          "grabado": true,
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/DbwduMsveHU/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200945_9a05155d-b431-4d11-83b2-3460ca8ddd6d/thumbnail.jpg"
+        },
+        {
+          "slug": "g-59",
+          "titulo": "Serie Tendencias OI2026 · P6: las 4 texturas (gamuza, cuadros, chocolate, flecos)",
+          "info": "45–55 seg · PARTE 6 (grabado hasta la 5) · voz en off + b-roll · comenta TEXTURAS",
+          "grabado": true,
+          "categoria": "guion",
+          "link": "https://vt.tiktok.com/ZSVAGYtse/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-182725_873be4e0-9f28-46fb-8c00-92fd084af6c6/thumbnail.jpg"
+        },
+        {
           "slug": "g-62",
           "titulo": "La vendedora que no se rinde",
           "info": "20–30 seg · CHUSCO GUIONADO · exterior/banqueta · 2 personas · tiene diálogo",
-          "grabado": false,
+          "grabado": true,
           "categoria": "chusco",
           "link": "https://www.instagram.com/reel/DcPZfYmxHwZ/",
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183117_34629e38-df10-4a70-aaf5-932fd6aa1c27/thumbnail.jpg"
@@ -95,7 +619,7 @@
           "slug": "g-64",
           "titulo": "Cuando la ropa te contesta",
           "info": "15–20 seg · CHUSCO GUIONADO · interior · voces dobladas en edición",
-          "grabado": false,
+          "grabado": true,
           "categoria": "chusco",
           "link": "https://www.instagram.com/reel/Dby7sMxpCpU/",
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-184156_8c12ae26-dd48-4c6d-9828-0bee993ecf75/thumbnail.jpg"
@@ -104,7 +628,7 @@
           "slug": "g-60",
           "titulo": "Chusco (Dante define el gag)",
           "info": "chusco · sin diálogo · basado en referencia",
-          "grabado": false,
+          "grabado": true,
           "categoria": "chusco",
           "tipo": "ref",
           "link": "https://www.instagram.com/reel/Dald7nDtr0R/",
@@ -114,7 +638,7 @@
           "slug": "g-61",
           "titulo": "Chusco rápido (6 seg)",
           "info": "chusco · sin diálogo · 0:06 · remate seco",
-          "grabado": false,
+          "grabado": true,
           "categoria": "chusco",
           "tipo": "ref",
           "link": "https://www.instagram.com/reel/Da9CgBUJkLZ/",
@@ -124,7 +648,7 @@
           "slug": "g-66",
           "titulo": "Chusco · audio trend",
           "info": "chusco · audio prestado (tipo \"And Emily?\") · Dante define el gag",
-          "grabado": false,
+          "grabado": true,
           "categoria": "chusco",
           "tipo": "ref",
           "link": "https://www.instagram.com/reel/Dbvw-qAM2Xi/",
@@ -134,158 +658,14 @@
           "slug": "g-67",
           "titulo": "Chusco · solo sentándose (interior)",
           "info": "chusco · interior · sin diálogo · gag de sentarse",
-          "grabado": false,
+          "grabado": true,
           "categoria": "chusco",
           "tipo": "ref",
           "link": "https://www.instagram.com/reel/Dbwbd1fNO52/",
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200946_6b3f9f52-3847-4723-b8d3-65ade97537b3/thumbnail.jpg"
-        },
-        {
-          "slug": "ri-27",
-          "titulo": "Transición INT 27",
-          "info": "transición interior · referencia",
-          "grabado": false,
-          "categoria": "trans-int",
-          "link": "https://www.instagram.com/reel/Da7KGqysyoB/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183120_dce42a03-635a-4918-8e47-38efbfc53bc5/thumbnail.jpg"
-        },
-        {
-          "slug": "ri-28",
-          "titulo": "Transición INT 28",
-          "info": "SIN MINIATURA · GetTranscribe no pudo descargarlo (4 intentos)",
-          "grabado": false,
-          "categoria": "trans-int",
-          "link": "https://www.instagram.com/reel/DbYp3zwNqUm/"
-        },
-        {
-          "slug": "ri-29",
-          "titulo": "Transición INT 29",
-          "info": "transición interior · referencia",
-          "grabado": false,
-          "categoria": "trans-int",
-          "link": "https://www.instagram.com/reel/Db6DJsYtC9e/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183117_181925e6-e5af-4744-85a1-aef1caa965b1/thumbnail.jpg"
-        },
-        {
-          "slug": "ri-30",
-          "titulo": "Transición INT 30 · el accidente",
-          "info": "el tropiezo dispara el cambio de outfit",
-          "grabado": false,
-          "categoria": "trans-int",
-          "link": "https://www.instagram.com/reel/DV11gizjzAC/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183621_7ecfe4a2-0885-4623-9514-457d269c4e93/thumbnail.jpg"
-        },
-        {
-          "slug": "ri-31",
-          "titulo": "Transición INT 31 · paredes de ropa",
-          "info": "recorre las paredes de ropa pasando la mano, se ríe, voltea a cámara y transiciona",
-          "grabado": false,
-          "categoria": "trans-int",
-          "link": "https://www.instagram.com/reel/DYutqfYO-zz/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-184047_e6526c3f-302d-4c3f-8375-1f560b56d481/thumbnail.jpg"
-        },
-        {
-          "slug": "ri-32",
-          "titulo": "Transición INT 32 · de bata a lista (espejo)",
-          "info": "bata → vestido, frente al espejo de cuerpo completo",
-          "grabado": false,
-          "categoria": "trans-int",
-          "link": "https://vt.tiktok.com/ZSVUvyDrc/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200939_b41c5de9-0528-486a-9eb5-7b13e7813dd2/thumbnail.jpg"
-        },
-        {
-          "slug": "ri-33",
-          "titulo": "Transición INT 33 · de bata a salir",
-          "info": "bata → look completo con bolsa, sale de cuadro",
-          "grabado": false,
-          "categoria": "trans-int",
-          "link": "https://vt.tiktok.com/ZSVUvHVdg/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200939_1d4305c0-de2f-4a98-b271-014160ee8d2b/thumbnail.jpg"
-        },
-        {
-          "slug": "ri-34",
-          "titulo": "Transición INT 34 · espejo",
-          "info": "frente al espejo · Dante mandó 2 links y son el MISMO video",
-          "grabado": false,
-          "categoria": "trans-int",
-          "link": "https://vt.tiktok.com/ZSVUvC8fe/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200945_ca8f0fc5-3a49-40c3-8a14-2f6f04e50ef9/thumbnail.jpg"
-        },
-        {
-          "slug": "re-11",
-          "titulo": "Transición EXT 11 · dirigiendo la pose",
-          "info": "audio trend que va dictando la pose (gira, posa, toma cafecito)",
-          "grabado": false,
-          "categoria": "trans-ext",
-          "link": "https://www.instagram.com/reel/DcKC2vATPmE/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183257_9dfaffb8-d8b5-4646-b98a-8085110877f8/thumbnail.jpg"
-        },
-        {
-          "slug": "re-12",
-          "titulo": "Transición EXT 12 · del celular a la tienda",
-          "info": "ve el cel, se molesta y nos vamos físicamente a la tienda",
-          "grabado": false,
-          "categoria": "trans-ext",
-          "link": "https://www.instagram.com/reel/DbZWIi1vU1b/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-184457_14fdf8e8-e05d-4376-ade3-068e36c580d2/thumbnail.jpg"
-        },
-        {
-          "slug": "re-13",
-          "titulo": "Transición EXT 13 · sombrilla",
-          "info": "transición exterior con sombrilla",
-          "grabado": false,
-          "categoria": "trans-ext",
-          "link": "https://vt.tiktok.com/ZSVUvybNV/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200942_ebffeaf3-ef00-416d-b8d2-d18386568289/thumbnail.jpg"
-        },
-        {
-          "slug": "re-14",
-          "titulo": "Transición EXT 14 · sombrilla (variante)",
-          "info": "segunda versión con sombrilla",
-          "grabado": false,
-          "categoria": "trans-ext",
-          "link": "https://vt.tiktok.com/ZSVUvwcCb/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200950_55a481bf-12a4-4fe4-af38-751f89ee805b/thumbnail.jpg"
-        },
-        {
-          "slug": "cam-01",
-          "titulo": "Caminadora 01",
-          "info": "CATEGORÍA NUEVA · transición sobre caminadora · antecedente: ri-05 de R6",
-          "grabado": false,
-          "categoria": "caminadora",
-          "link": "https://www.instagram.com/reel/DcMJdYitSRI/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183402_4d1e5986-66d5-4337-9862-d83f073d269c/thumbnail.jpg"
-        },
-        {
-          "slug": "jun-01",
-          "titulo": "Juntas 01 · Bianca + Mary",
-          "info": "CATEGORÍA NUEVA · transición de las dos juntas",
-          "grabado": false,
-          "categoria": "juntas",
-          "link": "https://vt.tiktok.com/ZSVUvxFQc/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200947_3cfbda8f-f23c-408e-ba19-d20de0f9df51/thumbnail.jpg"
-        },
-        {
-          "slug": "jun-02",
-          "titulo": "Juntas 02 · interior",
-          "info": "transición juntas, interior · a este le fue muy bien",
-          "grabado": false,
-          "categoria": "juntas",
-          "link": "https://www.facebook.com/share/r/1EV4KfWGTk/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200957_5786310f-be93-48bd-b1a1-1c7686078c32/thumbnail.jpg"
-        },
-        {
-          "slug": "g-58",
-          "titulo": "Chusco con cierre a la tienda (variante)",
-          "info": "chusco · relatable + CTA/cierre a tienda · venía de R11, Dante lo reprogramó al final de R12",
-          "grabado": false,
-          "categoria": "chusco",
-          "tipo": "ref",
-          "link": "https://www.instagram.com/reel/DYDbf3XNtjQ/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183123_c094a8e2-b9e5-47ca-bfef-dce2e8df7aa5/thumbnail.jpg"
         }
       ],
-      "ventana": "10:00 – 14:00 · 4 h",
+      "ventana": "10:00 – 14:00 · 4 h · ya ocurrida",
       "timeline": [
         {
           "hora": "10:00",
@@ -333,22 +713,6 @@
           "nota": "La voz en off se graba aparte. Aquí solo el b-roll de las 4 texturas y el cierre a cuadro."
         },
         {
-          "hora": "12:03",
-          "dur": "20 min",
-          "titulo": "Guion · arreglarse para nada en especial",
-          "slugs": [
-            "g-63"
-          ],
-          "nota": "También va con voz en off aparte. Solo b-roll del arreglo: zipper, labial, arete, tacones, espejo y la salida."
-        },
-        {
-          "hora": "12:23",
-          "dur": "15 min",
-          "titulo": "Descanso",
-          "tipo": "pausa",
-          "nota": "Comer algo y retocar. Aprovechar para escuchar el audio de las dos primeras tomas antes de que se vaya el equipo."
-        },
-        {
           "hora": "12:38",
           "dur": "35 min",
           "titulo": "Chuscos, en bloque",
@@ -363,71 +727,11 @@
           "nota": "En el orden de la lista. C1 y C2 llevan diálogo actuado, van primero mientras hay energía. C1 se graba afuera, en la banqueta."
         },
         {
-          "hora": "13:13",
-          "dur": "10 min",
-          "titulo": "Transiciones juntas",
-          "slugs": [
-            "jun-01",
-            "jun-02"
-          ],
-          "nota": "Las dos, Bianca y Mary."
-        },
-        {
-          "hora": "13:23",
-          "dur": "7 min",
-          "titulo": "Caminadora",
-          "slugs": [
-            "cam-01"
-          ],
-          "nota": "Montar la caminadora durante el descanso para no perder tiempo aquí."
-        },
-        {
-          "hora": "13:30",
-          "dur": "10 min",
-          "titulo": "Transiciones con sombrilla",
-          "slugs": [
-            "re-13",
-            "re-14"
-          ],
-          "warn": true,
-          "nota": "☂️ NECESITAMOS SOMBRILLA. Que alguien la lleve desde en la mañana. Las dos son en exterior, salir juntas."
-        },
-        {
-          "hora": "13:40",
-          "dur": "10 min",
-          "titulo": "Las dos últimas",
-          "slugs": [
-            "g-58",
-            "ri-28"
-          ],
-          "nota": "Las que quedaron pendientes de la primera tanda. Si el tiempo ya se acabó, estas se pasan a la siguiente grabación sin problema."
-        },
-        {
-          "hora": "13:50",
-          "dur": "10 min",
-          "titulo": "Colchón",
+          "hora": "12:23",
+          "dur": "15 min",
+          "titulo": "Descanso",
           "tipo": "pausa",
-          "nota": "Margen para repetir la toma que haya salido mal. Es el único colchón del día."
-        },
-        {
-          "hora": "—",
-          "dur": "sin asignar",
-          "titulo": "No entraron en el orden",
-          "tipo": "extra",
-          "slugs": [
-            "g-69",
-            "g-71",
-            "ri-27",
-            "ri-29",
-            "ri-30",
-            "ri-31",
-            "ri-32",
-            "ri-33",
-            "ri-34",
-            "re-11",
-            "re-12"
-          ],
-          "nota": "Quedan listos en el banco. Si sobra tiempo se graban en este orden, y si no, arrancan la siguiente grabación."
+          "nota": "Comer algo y retocar. Aprovechar para escuchar el audio de las dos primeras tomas antes de que se vaya el equipo."
         }
       ]
     },
