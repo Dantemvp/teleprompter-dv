@@ -6,20 +6,20 @@
       "nombre": "Decimotercera grabación",
       "fecha": "Por definir",
       "locacion": "Por definir",
-      "nota": "Hereda completo lo que no se alcanzó en la R12. 19 piezas por grabar (+1 tarjeta de referencia). El cuello de botella de este día NO es la cámara, son los cambios de ropa: sobre el papel son 39 looks. Encadenando quedan alrededor de 22 prendas reales en el rack. Dos reglas para lograrlo: (1) la salida de una transición es la entrada de la siguiente, (2) ri-27 va al final y por su base giratoria pasa CADA outfit que ya se usó en el día, sin cambios extra.",
-      "ventana": "10:00 – 13:40 · 3 h 40 min · orden provisional",
+      "nota": "Hereda completo lo que no se alcanzó en la R12. 19 piezas por grabar (+1 tarjeta de referencia). El cuello de botella de este día NO es la cámara, son los cambios de ropa: sobre el papel son 41 looks. Encadenando quedan alrededor de 24 prendas reales en el rack. Dos reglas para lograrlo: (1) la salida de una transición es la entrada de la siguiente, (2) ri-27 va al final y por su base giratoria pasa CADA outfit que ya se usó en el día, sin cambios extra.",
+      "ventana": "10:00 – 13:50 · 3 h 50 min · orden provisional",
       "timeline": [
         {
           "hora": "10:00",
-          "dur": "20 min",
+          "dur": "30 min",
           "titulo": "Guion · arreglarse para nada en especial",
           "slugs": [
             "g-63"
           ],
-          "nota": "El que se brincaron en la R12. Voz en off aparte; aquí solo el b-roll del arreglo. Arranca el día en bata para que el \"antes\" ya esté puesto."
+          "nota": "El que se brincaron en la R12. Voz en off aparte; aquí solo el b-roll del arreglo. Son 3 outfits distintos para los cortes rápidos del desarrollo, más la bata del arranque: arranca el día en bata para que el \"antes\" ya esté puesto."
         },
         {
-          "hora": "10:20",
+          "hora": "10:30",
           "dur": "15 min",
           "titulo": "Transiciones juntas",
           "slugs": [
@@ -29,7 +29,7 @@
           "nota": "Bianca y Mary. jun-02 es TWINNING, van vestidas idéntico: hay que tener la prenda en dos tallas. Aprovecha que están las dos y graba también ri-31 aquí, aunque en la lista aparezca hasta abajo."
         },
         {
-          "hora": "10:35",
+          "hora": "10:45",
           "dur": "10 min",
           "titulo": "Caminadora",
           "slugs": [
@@ -38,7 +38,7 @@
           "nota": "Monta la caminadora antes de que empiece el día. Son 3 looks de noche y se camina de verdad, así que zapato que aguante."
         },
         {
-          "hora": "10:45",
+          "hora": "10:55",
           "dur": "12 min",
           "titulo": "Transiciones con sombrilla",
           "slugs": [
@@ -49,7 +49,7 @@
           "nota": "☂️ NECESITAMOS SOMBRILLA. Que alguien la lleve desde en la mañana. Las dos son exterior, salen juntas. Junta este bloque con re-12, que también termina en la banqueta."
         },
         {
-          "hora": "10:57",
+          "hora": "11:07",
           "dur": "13 min",
           "titulo": "Las dos últimas de la R12",
           "slugs": [
@@ -59,14 +59,14 @@
           "nota": "ri-28 va a ciegas: no tiene miniatura y GetTranscribe no pudo bajarlo. Ábrelo antes del día o sácalo del plan."
         },
         {
-          "hora": "11:10",
+          "hora": "11:20",
           "dur": "15 min",
           "titulo": "Descanso",
           "tipo": "pausa",
           "nota": "Aquí se revisa audio y se arma el rack de la segunda mitad, que es la pesada en cambios de ropa."
         },
         {
-          "hora": "11:25",
+          "hora": "11:35",
           "dur": "25 min",
           "titulo": "Guion · mejores y peores inversiones del clóset",
           "slugs": [
@@ -76,7 +76,7 @@
           "nota": "Bianca no se cambia: cambian las prendas que muestra. Ten las 6 colgadas en orden de ranking, de peor a mejor, sobre un burro fuera de cuadro."
         },
         {
-          "hora": "11:50",
+          "hora": "12:00",
           "dur": "10 min",
           "titulo": "IA + transiciones · definir ejecución",
           "slugs": [
@@ -85,7 +85,7 @@
           "nota": "No se graba video, son fotos base. Mismo pipeline de 2 pasos del g-70: primero la imagen fija con la prenda real, después se anima."
         },
         {
-          "hora": "12:00",
+          "hora": "12:10",
           "dur": "70 min",
           "titulo": "Transiciones interiores, en bloque",
           "slugs": [
@@ -100,7 +100,7 @@
           "nota": "El orden de adentro importa: ri-32 y ri-33 comparten la MISMA bata, van pegadas. ri-31 ya lo grabaste en el bloque de juntas. Y ri-27 se deja al final porque su base giratoria se come todos los looks del día."
         },
         {
-          "hora": "13:10",
+          "hora": "13:20",
           "dur": "18 min",
           "titulo": "Transiciones exteriores",
           "slugs": [
@@ -110,7 +110,7 @@
           "nota": "re-11 es un solo look pero se ve entero y de cerca: tiene que estar impecable. re-12 cierra llegando a la tienda."
         },
         {
-          "hora": "13:28",
+          "hora": "13:38",
           "dur": "12 min",
           "titulo": "Colchón",
           "tipo": "pausa",
@@ -127,7 +127,7 @@
           "link": "https://www.instagram.com/reel/Db1C3xMRrhg/",
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-184123_6bbef7ad-da65-4fe0-bf35-ba5d54feafac/thumbnail.jpg",
           "outfit": {
-            "n": 2,
+            "n": 4,
             "estilo": "Elegancia de diario · blanco Cloud Dancer + hombro estructurado",
             "looks": [
               {
@@ -135,11 +135,19 @@
                 "p": "Bata de rizo crema o conjunto de punto color hueso, pelo suelto sin peinar, pies descalzos"
               },
               {
-                "t": "Después · arreglada",
-                "p": "Top corsetero o de hombro estructurado negro + pantalón blanco palazzo + botín de punta + arracadas doradas + bolsa estructurada"
+                "t": "Look principal · el del arreglo",
+                "p": "Top corsetero o de hombro estructurado negro + pantalón blanco palazzo + botín de punta + arracadas doradas + bolsa estructurada. Es el que aguanta todos los close ups"
+              },
+              {
+                "t": "Pretexto 2 · el café",
+                "p": "Jean barrel chocolate + knit crudo + botín. Arreglada de diario, sin evento"
+              },
+              {
+                "t": "Pretexto 3 · el martes",
+                "p": "Vestido midi de punto + gabardina camel + tacón bajo. El más sencillo de los tres"
               }
             ],
-            "nota": "El b-roll son puros close ups (zipper, labial, arete, tacón, espejo). El look tiene que aguantar acercamiento: costura limpia y prenda planchada. La voz en off se graba aparte."
+            "nota": "OJO: el guion pide \"tres cortes rápidos, tres outfits distintos\" en el desarrollo, así que son 3 looks armados + la bata del arranque, no 2. El b-roll son puros close ups (zipper, labial, arete, tacón, espejo): costura limpia y prenda planchada. La voz en off se graba aparte."
           }
         },
         {
