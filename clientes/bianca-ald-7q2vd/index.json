@@ -63,14 +63,14 @@
           "dur": "15 min",
           "titulo": "Descanso",
           "tipo": "pausa",
-          "nota": "Aquí se revisa audio y se arma el rack de la segunda mitad, que es la pesada en cambios de ropa."
+          "nota": "Aquí se revisa audio y se arma el rack de la segunda mitad, que es la pesada en cambios de ropa.",
+          "slugs": []
         },
         {
           "hora": "11:35",
           "dur": "25 min",
           "titulo": "Guion · mejores y peores inversiones del clóset",
           "slugs": [
-            "g-69",
             "vo-02"
           ],
           "nota": "Bianca no se cambia: cambian las prendas que muestra. Ten las 6 colgadas en orden de ranking, de peor a mejor, sobre un burro fuera de cuadro."
@@ -114,7 +114,8 @@
           "dur": "12 min",
           "titulo": "Colchón",
           "tipo": "pausa",
-          "nota": "Margen para repetir lo que haya salido mal. A diferencia de la R12, este día sí tiene holgura."
+          "nota": "Margen para repetir lo que haya salido mal. A diferencia de la R12, este día sí tiene holgura.",
+          "slugs": []
         }
       ],
       "guiones": [
@@ -148,30 +149,6 @@
               }
             ],
             "nota": "OJO: el guion pide \"tres cortes rápidos, tres outfits distintos\" en el desarrollo, así que son 3 looks armados más el de casa, no 2. El b-roll son puros close ups (zipper, labial, arete, tacón, espejo), así que lo que se vea tiene que estar planchado y con la costura limpia. La voz en off se graba aparte."
-          }
-        },
-        {
-          "slug": "g-69",
-          "titulo": "Las mejores y las peores inversiones de tu clóset",
-          "info": "60–70 seg · ranking peor→mejor · voz en off · hermano popular de g-13 (70/20/10) · comenta CLÓSET",
-          "grabado": false,
-          "categoria": "guion",
-          "link": "https://www.instagram.com/reel/DZp-35DxMBl/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-201005_cd637458-fe44-4767-9d1f-973a0cace037/thumbnail.jpg",
-          "outfit": {
-            "n": 1,
-            "estilo": "Un solo look · las protagonistas son las prendas que muestra",
-            "looks": [
-              {
-                "t": "Look único",
-                "p": "Liso y sin estampado, para que el ojo se vaya a la prenda que sostiene"
-              },
-              {
-                "t": "Muestrario (no se viste)",
-                "p": "6 prendas para el ranking, de peor a mejor inversión. Cuáles, lo eliges tú"
-              }
-            ],
-            "nota": "Aquí Bianca no se cambia: cambian las PRENDAS que muestra. Ten las 6 colgadas en orden de ranking sobre un burro fuera de cuadro."
           }
         },
         {
@@ -739,7 +716,8 @@
           "dur": "15 min",
           "titulo": "Descanso",
           "tipo": "pausa",
-          "nota": "Comer algo y retocar. Aprovechar para escuchar el audio de las dos primeras tomas antes de que se vaya el equipo."
+          "nota": "Comer algo y retocar. Aprovechar para escuchar el audio de las dos primeras tomas antes de que se vaya el equipo.",
+          "slugs": []
         }
       ]
     },
