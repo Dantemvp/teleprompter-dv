@@ -40,6 +40,10 @@ export default async function handler(req, res){
       const before = (rec.guiones || []).length;
       rec.guiones = (rec.guiones || []).filter(g => g.slug !== slug);
       if (rec.guiones.length < before) removed = true;
+      // Evita dejar referencias huérfanas en el orden de grabación.
+      (rec.timeline || []).forEach(block => {
+        block.slugs = (block.slugs || []).filter(s => s !== slug);
+      });
     });
     if (!removed) return res.status(404).send('Guion no encontrado en el índice');
 

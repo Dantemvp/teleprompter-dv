@@ -175,7 +175,8 @@
   .eaddrow .mini, .erowtop .mini{font-size:11px; padding:2px 9px;}
   .toolrow{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-bottom:18px;}
   pre.plain{white-space:pre-wrap; background:#fff; border:1px solid var(--line); border-radius:12px; padding:18px; font-size:14px; font-family:inherit;}
-  .card{background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 18px; margin-bottom:10px;}
+  .card{position:relative; background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 18px; margin-bottom:10px;}
+  .cardmain{padding-right:34px;}
   .card h3{font-size:15px; font-weight:600; margin-bottom:2px;}
   .card p{font-size:12px; color:var(--muted);}
   .card .actions{display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;}
@@ -183,8 +184,10 @@
   .donechip{display:none; font-size:11px; background:var(--teal-dark); color:#fff; padding:3px 9px; border-radius:6px; align-self:center; white-space:nowrap;}
   .card.done .donechip{display:inline-block;}
   .card.done .btnGrabado{background:var(--teal-dark); border-color:var(--teal-dark); color:#fff;}
-  .btnDel{color:#A32D2D; border-color:#F09595;}
+  .btnDel{color:#A32D2D; border-color:#F09595; background:#fff; font-weight:700;}
   .btnDel:hover{background:#FCEBEB;}
+  .cardDelete{position:absolute; top:10px; right:10px; z-index:2; width:30px; height:30px; padding:0; border-radius:50%; font-size:18px; line-height:1;}
+  .tlDelete{width:32px; padding-left:0!important; padding-right:0!important; font-size:17px!important; line-height:1;}
   .recblock{margin-bottom:26px;}
   .rechead{display:flex; align-items:baseline; gap:10px; margin-bottom:12px; border-bottom:1px solid var(--line); padding-bottom:6px;}
   .rechead h2{font-size:17px; font-weight:600;}
@@ -634,13 +637,15 @@ function renderTimeline(rec, token, codeOf, gi){
       // Se marca como grabado desde aquí mismo, sin bajar a la tarjeta de la categoría.
       const marcar = STATUS_ENDPOINT
         ? `<button class="mini btnGrabado" data-slug="${attr(c.slug)}" data-grabado="${c.grabado?1:0}">${c.grabado?'✓ Grabado':'Marcar grabado'}</button>` : '';
+      const del = (DELETE_ENDPOINT && isAdmin())
+        ? `<button class="mini btnDel tlDelete" data-slug="${attr(c.slug)}" data-cod="${attr(cod)}" data-title="${attr(c.titulo)}" title="Eliminar ${attr(cod)}" aria-label="Eliminar ${attr(cod)} · ${attr(c.titulo)}">×</button>` : '';
       // Las prendas van FUERA de .tlbody, a lo ancho de la tarjeta: junto a la miniatura
       // el espacio no alcanza y el texto se parte a media palabra en celular.
       return `<div class="tlitem${c.grabado?' off':''}" data-tlitem="${attr(c.slug)}">
         <div class="tlitemtop">${thumb}<div class="tlbody">
           <span class="tlcod">${esc(cod)}${c.grabado?' ✓':''}</span>
           <p class="tlname">${esc(c.titulo)}</p>
-          <div class="tlacts">${abrir}${ref}${marcar}</div>
+          <div class="tlacts">${abrir}${ref}${marcar}${del}</div>
         </div></div>
         ${renderOutfit(c)}
       </div>`;
@@ -712,7 +717,8 @@ function renderCard(it, token, ri, codArg){
   const cod = codArg || it.slug.toUpperCase();
   const esGuion = it.tipo !== 'ref' && !['trans-int','trans-ext','caminadora','juntas'].includes(it.categoria);   // .md abrible; transiciones y tarjetas de referencia (tipo:ref) solo llevan link. Un chusco CON guion (tipo:'md') sí se abre.
   const toggle = STATUS_ENDPOINT ? `<button class="mini btnGrabado" data-slug="${attr(it.slug)}" data-grabado="${it.grabado?1:0}">${it.grabado?'✓ Grabado':'Marcar grabado'}</button>` : '';
-  const del = (DELETE_ENDPOINT && isAdmin()) ? `<button class="mini btnDel" data-slug="${attr(it.slug)}" data-cod="${attr(cod)}">Eliminar</button>` : '';
+  const del = (DELETE_ENDPOINT && isAdmin())
+    ? `<button class="mini btnDel cardDelete" data-slug="${attr(it.slug)}" data-cod="${attr(cod)}" data-title="${attr(it.titulo)}" title="Eliminar ${attr(cod)}" aria-label="Eliminar ${attr(cod)} · ${attr(it.titulo)}">×</button>` : '';
   const founders = LOCUTORES[token];
   let effLoc = it.locutor || null;
   if (founders){ const ls = localStorage.getItem('dvloc:' + token + '/' + it.slug); if (ls !== null) effLoc = ls || null; }
@@ -724,9 +730,9 @@ function renderCard(it, token, ri, codArg){
   const ref = it.link ? `<a href="${attr(it.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
   const mover = (REC_NESTED[token] && isAdmin()) ? `<button class="mini btnMover" data-slug="${attr(it.slug)}">Mover ⇄</button>` : '';
   const preview = it.thumb ? `<details class="refpreview"><summary>👁 Ver preview</summary><img src="${attr(it.thumb)}" alt="preview de la referencia" loading="lazy"></details>` : '';
-  return `<div class="card${it.grabado?' done':''}" data-card="${attr(it.slug)}" data-rec="${ri}"><div style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}${loc}</h3><p>${esc(it.info||'')}</p></div><span class="donechip">✓ Grabado</span></div>
+  return `<div class="card${it.grabado?' done':''}" data-card="${attr(it.slug)}" data-rec="${ri}">${del}<div class="cardmain" style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}${loc}</h3><p>${esc(it.info||'')}</p></div><span class="donechip">✓ Grabado</span></div>
     ${cardLoc}
-    <div class="actions">${abrir}${ref}<button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${mover}${del}</div>${preview}${renderOutfit(it)}</div>`;
+    <div class="actions">${abrir}${ref}<button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${mover}</div>${preview}${renderOutfit(it)}</div>`;
 }
 let CLIENT_DATA = null, CLIENT_TOKEN = null;
 function renderClient(data, token){
@@ -900,8 +906,8 @@ function pickModal(title, groups){
 }
 
 async function deleteGuion(token, btn){
-  const slug = btn.dataset.slug, cod = btn.dataset.cod;
-  if (!confirm(`¿Eliminar ${cod}? Esto borra el guion del vault y no se puede deshacer.`)) return;
+  const slug = btn.dataset.slug, cod = btn.dataset.cod, title = btn.dataset.title || slug;
+  if (!confirm(`¿Eliminar ${cod} · ${title}? Esto borra el video del vault y no se puede deshacer.`)) return;
   const pw = await unlock('Contraseña para eliminar');
   if (!pw) return;
   const old = btn.textContent;
@@ -911,17 +917,12 @@ async function deleteGuion(token, btn){
     if (r.status === 401){ forgetPw(); throw new Error('Contraseña incorrecta'); }
     if (!r.ok) throw new Error(await r.text());
     // Sincroniza la memoria local para que un re-render posterior no resucite la tarjeta borrada.
-    if (CLIENT_DATA) (CLIENT_DATA.grabaciones||[]).forEach(rg => { rg.guiones = (rg.guiones||[]).filter(x => x.slug!==slug); });
-    const card = document.querySelector(`.card[data-card="${CSS.escape(slug)}"]`);
-    const ri = card && card.dataset.rec;
-    if (card) card.remove();
-    if (ri != null){
-      const cards = document.querySelectorAll(`.card[data-rec="${ri}"]`);
-      const d = [...cards].filter(c=>c.classList.contains('done')).length;
-      const cnt = document.querySelector(`.donecount[data-rec="${ri}"]`);
-      if (cnt) cnt.textContent = `${d}/${cards.length} grabados`;
-    }
-    toast('Guion eliminado ✓ (se actualiza en ~1 min)');
+    if (CLIENT_DATA) (CLIENT_DATA.grabaciones||[]).forEach(rg => {
+      rg.guiones = (rg.guiones||[]).filter(x => x.slug!==slug);
+      (rg.timeline||[]).forEach(block => { block.slugs = (block.slugs||[]).filter(x => x!==slug); });
+    });
+    rerenderPreservingState();
+    toast('Video eliminado ✓ (se actualiza en ~1 min)');
   } catch (e){
     btn.disabled = false; btn.textContent = old;
     toast('Error: ' + (e.message||e));
