@@ -95,6 +95,7 @@
   .tl{position:relative; padding:2px 0 6px 26px; margin:0;}
   .tl::before{content:''; position:absolute; left:7px; top:8px; bottom:14px; width:2px; background:var(--line); border-radius:2px;}
   .tlrow{position:relative; padding:0 0 18px;}
+  .tlrow.hasDelete{padding-right:42px;}
   .tlrow::before{content:''; position:absolute; left:-24px; top:6px; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid var(--teal); box-sizing:border-box;}
   .tlrow.done::before{background:var(--teal);}
   .tlrow.pausa::before{border-color:var(--muted); background:var(--gray-bg);}
@@ -188,6 +189,7 @@
   .btnDel:hover{background:#FCEBEB;}
   .cardDelete{position:absolute; top:10px; right:10px; z-index:2; width:30px; height:30px; padding:0; border-radius:50%; font-size:18px; line-height:1;}
   .tlDelete{width:32px; padding-left:0!important; padding-right:0!important; font-size:17px!important; line-height:1;}
+  .tlBlockDelete{position:absolute; top:0; right:0; z-index:2; width:32px; height:32px; padding:0; border-radius:50%; font-size:18px; line-height:1;}
   .recblock{margin-bottom:26px;}
   .rechead{display:flex; align-items:baseline; gap:10px; margin-bottom:12px; border-bottom:1px solid var(--line); padding-bottom:6px;}
   .rechead h2{font-size:17px; font-weight:600;}
@@ -618,7 +620,7 @@ function renderOutfit(it){
 function renderTimeline(rec, token, codeOf, gi){
   const tl = rec.timeline;
   if (!tl || !tl.length) return '';
-  const rows = tl.map(b => {
+  const rows = tl.map((b, bi) => {
     const slugs = b.slugs || [];
     const cards = slugs.map(sl => (rec.guiones||[]).find(x => x.slug === sl)).filter(Boolean);
     const done  = cards.length ? cards.every(c => c.grabado) : false;
@@ -652,8 +654,10 @@ function renderTimeline(rec, token, codeOf, gi){
     }).join('');
     const prog = cards.length > 1 ? `<span class="tlprog">${cards.filter(c=>c.grabado).length}/${cards.length}</span>` : '';
     const nota = b.nota ? `<p class="tlnota${b.warn?' warn':''}">${esc(b.nota)}</p>` : '';
-    const cls = ['tlrow', b.tipo || '', done ? 'done' : ''].filter(Boolean).join(' ');
-    return `<div class="${cls}">
+    const delBlock = isAdmin()
+      ? `<button class="mini btnDel tlBlockDelete" data-rec="${attr(rec.rec)}" data-index="${bi}" data-title="${attr(b.titulo||'Bloque')}" title="Eliminar este bloque del horario" aria-label="Eliminar bloque ${attr(b.titulo||'del horario')}">×</button>` : '';
+    const cls = ['tlrow', b.tipo || '', done ? 'done' : '', delBlock ? 'hasDelete' : ''].filter(Boolean).join(' ');
+    return `<div class="${cls}">${delBlock}
       <div class="tlhead"><span class="tlhora">${esc(b.hora||'')}</span>${b.dur?`<span class="tldur">${esc(b.dur)}</span>`:''}${prog}</div>
       <p class="tltit">${esc(b.titulo||'')}</p>
       ${chips?`<div class="tlcods">${chips}</div>`:''}
@@ -792,6 +796,7 @@ function renderClient(data, token){
   document.querySelectorAll('.btnDel').forEach(b => b.onclick = () => deleteGuion(token, b));
   document.querySelectorAll('.cardloc').forEach(b => b.onclick = () => setLocutorCard(token, b));
   document.querySelectorAll('.btnMover').forEach(b => b.onclick = () => moveItemUI(b.dataset.slug));
+  document.querySelectorAll('.tlBlockDelete').forEach(b => b.onclick = () => deleteTimelineBlockUI(b));
   const nr = $('#newRecBtn'); if (nr) nr.onclick = () => newRecUI();
   wireLock();
   applyOpenState(); wireOpenPersist();
@@ -879,6 +884,17 @@ async function moveItemUI(slug){
     if (item){ if (pick.categoria) item.categoria = pick.categoria; const t=(CLIENT_DATA.grabaciones||[]).find(g=>g.rec===pick.toRec); if(t){ t.guiones=t.guiones||[]; t.guiones.push(item); } }
     rerenderPreservingState();
   }
+}
+async function deleteTimelineBlockUI(btn){
+  const rec = btn.dataset.rec;
+  const timelineIndex = Number(btn.dataset.index);
+  const title = btn.dataset.title || 'Bloque del horario';
+  if (!confirm(`¿Quitar “${title}” del orden de grabación? Los videos asociados no se borrarán.`)) return;
+  const ok = await orgCall({ action:'delete-timeline', rec, timelineIndex, timelineTitle:title }, 'Bloque eliminado');
+  if (!ok || !CLIENT_DATA) return;
+  const target = (CLIENT_DATA.grabaciones||[]).find(g => g.rec === rec);
+  if (target && Array.isArray(target.timeline)) target.timeline.splice(timelineIndex, 1);
+  rerenderPreservingState();
 }
 // Modal genérico de selección: groups = [{name, title, options:[{value,label}], selected} | {name,title,input:true,placeholder}]
 function pickModal(title, groups){

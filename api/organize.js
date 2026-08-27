@@ -1,5 +1,5 @@
 // Vercel serverless function — organiza el index.json de un cliente.
-// Acciones: "add-rec" (crear una grabación nueva) y "move" (mover un guion a otra grabación y/o categoría).
+// Acciones: "add-rec", "move" y "delete-timeline" (quitar un bloque del orden de grabación).
 // Mismas env vars que save.js/status.js: GH_TOKEN, GH_REPO, EDIT_PASSWORD, (opcional) ALLOW_ORIGIN
 
 export default async function handler(req, res){
@@ -13,7 +13,7 @@ export default async function handler(req, res){
 
   let body = req.body;
   if (typeof body === 'string') { try { body = JSON.parse(body); } catch { body = {}; } }
-  const { password, client, action, rec, nombre, slug, toRec, categoria } = body || {};
+  const { password, client, action, rec, nombre, slug, toRec, categoria, timelineIndex, timelineTitle } = body || {};
 
   if (!process.env.EDIT_PASSWORD || password !== process.env.EDIT_PASSWORD)
     return res.status(401).send('Contraseña incorrecta');
@@ -59,6 +59,16 @@ export default async function handler(req, res){
         target.guiones = target.guiones || [];
         target.guiones.push(item);
         msg = `Mover ${client}/${slug} → ${toRec}${categoria ? (' [' + categoria + ']') : ''}`;
+      } else if (action === 'delete-timeline') {
+        const target = data.grabaciones.find(g => g.rec === rec);
+        if (!target) return res.status(404).send('La grabación no existe');
+        if (!Number.isInteger(timelineIndex) || timelineIndex < 0 || timelineIndex >= (target.timeline || []).length)
+          return res.status(400).send('Bloque de horario inválido');
+        const block = target.timeline[timelineIndex];
+        if (String(block.titulo || '') !== String(timelineTitle || ''))
+          return res.status(409).send('El orden de grabación cambió; recarga e inténtalo de nuevo');
+        target.timeline.splice(timelineIndex, 1);
+        msg = `Quitar bloque de horario ${client}/${rec}: ${String(block.titulo || '').slice(0, 80)}`;
       } else {
         return res.status(400).send('Acción inválida');
       }
