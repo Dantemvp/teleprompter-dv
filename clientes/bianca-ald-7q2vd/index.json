@@ -70,9 +70,7 @@
           "hora": "11:35",
           "dur": "25 min",
           "titulo": "Guion · mejores y peores inversiones del clóset",
-          "slugs": [
-            "vo-02"
-          ],
+          "slugs": [],
           "nota": "Bianca no se cambia: cambian las prendas que muestra. Ten las 6 colgadas en orden de ranking, de peor a mejor, sobre un burro fuera de cuadro."
         },
         {
@@ -171,16 +169,6 @@
             ],
             "nota": "No se graba video, son fotos. Mismo pipeline de 2 pasos del g-70: primero la imagen fija con la prenda REAL, después se anima. Falta que definas la ejecución."
           }
-        },
-        {
-          "slug": "vo-02",
-          "titulo": "Referencia de estructura (la que mandó Bianca)",
-          "info": "ranking peor→mejor con voz en off · OJO: el original habla de inversiones de dinero, se adapta a clóset en g-69",
-          "grabado": false,
-          "categoria": "viral-organica",
-          "tipo": "ref",
-          "link": "https://www.instagram.com/reel/DZp-35DxMBl/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-201005_cd637458-fe44-4767-9d1f-973a0cace037/thumbnail.jpg"
         },
         {
           "slug": "g-58",
