@@ -69,9 +69,11 @@
         {
           "hora": "11:35",
           "dur": "25 min",
-          "titulo": "Guion · mejores y peores inversiones del clóset",
-          "slugs": [],
-          "nota": "Bianca no se cambia: cambian las prendas que muestra. Ten las 6 colgadas en orden de ranking, de peor a mejor, sobre un burro fuera de cuadro."
+          "titulo": "Mini vlog dentro del video",
+          "slugs": [
+            "vo-03"
+          ],
+          "nota": "Un look base. Graba a Bianca a cámara y varios clips verticales cortos de la jornada para colocarlos dentro del recuadro flotante. El efecto se construye en edición; aquí hay que salir con suficientes inserts."
         },
         {
           "hora": "12:00",
@@ -168,6 +170,26 @@
               }
             ],
             "nota": "No se graba video, son fotos. Mismo pipeline de 2 pasos del g-70: primero la imagen fija con la prenda REAL, después se anima. Falta que definas la ejecución."
+          }
+        },
+        {
+          "slug": "vo-03",
+          "titulo": "Mini vlog dentro del video",
+          "info": "referencia de edición · clips del día en recuadro flotante · grabar suficientes inserts verticales",
+          "grabado": false,
+          "categoria": "viral-organica",
+          "tipo": "ref",
+          "link": "https://www.instagram.com/reel/DcCqHxBO3hv/",
+          "outfit": {
+            "n": 1,
+            "estilo": "Un look base · el recurso vive en los inserts",
+            "looks": [
+              {
+                "t": "Look principal",
+                "p": "El que Bianca ya esté usando a mitad de la jornada; no requiere un cambio exclusivo"
+              }
+            ],
+            "nota": "La referencia enseña el montaje en edición. Durante la grabación necesitamos el plano principal de Bianca y una colección de clips cortos del día para llenar el recuadro tipo mini vlog."
           }
         },
         {
