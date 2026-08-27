@@ -128,26 +128,26 @@
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-184123_6bbef7ad-da65-4fe0-bf35-ba5d54feafac/thumbnail.jpg",
           "outfit": {
             "n": 4,
-            "estilo": "Elegancia de diario · blanco Cloud Dancer + hombro estructurado",
+            "estilo": "Arreglada de diario, sin evento",
             "looks": [
               {
-                "t": "Antes · casa",
-                "p": "Bata de rizo crema o conjunto de punto color hueso, pelo suelto sin peinar, pies descalzos"
+                "t": "Inicio · en casa",
+                "p": "Relajado, recién levantada, sin arreglar"
               },
               {
-                "t": "Look principal · el del arreglo",
-                "p": "Top corsetero o de hombro estructurado negro + pantalón blanco palazzo + botín de punta + arracadas doradas + bolsa estructurada. Es el que aguanta todos los close ups"
+                "t": "Look principal",
+                "p": "El más producido del día. Es el que aguanta todos los close ups, cárgale accesorios"
               },
               {
-                "t": "Pretexto 2 · el café",
-                "p": "Jean barrel chocolate + knit crudo + botín. Arreglada de diario, sin evento"
+                "t": "Pretexto 2",
+                "p": "Arreglado pero de diario"
               },
               {
-                "t": "Pretexto 3 · el martes",
-                "p": "Vestido midi de punto + gabardina camel + tacón bajo. El más sencillo de los tres"
+                "t": "Pretexto 3",
+                "p": "El más sencillo de los tres"
               }
             ],
-            "nota": "OJO: el guion pide \"tres cortes rápidos, tres outfits distintos\" en el desarrollo, así que son 3 looks armados + la bata del arranque, no 2. El b-roll son puros close ups (zipper, labial, arete, tacón, espejo): costura limpia y prenda planchada. La voz en off se graba aparte."
+            "nota": "OJO: el guion pide \"tres cortes rápidos, tres outfits distintos\" en el desarrollo, así que son 3 looks armados más el de casa, no 2. El b-roll son puros close ups (zipper, labial, arete, tacón, espejo), así que lo que se vea tiene que estar planchado y con la costura limpia. La voz en off se graba aparte."
           }
         },
         {
@@ -160,15 +160,15 @@
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-201005_cd637458-fe44-4767-9d1f-973a0cace037/thumbnail.jpg",
           "outfit": {
             "n": 1,
-            "estilo": "Uniforme neutro a cuadro · protagonistas son las prendas",
+            "estilo": "Un solo look · las protagonistas son las prendas que muestra",
             "looks": [
               {
-                "t": "Bianca a cuadro",
-                "p": "Total black liso: playera de cuello alto + pantalón sastre negro + cinturón fino. Sin estampado, para que el ojo se vaya a la prenda que sostiene"
+                "t": "Look único",
+                "p": "Liso y sin estampado, para que el ojo se vaya a la prenda que sostiene"
               },
               {
                 "t": "Muestrario (no se viste)",
-                "p": "6 prendas en la mano para el ranking. De peor a mejor: la de moda pasajera → sintético que hace bolitas → prenda de talla incorrecta → jean barrel chocolate → blazer de hombro estructurado → botín de piel"
+                "p": "6 prendas para el ranking, de peor a mejor inversión. Cuáles, lo eliges tú"
               }
             ],
             "nota": "Aquí Bianca no se cambia: cambian las PRENDAS que muestra. Ten las 6 colgadas en orden de ranking sobre un burro fuera de cuadro."
@@ -189,7 +189,7 @@
             "looks": [
               {
                 "t": "Foto base",
-                "p": "Look monocromático sin estampado, de cuerpo completo, contra pared lisa. La IA respeta mejor el color plano que el print"
+                "p": "Un solo color, sin estampado, de cuerpo completo contra pared lisa. Es requisito del pipeline: la IA respeta mejor el color plano que el print"
               }
             ],
             "nota": "No se graba video, son fotos. Mismo pipeline de 2 pasos del g-70: primero la imagen fija con la prenda REAL, después se anima. Falta que definas la ejecución."
@@ -216,11 +216,11 @@
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183123_c094a8e2-b9e5-47ca-bfef-dce2e8df7aa5/thumbnail.jpg",
           "outfit": {
             "n": 1,
-            "estilo": "Casual relatable · como llega la clienta",
+            "estilo": "Casual, como llega la clienta",
             "looks": [
               {
                 "t": "Look único",
-                "p": "Jean de pierna ancha + playera básica + tenis. Deliberadamente sencillo: el chusco funciona si se ve cotidiano"
+                "p": "Deliberadamente sencillo. El chusco funciona si se ve cotidiano"
               }
             ],
             "nota": "Viene arrastrando desde la R11. Es el que cierra con CTA a tienda."
@@ -236,18 +236,18 @@
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183120_dce42a03-635a-4918-8e47-38efbfc53bc5/thumbnail.jpg",
           "outfit": {
             "n": 5,
-            "estilo": "Vitrina giratoria · escaparate de looks",
+            "estilo": "Vitrina giratoria · un look por vuelta",
             "looks": [
               {
                 "t": "Formato",
-                "p": "Base giratoria y un look por vuelta. La referencia son 5 looks completos con bolsa y calzado incluidos"
+                "p": "5 vueltas, un look completo por vuelta, con calzado y bolsa dentro de cuadro"
               },
               {
-                "t": "Sugeridos",
-                "p": "Vestido midi estampado + bolsa de rafia · Monocromático camel de gamuza · Jean barrel chocolate + knit crudo · Falda de lentejuelas + suéter oversize · Total white con botín alto"
+                "t": "Cuáles",
+                "p": "Los que ya usaste en el día. Por eso va al final: no pide un solo cambio extra"
               }
             ],
-            "nota": "ESTA ES LA PALANCA DEL DÍA: es una sola armada de cámara que se come todos los looks. Déjala AL FINAL y pasa por la base giratoria cada outfit que ya se usó en las otras piezas. Cero cambios extra de ropa."
+            "nota": "ESTA ES LA PALANCA DEL DÍA: es una sola armada de cámara que se come todos los looks. Déjala AL FINAL y pasa por la base giratoria cada outfit que ya se haya usado."
           }
         },
         {
@@ -279,11 +279,11 @@
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183117_181925e6-e5af-4744-85a1-aef1caa965b1/thumbnail.jpg",
           "outfit": {
             "n": 1,
-            "estilo": "Glam beauty · el reveal es el pelo, no la ropa",
+            "estilo": "Plano cerrado · el reveal es el pelo, no la ropa",
             "looks": [
               {
                 "t": "Look único",
-                "p": "Escote sencillo que no compita con el rostro: halter o cuello redondo en tono nude o negro. Arete grande, pelo con ondas marcadas"
+                "p": "Escote sencillo que no le compita al rostro. Aquí sí carga los aretes, es lo único que se alcanza a ver"
               }
             ],
             "nota": "Es plano cerrado de cara y pelo. No gastes un outfit bueno aquí, se ve del pecho para arriba."
@@ -299,18 +299,18 @@
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183621_7ecfe4a2-0885-4623-9514-457d269c4e93/thumbnail.jpg",
           "outfit": {
             "n": 2,
-            "estilo": "Romántico urbano · el tropiezo dispara el cambio",
+            "estilo": "El tropiezo dispara el cambio",
             "looks": [
               {
-                "t": "Antes",
-                "p": "Vestido vino o ciruela de punto + zapato bajo. Cómodo, porque hay movimiento brusco"
+                "t": "Antes de la transición",
+                "p": "Cómodo y de tela que perdone la caída, porque hay movimiento brusco"
               },
               {
-                "t": "Después",
-                "p": "Vestido satinado con volante o transparencia sutil + tacón + labial marcado"
+                "t": "Después de la transición",
+                "p": "Arreglado y con más brillo. El contraste es el chiste"
               }
             ],
-            "nota": "Hay un tropiezo actuado. Que el primer look sea de tela que perdone la caída, y que nadie se lastime: piso seco y zapato bajo en la toma del accidente."
+            "nota": "Hay un tropiezo actuado. Que el primer look aguante el movimiento y que nadie se lastime: piso seco y zapato bajo en la caída."
           }
         },
         {
@@ -326,15 +326,15 @@
             "estilo": "De casa a salir, en dueto · Bianca + Mary",
             "looks": [
               {
-                "t": "Antes (las dos)",
-                "p": "Playera holgada y shorts, o toalla en la cabeza. Cara lavada"
+                "t": "Antes · las dos",
+                "p": "De casa, cara lavada"
               },
               {
-                "t": "Después (las dos)",
-                "p": "Dos looks de noche que dialoguen sin ser iguales: una en satín oscuro, la otra en lentejuelas o encaje. Misma familia de color"
+                "t": "Después · las dos",
+                "p": "Las dos de noche, que dialoguen entre sí sin ser iguales"
               }
             ],
-            "nota": "ENCADENA con jun-01 y jun-02: son las mismas dos personas y el mismo vestidor. Grábalas seguidas aunque en la lista estén separadas y te ahorras dos cambios completos."
+            "nota": "ENCADENA con jun-01 y jun-02: son las mismas dos personas y el mismo vestidor. Grábalas seguidas aunque en la lista estén separadas."
           }
         },
         {
@@ -347,18 +347,18 @@
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200939_b41c5de9-0528-486a-9eb5-7b13e7813dd2/thumbnail.jpg",
           "outfit": {
             "n": 2,
-            "estilo": "Bata → vestido · espejo de cuerpo completo",
+            "estilo": "De casa a lista · espejo de cuerpo completo",
             "looks": [
               {
-                "t": "Antes",
-                "p": "Bata blanca de rizo + pantuflas peludas"
+                "t": "Antes de la transición",
+                "p": "De casa, recién salida del baño"
               },
               {
-                "t": "Después",
-                "p": "Vestido largo negro con abertura o escote cruzado + sandalia de tacón + bolsa mini"
+                "t": "Después de la transición",
+                "p": "Look de noche completo"
               }
             ],
-            "nota": "Misma bata que ri-33. Grábalas pegadas: una sola puesta de bata, dos salidas distintas."
+            "nota": "Comparte la prenda de inicio con ri-33. Grábalas pegadas: una sola puesta, dos salidas distintas."
           }
         },
         {
@@ -371,15 +371,15 @@
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200939_1d4305c0-de2f-4a98-b271-014160ee8d2b/thumbnail.jpg",
           "outfit": {
             "n": 2,
-            "estilo": "Bata → salida completa · sale de cuadro",
+            "estilo": "De casa a salir · sale de cuadro",
             "looks": [
               {
-                "t": "Antes",
-                "p": "La MISMA bata blanca de ri-32"
+                "t": "Antes de la transición",
+                "p": "La MISMA prenda de inicio que ri-32"
               },
               {
-                "t": "Después",
-                "p": "Abrigo oversize o gabardina camel + bolsa estructurada negra + botín. Look de calle, no de fiesta"
+                "t": "Después de la transición",
+                "p": "Look de calle completo, con bolsa. De día, no de fiesta"
               }
             ],
             "nota": "Es el gemelo de ri-32. La diferencia es que este termina en look de día y sale caminando de cuadro."
@@ -395,18 +395,18 @@
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200945_ca8f0fc5-3a49-40c3-8a14-2f6f04e50ef9/thumbnail.jpg",
           "outfit": {
             "n": 2,
-            "estilo": "Monocromático a color · lila de arriba a abajo",
+            "estilo": "Monocromático a color",
             "looks": [
               {
-                "t": "Antes",
-                "p": "Look neutro apagado (beige o gris) para que el contraste pegue"
+                "t": "Antes de la transición",
+                "p": "Neutro apagado, para que el contraste pegue"
               },
               {
-                "t": "Después",
-                "p": "Monocromático completo: top de volante a un hombro + falda midi con abertura + sandalia de tacón en tono contrastante. La referencia va en lila con magenta"
+                "t": "Después de la transición",
+                "p": "Un solo color de arriba a abajo. Cuál, lo eliges tú"
               }
             ],
-            "nota": "El monocromático a color es de lo que más está corriendo. Si no tienes lila, funciona igual en chocolate, vino o verde botella. Lo que no se vale es romper la gama."
+            "nota": "El monocromático a color es de lo que más está corriendo. Lo que importa es que sea un color parejo de arriba a abajo; cuál sea da igual, agarra el que tengas completo."
           }
         },
         {
@@ -423,10 +423,10 @@
             "looks": [
               {
                 "t": "Look único",
-                "p": "Bomber o chamarra camel + camisa blanca + pantalón ancho en color fuerte (rojo, en la referencia) + bolsa negra + lentes"
+                "p": "Se ve entero y de cerca, así que tiene que estar impecable. Un acento de color que amarre el cuadro"
               }
             ],
-            "nota": "El audio va dictando la pose: gira, posa, toma el cafecito. Es un solo look pero se ve entero y de cerca, así que tiene que estar impecable. Exterior."
+            "nota": "El audio va dictando la pose: gira, posa, toma el cafecito. Es un solo look pero se ve completo, no lo dejes al final del día."
           }
         },
         {
@@ -439,15 +439,15 @@
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-184457_14fdf8e8-e05d-4376-ade3-068e36c580d2/thumbnail.jpg",
           "outfit": {
             "n": 2,
-            "estilo": "Del celular a la tienda · conjunto de punto",
+            "estilo": "Del celular a la tienda",
             "looks": [
               {
                 "t": "Antes · en casa",
-                "p": "Ropa de estar, celular en la mano, cara de fastidio"
+                "p": "Ropa de estar, cara de fastidio"
               },
               {
                 "t": "Después · llegando",
-                "p": "Conjunto de punto en tono claro (la referencia va en azul lavanda) + sandalia + bolsas de la tienda en las manos"
+                "p": "Arreglada de día, con bolsas de la tienda en la mano"
               }
             ],
             "nota": "La segunda mitad se graba en la banqueta de la tienda. Aprovecha que ya vas a estar afuera para el bloque de sombrilla."
@@ -466,12 +466,12 @@
             "estilo": "Exterior con sombrilla · la sombrilla tapa el corte",
             "looks": [
               {
-                "t": "Antes",
-                "p": "Look de día: jean ancho + knit + tenis"
+                "t": "Antes de la transición",
+                "p": "De día, casual"
               },
               {
-                "t": "Después",
-                "p": "Look armado: vestido midi o conjunto sastre + tacón"
+                "t": "Después de la transición",
+                "p": "Armado, bastante más producido. El salto tiene que leerse en un segundo"
               }
             ],
             "nota": "☂️ NECESITAMOS SOMBRILLA. Que alguien la lleve desde en la mañana. Es el objeto que tapa el corte, sin ella no hay transición."
@@ -487,15 +487,15 @@
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-200950_55a481bf-12a4-4fe4-af38-751f89ee805b/thumbnail.jpg",
           "outfit": {
             "n": 2,
-            "estilo": "Sombrilla, variante casual · oversize + denim claro",
+            "estilo": "Sombrilla, variante casual",
             "looks": [
               {
-                "t": "Antes",
-                "p": "Playera oversize chocolate + jean claro de pierna ancha + tenis"
+                "t": "Antes de la transición",
+                "p": "Casual y holgado"
               },
               {
-                "t": "Después",
-                "p": "Cambio a gamuza: chamarra o falda de ante camel + botín"
+                "t": "Después de la transición",
+                "p": "Cambio de textura más que de color. Que se note el salto en cámara"
               }
             ],
             "nota": "Misma sombrilla y misma locación que re-13. Salen juntas, se graban seguidas."
@@ -515,14 +515,14 @@
             "looks": [
               {
                 "t": "Formato",
-                "p": "Caminadora encendida y un corte por look. Mínimo 3, ideal 4"
+                "p": "Un corte por look. Mínimo 3, ideal 4"
               },
               {
-                "t": "Sugeridos",
-                "p": "Halter de animal print + falda mini negra + medias + botín de punta · Vestido de lentejuelas + tacón · Total black con hombro estructurado + botín alto"
+                "t": "Cuáles",
+                "p": "Los más producidos del día. Es pasarela, aquí sí van los de noche"
               }
             ],
-            "nota": "Monta la caminadora ANTES de arrancar el día, no en el momento. Zapato firme: se camina de verdad. Si el tacón no aguanta, se hace de la rodilla para arriba."
+            "nota": "Monta la caminadora ANTES de arrancar el día, no en el momento. Zapato firme: se camina de verdad, y si el tacón no aguanta se hace descalza o con otro calzado."
           }
         },
         {
@@ -539,11 +539,11 @@
             "looks": [
               {
                 "t": "Bianca",
-                "p": "Pantalón sastre + blusa de satín en tono tierra"
+                "p": "Una gama en común con Mary, prenda distinta"
               },
               {
                 "t": "Mary",
-                "p": "Vestido o falda midi en la misma gama tierra. Que se lean como conjunto sin ser copia"
+                "p": "Que se lean como conjunto sin ser copia"
               }
             ],
             "nota": "Encadena con jun-02 y ri-31: son las mismas dos personas, se graban las tres seguidas."
@@ -563,7 +563,7 @@
             "looks": [
               {
                 "t": "Bianca y Mary, igual",
-                "p": "Body o top blanco de tirante ancho + jean de pierna ancha con dobladillo volteado + tacón nude. Exactamente el mismo look en las dos"
+                "p": "Exactamente el mismo look en las dos. La gracia es el twinning, no que combinen"
               }
             ],
             "nota": "A este le fue muy bien y el motivo es el twinning: la gracia es que van vestidas IGUAL. Necesitas la prenda en dos tallas. Confírmalo antes del día."

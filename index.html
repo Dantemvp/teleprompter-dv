@@ -592,6 +592,12 @@ function itemsForCat(list, key, known){
 // ---- Prendas sugeridas ----
 // Lee it.outfit = {n, estilo, looks:[{t,p}], nota}. `n` = cuántos looks COMPLETOS
 // (cambios de ropa) necesita la pieza; con eso se arma el rack antes del día.
+//
+// REGLA: esto va a nivel CONCEPTO, nunca prenda específica. `t` dice en qué
+// momento va el cambio (inicio, final, antes/después de la transición) y `p`
+// dice el concepto (relajado, arreglado, de casa, de noche) más accesorios si
+// la referencia se apoya en ellos. Bianca elige la prenda, nosotros no se la
+// imponemos. Si alguien vuelve a meter marcas, colores y cortes aquí, va fuera.
 function renderOutfit(it){
   const o = it.outfit;
   if (!o) return '';
