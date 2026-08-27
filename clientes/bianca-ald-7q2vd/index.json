@@ -13,9 +13,7 @@
           "hora": "10:00",
           "dur": "30 min",
           "titulo": "Guion · arreglarse para nada en especial",
-          "slugs": [
-            "g-63"
-          ],
+          "slugs": [],
           "nota": "El que se brincaron en la R12. Voz en off aparte; aquí solo el b-roll del arreglo. Son 3 outfits distintos para los cortes rápidos del desarrollo, más la bata del arranque: arranca el día en bata para que el \"antes\" ya esté puesto."
         },
         {
@@ -119,38 +117,6 @@
         }
       ],
       "guiones": [
-        {
-          "slug": "g-63",
-          "titulo": "Arreglarse para nada en especial",
-          "info": "40–50 seg · VOZ EN OFF sobre b-roll de Bianca y/o Mary arreglándose · Confianza Radical",
-          "grabado": false,
-          "categoria": "guion",
-          "link": "https://www.instagram.com/reel/Db1C3xMRrhg/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-184123_6bbef7ad-da65-4fe0-bf35-ba5d54feafac/thumbnail.jpg",
-          "outfit": {
-            "n": 4,
-            "estilo": "Arreglada de diario, sin evento",
-            "looks": [
-              {
-                "t": "Inicio · en casa",
-                "p": "Relajado, recién levantada, sin arreglar"
-              },
-              {
-                "t": "Look principal",
-                "p": "El más producido del día. Es el que aguanta todos los close ups, cárgale accesorios"
-              },
-              {
-                "t": "Pretexto 2",
-                "p": "Arreglado pero de diario"
-              },
-              {
-                "t": "Pretexto 3",
-                "p": "El más sencillo de los tres"
-              }
-            ],
-            "nota": "OJO: el guion pide \"tres cortes rápidos, tres outfits distintos\" en el desarrollo, así que son 3 looks armados más el de casa, no 2. El b-roll son puros close ups (zipper, labial, arete, tacón, espejo), así que lo que se vea tiene que estar planchado y con la costura limpia. La voz en off se graba aparte."
-          }
-        },
         {
           "slug": "g-71",
           "titulo": "IA + transiciones · concepto a explorar",
