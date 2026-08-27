@@ -10,13 +10,6 @@
       "ventana": "10:00 – 13:50 · 3 h 50 min · orden provisional",
       "timeline": [
         {
-          "hora": "10:00",
-          "dur": "30 min",
-          "titulo": "Guion · arreglarse para nada en especial",
-          "slugs": [],
-          "nota": "El que se brincaron en la R12. Voz en off aparte; aquí solo el b-roll del arreglo. Son 3 outfits distintos para los cortes rápidos del desarrollo, más la bata del arranque: arranca el día en bata para que el \"antes\" ya esté puesto."
-        },
-        {
           "hora": "10:30",
           "dur": "15 min",
           "titulo": "Transiciones juntas",
