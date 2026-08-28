@@ -413,8 +413,11 @@ function renderGuion(g, canonical, backHref, opts){
   const refPrivate = opts.client && REF_PRIVATE[opts.client];      // clientes donde la referencia es solo para el estratega
   const canSeeRef = !refPrivate || isAdmin();       // logueado (equipo reconocido) la ve; lector público no
   const thumbBlock = (opts.thumb && canSeeRef) ? `<details class="refpreview"><summary>👁 Ver preview</summary><img src="${attr(opts.thumb)}" alt="preview de la referencia" loading="lazy"></details>` : '';
-  const refblock = (g.ref && canSeeRef)
-    ? `<div class="refbar refreel"><span>🎬 Reel de referencia:</span> <a href="${attr(g.ref)}" target="_blank" rel="noopener">Ver inspiración ↗</a> <button class="mini" onclick="copy('${g.ref.replace(/'/g,"\\'")}','Link copiado')">Copiar</button>${thumbBlock}</div>`
+  // La referencia siempre va clickeable. Si el guion no la trae en su encabezado, la tomamos
+  // del index.json — antes esos guiones solo mostraban la miniatura, sin liga para abrirla.
+  const refUrl = g.ref || opts.ref || null;
+  const refblock = (refUrl && canSeeRef)
+    ? `<div class="refbar refreel"><span>🎬 Reel de referencia:</span> <a href="${attr(refUrl)}" target="_blank" rel="noopener">Ver inspiración ↗</a> <button class="mini" onclick="copy('${refUrl.replace(/'/g,"\\'")}','Link copiado')">Copiar</button>${thumbBlock}</div>`
     : (thumbBlock ? `<div class="refbar refreel"><span>🎬 Referencia:</span>${thumbBlock}</div>` : '');
   const founders = (opts.client && LOCUTORES[opts.client]) ? LOCUTORES[opts.client] : null;
   const locbar = founders ? `<div class="refbar locbar"><span>🎙️ Locutor:</span> ${founders.map(n=>`<button class="mini locpick${opts.locutor===n?' on':''}" data-loc="${attr(n)}">${esc(n)}</button>`).join(' ')} ${opts.locutor?'':'<span style="color:var(--muted)">sin asignar</span>'}</div>` : '';
@@ -1199,16 +1202,16 @@ async function boot(){
       if (override && (override.trim() === fetched.trim() || (Date.now() - ots) > 600000)){
         localStorage.removeItem(localKey); localStorage.removeItem(localKey + ':t'); override = null;
       }
-      let locutor = null, thumb = null;
+      let locutor = null, thumb = null, ref = null;
       try{
         const ix = await (await fetch('clientes/' + c + '/index.json?t=' + Date.now())).json();
-        (ix.grabaciones||[]).forEach(rec => (rec.guiones||[]).forEach(it => { if (it.slug === g){ if (it.locutor) locutor = it.locutor; if (it.thumb) thumb = it.thumb; } }));
+        (ix.grabaciones||[]).forEach(rec => (rec.guiones||[]).forEach(it => { if (it.slug === g){ if (it.locutor) locutor = it.locutor; if (it.thumb) thumb = it.thumb; if (it.ref) ref = it.ref; } }));
       }catch(e){}
       if (LOCUTORES[c]){
         const local = localStorage.getItem('dvloc:' + c + '/' + g);
         if (local !== null) locutor = local || null;
       }
-      renderGuion(parseGuion(override || fetched), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: false, locutor, thumb});
+      renderGuion(parseGuion(override || fetched), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: false, locutor, thumb, ref});
       return;
     }catch(e){ $('#app').innerHTML = '<p style="padding:40px 0">Guion no encontrado. Revisa el link con tu estratega.</p>'; return; }
   }
