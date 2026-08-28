@@ -219,7 +219,7 @@
           "slug": "ri-29",
           "titulo": "Transición INT 29",
           "info": "transición interior · referencia",
-          "grabado": false,
+          "grabado": true,
           "categoria": "trans-int",
           "link": "https://www.instagram.com/reel/Db6DJsYtC9e/",
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260820-183117_181925e6-e5af-4744-85a1-aef1caa965b1/thumbnail.jpg",
