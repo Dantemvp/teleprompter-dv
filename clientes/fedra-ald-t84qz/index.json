@@ -2,6 +2,21 @@
   "cliente": "Dra. Fedra Aldama",
   "grabaciones": [
     {
+      "rec": "R12",
+      "nombre": "Próxima grabación · en desarrollo",
+      "fecha": "Por definir",
+      "locacion": "Consultorio",
+      "guiones": [
+        {
+          "slug": "r12-ugc-xeomeen-quincena",
+          "titulo": "Hoy es quincena · idea de Dante",
+          "info": "Sketch · borrador abierto para terminar de redactar",
+          "categoria": "xeomeen",
+          "grabado": false
+        }
+      ]
+    },
+    {
       "rec": "R11",
       "nombre": "Onceava grabación",
       "fecha": "Por definir",
