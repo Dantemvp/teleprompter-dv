@@ -35,7 +35,7 @@ DRA: Pide ver el empaque y el vial antes de la aplicación. Revisa el nombre del
 
 EMPLEADA: Entonces… ¿cuál me recomendarías usar?
 
-DRA: Primero tendría que valorarte pero Una opción que considero es Xeomeen porque está doblemente purificada, su proceso elimina proteínas innecesarias y tiene Una fórmula de únicamente tres ingredientes, sin polisorbatos.
+DRA: Primero tendría que valorarte pero Una opción que considero es Xeomeen porque está doblemente purificada, tiene 15 años de experiencia clínica, más de 20 millones de pacientes tratados y más de 460 publicaciones científicas, su proceso elimina proteínas innecesarias y tiene Una fórmula de únicamente tres ingredientes, sin polisorbatos.
 
 EMPLEADA: pense que era mas facil :/¿Y lo que me puso el primo de mi cuñada?
 
