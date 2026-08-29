@@ -1,4 +1,4 @@
-# Hoy es quincena · idea de Dante
+# Hoy es quincena
 > Cliente: Dra. Fedra Aldama
 > Apartado: UGC Xeomeen
 > Estado: Borrador abierto · Dante terminará la redacción · no autorizado para difusión
