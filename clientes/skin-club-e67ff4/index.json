@@ -31,6 +31,14 @@
           "grabado": false,
           "locutor": "Diego",
           "categoria": "guion"
+        },
+        {
+          "slug": "r3-10",
+          "titulo": "El azúcar de ayer ya le cobra a tu cara",
+          "info": "40–55 seg · glicación + lead magnet",
+          "grabado": false,
+          "locutor": "Nat",
+          "categoria": "guion"
         }
       ]
     },
@@ -336,14 +344,6 @@
           "info": "45–60 seg · listicle",
           "grabado": true,
           "locutor": "Diego",
-          "categoria": "guion"
-        },
-        {
-          "slug": "r3-10",
-          "titulo": "El azúcar de ayer ya le cobra a tu cara",
-          "info": "40–55 seg · glicación + lead magnet",
-          "grabado": false,
-          "locutor": "Nat",
           "categoria": "guion"
         },
         {
