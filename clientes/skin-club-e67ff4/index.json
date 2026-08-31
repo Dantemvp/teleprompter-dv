@@ -23,6 +23,14 @@
           "grabado": false,
           "locutor": "Nat",
           "categoria": "guion"
+        },
+        {
+          "slug": "r3-04",
+          "titulo": "¿Qué skincare debo usar si tengo más de 40?",
+          "info": "30–45 seg · pregunta viral",
+          "grabado": false,
+          "locutor": "Diego",
+          "categoria": "guion"
         }
       ]
     },
@@ -296,14 +304,6 @@
           "info": "30–45 seg · mito / reframe",
           "grabado": true,
           "locutor": "Kaori",
-          "categoria": "guion"
-        },
-        {
-          "slug": "r3-04",
-          "titulo": "¿Qué skincare debo usar si tengo más de 40?",
-          "info": "30–45 seg · pregunta viral",
-          "grabado": false,
-          "locutor": "Diego",
           "categoria": "guion"
         },
         {
