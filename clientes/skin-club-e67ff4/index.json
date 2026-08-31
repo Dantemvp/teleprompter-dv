@@ -15,6 +15,14 @@
           "locutor": "Kaori",
           "categoria": "kaori",
           "link": "https://www.instagram.com/reel/DbULFKnJvP5/?igsi=MWVodzFsazlnMzlzZg=="
+        },
+        {
+          "slug": "r3-01",
+          "titulo": "Crema Reparadora de Noche (Hydroglow)",
+          "info": "30–50 seg · talking head · día vs noche",
+          "grabado": false,
+          "locutor": "Nat",
+          "categoria": "guion"
         }
       ]
     },
@@ -274,14 +282,6 @@
       "fecha": "Por definir",
       "locacion": "Por definir",
       "guiones": [
-        {
-          "slug": "r3-01",
-          "titulo": "Crema Reparadora de Noche (Hydroglow)",
-          "info": "30–50 seg · talking head · día vs noche",
-          "grabado": false,
-          "locutor": "Nat",
-          "categoria": "guion"
-        },
         {
           "slug": "r3-02",
           "titulo": "Retinol, retinal, bakuchiol… ¿cuál te toca?",
