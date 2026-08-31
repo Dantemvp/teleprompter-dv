@@ -2,6 +2,50 @@
   "cliente": "The Skin Club",
   "grabaciones": [
     {
+      "rec": "R6",
+      "nombre": "Sexta grabación",
+      "fecha": "1 de septiembre de 2026",
+      "locacion": "Por definir",
+      "guiones": [
+        {
+          "slug": "r6-01",
+          "titulo": "Vigna aconitifolia: sí, no o depende",
+          "info": "30–40 seg · rapid-fire de 8 preguntas · ingrediente héroe + modo de uso",
+          "grabado": false,
+          "locutor": "Kaori",
+          "categoria": "kaori",
+          "link": "https://www.instagram.com/reel/DbULFKnJvP5/?igsi=MWVodzFsazlnMzlzZg=="
+        },
+        {
+          "slug": "r6-02",
+          "titulo": "Se pueden llevar todo, menos mi skincare",
+          "info": "12–18 seg · sketch sin diálogo · giro visual con HydroGlow",
+          "grabado": false,
+          "locutor": "Nat + Diego",
+          "categoria": "juntos",
+          "link": "https://www.instagram.com/pistache.byforbe/reel/DcTfd2egJMP/"
+        },
+        {
+          "slug": "r6-03",
+          "titulo": "El skincare o yo",
+          "info": "12–15 seg · lip-sync · elección imposible + remate de marca",
+          "grabado": false,
+          "locutor": "Nat",
+          "categoria": "nat",
+          "link": "https://www.instagram.com/pistache.byforbe/reel/DcBeQD4AofN/"
+        },
+        {
+          "slug": "r6-04",
+          "titulo": "Cómo creo que voy a despertar por estrenar skincare",
+          "info": "12–15 seg · meme físico · expectativa vs constancia",
+          "grabado": false,
+          "locutor": "Kaori",
+          "categoria": "kaori",
+          "link": "https://www.instagram.com/pistache.byforbe/reel/Dclvm5xADPz/"
+        }
+      ]
+    },
+    {
       "rec": "R5",
       "nombre": "Quinta grabación",
       "fecha": "20 de agosto de 2026",
