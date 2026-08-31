@@ -4,12 +4,6 @@
 > Estado: Listo para grabar · pendiente de decidir el premio de la escena 03
 > Duración: 60–65 seg · prueba física con acumulación visual · colaboración de marca
 > Locación: Consultorio
-> ✱ COLABORACIÓN XEOMEEN / MERZ AESTHETICS. Los mensajes clave que la marca pide como requisito ya van incrustados en la línea hablada, para leerse de corrido.
-> ✱ VISUAL, es el video entero: vacía el bote de golpe sobre la mesa (que se oiga) y va acomodando los frascos en filas mientras habla. Cada fila cierra un dato. Las manos ocupadas resuelven los cambios de plano sin cortar la toma. Acercamiento a la etiqueta al menos dos veces: ahí se cumple el "acercamiento al producto" del brief.
-> ✱ El concurso queda cerrado antes del segundo 15 a propósito. El "¿cuántos son?" es el open loop que sostiene la retención durante toda la parte informativa.
-> ✱ PARA BAJAR DE 60 SEG: las escenas 07 y 13 son las cortables, en ese orden. El resto no se toca.
-> ✱ Requisitos de marca: se pronuncia "seomín". XEOMEEN escrito y visible. Etiquetar @merzaesthetics_mexico. Hashtags #ToxinaPura #Xeomeen #ToxinaBotulinica. Prohibido decir "Botox", "baby Botox" y "Botox party". Que no salga en cuadro ningún producto, caja, logo ni material de otra marca, tampoco en su ropa. Subtítulos. Luz frontal o natural.
-> ✱ Compliance: el encuadre médico va HABLADO en la escena 14, no como letra chica al cierre (precedente FDA contra Merz, oct-2024, justo por eso). No se dice ni se sugiere qué tan rápido se ven los resultados. Los efectos no deseados se enmarcan como "menos riesgo", nunca como "no pasa".
 
 ## Escena 01 · vacía el bote
 
