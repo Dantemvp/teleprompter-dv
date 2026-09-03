@@ -81,3 +81,62 @@ Los huecos, en orden de impacto:
 ## Siguiente paso propuesto
 Los fixes 1–3 del pilar 3 son código, están acotados y se hacen en una sesión.
 El pilar 4 es trabajo humano y de calendario, y es donde está el 80% del techo.
+
+---
+# Segunda pasada — capa de contenido (2026-09-03)
+
+La primera pasada solo cubrió configuración, schema, robots y estructura de
+archivos. Esta revisa el contenido y encuentra cuatro cosas más.
+
+## 5. `isPartOf` apunta a un nodo que no existe — BUG
+`articleSchema()` emite `isPartOf: { '@id': '<url>/#website' }`, pero **no existe
+ningún nodo `WebSite`** en todo `src/lib/schema.ts`. Es una referencia colgante:
+el grafo apunta a una entidad que nunca se declara.
+- **Impacto**: rompe la integridad del `@graph`. Los parsers estrictos lo marcan
+  como referencia no resuelta y se pierde la relación artículo → sitio.
+- **Fix**: añadir `websiteSchema()` con `@type: 'WebSite'`, `@id: <url>/#website`,
+  `name`, `url`, `inLanguage: es-MX` y `publisher: {'@id': ORG_ID}`, e incluirlo
+  en el `graph()` de todas las páginas.
+
+## 6. Cero frescura: 0 de 12 artículos tienen `updatedDate`
+El template hace `dateModified: (d.updatedDate ?? d.pubDate)`. Como ningún post
+define `updatedDate`, **`dateModified` siempre es igual a `datePublished`**.
+- **Impacto**: para los motores, todo el blog está congelado en su fecha de
+  publicación. Perplexity favorece contenido de <30 días (~3.2x más citas) y la
+  frescura pesa en todas las superficies.
+- **Fix**: proceso de revisión trimestral que toque `updatedDate` cuando el
+  contenido cambie de verdad. **No falsear la fecha sin cambiar el contenido** —
+  eso es manipulación y se detecta.
+
+## 7. El artículo de precios no da un precio — EL HALLAZGO IMPORTANTE
+`cuanto-cuesta-ortodoncia-guadalajara.mdx` está bien escrito, con voz propia de
+la doctora, answer-first y buena estructura. Pero **nunca da una cifra ni un
+rango**: "No te voy a tirar una cifra al aire, porque sin ver tu boca sería
+inventada".
+
+Comercialmente se entiende. Para GEO es fatal:
+- La query es literalmente "cuánto cuesta la ortodoncia en Guadalajara".
+- Cuando un motor sintetiza esa respuesta, **cita a quien da un número**. Una
+  página que se niega a responder la pregunta de su propio título no entra en
+  la respuesta, por bien escrita que esté.
+- Es el ejemplo perfecto de la diferencia entre buen copy y contenido citable.
+
+**Fix propuesto** (sin comprometer a la clínica): dar un rango con contexto
+explícito de qué lo mueve. Algo como "en Guadalajara y Zapopan un tratamiento
+de ortodoncia suele ubicarse entre $X y $Y según complejidad y técnica; lo que
+define tu número es…". Se conserva la honestidad, se gana la cita, y la tabla
+comparativa por técnica es de los formatos más citados que existen.
+
+Este patrón hay que revisarlo en **todos** los artículos: ¿la página responde
+de verdad la pregunta de su título, o la esquiva hacia la valoración?
+
+## 8. `reviewedBy` es la misma persona que `author`
+Ambos apuntan a `DOCTOR_ID`. No es un error —ella es la especialista— pero un
+revisor distinto (p. ej. el Dr. Nuño para contenido quirúrgico) es señal YMYL
+más fuerte que auto-revisarse. Menor, pero suma.
+
+## Lo que TODAVÍA no he revisado
+- `src/data/services.ts` (37 KB) y `market.ts` — el grueso del contenido de servicios.
+- Las 11 páginas estáticas una por una (answer-first sección por sección).
+- Los otros 11 artículos del blog con el criterio del punto 7.
+- Comportamiento en producción: edge, headers, tiempos de respuesta, indexación real.
