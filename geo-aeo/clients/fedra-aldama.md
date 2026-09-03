@@ -56,3 +56,20 @@ Eso es munición E-E-A-T de primer nivel para un vertical YMYL. Va en:
 - [ ] Validar con ella los datos de arriba antes de publicarlos.
 - [ ] Definir set de prompts locales: "médico para bajar de peso en Los Mochis",
       "quién receta [GLP-1] en Los Mochis", "medicina estética Los Mochis", etc.
+
+---
+## CORRECCIÓN (2026-09-03)
+**Sí tiene sitio web: `https://drafedraaldama.com/`**, con repo en
+`Consultora-DV/drafedraaldama` (privado). Mi conclusión anterior de "no tiene
+sitio" era incorrecta: se basaba en que no aparecía en búsqueda web, y mi
+herramienta de búsqueda está limitada a resultados de EE.UU.
+
+Lo que **sí** se sostiene, y ahora es una pregunta más interesante:
+el sitio existe pero **no emerge en búsqueda ni en los resúmenes de IA**. Eso ya
+no es "falta de activo", es un problema de indexación, autoridad u off-site.
+Hay que medirlo, no suponerlo.
+
+**Bloqueo**: no puedo añadir `Consultora-DV/drafedraaldama` a esta sesión —
+`add_repo` no soporta repos de otro owner cuando la sesión ya tiene repos de
+`Dantemvp` ("cross-tier adds are not supported"). Para auditarlo desde código
+hace falta una sesión nueva que arranque con ese repo, o moverlo a `Dantemvp`.

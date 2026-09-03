@@ -35,3 +35,9 @@ En el teleprompter (`clientes/ale-paz-mx27k/`) hay guiones grabados sobre:
 alineadores Aliwell, brackets vs alineadores, etc. **Ese contenido de video ya
 existente es materia prima directa** para las páginas de preguntas frecuentes
 answer-first. No hay que escribir desde cero: hay que transcribir y reestructurar.
+
+---
+## RESUELTO (2026-09-03)
+- **Sitio**: `https://draalepaz.com/`
+- **Repo**: `Dantemvp/dentisania-web` (privado, Astro 7 SSG)
+- Auditoría preliminar desde código: `draalepaz-auditoria-preliminar.md`
