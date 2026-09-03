@@ -118,6 +118,44 @@ Es el pilar que más pesa y el que casi nadie audita.
 - Herramientas: Otterly (~$29/mes, entrada), Peec AI (€89–199, mejor relación),
   Profound ($399+, enterprise), addons de Semrush/Ahrefs (baratos pero flojos).
 
+
+### 3.1 Nota crítica: robots.txt SÍ es palanca, `llms.txt` NO
+
+Se confunden porque se instalan juntos. No son lo mismo:
+
+- **robots.txt es un interruptor real.** Si estabas bloqueando (o el CDN bloqueaba
+  por ti), desbloquear produce un salto genuino y rápido. La mayoría de sitios
+  construidos o auditados antes de 2023 bloquean crawlers de IA **sin saberlo**,
+  vía configuraciones agresivas de Cloudflare/Sucuri/CDN que tratan a
+  OAI-SearchBot y PerplexityBot como scrapers maliciosos.
+  Contexto: GPTBot pasó de 5% a 30% del tráfico de crawlers de IA entre may-2024
+  y may-2025 (+305% de crecimiento). El que estaba bloqueado se perdió eso entero.
+- **`llms.txt` es un archivo que hoy nadie lee en producción.** Ver tabla de humo.
+
+**Por lo tanto**: cuando alguien dice "puse robots.txt + llms.txt y me llegaron
+leads", el mecanismo causal casi siempre es **dejé de bloquear**, no **añadí un
+archivo nuevo**. Es una distinción que cambia el diagnóstico: si el sitio del
+cliente ya permite los bots, copiar ese script **no va a hacer absolutamente nada**
+y hay que ir a los pilares 2, 3 y 4.
+
+**Cómo comprobarlo en 15 minutos (antes de replicar):**
+1. `curl -s https://dominio.com/robots.txt` y ver si hay `Disallow` para
+   GPTBot / OAI-SearchBot / PerplexityBot / ClaudeBot / Google-Extended.
+2. Wayback Machine del `/robots.txt` **antes** del cambio → si antes bloqueaba,
+   caso cerrado, el mérito es de robots.txt.
+3. Logs de servidor: hits por user-agent de bots de IA, antes vs después.
+   Si el crawl subió al quitar el bloqueo y los leads vinieron después, hay causa.
+4. Si el robots.txt de antes **ya permitía** los bots → el salto vino de otro lado
+   (menciones en foros, un listicle, prensa, o simplemente el crecimiento general
+   del uso de ChatGPT). Ojo con atribuir a lo que se tocó por último.
+
+**Diferenciar los tres bots de OpenAI** (error común):
+| Bot | Para qué | Si lo bloqueas |
+|---|---|---|
+| `OAI-SearchBot` | Búsqueda en ChatGPT | **Desapareces de ChatGPT Search** |
+| `GPTBot` | Entrenamiento del modelo | Sigues en ChatGPT Search, pero pierdes familiaridad del modelo a largo plazo |
+| `ChatGPT-User` | Fetch disparado por el usuario | El usuario no puede abrir tu página desde el chat |
+
 ---
 
 ## 4. Qué es humo (para no vender mentiras)
