@@ -8,6 +8,13 @@
       "locacion": "Consultorio",
       "guiones": [
         {
+          "slug": "r12-01",
+          "titulo": "El que nadie sospecha",
+          "info": "40–48 seg · contador de superlativos",
+          "categoria": "guion-corto",
+          "grabado": false
+        },
+        {
           "slug": "r12-ugc-xeomeen-quincena",
           "titulo": "Hoy es quincena · idea de Dante",
           "info": "Sketch · borrador ampliado pendiente de revisión",
