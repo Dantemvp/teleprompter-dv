@@ -12,98 +12,126 @@
           "titulo": "El que nadie sospecha",
           "info": "40–48 seg · contador de superlativos",
           "categoria": "guion-corto",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DcRb-JVRRVh/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-01.jpg"
         },
         {
           "slug": "r12-02",
           "titulo": "Te los ordeno yo",
           "info": "42–50 seg · contador de superlativos",
           "categoria": "guion-corto",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DcRb-JVRRVh/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-02.jpg"
         },
         {
           "slug": "r12-03",
           "titulo": "Es un círculo",
           "info": "45–50 seg · cadena causal circular",
           "categoria": "guion-corto",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dax7hKXRZPq/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-03.jpg"
         },
         {
           "slug": "r12-04",
           "titulo": "Mito, mito, mito",
           "info": "49–57 seg · rapid-fire a dos voces",
           "categoria": "guion-corto",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dbe1wqQIq0Z/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-04.jpg"
         },
         {
           "slug": "r12-05",
           "titulo": "El vaso más chiquito",
           "info": "48–52 seg · prueba física con 4 vasos",
           "categoria": "guion-corto",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DckNRYANYAd/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-05.jpg"
         },
         {
           "slug": "r12-06",
           "titulo": "Tu versión de vieja",
           "info": "55–60 seg · escalada emocional · sin subtítulos",
           "categoria": "guion-corto",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DZ_OIqLF80i/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-06.jpg"
         },
         {
           "slug": "r12-21",
           "titulo": "Eso es una indisciplina",
           "info": "50–58 seg · réplica · su historia como arma",
           "categoria": "guion-corto",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reels/DU6QNi8j3VB/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-21.jpg"
         },
         {
           "slug": "r12-23",
           "titulo": "Una cuarta parte de lo que bajas es músculo",
           "info": "42–48 seg · el rebote explicado",
           "categoria": "guion-corto",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reels/DbGtpRnhl23/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-23.jpg"
         },
         {
           "slug": "r12-25",
           "titulo": "Cinco preguntas que me hacen siempre",
           "info": "40–46 seg · pregunta y respuesta corta",
           "categoria": "guion-corto",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dboj303DZZQ/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-25.jpg"
         },
         {
           "slug": "r12-13",
           "titulo": "El pan y el azúcar",
           "info": "80–95 seg · podcast a dos voces · glucómetro en vivo",
           "categoria": "guion-largo",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DZiGM0SxCc-/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-13.jpg"
         },
         {
           "slug": "r12-14",
           "titulo": "Cuenta tu proteína del día",
           "info": "62–72 seg · tres platos + contador de gramos",
           "categoria": "guion-largo",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DZ53GDGiQhq/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-14.jpg"
         },
         {
           "slug": "r12-22",
           "titulo": "No necesitas receta",
           "info": "60–70 seg · réplica · GLP-1 sin marcas",
           "categoria": "guion-largo",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reels/DUtx06bjiJV/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-22.jpg"
         },
         {
           "slug": "r12-24",
           "titulo": "No vas a tener su abdomen",
           "info": "55–62 seg · porciones + anatomía",
           "categoria": "guion-largo",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reels/DbmMmmjum4-/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-24.jpg"
         },
         {
           "slug": "r12-15",
           "titulo": "Califico las modas de belleza",
           "info": "24–30 seg · rapid-fire de calificaciones 0 a 10",
           "categoria": "estetica",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DJrn_ngIQNw/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-15.jpg"
         },
         {
           "slug": "r12-16",
@@ -112,35 +140,44 @@
           "categoria": "estetica",
           "tipo": "ref",
           "link": "https://www.instagram.com/reels/DVgybm2DdQE/",
-          "grabado": false
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-16.jpg"
         },
         {
           "slug": "r12-17",
           "titulo": "Aquí nadie vino y nadie supo",
           "info": "12–15 seg · chusco mudo · silueta anónima",
           "categoria": "estetica",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reels/C7wmSmduyRX/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-17.jpg"
         },
         {
           "slug": "r12-18",
           "titulo": "Tres cosas que no me dejo hacer",
           "info": "45–55 seg · casual fuera de consultorio · dos voces",
           "categoria": "estetica",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DG6qv0Fxt0t/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-18.jpg"
         },
         {
           "slug": "r12-19",
           "titulo": "Si nunca te has hecho nada, son tres cosas",
           "info": "26–32 seg · carta de presentación",
           "categoria": "estetica",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reels/DWHf90fDS1z/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-19.jpg"
         },
         {
           "slug": "r12-20",
           "titulo": "Aquí no hay atajos, ni cuerpo ni cara",
           "info": "45–52 seg · opinión-autoridad · puente entre ramas",
           "categoria": "estetica",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/reels/DSYkt4RDamN/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-20.jpg"
         },
         {
           "slug": "r12-ugc-xeomeen-quincena",
@@ -154,14 +191,18 @@
           "titulo": "Un año en la mesa · el bote",
           "info": "60–65 seg · prueba física + concurso · GRABAR HOY 31-ago",
           "categoria": "xeomeen",
-          "grabado": true
+          "grabado": true,
+          "link": "https://www.instagram.com/p/DcuzfwtxFAF/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-ugc-xeomeen-bote.jpg"
         },
         {
           "slug": "r12-ugc-xeomeen-bote-corto",
           "titulo": "Un año en la mesa · versión corta",
           "info": "28–32 seg · versión corta del bote · validar cortes con Merz",
           "categoria": "xeomeen",
-          "grabado": false
+          "grabado": false,
+          "link": "https://www.instagram.com/p/DcuzfwtxFAF/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-ugc-xeomeen-bote-corto.jpg"
         },
         {
           "slug": "r12-07",
