@@ -21,7 +21,21 @@
           "categoria": "guion-corto",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DcRb-JVRRVh/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-01.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-01.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Bata blanca sobre ropa oscura",
+            "looks": [
+              {
+                "t": "Utilería",
+                "p": "Ninguna"
+              },
+              {
+                "t": "Ojo",
+                "p": "Toma única, cámara fija. El superlativo se estampa grande y centrado"
+              }
+            ]
+          }
         },
         {
           "slug": "r12-02",
@@ -30,7 +44,17 @@
           "categoria": "guion-corto",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DcRb-JVRRVh/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-02.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-02.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Tercer look · se retira la utilería",
+            "looks": [
+              {
+                "t": "Utilería",
+                "p": "Ninguna"
+              }
+            ]
+          }
         },
         {
           "slug": "r12-03",
@@ -39,7 +63,21 @@
           "categoria": "guion-corto",
           "grabado": false,
           "link": "https://www.instagram.com/reel/Dax7hKXRZPq/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-03.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-03.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Tercer look · se retira la utilería",
+            "looks": [
+              {
+                "t": "Utilería",
+                "p": "Ninguna"
+              },
+              {
+                "t": "Ojo",
+                "p": "La repetición literal de cada eslabón es el formato. No sinonimizar al leer ni al subtitular"
+              }
+            ]
+          }
         },
         {
           "slug": "r12-04",
@@ -48,7 +86,25 @@
           "categoria": "guion-corto",
           "grabado": false,
           "link": "https://www.instagram.com/reel/Dbe1wqQIq0Z/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-04.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-04.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Segundo look de consultorio",
+            "looks": [
+              {
+                "t": "Utilería",
+                "p": "Ninguna"
+              },
+              {
+                "t": "Gente",
+                "p": "Dante a cuadro, dispara las preguntas"
+              },
+              {
+                "t": "Cámara",
+                "p": "Dos cámaras, corte alternado. No se miran al lente, se miran entre ellos, salvo la última escena"
+              }
+            ]
+          }
         },
         {
           "slug": "r12-05",
@@ -57,7 +113,22 @@
           "categoria": "guion-corto",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DckNRYANYAd/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-05.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-05.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Tercer look · de pie detrás de la mesa",
+            "looks": [
+              {
+                "t": "Utilería",
+                "p": "Cuatro vasos altos rectos de vidrio, idénticos, con agua y colorante rojo o naranja. Niveles: un dedo, apenas más, un tercio y casi lleno"
+              },
+              {
+                "t": "Ojo",
+                "p": "Entran de derecha a izquierda, del más vacío al más lleno. El gesto de levantar el chiquito se sostiene tres segundos completos"
+              }
+            ],
+            "nota": "Los niveles son datos reales del gasto diario, no adorno. Si se ponen a ojo, el video deja de convencer."
+          }
         },
         {
           "slug": "r12-06",
@@ -66,7 +137,26 @@
           "categoria": "guion-corto",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DZ_OIqLF80i/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-06.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-06.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Ropa de casa · de noche",
+            "looks": [
+              {
+                "t": "Locación",
+                "p": "Casa o consultorio con luz cálida y ambiente nocturno"
+              },
+              {
+                "t": "Utilería",
+                "p": "Micrófono de mesa visible en primer plano"
+              },
+              {
+                "t": "Ojo",
+                "p": "Tarjeta fija en el tercio superior los sesenta segundos completos"
+              }
+            ],
+            "nota": "VA SIN SUBTÍTULOS. Es decisión de formato, no descuido: avisarle a la editora antes de que los ponga por costumbre."
+          }
         },
         {
           "slug": "r12-21",
@@ -75,7 +165,21 @@
           "categoria": "guion-corto",
           "grabado": false,
           "link": "https://www.instagram.com/reels/DU6QNi8j3VB/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-21.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-21.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Segundo look de consultorio",
+            "looks": [
+              {
+                "t": "Utilería",
+                "p": "Ninguna"
+              },
+              {
+                "t": "Tono",
+                "p": "Réplica con filo, no regaño. Si suena a sermón moral, se cae"
+              }
+            ]
+          }
         },
         {
           "slug": "r12-23",
@@ -84,7 +188,18 @@
           "categoria": "guion-corto",
           "grabado": false,
           "link": "https://www.instagram.com/reels/DbGtpRnhl23/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-23.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-23.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Bata blanca sobre ropa oscura",
+            "looks": [
+              {
+                "t": "Utilería",
+                "p": "Ninguna"
+              }
+            ],
+            "nota": "Comparte la cifra de proteína con r12-14: 1.2 a 1.6 g por kilo. Si se cambia en uno, se cambia en el otro."
+          }
         },
         {
           "slug": "r12-25",
@@ -93,7 +208,18 @@
           "categoria": "guion-corto",
           "grabado": false,
           "link": "https://www.instagram.com/reel/Dboj303DZZQ/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-25.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-25.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Bata blanca sobre ropa oscura",
+            "looks": [
+              {
+                "t": "Utilería",
+                "p": "Ninguna"
+              }
+            ],
+            "nota": "No publicar la misma semana que r12-04, los dos son de preguntas rápidas."
+          }
         },
         {
           "slug": "r12-13",
@@ -102,7 +228,25 @@
           "categoria": "guion-largo",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DZiGM0SxCc-/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-13.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-13.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Segundo look de consultorio",
+            "looks": [
+              {
+                "t": "Utilería",
+                "p": "Canasta de pan y una cucharada de azúcar servida en un plato"
+              },
+              {
+                "t": "Gente",
+                "p": "Dante pregunta"
+              },
+              {
+                "t": "Ojo",
+                "p": "Se graba de corrido. Sin glucómetro, sin medición y sin esperas: los números se estampan en edición"
+              }
+            ]
+          }
         },
         {
           "slug": "r12-14",
@@ -111,7 +255,22 @@
           "categoria": "guion-largo",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DZ53GDGiQhq/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-14.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-14.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Tercer look · de pie detrás de la mesa",
+            "looks": [
+              {
+                "t": "Utilería",
+                "p": "Tres platos servidos: dos huevos con frijoles y dos tortillas; muslo de pollo guisado con arroz y dos tortillas; un pan dulce con café con leche"
+              },
+              {
+                "t": "Ojo",
+                "p": "Los tres en cuadro desde el primer segundo. Las etiquetas con los gramos se animan en edición"
+              }
+            ],
+            "nota": "Si se sirve algo distinto, hay que recalcular los gramos que van en pantalla. Son datos, no adorno."
+          }
         },
         {
           "slug": "r12-22",
@@ -120,7 +279,22 @@
           "categoria": "guion-largo",
           "grabado": false,
           "link": "https://www.instagram.com/reels/DUtx06bjiJV/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-22.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-22.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Segundo look de consultorio",
+            "looks": [
+              {
+                "t": "Utilería",
+                "p": "Ninguna"
+              },
+              {
+                "t": "Ojo",
+                "p": "Ella sola a cámara, aprovechando el montaje de dos cámaras"
+              }
+            ],
+            "nota": "No se nombra ninguna marca de medicamento en todo el video."
+          }
         },
         {
           "slug": "r12-24",
@@ -129,7 +303,17 @@
           "categoria": "guion-largo",
           "grabado": false,
           "link": "https://www.instagram.com/reels/DbmMmmjum4-/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-24.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-24.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Cuarto look · bata limpia",
+            "looks": [
+              {
+                "t": "Utilería",
+                "p": "Ninguna"
+              }
+            ]
+          }
         },
         {
           "slug": "r12-15",
@@ -138,7 +322,21 @@
           "categoria": "estetica",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DJrn_ngIQNw/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-15.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-15.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Bata blanca sobre ropa oscura",
+            "looks": [
+              {
+                "t": "Utilería",
+                "p": "Ninguna"
+              },
+              {
+                "t": "Ojo",
+                "p": "No mira a cámara salvo la última línea. El nombre en mayúsculas y el número en dorado se estampan en edición"
+              }
+            ]
+          }
         },
         {
           "slug": "r12-16",
@@ -157,7 +355,26 @@
           "categoria": "estetica",
           "grabado": false,
           "link": "https://www.instagram.com/reels/C7wmSmduyRX/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-17.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-17.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Cuarto look · bata limpia",
+            "looks": [
+              {
+                "t": "Gente",
+                "p": "Alguien que preste el cuerpo para la silueta. Puede ser la misma modelo"
+              },
+              {
+                "t": "Utilería",
+                "p": "Ninguna"
+              },
+              {
+                "t": "Ojo",
+                "p": "Mudo, sin diálogo. Cuatro planos, uno por tarjeta. La silueta negra se recorta en edición"
+              }
+            ],
+            "nota": "Quien preste el cuerpo firma consentimiento aunque no se le vea la cara."
+          }
         },
         {
           "slug": "r12-18",
@@ -166,7 +383,25 @@
           "categoria": "estetica",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DG6qv0Fxt0t/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-18.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-18.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Ropa de calle · SIN bata",
+            "looks": [
+              {
+                "t": "Locación",
+                "p": "Café o restaurante. Plantas, luz cálida, bebidas en la mesa"
+              },
+              {
+                "t": "Gente",
+                "p": "Dante enfrente, se ve parte de él en cuadro"
+              },
+              {
+                "t": "Ojo",
+                "p": "La grosería se dice completa y el subtítulo la censura en rojo. Ese es el gag"
+              }
+            ]
+          }
         },
         {
           "slug": "r12-19",
@@ -175,7 +410,17 @@
           "categoria": "estetica",
           "grabado": false,
           "link": "https://www.instagram.com/reels/DWHf90fDS1z/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-19.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-19.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Cuarto look · bata limpia",
+            "looks": [
+              {
+                "t": "Utilería",
+                "p": "Ninguna"
+              }
+            ]
+          }
         },
         {
           "slug": "r12-20",
@@ -184,7 +429,21 @@
           "categoria": "estetica",
           "grabado": false,
           "link": "https://www.instagram.com/reels/DSYkt4RDamN/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-20.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-20.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Cuarto look · bata limpia",
+            "looks": [
+              {
+                "t": "Utilería",
+                "p": "Ninguna"
+              },
+              {
+                "t": "Ojo",
+                "p": "Es video de conversión, no de alcance. Le habla a quien ya la sigue"
+              }
+            ]
+          }
         },
         {
           "slug": "r12-ugc-xeomeen-quincena",
@@ -209,7 +468,26 @@
           "categoria": "xeomeen",
           "link": "https://www.instagram.com/reel/DZLHefvpuCO/",
           "thumb": "clientes/fedra-ald-t84qz/refs/r12-26.jpg",
-          "grabado": false
+          "grabado": false,
+          "outfit": {
+            "n": 1,
+            "estilo": "Cuarto look · bata limpia",
+            "looks": [
+              {
+                "t": "Gente",
+                "p": "Una modelo sentada de frente, cara limpia y sin maquillaje"
+              },
+              {
+                "t": "Utilería",
+                "p": "Lápiz dermográfico o delineador negro, y un frasco de Xeomeen cerrado con etiqueta legible"
+              },
+              {
+                "t": "Ojo",
+                "p": "Los puntos NO se borran entre tomas. El cuadro final con las seis zonas juntas es lo que la gente guarda"
+              }
+            ],
+            "nota": "El frasco nunca aparece con jeringa, aguja ni piel perforada. Brief Merz: se pronuncia seomín, no se dice Botox, ningún logo de otra marca en cuadro ni en la ropa."
+          }
         },
         {
           "slug": "r12-07",
@@ -259,6 +537,97 @@
           "info": "idea de Fedra · programa, no video · ver nota de compliance",
           "categoria": "idea",
           "grabado": false
+        }
+      ],
+      "ventana": "09:30 – 14:35 · 5 h 5 min · + bloque nocturno · orden provisional",
+      "nota": "19 piezas por grabar. Lo que marca el ritmo del día no son los cambios de ropa, es la gente y la utilería: Dante entra a cuadro en dos bloques, la modelo en uno, y hay tres videos que dependen de objetos que se preparan la noche anterior. Dos bloques no se pueden mezclar con nada: el 5 sale del consultorio y el 6 se graba de noche.",
+      "timeline": [
+        {
+          "hora": "09:30",
+          "dur": "40 min",
+          "titulo": "Bloque 1 · Bata blanca · sin utilería",
+          "slugs": [
+            "r12-15",
+            "r12-01",
+            "r12-23",
+            "r12-25"
+          ],
+          "nota": "El más rápido del día y por eso abre: cuatro piezas, cámara fija, cero objetos en mesa. Sirve para calibrar audio y encuadre antes de los bloques complicados."
+        },
+        {
+          "hora": "10:10",
+          "dur": "55 min",
+          "titulo": "Bloque 2 · Con Dante a cuadro · dos cámaras",
+          "slugs": [
+            "r12-04",
+            "r12-13",
+            "r12-22",
+            "r12-21"
+          ],
+          "warn": true,
+          "nota": "👥 DANTE ENTRA A CUADRO. Se monta la segunda cámara y los dos micrófonos de solapa una sola vez para los cuatro. Para r12-13 hacen falta la canasta de pan y una cucharada de azúcar en un plato: se graba de corrido, sin glucómetro y sin esperas, los números se estampan en edición."
+        },
+        {
+          "hora": "11:05",
+          "dur": "15 min",
+          "titulo": "Descanso",
+          "tipo": "pausa",
+          "slugs": [],
+          "nota": "Se revisa audio y se montan los cuatro vasos y los tres platos del bloque siguiente."
+        },
+        {
+          "hora": "11:20",
+          "dur": "50 min",
+          "titulo": "Bloque 3 · Mesa con utilería",
+          "slugs": [
+            "r12-05",
+            "r12-14",
+            "r12-03",
+            "r12-02"
+          ],
+          "warn": true,
+          "nota": "🥛 LOS OBJETOS SE PREPARAN LA NOCHE ANTERIOR. Cuatro vasos idénticos con niveles de un dedo, apenas más, un tercio y casi lleno. Y los tres platos servidos según r12-14. Si se sirve algo distinto a lo del guion, hay que recalcular los gramos que van en pantalla."
+        },
+        {
+          "hora": "12:10",
+          "dur": "65 min",
+          "titulo": "Bloque 4 · Con modelo",
+          "slugs": [
+            "r12-26",
+            "r12-17",
+            "r12-19",
+            "r12-20",
+            "r12-24"
+          ],
+          "warn": true,
+          "nota": "👤 HACE FALTA UNA MODELO con la cara limpia y sin maquillaje, y alguien que preste el cuerpo para la silueta del chusco: puede ser la misma persona, y firma consentimiento aunque no se le vea la cara. Es el bloque más largo y se agrupa así para que nadie tenga que venir dos veces."
+        },
+        {
+          "hora": "13:15",
+          "dur": "45 min",
+          "titulo": "Traslado y comida",
+          "tipo": "pausa",
+          "slugs": [],
+          "nota": "Se cambia a ropa de calle y se sale del consultorio."
+        },
+        {
+          "hora": "14:00",
+          "dur": "35 min",
+          "titulo": "Bloque 5 · Café · fuera del consultorio",
+          "slugs": [
+            "r12-18"
+          ],
+          "nota": "☕ Mesa de café o restaurante, plantas, luz cálida y bebidas en la mesa. Sin bata, ropa de calle. Dante enfrente y se ve parte de él en cuadro."
+        },
+        {
+          "hora": "20:00",
+          "dur": "25 min",
+          "titulo": "Bloque 6 · De noche",
+          "slugs": [
+            "r12-06"
+          ],
+          "warn": true,
+          "nota": "🌙 EL ÚNICO QUE SE GRABA DE NOCHE. Luz cálida, ambiente nocturno y micrófono de mesa visible en primer plano. VA SIN SUBTÍTULOS: es decisión de formato, hay que avisarle a la editora antes de que los ponga por costumbre."
         }
       ]
     },
