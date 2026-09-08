@@ -57,6 +57,20 @@
           "grabado": false
         },
         {
+          "slug": "r12-23",
+          "titulo": "Una cuarta parte de lo que bajas es músculo",
+          "info": "42–48 seg · el rebote explicado",
+          "categoria": "guion-corto",
+          "grabado": false
+        },
+        {
+          "slug": "r12-25",
+          "titulo": "Cinco preguntas que me hacen siempre",
+          "info": "40–46 seg · pregunta y respuesta corta",
+          "categoria": "guion-corto",
+          "grabado": false
+        },
+        {
           "slug": "r12-13",
           "titulo": "El pan y el azúcar",
           "info": "80–95 seg · podcast a dos voces · glucómetro en vivo",
@@ -74,6 +88,13 @@
           "slug": "r12-22",
           "titulo": "No necesitas receta",
           "info": "60–70 seg · réplica · GLP-1 sin marcas",
+          "categoria": "guion-largo",
+          "grabado": false
+        },
+        {
+          "slug": "r12-24",
+          "titulo": "No vas a tener su abdomen",
+          "info": "55–62 seg · porciones + anatomía",
           "categoria": "guion-largo",
           "grabado": false
         },
