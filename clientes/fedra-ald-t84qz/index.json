@@ -8,6 +8,13 @@
       "locacion": "Consultorio",
       "guiones": [
         {
+          "slug": "r12-roadmap",
+          "titulo": "Roadmap de grabación R12",
+          "info": "19 videos · 6 bloques · 6 outfits · utilería y orden",
+          "categoria": "plan",
+          "grabado": false
+        },
+        {
           "slug": "r12-01",
           "titulo": "El que nadie sospecha",
           "info": "40–48 seg · contador de superlativos",
@@ -91,7 +98,7 @@
         {
           "slug": "r12-13",
           "titulo": "El pan y el azúcar",
-          "info": "80–95 seg · podcast a dos voces · glucómetro en vivo",
+          "info": "62–72 seg · podcast a dos voces · números en edición",
           "categoria": "guion-largo",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DZiGM0SxCc-/",
