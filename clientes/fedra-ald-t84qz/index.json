@@ -50,6 +50,13 @@
           "grabado": false
         },
         {
+          "slug": "r12-21",
+          "titulo": "Eso es una indisciplina",
+          "info": "50–58 seg · réplica · su historia como arma",
+          "categoria": "guion-corto",
+          "grabado": false
+        },
+        {
           "slug": "r12-13",
           "titulo": "El pan y el azúcar",
           "info": "80–95 seg · podcast a dos voces · glucómetro en vivo",
@@ -60,6 +67,13 @@
           "slug": "r12-14",
           "titulo": "Cuenta tu proteína del día",
           "info": "62–72 seg · tres platos + contador de gramos",
+          "categoria": "guion-largo",
+          "grabado": false
+        },
+        {
+          "slug": "r12-22",
+          "titulo": "No necesitas receta",
+          "info": "60–70 seg · réplica · GLP-1 sin marcas",
           "categoria": "guion-largo",
           "grabado": false
         },
