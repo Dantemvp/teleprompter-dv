@@ -8,6 +8,48 @@
       "locacion": "Consultorio",
       "guiones": [
         {
+          "slug": "r12-01",
+          "titulo": "El que nadie sospecha",
+          "info": "40–48 seg · contador de superlativos",
+          "categoria": "guion-corto",
+          "grabado": false
+        },
+        {
+          "slug": "r12-02",
+          "titulo": "Te los ordeno yo",
+          "info": "42–50 seg · contador de superlativos",
+          "categoria": "guion-corto",
+          "grabado": false
+        },
+        {
+          "slug": "r12-03",
+          "titulo": "Es un círculo",
+          "info": "45–50 seg · cadena causal circular",
+          "categoria": "guion-corto",
+          "grabado": false
+        },
+        {
+          "slug": "r12-04",
+          "titulo": "Mito, mito, mito",
+          "info": "49–57 seg · rapid-fire a dos voces",
+          "categoria": "guion-corto",
+          "grabado": false
+        },
+        {
+          "slug": "r12-05",
+          "titulo": "El vaso más chiquito",
+          "info": "48–52 seg · prueba física con 4 vasos",
+          "categoria": "guion-corto",
+          "grabado": false
+        },
+        {
+          "slug": "r12-06",
+          "titulo": "Tu versión de vieja",
+          "info": "55–60 seg · escalada emocional · sin subtítulos",
+          "categoria": "guion-corto",
+          "grabado": false
+        },
+        {
           "slug": "r12-ugc-xeomeen-quincena",
           "titulo": "Hoy es quincena · idea de Dante",
           "info": "Sketch · borrador ampliado pendiente de revisión",
@@ -19,6 +61,48 @@
           "titulo": "Un año en la mesa · el bote",
           "info": "60–65 seg · prueba física + concurso · GRABAR HOY 31-ago",
           "categoria": "xeomeen",
+          "grabado": false
+        },
+        {
+          "slug": "r12-07",
+          "titulo": "Carbohidratos simples vs complejos",
+          "info": "idea de Fedra · 600k views en el del azúcar · OJO química cruzada",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r12-08",
+          "titulo": "El viaje a Los Cabos con el equipo",
+          "info": "idea de Fedra · marca personal · ver qué no puede salir",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r12-09",
+          "titulo": "Lanzamiento en Mérida · 26-27 sep",
+          "info": "idea de Fedra · URGENTE · faltan reglas de grabación",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r12-10",
+          "titulo": "Meter medicina estética sin migrarse",
+          "info": "nota estratégica · grabar antes r10-13 y r10-14",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r12-11",
+          "titulo": "Lo que cuesta un negocio en regla",
+          "info": "idea de Fedra · fuera de nicho · con reservas",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r12-12",
+          "titulo": "La paciente que bajó 20 kg y se embarazó",
+          "info": "idea de Fedra · EN ESPERA hasta que nazca · falta consentimiento",
+          "categoria": "idea",
           "grabado": false
         }
       ]
