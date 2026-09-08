@@ -50,6 +50,20 @@
           "grabado": false
         },
         {
+          "slug": "r12-13",
+          "titulo": "El pan y el azúcar",
+          "info": "80–95 seg · podcast a dos voces · glucómetro en vivo",
+          "categoria": "guion-largo",
+          "grabado": false
+        },
+        {
+          "slug": "r12-14",
+          "titulo": "Cuenta tu proteína del día",
+          "info": "62–72 seg · tres platos + contador de gramos",
+          "categoria": "guion-largo",
+          "grabado": false
+        },
+        {
           "slug": "r12-ugc-xeomeen-quincena",
           "titulo": "Hoy es quincena · idea de Dante",
           "info": "Sketch · borrador ampliado pendiente de revisión",
