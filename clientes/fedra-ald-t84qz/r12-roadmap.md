@@ -132,7 +132,7 @@ Micrófono de mesa visible en primer plano. Tarjeta fija en el tercio superior l
 
 ---
 
-# Sección por categorías
+## Sección por categorías
 
 ## GUIONES CORTOS (9)
 | # | slug | título | dur | bloque |
@@ -187,7 +187,7 @@ Micrófono de mesa visible en primer plano. Tarjeta fija en el tercio superior l
 
 ---
 
-# Notas que cruzan varios guiones
+## Notas que cruzan varios guiones
 
 **Cifra de proteína.** `r12-14` y `r12-23` comparten el rango de 1.2 a 1.6 gramos por kilo. Si se cambia en uno, hay que cambiarlo en el otro o ella se contradice en dos videos.
 
