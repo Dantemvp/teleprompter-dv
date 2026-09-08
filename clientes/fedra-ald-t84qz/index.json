@@ -80,6 +80,34 @@
           "grabado": false
         },
         {
+          "slug": "r12-17",
+          "titulo": "Aquí nadie vino y nadie supo",
+          "info": "12–15 seg · chusco mudo · silueta anónima",
+          "categoria": "estetica",
+          "grabado": false
+        },
+        {
+          "slug": "r12-18",
+          "titulo": "Tres cosas que no me dejo hacer",
+          "info": "45–55 seg · casual fuera de consultorio · dos voces",
+          "categoria": "estetica",
+          "grabado": false
+        },
+        {
+          "slug": "r12-19",
+          "titulo": "Si nunca te has hecho nada, son tres cosas",
+          "info": "26–32 seg · carta de presentación",
+          "categoria": "estetica",
+          "grabado": false
+        },
+        {
+          "slug": "r12-20",
+          "titulo": "Aquí no hay atajos, ni cuerpo ni cara",
+          "info": "45–52 seg · opinión-autoridad · puente entre ramas",
+          "categoria": "estetica",
+          "grabado": false
+        },
+        {
           "slug": "r12-ugc-xeomeen-quincena",
           "titulo": "Hoy es quincena · idea de Dante",
           "info": "Sketch · borrador ampliado pendiente de revisión",
