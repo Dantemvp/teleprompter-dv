@@ -62,6 +62,41 @@
           "info": "60–65 seg · prueba física + concurso · GRABAR HOY 31-ago",
           "categoria": "xeomeen",
           "grabado": false
+        },
+        {
+          "slug": "r12-07",
+          "titulo": "Carbohidratos simples vs complejos",
+          "info": "idea de Fedra · 600k views en el del azúcar · OJO química cruzada",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r12-08",
+          "titulo": "El viaje a Los Cabos con el equipo",
+          "info": "idea de Fedra · marca personal · ver qué no puede salir",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r12-09",
+          "titulo": "Lanzamiento en Mérida · 26-27 sep",
+          "info": "idea de Fedra · URGENTE · faltan reglas de grabación",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r12-10",
+          "titulo": "Meter medicina estética sin migrarse",
+          "info": "nota estratégica · grabar antes r10-13 y r10-14",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r12-11",
+          "titulo": "Lo que cuesta un negocio en regla",
+          "info": "idea de Fedra · fuera de nicho · con reservas",
+          "categoria": "idea",
+          "grabado": false
         }
       ]
     },
