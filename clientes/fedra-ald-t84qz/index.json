@@ -262,24 +262,24 @@
         }
       ],
       "ventana": "09:30 – 14:35 · 5 h 5 min · + bloque nocturno · orden provisional",
-      "nota": "19 piezas por grabar. Lo que marca el ritmo del día no son los cambios de ropa, es la gente y la utilería: Dante entra a cuadro en dos bloques, la modelo en uno, y hay tres videos que dependen de objetos que se preparan la noche anterior. Dos bloques no se pueden mezclar con nada: el 5 sale del consultorio y el 6 se graba de noche.",
+      "nota": "19 piezas por grabar en 6 outfits. Lo que marca el ritmo del día no es la ropa, es la gente y la utilería: Dante entra a cuadro en dos bloques, la modelo en uno, y hay tres videos que dependen de objetos que se preparan la noche anterior. Qué outfit se usa en cada bloque lo decide la doctora; lo único que importa es que dentro de un bloque no cambie.",
       "timeline": [
         {
           "hora": "09:30",
           "dur": "40 min",
-          "titulo": "Bloque 1 · Bata blanca · sin utilería",
+          "titulo": "Bloque 1 · Look 1 · sin utilería",
           "slugs": [
             "r12-15",
             "r12-01",
             "r12-23",
             "r12-25"
           ],
-          "nota": "👗 LOOK 1 · Bata blanca sobre ropa oscura, micrófono de solapa.\n🎬 MATERIAL · Nada. Los cuatro se graban a mesa limpia.\nEl más rápido del día y por eso abre. Sirve para calibrar audio y encuadre antes de los bloques complicados."
+          "nota": "👗 LOOK 1 · Los cuatro videos con el mismo outfit.\n🎬 MATERIAL · Nada. Se graban a mesa limpia.\nEl más rápido del día y por eso abre. Sirve para calibrar audio y encuadre antes de los bloques complicados."
         },
         {
           "hora": "10:10",
           "dur": "55 min",
-          "titulo": "Bloque 2 · Con Dante a cuadro · dos cámaras",
+          "titulo": "Bloque 2 · Look 2 · con Dante a cuadro",
           "slugs": [
             "r12-04",
             "r12-13",
@@ -287,7 +287,7 @@
             "r12-21"
           ],
           "warn": true,
-          "nota": "👗 CAMBIO DE LOOK 2 · Segundo look de consultorio.\n🎬 MATERIAL · Segunda cámara y dos micrófonos de solapa, se montan una sola vez para los cuatro. Canasta de pan y una cucharada de azúcar servida en un plato, solo para r12-13.\n👥 Dante entra a cuadro. r12-13 se graba de corrido: sin glucómetro, sin medición y sin esperas, los números se estampan en edición."
+          "nota": "👗 CAMBIO A LOOK 2 · Los cuatro videos con el mismo outfit.\n🎬 MATERIAL · Segunda cámara y dos micrófonos de solapa, se montan una sola vez para los cuatro. Canasta de pan y una cucharada de azúcar servida en un plato, solo para r12-13.\n👥 Dante entra a cuadro. r12-13 se graba de corrido: sin glucómetro, sin medición y sin esperas, los números se estampan en edición."
         },
         {
           "hora": "11:05",
@@ -300,7 +300,7 @@
         {
           "hora": "11:20",
           "dur": "50 min",
-          "titulo": "Bloque 3 · Mesa con utilería",
+          "titulo": "Bloque 3 · Look 3 · mesa con utilería",
           "slugs": [
             "r12-05",
             "r12-14",
@@ -308,12 +308,12 @@
             "r12-02"
           ],
           "warn": true,
-          "nota": "👗 CAMBIO DE LOOK 3 · Tercer look de consultorio, de pie detrás de la mesa.\n🎬 MATERIAL · Cuatro vasos altos rectos de vidrio idénticos, agua y colorante rojo o naranja. Tres platos servidos: dos huevos con frijoles y dos tortillas, muslo de pollo guisado con arroz y dos tortillas, y un pan dulce con café con leche.\n🥛 Todo se prepara la noche anterior. Los niveles de los vasos y los gramos de los platos son datos, no adorno: si se sirve algo distinto hay que recalcular lo que va en pantalla."
+          "nota": "👗 CAMBIO A LOOK 3 · Los cuatro videos con el mismo outfit.\n🎬 MATERIAL · Cuatro vasos altos rectos de vidrio idénticos, agua y colorante rojo o naranja. Tres platos servidos: dos huevos con frijoles y dos tortillas, muslo de pollo guisado con arroz y dos tortillas, y un pan dulce con café con leche.\n🥛 Todo se prepara la noche anterior. Los niveles de los vasos y los gramos de los platos son datos, no adorno: si se sirve algo distinto hay que recalcular lo que va en pantalla."
         },
         {
           "hora": "12:10",
           "dur": "65 min",
-          "titulo": "Bloque 4 · Con modelo",
+          "titulo": "Bloque 4 · Look 4 · con modelo",
           "slugs": [
             "r12-26",
             "r12-17",
@@ -322,7 +322,7 @@
             "r12-24"
           ],
           "warn": true,
-          "nota": "👗 CAMBIO DE LOOK 4 · Bata limpia.\n🎬 MATERIAL · Lápiz dermográfico o delineador negro. Un frasco de Xeomeen cerrado y con etiqueta legible.\n👤 Hace falta una modelo con la cara limpia y sin maquillaje para r12-26, y alguien que preste el cuerpo para la silueta de r12-17: puede ser la misma persona, y firma consentimiento aunque no se le vea la cara. Es el bloque más largo y se agrupa así para que nadie venga dos veces."
+          "nota": "👗 CAMBIO A LOOK 4 · Los cinco videos con el mismo outfit.\n🎬 MATERIAL · Lápiz dermográfico o delineador negro. Un frasco de Xeomeen cerrado y con etiqueta legible.\n👤 Hace falta una modelo con la cara limpia y sin maquillaje para r12-26, y alguien que preste el cuerpo para la silueta de r12-17: puede ser la misma persona, y firma consentimiento aunque no se le vea la cara. Es el bloque más largo y se agrupa así para que nadie venga dos veces."
         },
         {
           "hora": "13:15",
@@ -330,26 +330,26 @@
           "titulo": "Traslado y comida",
           "tipo": "pausa",
           "slugs": [],
-          "nota": "Se cambia a ropa de calle y se sale del consultorio."
+          "nota": "Se cambia de outfit y se sale del consultorio."
         },
         {
           "hora": "14:00",
           "dur": "35 min",
-          "titulo": "Bloque 5 · Café · fuera del consultorio",
+          "titulo": "Bloque 5 · Look 5 · fuera del consultorio",
           "slugs": [
             "r12-18"
           ],
-          "nota": "👗 CAMBIO DE LOOK 5 · Ropa de calle, sin bata.\n🎬 MATERIAL · Nada propio. Se usa la mesa del lugar con sus bebidas.\n☕ Café o restaurante con plantas y luz cálida. Dante enfrente y se ve parte de él en cuadro."
+          "nota": "👗 CAMBIO A LOOK 5 · Este sí pide ropa de calle, sin bata, porque el formato es una plática fuera del consultorio. Cuál, lo decide ella.\n🎬 MATERIAL · Nada propio. Se usa la mesa del lugar con sus bebidas.\n☕ Café o restaurante con plantas y luz cálida. Dante enfrente y se ve parte de él en cuadro."
         },
         {
           "hora": "20:00",
           "dur": "25 min",
-          "titulo": "Bloque 6 · De noche",
+          "titulo": "Bloque 6 · Look 6 · de noche",
           "slugs": [
             "r12-06"
           ],
           "warn": true,
-          "nota": "👗 CAMBIO DE LOOK 6 · Ropa de casa.\n🎬 MATERIAL · Micrófono de mesa, va visible en primer plano.\n🌙 El único que se graba de noche, con luz cálida y ambiente nocturno. VA SIN SUBTÍTULOS: es decisión de formato, hay que avisarle a la editora antes de que los ponga por costumbre."
+          "nota": "👗 CAMBIO A LOOK 6 · Va de noche y en casa, así que el outfit acompaña eso. Cuál, lo decide ella.\n🎬 MATERIAL · Micrófono de mesa, va visible en primer plano.\n🌙 El único que se graba de noche, con luz cálida y ambiente nocturno. VA SIN SUBTÍTULOS: es decisión de formato, hay que avisarle a la editora antes de que los ponga por costumbre."
         }
       ]
     },
