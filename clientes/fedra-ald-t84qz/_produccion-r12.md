@@ -164,6 +164,8 @@ cena — un pan dulce y café con leche
 
 ✱ El contador acumulado vive en pantalla toda la segunda mitad.
 
+✱ REFERENCIA: @tr4iner (IG, 39k likes, 36k comentarios), 74 seg. Los comentarios son de un lead magnet ("comenta COMIDAS"), no del contenido. No se copia: la guía de Fedra prohíbe inventar lead magnets. link: https://www.instagram.com/reel/DZ53GDGiQhq/ ✱ QUÉ SE TOMA: los platos reales en mesa, las etiquetas con línea apuntando, el contador acumulado y el remate de "no llegas ni a la mitad". ✱ QUÉ SE CORRIGE Y POR QUÉ: el original da metas fijas (100 g mujer, 150 g hombre) sin referirlas al peso. Una mujer de 50 kg no necesita lo mismo que una de 90. Aquí se da el rango por kilo, que es como lo calcula una médica. las comidas del original son genéricas. Aquí son mexicanas y reales, que es donde su audiencia se va a ver retratada. el CTA de lead magnet pasa a CTA de comentario propio. ✱ LOS GRAMOS, PARA QUE LA EDITORA NO LOS INVENTE: 2 huevos 12 · 1 taza de frijoles 7 · 2 tortillas 4 → 23 muslo de pollo en guisado 20 · arroz 3 · 2 tortillas 4 → 25 (redondeado) pan dulce 3 · café con leche 4 → 7 TOTAL 55 · meta 70 kg a 1.4 g/kg ≈ 98 · faltante ≈ 43 ✱ SI SE CAMBIAN LOS PLATOS, SE RECALCULAN LOS NÚMEROS. Son datos en pantalla, no adorno. Que no se sirva otra cosa el día de la grabación sin avisar. ✱ COMPLIANCE: no se menciona perder grasa ni bajar de peso en ningún momento. Se habla de músculo, saciedad y hambre. La escena 12 explica la ansiedad por comer sin patologizarla. ✱ PARA BAJAR DE 62 SEG: cae la 02 fundiéndola con la 01, y la 04 con la 03. El bloque 07 a 11 no se toca.
+
 ## r12-15 · Califico las modas de belleza
 
 Locación: Consultorio
@@ -196,6 +198,14 @@ link: https://www.instagram.com/reels/C7wmSmduyRX/
 ✱ CTA: ninguno, a propósito. El video vende discreción, y pedir algo al final rompería el tono.
 ✱ COMPLIANCE: sin claims, sin producto, sin procedimiento a cuadro, sin cara de paciente. Es de los más limpios que se pueden grabar.
 ✱ CONSENTIMIENTO: aunque vaya en silueta, quien preste el cuerpo firma. Puede ser alguien del equipo y se acabó el problema.
+
+✱ Ella de brazos cruzados, sonrisa apenada, encogimiento de hombros.
+
+✱ Junto a la paciente en silueta. Pulgar arriba y guiño a cámara.
+
+✱ Le das palmaditas en el hombro a la silueta.
+
+✱ Dedo en los labios, ves a cámara. Última tarjeta, se queda dos segundos.
 
 ## r12-18 · Tres cosas que no me dejo hacer
 

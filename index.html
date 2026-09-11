@@ -344,10 +344,11 @@ const CLIENT_LIMPIO = { 'fedra-ald-t84qz': true };
 function parseGuion(src, client){
   const limpio = !!(client && CLIENT_LIMPIO[client]);
   const g = {title:'Guion', meta:[], lines:[], ref:null};
-  let last = null;
+  let last = null, tirandoNota = false;
   for (let raw of src.split('\n')){
     const line = raw.trim();
     if (!line) continue;
+    if (!line.startsWith('//')) tirandoNota = false;   // el bloque de nota ✱ termina en la primera línea que no es //
     if (line.startsWith('# ')) { g.title = line.slice(2).trim(); continue; }
     if (line.startsWith('> ')) {
       const meta = line.slice(2).trim();
@@ -360,7 +361,17 @@ function parseGuion(src, client){
       if (limpio && /^requisitos\b/i.test(line.slice(3).trim())) { last=null; continue; }
       g.lines.push({beat:line.slice(3).trim()}); last=null; continue;
     }
-    if (line.startsWith('//')) { if(last) last.nota = (last.nota?last.nota+' ':'')+line.slice(2).trim(); continue; }
+    if (line.startsWith('//')) {
+      const nota = line.slice(2).trim();
+      // En los clientes limpios la nota ✱ (la de guionista) ni se pinta ni se conserva,
+      // ni siquiera para el admin: si sobrevive al parseo, toMarkdown la vuelve a escribir
+      // y regresa al guion en el siguiente guardado desde el editor web.
+      // Una nota de guionista puede venir partida en varias líneas // seguidas, y solo
+      // la primera trae el ✱. Se descarta el bloque completo.
+      if (limpio && (nota.startsWith('✱') || tirandoNota)) { tirandoNota = true; continue; }
+      if(last) last.nota = (last.nota?last.nota+' ':'')+nota;
+      continue;
+    }
     const m = line.match(/^([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑ0-9 .]{1,24}?):\s+(.*)$/);
     if (m){ last = {speaker:m[1].trim(), text:m[2].trim()}; g.lines.push(last); }
     else if (last && last.text){ last.text += ' ' + line; }
