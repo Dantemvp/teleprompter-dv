@@ -8,13 +8,6 @@
       "locacion": "Consultorio",
       "guiones": [
         {
-          "slug": "r12-roadmap",
-          "titulo": "Roadmap de grabación R12",
-          "info": "19 videos · 6 bloques · 6 outfits · utilería y orden",
-          "categoria": "plan",
-          "grabado": false
-        },
-        {
           "slug": "r12-01",
           "titulo": "El que nadie sospecha",
           "info": "40–48 seg · contador de superlativos",
