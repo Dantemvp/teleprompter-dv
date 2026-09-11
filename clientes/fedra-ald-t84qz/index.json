@@ -117,7 +117,8 @@
           "categoria": "guion-largo",
           "grabado": false,
           "link": "https://www.instagram.com/reels/DUtx06bjiJV/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-22.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-22.jpg",
+          "miniatura": true
         },
         {
           "slug": "r12-24",
