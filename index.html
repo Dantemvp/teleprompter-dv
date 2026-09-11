@@ -74,6 +74,18 @@
   .bubble{padding:10px 14px; border-radius:14px; font-size:15px; background:#efede4;}
   .row.right .bubble, .row.solo .bubble{background:var(--teal-bg); color:var(--teal-darker);}
   .nota{font-size:12px; color:var(--muted); margin:4px 6px 0;}
+  /* Ficha de verificación: discreta cerrada, legible abierta. */
+  .dato{margin:6px 6px 0; font-size:12px;}
+  .dato summary{cursor:pointer; color:var(--teal-darker); font-weight:600; list-style:none; padding:3px 0;}
+  .dato summary::-webkit-details-marker{display:none;}
+  .dato summary:hover{text-decoration:underline;}
+  .datobody{margin-top:5px; padding:9px 11px; background:var(--teal-bg); border-radius:9px; line-height:1.5;}
+  .datofila{display:flex; gap:8px; margin-bottom:5px;}
+  .datoetq{flex:0 0 68px; font-weight:700; color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.03em; padding-top:1px;}
+  .datofila.antes span:last-child{color:var(--muted); text-decoration:line-through; text-decoration-thickness:1px;}
+  .datofila.ahora span:last-child{color:var(--ink); font-weight:600;}
+  .datoliga{display:inline-block; margin-top:2px; font-size:11.5px; color:var(--teal-darker); font-weight:600;}
+  body.hide-notas .dato{display:none;}
   .row.right .nota{text-align:right;}
   body.hide-notas .nota{display:none;}
   body.editing .bubble, body.editing .nota, body.editing .beat, body.editing h1[contenteditable="true"]{outline:1.5px dashed var(--teal); outline-offset:3px; border-radius:8px;}
@@ -369,6 +381,10 @@ function parseGuion(src, client){
       // Una nota de guionista puede venir partida en varias líneas // seguidas, y solo
       // la primera trae el ✱. Se descarta el bloque completo.
       if (limpio && (nota.startsWith('✱') || tirandoNota)) { tirandoNota = true; continue; }
+      // `// DATO:` es la ficha de verificación: qué decía la referencia, qué dice ahora
+      // y dónde lo fundamentamos. Va aparte de la nota de dirección porque se pinta
+      // como desplegable, no como texto suelto debajo del diálogo.
+      if (/^DATO\s*:/i.test(nota)) { if(last){ (last.datos = last.datos || []).push(nota.replace(/^DATO\s*:\s*/i,'')); } continue; }
       if(last) last.nota = (last.nota?last.nota+' ':'')+nota;
       continue;
     }
@@ -379,6 +395,26 @@ function parseGuion(src, client){
   return g;
 }
 
+// Pinta la ficha de verificación como desplegable. Cerrado por omisión: el guion
+// se lee limpio y la evidencia queda a un clic, para ella y para quien la cuestione.
+// Formato: DATO: <titulo> || ANTES: <lo que decia la referencia> || AHORA: <el dato ya verificado> || FUENTE: <publicacion> || LINK: <url>
+function datoHtml(raw){
+  const f = {};
+  raw.split('||').forEach((part, idx) => {
+    const m = part.trim().match(/^(DATO|ANTES|AHORA|FUENTE|LINK)\s*:\s*([\s\S]*)$/i);
+    if (m) { f[m[1].toUpperCase()] = m[2].trim(); return; }
+    // El primer trozo ya viene sin su etiqueta `DATO:` (la quita el parser): es el título.
+    if (idx === 0 && part.trim()) f.DATO = part.trim();
+  });
+  const titulo = f.DATO || 'De dónde sale este dato';
+  const fila = (etq, val, cls) => val ? `<div class="datofila ${cls}"><span class="datoetq">${etq}</span><span>${esc(val)}</span></div>` : '';
+  const liga = f.LINK
+    ? `<a class="datoliga" href="${attr(f.LINK)}" target="_blank" rel="noopener">${esc(f.FUENTE || 'Ver la fuente')} ↗</a>`
+    : (f.FUENTE ? `<span class="datoliga">${esc(f.FUENTE)}</span>` : '');
+  return `<details class="dato"><summary>🔬 ${esc(titulo)}</summary><div class="datobody">
+    ${fila('Se decía', f.ANTES, 'antes')}${fila('Verificado', f.AHORA, 'ahora')}${liga}
+  </div></details>`;
+}
 function speakerOrder(g){
   const seen = [];
   for (const l of g.lines) if (l.speaker && !seen.includes(l.speaker)) seen.push(l.speaker);
@@ -403,6 +439,7 @@ function toMarkdown(g){
     if (l.beat){ out += '\n## ' + l.beat + '\n'; return; }
     out += '\n' + l.speaker + ': ' + l.text + '\n';
     if (l.nota) out += '// ' + l.nota + '\n';
+    (l.datos || []).forEach(d => out += '// DATO: ' + d + '\n');
   });
   return out.trim() + '\n';
 }
@@ -431,7 +468,8 @@ function renderGuion(g, canonical, backHref, opts){
     const idx = spk.indexOf(l.speaker);
     const cls = solo ? 'solo' : (idx===1 ? 'right' : '');
     const showNota = l.nota && (adm || !l.nota.trim().startsWith('✱'));   // notas que empiezan con ✱ son solo para el admin
-    conv += `<div class="row ${cls}"><div class="avatar">${esc(l.speaker.slice(0,3))}</div><div class="bubblewrap"><div class="bubble" data-li="${i}">${esc(l.text)}</div>${showNota?`<p class="nota" data-li="${i}">${esc(l.nota)}</p>`:''}</div></div>`;
+    const datos = (l.datos || []).map(datoHtml).join('');
+    conv += `<div class="row ${cls}"><div class="avatar">${esc(l.speaker.slice(0,3))}</div><div class="bubblewrap"><div class="bubble" data-li="${i}">${esc(l.text)}</div>${showNota?`<p class="nota" data-li="${i}">${esc(l.nota)}</p>`:''}${datos}</div></div>`;
   });
   const chips = g.meta.filter(m => adm || !m.trim().startsWith('✱')).map(m=>`<span class="chip g">${esc(m)}</span>`).join('');
   const banner = '';   // El guardado va directo a la nube; la copia local es solo un cache optimista que se actualiza solo (~1 min) y se auto-limpia al publicarse.
@@ -491,7 +529,8 @@ function renderGuion(g, canonical, backHref, opts){
     const sp = l ? l.speaker : '';
     const tx = l ? l.text : '';
     const nt = l && l.nota ? l.nota : '';
-    return `<div class="erow eline">
+    const dt = l && l.datos ? JSON.stringify(l.datos) : '';   // se arrastran tal cual: se editan desde el .md, no aquí
+    return `<div class="erow eline" data-datos="${attr(dt)}">
       <div class="erowtop"><input class="ein espk" list="spklist" value="${attr(sp)}" placeholder="Personaje (DRA, ENTREVISTADOR...)">
       <button class="mini eup" title="Subir">↑</button><button class="mini edown" title="Bajar">↓</button><button class="mini edel" title="Eliminar">✕</button></div>
       <textarea class="ein etext" placeholder="Lo que dice el personaje">${esc(tx)}</textarea>
@@ -527,7 +566,14 @@ function renderGuion(g, canonical, backHref, opts){
         const speaker = (r.querySelector('.espk').value||'').replace(/\s*\n\s*/g,' ').trim() || 'DRA';
         const text = (r.querySelector('.etext').value||'').replace(/\s*\n\s*/g,' ').trim();
         const nota = (r.querySelector('.enota').value||'').replace(/\s*\n\s*/g,' ').trim();
-        if (text || nota){ const o = {speaker, text}; if (nota) o.nota = nota; lines.push(o); }
+        let datos = null;
+        try { datos = r.dataset.datos ? JSON.parse(r.dataset.datos) : null; } catch { datos = null; }
+        if (text || nota || (datos && datos.length)){
+          const o = {speaker, text};
+          if (nota) o.nota = nota;
+          if (datos && datos.length) o.datos = datos;
+          lines.push(o);
+        }
       }
     });
     g.lines = lines;
