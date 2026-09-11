@@ -334,7 +334,15 @@ const LEGACY = {
   'podcast-02-brackets-vs-aliwell': ['ale-paz-mx27k','r2-02']
 };
 
-function parseGuion(src){
+// Clientes donde el guion es SOLO título, escenas y diálogo. Lo que llegue en el
+// encabezado (> …) o en un bloque de REQUISITOS TÉCNICOS se tira al parsear, no
+// solo al pintar: así el editor web tampoco puede volver a escribirlo al guardar.
+// Pasó el 11-sep-2026: una pestaña con la copia vieja de r12-14 le regresó a la
+// doctora las once líneas de utilería que ya se habían quitado.
+const CLIENT_LIMPIO = { 'fedra-ald-t84qz': true };
+
+function parseGuion(src, client){
+  const limpio = !!(client && CLIENT_LIMPIO[client]);
   const g = {title:'Guion', meta:[], lines:[], ref:null};
   let last = null;
   for (let raw of src.split('\n')){
@@ -345,9 +353,13 @@ function parseGuion(src){
       const meta = line.slice(2).trim();
       const rm = meta.match(/^referencias?\b[^:]*:\s*(https?:\/\/\S+)/i);
       if (rm){ g.ref = rm[1]; continue; }
+      if (limpio) continue;
       g.meta.push(meta); continue;
     }
-    if (line.startsWith('## ')) { g.lines.push({beat:line.slice(3).trim()}); last=null; continue; }
+    if (line.startsWith('## ')) {
+      if (limpio && /^requisitos\b/i.test(line.slice(3).trim())) { last=null; continue; }
+      g.lines.push({beat:line.slice(3).trim()}); last=null; continue;
+    }
     if (line.startsWith('//')) { if(last) last.nota = (last.nota?last.nota+' ':'')+line.slice(2).trim(); continue; }
     const m = line.match(/^([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑ0-9 .]{1,24}?):\s+(.*)$/);
     if (m){ last = {speaker:m[1].trim(), text:m[2].trim()}; g.lines.push(last); }
@@ -528,7 +540,7 @@ function renderGuion(g, canonical, backHref, opts){
       const md = toMarkdown(g);
       if (opts.localKey){ localStorage.setItem(opts.localKey, md); localStorage.setItem(opts.localKey + ':t', Date.now()); }
       toast('Cambios guardados en este equipo');
-      renderGuion(parseGuion(md), canonical, backHref, Object.assign({}, opts, {edited: false}));
+      renderGuion(parseGuion(md, opts.client), canonical, backHref, Object.assign({}, opts, {edited: false}));
     };
     const cloudBtn = $('#fCloud');
     if (cloudBtn) cloudBtn.onclick = async () => {
@@ -544,7 +556,7 @@ function renderGuion(g, canonical, backHref, opts){
         if (!r.ok) throw new Error(await r.text());
         if (opts.localKey){ localStorage.setItem(opts.localKey, md); localStorage.setItem(opts.localKey + ':t', Date.now()); }
         toast('Guardado ✓ Visible para todos en ~1 min');
-        renderGuion(parseGuion(md), canonical, backHref, Object.assign({}, opts, {edited: false}));
+        renderGuion(parseGuion(md, opts.client), canonical, backHref, Object.assign({}, opts, {edited: false}));
       } catch (err) {
         cloudBtn.disabled = false; cloudBtn.textContent = '☁ Guardar';
         toast('Error al publicar: ' + (err.message||err));
@@ -1261,7 +1273,7 @@ async function boot(){
         const local = localStorage.getItem('dvloc:' + c + '/' + g);
         if (local !== null) locutor = local || null;
       }
-      renderGuion(parseGuion(override || fetched), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: false, locutor, thumb, ref});
+      renderGuion(parseGuion(override || fetched, c), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: false, locutor, thumb, ref});
       return;
     }catch(e){ $('#app').innerHTML = '<p style="padding:40px 0">Guion no encontrado. Revisa el link con tu estratega.</p>'; return; }
   }

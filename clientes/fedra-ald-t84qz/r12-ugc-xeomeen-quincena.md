@@ -1,7 +1,4 @@
 # Hoy es quincena
-> Formato: Sketch actuado
-> Apertura: Una empleada viendo su celular bien enojada.
-> Pendiente: Dante revisará y mejorará esta versión antes de considerarla lista para grabación.
 
 ## Escena 01
 
