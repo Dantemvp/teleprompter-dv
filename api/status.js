@@ -12,7 +12,7 @@ export default async function handler(req, res){
 
   let body = req.body;
   if (typeof body === 'string') { try { body = JSON.parse(body); } catch { body = {}; } }
-  const { password, client, slug, grabado, locutor } = body || {};
+  const { password, client, slug, grabado, locutor, miniatura } = body || {};
 
   if (!process.env.EDIT_PASSWORD || password !== process.env.EDIT_PASSWORD)
     return res.status(401).send('Contraseña incorrecta');
@@ -42,6 +42,7 @@ export default async function handler(req, res){
       (data.grabaciones || []).forEach(rec => (rec.guiones || []).forEach(g => {
         if (g.slug === slug) {
           if ('grabado' in body) g.grabado = !!grabado;
+          if ('miniatura' in body) g.miniatura = !!miniatura;
           if ('locutor' in body) g.locutor = locutor ? String(locutor).slice(0, 40) : null;
           found = true;
         }
@@ -50,7 +51,9 @@ export default async function handler(req, res){
 
       const msg = ('locutor' in body)
         ? `Locutor ${client}/${slug}=${locutor || '(ninguno)'}`
-        : `Marcar ${client}/${slug} grabado=${!!grabado}`;
+        : ('miniatura' in body)
+          ? `Marcar ${client}/${slug} miniatura=${!!miniatura}`
+          : `Marcar ${client}/${slug} grabado=${!!grabado}`;
       const newContent = JSON.stringify(data, null, 2) + '\n';
       const put = await fetch(api, {
         method: 'PUT',
@@ -61,7 +64,12 @@ export default async function handler(req, res){
           sha: meta.sha
         })
       });
-      if (put.ok) return res.status(200).json({ ok: true, grabado: !!grabado, locutor: ('locutor' in body) ? (locutor || null) : undefined });
+      if (put.ok) return res.status(200).json({
+        ok: true,
+        grabado: !!grabado,
+        miniatura: ('miniatura' in body) ? !!miniatura : undefined,
+        locutor: ('locutor' in body) ? (locutor || null) : undefined
+      });
       // 409/422 = sha desactualizado por otra escritura: reintentar con el sha fresco.
       if (put.status === 409 || put.status === 422) { lastErr = 'conflicto de versión'; continue; }
       return res.status(502).send('GitHub: ' + (await put.text()));

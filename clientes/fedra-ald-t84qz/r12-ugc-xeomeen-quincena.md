@@ -1,9 +1,5 @@
 # Hoy es quincena
-> Cliente: Dra. Fedra Aldama
-> Apartado: UGC Xeomeen
-> Estado: Borrador ampliado · pendiente de revisión de Dante, Fedra y Merz · no autorizado para difusión
 > Formato: Sketch actuado
-> Locación: Consultorio
 > Apertura: Una empleada viendo su celular bien enojada.
 > Pendiente: Dante revisará y mejorará esta versión antes de considerarla lista para grabación.
 
@@ -46,4 +42,3 @@ EMPLEADA: Ay… voy a preguntarle a mi cuñada.
 DRA: Al doctor, por favor.
 
 DRA: Antes de cualquier aplicación se revisan tus expresiones, se pide ver el producto y se corrobora al profesional que te la va a aplicar. Con esto no se juega, dejame un msj o comentario y valoramos tu caso ;)
-// A cámara. Texto en pantalla: «Consulta el registro sanitario del medicamento en el Visor de COFEPRIS».

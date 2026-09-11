@@ -185,6 +185,8 @@
   .donechip{display:none; font-size:11px; background:var(--teal-dark); color:#fff; padding:3px 9px; border-radius:6px; align-self:center; white-space:nowrap;}
   .card.done .donechip{display:inline-block;}
   .card.done .btnGrabado{background:var(--teal-dark); border-color:var(--teal-dark); color:#fff;}
+  /* Miniatura hecha: se nota sin competir con el verde de "grabado". */
+  .hasmini .btnMiniatura{background:#4B3F8F; border-color:#4B3F8F; color:#fff;}
   .btnDel{color:#A32D2D; border-color:#F09595; background:#fff; font-weight:700;}
   .btnDel:hover{background:#FCEBEB;}
   .cardDelete{position:absolute; top:10px; right:10px; z-index:2; width:30px; height:30px; padding:0; border-radius:50%; font-size:18px; line-height:1;}
@@ -622,6 +624,12 @@ function renderOutfit(it){
   return `<details class="outfit"><summary>${n}${est}</summary><div class="outfitbody">${looks}${nota}</div></details>`;
 }
 // ---- Orden de grabación: línea de tiempo vertical (mobile-first) ----
+// Palomita "Miniatura": marca que la portada del video ya está hecha. Vive junto a
+// "Marcar grabado" y se guarda en el index.json igual que ella (campo `miniatura`).
+// Solo la ve el equipo DV: al cliente no le sirve y le ensucia la tarjeta.
+function btnMiniaturaHtml(it){
+  return `<button class="mini btnMiniatura" data-slug="${attr(it.slug)}" data-miniatura="${it.miniatura?1:0}" title="Marcar que ya existe la miniatura de este video">${it.miniatura?'✓ Miniatura':'Miniatura'}</button>`;
+}
 // Lee rec.timeline (array). Cada bloque: {hora, dur, titulo, slugs[], nota, tipo}.
 // tipo: 'pausa' (descanso/colchón) · 'extra' (sin asignar) · undefined (bloque normal).
 // `gi` = índice de la grabación, para poder refrescar la barra de avance sin re-renderizar todo.
@@ -647,15 +655,17 @@ function renderTimeline(rec, token, codeOf, gi){
       // Se marca como grabado desde aquí mismo, sin bajar a la tarjeta de la categoría.
       const marcar = STATUS_ENDPOINT
         ? `<button class="mini btnGrabado" data-slug="${attr(c.slug)}" data-grabado="${c.grabado?1:0}">${c.grabado?'✓ Grabado':'Marcar grabado'}</button>` : '';
+      // Palomita de miniatura: es control de producción del equipo DV, no del cliente.
+      const mini = (STATUS_ENDPOINT && isAdmin()) ? btnMiniaturaHtml(c) : '';
       const del = (DELETE_ENDPOINT && isAdmin())
         ? `<button class="mini btnDel tlDelete" data-slug="${attr(c.slug)}" data-cod="${attr(cod)}" data-title="${attr(c.titulo)}" title="Eliminar ${attr(cod)}" aria-label="Eliminar ${attr(cod)} · ${attr(c.titulo)}">×</button>` : '';
       // Las prendas van FUERA de .tlbody, a lo ancho de la tarjeta: junto a la miniatura
       // el espacio no alcanza y el texto se parte a media palabra en celular.
-      return `<div class="tlitem${c.grabado?' off':''}" data-tlitem="${attr(c.slug)}">
+      return `<div class="tlitem${c.grabado?' off':''}${c.miniatura?' hasmini':''}" data-tlitem="${attr(c.slug)}">
         <div class="tlitemtop">${thumb}<div class="tlbody">
           <span class="tlcod">${esc(cod)}${c.grabado?' ✓':''}</span>
           <p class="tlname">${esc(c.titulo)}</p>
-          <div class="tlacts">${abrir}${ref}${marcar}${del}</div>
+          <div class="tlacts">${mini}${abrir}${ref}${marcar}${del}</div>
         </div></div>
         ${renderOutfit(c)}
       </div>`;
@@ -713,6 +723,9 @@ function refreshTimelines(){
       if (cod) cod.textContent = cod.textContent.replace(/ ✓$/, '') + (it.grabado ? ' ✓' : '');
       const b = row.querySelector('.btnGrabado');
       if (b && !b.disabled){ b.dataset.grabado = it.grabado ? '1' : '0'; b.textContent = it.grabado ? '✓ Grabado' : 'Marcar grabado'; }
+      row.classList.toggle('hasmini', !!it.miniatura);
+      const m = row.querySelector('.btnMiniatura');
+      if (m && !m.disabled){ m.dataset.miniatura = it.miniatura ? '1' : '0'; m.textContent = it.miniatura ? '✓ Miniatura' : 'Miniatura'; }
     });
     // Punto de la línea de tiempo: se rellena cuando TODO el bloque está grabado.
     (rec.timeline || []).forEach((b, bi) => {
@@ -729,6 +742,7 @@ function renderCard(it, token, ri, codArg){
   const cod = codArg || it.slug.toUpperCase();
   const esGuion = it.tipo !== 'ref' && !['trans-int','trans-ext','caminadora','juntas'].includes(it.categoria);   // .md abrible; transiciones y tarjetas de referencia (tipo:ref) solo llevan link. Un chusco CON guion (tipo:'md') sí se abre.
   const toggle = STATUS_ENDPOINT ? `<button class="mini btnGrabado" data-slug="${attr(it.slug)}" data-grabado="${it.grabado?1:0}">${it.grabado?'✓ Grabado':'Marcar grabado'}</button>` : '';
+  const mini = (STATUS_ENDPOINT && esGuion && isAdmin()) ? btnMiniaturaHtml(it) : '';
   const del = (DELETE_ENDPOINT && isAdmin())
     ? `<button class="mini btnDel cardDelete" data-slug="${attr(it.slug)}" data-cod="${attr(cod)}" data-title="${attr(it.titulo)}" title="Eliminar ${attr(cod)}" aria-label="Eliminar ${attr(cod)} · ${attr(it.titulo)}">×</button>` : '';
   const founders = LOCUTORES[token];
@@ -742,9 +756,9 @@ function renderCard(it, token, ri, codArg){
   const ref = it.link ? `<a href="${attr(it.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
   const mover = (REC_NESTED[token] && isAdmin()) ? `<button class="mini btnMover" data-slug="${attr(it.slug)}">Mover ⇄</button>` : '';
   const preview = it.thumb ? `<details class="refpreview"><summary>👁 Ver preview</summary><img src="${attr(it.thumb)}" alt="preview de la referencia" loading="lazy"></details>` : '';
-  return `<div class="card${it.grabado?' done':''}" data-card="${attr(it.slug)}" data-rec="${ri}">${del}<div class="cardmain" style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}${loc}</h3><p>${esc(it.info||'')}</p></div><span class="donechip">✓ Grabado</span></div>
+  return `<div class="card${it.grabado?' done':''}${it.miniatura?' hasmini':''}" data-card="${attr(it.slug)}" data-rec="${ri}">${del}<div class="cardmain" style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}${loc}</h3><p>${esc(it.info||'')}</p></div><span class="donechip">✓ Grabado</span></div>
     ${cardLoc}
-    <div class="actions">${abrir}${ref}<button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${mover}</div>${preview}${renderOutfit(it)}</div>`;
+    <div class="actions">${mini}${abrir}${ref}<button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${mover}</div>${preview}${renderOutfit(it)}</div>`;
 }
 let CLIENT_DATA = null, CLIENT_TOKEN = null;
 function renderClient(data, token){
@@ -801,6 +815,7 @@ function renderClient(data, token){
     ${CLIENT_NOTE[token] ? `<div class="globalnote">${esc(CLIENT_NOTE[token])}</div>` : ''}
     ${blocks || '<p class="hint">Aún no hay contenido publicado para este cliente.</p>'}`;
   document.querySelectorAll('.btnGrabado').forEach(b => b.onclick = () => toggleGrabado(token, b));
+  document.querySelectorAll('.btnMiniatura').forEach(b => b.onclick = () => toggleMiniatura(token, b));
   document.querySelectorAll('.btnDel').forEach(b => b.onclick = () => deleteGuion(token, b));
   document.querySelectorAll('.cardloc').forEach(b => b.onclick = () => setLocutorCard(token, b));
   document.querySelectorAll('.btnMover').forEach(b => b.onclick = () => moveItemUI(b.dataset.slug));
@@ -983,6 +998,36 @@ async function toggleGrabado(token, btn){
     }
     refreshTimelines();
     toast(next ? 'Marcado como grabado ✓ (visible en ~1 min)' : 'Desmarcado');
+  } catch (e){
+    toast('Error: ' + (e.message||e));
+    btn.textContent = old;
+  }
+  btn.disabled = false;
+}
+
+// Palomita de miniatura. Mismo endpoint y misma contraseña que "marcar grabado",
+// pero es un campo aparte: un video puede estar grabado y sin portada, o al revés.
+async function toggleMiniatura(token, btn){
+  const slug = btn.dataset.slug;
+  const next = btn.dataset.miniatura !== '1';
+  const pw = await unlock('Contraseña para marcar la miniatura');
+  if (!pw) return;
+  const old = btn.textContent;
+  btn.disabled = true; btn.textContent = 'Guardando...';
+  try {
+    const r = await fetch(STATUS_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ password: pw, client: token, slug, miniatura: next }) });
+    if (r.status === 401){ forgetPw(); throw new Error('Contraseña incorrecta'); }
+    if (!r.ok) throw new Error(await r.text());
+    if (CLIENT_DATA) (CLIENT_DATA.grabaciones||[]).forEach(rg => (rg.guiones||[]).forEach(x => { if (x.slug===slug) x.miniatura = next; }));
+    // El mismo guion tiene botón en su tarjeta y en la línea de tiempo: se actualizan los dos.
+    document.querySelectorAll(`.btnMiniatura[data-slug="${CSS.escape(slug)}"]`).forEach(b => {
+      b.dataset.miniatura = next ? '1' : '0';
+      b.textContent = next ? '✓ Miniatura' : 'Miniatura';
+      b.disabled = false;
+    });
+    document.querySelectorAll(`.card[data-card="${CSS.escape(slug)}"], .tlitem[data-tlitem="${CSS.escape(slug)}"]`)
+      .forEach(el => el.classList.toggle('hasmini', next));
+    toast(next ? 'Miniatura lista ✓ (visible en ~1 min)' : 'Miniatura desmarcada');
   } catch (e){
     toast('Error: ' + (e.message||e));
     btn.textContent = old;
