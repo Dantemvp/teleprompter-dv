@@ -1,5 +1,4 @@
 # Un año en la mesa · el bote
-> Duración: 60–65 seg · prueba física con acumulación visual · colaboración de marca
 
 ## Escena 01 · vacía el bote
 
