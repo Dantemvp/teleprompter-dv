@@ -2,6 +2,35 @@
   "cliente": "Dra. Fedra Aldama",
   "grabaciones": [
     {
+      "rec": "R13",
+      "nombre": "Grabación 13 · en armado",
+      "fecha": "Por definir",
+      "locacion": "Consultorio",
+      "guiones": [
+        {
+          "slug": "r13-01",
+          "titulo": "El mapa completo de la toxina",
+          "info": "55–65 seg · mapa de zonas sobre la cara · con modelo",
+          "categoria": "estetica",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DZLHefvpuCO/"
+        }
+      ],
+      "ventana": "Por definir",
+      "nota": "Hereda los bloques 4, 5 y 6 de R12, reescritos con la regla 70/30 y el corpus verbatim de voz. Los guiones entran conforme se aprueban.",
+      "timeline": [
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 1 · con modelo",
+          "slugs": [
+            "r13-01"
+          ],
+          "nota": "🎬 Modelo con la cara limpia y lápiz dermográfico. Los puntos NO se borran entre tomas: el mapa se va dibujando y al final se ven todas las zonas juntas.\n⚠️ SIN MARCA · este video va sin frasco de Xeomeen y sin nombrar la marca. Abre el desplegable de la escena 01 para saber por qué. Los videos de Xeomeen se graban aparte.\n📝 Quien preste la cara firma consentimiento por escrito."
+        }
+      ]
+    },
+    {
       "rec": "R12",
       "nombre": "Próxima grabación · en desarrollo",
       "fecha": "Por definir",
@@ -196,15 +225,6 @@
           "thumb": "clientes/fedra-ald-t84qz/refs/r12-ugc-xeomeen-bote.jpg"
         },
         {
-          "slug": "r12-26",
-          "titulo": "El mapa completo de la toxina",
-          "info": "48–55 seg · 6 zonas marcadas en cara + frasco en 01 y 10",
-          "categoria": "xeomeen",
-          "link": "https://www.instagram.com/reel/DZLHefvpuCO/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-26.jpg",
-          "grabado": false
-        },
-        {
           "slug": "r12-07",
           "titulo": "Carbohidratos simples vs complejos",
           "info": "idea de Fedra · 600k views en el del azúcar · OJO química cruzada",
@@ -307,7 +327,6 @@
           "dur": "65 min",
           "titulo": "Bloque 4 · Look 4 · con modelo",
           "slugs": [
-            "r12-26",
             "r12-17",
             "r12-19",
             "r12-20",
