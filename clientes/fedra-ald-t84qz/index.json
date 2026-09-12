@@ -96,6 +96,29 @@
           "categoria": "xeomeen",
           "grabado": false,
           "marca": "Xeomeen"
+        },
+        {
+          "slug": "r13-11",
+          "titulo": "Carbohidratos simples vs complejos",
+          "info": "55–65 seg · idea de Fedra · 600k pidiéndolo en comentarios",
+          "categoria": "guion-largo",
+          "grabado": false
+        },
+        {
+          "slug": "r13-12",
+          "titulo": "Lo mejor de los GLP-1 no es que bajes de peso",
+          "info": "45–55 seg · revisión de The Lancet",
+          "categoria": "guion-largo",
+          "grabado": false,
+          "link": "https://vt.tiktok.com/ZSqa6t1AQ/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r13-12.jpg"
+        },
+        {
+          "slug": "r13-13",
+          "titulo": "Me llevé a todo mi equipo a Los Cabos",
+          "info": "40–48 seg · idea de Fedra · marca personal",
+          "categoria": "guion-corto",
+          "grabado": false
         }
       ],
       "ventana": "Por definir",
@@ -122,6 +145,16 @@
             "r13-08",
             "r13-09",
             "r13-10"
+          ]
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 3",
+          "slugs": [
+            "r13-11",
+            "r13-12",
+            "r13-13"
           ]
         }
       ]
