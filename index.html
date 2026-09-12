@@ -75,6 +75,7 @@
   .row.right .bubble, .row.solo .bubble{background:var(--teal-bg); color:var(--teal-darker);}
   .nota{font-size:12px; color:var(--muted); margin:4px 6px 0;}
   /* Ficha de verificación: discreta cerrada, legible abierta. */
+  .beatnota{margin:2px 0 10px; padding-left:2px;}
   .dato{margin:6px 6px 0; font-size:12px;}
   .dato summary{cursor:pointer; color:var(--teal-darker); font-weight:600; list-style:none; padding:3px 0;}
   .dato summary::-webkit-details-marker{display:none;}
@@ -356,7 +357,7 @@ const CLIENT_LIMPIO = { 'fedra-ald-t84qz': true };
 function parseGuion(src, client){
   const limpio = !!(client && CLIENT_LIMPIO[client]);
   const g = {title:'Guion', meta:[], lines:[], ref:null};
-  let last = null, tirandoNota = false;
+  let last = null, lastBeat = null, tirandoNota = false;
   for (let raw of src.split('\n')){
     const line = raw.trim();
     if (!line) continue;
@@ -370,8 +371,9 @@ function parseGuion(src, client){
       g.meta.push(meta); continue;
     }
     if (line.startsWith('## ')) {
-      if (limpio && /^requisitos\b/i.test(line.slice(3).trim())) { last=null; continue; }
-      g.lines.push({beat:line.slice(3).trim()}); last=null; continue;
+      if (limpio && /^requisitos\b/i.test(line.slice(3).trim())) { last=null; lastBeat=null; continue; }
+      lastBeat = {beat:line.slice(3).trim()};
+      g.lines.push(lastBeat); last=null; continue;
     }
     if (line.startsWith('//')) {
       const nota = line.slice(2).trim();
@@ -384,8 +386,9 @@ function parseGuion(src, client){
       // `// DATO:` es la ficha de verificación: qué decía la referencia, qué dice ahora
       // y dónde lo fundamentamos. Va aparte de la nota de dirección porque se pinta
       // como desplegable, no como texto suelto debajo del diálogo.
-      if (/^DATO\s*:/i.test(nota)) { if(last){ (last.datos = last.datos || []).push(nota.replace(/^DATO\s*:\s*/i,'')); } continue; }
-      if(last) last.nota = (last.nota?last.nota+' ':'')+nota;
+      if (/^DATO\s*:/i.test(nota)) { const dd = last || lastBeat; if(dd){ (dd.datos = dd.datos || []).push(nota.replace(/^DATO\s*:\s*/i,'')); } continue; }
+      const destino = last || lastBeat;
+      if (destino) destino.nota = (destino.nota ? destino.nota+' · ' : '') + nota;
       continue;
     }
     const m = line.match(/^([A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑ0-9 .]{1,24}?):\s+(.*)$/);
@@ -436,7 +439,12 @@ function toMarkdown(g){
   g.meta.forEach(m => out += '> ' + m + '\n');
   if (g.ref) out += '> Referencia: ' + g.ref + '\n';
   g.lines.forEach(l => {
-    if (l.beat){ out += '\n## ' + l.beat + '\n'; return; }
+    if (l.beat){
+      out += '\n## ' + l.beat + '\n';
+      (l.nota||'').split(' · ').filter(Boolean).forEach(n => out += '// ' + n + '\n');
+      (l.datos || []).forEach(d => out += '// DATO: ' + d + '\n');
+      return;
+    }
     out += '\n' + l.speaker + ': ' + l.text + '\n';
     if (l.nota) out += '// ' + l.nota + '\n';
     (l.datos || []).forEach(d => out += '// DATO: ' + d + '\n');
@@ -464,7 +472,16 @@ function renderGuion(g, canonical, backHref, opts){
   let conv = '';
   const adm = isAdmin();   // solo el equipo DV (admin) ve las marcas ✱; la dra y lectores no
   g.lines.forEach((l, i) => {
-    if (l.beat){ const bt = adm ? l.beat : l.beat.replace(/\s*✱\s*$/,''); conv += `<p class="beat" data-li="${i}">${esc(bt)}</p>`; return; }
+    if (l.beat){
+      const bt = adm ? l.beat : l.beat.replace(/\s*✱\s*$/,'');
+      // Un guion mudo (b-roll + texto) no tiene línea hablada: sus tarjetas y
+      // direcciones cuelgan de la escena. Sin esto el guion se ve en blanco.
+      const bn = l.nota && (adm || !l.nota.trim().startsWith('✱'));
+      conv += `<p class="beat" data-li="${i}">${esc(bt)}</p>`
+           + (bn ? `<p class="nota beatnota">${esc(l.nota)}</p>` : '')
+           + (l.datos||[]).map(datoHtml).join('');
+      return;
+    }
     const idx = spk.indexOf(l.speaker);
     const cls = solo ? 'solo' : (idx===1 ? 'right' : '');
     const showNota = l.nota && (adm || !l.nota.trim().startsWith('✱'));   // notas que empiezan con ✱ son solo para el admin

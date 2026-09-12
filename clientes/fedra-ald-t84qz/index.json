@@ -14,6 +14,14 @@
           "categoria": "estetica",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DZLHefvpuCO/"
+        },
+        {
+          "slug": "r13-02",
+          "titulo": "Aquí nadie vino y nadie supo",
+          "info": "12–15 seg · mudo · b-roll + tarjetas · silueta anónima",
+          "categoria": "chusco",
+          "grabado": false,
+          "link": "https://www.instagram.com/reels/C7wmSmduyRX/"
         }
       ],
       "ventana": "Por definir",
@@ -24,9 +32,10 @@
           "dur": "—",
           "titulo": "Bloque 1 · con modelo",
           "slugs": [
-            "r13-01"
+            "r13-01",
+            "r13-02"
           ],
-          "nota": "🎬 Modelo con la cara limpia y lápiz dermográfico. Los puntos NO se borran entre tomas: el mapa se va dibujando y al final se ven todas las zonas juntas.\n⚠️ SIN MARCA · este video va sin frasco de Xeomeen y sin nombrar la marca. Abre el desplegable de la escena 01 para saber por qué. Los videos de Xeomeen se graban aparte.\n📝 Quien preste la cara firma consentimiento por escrito."
+          "nota": "🎬 Modelo con la cara limpia y lápiz dermográfico. Los puntos NO se borran entre tomas: el mapa se va dibujando y al final se ven todas las zonas juntas.\n⚠️ SIN MARCA · este video va sin frasco de Xeomeen y sin nombrar la marca. Abre el desplegable de la escena 01 para saber por qué. Los videos de Xeomeen se graban aparte.\n📝 Quien preste la cara firma consentimiento por escrito.\n🎬 r13-02 va MUDO: audio de trend, b-roll y tarjetas. La paciente en silueta negra sólida, recortada en edición: es el chiste y resuelve su privacidad. Ella en bata. Quien preste el cuerpo firma consentimiento aunque no se le vea la cara."
         }
       ]
     },
@@ -171,15 +180,6 @@
           "link": "https://www.instagram.com/reels/DVgybm2DdQE/",
           "grabado": false,
           "thumb": "clientes/fedra-ald-t84qz/refs/r12-16.jpg"
-        },
-        {
-          "slug": "r12-17",
-          "titulo": "Aquí nadie vino y nadie supo",
-          "info": "12–15 seg · chusco mudo · silueta anónima",
-          "categoria": "estetica",
-          "grabado": false,
-          "link": "https://www.instagram.com/reels/C7wmSmduyRX/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-17.jpg"
         },
         {
           "slug": "r12-18",
@@ -327,7 +327,6 @@
           "dur": "65 min",
           "titulo": "Bloque 4 · Look 4 · con modelo",
           "slugs": [
-            "r12-17",
             "r12-19",
             "r12-20",
             "r12-24"
