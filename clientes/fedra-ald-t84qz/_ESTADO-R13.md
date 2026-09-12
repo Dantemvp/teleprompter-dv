@@ -5,6 +5,22 @@
 
 ---
 
+## ⏭️ LO SIGUIENTE: barrido de verificación de TODOS los guiones
+
+Acordado con Dante el 12-sep. Se revisa **guion por guion, línea por línea**, cada
+afirmación que se haga en cámara: confirmarla, refutarla, matizarla o mejorarla,
+con fuente de los últimos cinco años y liga que abra.
+
+**Regla dura: no se modifica ninguna línea hablada. Todo entra como ficha
+`// DATO:` desplegable.** La línea ya fue aprobada por él; cambiarla por debajo
+es lo que rompe la confianza. La ficha le deja decidir con el argumento enfrente.
+
+Empezar por los que más afirman: r13-11 (carbohidratos), r13-08 (menopausia),
+r13-12 (GLP-1), r13-05 (abdomen), r13-10 (dosis). Los de opinión pura
+(r13-04, r13-13, r13-15) casi no llevan ficha.
+
+---
+
 ## Qué cambió en el método y por qué (leer antes de escribir nada)
 
 En R12 se perdió tiempo de grabación porque los guiones traían palabras ajenas a ella. Tres arreglos salieron de ahí y **los tres son obligatorios ahora**:
@@ -37,13 +53,20 @@ DRA: lo que dice, con (direcciones entre paréntesis) dentro de la misma línea
 
 ---
 
+## Cómo se arman los bloques
+
+Máximo **4 videos por bloque**. Si ya hay cuatro, se abre uno nuevo. Nada de
+bloques de un solo video, salvo lo que se graba fuera de la sesión.
+
 ## R13 · 16 guiones
 
-**Bloque 1 · con modelo** — r13-01 el mapa de la toxina · r13-02 el chusco mudo · **r13-03 [XEOMEEN]** las tres cosas · r13-04 aquí no hay atajos · r13-05 no vas a tener su abdomen
+**Bloque 1 · con modelo** — r13-01 el mapa de la toxina · r13-02 el chusco mudo · **r13-03 [XEOMEEN]** las tres cosas · r13-04 aquí no hay atajos
 
-**Bloque 2** — r13-07 tu versión de vieja · r13-08 GLP-1 en menopausia · r13-09 es muy fácil, dinero · r13-10 por qué van subiendo la dosis
+**Bloque 2** — r13-05 no vas a tener su abdomen · r13-08 GLP-1 en menopausia · r13-09 es muy fácil, dinero · r13-10 por qué van subiendo la dosis
 
-**Bloque 3** — r13-11 carbohidratos · r13-12 lo mejor de los GLP-1 · r13-13 Los Cabos · r13-14 náuseas (b-roll) · r13-15 consultorio en regla · r13-17 sin satanizar alimentos
+**Bloque 3** — r13-11 carbohidratos · r13-12 lo mejor de los GLP-1 · r13-13 Los Cabos · r13-14 náuseas (b-roll)
+
+**Bloque 4 · cierra de noche** — r13-15 consultorio en regla · r13-17 sin satanizar alimentos · r13-07 tu versión de vieja (nocturno, sin subtítulos)
 
 **Fuera de sesión** — r13-16 outfits de congreso, se graba en Mérida el 26-27 sep
 
