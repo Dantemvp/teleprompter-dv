@@ -68,7 +68,8 @@
           "info": "50–58 seg · lista de beneficios con evidencia",
           "categoria": "guion-largo",
           "grabado": false,
-          "link": "https://vt.tiktok.com/ZSqaMvDJX/"
+          "link": "https://vt.tiktok.com/ZSqaMvDJX/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r13-08.jpg"
         },
         {
           "slug": "r13-idea-07",
@@ -133,7 +134,8 @@
           "info": "45–55 seg · explainer · dosis mínima efectiva",
           "categoria": "guion-largo",
           "grabado": false,
-          "link": "https://vt.tiktok.com/ZSqa6CKwR/"
+          "link": "https://vt.tiktok.com/ZSqa6CKwR/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r13-10.jpg"
         }
       ],
       "ventana": "Por definir",
@@ -148,18 +150,18 @@
             "r13-02",
             "r13-03",
             "r13-04",
-            "r13-05",
-            "r13-08",
-            "r13-09",
-            "r13-10"
+            "r13-05"
           ]
         },
         {
           "hora": "Por definir",
           "dur": "—",
-          "titulo": "Bloque 2 · de noche",
+          "titulo": "Bloque 2",
           "slugs": [
-            "r13-07"
+            "r13-07",
+            "r13-08",
+            "r13-09",
+            "r13-10"
           ]
         }
       ]
