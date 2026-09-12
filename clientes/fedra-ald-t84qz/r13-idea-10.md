@@ -1,21 +1,29 @@
 # Meter medicina estética sin migrarse
-> Estado: nota estratégica · NO es idea de video
+
+> Estado: nota estratégica · no es idea de video
 > Origen: nota de voz 31-ago-2026, 09:40
 
-## Lo que dice
-Bajó bastante la venta de control de peso. La estética no: sus pacientes llegan pidiendo botox y le dicen "lo que usted me diga, doctora". Reconoce que en control de peso hay mucha competencia y en estética también, con inyecciones vendiéndose en todas partes. **No quiere migrar su contenido a estética**, porque lo suyo es el control de peso, pero sí quiere ir metiendo uno que otro video de toxina y MesoJet.
+## Lo que dijo
 
-## Aquí no hay que escribir nada nuevo
-Ella misma se acuerda de que ya tenían eso guionizado y no lo grabaron. Es cierto, está en su propia carpeta y sigue sin grabar:
+> "Estaba pensando, yo creo que va siendo momento [...] de que lo vayas considerando, migrar un poquito o ir metiendo un poco también de medicina estética. **Últimamente ha bajado bastante la venta de control de peso, pero no la estética, fíjate.** Botox mis pacientes quieren: 'lo que usted me diga yo me lo hago, lo que usted haga doctora'."
 
-- `r10-13` — Botox: mapa de puntos (referencia visual, la dra replica con sus zonas)
-- `r10-14` — Mesoterapia sin agujas (MesoJet Gun), 30-50 seg, día de procedimiento
+> "**No quiero migrarme al contenido estético, porque lo mío es el control de peso**, pero sí hay que ir haciendo uno que otro video de toxina, NCTF, mesoterapia. Te acuerdas que teníamos guionizadas esas cosas y ya no las pelamos."
 
-Antes de guionizar estética nueva, se graban esos dos. Ya están pagados en trabajo.
+## Lo que esto significa
 
-## Nota de guionista
-Su instinto de no migrarse es correcto y hay que respetarlo. Su ventaja es ser la médica de control de peso, no una más de las que inyectan. La estética entra como servicio que ya ofrece a quien ya la sigue, no como línea editorial.
+No es una idea de video: es una instrucción de mezcla. Ella pide **más estética sin dejar de ser la doctora del control de peso**. Y da la razón de negocio: la venta de control de peso bajó, la de estética no.
 
-Una proporción sana es uno de estética por cada cuatro o cinco de metabólico. En cuanto se invierte, la cuenta empieza a competir en la categoría donde no tiene ventaja.
+## Cómo quedó resuelto
 
-Ojo con la caída de venta de control de peso: puede no ser un problema de contenido. Si el Instagram sigue penalizado desde el episodio del lanzamiento del año pasado (ver `r12-09`), el alcance está tocado y eso pega en ventas antes que cualquier cambio de tema.
+Esta petición ya se atendió en R13, y conviene que lo sepa:
+
+- **r13-01** el mapa de la toxina, sin marca
+- **r13-03** las tres cosas de medicina estética, con Xeomeen
+- **r13-04** "aquí no hay atajos", que es el puente explícito entre sus dos ramas
+- **r13-06** las tres cosas que no se deja hacer
+
+Cuatro de los guiones de la grabación son de estética, y ninguno la saca de su línea: dos de ellos enlazan directamente con su discurso de control de peso.
+
+## Pendiente
+
+Ella menciona **NCTF y mesoterapia** como temas ya guionizados que se quedaron en el tintero. Hay que buscarlos y ver si siguen sirviendo antes de escribir nuevos.

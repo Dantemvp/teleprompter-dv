@@ -1,52 +1,32 @@
-# Lanzamiento en Mérida · 26-27 sep
-> Estado: idea · URGENTE, faltan pocas semanas
+# Lanzamiento en Mérida · 26 y 27 de sep
+
+> Estado: idea de Fedra · ⚠️ EL MÁS DELICADO DE LA TANDA
 > Origen: nota de voz 31-ago-2026, 20:57
 
-## Lo que pide
-El laboratorio la invitó al lanzamiento de un GLP-1 en Mérida, Yucatán, el 26 y 27 de septiembre, con avión, hotel y gastos pagados, por estar entre los médicos con más uso de GLP-1 en el país. Pide asesoría de **qué grabar que sea subible** y algún formato tipo "los outfits que usé en el congreso".
+## Lo que pidió
 
-## ⚠️ ESTO ES LO MÁS DELICADO DEL LOTE, Y ELLA LO SABE
-En la misma nota cuenta que el año pasado la invitaron a un lanzamiento parecido, subió historias, **se las castigaron, y desde entonces su Instagram trae penalización**. Va a repetir el mismo tipo de evento con el mismo tipo de contenido.
+> "Fui invitada y requerida al gran lanzamiento [de un medicamento]. El laboratorio directamente me invitó, te invitan con todos los gastos pagados, hotel, avión, hospedaje, etcétera, **porque soy de los médicos más significativos en la nación del uso de los GLP-1**. Entonces el 26 y 27 de septiembre es el lanzamiento. Voy a ir a Mérida, Yucatán."
 
-El choque es directo: es un evento de marca farmacéutica y su regla número uno es no nombrar marcas de fármacos. Su guía dice GLP-1, péptidos, herramientas metabólicas, nunca el nombre comercial.
+> "**El año pasado tuve una invitación igual también al lanzamiento de [otro medicamento] y subí unas historias y me las castigaron. Fue desde entonces que está castigado mi Instagram.** Entonces quisiera que me asesores de qué grabo para que se note que estoy en el gran lanzamiento, pero que sea contenido subible."
 
----
+## ⚠️ Ella misma ya explicó por qué esto es delicado
 
-# ✱ PARA QUE LA DRA LO LLENE ANTES DEL VIAJE
-> Sin estos datos no se puede escribir ni una línea de guion. Doctora, rellene los espacios y nos lo regresa.
+Su cuenta arrastra un castigo del algoritmo **desde el año pasado, por exactamente este mismo escenario**: subir historias del lanzamiento de un fármaco. Repetirlo sin cambiar nada es apostar la cuenta otra vez.
 
-**El evento**
+Hay que decírselo así de directo: no es que no se pueda grabar, es que no se puede grabar como la vez pasada.
 
-- Laboratorio que invita: `_______________________________`
-- Molécula que se lanza (nombre genérico, no comercial): `_______________________________`
-- Nombre comercial, solo para saber qué NO decir: `_______________________________`
-- El otro medicamento que mencionó en su nota y que no logramos identificar: `_______________________________`
-- Sede exacta: `_______________________________`
-- Día y hora de llegada: `_______________________________`
-- Día y hora del acto principal: `_______________________________`
-- Día y hora de regreso: `_______________________________`
-- ¿Va a subir a estrado o presenta algo? `_______________________________`
+## Las tres reglas que hacen la diferencia
 
-**Lo que exige el patrocinio**
+1. **Cero nombres de medicamento.** Ni en voz, ni en pantalla, ni en el fondo, ni en el gafete, ni en la playera, ni en el photocall. Si la marca aparece en cuadro, el video es publicidad de un fármaco de prescripción hecha por una médica, y eso es lo que castiga tanto la plataforma como la regulación.
+2. **El contenido es el congreso, no el producto.** Lo que sí se puede contar: que hay investigación nueva, qué se discutió, a qué colegas conoció, qué se lleva a su consulta. Eso es crónica profesional y sube su autoridad sin tocar la línea.
+3. **Declarar la invitación.** Si el laboratorio pagó el viaje, se dice. Callarlo es lo que se ve mal cuando alguien lo descubre; decirlo la pone del lado correcto.
 
-- ¿Firmó algo con el laboratorio? ¿Qué la obliga a hacer? `_______________________________`
-- ¿Le pidieron que publique? ¿Cuántas piezas y con qué etiqueta? `_______________________________`
-- ¿Hay hashtag o cuenta obligatoria a etiquetar? `_______________________________`
-- ¿Hay lista de palabras prohibidas del laboratorio? `_______________________________`
-- ¿Le prohíben mostrar producto de otra marca en cuadro? `_______________________________`
+## Lo que ella ya propuso y sí funciona
 
-**Lo del año pasado, para no repetirlo**
+> "Siempre les pongo a las chicas de que 'outfit 1, outfit 2, outfit 3, outfits que utilicé en este congreso'."
 
-- ¿Qué subió exactamente cuando la castigaron? `_______________________________`
-- ¿Qué le dijo la plataforma, si es que dijo algo? `_______________________________`
-- ¿La penalización sigue activa hoy? `_______________________________`
+Ese formato es perfecto para esto: es marca personal pura, no toca el fármaco, y le da presencia en el evento sin exponer nada. Ese debería ser el video principal, no el secundario.
 
----
+## Pendiente antes de escribir
 
-## Lo que ya se puede decidir sin esperar respuestas
-No necesita un guion, necesita reglas de grabación acordadas con ella. Qué se puede encuadrar y qué no, si el logo del laboratorio puede aparecer, si se puede decir que fue invitada y por quién, cómo se declara el patrocinio sin disparar el filtro, y qué se sube en el momento contra qué se sube después.
-
-Los outfits sí funcionan y son el contenido más seguro de todo el viaje, porque no tocan producto.
-
-## Pendiente de confirmar con ella
-Los nombres de la nota de voz vienen mal transcritos por ser marcas. "Orphol Griplon" apunta a **orforglipron** y "Muyaro" a **Mounjaro**. Hay un tercero, "Fundayo", que no identifico. Está en la lista de arriba para que ella lo escriba bien de su puño.
+Confirmar con ella si el laboratorio le puso condiciones por escrito, como pasó con la colaboración de toxina. Si hay brief, manda el brief.

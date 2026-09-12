@@ -1,22 +1,28 @@
-# Lo que cuesta tener un negocio en regla
-> Estado: idea · con reservas, ver nota
+# Lo que cuesta un negocio en regla
+
+> Estado: idea de Fedra · fuera de nicho · recomiendo no grabarlo en esta tanda
 > Origen: nota de voz 31-ago-2026, 22:11
 
-## Lo que dice
-Lo que cuesta sostener un negocio formal: impuestos, SAT, nómina, IMSS, registro de marca, uso de suelo, licencia sanitaria. Tiene siete personas en nómina y le sale un dineral. Su queja concreta: paga IMSS y sus empleados igual no se atienden ahí porque no les dan cita, así que terminan en consultorio de farmacia y eso lo acaba pagando ella. Su cierre: hay negocios que cierran porque conforme crecen les cobran más, y entre eso y la inflación las ganancias se merman.
+## Lo que pidió
 
-## Nota de guionista, y aquí sí tengo reservas
-El tema tiene audiencia, pero no la de ella. Su cuenta la siguen mujeres que quieren resolver su salud metabólica, no dueños de negocio. Meter esto es cambiar de público a media cuenta.
+> "Otro tema también muy cliché es lo que nos cuesta a nosotros los empresarios tener un negocio en regla. Todo lo que te cobra el gobierno [...] **Paga impuestos uno y pues no veo mucha mejora en la infraestructura.** Paga el IMSS uno a los empleados, que es un dineral."
 
-Y trae tres riesgos que el resto de sus ideas no tienen:
+> "Hay muchos negocios que han tenido que cerrar sus puertas porque conforme van creciendo les van cobrando más cosas. Por hacerte formal, por declarar impuestos, por meterlos a la nómina, por registrar tu marca, por tener permiso de uso de suelo, licencia sanitaria. **Las ganancias van mermando.**"
 
-Es **tema fiscal y político**. Opinar sobre lo que cobra el gobierno y que no se ve en infraestructura polariza comentarios en un lugar donde ella no gana nada polarizando.
+## Por qué recomiendo no grabarlo ahora
 
-Es **exponerse**. Hablar en público de su nómina, sus impuestos y su relación con el SAT no le trae ningún beneficio y sí la pone en el radar.
+**No es su nicho.** Su audiencia son mujeres con sobrepeso, resistencia a la insulina y menopausia. Un video de queja fiscal no le habla a nadie de esa lista, y el algoritmo la va a empezar a mostrar a otro público.
 
-Y hay un problema de credibilidad específico por ser médica: decir que sus empleados no se atienden en el IMSS y acaban en el consultorio de una farmacia la mete en una crítica al sistema de salud pública que sus colegas van a leer con lupa. Ahí sí puede haber pleito gremial.
+**El riesgo no compensa.** Criticar al SAT y al IMSS por nombre, desde una cuenta de salud con aviso Cofepris, abre un frente que no necesita. Ella misma lo llama "cliché".
+
+**Contradice su propia posición de autoridad.** Buena parte de su credibilidad viene de estar en regla: cédula, licencia sanitaria, aviso Cofepris, todo a la vista en cada caption. Un video quejándose del costo de estar en regla diluye eso.
 
 ## Si aun así lo quiere
-Se puede rescatar la parte humana y dejar fuera la política: lo que cuesta hacer las cosas bien y por qué las hace igual. Ese ángulo es afín a `r12-08` (el viaje con el equipo) y los dos podrían vivir juntos en una serie aparte de marca personal, no en la línea de salud.
 
-Mi recomendación es no grabarlo en esta tanda. Si la cuenta trae penalización de alcance, no es el momento de experimentar con un tema fuera de nicho.
+Hay una versión que sí funciona, y no es de queja: **por qué su consultorio está en regla y qué significa eso para la paciente.** Licencia sanitaria, medicamento con registro, factura, personal en nómina. Ahí el mismo material se vuelve argumento de venta en vez de reclamo, y conecta con lo que ya dice en r13-06 sobre productos sin registro.
+
+Ese sí lo escribo cuando quieran.
+
+## ⚠️ Detalle a corregir si se graba
+
+En la nota dice "tengo siete **pacientes** en la nómina". Son empleados. Y evitar "y la chingada" al enumerar trámites: su guía permite coloquialismos con peso emocional, pero ahí es relleno.
