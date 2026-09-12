@@ -731,12 +731,13 @@ function renderTimeline(rec, token, codeOf, gi){
     const chips = cards.map(c => {
       const cod  = codeOf(c.slug) || c.slug.toUpperCase();
       const esGuionItem = c.tipo !== 'ref' && !['trans-int','trans-ext','caminadora','juntas'].includes(c.categoria);
-      const thumb = c.thumb
+      const verRef = !REF_PRIVATE[token] || isAdmin();
+      const thumb = (c.thumb && verRef)
         ? `<a class="tlthumb" href="${attr(c.link || '#')}" target="_blank" rel="noopener"><img src="${attr(c.thumb)}" alt="preview" loading="lazy"></a>`
         : `<span class="tlthumb nothumb">🎬</span>`;
       const abrir = esGuionItem
         ? `<a href="?c=${token}&g=${attr(c.slug)}" target="_blank" rel="noopener"><button class="primary mini">Abrir guion ↗</button></a>` : '';
-      const ref = c.link
+      const ref = (c.link && verRef)
         ? `<a href="${attr(c.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
       // Se marca como grabado desde aquí mismo, sin bajar a la tarjeta de la categoría.
       const marcar = STATUS_ENDPOINT
@@ -839,9 +840,10 @@ function renderCard(it, token, ri, codArg){
     ? `<div class="cardlocrow"><span class="cardloclbl">🎙️ Locutor:</span>${founders.map(n=>`<button class="mini cardloc${effLoc===n?' on':''}" data-slug="${attr(it.slug)}" data-loc="${attr(n)}">${esc(n)}</button>`).join('')}</div>`
     : '';
   const abrir = esGuion ? `<a href="?c=${token}&g=${it.slug}"><button class="primary mini">Abrir guion</button></a>` : '';
-  const ref = it.link ? `<a href="${attr(it.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
+  const verRef = !REF_PRIVATE[token] || isAdmin();
+  const ref = (it.link && verRef) ? `<a href="${attr(it.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
   const mover = (REC_NESTED[token] && isAdmin()) ? `<button class="mini btnMover" data-slug="${attr(it.slug)}">Mover ⇄</button>` : '';
-  const preview = it.thumb ? `<details class="refpreview"><summary>👁 Ver preview</summary><img src="${attr(it.thumb)}" alt="preview de la referencia" loading="lazy"></details>` : '';
+  const preview = (it.thumb && verRef) ? `<details class="refpreview"><summary>👁 Ver preview</summary><img src="${attr(it.thumb)}" alt="preview de la referencia" loading="lazy"></details>` : '';
   return `<div class="card${it.grabado?' done':''}${it.miniatura?' hasmini':''}" data-card="${attr(it.slug)}" data-rec="${ri}">${del}<div class="cardmain" style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}${loc}</h3><p>${esc(it.info||'')}</p></div><span class="donechip">✓ Grabado</span></div>
     ${cardLoc}
     <div class="actions">${mini}${abrir}${ref}<button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${mover}</div>${preview}${renderOutfit(it)}</div>`;
