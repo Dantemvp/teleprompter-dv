@@ -137,6 +137,14 @@
           "grabado": false,
           "link": "https://vt.tiktok.com/ZSqa6CKwR/",
           "thumb": "clientes/fedra-ald-t84qz/refs/r13-10.jpg"
+        },
+        {
+          "slug": "r13-ugc-xeomeen-quincena",
+          "titulo": "Hoy es quincena",
+          "info": "Sketch · borrador ampliado pendiente de revisión",
+          "categoria": "xeomeen",
+          "grabado": false,
+          "marca": "Xeomeen"
         }
       ],
       "ventana": "Por definir",
@@ -292,7 +300,7 @@
           "thumb": "clientes/fedra-ald-t84qz/refs/r12-16.jpg"
         },
         {
-          "slug": "r12-ugc-xeomeen-quincena",
+          "slug": "r13-ugc-xeomeen-quincena",
           "titulo": "Hoy es quincena",
           "info": "Sketch · borrador ampliado pendiente de revisión",
           "categoria": "xeomeen",
