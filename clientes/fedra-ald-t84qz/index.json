@@ -69,6 +69,71 @@
           "categoria": "guion-largo",
           "grabado": false,
           "link": "https://vt.tiktok.com/ZSqaMvDJX/"
+        },
+        {
+          "slug": "r13-idea-07",
+          "titulo": "Carbohidratos simples vs complejos",
+          "info": "idea de Fedra · 600k views en el del azúcar · OJO química cruzada",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r13-idea-08",
+          "titulo": "El viaje a Los Cabos con el equipo",
+          "info": "idea de Fedra · marca personal · ver qué no puede salir",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r13-idea-09",
+          "titulo": "Lanzamiento en Mérida · 26-27 sep",
+          "info": "idea de Fedra · URGENTE · formato para que la dra lo llene",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r13-idea-10",
+          "titulo": "Meter medicina estética sin migrarse",
+          "info": "nota estratégica · grabar antes r10-13 y r10-14",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r13-idea-11",
+          "titulo": "Lo que cuesta un negocio en regla",
+          "info": "idea de Fedra · fuera de nicho · con reservas",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r13-idea-12",
+          "titulo": "La paciente que bajó 20 kg y se embarazó",
+          "info": "idea de Fedra · EN ESPERA hasta que nazca · falta consentimiento",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r13-idea-27",
+          "titulo": "Programa de niveles para pacientes",
+          "info": "idea de Fedra · programa, no video · ver nota de compliance",
+          "categoria": "idea",
+          "grabado": false
+        },
+        {
+          "slug": "r13-09",
+          "titulo": "Es muy fácil. Dinero.",
+          "info": "8–12 seg · chiste seco · remate de una palabra",
+          "categoria": "chusco",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DJ7MTHkO57q/"
+        },
+        {
+          "slug": "r13-10",
+          "titulo": "¿Por qué van subiendo la dosis?",
+          "info": "45–55 seg · explainer · dosis mínima efectiva",
+          "categoria": "guion-largo",
+          "grabado": false,
+          "link": "https://vt.tiktok.com/ZSqa6CKwR/"
         }
       ],
       "ventana": "Por definir",
@@ -84,7 +149,9 @@
             "r13-03",
             "r13-04",
             "r13-05",
-            "r13-08"
+            "r13-08",
+            "r13-09",
+            "r13-10"
           ]
         },
         {
@@ -238,55 +305,6 @@
           "link": "https://www.instagram.com/p/DcuzfwtxFAF/",
           "thumb": "clientes/fedra-ald-t84qz/refs/r12-ugc-xeomeen-bote.jpg",
           "marca": "Xeomeen"
-        },
-        {
-          "slug": "r12-07",
-          "titulo": "Carbohidratos simples vs complejos",
-          "info": "idea de Fedra · 600k views en el del azúcar · OJO química cruzada",
-          "categoria": "idea",
-          "grabado": false
-        },
-        {
-          "slug": "r12-08",
-          "titulo": "El viaje a Los Cabos con el equipo",
-          "info": "idea de Fedra · marca personal · ver qué no puede salir",
-          "categoria": "idea",
-          "grabado": false
-        },
-        {
-          "slug": "r12-09",
-          "titulo": "Lanzamiento en Mérida · 26-27 sep",
-          "info": "idea de Fedra · URGENTE · formato para que la dra lo llene",
-          "categoria": "idea",
-          "grabado": false
-        },
-        {
-          "slug": "r12-10",
-          "titulo": "Meter medicina estética sin migrarse",
-          "info": "nota estratégica · grabar antes r10-13 y r10-14",
-          "categoria": "idea",
-          "grabado": false
-        },
-        {
-          "slug": "r12-11",
-          "titulo": "Lo que cuesta un negocio en regla",
-          "info": "idea de Fedra · fuera de nicho · con reservas",
-          "categoria": "idea",
-          "grabado": false
-        },
-        {
-          "slug": "r12-12",
-          "titulo": "La paciente que bajó 20 kg y se embarazó",
-          "info": "idea de Fedra · EN ESPERA hasta que nazca · falta consentimiento",
-          "categoria": "idea",
-          "grabado": false
-        },
-        {
-          "slug": "r12-27",
-          "titulo": "Programa de niveles para pacientes",
-          "info": "idea de Fedra · programa, no video · ver nota de compliance",
-          "categoria": "idea",
-          "grabado": false
         }
       ],
       "ventana": "09:30 – 14:35 · 5 h 5 min · + bloque nocturno · orden provisional",
