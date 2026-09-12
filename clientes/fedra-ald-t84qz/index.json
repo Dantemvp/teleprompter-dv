@@ -51,7 +51,8 @@
           "categoria": "guion-largo",
           "grabado": false,
           "link": "https://www.instagram.com/reels/DbmMmmjum4-/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r13-05.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r13-05.jpg",
+          "miniatura": true
         },
         {
           "slug": "r13-07",
