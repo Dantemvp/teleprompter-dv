@@ -119,6 +119,14 @@
           "info": "40–48 seg · idea de Fedra · marca personal",
           "categoria": "guion-corto",
           "grabado": false
+        },
+        {
+          "slug": "r13-14",
+          "titulo": "Si andas con náuseas, esto es por qué",
+          "info": "14–18 seg · b-roll + tarjetas · efectos de los GLP-1",
+          "categoria": "chusco",
+          "grabado": false,
+          "link": "https://vt.tiktok.com/ZSqaMMufc/"
         }
       ],
       "ventana": "Por definir",
@@ -154,7 +162,8 @@
           "slugs": [
             "r13-11",
             "r13-12",
-            "r13-13"
+            "r13-13",
+            "r13-14"
           ]
         }
       ]
