@@ -150,51 +150,67 @@
           "grabado": false
         }
       ],
-      "ventana": "Por definir",
-      "nota": "Hereda los bloques 4, 5 y 6 de R12, reescritos con la regla 70/30 y el corpus verbatim de voz. Los guiones entran conforme se aprueban.",
+      "ventana": "Por definir · 4 bloques · 4 cambios de outfit",
+      "nota": "16 piezas en 4 bloques, con 4 cambios de outfit. Es una tanda ligera de utilería: pizarrón, frasco de Xeomeen, la pluma y la bata cubren casi todo. Lo que sí hay que preparar antes es la mesa de r13-14 y las fotos de r13-05. La trampa del día está en el bloque 1: r13-01 va sin marca y r13-03 es el pagado, y se graban seguidos con la misma modelo.",
       "timeline": [
         {
           "hora": "Por definir",
           "dur": "—",
-          "titulo": "Bloque 1 · con modelo",
+          "titulo": "Bloque 1 · Look 1 · con modelo",
           "slugs": [
             "r13-01",
             "r13-02",
             "r13-03",
             "r13-04"
-          ]
+          ],
+          "warn": true,
+          "nota": "👗 LOOK 1 · Los cuatro videos con el mismo outfit. Bata de doctora en los cuatro.\n🎬 MATERIAL · Marcador dermográfico para rayar la cara de la modelo (r13-01). Frasco y empaque de Xeomeen, SOLO para r13-03.\n👥 La modelo entra en r13-01. Para r13-02 se necesita quien preste el cuerpo para la silueta, con consentimiento firmado antes de grabar.\n⚠️ OJO CON EL FRASCO · r13-01 se graba SIN frasco y sin marca a cuadro: enseña 13 zonas y la mayoría son fuera de indicación, así que no puede parecer promoción del fabricante. El frasco entra a la mesa hasta r13-03, que sí es el pagado. Grabar r13-01 primero y sacar el frasco después."
         },
         {
           "hora": "Por definir",
           "dur": "—",
-          "titulo": "Bloque 2",
+          "titulo": "Bloque 2 · Look 2",
           "slugs": [
             "r13-05",
             "r13-08",
             "r13-09",
             "r13-10"
-          ]
+          ],
+          "nota": "👗 CAMBIO A LOOK 2 · Los cuatro videos con el mismo outfit. Bata.\n🎬 MATERIAL · La pluma o jeringa del tratamiento, para r13-10 (es el video de la dosis). Sus fotos de antes y después, para el cierre de r13-05.\n📝 Antes de grabar r13-05 hay que decidir el tiempo que va en «yo pasé de estar así a estar así, en ___». Está en blanco en el guion."
         },
         {
           "hora": "Por definir",
           "dur": "—",
-          "titulo": "Bloque 3",
+          "titulo": "Bloque 3 · Look 3 · pizarrón y mesa",
           "slugs": [
             "r13-11",
             "r13-12",
             "r13-13",
             "r13-14"
-          ]
+          ],
+          "warn": true,
+          "nota": "👗 CAMBIO A LOOK 3 · Los cuatro videos con el mismo outfit. Bata.\n🎬 MATERIAL · Pizarrón para r13-11 (simples contra complejos) y, si se quiere, para los cuatro órganos de r13-12.\n🍽️ Para r13-14, que es puro b-roll: la pluma sobre el escritorio, un plato servido con porción moderada, cubiertos, una fritura que se aparta del plato y un vaso de agua. Se prepara antes de arrancar el bloque, no en el momento.\n📷 Para r13-13, fotos del viaje a Los Cabos si se quieren montar en edición.\nEl bloque más pesado del día en utilería. Conviene montar pizarrón y mesa mientras se hace el cambio de outfit."
         },
         {
           "hora": "Por definir",
           "dur": "—",
-          "titulo": "Bloque 4 · cierra de noche",
+          "titulo": "Bloque 4 · Look 4 · cierra de noche",
           "slugs": [
             "r13-15",
             "r13-17",
             "r13-07"
-          ]
+          ],
+          "nota": "👗 CAMBIO A LOOK 4 · Los tres videos con el mismo outfit. Bata en r13-15 y r13-17.\n🎬 MATERIAL · Para r13-15, sus documentos a cuadro si los quiere enseñar: licencia sanitaria, cédula y el aviso de Cofepris. Los otros dos van sin utilería.\n📝 r13-15 tiene el cierre sin escribir («Mi servicio como médico profesional ____»). Hay que resolverlo antes, no en cámara.\n🌙 r13-07 cierra el día por la luz y VA SIN SUBTÍTULOS. Avisarle a la editora antes."
+        },
+        {
+          "hora": "Aparte",
+          "dur": "—",
+          "titulo": "Fuera de la sesión",
+          "slugs": [
+            "r13-ugc-xeomeen-quincena",
+            "r13-16"
+          ],
+          "nota": "👗 Outfit propio, no cuenta para los cambios del día.\n🎬 MATERIAL · El sketch de Xeomeen necesita frasco, empaque y vial a cuadro (ella pide verlos en el guion), marcador para rayar la cara, y una compañera que haga de empleada.\n✈️ r13-16 se graba en Mérida el 26 y 27 de septiembre, con los tres outfits del propio congreso. Cero nombres de medicamento en cuadro, ni en gafete."
         }
       ]
     },
