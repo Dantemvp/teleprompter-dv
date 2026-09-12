@@ -94,6 +94,14 @@
           "marca": "Xeomeen"
         },
         {
+          "slug": "r13-ugc-xeomeen-sola",
+          "titulo": "Hoy es quincena · versión sola",
+          "info": "45–55 seg · UGC Xeomeen · la dra sola, sin sketch · cómo verificar qué te ponen",
+          "categoria": "xeomeen",
+          "marca": "Xeomeen",
+          "grabado": false
+        },
+        {
           "slug": "r13-11",
           "titulo": "Carbohidratos simples vs complejos",
           "info": "55–65 seg · idea de Fedra · 600k pidiéndolo en comentarios",
@@ -195,9 +203,10 @@
           "dur": "—",
           "titulo": "Fuera de la sesión",
           "slugs": [
-            "r13-ugc-xeomeen-quincena"
+            "r13-ugc-xeomeen-quincena",
+            "r13-ugc-xeomeen-sola"
           ],
-          "nota": "👗 Outfit propio, no cuenta para los cambios del día.\n🎬 MATERIAL · Para el sketch de Xeomeen: frasco, empaque y vial a cuadro, marcador para rayar la cara, y una compañera que haga de empleada."
+          "nota": "👗 Outfit propio, no cuenta para los cambios del día.\n🎬 MATERIAL · Frasco, empaque y vial de Xeomeen a cuadro. Para el sketch, además: marcador para rayar la cara y una compañera que haga de empleada. La versión sola no necesita a nadie más."
         }
       ]
     },
