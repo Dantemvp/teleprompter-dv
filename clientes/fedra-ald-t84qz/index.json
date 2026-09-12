@@ -80,7 +80,8 @@
           "categoria": "chusco",
           "grabado": true,
           "link": "https://www.instagram.com/reel/DJ7MTHkO57q/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r13-09.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r13-09.jpg",
+          "miniatura": true
         },
         {
           "slug": "r13-10",
