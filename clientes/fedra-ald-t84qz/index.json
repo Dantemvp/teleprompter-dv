@@ -18,15 +18,6 @@
           "miniatura": true
         },
         {
-          "slug": "r12-02",
-          "titulo": "Te los ordeno yo",
-          "info": "42–50 seg · contador de superlativos",
-          "categoria": "guion-corto",
-          "grabado": false,
-          "link": "https://www.instagram.com/reel/DcRb-JVRRVh/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-02.jpg"
-        },
-        {
           "slug": "r12-03",
           "titulo": "Es un círculo",
           "info": "45–50 seg · cadena causal circular",
@@ -306,8 +297,7 @@
           "slugs": [
             "r12-05",
             "r12-14",
-            "r12-03",
-            "r12-02"
+            "r12-03"
           ],
           "warn": true,
           "nota": "👗 CAMBIO A LOOK 3 · Los cuatro videos con el mismo outfit.\n🎬 MATERIAL · Cuatro vasos altos rectos de vidrio idénticos, agua y colorante rojo o naranja. Tres platos servidos: dos huevos con frijoles y dos tortillas, muslo de pollo guisado con arroz y dos tortillas, y un pan dulce con café con leche.\n🥛 Todo se prepara la noche anterior. Los niveles de los vasos y los gramos de los platos son datos, no adorno: si se sirve algo distinto hay que recalcular lo que va en pantalla."
