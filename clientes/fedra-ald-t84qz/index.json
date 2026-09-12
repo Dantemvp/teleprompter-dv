@@ -53,15 +53,6 @@
           "thumb": "clientes/fedra-ald-t84qz/refs/r13-05.jpg"
         },
         {
-          "slug": "r13-06",
-          "titulo": "Tres cosas que no me dejo hacer",
-          "info": "45–55 seg · casual fuera de consultorio · dos voces",
-          "categoria": "estetica",
-          "grabado": false,
-          "link": "https://www.instagram.com/reel/DG6qv0Fxt0t/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r13-06.jpg"
-        },
-        {
           "slug": "r13-07",
           "titulo": "Tu versión de vieja",
           "info": "55–60 seg · escalada emocional · sin subtítulos",
@@ -91,7 +82,6 @@
           "dur": "—",
           "titulo": "Bloque 2 · fuera del consultorio y nocturno",
           "slugs": [
-            "r13-06",
             "r13-07"
           ]
         }
