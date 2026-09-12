@@ -52,7 +52,8 @@
           "categoria": "guion-corto",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DckNRYANYAd/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-05.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-05.jpg",
+          "miniatura": true
         },
         {
           "slug": "r12-06",
