@@ -36,15 +36,6 @@
           "marca": "Xeomeen"
         },
         {
-          "slug": "r13-04",
-          "titulo": "Aquí no hay atajos, ni cuerpo ni cara",
-          "info": "45–52 seg · opinión-autoridad · puente entre sus dos ramas",
-          "categoria": "estetica",
-          "grabado": false,
-          "link": "https://www.instagram.com/reels/DSYkt4RDamN/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r13-04.jpg"
-        },
-        {
           "slug": "r13-05",
           "titulo": "No vas a tener su abdomen",
           "info": "55–62 seg · porciones + anatomía",
@@ -166,8 +157,7 @@
           "slugs": [
             "r13-01",
             "r13-02",
-            "r13-03",
-            "r13-04"
+            "r13-03"
           ],
           "nota": "👗 LOOK 1 · Los cuatro videos con el mismo outfit. Bata de doctora en los cuatro.\n🎬 MATERIAL · Marcador dermográfico para rayar la cara de la modelo (r13-01). Frasco y empaque de Xeomeen, SOLO para r13-03."
         },
