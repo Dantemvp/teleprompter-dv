@@ -89,16 +89,9 @@
         {
           "hora": "Por definir",
           "dur": "—",
-          "titulo": "Bloque 2 · fuera del consultorio",
+          "titulo": "Bloque 2 · fuera del consultorio y nocturno",
           "slugs": [
-            "r13-06"
-          ]
-        },
-        {
-          "hora": "Por definir",
-          "dur": "—",
-          "titulo": "Bloque 3 · de noche",
-          "slugs": [
+            "r13-06",
             "r13-07"
           ]
         }
