@@ -133,13 +133,6 @@
           "miniatura": true
         },
         {
-          "slug": "r13-16",
-          "titulo": "Tres outfits de congreso médico",
-          "info": "35–45 seg · idea de Fedra · SE GRABA EN MÉRIDA 26-27 sep",
-          "categoria": "estetica",
-          "grabado": false
-        },
-        {
           "slug": "r13-17",
           "titulo": "Me enseñó a comer sin satanizar alimentos",
           "info": "45–52 seg · idea de Fedra · el ciclo de la lista de prohibidos",
@@ -202,8 +195,7 @@
           "dur": "—",
           "titulo": "Fuera de la sesión",
           "slugs": [
-            "r13-ugc-xeomeen-quincena",
-            "r13-16"
+            "r13-ugc-xeomeen-quincena"
           ],
           "nota": "👗 Outfit propio, no cuenta para los cambios del día.\n🎬 MATERIAL · Para el sketch de Xeomeen: frasco, empaque y vial a cuadro, marcador para rayar la cara, y una compañera que haga de empleada. r13-16 se graba en Mérida con los outfits del propio congreso."
         }
