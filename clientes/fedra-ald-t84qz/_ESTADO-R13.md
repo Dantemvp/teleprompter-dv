@@ -1,23 +1,51 @@
 # Estado de R13 · dónde va todo y cómo seguir
 
 > Este archivo NO está en el índice: no lo ve la doctora. Es el traspaso entre sesiones.
-> Última actualización: 12-sep-2026
+> Última actualización: 12-sep-2026 · barrido de verificación completo
 
 ---
 
-## ⏭️ LO SIGUIENTE: barrido de verificación de TODOS los guiones
+## ✅ HECHO: barrido de verificación de R13 (12-sep-2026)
 
-Acordado con Dante el 12-sep. Se revisa **guion por guion, línea por línea**, cada
-afirmación que se haga en cámara: confirmarla, refutarla, matizarla o mejorarla,
-con fuente de los últimos cinco años y liga que abra.
+Los 16 guiones barridos línea por línea. **38 fichas** en total. Ninguna
+línea hablada ni tarjeta de pantalla fue modificada: todo entró como
+`// DATO:` desplegable, que era la regla.
 
-**Regla dura: no se modifica ninguna línea hablada. Todo entra como ficha
-`// DATO:` desplegable.** La línea ya fue aprobada por él; cambiarla por debajo
-es lo que rompe la confianza. La ficha le deja decidir con el argumento enfrente.
+Todas las ligas abren (verificadas con curl). Desplegado en Vercel y en
+Pages.
 
-Empezar por los que más afirman: r13-11 (carbohidratos), r13-08 (menopausia),
-r13-12 (GLP-1), r13-05 (abdomen), r13-10 (dosis). Los de opinión pura
-(r13-04, r13-13, r13-15) casi no llevan ficha.
+**Tres fichas mías anteriores salieron mal y quedaron corregidas.** Vale
+la pena tenerlas presentes porque las tres fallaron igual: cité una
+fuente que no contenía el número.
+1. r13-11 · el 41% de la curva de glucosa colgaba de una revisión que
+   declaró explícitamente que NO agrupó resultados. El 32% de insulina
+   no existía en esa fuente.
+2. r13-08 · el 30% de Mayo se daba sin decir que son 16 mujeres y que es
+   retrospectivo.
+3. r13-07 · se citaba un estudio de sarcopenia en mayores de 65 para
+   sostener una afirmación sobre fuerza en la mediana edad.
+
+**Lo que hay que hablar con ella antes de grabar** (nada urgente, son
+precisiones, no errores):
+- **r13-08** · "da 30% más pérdida" suena a causa; el estudio es de
+  asociación. Con "se asocia a" queda blindada.
+- **r13-08** · "duermes mejor" solo está demostrado si hay apnea.
+- **r13-10** · "más dosis no siempre es mejor" es cierto paciente por
+  paciente, pero a nivel poblacional sí hay curva dosis-respuesta. Es el
+  único flanco real del video.
+- **r13-01** · las "líneas de Venus" son horizontales y no son de
+  platisma; lo que la toxina trata son las bandas verticales.
+- **r13-11** · decir que los "seis carbohidratos" son EQUIVALENTES y que
+  es su plan clínico, no el promedio poblacional (que son 130 g).
+
+**Decisión pendiente para Dante:** en r13-11 la tarjeta dice "−41%"
+atribuido a proteína+verdura primero. Ese 41.2% es de proteína primero.
+Lo correcto para esa secuencia es −38% (área bajo la curva) o −44%
+(pico, en diabéticos). La línea hablada, "casi cuarenta por ciento",
+está perfecta. No toqué la tarjeta.
+
+**Blancos sin llenar en los guiones:** r13-04 escena 03 ("Con el _____ y
+el ____") y r13-05 escena 12 ("en ___ tiempo").
 
 ---
 
