@@ -70,7 +70,8 @@
           "categoria": "guion-largo",
           "grabado": false,
           "link": "https://vt.tiktok.com/ZSqaMvDJX/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r13-08.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r13-08.jpg",
+          "miniatura": true
         },
         {
           "slug": "r13-09",
