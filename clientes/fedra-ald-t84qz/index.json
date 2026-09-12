@@ -137,7 +137,7 @@
           "titulo": "Lo que cuesta un consultorio en regla",
           "info": "45–55 seg · idea de Fedra · autoridad y precio",
           "categoria": "guion-largo",
-          "grabado": false
+          "grabado": true
         },
         {
           "slug": "r13-16",
