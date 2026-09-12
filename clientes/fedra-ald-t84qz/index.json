@@ -32,7 +32,8 @@
           "categoria": "xeomeen",
           "grabado": false,
           "link": "https://www.instagram.com/reels/DWHf90fDS1z/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r13-03.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r13-03.jpg",
+          "marca": "Xeomeen"
         },
         {
           "slug": "r13-04",
@@ -60,6 +61,14 @@
           "grabado": false,
           "link": "https://www.instagram.com/reel/DZ_OIqLF80i/",
           "thumb": "clientes/fedra-ald-t84qz/refs/r13-07.jpg"
+        },
+        {
+          "slug": "r13-08",
+          "titulo": "Los GLP-1 en menopausia",
+          "info": "50–58 seg · lista de beneficios con evidencia",
+          "categoria": "guion-largo",
+          "grabado": false,
+          "link": "https://vt.tiktok.com/ZSqaMvDJX/"
         }
       ],
       "ventana": "Por definir",
@@ -74,7 +83,8 @@
             "r13-02",
             "r13-03",
             "r13-04",
-            "r13-05"
+            "r13-05",
+            "r13-08"
           ]
         },
         {
@@ -216,7 +226,8 @@
           "titulo": "Hoy es quincena",
           "info": "Sketch · borrador ampliado pendiente de revisión",
           "categoria": "xeomeen",
-          "grabado": false
+          "grabado": false,
+          "marca": "Xeomeen"
         },
         {
           "slug": "r12-ugc-xeomeen-bote",
@@ -225,7 +236,8 @@
           "categoria": "xeomeen",
           "grabado": true,
           "link": "https://www.instagram.com/p/DcuzfwtxFAF/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-ugc-xeomeen-bote.jpg"
+          "thumb": "clientes/fedra-ald-t84qz/refs/r12-ugc-xeomeen-bote.jpg",
+          "marca": "Xeomeen"
         },
         {
           "slug": "r12-07",

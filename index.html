@@ -200,6 +200,10 @@
   .card.done .btnGrabado{background:var(--teal-dark); border-color:var(--teal-dark); color:#fff;}
   /* Miniatura hecha: se nota sin competir con el verde de "grabado". */
   .hasmini .btnMiniatura{background:#4B3F8F; border-color:#4B3F8F; color:#fff;}
+  /* Marca patrocinadora: identifica de un vistazo qué video es de colaboración pagada. */
+  .marca{display:inline-block; margin-left:7px; padding:2px 8px; border-radius:6px; font-size:10.5px;
+    font-weight:800; letter-spacing:.06em; text-transform:uppercase; vertical-align:middle;
+    background:#1B4CA8; color:#fff;}
   .btnDel{color:#A32D2D; border-color:#F09595; background:#fff; font-weight:700;}
   .btnDel:hover{background:#FCEBEB;}
   .cardDelete{position:absolute; top:10px; right:10px; z-index:2; width:30px; height:30px; padding:0; border-radius:50%; font-size:18px; line-height:1;}
@@ -750,7 +754,7 @@ function renderTimeline(rec, token, codeOf, gi){
       // el espacio no alcanza y el texto se parte a media palabra en celular.
       return `<div class="tlitem${c.grabado?' off':''}${c.miniatura?' hasmini':''}" data-tlitem="${attr(c.slug)}">
         <div class="tlitemtop">${thumb}<div class="tlbody">
-          <span class="tlcod">${esc(cod)}${c.grabado?' ✓':''}</span>
+          <span class="tlcod">${esc(cod)}${c.grabado?' ✓':''}</span>${c.marca?`<span class="marca">${esc(c.marca)}</span>`:''}
           <p class="tlname">${esc(c.titulo)}</p>
           <div class="tlacts">${mini}${abrir}${ref}${marcar}${del}</div>
         </div></div>
@@ -844,7 +848,7 @@ function renderCard(it, token, ri, codArg){
   const ref = (it.link && verRef) ? `<a href="${attr(it.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
   const mover = (REC_NESTED[token] && isAdmin()) ? `<button class="mini btnMover" data-slug="${attr(it.slug)}">Mover ⇄</button>` : '';
   const preview = (it.thumb && verRef) ? `<details class="refpreview"><summary>👁 Ver preview</summary><img src="${attr(it.thumb)}" alt="preview de la referencia" loading="lazy"></details>` : '';
-  return `<div class="card${it.grabado?' done':''}${it.miniatura?' hasmini':''}" data-card="${attr(it.slug)}" data-rec="${ri}">${del}<div class="cardmain" style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}${loc}</h3><p>${esc(it.info||'')}</p></div><span class="donechip">✓ Grabado</span></div>
+  return `<div class="card${it.grabado?' done':''}${it.miniatura?' hasmini':''}" data-card="${attr(it.slug)}" data-rec="${ri}">${del}<div class="cardmain" style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}${it.marca?`<span class="marca">${esc(it.marca)}</span>`:''}${loc}</h3><p>${esc(it.info||'')}</p></div><span class="donechip">✓ Grabado</span></div>
     ${cardLoc}
     <div class="actions">${mini}${abrir}${ref}<button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${mover}</div>${preview}${renderOutfit(it)}</div>`;
 }
