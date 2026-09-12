@@ -45,7 +45,7 @@ Lo correcto para esa secuencia es −38% (área bajo la curva) o −44%
 está perfecta. No toqué la tarjeta.
 
 **Blancos sin llenar en los guiones:** r13-04 escena 03 ("Con el _____ y
-el ____") y r13-05 escena 12 ("en ___ tiempo").
+el ____"), r13-05 escena 12 ("en ___ tiempo") y r13-15 escena 11 ("Mi servicio como médico profesional ____").
 
 ---
 
@@ -104,7 +104,8 @@ bloques de un solo video, salvo lo que se graba fuera de la sesión.
 
 ## Producción, lo que no puede faltar
 
-- **r13-01** sin frasco ni marca. Las 14 zonas del mapa son fuera de indicación; ella sí las puede hacer, el fabricante no las puede promover. Los de Xeomeen son r13-03 y el sketch, y solo tocan frente, entrecejo y patas de gallo.
+- **r13-01** sin frasco ni marca. El mapa enseña 14 zonas y 11 quedan fuera de indicación; ella sí las puede hacer, el fabricante no las puede promover. Los de Xeomeen son r13-03 y el sketch, y solo tocan frente, entrecejo y patas de gallo.
+  **Orden de grabación del bloque 1:** r13-01 primero y el frasco entra a la mesa después, para r13-03. Van seguidos y con la misma modelo.
 - **r13-02** mudo, silueta negra recortada en edición, consentimiento firmado de quien preste el cuerpo.
 - **r13-07** **VA SIN SUBTÍTULOS**, es decisión de formato. Avisarle a la editora antes. Tarjeta fija en el tercio superior y micrófono de mesa visible.
 - **r13-16** cero nombres de medicamento, ni en voz ni en cuadro ni en gafete. Su cuenta ya trae castigo del año pasado por esto.
