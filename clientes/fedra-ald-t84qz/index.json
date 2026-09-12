@@ -33,6 +33,42 @@
           "grabado": false,
           "link": "https://www.instagram.com/reels/DWHf90fDS1z/",
           "thumb": "clientes/fedra-ald-t84qz/refs/r13-03.jpg"
+        },
+        {
+          "slug": "r13-04",
+          "titulo": "Aquí no hay atajos, ni cuerpo ni cara",
+          "info": "45–52 seg · opinión-autoridad · puente entre sus dos ramas",
+          "categoria": "estetica",
+          "grabado": false,
+          "link": "https://www.instagram.com/reels/DSYkt4RDamN/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r13-04.jpg"
+        },
+        {
+          "slug": "r13-05",
+          "titulo": "No vas a tener su abdomen",
+          "info": "55–62 seg · porciones + anatomía",
+          "categoria": "guion-largo",
+          "grabado": false,
+          "link": "https://www.instagram.com/reels/DbmMmmjum4-/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r13-05.jpg"
+        },
+        {
+          "slug": "r13-06",
+          "titulo": "Tres cosas que no me dejo hacer",
+          "info": "45–55 seg · casual fuera de consultorio · dos voces",
+          "categoria": "estetica",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DG6qv0Fxt0t/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r13-06.jpg"
+        },
+        {
+          "slug": "r13-07",
+          "titulo": "Tu versión de vieja",
+          "info": "55–60 seg · escalada emocional · sin subtítulos",
+          "categoria": "guion-corto",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DZ_OIqLF80i/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r13-07.jpg"
         }
       ],
       "ventana": "Por definir",
@@ -45,7 +81,25 @@
           "slugs": [
             "r13-01",
             "r13-02",
-            "r13-03"
+            "r13-03",
+            "r13-04",
+            "r13-05"
+          ]
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 2 · fuera del consultorio",
+          "slugs": [
+            "r13-06"
+          ]
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 3 · de noche",
+          "slugs": [
+            "r13-07"
           ]
         }
       ]
@@ -94,15 +148,6 @@
           "link": "https://www.instagram.com/reel/DckNRYANYAd/",
           "thumb": "clientes/fedra-ald-t84qz/refs/r12-05.jpg",
           "miniatura": true
-        },
-        {
-          "slug": "r12-06",
-          "titulo": "Tu versión de vieja",
-          "info": "55–60 seg · escalada emocional · sin subtítulos",
-          "categoria": "guion-corto",
-          "grabado": false,
-          "link": "https://www.instagram.com/reel/DZ_OIqLF80i/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-06.jpg"
         },
         {
           "slug": "r12-21",
@@ -164,15 +209,6 @@
           "miniatura": true
         },
         {
-          "slug": "r12-24",
-          "titulo": "No vas a tener su abdomen",
-          "info": "55–62 seg · porciones + anatomía",
-          "categoria": "guion-largo",
-          "grabado": false,
-          "link": "https://www.instagram.com/reels/DbmMmmjum4-/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-24.jpg"
-        },
-        {
           "slug": "r12-15",
           "titulo": "Califico las modas de belleza",
           "info": "24–30 seg · rapid-fire de calificaciones 0 a 10",
@@ -191,24 +227,6 @@
           "link": "https://www.instagram.com/reels/DVgybm2DdQE/",
           "grabado": false,
           "thumb": "clientes/fedra-ald-t84qz/refs/r12-16.jpg"
-        },
-        {
-          "slug": "r12-18",
-          "titulo": "Tres cosas que no me dejo hacer",
-          "info": "45–55 seg · casual fuera de consultorio · dos voces",
-          "categoria": "estetica",
-          "grabado": false,
-          "link": "https://www.instagram.com/reel/DG6qv0Fxt0t/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-18.jpg"
-        },
-        {
-          "slug": "r12-20",
-          "titulo": "Aquí no hay atajos, ni cuerpo ni cara",
-          "info": "45–52 seg · opinión-autoridad · puente entre ramas",
-          "categoria": "estetica",
-          "grabado": false,
-          "link": "https://www.instagram.com/reels/DSYkt4RDamN/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-20.jpg"
         },
         {
           "slug": "r12-ugc-xeomeen-quincena",
@@ -325,42 +343,12 @@
           "nota": "👗 CAMBIO A LOOK 3 · Los cuatro videos con el mismo outfit.\n🎬 MATERIAL · Cuatro vasos altos rectos de vidrio idénticos, agua y colorante rojo o naranja. Tres platos servidos: dos huevos con frijoles y dos tortillas, muslo de pollo guisado con arroz y dos tortillas, y un pan dulce con café con leche.\n🥛 Todo se prepara la noche anterior. Los niveles de los vasos y los gramos de los platos son datos, no adorno: si se sirve algo distinto hay que recalcular lo que va en pantalla."
         },
         {
-          "hora": "12:10",
-          "dur": "65 min",
-          "titulo": "Bloque 4 · Look 4 · con modelo",
-          "slugs": [
-            "r12-20",
-            "r12-24"
-          ],
-          "warn": true,
-          "nota": "👗 CAMBIO A LOOK 4 · Los cinco videos con el mismo outfit.\n🎬 MATERIAL · Lápiz dermográfico o delineador negro. Un frasco de Xeomeen cerrado y con etiqueta legible.\n👤 Hace falta una modelo con la cara limpia y sin maquillaje para r12-26, y alguien que preste el cuerpo para la silueta de r12-17: puede ser la misma persona, y firma consentimiento aunque no se le vea la cara. Es el bloque más largo y se agrupa así para que nadie venga dos veces."
-        },
-        {
           "hora": "13:15",
           "dur": "45 min",
           "titulo": "Traslado y comida",
           "tipo": "pausa",
           "slugs": [],
           "nota": "Se cambia de outfit y se sale del consultorio."
-        },
-        {
-          "hora": "14:00",
-          "dur": "35 min",
-          "titulo": "Bloque 5 · Look 5 · fuera del consultorio",
-          "slugs": [
-            "r12-18"
-          ],
-          "nota": "👗 CAMBIO A LOOK 5 · Este sí pide ropa de calle, sin bata, porque el formato es una plática fuera del consultorio. Cuál, lo decide ella.\n🎬 MATERIAL · Nada propio. Se usa la mesa del lugar con sus bebidas.\n☕ Café o restaurante con plantas y luz cálida. Dante enfrente y se ve parte de él en cuadro."
-        },
-        {
-          "hora": "20:00",
-          "dur": "25 min",
-          "titulo": "Bloque 6 · Look 6 · de noche",
-          "slugs": [
-            "r12-06"
-          ],
-          "warn": true,
-          "nota": "👗 CAMBIO A LOOK 6 · Va de noche y en casa, así que el outfit acompaña eso. Cuál, lo decide ella.\n🎬 MATERIAL · Micrófono de mesa, va visible en primer plano.\n🌙 El único que se graba de noche, con luz cálida y ambiente nocturno. VA SIN SUBTÍTULOS: es decisión de formato, hay que avisarle a la editora antes de que los ponga por costumbre."
         }
       ]
     },
