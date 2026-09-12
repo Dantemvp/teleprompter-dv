@@ -13,7 +13,8 @@
           "info": "55–65 seg · mapa de zonas sobre la cara · con modelo",
           "categoria": "estetica",
           "grabado": false,
-          "link": "https://www.instagram.com/reel/DZLHefvpuCO/"
+          "link": "https://www.instagram.com/reel/DZLHefvpuCO/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r13-01.jpg"
         },
         {
           "slug": "r13-02",
@@ -21,7 +22,17 @@
           "info": "12–15 seg · mudo · b-roll + tarjetas · silueta anónima",
           "categoria": "chusco",
           "grabado": false,
-          "link": "https://www.instagram.com/reels/C7wmSmduyRX/"
+          "link": "https://www.instagram.com/reels/C7wmSmduyRX/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r13-02.jpg"
+        },
+        {
+          "slug": "r13-03",
+          "titulo": "Si nunca te has hecho nada, son tres cosas",
+          "info": "40–46 seg · UGC Xeomeen · carta de presentación de estética",
+          "categoria": "xeomeen",
+          "grabado": false,
+          "link": "https://www.instagram.com/reels/DWHf90fDS1z/",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r13-03.jpg"
         }
       ],
       "ventana": "Por definir",
@@ -33,9 +44,9 @@
           "titulo": "Bloque 1 · con modelo",
           "slugs": [
             "r13-01",
-            "r13-02"
-          ],
-          "nota": "🎬 Modelo con la cara limpia y lápiz dermográfico. Los puntos NO se borran entre tomas: el mapa se va dibujando y al final se ven todas las zonas juntas.\n⚠️ SIN MARCA · este video va sin frasco de Xeomeen y sin nombrar la marca. Abre el desplegable de la escena 01 para saber por qué. Los videos de Xeomeen se graban aparte.\n📝 Quien preste la cara firma consentimiento por escrito.\n🎬 r13-02 va MUDO: audio de trend, b-roll y tarjetas. La paciente en silueta negra sólida, recortada en edición: es el chiste y resuelve su privacidad. Ella en bata. Quien preste el cuerpo firma consentimiento aunque no se le vea la cara."
+            "r13-02",
+            "r13-03"
+          ]
         }
       ]
     },
@@ -191,15 +202,6 @@
           "thumb": "clientes/fedra-ald-t84qz/refs/r12-18.jpg"
         },
         {
-          "slug": "r12-19",
-          "titulo": "Si nunca te has hecho nada, son tres cosas",
-          "info": "26–32 seg · carta de presentación",
-          "categoria": "estetica",
-          "grabado": false,
-          "link": "https://www.instagram.com/reels/DWHf90fDS1z/",
-          "thumb": "clientes/fedra-ald-t84qz/refs/r12-19.jpg"
-        },
-        {
           "slug": "r12-20",
           "titulo": "Aquí no hay atajos, ni cuerpo ni cara",
           "info": "45–52 seg · opinión-autoridad · puente entre ramas",
@@ -327,7 +329,6 @@
           "dur": "65 min",
           "titulo": "Bloque 4 · Look 4 · con modelo",
           "slugs": [
-            "r12-19",
             "r12-20",
             "r12-24"
           ],
