@@ -33,7 +33,8 @@
           "grabado": true,
           "link": "https://www.instagram.com/reels/DWHf90fDS1z/",
           "thumb": "clientes/fedra-ald-t84qz/refs/r13-03.jpg",
-          "marca": "Xeomeen"
+          "marca": "Xeomeen",
+          "miniatura": true
         },
         {
           "slug": "r13-05",
