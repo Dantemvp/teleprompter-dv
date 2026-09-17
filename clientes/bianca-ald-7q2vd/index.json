@@ -548,86 +548,24 @@
           }
         }
       ],
-      "ventana": "Por definir · 10 bloques · Bianca y Mary",
-      "nota": "24 piezas. Las de Bianca son g-72 a g-77, g-84, g-89 a g-93; las de Mary, g-78 a g-83, g-85, ri-35 y ri-36. Dieciséis llevan guion escrito y ocho entran como referencia para que Dante defina el gag. Numeración de la serie boutique, resuelta: el último grabado fue la parte 4 (el del satín). g-51 y g-52 de la R11 son 5 y 6, g-89 es 7, g-90 es 8 y g-91 es 9. g-91 contradice a propósito la regla de \"dos estampados juntos no\" que Bianca dio en g-46, y su gancho supone que ese ya salió. g-80 es la pieza de zapatería y necesita los cuatro pares en existencia. g-73 y g-76 comparten contenido: no se publican la misma semana.",
+      "ventana": "Por definir · 9 bloques · Bianca primero, Mary después",
+      "nota": "24 piezas. El día va agrupado por persona: los bloques 1 a 4 son de Bianca y los 5 a 8 de Mary, para que nadie se cambie de ropa dos veces ni espere en medio. Las de Bianca son g-72 a g-77, g-84, g-89 a g-93; las de Mary, g-78 a g-83, g-85, ri-35 y ri-36. Dieciséis llevan guion escrito y ocho entran como referencia para que Dante defina el gag. Numeración de la serie boutique, resuelta: el último grabado fue la parte 4 (el del satín). g-51 y g-52 de la R11 son 5 y 6, g-89 es 7, g-90 es 8 y g-91 es 9. g-91 contradice a propósito la regla de \"dos estampados juntos no\" que Bianca dio en g-46, y su gancho supone que ese ya salió. g-80 es la pieza de zapatería y necesita los cuatro pares en existencia. g-73 y g-76 comparten contenido: no se publican la misma semana.",
       "timeline": [
         {
           "hora": "Por definir",
           "dur": "—",
-          "titulo": "Bloque 1 · Look 1 · Bianca a cámara",
+          "titulo": "Bloque 1 · Bianca a cámara · 2 looks",
           "slugs": [
             "g-74",
             "g-73",
             "g-76"
           ],
-          "nota": "👗 LOOK 1 · Los tres arrancan con el mismo look. El de g-74 es el más producido y manda, porque ese video habla de no apagarse.\n🎬 MATERIAL · Nada de utilería. Collage de apoyo se monta en edición."
+          "nota": "👗 LOOK 1 · Los tres arrancan con el mismo look. El de g-74 manda, porque ese video habla de no apagarse y es el más producido.\n👗 CAMBIO A LOOK 2 a media sesión, sin mover la cámara: g-73 y g-76 piden dos looks cada uno y la segunda mitad de los dos se graba con el cambio puesto. g-74 se termina completo antes del cambio.\n🎬 MATERIAL · Nada de utilería. Para el look 2 de g-76, una pieza de piel y algo de encaje o transparencia. El collage de apoyo de g-73 y g-74 se monta en edición."
         },
         {
           "hora": "Por definir",
           "dur": "—",
-          "titulo": "Bloque 2 · Look 2 · Bianca, segundo look",
-          "slugs": [
-            "g-73",
-            "g-76"
-          ],
-          "nota": "👗 CAMBIO A LOOK 2 · Solo las tomas de la segunda mitad de esos dos. No se mueve la cámara del bloque 1.\n🎬 MATERIAL · Para g-76, una pieza de piel y algo de encaje o transparencia."
-        },
-        {
-          "hora": "Por definir",
-          "dur": "—",
-          "titulo": "Bloque 3 · Bianca · carrusel y chuscos",
-          "slugs": [
-            "g-72",
-            "g-75",
-            "g-77"
-          ],
-          "nota": "👗 CAMBIO A LOOK 3 para el carrusel, en el color tendencia. Los dos chuscos van con look propio y sencillo.\n🎬 MATERIAL · Para g-72, las piezas del color sueltas para fotografiarlas recortadas. Para g-77, el montón de prendas sobre el mostrador. g-75 es en la banqueta."
-        },
-        {
-          "hora": "Por definir",
-          "dur": "—",
-          "titulo": "Bloque 4 · Look 1 de Mary · a cámara",
-          "slugs": [
-            "g-79",
-            "g-82"
-          ],
-          "nota": "👗 LOOK 1 DE MARY · g-79 arranca con una pieza de chocolate; g-82 arranca con un look plano a propósito.\n🎬 MATERIAL · Piezas de los colores que acompañan al chocolate, para meterlas a cuadro sin ponérselas. Y el kit de g-82: bolso llamativo, mocasines, tenis, cinturón, chaleco y un accesorio protagonista."
-        },
-        {
-          "hora": "Por definir",
-          "dur": "—",
-          "titulo": "Bloque 5 · Mary · zapatería",
-          "slugs": [
-            "g-80"
-          ],
-          "nota": "👗 CUATRO LOOKS SEGUIDOS · Un outfit completo por par de calzado.\n🎬 MATERIAL · Los cuatro pares: bota alta, bota corta, tacón y botín. Marca el piso y no muevas la cámara entre tomas."
-        },
-        {
-          "hora": "Por definir",
-          "dur": "—",
-          "titulo": "Bloque 6 · Mary · transición y chuscos",
-          "slugs": [
-            "ri-35",
-            "ri-36",
-            "g-78",
-            "g-81"
-          ],
-          "nota": "👗 Los últimos looks del día. ri-35 y ri-36 piden antes y después, dos outfits cada una.\n🎬 MATERIAL · Para g-78 hace falta una segunda persona en el mostrador y el montón de prendas. g-81 es foto, en exterior.\n🚪 ri-36 se graba en un marco de puerta con el piso despejado y el tripié fijo. Son cinco tomas de la misma puerta, no se mueve la cámara."
-        },
-        {
-          "hora": "Por definir",
-          "dur": "—",
-          "titulo": "Bloque 7 · Mary · listas a cámara",
-          "slugs": [
-            "g-83",
-            "g-85"
-          ],
-          "nota": "👗 LOOK · g-83 arranca con un denim oscuro. g-85 es el del espejo y pide el look más producido de Mary.\n🎬 MATERIAL · Los tres tonos de denim a la mano, y las piezas de los colores que acompañan. Para g-85, el espejo de cuerpo completo despejado."
-        },
-        {
-          "hora": "Por definir",
-          "dur": "—",
-          "titulo": "Bloque 8 · Bianca · serie de tendencias",
+          "titulo": "Bloque 2 · Bianca · serie de tendencias",
           "slugs": [
             "g-84",
             "g-89",
@@ -639,23 +577,75 @@
         {
           "hora": "Por definir",
           "dur": "—",
-          "titulo": "Bloque 9 · chuscos y la de IA",
+          "titulo": "Bloque 3 · Bianca · el manifiesto y las cinco reglas",
+          "slugs": [
+            "g-92",
+            "g-93"
+          ],
+          "nota": "👗 DOS LOOKS · g-92 pide el mejor look del día, porque el video dice que te arregles de más. g-93 pide CAMISA BLANCA, que es la regla uno del guion.\n🎬 MATERIAL · Nada. Los dos son a cámara, sin utilería. g-92 va en una sola toma sin cortes, así que se graba con ella descansada y con buena luz, no al final del día."
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 4 · Bianca · carrusel y chuscos",
+          "slugs": [
+            "g-72",
+            "g-75",
+            "g-77"
+          ],
+          "nota": "👗 CAMBIO A LOOK 3 para el carrusel, en el color tendencia. Los dos chuscos van con look propio y sencillo.\n🎬 MATERIAL · Para g-72, las piezas del color sueltas para fotografiarlas recortadas. Para g-77, el montón de prendas sobre el mostrador. g-75 es en la banqueta."
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 5 · Mary a cámara · chocolate y arreglos",
+          "slugs": [
+            "g-79",
+            "g-82"
+          ],
+          "nota": "👗 LOOK 1 DE MARY · g-79 arranca con una pieza de chocolate; g-82 arranca con un look plano a propósito.\n🎬 MATERIAL · Piezas de los colores que acompañan al chocolate, para meterlas a cuadro sin ponérselas. Y el kit de g-82: bolso llamativo, mocasines, tenis, cinturón, chaleco y un accesorio protagonista."
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 6 · Mary a cámara · mezclilla y espejo",
+          "slugs": [
+            "g-83",
+            "g-85"
+          ],
+          "nota": "👗 LOOK · g-83 arranca con un denim oscuro. g-85 es el del espejo y pide el look más producido de Mary.\n🎬 MATERIAL · Los tres tonos de denim a la mano, y las piezas de los colores que acompañan. Para g-85, el espejo de cuerpo completo despejado."
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 7 · Mary · zapatería",
+          "slugs": [
+            "g-80"
+          ],
+          "nota": "👗 CUATRO LOOKS SEGUIDOS · Un outfit completo por par de calzado.\n🎬 MATERIAL · Los cuatro pares: bota alta, bota corta, tacón y botín. Marca el piso y no muevas la cámara entre tomas."
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 8 · Mary · transición y chuscos",
+          "slugs": [
+            "ri-35",
+            "ri-36",
+            "g-78",
+            "g-81"
+          ],
+          "nota": "👗 Los últimos looks del día. ri-35 y ri-36 piden antes y después, dos outfits cada una.\n🎬 MATERIAL · Para g-78 hace falta una segunda persona en el mostrador y el montón de prendas. g-81 es foto, en exterior.\n🚪 ri-36 se graba en un marco de puerta con el piso despejado y el tripié fijo. Son cinco tomas de la misma puerta, no se mueve la cámara."
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 9 · Chuscos sueltos y la de IA",
           "slugs": [
             "g-87",
             "g-86",
             "g-88"
           ],
           "nota": "👗 Look propio y sencillo, no cuenta para los cambios del día.\n🎬 MATERIAL · Para g-87 hacen falta muchas bolsas de la boutique y alguien que se las vaya dando. g-88 no se graba: son fotos base contra pared lisa."
-        },
-        {
-          "hora": "Por definir",
-          "dur": "—",
-          "titulo": "Bloque 10 · Bianca · el manifiesto y las cinco reglas",
-          "slugs": [
-            "g-92",
-            "g-93"
-          ],
-          "nota": "👗 DOS LOOKS · g-92 pide el mejor look del día, porque el video dice que te arregles de más. g-93 pide CAMISA BLANCA, que es la regla uno del guion.\n🎬 MATERIAL · Nada. Los dos son a cámara, sin utilería. g-92 va en una sola toma sin cortes, así que se graba con ella descansada y con buena luz, no al final del día."
         }
       ]
     },
