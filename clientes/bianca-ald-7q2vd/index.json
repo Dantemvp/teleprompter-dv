@@ -548,56 +548,46 @@
           }
         }
       ],
-      "ventana": "Por definir · Bianca y Mary",
-      "nota": "24 piezas. El día va en dos bloques, uno por persona, y dentro de cada uno el orden es por sección: primero los guiones, luego las transiciones o el carrusel, y los chuscos al final. Quedan tres piezas sin persona asignada. Las de Bianca son g-72 a g-77, g-84, g-89 a g-93; las de Mary, g-78 a g-83, g-85, ri-35 y ri-36. Dieciséis llevan guion escrito y ocho entran como referencia para que Dante defina el gag. Numeración de la serie boutique, resuelta: el último grabado fue la parte 4 (el del satín). g-51 y g-52 de la R11 son 5 y 6, g-89 es 7, g-90 es 8 y g-91 es 9. g-91 contradice a propósito la regla de \"dos estampados juntos no\" que Bianca dio en g-46, y su gancho supone que ese ya salió. g-80 es la pieza de zapatería y necesita los cuatro pares en existencia. g-73 y g-76 comparten contenido: no se publican la misma semana.",
+      "ventana": "Por definir · Bianca 6 · Mary 18",
+      "nota": "Bianca graba 6: g-72 a g-77. Todo lo demás es de Mary.",
       "timeline": [
         {
           "hora": "Por definir",
           "dur": "—",
-          "titulo": "Bloque 1 · BIANCA",
+          "titulo": "Bloque 1 · BIANCA · sus 6 piezas",
           "slugs": [
             "g-73",
             "g-74",
             "g-76",
+            "g-72",
+            "g-75",
+            "g-77"
+          ]
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 2 · MARY · todo lo demás",
+          "slugs": [
+            "g-79",
+            "g-82",
+            "g-83",
+            "g-80",
             "g-89",
             "g-90",
             "g-91",
             "g-84",
             "g-92",
             "g-93",
-            "g-72",
-            "g-75",
-            "g-77"
-          ],
-          "nota": "📝 GUIONES primero, en este orden. Cámara fija, no se mueve entre los tres primeros.\n📚 La serie de tendencias va seguida: g-89 los siete colores, g-90 neck jackets, g-91 el tartán, y g-84 al final porque es el que las combina y cierra.\n🤍 g-93 pide CAMISA BLANCA, que es la regla uno del guion. g-92 va en una sola toma sin cortes, así que conviene con buena luz y con ella descansada.\n📸 CARRUSEL g-72: no se graba video, son fotos. Las piezas del color van sueltas para recortarlas.\n😄 CHUSCOS al final: g-75 en la banqueta, g-77 en el mostrador con el montón de prendas.\n🎬 MATERIAL · Para g-76, una pieza de piel y algo de encaje. Para g-90, la chamarra de cuello alto ligera y la blusa de cuello alto, nada de lana. Para g-91, dos piezas de cuadros que compartan un color y sean de tamaños distintos. Para la serie, una pieza real por cada tendencia y por cada uno de los siete colores. El collage de apoyo se monta en edición."
-        },
-        {
-          "hora": "Por definir",
-          "dur": "—",
-          "titulo": "Bloque 2 · MARY",
-          "slugs": [
-            "g-79",
-            "g-82",
-            "g-83",
-            "g-80",
+            "g-88",
             "ri-35",
             "ri-36",
             "g-78",
             "g-85",
-            "g-81"
-          ],
-          "nota": "📝 GUIONES primero: g-79 el chocolate, g-82 los diez arreglos, g-83 la mezclilla, y g-80 la de zapatería.\n👠 g-80 es la pieza que manda a comprar calzado y es la más pesada del bloque: cuatro outfits completos, un par de calzado por outfit, cámara fija y marca de piso que no se mueve entre tomas.\n🔄 TRANSICIONES después: ri-35 y ri-36, dos outfits cada una. ri-36 es la del marco de la puerta, con tripié fijo y el piso despejado debajo del marco.\n😄 CHUSCOS al final: g-78 lleva diálogo doblado y necesita una segunda persona en el mostrador, g-85 es el lip sync frente al espejo de cuerpo completo, y g-81 es foto, en exterior.\n🎬 MATERIAL · Los tres tonos de denim y las piezas de los colores que acompañan al chocolate. El kit de g-82: bolso llamativo, mocasines, tenis, cinturón, chaleco y un accesorio protagonista. Los cuatro pares de calzado de g-80. El espejo despejado para g-85."
-        },
-        {
-          "hora": "Aparte",
-          "dur": "—",
-          "titulo": "Por asignar · falta decir de quién son",
-          "slugs": [
+            "g-81",
             "g-86",
-            "g-87",
-            "g-88"
-          ],
-          "nota": "❓ Estos tres no tienen persona asignada todavía. g-86 y g-87 son chuscos (el de \"venías por una sola cosa\" necesita muchas bolsas de la boutique y alguien que se las vaya dando), y g-88 no se graba: son fotos base contra pared lisa para el pipeline de IA de dos pasos, el mismo de g-70.\n👗 Outfit propio, no cuenta para los cambios del día."
+            "g-87"
+          ]
         }
       ]
     },
