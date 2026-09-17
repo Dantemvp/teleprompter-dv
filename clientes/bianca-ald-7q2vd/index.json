@@ -9,22 +9,30 @@
       "guiones": [
         {
           "slug": "g-72",
-          "titulo": "El azul que se va a poner en todo",
-          "info": "carrusel de 6 láminas · color tendencia · solo lo que ya está en piso",
+          "titulo": "El azul marino sin que parezca uniforme",
+          "info": "45–55 seg · BIANCA · objeción + tres niveles · va antes de g-89",
           "categoria": "guion",
           "grabado": false,
           "link": "https://www.instagram.com/p/DcxK_P7Dg6s/",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-72.jpg",
           "outfit": {
-            "n": 1,
-            "estilo": "Un look en el color tendencia",
+            "n": 3,
+            "estilo": "Un look por nivel",
             "looks": [
               {
-                "t": "Look único",
-                "p": "Una pieza del color protagonista, de cuerpo completo. Las demás piezas van recortadas, no puestas"
+                "t": "Nivel 1",
+                "p": "Todo neutro con un accesorio marino: bolsa o zapato"
+              },
+              {
+                "t": "Nivel 2",
+                "p": "La pieza fuerte, saco o pantalón marino, sobre algo claro"
+              },
+              {
+                "t": "Nivel 3",
+                "p": "Total look marino de arriba a abajo, con texturas distintas"
               }
             ],
-            "nota": "No es video, son fotos. El color va nombrado: si el que entra no es azul marino, se cambia el nombre y las piezas."
+            "nota": "Hacen falta las combinaciones a cuadro: con blanco en blusa, con camello y con borgoña. Y DOS marinos de textura distinta (satén, punto, gamuza o lana) para el nivel tres y para el plano del error contra el acierto."
           }
         },
         {
