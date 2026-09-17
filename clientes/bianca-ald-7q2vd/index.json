@@ -548,13 +548,12 @@
           }
         }
       ],
-      "ventana": "Por definir · Bianca 6 · Mary 18",
+      "ventana": "Bianca 6 · Mary 18",
       "nota": "Bianca graba 6: g-72 a g-77. Todo lo demás es de Mary.",
       "timeline": [
         {
-          "hora": "Por definir",
-          "dur": "—",
-          "titulo": "Bloque 1 · BIANCA · sus 6 piezas",
+          "hora": "",
+          "titulo": "BIANCA",
           "slugs": [
             "g-73",
             "g-74",
@@ -565,9 +564,8 @@
           ]
         },
         {
-          "hora": "Por definir",
-          "dur": "—",
-          "titulo": "Bloque 2 · MARY · todo lo demás",
+          "hora": "",
+          "titulo": "MARY",
           "slugs": [
             "g-79",
             "g-82",
