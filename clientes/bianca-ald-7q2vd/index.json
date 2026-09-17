@@ -306,7 +306,7 @@
         {
           "slug": "g-84",
           "titulo": "Combinando tendencias 2026",
-          "info": "20–25 seg · BIANCA · rapid fire · cierra la serie boutique de tendencias OI2026",
+          "info": "20–25 seg · BIANCA · rapid fire · va DESPUÉS de la parte 9, cierra la serie boutique",
           "categoria": "guion",
           "grabado": false,
           "link": "https://www.instagram.com/reel/Dc1fPwVITkX/",
@@ -413,7 +413,7 @@
         },
         {
           "slug": "g-89",
-          "titulo": "Serie Tendencias OI2026 · P8: los 7 colores",
+          "titulo": "Serie Tendencias OI2026 · P7: los 7 colores",
           "info": "55–65 seg · BIANCA · SERIE BOUTIQUE · voz en off + b-roll · callbacks a g-48 y g-72",
           "categoria": "guion",
           "grabado": false,
@@ -457,7 +457,7 @@
         },
         {
           "slug": "g-90",
-          "titulo": "Serie Tendencias OI2026 · P9: neck jackets",
+          "titulo": "Serie Tendencias OI2026 · P8: neck jackets",
           "info": "35–45 seg · BIANCA · SERIE BOUTIQUE · el cuello alto, en versión que sí aplica al clima de aquí",
           "categoria": "guion",
           "grabado": false,
@@ -481,7 +481,7 @@
         },
         {
           "slug": "g-91",
-          "titulo": "Serie Tendencias OI2026 · P10: el tartán",
+          "titulo": "Serie Tendencias OI2026 · P9: el tartán",
           "info": "35–45 seg · BIANCA · SERIE BOUTIQUE · tres niveles · el nivel 3 contradice la regla del Bambi",
           "categoria": "guion",
           "grabado": false,
@@ -529,7 +529,7 @@
         }
       ],
       "ventana": "Por definir · 10 bloques · Bianca y Mary",
-      "nota": "23 piezas. Las de Bianca son g-72 a g-77, g-84, g-89 a g-92; las de Mary, g-78 a g-83, g-85, ri-35 y ri-36. Quince llevan guion escrito y ocho entran como referencia para que Dante defina el gag. ⚠️ La numeración de la serie boutique está rota en lo ya grabado: g-49 dice \"parte 3\" aunque el archivo diga 4, g-50 dice \"parte cuatro\" y promete la seis saltándose la cinco, y g-46 promete una parte 2 que nunca existió. g-89, g-90 y g-91 cuelgan de esa decisión. g-91 contradice a propósito la regla de \"dos estampados juntos no\" que Bianca dio en g-46, y su gancho supone que ese ya salió. g-80 es la pieza de zapatería y necesita los cuatro pares en existencia. g-73 y g-76 comparten contenido: no se publican la misma semana. Falta el guion de las cinco reglas de estilo, que Dante quiere revisar antes de subirlo.",
+      "nota": "23 piezas. Las de Bianca son g-72 a g-77, g-84, g-89 a g-92; las de Mary, g-78 a g-83, g-85, ri-35 y ri-36. Quince llevan guion escrito y ocho entran como referencia para que Dante defina el gag. Numeración de la serie boutique, resuelta: el último grabado fue la parte 4 (el del satín). g-51 y g-52 de la R11 son 5 y 6, g-89 es 7, g-90 es 8 y g-91 es 9. g-91 contradice a propósito la regla de \"dos estampados juntos no\" que Bianca dio en g-46, y su gancho supone que ese ya salió. g-80 es la pieza de zapatería y necesita los cuatro pares en existencia. g-73 y g-76 comparten contenido: no se publican la misma semana. Falta el guion de las cinco reglas de estilo, que Dante quiere revisar antes de subirlo.",
       "timeline": [
         {
           "hora": "Por definir",
@@ -1190,8 +1190,8 @@
         },
         {
           "slug": "g-59",
-          "titulo": "Serie Tendencias OI2026 · P6: las 4 texturas (gamuza, cuadros, chocolate, flecos)",
-          "info": "45–55 seg · PARTE 6 (grabado hasta la 5) · voz en off + b-roll · comenta TEXTURAS",
+          "titulo": "Serie Tendencias OI2026 · Las 4 texturas (sin número)",
+          "info": "45–55 seg · sin número en cinta · se publica donde se quiera · voz en off + b-roll · comenta TEXTURAS",
           "grabado": true,
           "categoria": "guion",
           "link": "https://vt.tiktok.com/ZSVAGYtse/",
@@ -1430,29 +1430,29 @@
         },
         {
           "slug": "g-49",
-          "titulo": "Serie Tendencias OI2026 · P4: Chaqueta Napoleón",
+          "titulo": "Serie Tendencias OI2026 · P3b: Chaqueta Napoleón",
           "info": "35–45 seg · Serie tendencias · 3 escenarios · comenta NAPOLEÓN",
           "grabado": true,
           "categoria": "guion"
         },
         {
           "slug": "g-50",
-          "titulo": "Serie Tendencias OI2026 · P5: Encaje y satín (eventos)",
+          "titulo": "Serie Tendencias OI2026 · P4: Encaje y satín (eventos)",
           "info": "50–65 seg · Serie tendencias · 5 eventos · piezas en tendencia (slip satén, encaje, corsé) · comenta EVENTO",
           "grabado": true,
           "categoria": "guion"
         },
         {
           "slug": "g-51",
-          "titulo": "Serie Tendencias OI2026 · P6: Blanco Cloud Dancer",
+          "titulo": "Serie Tendencias OI2026 · P5: Blanco Cloud Dancer",
           "info": "30–40 seg · Serie tendencias · dato Pantone · comenta BLANCO",
           "grabado": false,
           "categoria": "guion"
         },
         {
           "slug": "g-52",
-          "titulo": "Serie Tendencias OI2026 · P7: Calzado",
-          "info": "35–45 seg · Serie tendencias · cierre · comenta ZAPATOS",
+          "titulo": "Serie Tendencias OI2026 · P6: Calzado",
+          "info": "35–45 seg · Serie tendencias · comenta ZAPATOS",
           "grabado": false,
           "categoria": "guion"
         },
