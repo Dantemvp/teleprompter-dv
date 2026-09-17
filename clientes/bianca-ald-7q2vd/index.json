@@ -410,10 +410,30 @@
             ],
             "nota": "No se graba video, son fotos. Mismo pipeline de dos pasos de g-70: primero la imagen fija con la prenda real, después se anima."
           }
+        },
+        {
+          "slug": "g-89",
+          "titulo": "Serie Tendencias OI2026 · P8: los 7 colores",
+          "info": "55–65 seg · BIANCA · SERIE BOUTIQUE · voz en off + b-roll · callbacks a g-48 y g-72",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://vt.tiktok.com/ZSqgQRjF9/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-035625_2e1a1aa0-d5fc-4c49-b236-34b17d6115aa/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Un look · ella sale solo en el cierre",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "De cuerpo completo para el cierre. El resto del video es b-roll del rack"
+              }
+            ],
+            "nota": "Una prenda real por cada uno de los siete colores. Si un color no está en piso, se salta."
+          }
         }
       ],
       "ventana": "Por definir · 9 bloques · Bianca y Mary",
-      "nota": "18 piezas. Las de Bianca son g-72 a g-77 y g-84; las de Mary, g-78 a g-83 y g-85. Once llevan guion escrito y siete entran como referencia para que Dante defina el gag. g-84 cierra la serie boutique de tendencias OI2026, así que necesita una pieza real de cada tendencia de la serie. g-80 es la pieza de zapatería y necesita los cuatro pares en existencia el día que se publica. g-73 y g-76 comparten contenido: no se publican la misma semana. Falta el guion de las cinco reglas de estilo, que Dante quiere revisar antes de subirlo.",
+      "nota": "19 piezas. Las de Bianca son g-72 a g-77 g-84 y g-89; las de Mary, g-78 a g-83 y g-85. Doce llevan guion escrito y siete entran como referencia para que Dante defina el gag. g-84 cierra la serie boutique de tendencias OI2026, así que necesita una pieza real de cada tendencia de la serie. g-80 es la pieza de zapatería y necesita los cuatro pares en existencia el día que se publica. g-73 y g-76 comparten contenido: no se publican la misma semana. Falta el guion de las cinco reglas de estilo, que Dante quiere revisar antes de subirlo. g-89 entra a la serie boutique y se publica DESPUÉS de g-72, porque le hace callback.",
       "timeline": [
         {
           "hora": "Por definir",
@@ -490,11 +510,12 @@
         {
           "hora": "Por definir",
           "dur": "—",
-          "titulo": "Bloque 8 · Bianca · cierre de la serie de tendencias",
+          "titulo": "Bloque 8 · Bianca · serie de tendencias",
           "slugs": [
-            "g-84"
+            "g-84",
+            "g-89"
           ],
-          "nota": "👗 DOS LOOKS · gamuza con denim para abrir, encaje con satín para la parte de noche.\n🎬 MATERIAL · Una pieza real por cada tendencia de la serie: gamuza, Bambi, cuadros, chocolate, encaje, satín, flecos, la chaqueta Napoleón, algo en blanco Cloud Dancer y la bota alta negra."
+          "nota": "👗 DOS LOOKS · gamuza con denim para abrir g-84, encaje con satín para la parte de noche. g-89 usa el mismo look y ella sale solo en el cierre.\n🎬 MATERIAL · Una pieza real por cada tendencia de la serie (gamuza, Bambi, cuadros, chocolate, encaje, satín, flecos, Napoleón, blanco Cloud Dancer, bota alta negra) y una por cada uno de los siete colores de g-89."
         },
         {
           "hora": "Por definir",
