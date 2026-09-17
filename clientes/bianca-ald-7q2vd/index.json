@@ -278,10 +278,142 @@
             ],
             "nota": "No es cambio de outfit: es el mismo look con piezas que entran y salen. Ten todo junto antes de empezar."
           }
+        },
+        {
+          "slug": "g-83",
+          "titulo": "La mezclilla y sus mejores combinaciones",
+          "info": "30–35 seg · MARY · lista por tono de denim · 3 extras investigados",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DcCMU_STd8-/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-035313_e9635bcd-97f6-4681-99e6-173fe622cfcf/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Denim de base, cambia el tono",
+            "looks": [
+              {
+                "t": "Look 1",
+                "p": "Un denim oscuro, que es con el que abre"
+              },
+              {
+                "t": "Look 2",
+                "p": "Un denim claro o medio para la segunda mitad"
+              }
+            ],
+            "nota": "Cada tono es un cambio de plano con la prenda a cuadro, no un outfit nuevo."
+          }
+        },
+        {
+          "slug": "g-84",
+          "titulo": "Combinando tendencias 2026",
+          "info": "20–25 seg · BIANCA · rapid fire · cierra la serie boutique de tendencias OI2026",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dc1fPwVITkX/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-035315_e9298a9c-52ae-45d7-971b-083de4941018/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Las tendencias de la serie, de dos en dos",
+            "looks": [
+              {
+                "t": "Look 1",
+                "p": "Gamuza y denim, que son las dos primeras combinaciones"
+              },
+              {
+                "t": "Look 2",
+                "p": "Encaje y satín, para la parte de noche"
+              }
+            ],
+            "nota": "Cada combinación se enseña con piezas reales del rack; no hace falta ponérselas todas. Si una tendencia no está en piso, se salta."
+          }
+        },
+        {
+          "slug": "g-85",
+          "titulo": "Estoy divina",
+          "info": "15–20 seg · MARY · chusco · lip sync de Aldo León · engancha con Confianza Radical",
+          "categoria": "chusco",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DcuQiL9NV39/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-035313_62785a68-1fa7-4340-a29a-6845d2077f9e/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Look bueno · el espejo lo enseña entero",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "De los producidos. El video entero pasa frente al espejo de cuerpo completo"
+              }
+            ],
+            "nota": "Espejo de cuerpo completo de la tienda. La prenda tiene que verse: es lo único que vende el video."
+          }
+        },
+        {
+          "slug": "g-86",
+          "titulo": "Chusco · por definir",
+          "info": "chusco · Dante define el gag",
+          "categoria": "chusco",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dcr1BW7JyPU/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-035313_6bed7a5c-4a75-4ff3-9ac2-2faf2a665600/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Por definir",
+            "looks": [
+              {
+                "t": "Pendiente",
+                "p": "Sale del gag que decida Dante"
+              }
+            ],
+            "nota": "Sin transcripción útil: el audio no trae diálogo."
+          }
+        },
+        {
+          "slug": "g-87",
+          "titulo": "Chusco · venías por una sola cosa",
+          "info": "21 seg · chusco A REPLICAR · entra por una cosa y sale cargada de bolsas",
+          "categoria": "chusco",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DcFMr44TGjn/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-87.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "De calle, como llega una clienta",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Sencillo y oscuro, para que las bolsas resalten"
+              }
+            ],
+            "nota": "Cámara en mano siguiéndola por la tienda. Hace falta la empleada que le va dando bolsas y bolsas de la boutique. La referencia es 18+ en Instagram y GetTranscribe no la abre: la miniatura salió del video bajado."
+          }
+        },
+        {
+          "slug": "g-88",
+          "titulo": "Transición con IA · segunda vuelta",
+          "info": "transición generada con IA · repetir el pipeline de g-70 · Dante define la ejecución",
+          "categoria": "guion",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dc6XCTGxXei/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-035311_fdb80f83-7f09-44b0-b325-295334fe5d4e/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Base para generar con IA · fondo limpio",
+            "looks": [
+              {
+                "t": "Foto base",
+                "p": "Un solo color, sin estampado, de cuerpo completo contra pared lisa. La IA respeta mejor el color plano que el print"
+              }
+            ],
+            "nota": "No se graba video, son fotos. Mismo pipeline de dos pasos de g-70: primero la imagen fija con la prenda real, después se anima."
+          }
         }
       ],
-      "ventana": "Por definir · 6 bloques · Bianca y Mary",
-      "nota": "12 piezas. Las primeras seis son de Bianca y las últimas seis de Mary. Ocho llevan guion escrito y cuatro entran como referencia para que Dante defina el gag. La pieza que manda a comprar calzado es g-80, y necesita los cuatro pares en existencia el día que se publica. g-73 y g-76 comparten contenido: no se publican la misma semana.",
+      "ventana": "Por definir · 9 bloques · Bianca y Mary",
+      "nota": "18 piezas. Las de Bianca son g-72 a g-77 y g-84; las de Mary, g-78 a g-83 y g-85. Once llevan guion escrito y siete entran como referencia para que Dante defina el gag. g-84 cierra la serie boutique de tendencias OI2026, así que necesita una pieza real de cada tendencia de la serie. g-80 es la pieza de zapatería y necesita los cuatro pares en existencia el día que se publica. g-73 y g-76 comparten contenido: no se publican la misma semana. Falta el guion de las cinco reglas de estilo, que Dante quiere revisar antes de subirlo.",
       "timeline": [
         {
           "hora": "Por definir",
@@ -344,6 +476,36 @@
             "g-81"
           ],
           "nota": "👗 Los últimos looks del día. ri-35 pide antes y después.\n🎬 MATERIAL · Para g-78 hace falta una segunda persona en el mostrador y el montón de prendas. g-81 es foto, en exterior."
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 7 · Mary · listas a cámara",
+          "slugs": [
+            "g-83",
+            "g-85"
+          ],
+          "nota": "👗 LOOK · g-83 arranca con un denim oscuro. g-85 es el del espejo y pide el look más producido de Mary.\n🎬 MATERIAL · Los tres tonos de denim a la mano, y las piezas de los colores que acompañan. Para g-85, el espejo de cuerpo completo despejado."
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 8 · Bianca · cierre de la serie de tendencias",
+          "slugs": [
+            "g-84"
+          ],
+          "nota": "👗 DOS LOOKS · gamuza con denim para abrir, encaje con satín para la parte de noche.\n🎬 MATERIAL · Una pieza real por cada tendencia de la serie: gamuza, Bambi, cuadros, chocolate, encaje, satín, flecos, la chaqueta Napoleón, algo en blanco Cloud Dancer y la bota alta negra."
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 9 · chuscos y la de IA",
+          "slugs": [
+            "g-87",
+            "g-86",
+            "g-88"
+          ],
+          "nota": "👗 Look propio y sencillo, no cuenta para los cambios del día.\n🎬 MATERIAL · Para g-87 hacen falta muchas bolsas de la boutique y alguien que se las vaya dando. g-88 no se graba: son fotos base contra pared lisa."
         }
       ]
     },
