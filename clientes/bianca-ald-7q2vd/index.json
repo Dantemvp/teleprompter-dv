@@ -526,10 +526,30 @@
             ],
             "nota": "Una sola toma, plano medio, sin cortes ni b-roll. Si se pica, se pierde. No lleva CTA de producto: este construye marca."
           }
+        },
+        {
+          "slug": "g-93",
+          "titulo": "Las cinco reglas de Carolina Herrera",
+          "info": "35–45 seg · BIANCA · autoridad prestada · rapid fire · citas verificadas · camisa blanca",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dc4MsSVzNtc/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-035316_1cc5ed2d-47cb-4d5e-8d52-543c63d5acaf/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Camisa blanca · es la regla uno",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Camisa blanca impecable. Es el guiño visual de todo el video y la primera de las cinco reglas"
+              }
+            ],
+            "nota": "Sin utilería. El número de cada regla se estampa en pantalla, no se dice en voz."
+          }
         }
       ],
       "ventana": "Por definir · 10 bloques · Bianca y Mary",
-      "nota": "23 piezas. Las de Bianca son g-72 a g-77, g-84, g-89 a g-92; las de Mary, g-78 a g-83, g-85, ri-35 y ri-36. Quince llevan guion escrito y ocho entran como referencia para que Dante defina el gag. Numeración de la serie boutique, resuelta: el último grabado fue la parte 4 (el del satín). g-51 y g-52 de la R11 son 5 y 6, g-89 es 7, g-90 es 8 y g-91 es 9. g-91 contradice a propósito la regla de \"dos estampados juntos no\" que Bianca dio en g-46, y su gancho supone que ese ya salió. g-80 es la pieza de zapatería y necesita los cuatro pares en existencia. g-73 y g-76 comparten contenido: no se publican la misma semana. Falta el guion de las cinco reglas de estilo, que Dante quiere revisar antes de subirlo.",
+      "nota": "24 piezas. Las de Bianca son g-72 a g-77, g-84, g-89 a g-93; las de Mary, g-78 a g-83, g-85, ri-35 y ri-36. Dieciséis llevan guion escrito y ocho entran como referencia para que Dante defina el gag. Numeración de la serie boutique, resuelta: el último grabado fue la parte 4 (el del satín). g-51 y g-52 de la R11 son 5 y 6, g-89 es 7, g-90 es 8 y g-91 es 9. g-91 contradice a propósito la regla de \"dos estampados juntos no\" que Bianca dio en g-46, y su gancho supone que ese ya salió. g-80 es la pieza de zapatería y necesita los cuatro pares en existencia. g-73 y g-76 comparten contenido: no se publican la misma semana.",
       "timeline": [
         {
           "hora": "Por definir",
@@ -630,11 +650,12 @@
         {
           "hora": "Por definir",
           "dur": "—",
-          "titulo": "Bloque 10 · Bianca · el manifiesto",
+          "titulo": "Bloque 10 · Bianca · el manifiesto y las cinco reglas",
           "slugs": [
-            "g-92"
+            "g-92",
+            "g-93"
           ],
-          "nota": "👗 EL MEJOR LOOK DEL DÍA · el video dice que te arregles de más, así que ella tiene que estarlo.\n🎬 MATERIAL · Nada. Una sola toma, plano medio, sin cortes. Se graba cuando haya mejor luz y con ella descansada, no al final."
+          "nota": "👗 DOS LOOKS · g-92 pide el mejor look del día, porque el video dice que te arregles de más. g-93 pide CAMISA BLANCA, que es la regla uno del guion.\n🎬 MATERIAL · Nada. Los dos son a cámara, sin utilería. g-92 va en una sola toma sin cortes, así que se graba con ella descansada y con buena luz, no al final del día."
         }
       ]
     },
