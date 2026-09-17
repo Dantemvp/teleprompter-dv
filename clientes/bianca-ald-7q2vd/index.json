@@ -2,6 +2,352 @@
   "cliente": "Bianca Aldama Boutique",
   "grabaciones": [
     {
+      "rec": "R14",
+      "nombre": "Grabación 14 · en armado",
+      "fecha": "Por definir",
+      "locacion": "Tienda",
+      "guiones": [
+        {
+          "slug": "g-72",
+          "titulo": "El azul que se va a poner en todo",
+          "info": "carrusel de 6 láminas · color tendencia · solo lo que ya está en piso",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/p/DcxK_P7Dg6s/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-72.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Un look en el color tendencia",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Una pieza del color protagonista, de cuerpo completo. Las demás piezas van recortadas, no puestas"
+              }
+            ],
+            "nota": "No es video, son fotos. El color va nombrado: si el que entra no es azul marino, se cambia el nombre y las piezas."
+          }
+        },
+        {
+          "slug": "g-73",
+          "titulo": "Tendencias que sí entran a mi clóset",
+          "info": "35–40 seg · lista con veredicto personal · collage de apoyo",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dc1lDJzs6Uw/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-031551_1ec83d82-ff0b-4bb8-bad8-79ec1e337d38/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Dos looks, no uno por tendencia",
+            "looks": [
+              {
+                "t": "Look 1",
+                "p": "El de hablar a cámara, plano medio. Que aguante todo el bloque"
+              },
+              {
+                "t": "Look 2",
+                "p": "Cambio para la segunda mitad, para que no se vea la misma toma corrida"
+              }
+            ],
+            "nota": "Ella NO se cambia por tendencia: el collage de apoyo hace ese trabajo. Si se quiere uno por tendencia son 6 looks."
+          }
+        },
+        {
+          "slug": "g-74",
+          "titulo": "No apagues tu estilo",
+          "info": "30–35 seg · el espejo · plano medio + collage · CTA palabra clave ESTILO",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dc19BtFO1oF/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-031548_39b1d1ff-66f9-43d4-8f92-781e3c3f597a/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Arreglada de verdad · el look es el argumento",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "El más producido del bloque. El video habla de no apagarse, así que ella no puede estar apagada"
+              }
+            ],
+            "nota": "Comparte look base con el bloque 1. Se graba en el mismo montaje."
+          }
+        },
+        {
+          "slug": "g-75",
+          "titulo": "Chusco · a donde me lleve el viento",
+          "info": "7–10 seg · chusco · exterior, banqueta · Dante define el gag",
+          "categoria": "chusco",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Da_Uq7Ov5W6/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-031552_7714e0e8-4b75-457e-b064-77ac3d2bc185/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Casual de calle",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Cómodo, que aguante el movimiento"
+              }
+            ],
+            "nota": "Exterior. Se graba junto con lo demás de banqueta."
+          }
+        },
+        {
+          "slug": "g-76",
+          "titulo": "El negro otra vez",
+          "info": "30–35 seg · lista con veredicto personal · pasarelas OI2026 verificadas",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DcwbNyyNP0r/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-031554_4f017be1-2226-401e-85ea-851320fe4f83/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Negro, los dos",
+            "looks": [
+              {
+                "t": "Look 1",
+                "p": "Sastrería negra, que es el ítem que abre la lista"
+              },
+              {
+                "t": "Look 2",
+                "p": "El de noche: encaje o transparencia, con una pieza de piel"
+              }
+            ],
+            "nota": "Piel de arriba a abajo no aplica con el clima de aquí: UNA pieza de piel y el resto liso."
+          }
+        },
+        {
+          "slug": "g-77",
+          "titulo": "Chusco · dejé de comprar un mes",
+          "info": "7–10 seg · chusco · interior, mostrador · Dante define el gag",
+          "categoria": "chusco",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DcmrpYuxIrE/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-031555_1630e7e0-a9a3-436f-b9ff-0442b7463704/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Como llega al mostrador",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Sencillo. El montón de prendas es el protagonista"
+              }
+            ],
+            "nota": "Mostrador. Se graba con lo de interior."
+          }
+        },
+        {
+          "slug": "g-78",
+          "titulo": "Todo es para mí",
+          "info": "15–20 seg · MARY · chusco guionado · lip sync a dos voces · 2 personas",
+          "categoria": "chusco",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdWyOOiRDj0/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-033135_0d8644f5-b5e5-409a-a77a-cecad5463d21/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Mary de clienta",
+            "looks": [
+              {
+                "t": "Mary",
+                "p": "De calle, como llega una clienta"
+              },
+              {
+                "t": "La empleada",
+                "p": "Su uniforme o su ropa de trabajo. No cuenta como cambio del día"
+              }
+            ],
+            "nota": "Lleva diálogo y se dobla en edición. Hace falta una segunda persona en el mostrador."
+          }
+        },
+        {
+          "slug": "g-79",
+          "titulo": "El café no es difícil de combinar",
+          "info": "25–35 seg · MARY · ocho combinaciones con chocolate · 3 extras investigados",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdU9L0lTQZQ/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-033146_cf93efb5-c5ee-4c50-9fd8-f88de33a4184/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Chocolate de base, cambia el acompañante",
+            "looks": [
+              {
+                "t": "Look 1",
+                "p": "Pieza de chocolate que se mantenga toda la primera mitad"
+              },
+              {
+                "t": "Look 2",
+                "p": "Segundo chocolate, otro tono, para la segunda mitad"
+              }
+            ],
+            "nota": "Cada combinación es un cambio de plano, no de outfit completo. Las piezas del color acompañante pueden entrar a cuadro sin ponérselas."
+          }
+        },
+        {
+          "slug": "ri-35",
+          "titulo": "Transición INT 35 · Mary",
+          "info": "transición interior · referencia · Dante define la ejecución",
+          "categoria": "trans-int",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdUetPiM1A2/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-033146_eed1a10d-d0b1-469f-8038-90b0f98becbc/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "estilo": "Antes y después",
+            "looks": [
+              {
+                "t": "Antes de la transición",
+                "p": "De diario"
+              },
+              {
+                "t": "Después de la transición",
+                "p": "Arreglado, que el salto se lea en un segundo"
+              }
+            ],
+            "nota": "Interior. Va con el bloque de Mary."
+          }
+        },
+        {
+          "slug": "g-80",
+          "titulo": "Outfits y el par que les va",
+          "info": "20–25 seg · MARY · ZAPATERÍA · outfit + calzado con transición simple · 4 pares",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdQGWd5u56O/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-033147_a0605174-2063-4499-957a-ed3b39562fd0/thumbnail.jpg",
+          "outfit": {
+            "n": 4,
+            "estilo": "Cuatro outfits, cuatro pares",
+            "looks": [
+              {
+                "t": "Formato",
+                "p": "Un outfit completo por par de calzado. Entra sin calzado a cuadro, agarra el par, corte, y aparece calzada"
+              },
+              {
+                "t": "Cuáles",
+                "p": "Que los cuatro pares sean distintos entre sí: bota alta, bota corta, tacón y botín"
+              }
+            ],
+            "nota": "LA PIEZA DE ZAPATERÍA DEL DÍA. Cámara fija, mismo encuadre y marca de piso en los cuatro. Los cuatro pares tienen que estar en existencia el día que se publica."
+          }
+        },
+        {
+          "slug": "g-81",
+          "titulo": "Chusco · el outfit desperdiciado",
+          "info": "foto · MARY · chusco · Dante define el gag",
+          "categoria": "chusco",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/p/DdHpRiJAXqw/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-81.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Look producido · el chiste es que se desperdició",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "De los buenos. El texto dice que se desperdició, así que tiene que valer la pena"
+              }
+            ],
+            "nota": "Es foto, no video. Exterior."
+          }
+        },
+        {
+          "slug": "g-82",
+          "titulo": "Diez arreglos rápidos para un look que no te convence",
+          "info": "30–35 seg · MARY · problema y solución, rapid fire · 3 extras propios",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdByTmtNM42/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-033147_6a4a5b07-ca7c-4e34-89bd-830cf7428e3c/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Un look base que se va arreglando a cuadro",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Deliberadamente plano al empezar: es el que se va arreglando"
+              },
+              {
+                "t": "Lo que hace falta",
+                "p": "Bolso llamativo, mocasines, tenis, cinturón, chaleco o saco, un accesorio protagonista y algo de color"
+              }
+            ],
+            "nota": "No es cambio de outfit: es el mismo look con piezas que entran y salen. Ten todo junto antes de empezar."
+          }
+        }
+      ],
+      "ventana": "Por definir · 6 bloques · Bianca y Mary",
+      "nota": "12 piezas. Las primeras seis son de Bianca y las últimas seis de Mary. Ocho llevan guion escrito y cuatro entran como referencia para que Dante defina el gag. La pieza que manda a comprar calzado es g-80, y necesita los cuatro pares en existencia el día que se publica. g-73 y g-76 comparten contenido: no se publican la misma semana.",
+      "timeline": [
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 1 · Look 1 · Bianca a cámara",
+          "slugs": [
+            "g-74",
+            "g-73",
+            "g-76"
+          ],
+          "nota": "👗 LOOK 1 · Los tres arrancan con el mismo look. El de g-74 es el más producido y manda, porque ese video habla de no apagarse.\n🎬 MATERIAL · Nada de utilería. Collage de apoyo se monta en edición."
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 2 · Look 2 · Bianca, segundo look",
+          "slugs": [
+            "g-73",
+            "g-76"
+          ],
+          "nota": "👗 CAMBIO A LOOK 2 · Solo las tomas de la segunda mitad de esos dos. No se mueve la cámara del bloque 1.\n🎬 MATERIAL · Para g-76, una pieza de piel y algo de encaje o transparencia."
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 3 · Bianca · carrusel y chuscos",
+          "slugs": [
+            "g-72",
+            "g-75",
+            "g-77"
+          ],
+          "nota": "👗 CAMBIO A LOOK 3 para el carrusel, en el color tendencia. Los dos chuscos van con look propio y sencillo.\n🎬 MATERIAL · Para g-72, las piezas del color sueltas para fotografiarlas recortadas. Para g-77, el montón de prendas sobre el mostrador. g-75 es en la banqueta."
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 4 · Look 1 de Mary · a cámara",
+          "slugs": [
+            "g-79",
+            "g-82"
+          ],
+          "nota": "👗 LOOK 1 DE MARY · g-79 arranca con una pieza de chocolate; g-82 arranca con un look plano a propósito.\n🎬 MATERIAL · Piezas de los colores que acompañan al chocolate, para meterlas a cuadro sin ponérselas. Y el kit de g-82: bolso llamativo, mocasines, tenis, cinturón, chaleco y un accesorio protagonista."
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 5 · Mary · zapatería",
+          "slugs": [
+            "g-80"
+          ],
+          "nota": "👗 CUATRO LOOKS SEGUIDOS · Un outfit completo por par de calzado.\n🎬 MATERIAL · Los cuatro pares: bota alta, bota corta, tacón y botín. Marca el piso y no muevas la cámara entre tomas."
+        },
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque 6 · Mary · transición y chuscos",
+          "slugs": [
+            "ri-35",
+            "g-78",
+            "g-81"
+          ],
+          "nota": "👗 Los últimos looks del día. ri-35 pide antes y después.\n🎬 MATERIAL · Para g-78 hace falta una segunda persona en el mostrador y el montón de prendas. g-81 es foto, en exterior."
+        }
+      ]
+    },
+    {
       "rec": "R13",
       "nombre": "Decimotercera grabación",
       "fecha": "Por definir",
