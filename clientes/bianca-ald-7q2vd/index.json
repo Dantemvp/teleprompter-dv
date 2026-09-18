@@ -195,7 +195,8 @@
               }
             ],
             "nota": "Cada combinación es un cambio de plano, no de outfit completo. Las piezas del color acompañante pueden entrar a cuadro sin ponérselas."
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "ri-35",
