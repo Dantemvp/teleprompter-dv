@@ -423,7 +423,8 @@
               }
             ],
             "nota": "No se graba video, son fotos. Mismo pipeline de dos pasos de g-70: primero la imagen fija con la prenda real, después se anima."
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-89",
