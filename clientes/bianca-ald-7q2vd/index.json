@@ -123,7 +123,8 @@
               }
             ],
             "nota": "Piel de arriba a abajo no aplica con el clima de aquí: UNA pieza de piel y el resto liso."
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-77",
