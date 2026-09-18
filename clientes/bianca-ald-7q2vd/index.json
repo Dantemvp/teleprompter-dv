@@ -516,7 +516,8 @@
               }
             ],
             "nota": "El nivel 3 necesita DOS piezas de cuadros que combinen: mismo color en común y escalas distintas. Si no existen en piso, el nivel 3 no se graba."
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-92",
