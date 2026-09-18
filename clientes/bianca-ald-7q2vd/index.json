@@ -285,7 +285,8 @@
               }
             ],
             "nota": "No es cambio de outfit: es el mismo look con piezas que entran y salen. Ten todo junto antes de empezar."
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-83",
