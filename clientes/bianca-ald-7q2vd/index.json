@@ -77,7 +77,8 @@
               }
             ],
             "nota": "Comparte look base con el bloque 1. Se graba en el mismo montaje."
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-75",
