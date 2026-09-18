@@ -170,7 +170,8 @@
               }
             ],
             "nota": "Lleva diálogo y se dobla en edición. Hace falta una segunda persona en el mostrador."
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-79",
