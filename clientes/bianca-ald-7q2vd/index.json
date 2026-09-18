@@ -313,7 +313,8 @@
               }
             ],
             "nota": "Cada tono es un cambio de plano con la prenda a cuadro, no un outfit nuevo."
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-84",
