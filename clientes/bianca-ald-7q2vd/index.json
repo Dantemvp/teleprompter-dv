@@ -439,7 +439,8 @@
               }
             ],
             "nota": "Una prenda real por cada uno de los siete colores. Si un color no está en piso, se salta."
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "ri-36",
