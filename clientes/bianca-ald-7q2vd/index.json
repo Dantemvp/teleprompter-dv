@@ -2,6 +2,233 @@
   "cliente": "Bianca Aldama Boutique",
   "grabaciones": [
     {
+      "rec": "R15",
+      "nombre": "Grabación 15 · en armado",
+      "fecha": "Por definir",
+      "locacion": "Por definir",
+      "guiones": [
+        {
+          "slug": "g-94",
+          "titulo": "La pasarela, en piezas accesibles",
+          "info": "GUION · seis piezas de tienda accesible que dan la estética de una pasarela · encaje, siluetas lenceras, negro, vino y chocolate",
+          "categoria": "guion",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdjtQQBgwz-/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-181149_bbbfcf52-97bb-4914-a212-da180cf70e1d/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Ella sale en recuadro chico hablando. El cuadro lo llenan la pasarela y las piezas"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-95",
+          "titulo": "Recomendación de producto · base de maquillaje",
+          "info": "GUION · formato UGC de recomendación · ⚠️ el tema es maquillaje, no ropa",
+          "categoria": "guion",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://vt.tiktok.com/ZSqo1sFdc/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-181201_88c58067-51b0-46e3-8ce1-bdba3a875dc4/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Plano cerrado de cara. La ropa no se ve"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-96",
+          "titulo": "Lookbook contra pared",
+          "info": "11 looks · posa contra pared blanca con el logo arriba · un corte por outfit",
+          "categoria": "viral-organica",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdhAKViIkkz/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-181154_14742581-98fc-451e-9f1f-957ab2c4b761/thumbnail.jpg",
+          "outfit": {
+            "n": 11,
+            "looks": [
+              {
+                "t": "1",
+                "p": "Traje negro con top interior"
+              },
+              {
+                "t": "2",
+                "p": "Blusa roja con pantalón de piel negro"
+              },
+              {
+                "t": "3",
+                "p": "Suéter blanco con falda midi de piel negra y botas"
+              },
+              {
+                "t": "4",
+                "p": "Traje oversize color topo"
+              },
+              {
+                "t": "5",
+                "p": "Traje topo con top chocolate"
+              },
+              {
+                "t": "6",
+                "p": "Trench crema largo con botas"
+              },
+              {
+                "t": "7",
+                "p": "Mezclilla completa: chamarra, minifalda y botas altas"
+              },
+              {
+                "t": "8",
+                "p": "Capa camel con bermuda negra y sandalia"
+              },
+              {
+                "t": "9",
+                "p": "Traje de cuadro chico café"
+              },
+              {
+                "t": "10",
+                "p": "Camisa y pantalón de cuadros blanco y negro"
+              },
+              {
+                "t": "11",
+                "p": "Vestido negro largo con espalda descubierta"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "ri-37",
+          "titulo": "Transición INT 37 · con avatar",
+          "info": "4 looks · avatar animado arriba con el mismo outfit, ella camina abajo",
+          "categoria": "trans-int",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dc38a12iB0-/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-181155_826363f1-65e2-4155-994a-064a76ecda83/thumbnail.jpg",
+          "outfit": {
+            "n": 4,
+            "looks": [
+              {
+                "t": "1",
+                "p": "Top azul con pantalón deportivo de raya amarilla y bolsa amarilla"
+              },
+              {
+                "t": "2",
+                "p": "Camisa de cuadros abierta sobre top blanco, con bolsa de animal print"
+              },
+              {
+                "t": "3",
+                "p": "Top blanco strapless con falda beige, botas peludas y gorra"
+              },
+              {
+                "t": "4",
+                "p": "Top azul con mezclilla ancha y bolsa amarilla"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-97",
+          "titulo": "Catálogo de jeans a cuerpo",
+          "info": "13 pares · los va sosteniendo a cuerpo completo uno por uno · ella con un solo look",
+          "categoria": "viral-organica",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DcViiC_sMnH/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-181154_885f4b35-bfd9-4429-8adc-d1239ea3dd9f/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Top negro y pantalón blanco ancho. Neutro a propósito: las prendas son las protagonistas"
+              },
+              {
+                "t": "Las prendas",
+                "p": "13 pares distintos: camel, verde agua estampado, azul claro, azul medio, amarillo, azul lavado, gris oscuro, azul metálico, morado, azul hielo, gris, negro y crema"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "ri-38",
+          "titulo": "Transición INT 38 · de recién levantada a lista",
+          "info": "3 looks · pasillo largo, arranca con café en mano",
+          "categoria": "trans-int",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdHu_bZsNbZ/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/ri-38.jpg",
+          "outfit": {
+            "n": 3,
+            "looks": [
+              {
+                "t": "Antes",
+                "p": "Bata o camisa larga abierta, recién levantada, con café en la mano"
+              },
+              {
+                "t": "Medio",
+                "p": "Mezclilla ancha cortada con top negro de espalda descubierta"
+              },
+              {
+                "t": "Después",
+                "p": "Suéter verde corto con la misma mezclilla, bolsa amarilla y sandalia"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "ri-39",
+          "titulo": "Transición INT 39 · pasarela de outfits",
+          "info": "7 looks · camina hacia la cámara y cambia de outfit por corte",
+          "categoria": "trans-int",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dc_hXNMsk3m/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-181159_9ff04880-eeda-4938-b9cd-710a2dc7f480/thumbnail.jpg",
+          "outfit": {
+            "n": 7,
+            "looks": [
+              {
+                "t": "1",
+                "p": "Camisa blanca con short de mezclilla, chamarra de mezclilla, gorra y tenis"
+              },
+              {
+                "t": "2",
+                "p": "Camisa blanca con falda gris tableada, tenis y bolsa vino"
+              },
+              {
+                "t": "3",
+                "p": "Camisa blanca con jeans claros"
+              },
+              {
+                "t": "4",
+                "p": "Camisa gris con corbata, pantalón café ancho y gorra"
+              },
+              {
+                "t": "5",
+                "p": "Chamarra verde olivo sobre top blanco, jeans claros y botas"
+              },
+              {
+                "t": "6",
+                "p": "Chamarra de mezclilla con top blanco, mini de mezclilla y gorra"
+              },
+              {
+                "t": "7",
+                "p": "Camisa blanca con falda gris y bolsa vino"
+              }
+            ]
+          }
+        }
+      ],
+      "nota": "Primera tanda: siete referencias que mandó Bianca el 22 de septiembre."
+    },
+    {
       "rec": "R14",
       "nombre": "Grabación 14 · en armado",
       "fecha": "Por definir",
