@@ -224,9 +224,190 @@
               }
             ]
           }
+        },
+        {
+          "slug": "g-98",
+          "titulo": "27 looks con 9 prendas · la técnica del sudoku",
+          "info": "GUION · 3 inferiores, 3 superiores y 3 capas puestas en cuadrícula · se combinan en horizontal, vertical y diagonal",
+          "categoria": "guion",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DY0NrMmxj8b/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-182455_f13f5ae9-b55c-4cc4-97ce-a30701c40a68/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Ella habla y acomoda; el cuadro lo llena la cuadrícula de prendas"
+              },
+              {
+                "t": "Las 9 prendas",
+                "p": "3 inferiores, 3 superiores y 3 capas, más flats, tenis, kitten heels, dos carteras, gafas y pañuelos"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-99",
+          "titulo": "Chusco · imagen",
+          "info": "CHUSCO · es una imagen, no video",
+          "categoria": "chusco",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/p/Ddc04xQNAwo/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-99.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Por definir"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-100",
+          "titulo": "Chusco · audio prestado",
+          "info": "CHUSCO · sin diálogo, corre sobre canción",
+          "categoria": "chusco",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DY5t0vJR641/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-182452_2c51e490-e920-4b10-b5f0-29d907e3b80d/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Por definir"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "ri-40",
+          "titulo": "Transición INT 40 · el fleco y las prendas en gancho",
+          "info": "arranca cortándose el fleco a cámara y sigue enseñando prendas colgadas una por una",
+          "categoria": "trans-int",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DcBrhnPx3tg/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/ri-40.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Camisa crema con collar dorado. No se cambia en todo el video"
+              },
+              {
+                "t": "Las prendas",
+                "p": "Van en gancho, una por una: blusa beige, saco crema calado, playera de leopardo y falda verde"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "ri-41",
+          "titulo": "Transición INT 41 · audio trend con subtítulos",
+          "info": "7 looks · cambia por corte sobre audio prestado, con subtítulo palabra por palabra",
+          "categoria": "trans-int",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DcOhaNgRWYR/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-182454_b277eade-0e48-4f50-88ea-cc674209b328/thumbnail.jpg",
+          "outfit": {
+            "n": 7,
+            "looks": [
+              {
+                "t": "1",
+                "p": "Body negro escotado con falda transparente negra"
+              },
+              {
+                "t": "2",
+                "p": "Top negro con pantalón blanco de lunares y gorra a juego"
+              },
+              {
+                "t": "3",
+                "p": "Camisa gris sobre top blanco, pantalón negro ancho y bolsa rosa"
+              },
+              {
+                "t": "4",
+                "p": "Abrigo de leopardo sobre top blanco con pantalón chocolate"
+              },
+              {
+                "t": "5",
+                "p": "Top plateado de lentejuelas con pantalón negro ancho"
+              },
+              {
+                "t": "6",
+                "p": "Corset verde con minifalda de piel vino"
+              },
+              {
+                "t": "7",
+                "p": "Top de encaje crema con minifalda verde militar y botas blancas"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "ri-42",
+          "titulo": "Transición INT 42 · pasarela detrás de la columna",
+          "info": "alrededor de 28 looks · camina hacia la cámara y cambia cada vez que pasa detrás de una columna",
+          "categoria": "trans-int",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdbY_93pnwr/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-182507_f9892b24-8e8c-488e-a48e-befac0b37b58/thumbnail.jpg",
+          "outfit": {
+            "n": 28,
+            "looks": [
+              {
+                "t": "Formato",
+                "p": "Un outfit por paso. La columna tapa el corte, así que cada cambio tiene que ser completo"
+              },
+              {
+                "t": "Cuáles",
+                "p": "Los que haya. Es la pieza que más ropa se come de toda la tanda"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "ri-43",
+          "titulo": "Transición INT 43 · backstage contra resultado",
+          "info": "5 looks · primero las bolsas y accesorios volando alrededor, después el look armado",
+          "categoria": "trans-int",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DaNsUe8ITXD/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-182455_18156d86-e397-43e8-af73-5b37cf8f40be/thumbnail.jpg",
+          "outfit": {
+            "n": 5,
+            "looks": [
+              {
+                "t": "Base",
+                "p": "Camisa azul clara con pantalón negro ancho. Es el que aguanta toda la parte de backstage"
+              },
+              {
+                "t": "1",
+                "p": "Vestido negro largo con sombrero"
+              },
+              {
+                "t": "2",
+                "p": "Traje negro completo"
+              },
+              {
+                "t": "3",
+                "p": "Top negro strapless con falda crema"
+              },
+              {
+                "t": "4",
+                "p": "Vestido negro corto con sombrero"
+              }
+            ]
+          }
         }
       ],
-      "nota": "Primera tanda: siete referencias que mandó Bianca el 22 de septiembre."
+      "nota": "Referencias que mandó Bianca el 22 de septiembre. Sin roadmap todavía."
     },
     {
       "rec": "R14",
