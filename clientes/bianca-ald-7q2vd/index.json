@@ -405,9 +405,53 @@
               }
             ]
           }
+        },
+        {
+          "slug": "g-92",
+          "titulo": "Sé la overdress del grupo",
+          "info": "55–65 seg · BIANCA · manifiesto a cámara · una sola toma · sin CTA de venta",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://vt.tiktok.com/ZSqgCNCjf/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-040236_6419bfd0-96af-4c1e-807a-15035153fd89/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "El mejor look de la grabación",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "El más arreglado del día. El video dice que te arregles de más, así que ella tiene que estarlo"
+              }
+            ],
+            "nota": "Una sola toma, plano medio, sin cortes ni b-roll. Si se pica, se pierde. No lleva CTA de producto: este construye marca."
+          }
+        },
+        {
+          "slug": "g-80",
+          "titulo": "ZAPATERÍA · Outfits y el par que les va",
+          "info": "20–25 seg · ÉNFASIS EN ZAPATERÍA · outfit + calzado con transición simple · 4 pares",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdQGWd5u56O/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-033147_a0605174-2063-4499-957a-ed3b39562fd0/thumbnail.jpg",
+          "outfit": {
+            "n": 4,
+            "estilo": "Cuatro outfits, cuatro pares",
+            "looks": [
+              {
+                "t": "Formato",
+                "p": "Un outfit completo por par de calzado. Entra sin calzado a cuadro, agarra el par, corte, y aparece calzada"
+              },
+              {
+                "t": "Cuáles",
+                "p": "Que los cuatro pares sean distintos entre sí: bota alta, bota corta, tacón y botín"
+              }
+            ],
+            "nota": "LA PIEZA DE ZAPATERÍA DEL DÍA. Cámara fija, mismo encuadre y marca de piso en los cuatro. Los cuatro pares tienen que estar en existencia el día que se publica."
+          }
         }
       ],
-      "nota": "Referencias que mandó Bianca el 22 de septiembre. Sin roadmap todavía."
+      "nota": "Referencias que mandó Bianca el 22 de septiembre, más g-80 y g-92 que se pasaron de la R14. Sin roadmap todavía."
     },
     {
       "rec": "R14",
@@ -628,30 +672,6 @@
               }
             ],
             "nota": "Interior. Va con el bloque de Mary."
-          }
-        },
-        {
-          "slug": "g-80",
-          "titulo": "Outfits y el par que les va",
-          "info": "20–25 seg · MARY · ZAPATERÍA · outfit + calzado con transición simple · 4 pares",
-          "categoria": "guion",
-          "grabado": false,
-          "link": "https://www.instagram.com/reel/DdQGWd5u56O/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-033147_a0605174-2063-4499-957a-ed3b39562fd0/thumbnail.jpg",
-          "outfit": {
-            "n": 4,
-            "estilo": "Cuatro outfits, cuatro pares",
-            "looks": [
-              {
-                "t": "Formato",
-                "p": "Un outfit completo por par de calzado. Entra sin calzado a cuadro, agarra el par, corte, y aparece calzada"
-              },
-              {
-                "t": "Cuáles",
-                "p": "Que los cuatro pares sean distintos entre sí: bota alta, bota corta, tacón y botín"
-              }
-            ],
-            "nota": "LA PIEZA DE ZAPATERÍA DEL DÍA. Cámara fija, mismo encuadre y marca de piso en los cuatro. Los cuatro pares tienen que estar en existencia el día que se publica."
           }
         },
         {
@@ -933,26 +953,6 @@
           "miniatura": true
         },
         {
-          "slug": "g-92",
-          "titulo": "Sé la overdress del grupo",
-          "info": "55–65 seg · BIANCA · manifiesto a cámara · una sola toma · sin CTA de venta",
-          "categoria": "guion",
-          "grabado": false,
-          "link": "https://vt.tiktok.com/ZSqgCNCjf/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-040236_6419bfd0-96af-4c1e-807a-15035153fd89/thumbnail.jpg",
-          "outfit": {
-            "n": 1,
-            "estilo": "El mejor look de la grabación",
-            "looks": [
-              {
-                "t": "Look único",
-                "p": "El más arreglado del día. El video dice que te arregles de más, así que ella tiene que estarlo"
-              }
-            ],
-            "nota": "Una sola toma, plano medio, sin cortes ni b-roll. Si se pica, se pierde. No lleva CTA de producto: este construye marca."
-          }
-        },
-        {
           "slug": "g-93",
           "titulo": "Las cinco reglas de Carolina Herrera",
           "info": "45–55 seg · BIANCA · cinco reglas de prenda, no frases · camisa blanca",
@@ -996,12 +996,10 @@
             "g-79",
             "g-82",
             "g-83",
-            "g-80",
             "g-89",
             "g-90",
             "g-91",
             "g-84",
-            "g-92",
             "g-93",
             "g-88",
             "ri-35",
