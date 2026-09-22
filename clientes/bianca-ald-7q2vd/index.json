@@ -449,6 +449,114 @@
             ],
             "nota": "LA PIEZA DE ZAPATERÍA DEL DÍA. Cámara fija, mismo encuadre y marca de piso en los cuatro. Los cuatro pares tienen que estar en existencia el día que se publica."
           }
+        },
+        {
+          "slug": "g-101",
+          "titulo": "Los ocho cortes de pantalón",
+          "info": "15–20 seg · guion corto · rapid fire · los OCHO pantalones son de la boutique",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dcw2MMxpdcN/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-200111_3c83b7cd-fe04-4b1d-9786-7a361c9e854d/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Neutro arriba. Lo que cambia es el pantalón, en corte seco"
+              },
+              {
+                "t": "Los ocho",
+                "p": "Baggy, wide leg, balloon, palazzo, skinny, mom, flare y cropped flare. De la boutique, no fotos"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-102",
+          "titulo": "Lo que se viene para el 2027",
+          "info": "40–50 seg · guion de tendencias · ocho verificadas contra pasarela PV27 · junta las dos referencias",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdhAVcAR3SK/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-200113_3554a97b-0779-4bbb-a21b-c1e0e7cb6728/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "looks": [
+              {
+                "t": "Look 1",
+                "p": "Para la primera mitad"
+              },
+              {
+                "t": "Look 2",
+                "p": "Para la segunda, con una pieza que ya sea de las tendencias"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-103",
+          "titulo": "Cómo usar los jeans barril",
+          "info": "GUION · por estatura y por qué ponerle arriba · engancha con la parte 3 de la serie",
+          "categoria": "guion",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DcTLiTBzdKD/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-200116_71cf4980-6f6b-412e-9700-dbcb79f94276/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "El jean barril puesto. Lo que cambia arriba es lo que enseña"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-104",
+          "titulo": "La tercera pieza que mejora la combinación",
+          "info": "GUION · cuatro combinaciones de dos colores que funcionan, y el tercero que las vuelve buenas",
+          "categoria": "guion",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DbUD_mCPtrf/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-200114_944863b4-10dc-4eca-a565-d2b4fecf042b/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Las combinaciones se enseñan con prendas a cuadro, no puestas"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "ri-44",
+          "titulo": "Transición INT 44 · chusca, a dos personas",
+          "info": "2 looks · la amiga le avienta el conjunto y ella transiciona · salen las dos al final",
+          "categoria": "trans-int",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdZMdwSRC0d/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-200104_ce90c6a9-2205-4cec-9a17-9cf40b0a7837/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "looks": [
+              {
+                "t": "Antes",
+                "p": "Bata blanca, recién levantada"
+              },
+              {
+                "t": "Después",
+                "p": "Conjunto completo de un color fuerte, top y short a juego"
+              },
+              {
+                "t": "La segunda persona",
+                "p": "Un look propio y sencillo. Es la que avienta la ropa y sale al final"
+              }
+            ]
+          }
         }
       ],
       "nota": "Referencias que mandó Bianca el 22 de septiembre, más g-80 y g-92 que se pasaron de la R14. Sin roadmap todavía.",
@@ -460,7 +568,11 @@
             "g-92",
             "g-94",
             "g-98",
-            "g-95"
+            "g-95",
+            "g-101",
+            "g-102",
+            "g-103",
+            "g-104"
           ]
         },
         {
@@ -474,7 +586,8 @@
             "ri-40",
             "ri-41",
             "ri-42",
-            "ri-43"
+            "ri-43",
+            "ri-44"
           ]
         },
         {
@@ -494,7 +607,7 @@
           ]
         }
       ],
-      "ventana": "16 piezas · 77 looks"
+      "ventana": "21 piezas · 84 looks"
     },
     {
       "rec": "R14",
