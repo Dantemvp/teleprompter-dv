@@ -457,7 +457,6 @@
           "hora": "",
           "titulo": "GUIONES",
           "slugs": [
-            "g-80",
             "g-92",
             "g-94",
             "g-98",
@@ -468,6 +467,7 @@
           "hora": "",
           "titulo": "TRANSICIONES",
           "slugs": [
+            "g-80",
             "ri-37",
             "ri-38",
             "ri-39",
