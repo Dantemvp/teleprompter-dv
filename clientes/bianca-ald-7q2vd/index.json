@@ -451,7 +451,50 @@
           }
         }
       ],
-      "nota": "Referencias que mandó Bianca el 22 de septiembre, más g-80 y g-92 que se pasaron de la R14. Sin roadmap todavía."
+      "nota": "Referencias que mandó Bianca el 22 de septiembre, más g-80 y g-92 que se pasaron de la R14. Sin roadmap todavía.",
+      "timeline": [
+        {
+          "hora": "",
+          "titulo": "GUIONES",
+          "slugs": [
+            "g-80",
+            "g-92",
+            "g-94",
+            "g-98",
+            "g-95"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "TRANSICIONES",
+          "slugs": [
+            "ri-37",
+            "ri-38",
+            "ri-39",
+            "ri-40",
+            "ri-41",
+            "ri-42",
+            "ri-43"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "VIRAL / ORGÁNICA",
+          "slugs": [
+            "g-96",
+            "g-97"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "CHUSCOS",
+          "slugs": [
+            "g-99",
+            "g-100"
+          ]
+        }
+      ],
+      "ventana": "16 piezas · 77 looks"
     },
     {
       "rec": "R14",
