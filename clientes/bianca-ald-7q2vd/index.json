@@ -24,7 +24,8 @@
                 "p": "Ella sale en recuadro chico hablando. El cuadro lo llenan la pasarela y las piezas"
               }
             ]
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-95",
