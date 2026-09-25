@@ -10,9 +10,9 @@
         {
           "slug": "g-94",
           "titulo": "La pasarela, en piezas accesibles",
-          "info": "GUION · seis piezas de tienda accesible que dan la estética de una pasarela · encaje, siluetas lenceras, negro, vino y chocolate",
+          "info": "35–45 seg · guion completo · seis piezas para llevar la estética de pasarela a un look accesible",
           "categoria": "guion",
-          "tipo": "ref",
+          "tipo": "md",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DdjtQQBgwz-/",
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-181149_bbbfcf52-97bb-4914-a212-da180cf70e1d/thumbnail.jpg",
@@ -28,10 +28,10 @@
         },
         {
           "slug": "g-95",
-          "titulo": "Recomendación de producto · base de maquillaje",
-          "info": "GUION · formato UGC de recomendación · ⚠️ el tema es maquillaje, no ropa",
+          "titulo": "La prenda que puedes llevar de día y de noche",
+          "info": "30–40 seg · guion UGC adaptado a ropa · un vestido de día a noche · demostración con accesorios",
           "categoria": "guion",
-          "tipo": "ref",
+          "tipo": "md",
           "grabado": false,
           "link": "https://vt.tiktok.com/ZSqo1sFdc/",
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-181201_88c58067-51b0-46e3-8ce1-bdba3a875dc4/thumbnail.jpg",
@@ -39,10 +39,11 @@
             "n": 1,
             "looks": [
               {
-                "t": "Look único",
-                "p": "Plano cerrado de cara. La ropa no se ve"
+                "t": "Look base",
+                "p": "Un vestido liso disponible en la boutique. Se mantiene puesto; cambian camisa, calzado, bolsa y aretes."
               }
-            ]
+            ],
+            "nota": "Se toma el formato UGC de la referencia de maquillaje y se adapta a ropa. Grabar plano completo y detalles de tela."
           }
         },
         {
@@ -228,9 +229,9 @@
         {
           "slug": "g-98",
           "titulo": "27 looks con 9 prendas · la técnica del sudoku",
-          "info": "GUION · 3 inferiores, 3 superiores y 3 capas puestas en cuadrícula · se combinan en horizontal, vertical y diagonal",
+          "info": "45–55 seg · guion completo · 9 prendas, 27 combinaciones posibles · demostración en cuadrícula",
           "categoria": "guion",
-          "tipo": "ref",
+          "tipo": "md",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DY0NrMmxj8b/",
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-182455_f13f5ae9-b55c-4cc4-97ce-a30701c40a68/thumbnail.jpg",
@@ -497,9 +498,9 @@
         {
           "slug": "g-103",
           "titulo": "Cómo usar los jeans barril",
-          "info": "GUION · por estatura y por qué ponerle arriba · engancha con la parte 3 de la serie",
+          "info": "45–55 seg · guion completo · jeans barril con body, camisa y saco · opciones de proporción",
           "categoria": "guion",
-          "tipo": "ref",
+          "tipo": "md",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DcTLiTBzdKD/",
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-200116_71cf4980-6f6b-412e-9700-dbcb79f94276/thumbnail.jpg",
@@ -516,9 +517,9 @@
         {
           "slug": "g-104",
           "titulo": "La tercera pieza que mejora la combinación",
-          "info": "GUION · cuatro combinaciones de dos colores que funcionan, y el tercero que las vuelve buenas",
+          "info": "25–30 seg · al grano · cuatro combinaciones con un tercer color · prendas a cuadro",
           "categoria": "guion",
-          "tipo": "ref",
+          "tipo": "md",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DbUD_mCPtrf/",
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-200114_944863b4-10dc-4eca-a565-d2b4fecf042b/thumbnail.jpg",
