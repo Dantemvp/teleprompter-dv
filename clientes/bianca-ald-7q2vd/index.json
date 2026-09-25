@@ -28,26 +28,6 @@
           "miniatura": false
         },
         {
-          "slug": "g-95",
-          "titulo": "La prenda que puedes llevar de día y de noche",
-          "info": "30–40 seg · guion UGC adaptado a ropa · un vestido de día a noche · demostración con accesorios",
-          "categoria": "guion",
-          "tipo": "md",
-          "grabado": false,
-          "link": "https://vt.tiktok.com/ZSqo1sFdc/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-181201_88c58067-51b0-46e3-8ce1-bdba3a875dc4/thumbnail.jpg",
-          "outfit": {
-            "n": 1,
-            "looks": [
-              {
-                "t": "Look base",
-                "p": "Un vestido liso disponible en la boutique. Se mantiene puesto; cambian camisa, calzado, bolsa y aretes."
-              }
-            ],
-            "nota": "Se toma el formato UGC de la referencia de maquillaje y se adapta a ropa. Grabar plano completo y detalles de tela."
-          }
-        },
-        {
           "slug": "g-96",
           "titulo": "Lookbook contra pared",
           "info": "11 looks · posa contra pared blanca con el logo arriba · un corte por outfit",
@@ -575,7 +555,6 @@
             "g-92",
             "g-94",
             "g-98",
-            "g-95",
             "g-101",
             "g-102",
             "g-103",
