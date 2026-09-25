@@ -425,7 +425,8 @@
               }
             ],
             "nota": "Una sola toma, plano medio, sin cortes ni b-roll. Si se pica, se pierde. No lleva CTA de producto: este construye marca."
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-80",
