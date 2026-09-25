@@ -2,6 +2,44 @@
   "cliente": "Dante Vega · Marca Personal",
   "grabaciones": [
     {
+      "rec": "MP2",
+      "nombre": "Storytelling · dolores del doctor (ref. Ana)",
+      "fecha": "Por definir",
+      "locacion": "Talking head",
+      "guiones": [
+        {
+          "slug": "mp2-no-se-de-que-hablar",
+          "titulo": "Hoy grabo y no sé de qué hablar",
+          "info": "45–60 seg · meta honesto · copia con cabeza",
+          "grabado": false
+        },
+        {
+          "slug": "mp2-antes-despues",
+          "titulo": "Tu mejor antes y después no sirve de nada",
+          "info": "45–60 seg · dolor: resultados sin pacientes",
+          "grabado": false
+        },
+        {
+          "slug": "mp2-traductor",
+          "titulo": "Doctora, nadie entiende tus videos",
+          "info": "35–50 seg · traductor técnico → paciente",
+          "grabado": false
+        },
+        {
+          "slug": "mp2-primer-segundo",
+          "titulo": "\"Si eres mujer de más de 40…\" y ya la perdiste",
+          "info": "40–55 seg · error del hook que filtra",
+          "grabado": false
+        },
+        {
+          "slug": "mp2-cuenta-muerta",
+          "titulo": "Hay cuentas que conviene dejar morir",
+          "info": "50–70 seg · diagnóstico + lente Fedra",
+          "grabado": false
+        }
+      ]
+    },
+    {
       "rec": "MP1",
       "nombre": "Caso Fedra (50K → ban → 65K)",
       "fecha": "Por definir",
