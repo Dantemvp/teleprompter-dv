@@ -536,7 +536,8 @@
                 "p": "Las combinaciones se enseñan con prendas a cuadro, no puestas"
               }
             ]
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "ri-44",
