@@ -515,7 +515,8 @@
                 "p": "El jean barril puesto. Lo que cambia arriba es lo que enseña"
               }
             ]
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-104",
