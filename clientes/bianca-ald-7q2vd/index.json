@@ -834,7 +834,8 @@
               }
             ],
             "nota": "Interior. Va con el bloque de Mary."
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-81",
