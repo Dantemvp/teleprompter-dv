@@ -451,7 +451,8 @@
               }
             ],
             "nota": "LA PIEZA DE ZAPATERÍA DEL DÍA. Cámara fija, mismo encuadre y marca de piso en los cuatro. Los cuatro pares tienen que estar en existencia el día que se publica."
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-101",
