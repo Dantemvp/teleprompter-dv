@@ -2,6 +2,136 @@
   "cliente": "Bianca Aldama Boutique",
   "grabaciones": [
     {
+      "rec": "R16",
+      "nombre": "Grabación 16 · eventos en Guadalajara",
+      "fecha": "",
+      "locacion": "",
+      "guiones": [
+        {
+          "slug": "g-105",
+          "titulo": "¿Cuál es cuál? · Jeans",
+          "info": "30–35 seg · quiz · 5 parejas de jeans de la boutique",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdxMa7NJ23G/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-105.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Neutro arriba. Un jean en cada mano frente al cuerpo"
+              },
+              {
+                "t": "Los diez",
+                "p": "Recto y mom · flare y bootcut · balloon y baggy · culotte y cropped · palazzo y wide leg"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-106",
+          "titulo": "¿Cuál es cuál? · Zapatos",
+          "info": "25–30 seg · quiz · ZAPATERÍA · 4 parejas",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdxMa7NJ23G/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-105.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Un zapato en cada mano, de lado"
+              },
+              {
+                "t": "Los ocho",
+                "p": "Slingback y mary jane · stiletto y kitten heel · plataforma y cuña · zapatilla cerrada y d'Orsay"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-107",
+          "titulo": "¿Cuál es cuál? · Vestidos de boda",
+          "info": "25–30 seg · quiz · 4 parejas",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdxMa7NJ23G/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-105.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Una prenda en gancho en cada mano"
+              },
+              {
+                "t": "Las ocho",
+                "p": "Sirena y trompeta · un hombro y off shoulder · falda plisada y tableada · corset y bustier"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "ri-45",
+          "titulo": "Transición INT 45 · el ventilador",
+          "info": "5 looks · toma cenital, acostada en el piso; cambia de look cada vez que pasa el aspa",
+          "categoria": "trans-int",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dd1vzgDMauY/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/ri-45.jpg",
+          "outfit": {
+            "n": 5,
+            "looks": [
+              {
+                "t": "Look 1",
+                "p": "Suéter beige cuello V con camisa blanca, falda larga chocolate y slingbacks vino"
+              },
+              {
+                "t": "Look 2",
+                "p": "Camisa azul cielo, pantalón crema con olanes y bolsa café"
+              },
+              {
+                "t": "Look 3",
+                "p": "Chamarra café de cuello alto con la falda chocolate"
+              },
+              {
+                "t": "Look 4",
+                "p": "Abrigo largo café, blusa blanca, pantalón negro y tenis vino"
+              },
+              {
+                "t": "Look 5",
+                "p": "Suéter crema amplio con el pantalón crema de olanes"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "ri-46",
+          "titulo": "Transición INT 46 · de bata a evento",
+          "info": "2 looks · antes y después de arreglarse para salir",
+          "categoria": "trans-int",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdhD56Uv6jE/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/ri-46.jpg",
+          "outfit": {
+            "n": 2,
+            "looks": [
+              {
+                "t": "Antes",
+                "p": "Bata larga y pantuflas"
+              },
+              {
+                "t": "Después",
+                "p": "Vestido negro largo con abertura, cuello mao y escote de gota; botas negras de agujeta y aretes grandes plateados; pelo relamido"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "rec": "R15",
       "nombre": "Grabación 15 · en armado",
       "fecha": "Por definir",
