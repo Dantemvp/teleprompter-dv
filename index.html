@@ -77,6 +77,7 @@
   /* Ficha de verificación: discreta cerrada, legible abierta. */
   .beatnota{margin:2px 0 10px; padding-left:2px;}
   .dato{margin:6px 6px 0; font-size:12px;}
+  .guionimg{display:block; margin:8px 6px 0; width:100%; max-width:340px; height:auto; background:#fff; border:1px solid rgba(0,0,0,.08); border-radius:10px;}
   .dato summary{cursor:pointer; color:var(--teal-darker); font-weight:600; list-style:none; padding:3px 0;}
   .dato summary::-webkit-details-marker{display:none;}
   .dato summary:hover{text-decoration:underline;}
@@ -393,6 +394,8 @@ function parseGuion(src, client){
       // y dónde lo fundamentamos. Va aparte de la nota de dirección porque se pinta
       // como desplegable, no como texto suelto debajo del diálogo.
       if (/^DATO\s*:/i.test(nota)) { const dd = last || lastBeat; if(dd){ (dd.datos = dd.datos || []).push(nota.replace(/^DATO\s*:\s*/i,'')); } continue; }
+      // `// IMG: <ruta>` pinta una imagen de apoyo debajo de la línea (p.ej. las dos prendas de un quiz).
+      if (/^IMG\s*:/i.test(nota)) { const di = last || lastBeat; if(di){ (di.imgs = di.imgs || []).push(nota.replace(/^IMG\s*:\s*/i,'')); } continue; }
       const destino = last || lastBeat;
       if (destino) destino.nota = (destino.nota ? destino.nota+' · ' : '') + nota;
       continue;
@@ -424,6 +427,9 @@ function datoHtml(raw){
     ${fila('Se decía', f.ANTES, 'antes')}${fila('Verificado', f.AHORA, 'ahora')}${liga}
   </div></details>`;
 }
+function imgsHtml(l){
+  return (l.imgs || []).map(u => `<img class="guionimg" src="${attr(u)}" alt="imagen de apoyo" loading="lazy">`).join('');
+}
 function speakerOrder(g){
   const seen = [];
   for (const l of g.lines) if (l.speaker && !seen.includes(l.speaker)) seen.push(l.speaker);
@@ -449,11 +455,13 @@ function toMarkdown(g){
       out += '\n## ' + l.beat + '\n';
       (l.nota||'').split(' · ').filter(Boolean).forEach(n => out += '// ' + n + '\n');
       (l.datos || []).forEach(d => out += '// DATO: ' + d + '\n');
+      (l.imgs || []).forEach(u => out += '// IMG: ' + u + '\n');
       return;
     }
     out += '\n' + l.speaker + ': ' + l.text + '\n';
     if (l.nota) out += '// ' + l.nota + '\n';
     (l.datos || []).forEach(d => out += '// DATO: ' + d + '\n');
+    (l.imgs || []).forEach(u => out += '// IMG: ' + u + '\n');
   });
   return out.trim() + '\n';
 }
@@ -485,13 +493,14 @@ function renderGuion(g, canonical, backHref, opts){
       const bn = l.nota && (adm || !l.nota.trim().startsWith('✱'));
       conv += `<p class="beat" data-li="${i}">${esc(bt)}</p>`
            + (bn ? `<p class="nota beatnota">${esc(l.nota)}</p>` : '')
-           + (l.datos||[]).map(datoHtml).join('');
+           + (l.datos||[]).map(datoHtml).join('')
+           + imgsHtml(l);
       return;
     }
     const idx = spk.indexOf(l.speaker);
     const cls = solo ? 'solo' : (idx===1 ? 'right' : '');
     const showNota = l.nota && (adm || !l.nota.trim().startsWith('✱'));   // notas que empiezan con ✱ son solo para el admin
-    const datos = (l.datos || []).map(datoHtml).join('');
+    const datos = (l.datos || []).map(datoHtml).join('') + imgsHtml(l);
     conv += `<div class="row ${cls}"><div class="avatar">${esc(l.speaker.slice(0,3))}</div><div class="bubblewrap"><div class="bubble" data-li="${i}">${esc(l.text)}</div>${showNota?`<p class="nota" data-li="${i}">${esc(l.nota)}</p>`:''}${datos}</div></div>`;
   });
   const chips = g.meta.filter(m => adm || !m.trim().startsWith('✱')).map(m=>`<span class="chip g">${esc(m)}</span>`).join('');
