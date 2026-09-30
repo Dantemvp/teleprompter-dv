@@ -74,6 +74,46 @@
           }
         },
         {
+          "slug": "g-108",
+          "titulo": "Las tendencias de otoño que sí van a un evento",
+          "info": "40–50 seg · guion de tendencias · 5 tendencias para boda, XV o posada",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdxFox5gr-Q/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-108.jpg",
+          "outfit": {
+            "n": 2,
+            "looks": [
+              {
+                "t": "Noche",
+                "p": "Vestido o saco de terciopelo; bolsa de mano de cocodrilo; broche grande en el saco"
+              },
+              {
+                "t": "Día",
+                "p": "Vestido negro con medias de color, o blusa con olanes y falda con movimiento"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-109",
+          "titulo": "Lo que dejó Nueva York",
+          "info": "50–60 seg · guion de tendencias · 4 lecciones de la semana de la moda",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdpvHlwAfGL/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-109.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Neutro, para ir enseñando en cuadro: prenda azul eléctrico, blusa transparente sobre top, corset encima de camisa, encaje con mezclilla"
+              }
+            ]
+          }
+        },
+        {
           "slug": "ri-45",
           "titulo": "Transición INT 45 · el ventilador",
           "info": "5 looks · toma cenital, acostada en el piso; cambia de look cada vez que pasa el aspa",
@@ -129,7 +169,8 @@
             ]
           }
         }
-      ]
+      ],
+      "ventana": "7 piezas"
     },
     {
       "rec": "R15",
