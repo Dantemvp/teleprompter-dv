@@ -114,6 +114,92 @@
           }
         },
         {
+          "slug": "g-110",
+          "titulo": "Seis cosas que se ven chic este otoño",
+          "info": "45–55 seg · guion de lista · capita, falda de cuadros, corbata, moño o diadema, guantes, mascada",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdpoV-mRgqz/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20261001-012731_6f7cd8d0-c204-4255-a8ce-889ef30d8041/thumbnail.jpg",
+          "outfit": {
+            "n": 2,
+            "looks": [
+              {
+                "t": "Look 1",
+                "p": "Capa ligera, falda de cuadros, suéter, medias y bota"
+              },
+              {
+                "t": "Look 2",
+                "p": "Camisa blanca con corbata vino o café, moño o diadema; guantes de piel y mascada en mano"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-111",
+          "titulo": "Las tendencias que ya tienes en tu clóset",
+          "info": "35–45 seg · guion de tendencias · seis prendas que la clienta ya suele tener",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DcjSLOlOAsv/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20261001-012737_ef997e0f-73dc-4645-ad4f-132bbb6b38af/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Neutro; saca del clóset: falda midi fluida, pantalón entallado, traje con cintura, chaleco tejido cuello V, blusa de manga abullonada, bota ecuestre coñac"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-112",
+          "titulo": "Lo que ya tienes que sacar de tu clóset",
+          "info": "50–60 seg · guion de lista · seis cosas, solo ropa y zapatos",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdzCTMaqmgR/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20261001-012739_f971289c-77af-49ed-94a8-1cf551145bfe/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Frente a su clóset o al perchero, sacando una prenda por punto"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-113",
+          "titulo": "La que rompe el patrón",
+          "info": "40–50 seg · guion de concepto · efecto Von Restorff llevado a un evento · ORIGINAL y PROPUESTO",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdUSoN1hr6e/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20261001-012953_fab8e0bd-7cad-4f2f-80e6-d156a9b34ce9/thumbnail.jpg",
+          "versiones": [
+            {
+              "t": "Propuesto",
+              "g": "g-113"
+            },
+            {
+              "t": "Original",
+              "g": "g-113-original"
+            }
+          ],
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Total neutro (negro o camel) con UNA sola pieza que rompa: zapato rojo"
+              }
+            ]
+          }
+        },
+        {
           "slug": "ri-45",
           "titulo": "Transición INT 45 · el ventilador",
           "info": "5 looks · toma cenital, acostada en el piso; cambia de look cada vez que pasa el aspa",
@@ -168,9 +254,31 @@
               }
             ]
           }
+        },
+        {
+          "slug": "ri-47",
+          "titulo": "Transición INT 47 · las malas vibras",
+          "info": "2 looks · rocía el \"spray\" contra malas vibras y cambia de look",
+          "categoria": "trans-int",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dd1rcMuJRWu/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/ri-47.jpg",
+          "outfit": {
+            "n": 2,
+            "looks": [
+              {
+                "t": "Antes",
+                "p": "Conjunto de cárdigan y pantalón crema estampado, con un spray en la mano"
+              },
+              {
+                "t": "Después",
+                "p": "Top negro de tirantes, bolero blanco de crochet, minifalda camuflaje con cinturón, tacón de tiras, lentes y bolsa negra"
+              }
+            ]
+          }
         }
       ],
-      "ventana": "7 piezas"
+      "ventana": "12 piezas"
     },
     {
       "rec": "R15",

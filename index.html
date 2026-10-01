@@ -34,7 +34,7 @@
   .tabs button.on{color:var(--teal-darker); border-bottom-color:var(--teal); font-weight:600; background:none;}
   .locbar{background:var(--gray-bg); padding:8px 12px; border-radius:10px;}
   .locpick{border:1px solid var(--teal); background:#fff; color:var(--teal-dark); border-radius:999px; cursor:pointer;}
-  .locpick.on{background:var(--teal); color:#fff; font-weight:600;}
+  .locpick.on, .verbar button.on{background:var(--teal); color:#fff; font-weight:600;}
   .locchip{font-size:11px; padding:2px 9px; border-radius:999px; background:var(--teal); color:#fff; margin-left:6px;}
   .cardlocrow{display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin:8px 0 2px;}
   .cardloclbl{font-size:12px; color:var(--muted);}
@@ -514,12 +514,16 @@ function renderGuion(g, canonical, backHref, opts){
   const refblock = (refUrl && canSeeRef)
     ? `<div class="refbar refreel"><span>🎬 Reel de referencia:</span> <a href="${attr(refUrl)}" target="_blank" rel="noopener">Ver inspiración ↗</a> <button class="mini" onclick="copy('${refUrl.replace(/'/g,"\\'")}','Link copiado')">Copiar</button>${thumbBlock}</div>`
     : (thumbBlock ? `<div class="refbar refreel"><span>🎬 Referencia:</span>${thumbBlock}</div>` : '');
+  const verbar = (opts.versiones && opts.versiones.length > 1)
+    ? `<div class="refbar verbar"><span>📄 Versión:</span> ${opts.versiones.map(v => `<a href="?c=${attr(opts.client)}&g=${attr(v.g)}"><button class="mini${v.g===opts.slug?' on':''}">${esc(v.t)}</button></a>`).join(' ')}</div>`
+    : '';
   const founders = (opts.client && LOCUTORES[opts.client]) ? LOCUTORES[opts.client] : null;
   const locbar = founders ? `<div class="refbar locbar"><span>🎙️ Locutor:</span> ${founders.map(n=>`<button class="mini locpick${opts.locutor===n?' on':''}" data-loc="${attr(n)}">${esc(n)}</button>`).join(' ')} ${opts.locutor?'':'<span style="color:var(--muted)">sin asignar</span>'}</div>` : '';
   $('#app').innerHTML = `
     <header class="site"><div class="logo">DV</div><div><h1>${esc(g.title)}</h1><p>Consultora DV · plan de grabación</p></div></header>
     <div class="meta-chips">${chips}</div>
     ${(adm || backHref)?`<div class="refbar">${adm?`<button class="mini" onclick="copy('${canonical.replace(/'/g,"\\'")}','Link copiado')">🔗 Copiar link del guion</button> `:''}${backHref?`<a href="${backHref}" style="font-size:12px;">← todos mis guiones</a>`:''}</div>`:''}
+    ${verbar}
     ${refblock}
     ${locbar}
     ${(opts.client && CLIENT_NOTE[opts.client]) ? `<div class="globalnote">${esc(CLIENT_NOTE[opts.client])}</div>` : ''}
@@ -1355,16 +1359,18 @@ async function boot(){
       if (override && (override.trim() === fetched.trim() || (Date.now() - ots) > 600000)){
         localStorage.removeItem(localKey); localStorage.removeItem(localKey + ':t'); override = null;
       }
-      let locutor = null, thumb = null, ref = null;
+      let locutor = null, thumb = null, ref = null, versiones = null;
       try{
         const ix = await (await fetch('clientes/' + c + '/index.json?t=' + Date.now())).json();
-        (ix.grabaciones||[]).forEach(rec => (rec.guiones||[]).forEach(it => { if (it.slug === g){ if (it.locutor) locutor = it.locutor; if (it.thumb) thumb = it.thumb; if (it.link || it.ref) ref = it.link || it.ref; } }));
+        // `versiones` en el index ([{t:'Propuesto', g:'g-113'}, {t:'Original', g:'g-113-original'}]) pinta un selector
+        // arriba del guion. La versión alterna hereda la miniatura y la referencia de su pieza.
+        (ix.grabaciones||[]).forEach(rec => (rec.guiones||[]).forEach(it => { const vs = it.versiones || []; if (it.slug === g || vs.some(v => v.g === g)){ if (it.locutor) locutor = it.locutor; if (it.thumb) thumb = it.thumb; if (it.link || it.ref) ref = it.link || it.ref; if (vs.length) versiones = vs; } }));
       }catch(e){}
       if (LOCUTORES[c]){
         const local = localStorage.getItem('dvloc:' + c + '/' + g);
         if (local !== null) locutor = local || null;
       }
-      renderGuion(parseGuion(override || fetched, c), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: false, locutor, thumb, ref});
+      renderGuion(parseGuion(override || fetched, c), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: false, locutor, thumb, ref, versiones});
       return;
     }catch(e){ $('#app').innerHTML = '<p style="padding:40px 0">Guion no encontrado. Revisa el link con tu estratega.</p>'; return; }
   }
