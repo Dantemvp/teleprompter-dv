@@ -276,9 +276,157 @@
               }
             ]
           }
+        },
+        {
+          "slug": "g-99",
+          "titulo": "Chusco · imagen",
+          "info": "CHUSCO · es una imagen, no video",
+          "categoria": "chusco",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/p/Ddc04xQNAwo/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-99.jpg",
+          "outfit": {
+            "n": 1
+          }
+        },
+        {
+          "slug": "g-100",
+          "titulo": "Chusco · audio prestado",
+          "info": "CHUSCO · sin diálogo, corre sobre canción",
+          "categoria": "chusco",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DY5t0vJR641/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-182452_2c51e490-e920-4b10-b5f0-29d907e3b80d/thumbnail.jpg",
+          "outfit": {
+            "n": 1
+          }
+        },
+        {
+          "slug": "g-81",
+          "titulo": "Chusco · el outfit desperdiciado",
+          "info": "foto · MARY · chusco · Dante define el gag",
+          "categoria": "chusco",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/p/DdHpRiJAXqw/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-81.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Look producido · el chiste es que se desperdició",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "De los buenos. El texto dice que se desperdició, así que tiene que valer la pena"
+              }
+            ],
+            "nota": "Es foto, no video. Exterior."
+          }
+        },
+        {
+          "slug": "g-85",
+          "titulo": "Estoy divina",
+          "info": "15–20 seg · MARY · chusco · lip sync de Aldo León · engancha con Confianza Radical",
+          "categoria": "chusco",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DcuQiL9NV39/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-035313_62785a68-1fa7-4340-a29a-6845d2077f9e/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "Look bueno · el espejo lo enseña entero",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "De los producidos. El video entero pasa frente al espejo de cuerpo completo"
+              }
+            ],
+            "nota": "Espejo de cuerpo completo de la tienda. La prenda tiene que verse: es lo único que vende el video."
+          }
+        },
+        {
+          "slug": "g-86",
+          "titulo": "Chusco · sobre canción",
+          "info": "chusco · Dante define el gag",
+          "categoria": "chusco",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dcr1BW7JyPU/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-035313_6bed7a5c-4a75-4ff3-9ac2-2faf2a665600/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "nota": "Sin transcripción útil: el audio no trae diálogo."
+          }
+        },
+        {
+          "slug": "g-87",
+          "titulo": "Chusco · venías por una sola cosa",
+          "info": "21 seg · chusco A REPLICAR · entra por una cosa y sale cargada de bolsas",
+          "categoria": "chusco",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DcFMr44TGjn/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-87.jpg",
+          "outfit": {
+            "n": 1,
+            "estilo": "De calle, como llega una clienta",
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Sencillo y oscuro, para que las bolsas resalten"
+              }
+            ],
+            "nota": "Cámara en mano siguiéndola por la tienda. Hace falta la empleada que le va dando bolsas y bolsas de la boutique. La referencia es 18+ en Instagram y GetTranscribe no la abre: la miniatura salió del video bajado."
+          }
         }
       ],
-      "ventana": "12 piezas"
+      "ventana": "18 piezas",
+      "timeline": [
+        {
+          "hora": "",
+          "titulo": "GUIONES",
+          "slugs": [
+            "g-105",
+            "g-106",
+            "g-107",
+            "g-108",
+            "g-109",
+            "g-110",
+            "g-111",
+            "g-112",
+            "g-113"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "DESCANSO · TIKTOK SHOP",
+          "tipo": "pausa",
+          "slugs": []
+        },
+        {
+          "hora": "",
+          "titulo": "TRANSICIONES",
+          "slugs": [
+            "ri-45",
+            "ri-46",
+            "ri-47"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "CHUSCOS",
+          "slugs": [
+            "g-99",
+            "g-100",
+            "g-81",
+            "g-85",
+            "g-86",
+            "g-87"
+          ]
+        }
+      ],
+      "nota": "Tema: eventos en Guadalajara. Los chuscos son los pendientes de la R14 y la R15."
     },
     {
       "rec": "R15",
@@ -509,44 +657,6 @@
             ]
           },
           "miniatura": true
-        },
-        {
-          "slug": "g-99",
-          "titulo": "Chusco · imagen",
-          "info": "CHUSCO · es una imagen, no video",
-          "categoria": "chusco",
-          "tipo": "ref",
-          "grabado": false,
-          "link": "https://www.instagram.com/p/Ddc04xQNAwo/",
-          "thumb": "clientes/bianca-ald-7q2vd/refs/g-99.jpg",
-          "outfit": {
-            "n": 1,
-            "looks": [
-              {
-                "t": "Look único",
-                "p": "Por definir"
-              }
-            ]
-          }
-        },
-        {
-          "slug": "g-100",
-          "titulo": "Chusco · audio prestado",
-          "info": "CHUSCO · sin diálogo, corre sobre canción",
-          "categoria": "chusco",
-          "tipo": "ref",
-          "grabado": false,
-          "link": "https://www.instagram.com/reel/DY5t0vJR641/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-182452_2c51e490-e920-4b10-b5f0-29d907e3b80d/thumbnail.jpg",
-          "outfit": {
-            "n": 1,
-            "looks": [
-              {
-                "t": "Look único",
-                "p": "Por definir"
-              }
-            ]
-          }
         },
         {
           "slug": "ri-40",
@@ -864,14 +974,6 @@
             "g-96",
             "g-97"
           ]
-        },
-        {
-          "hora": "",
-          "titulo": "CHUSCOS",
-          "slugs": [
-            "g-99",
-            "g-100"
-          ]
         }
       ],
       "ventana": "21 piezas · 84 looks"
@@ -1099,27 +1201,6 @@
           "miniatura": true
         },
         {
-          "slug": "g-81",
-          "titulo": "Chusco · el outfit desperdiciado",
-          "info": "foto · MARY · chusco · Dante define el gag",
-          "categoria": "chusco",
-          "tipo": "ref",
-          "grabado": false,
-          "link": "https://www.instagram.com/p/DdHpRiJAXqw/",
-          "thumb": "clientes/bianca-ald-7q2vd/refs/g-81.jpg",
-          "outfit": {
-            "n": 1,
-            "estilo": "Look producido · el chiste es que se desperdició",
-            "looks": [
-              {
-                "t": "Look único",
-                "p": "De los buenos. El texto dice que se desperdició, así que tiene que valer la pena"
-              }
-            ],
-            "nota": "Es foto, no video. Exterior."
-          }
-        },
-        {
           "slug": "g-82",
           "titulo": "Diez arreglos rápidos para un look que no te convence",
           "info": "30–35 seg · MARY · problema y solución, rapid fire · 3 extras propios",
@@ -1191,69 +1272,6 @@
               }
             ],
             "nota": "Cada combinación se enseña con piezas reales del rack; no hace falta ponérselas todas. Si una tendencia no está en piso, se salta."
-          }
-        },
-        {
-          "slug": "g-85",
-          "titulo": "Estoy divina",
-          "info": "15–20 seg · MARY · chusco · lip sync de Aldo León · engancha con Confianza Radical",
-          "categoria": "chusco",
-          "tipo": "md",
-          "grabado": false,
-          "link": "https://www.instagram.com/reel/DcuQiL9NV39/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-035313_62785a68-1fa7-4340-a29a-6845d2077f9e/thumbnail.jpg",
-          "outfit": {
-            "n": 1,
-            "estilo": "Look bueno · el espejo lo enseña entero",
-            "looks": [
-              {
-                "t": "Look único",
-                "p": "De los producidos. El video entero pasa frente al espejo de cuerpo completo"
-              }
-            ],
-            "nota": "Espejo de cuerpo completo de la tienda. La prenda tiene que verse: es lo único que vende el video."
-          }
-        },
-        {
-          "slug": "g-86",
-          "titulo": "Chusco · por definir",
-          "info": "chusco · Dante define el gag",
-          "categoria": "chusco",
-          "tipo": "ref",
-          "grabado": false,
-          "link": "https://www.instagram.com/reel/Dcr1BW7JyPU/",
-          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260917-035313_6bed7a5c-4a75-4ff3-9ac2-2faf2a665600/thumbnail.jpg",
-          "outfit": {
-            "n": 1,
-            "estilo": "Por definir",
-            "looks": [
-              {
-                "t": "Pendiente",
-                "p": "Sale del gag que decida Dante"
-              }
-            ],
-            "nota": "Sin transcripción útil: el audio no trae diálogo."
-          }
-        },
-        {
-          "slug": "g-87",
-          "titulo": "Chusco · venías por una sola cosa",
-          "info": "21 seg · chusco A REPLICAR · entra por una cosa y sale cargada de bolsas",
-          "categoria": "chusco",
-          "tipo": "ref",
-          "grabado": false,
-          "link": "https://www.instagram.com/reel/DcFMr44TGjn/",
-          "thumb": "clientes/bianca-ald-7q2vd/refs/g-87.jpg",
-          "outfit": {
-            "n": 1,
-            "estilo": "De calle, como llega una clienta",
-            "looks": [
-              {
-                "t": "Look único",
-                "p": "Sencillo y oscuro, para que las bolsas resalten"
-              }
-            ],
-            "nota": "Cámara en mano siguiéndola por la tienda. Hace falta la empleada que le va dando bolsas y bolsas de la boutique. La referencia es 18+ en Instagram y GetTranscribe no la abre: la miniatura salió del video bajado."
           }
         },
         {
@@ -1428,11 +1446,7 @@
             "g-88",
             "ri-35",
             "ri-36",
-            "g-78",
-            "g-85",
-            "g-81",
-            "g-86",
-            "g-87"
+            "g-78"
           ]
         }
       ]
