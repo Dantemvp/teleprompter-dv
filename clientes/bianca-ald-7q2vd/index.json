@@ -219,7 +219,8 @@
                 "p": "Pantalón de camuflaje, top negro y botín negro"
               }
             ]
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-115",
