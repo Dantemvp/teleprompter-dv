@@ -265,24 +265,6 @@
           }
         },
         {
-          "slug": "g-116",
-          "titulo": "Qué ponerte para la Romería",
-          "info": "90–110 seg · guion práctico · sin venta · publicar a más tardar el 10",
-          "categoria": "guion",
-          "grabado": false,
-          "link": "",
-          "thumb": "clientes/bianca-ald-7q2vd/img/tienda-rack-vino-olivo-camo.jpg",
-          "outfit": {
-            "n": 1,
-            "looks": [
-              {
-                "t": "Look único",
-                "p": "Tenis usados, playera de algodón, pantalón cómodo, chamarra ligera amarrada a la cintura, bolsa cruzada, gorra y lentes"
-              }
-            ]
-          }
-        },
-        {
           "slug": "g-117",
           "titulo": "Por qué las Fiestas de Octubre son en octubre",
           "info": "55–65 seg · guion de historia · publicar antes de g-115",
@@ -490,7 +472,6 @@
           "slugs": [
             "g-117",
             "g-115",
-            "g-116",
             "g-114",
             "g-105",
             "g-106",
