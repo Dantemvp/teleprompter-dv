@@ -283,6 +283,36 @@
           }
         },
         {
+          "slug": "g-118",
+          "titulo": "Fiestas de Octubre · la primera semana, en vaquera",
+          "info": "70–80 seg · looks por fecha · Horóscopos, Pancho Barraza, Gloria Trevi, Banda MS · publicar a más tardar el 4",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "",
+          "thumb": "clientes/bianca-ald-7q2vd/img/tienda-chaleco-camel.jpg",
+          "outfit": {
+            "n": 4,
+            "looks": [
+              {
+                "t": "Horóscopos de Durango · lunes 5",
+                "p": "Vestido de cuadros vino y bota de tacón cubano"
+              },
+              {
+                "t": "Pancho Barraza · miércoles 7",
+                "p": "Conjunto camel bordado (chaleco y falda) con botín café"
+              },
+              {
+                "t": "Gloria Trevi · jueves 8",
+                "p": "Jeans negros, camisa blanca amarrada, cinturón de hebilla, bota negra, pelo suelto"
+              },
+              {
+                "t": "Banda MS · viernes 9",
+                "p": "Chaleco negro bordado sobre playera blanca y jeans, bota negra"
+              }
+            ]
+          }
+        },
+        {
           "slug": "ri-45",
           "titulo": "Transición INT 45 · el ventilador",
           "info": "5 looks · toma cenital, acostada en el piso; cambia de look cada vez que pasa el aspa",
@@ -464,13 +494,14 @@
           }
         }
       ],
-      "ventana": "22 piezas",
+      "ventana": "23 piezas",
       "timeline": [
         {
           "hora": "",
           "titulo": "GUIONES",
           "slugs": [
             "g-117",
+            "g-118",
             "g-115",
             "g-114",
             "g-105",
