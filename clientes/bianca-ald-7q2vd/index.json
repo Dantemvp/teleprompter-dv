@@ -73,7 +73,8 @@
                 "p": "Vestido negro con medias de color, o blusa con olanes y falda con movimiento"
               }
             ]
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-109",
