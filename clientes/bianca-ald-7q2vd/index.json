@@ -200,6 +200,107 @@
           }
         },
         {
+          "slug": "g-114",
+          "titulo": "Cómo combinar el camuflaje",
+          "info": "80–100 seg · guion de combinación · 6 combinaciones · parte dos de g-45",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "",
+          "thumb": "clientes/bianca-ald-7q2vd/img/tienda-camuflaje.jpg",
+          "outfit": {
+            "n": 2,
+            "looks": [
+              {
+                "t": "Look 1",
+                "p": "Chamarra corta de camuflaje, jean azul y top blanco"
+              },
+              {
+                "t": "Look 2",
+                "p": "Pantalón de camuflaje, top negro y botín negro"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-115",
+          "titulo": "Qué ponerte en las Fiestas de Octubre",
+          "info": "120–140 seg · looks por artista · 2 o 3 opciones por grupo · publicar antes del 8",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "",
+          "thumb": "clientes/bianca-ald-7q2vd/img/tienda-chaleco-camel.jpg",
+          "outfit": {
+            "n": 7,
+            "estilo": "7 grupos · 2 o 3 opciones cada uno",
+            "looks": [
+              {
+                "t": "Alejandro Fernández",
+                "p": "Chaleco y falda negros bordados · camisa olivo de terciopelo bordada con su falda · vestido largo negro de satín"
+              },
+              {
+                "t": "Banda MS · Grupo Firme · Calibre 50",
+                "p": "Chaleco camel bordado con jeans · camisa de cuadros vino con jeans · short de camuflaje con blusa de encaje crema; bota vaquera"
+              },
+              {
+                "t": "Kenia Os · Reik · Manuel Turizo",
+                "p": "Chamarra azul con flecos sobre jeans · vestido vino con encaje en el borde y botín"
+              },
+              {
+                "t": "Gloria Trevi",
+                "p": "Vestido amarillo de flecos · top negro con capa, pantalón negro y collar de perlas"
+              },
+              {
+                "t": "Carlos Rivera",
+                "p": "Blazer blanco pintado con blusa de encaje roja · chaleco rojo sobre camisa blanca abullonada con jeans"
+              },
+              {
+                "t": "El Tri",
+                "p": "Playera negra, jeans y chamarra · pantalón de camuflaje con todo negro · jeans negros y playera blanca"
+              },
+              {
+                "t": "Feria de día",
+                "p": "Conjunto deportivo verde olivo · jeans con chamarra caqui de encaje; tenis"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-116",
+          "titulo": "Qué ponerte para la Romería",
+          "info": "90–110 seg · guion práctico · sin venta · publicar a más tardar el 10",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "",
+          "thumb": "clientes/bianca-ald-7q2vd/img/tienda-rack-vino-olivo-camo.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Tenis usados, playera de algodón, pantalón cómodo, chamarra ligera amarrada a la cintura, bolsa cruzada, gorra y lentes"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-117",
+          "titulo": "Por qué las Fiestas de Octubre son en octubre",
+          "info": "55–65 seg · guion de historia · publicar antes de g-115",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "",
+          "thumb": "clientes/bianca-ald-7q2vd/img/g-115-foro.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Vaquera arreglada: chaleco bordado sobre jeans"
+              }
+            ]
+          }
+        },
+        {
           "slug": "ri-45",
           "titulo": "Transición INT 45 · el ventilador",
           "info": "5 looks · toma cenital, acostada en el piso; cambia de look cada vez que pasa el aspa",
@@ -381,12 +482,16 @@
           }
         }
       ],
-      "ventana": "18 piezas",
+      "ventana": "22 piezas",
       "timeline": [
         {
           "hora": "",
           "titulo": "GUIONES",
           "slugs": [
+            "g-117",
+            "g-115",
+            "g-116",
+            "g-114",
             "g-105",
             "g-106",
             "g-107",
