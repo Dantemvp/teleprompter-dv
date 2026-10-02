@@ -52,28 +52,6 @@
           }
         },
         {
-          "slug": "g-107",
-          "titulo": "¿Cuál es cuál? · Vestidos de boda",
-          "info": "25–30 seg · quiz · 4 parejas",
-          "categoria": "guion",
-          "grabado": false,
-          "link": "https://www.instagram.com/reel/DdxMa7NJ23G/",
-          "thumb": "clientes/bianca-ald-7q2vd/refs/g-105.jpg",
-          "outfit": {
-            "n": 1,
-            "looks": [
-              {
-                "t": "Look único",
-                "p": "Una prenda en gancho en cada mano"
-              },
-              {
-                "t": "Las ocho",
-                "p": "Sirena y trompeta · un hombro y off shoulder · falda plisada y tableada · corset y bustier"
-              }
-            ]
-          }
-        },
-        {
           "slug": "g-108",
           "titulo": "Las tendencias de otoño que sí van a un evento",
           "info": "40–50 seg · guion de tendencias · 5 tendencias para boda, XV o posada",
@@ -509,7 +487,6 @@
             "g-114",
             "g-105",
             "g-106",
-            "g-107",
             "g-108",
             "g-109",
             "g-110",
