@@ -297,6 +297,36 @@
           }
         },
         {
+          "slug": "g-119",
+          "titulo": "Qué ponerte para ver a Kenia Os",
+          "info": "65–75 seg · looks generales (sin tienda) · era K de Karma · miércoles 14",
+          "categoria": "guion",
+          "grabado": false,
+          "link": "",
+          "thumb": "",
+          "outfit": {
+            "n": 4,
+            "looks": [
+              {
+                "t": "Look 1",
+                "p": "Corset rojo sobre camisa negra (o negro sobre blanca), jeans negros, bota alta"
+              },
+              {
+                "t": "Look 2",
+                "p": "Top de encaje negro con chamarra de piel"
+              },
+              {
+                "t": "Look 3",
+                "p": "Una sola pieza de lentejuelas o pedrería, lo demás liso"
+              },
+              {
+                "t": "Look 4",
+                "p": "El guiño: arete o collar de escorpión"
+              }
+            ]
+          }
+        },
+        {
           "slug": "ri-45",
           "titulo": "Transición INT 45 · el ventilador",
           "info": "5 looks · toma cenital, acostada en el piso; cambia de look cada vez que pasa el aspa",
@@ -478,7 +508,7 @@
           }
         }
       ],
-      "ventana": "23 piezas",
+      "ventana": "22 piezas",
       "timeline": [
         {
           "hora": "",
@@ -486,6 +516,7 @@
           "slugs": [
             "g-117",
             "g-118",
+            "g-119",
             "g-115",
             "g-114",
             "g-105",
