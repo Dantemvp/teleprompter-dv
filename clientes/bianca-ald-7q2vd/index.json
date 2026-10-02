@@ -429,7 +429,8 @@
           "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20260922-182452_2c51e490-e920-4b10-b5f0-29d907e3b80d/thumbnail.jpg",
           "outfit": {
             "n": 1
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-81",
