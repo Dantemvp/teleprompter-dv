@@ -110,7 +110,8 @@
             ],
             "nota": "Base neutra; dos cinturones como accesorios, sin cambio de ropa. No atribuir piezas a marcas de lujo ni anunciar tendencia o inventario sin confirmar."
           },
-          "thumb": "clientes/bianca-ald-7q2vd/refs/g-122.jpg"
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-122.jpg",
+          "miniatura": true
         },
         {
           "slug": "g-123",
