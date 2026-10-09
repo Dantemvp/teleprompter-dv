@@ -198,7 +198,17 @@
             ],
             "nota": "Jessie con una base; accesorios a cámara y prendas en gancho. Guantes/abrigo solo si el clima los justifica. Misma referencia que g-110 de R16: adaptación nueva para Jessie, sin modificar ni marcar grabado el anterior."
           },
-          "thumb": "clientes/bianca-ald-7q2vd/refs/g-126.jpg"
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-126.jpg",
+          "versiones": [
+            {
+              "t": "Versión actual",
+              "g": "g-126"
+            },
+            {
+              "t": "Versión 2 · orden 4, 2, 3, 1, 5",
+              "g": "g-126-v2"
+            }
+          ]
         },
         {
           "slug": "g-127",
