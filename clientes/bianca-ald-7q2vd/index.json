@@ -2,6 +2,115 @@
   "cliente": "Bianca Aldama Boutique",
   "grabaciones": [
     {
+      "rec": "R17",
+      "nombre": "Grabación 17 · Palenque y Fiestas de Octubre",
+      "fecha": "Por definir",
+      "locacion": "Boutique · por confirmar",
+      "ventana": "2 videos · cartelera del 10 al 23 de octubre de 2026",
+      "nota": "Continuación del formato de g-118. Un video por recinto, con fecha, artista y outfit. Selección de conciertos de ambas semanas; no es cartelera exhaustiva. Publicación ideal 9–10 de octubre. Fuentes revisadas el 8 de octubre.",
+      "timeline": [
+        {
+          "hora": "",
+          "titulo": "GUIONES · 10–23 OCTUBRE",
+          "slugs": [
+            "g-120",
+            "g-121"
+          ],
+          "nota": "Preparar los looks de ambos videos juntos para reutilizar mezclilla, botas y accesorios. Revalidar fechas antes de publicar."
+        }
+      ],
+      "guiones": [
+        {
+          "slug": "g-120",
+          "titulo": "Palenque · qué ponerte según a quién vas a ver · 10–23 octubre",
+          "info": "80–100 seg · 7 propuestas · artista + fecha + outfit · selección del 10 al 23 de octubre",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DeHe0HKt0vZ/",
+          "outfit": {
+            "n": 7,
+            "estilo": "Siete propuestas; pueden mostrarse con modelo o maniquí",
+            "looks": [
+              {
+                "t": "Napoleón · 11",
+                "p": "Blusa satinada vino + pantalón negro + botín bajo."
+              },
+              {
+                "t": "Moy Bobadilla · 13 y 15",
+                "p": "Jeans acampanados + camisa de cuadros + bota café."
+              },
+              {
+                "t": "Kany García · 14",
+                "p": "Pantalón sastre suelto + top de encaje + tenis."
+              },
+              {
+                "t": "Alejandro Fernández · 16 y 17",
+                "p": "Vestido negro + cinturón con hebilla + bota vaquera."
+              },
+              {
+                "t": "El Coyote y Calibre 50 · 18 / Cornelio Vega · 20",
+                "p": "Falda de mezclilla + blusa bordada + bota de tacón ancho."
+              },
+              {
+                "t": "Calle 24 · 21 / Víctor Mendivil · 22",
+                "p": "Jeans amplios + top negro + chamarra corta + tenis."
+              },
+              {
+                "t": "Gabito Ballesteros · 23",
+                "p": "Jeans oscuros + top plateado + botín negro."
+              }
+            ],
+            "nota": "Confirmar prendas disponibles. Se pueden reutilizar bases y accesorios entre ambos videos; no son 14 cambios obligatorios de Bianca."
+          }
+        },
+        {
+          "slug": "g-121",
+          "titulo": "Fiestas de Octubre · qué ponerte para el Foro · 10–23 octubre",
+          "info": "80–100 seg · 7 propuestas · pop, rock y regional · Foro Principal, separado del Palenque",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DeHe0HKt0vZ/",
+          "outfit": {
+            "n": 7,
+            "estilo": "Siete propuestas; pueden mostrarse con modelo o maniquí",
+            "looks": [
+              {
+                "t": "Kenia Os · 14",
+                "p": "Top rojo + jeans negros + bota alta de tacón bajo."
+              },
+              {
+                "t": "Caloncho y Beto Cuevas · 16",
+                "p": "Jeans rectos + playera blanca + chamarra negra efecto piel + tenis."
+              },
+              {
+                "t": "Pequeños Musical · 17",
+                "p": "Vestido de cuadros + bota de tacón ancho."
+              },
+              {
+                "t": "Leonardo Aguilar · 19",
+                "p": "Camisa blanca + jeans oscuros + hebilla + bota café."
+              },
+              {
+                "t": "Pancho Barraza · 20",
+                "p": "Chaleco bordado + top liso + falda de mezclilla + botín café."
+              },
+              {
+                "t": "Reik · 22",
+                "p": "Blusa de encaje crema + jeans + botín bajo."
+              },
+              {
+                "t": "Revisiting Creedence · 23",
+                "p": "Playera estampada + jeans acampanados + botín negro."
+              }
+            ],
+            "nota": "Confirmar prendas disponibles. Se pueden reutilizar bases y accesorios entre ambos videos; no son 14 cambios obligatorios de Bianca."
+          }
+        }
+      ]
+    },
+    {
       "rec": "R16",
       "nombre": "Grabación 16 · eventos en Guadalajara",
       "fecha": "",
