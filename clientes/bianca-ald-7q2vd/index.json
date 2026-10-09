@@ -3,11 +3,11 @@
   "grabaciones": [
     {
       "rec": "R17",
-      "nombre": "Grabación 17 · Palenque y Fiestas de Octubre",
+      "nombre": "Grabación 17 · conciertos, estilo y Jessie",
       "fecha": "Por definir",
       "locacion": "Boutique · por confirmar",
-      "ventana": "2 videos · máximo 2 looks de Bianca · 10–23 de octubre de 2026",
-      "nota": "Continuación del formato de g-118. Un video por recinto, con fecha, artista y outfit. Selección de conciertos de ambas semanas; no es cartelera exhaustiva. Publicación ideal 9–10 de octubre. Fuentes revisadas el 8 de octubre.",
+      "ventana": "16 videos · 3 de Jessie · conciertos del 10–23 de octubre de 2026",
+      "nota": "Dos guiones de conciertos y catorce adaptaciones nuevas. Máximo dos looks base de Bianca: reutilizarlos en los demás videos; propuestas con prendas en gancho o imágenes. Jessie: g-126, g-127 y g-129. Referencias y guiones accesibles en cada tarjeta.",
       "timeline": [
         {
           "hora": "",
@@ -16,7 +16,35 @@
             "g-120",
             "g-121"
           ],
-          "nota": "Un look de Bianca por video, máximo dos en toda la grabación. Las propuestas por artista se muestran con prendas en gancho o imágenes de apoyo, sin cambios adicionales de vestuario. Revalidar fechas antes de publicar."
+          "nota": "Palenque y Foro: un look de Bianca por video, dos bases en total. Reutilizar estas bases en el resto del bloque de Bianca; propuestas con prendas en gancho o imágenes, sin cambios adicionales. Revalidar cartelera antes de publicar."
+        },
+        {
+          "hora": "",
+          "titulo": "BIANCA · ESTILO Y CHUSCOS",
+          "slugs": [
+            "g-122",
+            "g-123",
+            "g-124",
+            "g-125",
+            "g-128",
+            "g-130",
+            "g-131",
+            "g-132",
+            "g-133",
+            "g-134",
+            "g-135"
+          ],
+          "nota": "Reutilizar las dos bases de Bianca. g-133: referencia priorizada por Dante."
+        },
+        {
+          "hora": "",
+          "titulo": "JESSIE · TRES GUIONES",
+          "slugs": [
+            "g-126",
+            "g-127",
+            "g-129"
+          ],
+          "nota": "Una base reutilizable; accesorios y combinaciones en gancho o gráficos."
         }
       ],
       "guiones": [
@@ -58,6 +86,300 @@
               }
             ],
             "nota": "Máximo dos looks de Bianca entre los dos videos. Las combinaciones por artista se enseñan en gancho o con imágenes de apoyo; no se modelan como cambios adicionales."
+          }
+        },
+        {
+          "slug": "g-122",
+          "titulo": "El cinturón que cambia tus básicos",
+          "info": "30–40 seg · Bianca · guion completo",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DeIdoXRxwUu/",
+          "outfit": {
+            "n": 1,
+            "estilo": "Reutilizar base de la sesión",
+            "looks": [
+              {
+                "t": "Base reutilizable",
+                "p": "Una de las dos bases; propuestas de prendas en gancho o apoyo visual."
+              }
+            ],
+            "nota": "Base neutra; dos cinturones como accesorios, sin cambio de ropa. No atribuir piezas a marcas de lujo ni anunciar tendencia o inventario sin confirmar."
+          }
+        },
+        {
+          "slug": "g-123",
+          "titulo": "La camisa de cuadros también se lleva en la cintura",
+          "info": "30–40 seg · Bianca · guion completo",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DeIYaExu-g1/",
+          "outfit": {
+            "n": 1,
+            "estilo": "Reutilizar base de la sesión",
+            "looks": [
+              {
+                "t": "Base reutilizable",
+                "p": "Una de las dos bases; propuestas de prendas en gancho o apoyo visual."
+              }
+            ],
+            "nota": "Camisa de cuadros como accesorio sobre una de las dos bases; vestido y tenis solo en apoyo visual. Presentar como propuesta de estilo, sin afirmar una tendencia universal."
+          }
+        },
+        {
+          "slug": "g-124",
+          "titulo": "Mi amiga comprando en otra tienda",
+          "info": "15–20 seg · Bianca · sketch con guion",
+          "categoria": "chusco",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/Db4ZfHSI8Q3/",
+          "outfit": {
+            "n": 1,
+            "estilo": "Reutilizar base de la sesión",
+            "looks": [
+              {
+                "t": "Base reutilizable",
+                "p": "Una de las dos bases; propuestas de prendas en gancho o apoyo visual."
+              }
+            ],
+            "nota": "Bianca y voz de amiga fuera de cuadro; un look base. Humor cómplice, sin hacer sentir culpable a la clienta ni copiar el remate contra Amazon. Cada VOZ alterna: Bianca / amiga / Bianca / amiga / Bianca."
+          }
+        },
+        {
+          "slug": "g-125",
+          "titulo": "Los pantalones que delatan tus fotos de 2010",
+          "info": "40–50 seg · Bianca · guion completo",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DeEjyqFo_yQ/",
+          "outfit": {
+            "n": 1,
+            "estilo": "Reutilizar base de la sesión",
+            "looks": [
+              {
+                "t": "Base reutilizable",
+                "p": "Una de las dos bases; propuestas de prendas en gancho o apoyo visual."
+              }
+            ],
+            "nota": "Nostalgia y opinión de estilo, no pronóstico de tendencias. Ilustraciones o prendas en gancho; misma base. La preferencia por el rojo es una propuesta para Bianca, ajustable a su gusto."
+          }
+        },
+        {
+          "slug": "g-126",
+          "titulo": "Cinco detalles chic y cómo los combinaría Jessie",
+          "info": "40–50 seg · Jessie · guion completo",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Jessie",
+          "link": "https://www.instagram.com/reel/DdpoV-mRgqz/",
+          "outfit": {
+            "n": 1,
+            "estilo": "Reutilizar base de la sesión",
+            "looks": [
+              {
+                "t": "Base reutilizable",
+                "p": "Una de las dos bases; propuestas de prendas en gancho o apoyo visual."
+              }
+            ],
+            "nota": "Jessie con una base; accesorios a cámara y prendas en gancho. Guantes/abrigo solo si el clima los justifica. Misma referencia que g-110 de R16: adaptación nueva para Jessie, sin modificar ni marcar grabado el anterior."
+          }
+        },
+        {
+          "slug": "g-127",
+          "titulo": "Cuatro mezclas de color para salir del automático",
+          "info": "20–25 seg · Jessie · guion completo",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Jessie",
+          "link": "https://www.instagram.com/reel/DdnX1Q6KYUL/",
+          "outfit": {
+            "n": 1,
+            "estilo": "Reutilizar base de la sesión",
+            "looks": [
+              {
+                "t": "Base reutilizable",
+                "p": "Una de las dos bases; propuestas de prendas en gancho o apoyo visual."
+              }
+            ],
+            "nota": "Un plano por combinación con prendas en gancho o gráficos propios; Jessie conserva su base. No ofrecer el playbook de la autora ni ningún recurso inexistente."
+          }
+        },
+        {
+          "slug": "g-128",
+          "titulo": "Cuando te obsesionas con una camisa",
+          "info": "15–20 seg · Bianca · sketch con guion",
+          "categoria": "chusco",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DcolJFUNxvP/",
+          "outfit": {
+            "n": 1,
+            "estilo": "Reutilizar base de la sesión",
+            "looks": [
+              {
+                "t": "Base reutilizable",
+                "p": "Una de las dos bases; propuestas de prendas en gancho o apoyo visual."
+              }
+            ],
+            "nota": "Adaptación del gag de repetición de una prenda, observado en el reel; voz propia, sin depender del audio del pan. Cinco arreglos visuales con una sola camisa, cero cambios adicionales de base."
+          }
+        },
+        {
+          "slug": "g-129",
+          "titulo": "Del carrusel al clóset: seis ideas que sí combinaría",
+          "info": "45–55 seg · Jessie · guion completo",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Jessie",
+          "link": "https://www.instagram.com/p/DeAVpJKAGM7/",
+          "outfit": {
+            "n": 1,
+            "estilo": "Reutilizar base de la sesión",
+            "looks": [
+              {
+                "t": "Base reutilizable",
+                "p": "Una de las dos bases; propuestas de prendas en gancho o apoyo visual."
+              }
+            ],
+            "nota": "Guion hablado a partir de las láminas 3–8 observadas del carrusel de byrymtohamy. Se reordena y se añaden combinaciones propias. No presentar su rótulo FW27 como pronóstico verificado. Jessie en una base, seis apoyos de prendas/imágenes; no seis looks modelados. Efectos y estampados, sin atribuir pieles animales."
+          }
+        },
+        {
+          "slug": "g-130",
+          "titulo": "¿Y si le pones un poco de brillo?",
+          "info": "35–45 seg · Bianca · guion completo",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/Dc7kgSORThy/",
+          "outfit": {
+            "n": 1,
+            "estilo": "Reutilizar base de la sesión",
+            "looks": [
+              {
+                "t": "Base reutilizable",
+                "p": "Una de las dos bases; propuestas de prendas en gancho o apoyo visual."
+              }
+            ],
+            "nota": "Consejo creativo; no afirmar que murió el minimalismo ni que una celebridad inventó la técnica. Accesorios terminados, sin aplicar adhesivos a prendas de tienda. Misma base, apoyos en mano."
+          }
+        },
+        {
+          "slug": "g-131",
+          "titulo": "¿Te pones un saco y te sientes distinta?",
+          "info": "45–55 seg · Bianca · guion completo",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/Dd9p-dnPccQ/",
+          "outfit": {
+            "n": 1,
+            "estilo": "Reutilizar base de la sesión",
+            "looks": [
+              {
+                "t": "Base reutilizable",
+                "p": "Una de las dos bases; propuestas de prendas en gancho o apoyo visual."
+              }
+            ],
+            "nota": "Fuente alternativa a Adam y Galinsky 2012: Slepian, Ferber, Gold y Rutchick (2015), The Cognitive Consequences of Formal Clothing. https://business.columbia.edu/faculty/research/cognitive-consequences-formal-clothing · DOI https://doi.org/10.1177/1948550615579462 . Hallazgos de tareas concretas, no prueba de cambios de identidad ni garantía individual. Consejo de comodidad de Bianca es editorial, no resultado del estudio."
+          }
+        },
+        {
+          "slug": "g-132",
+          "titulo": "Vestirte para lo que vas a hacer",
+          "info": "40–50 seg · Bianca · guion completo",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DdXHJ70gysa/",
+          "outfit": {
+            "n": 1,
+            "estilo": "Reutilizar base de la sesión",
+            "looks": [
+              {
+                "t": "Base reutilizable",
+                "p": "Una de las dos bases; propuestas de prendas en gancho o apoyo visual."
+              }
+            ],
+            "nota": "Enfoque propio: contexto, comodidad y expresión personal. Evitar asociar marcas, formalidad o precio con valor humano, respeto o éxito. Demostración con una base, sin exigir cambios."
+          }
+        },
+        {
+          "slug": "g-133",
+          "titulo": "¿Te cambias por miedo a ir demasiado arreglada?",
+          "info": "45–55 seg · Bianca · guion completo",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DdaFdkQSuvc/",
+          "outfit": {
+            "n": 1,
+            "estilo": "Reutilizar base de la sesión",
+            "looks": [
+              {
+                "t": "Base reutilizable",
+                "p": "Una de las dos bases; propuestas de prendas en gancho o apoyo visual."
+              }
+            ],
+            "nota": "Referencia priorizada por Dante. Mantener el miedo a desentonar y la solución de una pieza protagonista; texto y estructura propios. No descalificar a quienes van casuales. Una base, accesorios en mano."
+          }
+        },
+        {
+          "slug": "g-134",
+          "titulo": "Podcast · ¿Para quién te arreglas?",
+          "info": "60–75 seg · Bianca · podcast con diálogo + preguntas opcionales",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DbRKy0NRjMw/",
+          "outfit": {
+            "n": 1,
+            "estilo": "Reutilizar base de la sesión",
+            "looks": [
+              {
+                "t": "Base reutilizable",
+                "p": "Una de las dos bases de Bianca; accesorios y prendas en gancho."
+              }
+            ],
+            "nota": "Adaptación de ponencia a podcast: cuidado personal y ropa cotidiana. Se omite el mandato de estar por encima del promedio y las bromas sobre apariencia física. Un look reutilizado; entrevistador fuera de cuadro."
+          }
+        },
+        {
+          "slug": "g-135",
+          "titulo": "Comprar ropa que sí vas a disfrutar",
+          "info": "35–45 seg · Bianca · guion completo",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DeAgju7iaVs/",
+          "outfit": {
+            "n": 1,
+            "estilo": "Reutilizar base de la sesión",
+            "looks": [
+              {
+                "t": "Base reutilizable",
+                "p": "Una de las dos bases de Bianca; accesorios y prendas en gancho."
+              }
+            ],
+            "nota": "Voz femenina y ejemplos para la audiencia de Bianca. Se conserva la intención de dedicar atención a la imagen; se elimina la generalización de que toda compra es inversión y la asociación entre apariencia y merecer malos tratos. No prometer confianza, éxito o mejor trato por comprar."
           }
         }
       ]
