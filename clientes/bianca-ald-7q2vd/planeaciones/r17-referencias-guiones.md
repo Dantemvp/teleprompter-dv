@@ -1,3 +1,5 @@
+> Las decisiones editoriales de abajo documentan la primera versión. Para los pendientes, quedan sustituidas por la auditoría del 9 de octubre en r17-auditoria-fidelidad.md.
+
 # R17 · referencias nuevas y decisiones editoriales
 
 Revisión: 8 de octubre de 2026. Trece reels recuperados con GetTranscribe; carrusel revisado visualmente en Instagram (láminas 3–8). Catorce guiones nuevos, tres de Jessie. Los dos guiones de conciertos previos se conservan.
