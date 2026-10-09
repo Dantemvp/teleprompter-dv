@@ -57,4 +57,4 @@ El guion selecciona 14, 16, 17, 19, 20, 22 y 23 para dar variedad de estilos. La
 
 ## Preparación
 
-Seleccionar prendas disponibles por silueta y color, sin prometer modelos o tallas. Compartir jeans, botas, encaje y top negro entre ambos videos; siete propuestas no exigen siete cambios completos de Bianca. Modelar sobre Mary o maniquí y grabar narración aparte si acelera producción. Fechas siempre sobreimpresas. Revalidar cartelera antes de publicar y recortar las fechas ya pasadas si la salida se retrasa.
+Seleccionar prendas disponibles por silueta y color, sin prometer modelos o tallas. Máximo DOS looks de Bianca para los dos videos: uno por video. Las propuestas por artista se muestran con prendas en gancho o imágenes de apoyo, sin pedir cambios adicionales a Bianca ni a otra modelo. Fechas siempre sobreimpresas. Revalidar cartelera antes de publicar y recortar las fechas ya pasadas si la salida se retrasa.
