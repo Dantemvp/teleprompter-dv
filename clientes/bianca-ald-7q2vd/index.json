@@ -51,7 +51,7 @@
         {
           "slug": "g-120",
           "titulo": "Palenque · qué ponerte según a quién vas a ver · 10–23 octubre",
-          "info": "80–100 seg · 1 look de Bianca · propuestas con apoyo visual · artista + fecha + outfit · selección del 10 al 23 de octubre",
+          "info": "150–180 seg · base + alternativas de prendas por artista · Palenque · 10–23 octubre",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -64,14 +64,13 @@
                 "t": "Look único · Palenque",
                 "p": "Jeans oscuros, blusa bordada y bota café."
               }
-            ],
-            "nota": "Máximo dos looks de Bianca entre los dos videos. Las combinaciones por artista se enseñan en gancho o con imágenes de apoyo; no se modelan como cambios adicionales."
+            ]
           }
         },
         {
           "slug": "g-121",
           "titulo": "Fiestas de Octubre · qué ponerte para el Foro · 10–23 octubre",
-          "info": "80–100 seg · 1 look de Bianca · propuestas con apoyo visual · pop, rock y regional · Foro Principal, separado del Palenque",
+          "info": "150–180 seg · base + alternativas de prendas por artista · Foro · 10–23 octubre",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -84,8 +83,7 @@
                 "t": "Look único · Foro",
                 "p": "Jeans negros, top rojo y botín bajo."
               }
-            ],
-            "nota": "Máximo dos looks de Bianca entre los dos videos. Las combinaciones por artista se enseñan en gancho o con imágenes de apoyo; no se modelan como cambios adicionales."
+            ]
           }
         },
         {
