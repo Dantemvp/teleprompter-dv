@@ -50,7 +50,7 @@ Revisión: 8 de octubre de 2026. Trece reels recuperados con GetTranscribe; carr
 ## g-131 · ¿Te pones un saco y te sientes distinta?
 - Locutor: Bianca. Referencia: https://www.instagram.com/reel/Dd9p-dnPccQ/
 - Recuperación: GetTranscribe 291446.
-- Criterio: Fuente alternativa a Adam y Galinsky 2012: Slepian, Ferber, Gold y Rutchick (2015), The Cognitive Consequences of Formal Clothing. https://business.columbia.edu/faculty/research/cognitive-consequences-formal-clothing · DOI https://doi.org/10.1177/1948550615579462 . Hallazgos de tareas concretas, no prueba de cambios de identidad ni garantía individual. Consejo de comodidad de Bianca es editorial, no resultado del estudio.
+- Criterio: Fuente alternativa a Adam y Galinsky 2012: Slepian, Ferber, Gold y Rutchick (2015), The Cognitive Consequences of Formal Clothing. https://business.columbia.edu/faculty/research/cognitive-consequences-formal-clothing · DOI https://doi.org/10.1177/1948550615579462 . Hallazgos de tareas concretas, no prueba de cambios de identidad ni garantía individual. Cierre revisado el 9 de octubre: diálogo interior, lecturas, conversaciones y acciones hacia la persona que quieres ser, siguiendo el sentido de la referencia. Reflexión editorial, no resultado del estudio.
 
 ## g-132 · Vestirte para lo que vas a hacer
 - Locutor: Bianca. Referencia: https://www.instagram.com/reel/DdXHJ70gysa/
