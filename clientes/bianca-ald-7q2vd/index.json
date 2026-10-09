@@ -228,7 +228,8 @@
               }
             ]
           },
-          "thumb": "clientes/bianca-ald-7q2vd/refs/g-127.jpg"
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-127.jpg",
+          "miniatura": true
         },
         {
           "slug": "g-128",
