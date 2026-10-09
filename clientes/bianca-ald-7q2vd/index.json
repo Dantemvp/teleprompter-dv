@@ -399,7 +399,8 @@
               }
             ]
           },
-          "thumb": "clientes/bianca-ald-7q2vd/refs/g-135.jpg"
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-135.jpg",
+          "miniatura": true
         }
       ]
     },
