@@ -3,52 +3,51 @@
 > Plataforma: IG (reels de prueba) + TikTok
 > Duración: 60–75 seg
 > Avatares: A (negocio con presupuesto, sin tiempo ni sistema) · B (sin presupuesto, lo hace solo)
-> Estado: v2
+> Estado: v3 · tono conversación, no comercial
 
-## Hook (0:00–0:05)
+## Hook
 
-DANTE: "No tengo tiempo para grabar."
-DANTE: Yo tampoco. Por eso esto lo estoy grabando en la caminadora.
-// La caminadora se ve desde el primer frame. La respiración agitada se queda.
+DANTE: ¿Sabes qué es lo que más me dicen? Que no tienen tiempo para grabar.
+DANTE: Y te entiendo, neta. Yo tampoco tengo tiempo. Por eso estoy grabando esto en la caminadora.
+// La respiración agitada se queda.
 
 ## El juego de las versiones
 
-DANTE: Y antes de seguir: este video tiene diez versiones. Tú estás viendo una, del 1 al 10.
-DANTE: Tu número está escondido en algún lado del video. Va a aparecer de la nada. Encuéntralo y comenta cuál te tocó.
-// El número sale UNA vez, ~1 seg, en la segunda mitad. Lo que buscan es lo que los deja hasta el final.
+DANTE: Ah, y antes de que se me olvide: este video lo edité de diez formas distintas. Estoy probando cuál funciona mejor, y a ti te tocó una.
+DANTE: En algún momento va a salir un número, del uno al diez, así, de la nada. Si lo cachas, ponlo en los comentarios.
+// El número sale UNA vez, ~1 seg, en la segunda mitad.
 
-## Dolores
+## Dolores (en primera persona)
 
-DANTE: Y no es lo único que me dicen. "No sé editar." "No se me ocurre qué decir." "Me tardo una tarde en un video que ven doscientas personas."
-DANTE: Y en el fondo: "Esto no es para mi negocio."
+DANTE: Bueno, va. Lo otro que me dicen es "es que no sé editar".
+DANTE: Y mira, yo sí sé editar. Y justo por eso sé lo que tardas. Un video de un minuto me podía comer toda la tarde... para que lo vieran doscientas personas.
+DANTE: Así cualquiera piensa que esto no es para su negocio.
 
 ## Reframe
 
-DANTE: El problema no es el tiempo. Es que no tienes un sistema.
+DANTE: Pero la neta, el problema casi nunca es el tiempo. Es que lo estás haciendo todo a mano.
 
-## Camino A — tienes negocio: delega, pero bien
+## Camino A — delega, pero bien
 
-DANTE: Si tienes negocio y tu hora vale más que aprender a editar, delega.
-DANTE: Pero ojo. Seguro ya contrataste una agencia. Te dieron un paquete de videos bonitos y tus ventas igual.
-DANTE: Te vendieron humo: contenido sin estrategia. Y un video bonito que no vende es un gasto.
-DANTE: Lo que necesitas es alguien que mida cuánto dinero te deja tu contenido. Mes con mes. Con números.
+DANTE: Si tienes un negocio y tu tiempo vale más que ponerte a editar, pues delega.
+DANTE: Pero si ya pagaste una agencia y no pasó nada... no eres el único, eh. A muchos les entregan sus videos bonitos, su paquete del mes, y ya.
+DANTE: Y bonito no es lo mismo que te deje dinero.
+DANTE: Lo que yo hago es otra cosa: a mí me importa cuánto te está dejando el contenido. Y eso lo medimos cada mes. Con números, no con "se ve bonito".
 
-## Camino B — hazlo tú, pero no a mano
+## Camino B — hazlo tú
 
-DANTE: Y si todavía no puedes delegar, hazlo tú. Pero no a mano.
+DANTE: Y si ahorita no te alcanza para delegar, está bien, hazlo tú. Nada más no lo hagas como yo lo hacía.
 
 ## Payoff
 
-DANTE: ¿Por qué diez versiones? Porque las estoy probando todas, a ver cuál te retiene más. Y ninguna me costó una tarde.
-DANTE: Una lleva puros subtítulos. Otra, música y cortes. Otra, b-roll y motion graphics nivel experto.
-DANTE: Todas las editó la IA. Yo solo le mandé un mensaje a Telegram. Desde aquí. Caminando.
-// Insert 2 seg: el chat de Telegram.
+DANTE: Porque las diez versiones de este video no las edité yo.
+DANTE: Le mandé la toma y unas referencias a Telegram, literal desde aquí, caminando, y me las regresó editadas.
+DANTE: Una con puros subtítulos, otra con música, otra ya con b-roll y animaciones... y si quiero, hasta me las deja programadas.
 
 ## Cierre
 
-DANTE: Comenta qué versión te tocó y te paso el documento donde te explico cómo hacerlo.
-DANTE: Cómo mandarle a Telegram tus videos y tus referencias mientras caminas, para que te los regrese editados, en varias versiones, y hasta programados para publicarse.
-// La automatización de DM va con "cualquier comentario", no con palabra clave: cada quien comenta un número distinto.
+DANTE: Si quieres que te pase cómo lo armé, comenta el número que te tocó y te mando el documento con todo el paso a paso.
+// DM automático con "cualquier comentario", no con palabra clave.
 
 ## Notas de la prueba
 > ✱ Una sola toma, diez ediciones. Si cambia el guion, ya no sabes si ganó la edición o las palabras.
