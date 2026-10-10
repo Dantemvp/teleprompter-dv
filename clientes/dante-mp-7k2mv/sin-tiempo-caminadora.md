@@ -1,52 +1,54 @@
 # No tengo tiempo para grabar — 10 versiones desde la caminadora
 > Formato: yapping a cámara en caminadora · UNA toma editada en 10 niveles
 > Plataforma: IG (reels de prueba) + TikTok
-> Duración: 60–75 seg
+> Duración: 70–85 seg
 > Avatares: A (negocio con presupuesto, sin tiempo ni sistema) · B (sin presupuesto, lo hace solo)
-> Estado: v3 · tono conversación, no comercial
+> Referencia de tono: creador grabando en su carro (pregunta del espectador → escena concreta con números → "seguro estás pensando" → paralelismos → cierre con convicción)
+> Estado: v4
 
-## Hook
+## Hook — la pregunta que ya trae en la cabeza
 
-DANTE: ¿Sabes qué es lo que más me dicen? Que no tienen tiempo para grabar.
-DANTE: Y te entiendo, neta. Yo tampoco tengo tiempo. Por eso estoy grabando esto en la caminadora.
-// La respiración agitada se queda.
+DANTE: ¿Cómo le hace la gente para subir videos todos los días, si tú no tienes tiempo ni de grabar uno?
+
+## Escena
+
+DANTE: Bro, son las siete de la mañana. Llevo veinte minutos en la caminadora. Y este video lo estoy grabando aquí mismo. Sin set, sin luces, sin editor.
+// ✱ Hora y minutos: decir los reales.
 
 ## El juego de las versiones
 
-DANTE: Ah, y antes de que se me olvide: este video lo edité de diez formas distintas. Estoy probando cuál funciona mejor, y a ti te tocó una.
-DANTE: En algún momento va a salir un número, del uno al diez, así, de la nada. Si lo cachas, ponlo en los comentarios.
+DANTE: Y no lo voy a editar yo. De esta toma van a salir diez versiones. Diez.
+DANTE: Y en algún lado de la tuya va a aparecer un número, del uno al diez, de la nada. Si lo cachas, comenta cuál te tocó.
 // El número sale UNA vez, ~1 seg, en la segunda mitad.
 
-## Dolores (en primera persona)
+## Objeción — "seguro estás pensando"
 
-DANTE: Bueno, va. Lo otro que me dicen es "es que no sé editar".
-DANTE: Y mira, yo sí sé editar. Y justo por eso sé lo que tardas. Un video de un minuto me podía comer toda la tarde... para que lo vieran doscientas personas.
-DANTE: Así cualquiera piensa que esto no es para su negocio.
+DANTE: Seguro estás pensando: "Ah, pues porque él sí sabe editar."
+DANTE: Sí sé, bro. Y justo por eso sé lo que cuesta. Un video de un minuto me comía toda la tarde. Para que lo vieran doscientas personas.
+
+## Síntomas
+
+DANTE: Y ahí es donde casi todos tiran la toalla. Grabas un día, editas tres, subes uno... nadie lo ve, y te quedas pensando que esto no es para tu negocio.
 
 ## Reframe
 
-DANTE: Pero la neta, el problema casi nunca es el tiempo. Es que lo estás haciendo todo a mano.
+DANTE: El problema no es el tiempo. Es que todo lo estás haciendo a mano.
 
-## Camino A — delega, pero bien
+## Los dos caminos — en paralelo
 
-DANTE: Si tienes un negocio y tu tiempo vale más que ponerte a editar, pues delega.
-DANTE: Pero si ya pagaste una agencia y no pasó nada... no eres el único, eh. A muchos les entregan sus videos bonitos, su paquete del mes, y ya.
-DANTE: Y bonito no es lo mismo que te deje dinero.
-DANTE: Lo que yo hago es otra cosa: a mí me importa cuánto te está dejando el contenido. Y eso lo medimos cada mes. Con números, no con "se ve bonito".
-
-## Camino B — hazlo tú
-
-DANTE: Y si ahorita no te alcanza para delegar, está bien, hazlo tú. Nada más no lo hagas como yo lo hacía.
+DANTE: ¿Tienes negocio y tu hora vale más que ponerte a editar? Delega.
+DANTE: ¿Ya pagaste una agencia y no pasó nada? No eres el único. Te entregaron videos bonitos y ya. Y bonito no paga la renta.
+DANTE: A mí no me importa que se vea bonito. Me importa cuánto dinero te deja. Y eso se mide cada mes.
+DANTE: ¿No te alcanza para delegar? Hazlo tú. Pero no a mano.
 
 ## Payoff
 
-DANTE: Porque las diez versiones de este video no las edité yo.
-DANTE: Le mandé la toma y unas referencias a Telegram, literal desde aquí, caminando, y me las regresó editadas.
-DANTE: Una con puros subtítulos, otra con música, otra ya con b-roll y animaciones... y si quiero, hasta me las deja programadas.
+DANTE: Ahorita le voy a mandar esta toma y unas referencias a Telegram. Desde aquí. Caminando. Y me la va a regresar editada, en diez versiones, y si quiero, hasta programada.
 
 ## Cierre
 
-DANTE: Si quieres que te pase cómo lo armé, comenta el número que te tocó y te mando el documento con todo el paso a paso.
+DANTE: No necesitas encerrarte doce horas a grabar. Necesitas un sistema.
+DANTE: Comenta el número que te tocó y te mando el documento con el paso a paso.
 // DM automático con "cualquier comentario", no con palabra clave.
 
 ## Notas de la prueba
