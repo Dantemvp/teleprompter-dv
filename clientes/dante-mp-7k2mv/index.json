@@ -38,6 +38,20 @@
           "grabado": false
         }
       ]
+    },
+    {
+      "rec": "MP2",
+      "nombre": "Contenido corto · sistema con IA",
+      "fecha": "Por definir",
+      "locacion": "Caminadora · yapping a cámara",
+      "guiones": [
+        {
+          "slug": "sin-tiempo-caminadora",
+          "titulo": "No tengo tiempo para grabar — 10 versiones",
+          "info": "60–75 seg · yapping en caminadora · prueba de 10 ediciones",
+          "grabado": false
+        }
+      ]
     }
   ]
 }
