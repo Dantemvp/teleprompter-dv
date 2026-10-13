@@ -3,10 +3,10 @@
   "grabaciones": [
     {
       "rec": "R18",
-      "nombre": "Grabación 18 · regional mexicano y conciertos",
+      "nombre": "Grabación 18 · conciertos, estilo y boutique",
       "fecha": "16/10/2026",
       "locacion": "",
-      "ventana": "4 videos · conciertos hasta el 7 de noviembre de 2026",
+      "ventana": "12 videos · 1 perfil de referencia · conciertos hasta el 7 de noviembre de 2026",
       "nota": "Fiestas de Octubre: publicar antes del 20 de octubre para conservar la mención de Pancho Barraza. Referencia compartida del formato por artista; carteleras verificadas el 13 de octubre.",
       "timeline": [
         {
@@ -17,6 +17,50 @@
             "g-138",
             "g-139",
             "g-140"
+          ],
+          "nota": ""
+        },
+        {
+          "hora": "",
+          "titulo": "GUIONES · ESTILO Y CLÓSET",
+          "slugs": [
+            "g-141",
+            "g-142",
+            "g-143"
+          ],
+          "nota": ""
+        },
+        {
+          "hora": "",
+          "titulo": "GUION · CALZADO",
+          "slugs": [
+            "g-144"
+          ],
+          "nota": ""
+        },
+        {
+          "hora": "",
+          "titulo": "GUION · BOUTIQUE",
+          "slugs": [
+            "g-145"
+          ],
+          "nota": ""
+        },
+        {
+          "hora": "",
+          "titulo": "VISUALES · COMBINACIONES Y CUMPLEAÑOS",
+          "slugs": [
+            "g-146",
+            "g-147",
+            "g-148"
+          ],
+          "nota": ""
+        },
+        {
+          "hora": "",
+          "titulo": "REFERENCIA DE CREADORA · NO ES OTRO VIDEO",
+          "slugs": [
+            "ref-gi-esqui-r18"
           ],
           "nota": ""
         }
@@ -65,6 +109,103 @@
           "locutor": "Bianca",
           "link": "https://www.instagram.com/reel/DeHe0HKt0vZ/",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-120.jpg"
+        },
+        {
+          "slug": "g-141",
+          "titulo": "Siete detalles que hacen que te veas más elegante",
+          "info": "84–101 seg · ESTILO PERSONAL · Bianca",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSbbqbguT/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-141.jpg"
+        },
+        {
+          "slug": "g-142",
+          "titulo": "Cinco detalles para que tu estilo se sienta tuyo",
+          "info": "92–110 seg · ESTILO PERSONAL · Bianca",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSbbqq7cR/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-142.jpg"
+        },
+        {
+          "slug": "g-143",
+          "titulo": "Cuatro señales de que una prenda ya puede salir de tu clóset",
+          "info": "82–98 seg · CLÓSET · Bianca",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSbbqGmMs/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-143.jpg"
+        },
+        {
+          "slug": "g-144",
+          "titulo": "Tabis: por qué dividen opiniones y dónde buscar alternativas",
+          "info": "90–108 seg · CALZADO · Bianca",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSbbbJe3m/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-144.jpg"
+        },
+        {
+          "slug": "g-145",
+          "titulo": "Del maniquí al probador · descubre otra forma de verte",
+          "info": "85–102 seg · BOUTIQUE · Bianca",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSg1rNRpp/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-145.jpg"
+        },
+        {
+          "slug": "g-146",
+          "titulo": "Un suéter, diferentes bases",
+          "info": "15–20 seg · VISUAL · Suéter claro con pantalón de punto a tono o pantalón oscuro; variaciones de bolso y calzado. Referencia original: tres combinaciones.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSbbqgBwM/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-146.jpg"
+        },
+        {
+          "slug": "g-147",
+          "titulo": "Cumpleaños · una base para cenar y otra para salir",
+          "info": "20–25 seg · VISUAL · Máximo dos looks: camisa negra con falda de brillo, o vestido corto con blazer. La referencia distingue cena, fiesta y plan de día.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSbbbJ8gu/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-147.jpg"
+        },
+        {
+          "slug": "g-148",
+          "titulo": "Jeans y playera blanca · cambia los complementos",
+          "info": "15–20 seg · VISUAL · Dos variantes de la misma base: camisa azul y bolso estructurado; blazer de color y calzado de noche. La referencia también incluye aeropuerto y comida con amigas.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSbbbPTaG/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-148.jpg"
+        },
+        {
+          "slug": "ref-gi-esqui-r18",
+          "titulo": "@gi.esqui · referencia de creadora",
+          "info": "Perfil compartido por Alma · consulta de estilo y formatos · no cuenta como video por grabar.",
+          "categoria": "idea",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@gi.esqui"
         }
       ]
     },
