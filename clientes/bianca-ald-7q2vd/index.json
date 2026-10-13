@@ -2,6 +2,73 @@
   "cliente": "Bianca Aldama Boutique",
   "grabaciones": [
     {
+      "rec": "R18",
+      "nombre": "Grabación 18 · regional mexicano y conciertos",
+      "fecha": "16/10/2026",
+      "locacion": "",
+      "ventana": "4 videos · conciertos hasta el 7 de noviembre de 2026",
+      "nota": "Fiestas de Octubre: publicar antes del 20 de octubre para conservar la mención de Pancho Barraza. Referencia compartida del formato por artista; carteleras verificadas el 13 de octubre.",
+      "timeline": [
+        {
+          "hora": "",
+          "titulo": "GUIONES · REGIONAL MEXICANO",
+          "slugs": [
+            "g-137",
+            "g-138",
+            "g-139",
+            "g-140"
+          ],
+          "nota": ""
+        }
+      ],
+      "guiones": [
+        {
+          "slug": "g-137",
+          "titulo": "Palenque · Julión, Remmy y el cierre de octubre",
+          "info": "100–120 seg · Bianca · base y alternativas de prendas",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DeHe0HKt0vZ/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-120.jpg"
+        },
+        {
+          "slug": "g-138",
+          "titulo": "Fiestas de Octubre · Pancho Barraza y Cuisillos",
+          "info": "65–85 seg · Bianca · base y alternativas de prendas",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DeHe0HKt0vZ/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-120.jpg"
+        },
+        {
+          "slug": "g-139",
+          "titulo": "Ánimas · qué ponerte para Alfredo Olivas y Duelo",
+          "info": "70–90 seg · Bianca · base y alternativas de prendas",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DeHe0HKt0vZ/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-120.jpg"
+        },
+        {
+          "slug": "g-140",
+          "titulo": "Tombochio o Pedro Fernández · dos maneras de llevar el estilo mexicano",
+          "info": "65–85 seg · Bianca · base y alternativas de prendas",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DeHe0HKt0vZ/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-120.jpg"
+        }
+      ]
+    },
+    {
       "rec": "R17",
       "nombre": "Grabación 17 · conciertos, estilo y Jessie",
       "fecha": "Por definir",
