@@ -26,7 +26,10 @@
           "slugs": [
             "g-141",
             "g-142",
-            "g-143"
+            "g-143",
+            "g-149",
+            "g-150",
+            "g-151"
           ],
           "nota": ""
         },
@@ -142,6 +145,63 @@
           "locutor": "Bianca",
           "link": "https://vt.tiktok.com/ZSbbqGmMs/",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-143.jpg"
+        },
+        {
+          "slug": "g-149",
+          "titulo": "Cuatro cosas que vale la pena cuidar",
+          "info": "50–60 seg · lista · empieza con la ropa y cómo te sientes, cierra con tendencia",
+          "categoria": "guion",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DdyjtqHo0Ac/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20261016-155109_52bbfa9c-26be-4f00-b2d1-400008358335/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Con una pieza en vino o verde olivo para el remate"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-150",
+          "titulo": "El efecto halo",
+          "info": "50–60 seg · concepto · la ropa cambia cómo te tratan",
+          "categoria": "guion",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DcKHbOdAA3d/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20261016-155113_40703bad-5921-4d58-a91f-823d0eb19cf3/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Saco o prenda que marque la cintura, zapato al mismo nivel de formalidad, bolsa estructurada"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "g-151",
+          "titulo": "\"No tengo qué ponerme\"",
+          "info": "45–55 seg · concepto · de la queja a la solución con lo que ya tienes",
+          "categoria": "guion",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DeVBSLBvpUG/",
+          "thumb": "https://gettranscribe.s3.us-east-1.amazonaws.com/users/77219/20261016-155111_9323dea8-5993-4d60-bfe4-3d69817cbd89/thumbnail.jpg",
+          "outfit": {
+            "n": 1,
+            "looks": [
+              {
+                "t": "Look único",
+                "p": "Frente al clóset; remata con chamarra de gamuza o bota café"
+              }
+            ]
+          }
         },
         {
           "slug": "g-144",
