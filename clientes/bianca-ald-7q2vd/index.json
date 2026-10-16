@@ -137,7 +137,8 @@
           "grabado": false,
           "locutor": "Bianca",
           "link": "https://vt.tiktok.com/ZSbbqGmMs/",
-          "thumb": "clientes/bianca-ald-7q2vd/refs/g-143.jpg"
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-143.jpg",
+          "miniatura": true
         },
         {
           "slug": "g-149",
