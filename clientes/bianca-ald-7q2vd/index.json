@@ -252,7 +252,8 @@
           "grabado": true,
           "locutor": "Bianca",
           "link": "https://vt.tiktok.com/ZSbbbPTaG/",
-          "thumb": "clientes/bianca-ald-7q2vd/refs/g-148.jpg"
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-148.jpg",
+          "miniatura": true
         },
         {
           "slug": "ref-gi-esqui-r18",
