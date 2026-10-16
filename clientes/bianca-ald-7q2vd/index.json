@@ -78,7 +78,8 @@
           "grabado": true,
           "locutor": "Bianca",
           "link": "https://www.instagram.com/reel/DeHe0HKt0vZ/",
-          "thumb": "clientes/bianca-ald-7q2vd/refs/g-120.jpg"
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-120.jpg",
+          "miniatura": true
         },
         {
           "slug": "g-138",
