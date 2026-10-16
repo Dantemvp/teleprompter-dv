@@ -175,7 +175,8 @@
                 "p": "Saco o prenda que marque la cintura, zapato al mismo nivel de formalidad, bolsa estructurada"
               }
             ]
-          }
+          },
+          "miniatura": true
         },
         {
           "slug": "g-151",
