@@ -20,7 +20,7 @@ async function verificarGuion(client, slug) {
   const index = await fetch(`https://raw.githubusercontent.com/${process.env.GH_REPO || 'Dantemvp/teleprompter-dv'}/main/clientes/${client}/index.json`);
   if (!index.ok) throw fallo('No se encontró la grabación original.', 404);
   const data = await index.json();
-  if (!data.grabaciones?.some(rec=>rec.guiones?.some(it=>it.slug===slug))) throw fallo('No se encontró el guion o referencia original.', 404);
+  if (!data.grabaciones?.some(rec=>rec.guiones?.some(it=>it.slug===slug || it.versiones?.some(v=>v.g===slug)))) throw fallo('No se encontró el guion o referencia original.', 404);
 }
 function respuesta(state, role, ownerHash, slug) {
   return { garments: state.garments.map(g=>({...g,images:g.images.filter(i=>!i.deletedAt || role==='admin').map(i=>{
@@ -48,7 +48,10 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(204).end();
   if (!['GET', 'POST'].includes(req.method)) return res.status(405).json({ error: 'Método no permitido.' });
   try {
-    const data = req.method === 'POST' ? (typeof req.body === 'string' ? JSON.parse(req.body) : req.body || {}) : req.query;
+    let data;
+    try { data = req.method === 'POST' ? (typeof req.body === 'string' ? JSON.parse(req.body) : req.body) : req.query; }
+    catch { throw fallo('La solicitud no contiene JSON válido.'); }
+    if (!data || typeof data!=='object' || Array.isArray(data)) throw fallo('Solicitud inválida.');
     const { client, slug } = data;
     if (client !== CLIENT) throw fallo('Referencias no habilitadas para ese cliente.', 404);
     if (!process.env.PRENDAS_SECRET) throw fallo('Falta configurar el acceso a referencias.', 503);

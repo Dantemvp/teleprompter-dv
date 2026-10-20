@@ -21,6 +21,22 @@ test('los accesos de un enlace normal no permiten escribir en otro guion',()=>{
   assert.equal(leerAcceso(token,CLIENT,secret,2000),null);
   assert.throws(()=>crearAcceso(CLIENT,'tienda',secret,1000,'../otro'));
 });
+test('firmas Unicode o malformadas se rechazan sin lanzar errores del servidor',()=>{
+  const token=crearAcceso(CLIENT,'tienda',secret),payload=token.split('.')[0];
+  assert.equal(leerAcceso(payload+'.'+'é'.repeat(43),CLIENT,secret),null);
+  assert.equal(leerAcceso(payload+'.'+'x'.repeat(43),CLIENT,secret),null);
+  assert.equal(leerAcceso(null,CLIENT,secret),null);
+});
+test('recuperar una foto activa no desmarca la selección ni cambia sus datos',()=>{
+  const state={garments:[{id,images:[{id:foto,selected:true,selectedBy:'Bianca'}]}]};
+  assert.deepEqual(cambiarEstado(state,{action:'restore-image',garmentId:id,imageId:foto},'admin'),state);
+});
+test('un identificador de foto no puede reutilizarse en otra prenda',()=>{
+  const other='12345678-1234-1234-1234-123456789014';
+  const state={garments:[{id,images:[{id:foto,selected:true}]},{id:other,images:[]}]};
+  assert.throws(()=>cambiarEstado(state,{action:'add-image',garmentId:other,id:foto},'tienda'),{status:409});
+  assert.equal(state.garments[1].images.length,0);
+});
 test('el editor sólo consulta y la tienda no puede aprobar referencias', () => {
   assert.throws(() => cambiarEstado({ garments: [] }, { action:'add-garment', id, name:'Top' }, 'editor'), { status:403 });
   const state = { garments:[{ id, images:[{id:foto,selected:false}] }] };
