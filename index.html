@@ -4,8 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
 <title>Guiones · Consultora DV</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
+<link rel="stylesheet" href="prendas.css?v=20261019">
+<script src="prendas.js?v=20261019"></script>
 <style>
   :root{
     --teal:#1D9E75; --teal-dark:#0F6E56; --teal-darker:#04342C; --teal-bg:#E1F5EE; --teal-soft:#9FE1CB;
@@ -539,6 +542,7 @@ function renderGuion(g, canonical, backHref, opts){
     <div id="v-conv">
       <div class="toolrow"><button class="mini" id="toggleNotas">Ocultar indicaciones</button><button class="mini" id="editBtn">✎ Editar</button></div>
       ${conv}
+      <div id="prendas-root"></div>
     </div>
     <div id="v-plain" style="display:none">
       <div class="toolrow"><button class="primary" id="copyPlain">Copiar para Google Docs</button></div>
@@ -563,6 +567,8 @@ function renderGuion(g, canonical, backHref, opts){
     $('#v-plain').style.display = b.dataset.v==='plain' ? '' : 'none';
   });
 
+
+  window.Prendas?.mount({ client: opts.client, slug: opts.slug, admin: adm, askPassword: () => askPassword('Abrir referencias de prendas') });
 
   const editLineHtml = l => {
     const sp = l ? l.speaker : '';
