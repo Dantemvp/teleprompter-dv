@@ -2,7 +2,7 @@
  * contenido que aparece al leer en modo teleprompter. */
 (() => {
   const CLIENT = 'bianca-ald-7q2vd';
-  const ENDPOINT = location.hostname === 'localhost' ? location.origin + '/api/prendas' : 'https://teleprompter-dv.vercel.app/api/prendas';
+  const ENDPOINT = ['localhost','127.0.0.1'].includes(location.hostname) ? location.origin + '/api/prendas' : 'https://teleprompter-dv.vercel.app/api/prendas';
   const esc = texto => String(texto ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const entrada = new URL(location.href);
   if (entrada.searchParams.get('c') === CLIENT && entrada.searchParams.get('prendas')) sessionStorage.setItem('prendas:' + CLIENT, entrada.searchParams.get('prendas'));
@@ -35,26 +35,23 @@
     const root = document.getElementById('prendas-root');
     if (!root || opts.client !== CLIENT || !opts.slug) return;
     decorateLinks(opts.client);
-    const access = sessionStorage.getItem('prendas:' + CLIENT);
-    if (!opts.admin && !access) {
-      root.innerHTML = '<aside class="prendas-locked">📷 <strong>Referencias de prendas</strong><p>Para aportar fotos, abre el enlace de Bianca o de la tienda que te compartió Dante. No necesitas crear una cuenta.</p></aside>';
-      return;
-    }
+    const access = new URL(location.href).searchParams.has('prendas') ? sessionStorage.getItem('prendas:' + CLIENT) : null;
     const ctx = current = { ...opts, root, access, password: localStorage.getItem('dvpw'), abort: new AbortController(), state: { garments: [] }, role: '', dialog: null, busy: false };
     ctx.originals = [...document.querySelectorAll('#v-conv .bubble, #v-conv .beat, #v-conv .nota, #v-conv [data-prendas-text]')].map(node => ({node, html:node.innerHTML, text:node.textContent}));
     ctx.detected = (window.PrendasDetect?.identificar(ctx.originals.map(x => x.text).join('\n')) || []).map(name => ({id:window.PrendasDetect.idPara(opts.client,opts.slug,name),name,kind:'estilo',images:[],suggested:true}));
     root.innerHTML = '<details class="prendas-panel"><summary class="prendas-heading"><div><span class="prendas-eyebrow">FOTOS PARA LA EDICIÓN</span><h2>Prendas y referencias</h2><p>Toca una prenda marcada en el guion o abre este resumen.</p></div><span class="prendas-total" data-count>…</span></summary><div class="prendas-body"><div data-content>Cargando referencias…</div></div></details><p class="prendas-error" data-error role="status"></p>';
     ctx.error = mensaje => { if (ctx === current) root.querySelector('[data-error]').textContent = mensaje; };
     ctx.api = async (data = null) => {
-      const headers = { 'X-Prendas-Owner':ownerKey }; if (ctx.password && opts.admin) headers['X-Edit-Password'] = ctx.password; else if (access) headers.Authorization = 'Bearer ' + access;
+      const headers = { 'X-Prendas-Owner':ownerKey }; if (ctx.password && opts.admin) headers['X-Edit-Password'] = ctx.password; else if (access || ctx.guestAccess) headers.Authorization = 'Bearer ' + (access || ctx.guestAccess);
       let url = ENDPOINT, init = { headers, signal: ctx.abort.signal };
       const payload = { client: opts.client, slug: opts.slug, ...data };
       if (data) { headers['Content-Type'] = 'application/json'; init.method = 'POST'; init.body = JSON.stringify(payload); }
       else url += '?' + new URLSearchParams(payload);
       let r = await fetch(url, init);
-      if (r.status === 401 && access && headers['X-Edit-Password']) { delete headers['X-Edit-Password']; headers.Authorization = 'Bearer ' + access; ctx.password = null; r = await fetch(url, init); }
+      if (r.status === 401 && headers['X-Edit-Password']) { delete headers['X-Edit-Password']; if(access) headers.Authorization = 'Bearer ' + access;ctx.password = null; r = await fetch(url, init); }
       const result = await r.json();
       if (!r.ok) throw new Error(result.error || 'No se pudo guardar.');
+      if(result.guestAccess)ctx.guestAccess=result.guestAccess;
       if(result.serverNow) ctx.clockOffset=result.serverNow-Date.now();
       return result;
     };
@@ -98,7 +95,6 @@
     document.getElementById('v-conv')?.addEventListener('click', e => {
       const b = e.target.closest('[data-prenda-inline]'); if (b) openGarment(ctx, b.dataset.prendaInline);
     }, { signal: ctx.abort.signal });
-    if (opts.admin && !ctx.password && !access) { root.querySelector('[data-content]').innerHTML = '<button data-action="activate">Abrir referencias</button>'; return; }
     try { ctx.state = await ctx.api(); ctx.role = ctx.state.role; if (current === ctx) render(ctx); }
     catch (error) { if (error.name !== 'AbortError') { ctx.error(error.message); root.querySelector('[data-content]').innerHTML = opts.admin ? '<button data-action="activate">Abrir con contraseña de edición</button>' : ''; } }
   }
@@ -279,6 +275,7 @@
     d.querySelector('[data-retry]').onclick=upload;
   }
   function url(value, client) {
+    if(!new URL(location.href).searchParams.has('prendas'))return value;
     const access=sessionStorage.getItem('prendas:'+CLIENT);
     if(client!==CLIENT || !access)return value;
     const u=new URL(value,location.href);

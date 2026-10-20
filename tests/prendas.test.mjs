@@ -14,6 +14,13 @@ test('un enlace sólo funciona para su cliente, rol y vigencia', () => {
   assert.equal(leerAcceso(token + 'x', CLIENT, secret, 2000), null);
   assert.equal(leerAcceso(token, CLIENT, secret, 200 * 86400000), null);
 });
+test('los accesos de un enlace normal no permiten escribir en otro guion',()=>{
+  const token=crearAcceso(CLIENT,'tienda',secret,1000,'g-138');
+  assert.equal(leerAcceso(token,CLIENT,secret,2000,'g-138'),'tienda');
+  assert.equal(leerAcceso(token,CLIENT,secret,2000,'g-141'),null);
+  assert.equal(leerAcceso(token,CLIENT,secret,2000),null);
+  assert.throws(()=>crearAcceso(CLIENT,'tienda',secret,1000,'../otro'));
+});
 test('el editor sólo consulta y la tienda no puede aprobar referencias', () => {
   assert.throws(() => cambiarEstado({ garments: [] }, { action:'add-garment', id, name:'Top' }, 'editor'), { status:403 });
   const state = { garments:[{ id, images:[{id:foto,selected:false}] }] };

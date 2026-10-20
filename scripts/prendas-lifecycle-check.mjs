@@ -2,12 +2,15 @@
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
 import { get, put, del } from '@vercel/blob';
-import { crearAcceso, CLIENT } from '../lib/prendas-core.mjs';
+import { CLIENT } from '../lib/prendas-core.mjs';
 const endpoint='http://localhost:4173/api/prendas';
 const base={client:CLIENT,slug:'g-71'},id=randomUUID(),imageId=randomUUID();
 const root='prendas-qa/'+CLIENT+'/g-71',manifest=root+'/manifest.json';
 const owner='a'.repeat(64),other='b'.repeat(64);
-const token=crearAcceso(CLIENT,'tienda','local-prendas-test-only');
+const bootstrap=await fetch(endpoint+'?'+new URLSearchParams(base));
+const publicState=await bootstrap.json();
+assert.equal(bootstrap.status,200);assert.equal(publicState.role,'tienda');
+const token=publicState.guestAccess;assert.ok(token,'normal links must allow contributions without a special URL');
 const request=async(data,who=owner,admin=false)=>{
  const headers=admin?{'X-Edit-Password':'local-prendas'}:{Authorization:'Bearer '+token,'X-Prendas-Owner':who};
  const r=await fetch(endpoint+(data?'':'?'+new URLSearchParams(base)),{headers:{...headers,...(data?{'Content-Type':'application/json'}:{})},...(data?{method:'POST',body:JSON.stringify({...base,...data})}:{})});

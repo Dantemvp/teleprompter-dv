@@ -67,3 +67,11 @@ El token de GitHub vive en Vercel (servidor), nunca en el navegador.
 - La retirada es reversible: las fotos desaparecen de la lectura y de las URLs autenticadas del cliente/editor, pero el administrador puede recuperarlas en **Fotos retiradas**. No se elimina el blob original ni se tocan guiones, estados de grabación o puntajes del POE.
 - El estado se refresca al volver a la pestaña y cada 30 segundos mientras esté visible, sin interrumpir un modal abierto.
 - Regresión real aislada: `node --env-file=.env.local scripts/prendas-lifecycle-check.mjs`. Verifica tarjeta sin markdown, propiedad, vencimiento, permisos, retirada, bloqueo de lectura y recuperación; limpia únicamente sus archivos de prueba.
+
+### Enlaces existentes sin contraseña — 20 octubre 2026
+
+- Los enlaces normales de Bianca `?c=bianca-ald-7q2vd&g=...` permiten consultar y aportar referencias sin cuenta, PIN ni parámetro nuevo. Se aplica a las piezas activas del índice, incluidas referencias y versiones registradas; no a borradores arbitrarios ni otros clientes.
+- El servidor valida que la pieza esté activa y concede internamente un acceso de colaboradora limitado a ese guion. No se añade a la URL ni se necesita reenviar el enlace. Cualquier persona que tenga un enlace normal puede ver y aportar referencias en esa pieza: es el alcance público solicitado por Dante.
+- Los accesos de contribución no pueden aprobar fotos, modificar indicaciones ajenas, generar accesos privilegiados ni borrar fotos de otras personas. Conservan el borrado propio por cinco minutos desde el navegador de subida. Los controles de Bianca y administrador mantienen su autenticación.
+- Los enlaces explícitos por rol conservan sus permisos. Un enlace normal no hereda por accidente un antiguo acceso de sólo lectura guardado en la sesión. Las URLs de medios nuevas también se firman para un único guion.
+- Pruebas de regresión de carga pública: el script de ciclo de vida ahora arranca sin credenciales y obtiene su acceso internamente como el navegador. Verificar además g-138, g-141 y g-140 sin `prendas=` en Vercel y Pages.

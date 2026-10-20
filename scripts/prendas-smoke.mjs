@@ -12,7 +12,11 @@ const state = await r.json();
 if (r.status !== 200) throw Error(JSON.stringify({ status: r.status, body: state }));
 const replay = await fetch(endpoint, { method: 'POST', headers, body: JSON.stringify({ ...base, action: 'add-garment', ...state.garments[0] }) });
 if (replay.status !== 200) throw Error('production write ' + replay.status);
-if ((await fetch(endpoint + '?' + new URLSearchParams(base))).status !== 401) throw Error('anonymous access');
+const publicResponse=await fetch(endpoint+'?'+new URLSearchParams(base));
+const publicState=await publicResponse.json();
+if(publicResponse.status!==200 || publicState.role!=='tienda' || !publicState.guestAccess)throw Error('normal link contribution access');
+const cross=await fetch(endpoint+'?'+new URLSearchParams({client:CLIENT,slug:'g-150'}),{headers:{Authorization:'Bearer '+publicState.guestAccess}});
+if(cross.status!==401)throw Error('guest access must remain scoped to its script');
 for (const role of ['bianca', 'tienda', 'editor']) {
   const access = crearAcceso(CLIENT, role, secret);
   const q = await fetch(endpoint + '?' + new URLSearchParams(base), { headers: { Authorization: 'Bearer ' + access } });

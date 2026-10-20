@@ -20,15 +20,22 @@ async function verificarGuion(client, slug) {
   const data = await index.json();
   if (!data.grabaciones?.some(rec=>rec.guiones?.some(it=>it.slug===slug))) throw fallo('No se encontró el guion o referencia original.', 404);
 }
-function respuesta(state, role, ownerHash) {
+function respuesta(state, role, ownerHash, slug) {
   return { garments: state.garments.map(g=>({...g,images:g.images.filter(i=>!i.deletedAt || role==='admin').map(i=>{
     const {ownerHash:privateOwner,...publicImage}=i;
     return {...publicImage,canDelete:puedeBorrar(i,role,ownerHash),deleteUntil:ownerHash && ownerHash===privateOwner && !i.deletedAt ? new Date(Date.parse(i.createdAt)+BORRADO_PROPIO_MS).toISOString():null};
-  })})), role, serverNow:Date.now(), viewAccess:crearAcceso(CLIENT,'editor',process.env.PRENDAS_SECRET) };
+  })})), role, serverNow:Date.now(), viewAccess:crearAcceso(CLIENT,'editor',process.env.PRENDAS_SECRET,Date.now(),slug) };
+}
+async function verificarActivo(client, slug) {
+  const r=await fetch(`https://raw.githubusercontent.com/${process.env.GH_REPO || 'Dantemvp/teleprompter-dv'}/main/clientes/${client}/index.json`);
+  if(!r.ok)throw fallo('No se pudo verificar la grabación. Inténtalo de nuevo.',503);
+  const data=await r.json();
+  const active=data.grabaciones?.some(rec=>rec.guiones?.some(it=>it.slug===slug || it.versiones?.some(v=>v.g===slug)));
+  if(!active)throw fallo('Este guion no está en las grabaciones activas.',404);
 }
 export default async function handler(req, res) {
   const allowed = new Set(['https://dantemvp.github.io', 'https://teleprompter-dv.vercel.app', process.env.ALLOW_ORIGIN]);
-  if (process.env.NODE_ENV !== 'production') allowed.add('http://localhost:4173');
+  if (process.env.NODE_ENV !== 'production') { allowed.add('http://localhost:4173'); allowed.add('http://127.0.0.1:4173'); }
   if (req.headers.origin && !allowed.has(req.headers.origin)) return res.status(403).json({ error: 'Origen no permitido.' });
   if (req.headers.origin) res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -42,12 +49,19 @@ export default async function handler(req, res) {
     const data = req.method === 'POST' ? (typeof req.body === 'string' ? JSON.parse(req.body) : req.body || {}) : req.query;
     const { client, slug } = data;
     if (client !== CLIENT) throw fallo('Referencias no habilitadas para ese cliente.', 404);
+    if (!process.env.PRENDAS_SECRET) throw fallo('Falta configurar el acceso a referencias.', 503);
     const password = req.headers['x-edit-password'];
     const admin = (process.env.EDIT_PASSWORD && password === process.env.EDIT_PASSWORD)
       || (process.env.PRENDAS_SECRET && req.headers['x-prendas-admin'] === process.env.PRENDAS_SECRET);
-    const role = admin ? 'admin'
-      : leerAcceso(String(req.headers.authorization || '').replace(/^Bearer /, '') || data.access, client, process.env.PRENDAS_SECRET);
-    if (!role) throw fallo('Abre el enlace de referencias que te compartió Dante.', 401);
+    const provided=String(req.headers.authorization || '').replace(/^Bearer /, '') || data.access;
+    let role = admin ? 'admin' : leerAcceso(provided, client, process.env.PRENDAS_SECRET,Date.now(),slug);
+    let guestAccess=null;
+    if(!role && !provided && !password && req.method==='GET' && !data.image && !data.action){
+      if(!/^[a-z0-9_-]{1,100}$/i.test(slug || ''))throw fallo('Guion inválido.');
+      await verificarActivo(client,slug);
+      role='tienda';guestAccess=crearAcceso(client,role,process.env.PRENDAS_SECRET,Date.now(),slug);
+    }
+    if (!role) throw fallo('No se pudo validar el acceso. Recarga el guion para continuar.', 401);
     const owner = req.headers['x-prendas-owner'];
     const ownerHash = typeof owner === 'string' && /^[a-f0-9]{64}$/.test(owner) ? createHash('sha256').update(owner).digest('hex') : null;
     if (!process.env.PRENDAS_SECRET) throw fallo('Falta configurar el acceso a referencias.', 503);
@@ -69,7 +83,7 @@ export default async function handler(req, res) {
         res.setHeader('X-Content-Type-Options', 'nosniff');
         return Readable.fromWeb(image.stream).pipe(res);
       }
-      return res.json(respuesta(actual.state,role,ownerHash));
+      return res.json({...respuesta(actual.state,role,ownerHash,slug),...(guestAccess?{guestAccess}:{})});
     }
     // Validamos antes de guardar archivos, incluso si la petición repite un ID.
     cambiarEstado(actual.state, data, role, undefined, ownerHash);
@@ -89,7 +103,7 @@ export default async function handler(req, res) {
       const next = cambiarEstado(state, data, role, undefined, ownerHash);
       try {
         await put(path, JSON.stringify(next), { access: 'private', addRandomSuffix: false, contentType: 'application/json', allowOverwrite: Boolean(etag), ...(etag ? { ifMatch: etag } : {}), cacheControlMaxAge: 60 });
-        return res.json(respuesta(next,role,ownerHash));
+        return res.json(respuesta(next,role,ownerHash,slug));
       } catch (error) {
         if (!(error instanceof BlobPreconditionFailedError) && !/already exists/i.test(error.message)) throw error;
       }
