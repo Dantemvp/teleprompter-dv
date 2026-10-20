@@ -1,4 +1,4 @@
-import { get, put } from '@vercel/blob';
+import { get, put, BlobPreconditionFailedError } from '@vercel/blob';
 import { Readable } from 'node:stream';
 import { CLIENT, crearAcceso, leerAcceso, idValido, tipoImagen, cambiarEstado, fallo } from '../lib/prendas-core.mjs';
 
@@ -42,7 +42,8 @@ export default async function handler(req, res) {
       return res.json({ access: crearAcceso(client, data.role, process.env.PRENDAS_SECRET) });
     }
     if (!/^[a-z0-9_-]{1,100}$/i.test(slug || '')) throw fallo('Guion inválido.');
-    const prefix = `prendas/${client}/${slug}`;
+    const espacio = process.env.NODE_ENV !== 'production' && process.env.PRENDAS_TEST_PREFIX === 'prendas-qa' ? 'prendas-qa' : 'prendas';
+    const prefix = `${espacio}/${client}/${slug}`;
     const path = `${prefix}/manifest.json`;
     const actual = await cargar(path);
     if (req.method === 'GET') {
@@ -76,7 +77,7 @@ export default async function handler(req, res) {
         await put(path, JSON.stringify(next), { access: 'private', addRandomSuffix: false, contentType: 'application/json', allowOverwrite: Boolean(etag), ...(etag ? { ifMatch: etag } : {}), cacheControlMaxAge: 60 });
         return res.json({ ...next, role, viewAccess: crearAcceso(client, 'editor', process.env.PRENDAS_SECRET) });
       } catch (error) {
-        if (error.name !== 'BlobPreconditionFailedError' && !/already exists/i.test(error.message)) throw error;
+        if (!(error instanceof BlobPreconditionFailedError) && !/already exists/i.test(error.message)) throw error;
       }
     }
     throw fallo('Otra persona está guardando. Inténtalo de nuevo; tus fotos se conservan.', 409);

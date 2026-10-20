@@ -1,5 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { runInNewContext } from 'node:vm';
 import { CLIENT, crearAcceso, leerAcceso, cambiarEstado, tipoImagen } from '../lib/prendas-core.mjs';
 
 const secret = 'sólo-para-pruebas-locales';
@@ -37,4 +39,26 @@ test('no acepta SVG o HTML como imágenes', () => {
   assert.equal(tipoImagen(Buffer.from('<svg onload=alert(1)>')),null);
   assert.equal(tipoImagen(Buffer.from('<html>')),null);
   assert.equal(tipoImagen(Buffer.from('89504e470d0a1a0a','hex')),'image/png');
+});
+
+test('detecta prendas en cualquier guion y conserva materiales sin inventar productos', () => {
+  const browser = {};
+  runInNewContext(readFileSync(new URL('../prendas-detect.js', import.meta.url), 'utf8'), browser);
+  const detect = browser.PrendasDetect;
+  const names = [...detect.identificar('Un top de encaje forrado, chamarra de gamuza y bota coñac. Otra chamarra de gamuza. Clóset, autoestima y tendencia.')];
+  assert.deepEqual(names, ['top de encaje forrado','chamarra de gamuza','bota coñac']);
+  assert.equal(detect.identificar('Tenemos tops y faldas, no autopistas ni atascos.').length, 2);
+  assert.equal(detect.idPara(CLIENT,'g-151','Top de encaje'),detect.idPara(CLIENT,'g-151','TOP DE ENCAJE'));
+  assert.notEqual(detect.idPara(CLIENT,'g-151','Top'),detect.idPara(CLIENT,'g-152','Top'));
+});
+
+test('guardar una indicación no cambia la selección ni elimina fotos', () => {
+  const original = {garments:[{id,images:[{id:foto,selected:true,note:'Antes'}]}]};
+  const data={action:'edit-note',garmentId:id,imageId:foto,note:' Usar el blanco '};
+  const next=cambiarEstado(original,data,'bianca');
+  assert.equal(next.garments[0].images[0].note,'Usar el blanco');
+  assert.equal(next.garments[0].images[0].selected,true);
+  assert.equal(original.garments[0].images[0].note,'Antes');
+  assert.throws(()=>cambiarEstado(original,data,'tienda'),{status:403});
+  assert.throws(()=>cambiarEstado(original,data,'editor'),{status:403});
 });

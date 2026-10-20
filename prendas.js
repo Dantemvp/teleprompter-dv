@@ -24,13 +24,19 @@
   }
 
   async function mount(opts) {
-    current?.abort.abort(); current?.dialog?.remove();
+    current?.abort.abort(); current?.dialog?.close(); current?.dialog?.remove();
+    document.body.classList.remove('prendas-dialog-open');
     const root = document.getElementById('prendas-root');
     if (!root || opts.client !== CLIENT || !opts.slug) return;
     const access = sessionStorage.getItem('prendas:' + CLIENT);
-    if (!opts.admin && !access) return;
+    if (!opts.admin && !access) {
+      root.innerHTML = '<aside class="prendas-locked">📷 <strong>Referencias de prendas</strong><p>Para aportar fotos, abre el enlace de Bianca o de la tienda que te compartió Dante. No necesitas crear una cuenta.</p></aside>';
+      return;
+    }
     const ctx = current = { ...opts, root, access, password: localStorage.getItem('dvpw'), abort: new AbortController(), state: { garments: [] }, role: '', dialog: null, busy: false };
-    root.innerHTML = '<details class="prendas-panel"><summary>Prendas y referencias <span data-count>…</span></summary><div class="prendas-body"><p class="prendas-help">Cada prenda tiene sus fotos. Bianca selecciona cuáles usar en edición.</p><div data-content>Cargando referencias…</div><p class="prendas-error" data-error role="status"></p></div></details>';
+    ctx.originals = [...document.querySelectorAll('#v-conv .bubble, #v-conv .beat')].map(node => ({node, html:node.innerHTML, text:node.textContent}));
+    ctx.detected = (window.PrendasDetect?.identificar(ctx.originals.map(x => x.text).join('\n')) || []).map(name => ({id:window.PrendasDetect.idPara(opts.client,opts.slug,name),name,kind:'estilo',images:[],suggested:true}));
+    root.innerHTML = '<details class="prendas-panel"><summary class="prendas-heading"><div><span class="prendas-eyebrow">FOTOS PARA LA EDICIÓN</span><h2>Prendas y referencias</h2><p>Toca una prenda marcada en el guion o abre este resumen.</p></div><span class="prendas-total" data-count>…</span></summary><div class="prendas-body"><div data-content>Cargando referencias…</div></div></details><p class="prendas-error" data-error role="status"></p>';
     ctx.error = mensaje => { if (ctx === current) root.querySelector('[data-error]').textContent = mensaje; };
     ctx.api = async (data = null) => {
       const headers = {}; if (ctx.password && opts.admin) headers['X-Edit-Password'] = ctx.password; else if (access) headers.Authorization = 'Bearer ' + access;
@@ -38,11 +44,20 @@
       const payload = { client: opts.client, slug: opts.slug, ...data };
       if (data) { headers['Content-Type'] = 'application/json'; init.method = 'POST'; init.body = JSON.stringify(payload); }
       else url += '?' + new URLSearchParams(payload);
-      const r = await fetch(url, init); const result = await r.json();
+      let r = await fetch(url, init);
+      if (r.status === 401 && access && headers['X-Edit-Password']) { delete headers['X-Edit-Password']; headers.Authorization = 'Bearer ' + access; ctx.password = null; r = await fetch(url, init); }
+      const result = await r.json();
       if (!r.ok) throw new Error(result.error || 'No se pudo guardar.');
       return result;
     };
-    ctx.save = async data => { ctx.error(''); ctx.state = await ctx.api(data); ctx.role = ctx.state.role; render(ctx); };
+    ctx.save = data => {
+      const task = (ctx.write || Promise.resolve()).catch(()=>{}).then(async()=>{
+        ctx.error(''); ctx.state=await ctx.api(data);ctx.role=ctx.state.role;render(ctx);
+      });
+      ctx.write=task;return task;
+    };
+    ctx.refresh = async () => { if(ctx.busy) return; try { ctx.state = await ctx.api(); ctx.role = ctx.state.role; render(ctx); } catch(error) { if(error.name !== 'AbortError') ctx.error(error.message); } };
+    window.addEventListener('focus', () => { if (!ctx.dialog?.open) ctx.refresh(); }, { signal:ctx.abort.signal });
     root.addEventListener('click', async e => {
       const b = e.target.closest('button'); if (!b) return;
       try {
@@ -52,6 +67,8 @@
           ctx.password = password; ctx.state = await ctx.api(); localStorage.setItem('dvpw', password); ctx.role = ctx.state.role; render(ctx);
         }
         if (b.dataset.action === 'new') return newGarment(ctx);
+        if (b.dataset.action === 'refresh') { b.disabled = true; await ctx.refresh(); return; }
+        if (b.dataset.filter) { ctx.filter = b.dataset.filter; render(ctx); return; }
         if (b.dataset.share) {
           b.disabled = true;
           try {
@@ -72,32 +89,75 @@
     catch (error) { if (error.name !== 'AbortError') { ctx.error(error.message); root.querySelector('[data-content]').innerHTML = opts.admin ? '<button data-action="activate">Abrir con contraseña de edición</button>' : ''; } }
   }
 
+  function allGarments(ctx) {
+    const stored = ctx.state.garments;
+    const normal = window.PrendasDetect.normal;
+    return [...stored, ...ctx.detected.filter(g => !stored.some(s => normal(s.name) === normal(g.name)))].slice(0,40);
+  }
+  function imageUrl(ctx, image) {
+    return ENDPOINT + '?' + new URLSearchParams({client:ctx.client,slug:ctx.slug,image:image.id,access:ctx.state.viewAccess});
+  }
   function render(ctx) {
     if (current !== ctx) return;
-    const garments = ctx.state.garments, ready = garments.filter(g => g.images.some(i => i.selected)).length;
-    ctx.root.querySelector('[data-count]').textContent = `${ready}/${garments.length} listas`;
-    ctx.root.querySelector('[data-content]').innerHTML = `<div class="prendas-tools">${ctx.role !== 'editor' ? '<button type="button" class="primary" data-action="new">+ Agregar prenda</button>' : ''}</div><div class="prendas-list">${garments.map(g => `<button type="button" class="prenda-card ${g.images.some(i => i.selected) ? 'lista' : ''}" data-garment="${esc(g.id)}"><div><strong>${esc(g.name)}</strong><span>${g.kind === 'exacta' ? 'Prenda exacta' : 'Referencia de estilo'} · ${g.images.length} fotos</span></div><span>${g.images.some(i => i.selected) ? '✓ Seleccionada' : 'Por seleccionar'} →</span></button>`).join('') || '<p class="prendas-empty">Agrega el nombre de una prenda del guion. Después toca su nombre para subir fotos.</p>'}</div>${ctx.role === 'admin' ? '<div class="prendas-tools"><button data-share="bianca">Enlace para Bianca</button><button data-share="tienda">Enlace para empleadas</button><button data-share="editor">Enlace para editor</button></div>' : ''}`;
-    // Sólo se marca la conversación: texto plano y lectura permanecen intactos.
-    document.querySelectorAll('#v-conv .bubble, #v-conv .beat').forEach(bubble => {
-      const texto = bubble.textContent; bubble.replaceChildren();
-      const terms = [...garments].sort((a,b) => b.name.length - a.name.length);
-      if (!terms.length) { bubble.textContent = texto; return; }
-      const escapeRx = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const rx = new RegExp(terms.map(g => escapeRx(g.name)).join('|'), 'giu'); let last = 0;
-      for (const match of texto.matchAll(rx)) {
-        bubble.append(document.createTextNode(texto.slice(last, match.index)));
-        const g = terms.find(g => g.name.toLocaleLowerCase('es') === match[0].toLocaleLowerCase('es'));
-        const button = document.createElement('button'); button.type = 'button'; button.className = 'prenda-inline'; button.dataset.prendaInline = g.id; button.textContent = match[0]; button.setAttribute('aria-label', `Ver fotos de ${g.name}`); bubble.append(button); last = match.index + match[0].length;
-      }
-      bubble.append(document.createTextNode(texto.slice(last)));
+    ctx.filter ??= ctx.role === 'editor' ? 'selected' : 'all';
+    const garments = allGarments(ctx);
+    const ready = garments.filter(g => g.images.some(i => i.selected)).length;
+    const photos = garments.reduce((n,g) => n + g.images.length, 0);
+    ctx.root.querySelector('[data-count]').textContent = photos + (photos===1?' foto · ':' fotos · ') + ready + (ready===1?' prenda lista':' prendas listas');
+    const visible = garments.filter(g => ctx.filter !== 'selected' || g.images.some(i => i.selected));
+    const editor = ctx.role === 'editor';
+    ctx.root.querySelector('[data-content]').innerHTML =
+      '<div class="prendas-toolbar"><div class="prendas-filters"><button data-filter="all" aria-pressed="' + (ctx.filter!=='selected') + '">Todas las prendas</button><button data-filter="selected" aria-pressed="' + (ctx.filter==='selected') + '">✓ Para editar (' + ready + ')</button></div><button data-action="refresh" aria-label="Actualizar referencias">↻ Actualizar</button></div>' +
+      '<div class="prendas-list">' + visible.map(g => {
+        const photo = g.images.find(i=>i.selected) || g.images[0];
+        const status = g.images.some(i=>i.selected) ? '✓ Lista para edición' : g.images.length ? 'Fotos recibidas · falta elegir' : 'Sin foto todavía';
+        return '<button type="button" class="prenda-card ' + (g.images.some(i=>i.selected)?'lista':'') + '" data-garment="' + g.id + '">' +
+          (photo ? '<img class="prenda-thumb" alt="" loading="lazy" src="' + esc(imageUrl(ctx,photo)) + '">' : '<span class="prenda-placeholder" aria-hidden="true">＋ 📷</span>') +
+          '<span class="prenda-card-text"><strong>' + esc(g.name) + '</strong><span>' + status + '</span><small>' + g.images.length + (g.images.length===1?' foto':' fotos') + (g.suggested?' · Detectada en el guion':'') + '</small></span><span aria-hidden="true">↗</span></button>';
+      }).join('') + '</div>' +
+      (!visible.length ? '<p class="prendas-empty">' + (ctx.filter==='selected' ? 'Todavía no hay fotos elegidas para edición. Las propuestas no son una autorización.' : 'Agrega una prenda o referencia que necesite este guion.') + '</p>' : '') +
+      (!editor ? '<button class="prendas-add" data-action="new">＋ Otra prenda o referencia</button>' : '') +
+      '<p class="prendas-help">' + (editor ? 'Usa las fotos seleccionadas. Si una prenda no tiene selección, consulta antes de elegir por tu cuenta.' : 'Las prendas detectadas son sugerencias del texto, no decisiones de moda. Puedes agregar otras. Las fotos se guardan automáticamente; Bianca o Dante eligen cuáles usar.') + '</p>' +
+      (ctx.role==='admin' ? '<details class="prendas-share"><summary>Compartir con Bianca, tienda o editor</summary><div class="prendas-tools"><button data-share="bianca">Bianca · elegir fotos</button><button data-share="tienda">Tienda · aportar fotos</button><button data-share="editor">Editor · consultar</button></div></details>' : '');
+    // Conservar las indicaciones y el marcado original del guion.
+    ctx.originals.forEach(({node, html}) => {
+      if (!node.isConnected) return;
+      node.innerHTML = html;
+      const terms = [...garments].sort((a,b)=>b.name.length-a.name.length);
+      if (!terms.length) return;
+      const escapeRx = s => [...s].map(c => '\\^$.*+?()[]{}|'.includes(c) ? '\\' + c : c).join('');
+      const rx = new RegExp('(?<![\\p{L}])(?:' + terms.map(g=>escapeRx(g.name)).join('|') + ')(?![\\p{L}])', 'giu');
+      const walker = document.createTreeWalker(node, NodeFilter.SHOW_TEXT);
+      const nodes = []; while(walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(textNode => {
+        if(textNode.parentElement.closest('button,a')) return;
+        const text = textNode.textContent; const matches=[...text.matchAll(rx)];
+        if(!matches.length) return;
+        const fragment=document.createDocumentFragment(); let last=0;
+        for(const match of matches) {
+          fragment.append(document.createTextNode(text.slice(last,match.index)));
+          const g=terms.find(g=>window.PrendasDetect.normal(g.name)===window.PrendasDetect.normal(match[0]));
+          if(!g) continue;
+          const button=document.createElement('button'); button.type='button'; button.className='prenda-inline';
+          button.dataset.prendaInline=g.id; button.textContent=match[0]; button.setAttribute('aria-label','Referencias de '+g.name);
+          if(g.images.length) {button.dataset.photos=String(g.images.length);button.classList.add('con-fotos');}
+          if(g.images.some(i=>i.selected)) button.classList.add('elegida');
+          fragment.append(button);last=match.index+match[0].length;
+        }
+        fragment.append(document.createTextNode(text.slice(last)));textNode.replaceWith(fragment);
+      });
     });
   }
 
   function showDialog(ctx, title, html) {
-    ctx.dialog?.remove();
+    ctx.dialog?.close(); ctx.dialog?.remove();
     const dialog = ctx.dialog = document.createElement('dialog'); dialog.className = 'prendas-modal';
     dialog.innerHTML = `<header class="prendas-modal-head"><h2>${esc(title)}</h2><button type="button" data-close aria-label="Cerrar referencias">Cerrar</button></header><div class="prendas-modal-body">${html}<p class="prendas-error" role="status" data-dialog-error></p></div>`;
-    document.body.append(dialog); dialog.querySelector('[data-close]').onclick = () => dialog.close(); dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); }); dialog.showModal();
+    dialog.setAttribute('aria-label', title);
+    dialog.addEventListener('cancel', e => { if(ctx.busy) e.preventDefault(); });
+    document.body.append(dialog); dialog.querySelector('[data-close]').onclick = () => { if(!ctx.busy) dialog.close(); }; dialog.addEventListener('click', e => { if (e.target === dialog && !ctx.busy) dialog.close(); }); dialog.showModal();
+    document.body.classList.add('prendas-dialog-open');
+    dialog.addEventListener('close',()=>{if(!document.querySelector('dialog.prendas-modal[open]'))document.body.classList.remove('prendas-dialog-open');});
     return dialog;
   }
   function newGarment(ctx) {
@@ -111,36 +171,80 @@
     };
   }
   function openGarment(ctx, id) {
-    const g = ctx.state.garments.find(g => g.id === id); if (!g) return;
-    const puedeSubir = ctx.role !== 'editor', puedeElegir = ['admin','bianca'].includes(ctx.role);
-    const d = showDialog(ctx, g.name, `<p class="prendas-subtitle">${g.kind === 'exacta' ? 'Prenda exacta: usar las fotos seleccionadas, sin sustituirla.' : 'Referencia de estilo: las fotos orientan la elección.'}</p><p class="prendas-help">${g.images.some(i => i.selected) ? 'Las imágenes marcadas son las que debe usar el editor.' : 'Falta que Bianca seleccione al menos una imagen.'}</p><div class="prendas-grid">${g.images.map(i => {
-      const url = ENDPOINT + '?' + new URLSearchParams({ client:ctx.client, slug:ctx.slug, image:i.id, access:ctx.state.viewAccess });
-      return `<article class="prendas-photo ${i.selected ? 'selected' : ''}"><a href="${esc(url)}" target="_blank" rel="noopener"><img src="${esc(url)}" alt="Referencia de ${esc(g.name)}" loading="lazy" referrerpolicy="no-referrer"></a><div class="prendas-caption">${i.selected ? `<span class="prendas-badge">✓ Usar esta · ${esc(i.selectedBy)}</span>` : '<span>Propuesta</span>'}<p>${esc(i.note)}</p><small>Subió: ${esc(i.author)}</small>${puedeElegir ? `<button type="button" data-select="${i.id}" data-selected="${!i.selected}">${i.selected ? 'Quitar selección' : 'Usar esta'}</button>` : ''}</div></article>`;
-    }).join('')}</div>${!g.images.length ? '<p class="prendas-empty">Todavía no hay fotos de esta prenda.</p>' : ''}${puedeSubir ? `<section class="prendas-upload"><label>Tu nombre (para saber quién compartió la foto)<input data-author maxlength="60" value="${esc(localStorage.getItem('prendas-author') || (ctx.role === 'bianca' ? 'Bianca' : ''))}" placeholder="Ej. Rubí"></label><label>Descripción opcional<textarea data-note maxlength="500" placeholder="Ej. tenemos este modelo en blanco; usar la foto de frente"></textarea></label><div class="prendas-tools"><button type="button" class="primary" data-camera>Tomar foto</button><button type="button" data-gallery>Subir fotos o capturas</button></div><input hidden data-camera-file type="file" accept="image/*" capture="environment"><input hidden data-gallery-file type="file" accept="image/*" multiple><p class="prendas-help">Se guardan al elegirlas. Puedes subir fotos de la tienda o capturas de Pinterest y redes.</p><p class="prendas-notice" role="status" data-upload-status></p></section>` : ''}`);
-    d.querySelectorAll('[data-select]').forEach(b => b.onclick = async () => {
-      b.disabled = true;
-      try { await ctx.save({ action:'select', garmentId:id, imageId:b.dataset.select, selected:b.dataset.selected==='true' }); openGarment(ctx, id); }
-      catch(error) { d.querySelector('[data-dialog-error]').textContent = error.message; b.disabled = false; }
+    const g = allGarments(ctx).find(g => g.id === id); if (!g) return;
+    const canUpload=ctx.role!=='editor', canChoose=['admin','bianca'].includes(ctx.role);
+    const selected=g.images.filter(i=>i.selected), proposals=g.images.filter(i=>!i.selected);
+    const card = i => '<article class="prendas-photo '+(i.selected?'selected':'')+'">' +
+      '<a href="'+esc(imageUrl(ctx,i))+'" target="_blank" rel="noopener" aria-label="Abrir foto completa de '+esc(g.name)+'"><img src="'+esc(imageUrl(ctx,i))+'" alt="Referencia de '+esc(g.name)+'" loading="lazy"></a>' +
+      '<div class="prendas-caption">'+(i.selected?'<span class="prendas-badge">✓ Elegida por '+esc(i.selectedBy)+'</span>':'<span class="prendas-proposal">Propuesta · no seleccionada</span>')+
+      '<small>Compartió: '+esc(i.author)+'</small>'+
+      (canChoose?'<label>Indicación para el editor<textarea data-image-note="'+i.id+'" maxlength="500" placeholder="Ej. usar esta prenda en blanco">'+esc(i.note)+'</textarea></label><span class="prendas-note-status" data-note-status="'+i.id+'" role="status"></span>':'<p>'+esc(i.note)+'</p>')+
+      (canChoose?'<button class="'+(i.selected?'':'primary')+'" data-select="'+i.id+'" data-selected="'+(!i.selected)+'">'+(i.selected?'Quitar de elegidas':'✓ Usar esta foto')+'</button>':'')+'</div></article>';
+    const uploader = canUpload ?
+      '<section class="prendas-upload"><div class="prendas-tools prendas-capture"><button class="primary" data-camera>📷 Tomar foto</button><button data-gallery>＋ Fotos / capturas</button></div>'+
+      '<p class="prendas-help">Elige una o varias: se guardan aquí automáticamente.</p>'+
+      '<details class="prendas-upload-options"><summary>Añadir tu nombre o una indicación (opcional)</summary><label>Tu nombre<input data-author maxlength="60" value="'+esc(localStorage.getItem('prendas-author')||(ctx.role==='bianca'?'Bianca':''))+'" placeholder="Ej. Rubí"></label><label>Qué debe saber el editor<textarea data-note maxlength="500" placeholder="Ej. esta prenda la tenemos en blanco"></textarea></label></details>'+
+      '<input hidden data-camera-file type="file" accept="image/*" capture="environment"><input hidden data-gallery-file type="file" accept="image/*" multiple>'+
+      '<p data-upload-status class="prendas-notice" role="status" aria-live="polite"></p><button hidden data-retry>Reintentar fotos pendientes</button></section>' : '';
+    const d=showDialog(ctx,g.name,
+      '<div class="prendas-context">'+(g.kind==='exacta'?'Prenda exacta: usar la foto elegida, sin sustituirla.':selected.length?'Usa las referencias elegidas y respeta las indicaciones.':'Las propuestas todavía no están autorizadas para edición.')+'</div>'+
+      uploader+
+      '<section class="prendas-selected-group"><h3>✓ Para usar en edición <span>'+selected.length+'</span></h3>'+
+      (selected.length?'<div class="prendas-grid">'+selected.map(card).join('')+'</div>':'<p class="prendas-empty">Todavía no hay una foto elegida. '+(canChoose?'Cuando veas la correcta, toca «Usar esta foto».':'No elegir una prenda por cuenta propia.')+'</p>')+'</section>'+
+      '<section class="prendas-proposals-group"><h3>Fotos propuestas <span>'+proposals.length+'</span></h3>'+
+      (proposals.length?'<div class="prendas-grid">'+proposals.map(card).join('')+'</div>':'<p class="prendas-empty">'+(canUpload?'Puedes aportar varias fotos de la tienda o capturas de Pinterest y redes. No se reemplazan las anteriores.':'No hay más fotos propuestas para esta prenda.')+'</p>')+'</section>');
+    d.querySelectorAll('[data-select]').forEach(b=>b.onclick=async()=>{
+      b.disabled=true;
+      try {await ctx.save({action:'select',garmentId:id,imageId:b.dataset.select,selected:b.dataset.selected==='true'});openGarment(ctx,id);}
+      catch(error){d.querySelector('[data-dialog-error]').textContent=error.message;b.disabled=false;}
     });
-    if (!puedeSubir) return;
-    d.querySelector('[data-camera]').onclick = () => d.querySelector('[data-camera-file]').click();
-    d.querySelector('[data-gallery]').onclick = () => d.querySelector('[data-gallery-file]').click();
-    const subir = async e => {
-      const files = [...e.target.files]; if (!files.length) return;
-      const author = d.querySelector('[data-author]').value.trim() || (ctx.role==='bianca'?'Bianca':'Equipo tienda'); localStorage.setItem('prendas-author', author);
-      const note = d.querySelector('[data-note]').value.trim();
-      d.querySelectorAll('button').forEach(b => b.disabled = true);
-      let guardadas = 0;
-      try {
-        if (files.length + g.images.length > 12) throw new Error('Puedes guardar hasta 12 fotos por prenda.');
-        for (const file of files) {
-          d.querySelector('[data-upload-status]').textContent = `Guardando ${guardadas+1} de ${files.length}…`;
-          await ctx.save({ action:'add-image', garmentId:id, id:crypto.randomUUID(), image:await imagenComprimida(file), author, note }); guardadas++;
+    d.querySelectorAll('[data-image-note]').forEach(field=>{
+      let last=field.value, pending=Promise.resolve();
+      field.onchange=()=>{
+        const value=field.value; if(value===last)return;
+        const status=d.querySelector('[data-note-status="'+field.dataset.imageNote+'"]');status.textContent='Guardando…';
+        pending=pending.catch(()=>{}).then(async()=>{
+          try{await ctx.save({action:'edit-note',garmentId:id,imageId:field.dataset.imageNote,note:value});last=value;status.textContent='✓ Indicación guardada';}
+          catch(error){status.textContent='No se guardó: '+error.message;field.focus();}
+        });
+      };
+    });
+    if(!canUpload)return;
+    const beforeLeave=e=>{if(ctx.busy){e.preventDefault();e.returnValue='';}};
+    window.addEventListener('beforeunload',beforeLeave,{signal:ctx.abort.signal});
+    d.addEventListener('close',()=>window.removeEventListener('beforeunload',beforeLeave),{once:true});
+    d.querySelector('[data-camera]').onclick=()=>d.querySelector('[data-camera-file]').click();
+    d.querySelector('[data-gallery]').onclick=()=>d.querySelector('[data-gallery-file]').click();
+    let queue=[];
+    const upload=async()=>{
+      if(ctx.busy)return;
+      ctx.busy=true;d.querySelectorAll('button').forEach(b=>b.disabled=true);d.querySelector('[data-retry]').hidden=true;
+      const author=d.querySelector('[data-author]').value.trim()||(ctx.role==='bianca'?'Bianca':'Equipo tienda');
+      const note=d.querySelector('[data-note]').value.trim();localStorage.setItem('prendas-author',author);
+      let saved=0;const total=queue.length;
+      try{
+        if(!ctx.state.garments.some(x=>x.id===id))await ctx.save({action:'add-garment',id,name:g.name,kind:g.kind});
+        while(queue.length){
+          d.querySelector('[data-upload-status]').textContent='Guardando foto '+(saved+1)+' de '+total+'… No cierres esta ventana.';
+          const item=queue[0];item.image ||= await imagenComprimida(item.file);
+          await ctx.save({action:'add-image',garmentId:id,id:item.id,image:item.image,author,note});queue.shift();saved++;
         }
-        openGarment(ctx, id); ctx.dialog.querySelector('[data-upload-status]').textContent = `${guardadas} ${guardadas===1?'foto guardada':'fotos guardadas'}.`;
-      } catch(error) { d.querySelector('[data-dialog-error]').textContent = `${guardadas ? guardadas+' fotos ya se guardaron. ' : ''}${error.message}`; d.querySelectorAll('button').forEach(b => b.disabled = false); e.target.value = ''; }
+        ctx.busy=false;openGarment(ctx,id);ctx.dialog.querySelector('[data-upload-status]').textContent='✓ '+saved+' '+(saved===1?'foto guardada':'fotos guardadas')+'. Ya puedes salir; no hay que volver a guardar.';
+      }catch(error){
+        d.querySelector('[data-dialog-error]').textContent=(saved?saved+' fotos se guardaron. ':'')+error.message;
+        d.querySelector('[data-retry]').hidden=!queue.length;
+      }finally{ctx.busy=false;d.querySelectorAll('button').forEach(b=>b.disabled=false);}
     };
-    d.querySelector('[data-camera-file]').onchange = subir; d.querySelector('[data-gallery-file]').onchange = subir;
+    const choose=e=>{
+      const files=[...e.target.files];e.target.value='';if(!files.length)return;
+      if(queue.length){d.querySelector('[data-dialog-error]').textContent='Primero reintenta las fotos pendientes para no perderlas.';return;}
+      const count=ctx.state.garments.find(x=>x.id===id)?.images.length||0;
+      if(files.length+count>12){d.querySelector('[data-dialog-error]').textContent='Máximo 12 fotos por prenda. Puedes elegir '+(12-count)+' más.';return;}
+      queue=files.map(file=>({file,id:crypto.randomUUID()}));upload();
+    };
+    d.querySelector('[data-camera-file]').onchange=choose;
+    d.querySelector('[data-gallery-file]').onchange=choose;
+    d.querySelector('[data-retry]').onclick=upload;
   }
   window.Prendas = { mount };
 })();

@@ -47,3 +47,12 @@ El token de GitHub vive en Vercel (servidor), nunca en el navegador.
 - Las fotos se sirven mediante la API autenticada, con caché privada y sin referrer. Los manifiestos se actualizan con ETag y reintentos para evitar pérdida de cambios simultáneos.
 - Pruebas de lógica/permisos: `npm test`. Servidor de comprobación local: `node --env-file=.env.local scripts/prendas-dev.mjs` (credenciales ficticias sólo para localhost; usa el almacén vinculado, no subir datos de prueba permanentes).
 - No incluye integración con POE, avisos push ni aprobación de videos; es exclusivamente una herramienta de referencias para los guiones de Bianca.
+
+### Revisión de usabilidad — 20 octubre 2026
+
+- `prendas-detect.js` reconoce nombres comunes y materiales en cualquier guion de Bianca. Son sugerencias locales: no se crean registros ni se aprueba una prenda por detectarla. Se conserva el registro al aportar su primera foto. También se puede agregar una referencia manualmente si la detección no la encuentra.
+- Los nombres se marcan dentro de la conversación sin alterar indicaciones, texto plano ni lectura de teleprompter. El resumen compacto está al inicio de la conversación, plegado por defecto, con fotos y estados visuales al abrirlo.
+- Un toque en la prenda abre cámara/galería primero. Las opciones de nombre/indicación previas son opcionales y plegadas; la carga guarda sin otro botón. Los reintentos conservan el ID para evitar duplicados.
+- Fotos elegidas y propuestas se muestran por separado. Bianca/Dante pueden editar la indicación de una foto después de subirla; se guarda al salir del campo. El editor entra con el filtro de fotos elegidas y no tiene controles de escritura.
+- Los guardados de la misma pantalla se serializan y los conflictos entre personas se reintentan con ETag usando la clase real del SDK, no `error.name`.
+- Pruebas locales usan exclusivamente `prendas-qa/`, nunca `prendas/`. Ese espacio sólo puede activarse fuera de producción desde el servidor de pruebas. La imagen SVG de `tests/` se usa como entrada de galería, el navegador la transforma a JPEG antes de enviarla; la API sigue rechazando SVG directo.
