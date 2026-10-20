@@ -259,6 +259,7 @@
         }
         ctx.busy=false;openGarment(ctx,id);ctx.dialog.querySelector('[data-upload-status]').textContent='✓ '+saved+' '+(saved===1?'foto guardada':'fotos guardadas')+'. Ya puedes salir; no hay que volver a guardar.';
       }catch(error){
+        d.querySelector('[data-upload-status]').textContent=queue.length+' foto(s) pendientes de guardar. Puedes reintentar aquí.';
         d.querySelector('[data-dialog-error]').textContent=(saved?saved+' fotos se guardaron. ':'')+error.message;
         d.querySelector('[data-retry]').hidden=!queue.length;
       }finally{ctx.busy=false;d.querySelectorAll('button').forEach(b=>b.disabled=false);}

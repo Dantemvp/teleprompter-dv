@@ -3,7 +3,9 @@ import { Readable } from 'node:stream';
 import { createHash } from 'node:crypto';
 import { CLIENT, crearAcceso, leerAcceso, idValido, tipoImagen, cambiarEstado, fallo, puedeBorrar, BORRADO_PROPIO_MS } from '../lib/prendas-core.mjs';
 
-const opciones = { access: 'private', useCache: false };
+// Compressed responses carry a weak ETag (W/...), which cannot satisfy If-Match.
+// Read the original representation so the body and strong ETag stay atomic.
+const opciones = { access: 'private', useCache: false, headers: { 'Accept-Encoding': 'identity' } };
 async function cargar(path) {
   const archivo = await get(path, opciones);
   if (!archivo) return { state: { garments: [] }, etag: null };
@@ -106,9 +108,10 @@ export default async function handler(req, res) {
         return res.json(respuesta(next,role,ownerHash,slug));
       } catch (error) {
         if (!(error instanceof BlobPreconditionFailedError) && !/already exists/i.test(error.message)) throw error;
+        await new Promise(resolve=>setTimeout(resolve,75*(intento+1)+Math.random()*100));
       }
     }
-    throw fallo('Otra persona está guardando. Inténtalo de nuevo; tus fotos se conservan.', 409);
+    throw fallo('No se pudo completar el guardado. Pulsa Reintentar fotos pendientes sin cerrar esta ventana.', 409);
   } catch (error) {
     console.error('prendas:', error.status || error.name);
     return res.status(error.status || 500).json({ error: error.status ? error.message : 'No se pudo guardar. Inténtalo de nuevo.' });
