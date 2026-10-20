@@ -7,9 +7,9 @@
 <meta name="referrer" content="no-referrer">
 <title>Guiones · Consultora DV</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
-<link rel="stylesheet" href="prendas.css?v=20261020">
-<script src="prendas-detect.js?v=20261020"></script>
-<script src="prendas.js?v=20261020"></script>
+<link rel="stylesheet" href="prendas.css?v=20261019b">
+<script src="prendas-detect.js?v=20261019b"></script>
+<script src="prendas.js?v=20261019b"></script>
 <style>
   :root{
     --teal:#1D9E75; --teal-dark:#0F6E56; --teal-darker:#04342C; --teal-bg:#E1F5EE; --teal-soft:#9FE1CB;
@@ -488,6 +488,7 @@ if (localStorage.getItem('dvpw') && localStorage.getItem('dvadmin') !== ADMIN_PI
 
 function renderGuion(g, canonical, backHref, opts){
   opts = opts || {};
+  canonical = window.Prendas?.url(canonical,opts.client) || canonical;
   const spk = speakerOrder(g);
   const solo = spk.length < 2;
   let conv = '';
@@ -764,8 +765,8 @@ function renderTimeline(rec, token, codeOf, gi){
       const thumb = (c.thumb && verRef)
         ? `<a class="tlthumb" href="${attr(c.link || '#')}" target="_blank" rel="noopener"><img src="${attr(c.thumb)}" alt="preview" loading="lazy"></a>`
         : `<span class="tlthumb nothumb">🎬</span>`;
-      const abrir = esGuionItem
-        ? `<a href="?c=${token}&g=${attr(c.slug)}" target="_blank" rel="noopener"><button class="primary mini">Abrir guion ↗</button></a>` : '';
+      const abrir = esGuionItem || token === 'bianca-ald-7q2vd'
+        ? `<a href="?c=${token}&g=${attr(c.slug)}" target="_blank" rel="noopener"><button class="primary mini">${esGuionItem?'Abrir guion ↗':'Prendas y referencia ↗'}</button></a>` : '';
       const ref = (c.link && verRef)
         ? `<a href="${attr(c.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
       // Se marca como grabado desde aquí mismo, sin bajar a la tarjeta de la categoría.
@@ -854,7 +855,7 @@ function refreshTimelines(){
   });
 }
 function renderCard(it, token, ri, codArg){
-  const url = base() + '?c=' + token + '&g=' + it.slug;
+  const url = window.Prendas?.url(base() + '?c=' + token + '&g=' + it.slug, token) || base() + '?c=' + token + '&g=' + it.slug;
   const cod = codArg || it.slug.toUpperCase();
   const esGuion = it.tipo !== 'ref' && !['trans-int','trans-ext','caminadora','juntas'].includes(it.categoria);   // .md abrible; transiciones y tarjetas de referencia (tipo:ref) solo llevan link. Un chusco CON guion (tipo:'md') sí se abre.
   const toggle = STATUS_ENDPOINT ? `<button class="mini btnGrabado" data-slug="${attr(it.slug)}" data-grabado="${it.grabado?1:0}">${it.grabado?'✓ Grabado':'Marcar grabado'}</button>` : '';
@@ -868,7 +869,7 @@ function renderCard(it, token, ri, codArg){
   const cardLoc = (founders && isAdmin())
     ? `<div class="cardlocrow"><span class="cardloclbl">🎙️ Locutor:</span>${founders.map(n=>`<button class="mini cardloc${effLoc===n?' on':''}" data-slug="${attr(it.slug)}" data-loc="${attr(n)}">${esc(n)}</button>`).join('')}</div>`
     : '';
-  const abrir = esGuion ? `<a href="?c=${token}&g=${it.slug}"><button class="primary mini">Abrir guion</button></a>` : '';
+  const abrir = esGuion || token === 'bianca-ald-7q2vd' ? `<a href="${attr(url)}"><button class="primary mini">${esGuion?'Abrir guion':'Prendas y referencia'}</button></a>` : '';
   const verRef = !REF_PRIVATE[token] || isAdmin();
   const ref = (it.link && verRef) ? `<a href="${attr(it.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
   const mover = (REC_NESTED[token] && isAdmin()) ? `<button class="mini btnMover" data-slug="${attr(it.slug)}">Mover ⇄</button>` : '';
@@ -940,6 +941,18 @@ function renderClient(data, token){
   const nr = $('#newRecBtn'); if (nr) nr.onclick = () => newRecUI();
   wireLock();
   applyOpenState(); wireOpenPersist();
+  window.Prendas?.decorateLinks(token);
+}
+
+function renderReferenciaPrendas(item, cliente, rec){
+  const link = item.link || item.ref;
+  const safeLink = typeof link === 'string' && /^https?:\/\//i.test(link) ? link : null;
+  $('#app').innerHTML = `<header class="site"><div class="logo">DV</div><div><h1>${esc(item.titulo || item.slug)}</h1><p>Bianca Aldama · ${esc(rec.rec)} · ${esc(item.slug)}</p></div></header>
+    <p><a href="?c=${attr(cliente)}">← Todas las grabaciones</a></p>
+    <p class="globalnote">Referencia visual · esta pieza no tiene un guion escrito. Abre el video original y añade aquí las prendas que se usarán.</p>
+    ${safeLink?`<p><a href="${attr(safeLink)}" target="_blank" rel="noopener"><button class="primary">Ver referencia original ↗</button></a></p>`:''}
+    <div id="v-conv"><div id="prendas-root"></div><h2>Descripción registrada</h2><p class="bubble">${esc(item.info || item.titulo || 'Sin descripción adicional.')}</p><div data-prendas-text>${renderOutfit(item)}</div></div>`;
+  window.Prendas?.mount({client:cliente,slug:item.slug,admin:isAdmin(),askPassword:()=>askPassword('Abrir referencias de prendas')});
 }
 
 function detKey(d){
@@ -1358,7 +1371,13 @@ async function boot(){
   if (c && g){
     try{
       const r = await fetch('clientes/' + c + '/' + g + '.md?t=' + Date.now(), { cache:'no-store' });
-      if (!r.ok) throw 0;
+      if (!r.ok) {
+        if(c !== 'bianca-ald-7q2vd' || r.status !== 404) throw 0;
+        const ix=await (await fetch('clientes/'+c+'/index.json?t='+Date.now(),{cache:'no-store'})).json();
+        const rec=(ix.grabaciones||[]).find(rec=>(rec.guiones||[]).some(it=>it.slug===g));
+        if(!rec)throw 0;
+        renderReferenciaPrendas(rec.guiones.find(it=>it.slug===g),c,rec);return;
+      }
       const fetched = await r.text();
       const localKey = 'dvedit:' + c + '/' + g;
       let override = localStorage.getItem(localKey);

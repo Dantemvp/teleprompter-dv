@@ -56,3 +56,14 @@ El token de GitHub vive en Vercel (servidor), nunca en el navegador.
 - Fotos elegidas y propuestas se muestran por separado. Bianca/Dante pueden editar la indicación de una foto después de subirla; se guarda al salir del campo. El editor entra con el filtro de fotos elegidas y no tiene controles de escritura.
 - Los guardados de la misma pantalla se serializan y los conflictos entre personas se reintentan con ETag usando la clase real del SDK, no `error.name`.
 - Pruebas locales usan exclusivamente `prendas-qa/`, nunca `prendas/`. Ese espacio sólo puede activarse fuera de producción desde el servidor de pruebas. La imagen SVG de `tests/` se usa como entrada de galería, el navegador la transforma a JPEG antes de enviarla; la API sigue rechazando SVG directo.
+
+### Cobertura R12–R18 y retirada de fotos — 19 octubre 2026
+
+- Auditoría: 117 piezas en las siete grabaciones (68 archivos de guion y 49 tarjetas de referencia). Las tarjetas sin markdown tienen ahora vista interna con su información y enlace original; no se fabrican transcripciones. La API verifica también que esas tarjetas existan en el índice antes de permitir adjuntar prendas.
+- Los accesos internos y la navegación entre grabaciones conservan el enlace de referencias del rol. No se cambia el rol ni se hace pública la carga de imágenes.
+- Subrayado rojo: ninguna foto activa. Verde: una o más fotos cargadas, aunque aún no estén elegidas. Retirar la última foto devuelve el rojo. La selección para edición es un estado independiente.
+- Borrado propio: hasta cinco minutos desde la fecha de subida del servidor, desde el mismo navegador. Un secreto aleatorio local se envía por cabecera; sólo su SHA-256 se guarda junto a la foto. Ni el secreto ni el hash se devuelven en el manifiesto público autenticado. No se atribuye propiedad por el nombre escrito ni por compartir el enlace de tienda.
+- Las fotos previas sin identificador de propietario sólo puede retirarlas el administrador. Al expirar el plazo, el servidor rechaza el borrado propio aunque se manipule el botón o el reloj local. El administrador puede retirar en cualquier momento.
+- La retirada es reversible: las fotos desaparecen de la lectura y de las URLs autenticadas del cliente/editor, pero el administrador puede recuperarlas en **Fotos retiradas**. No se elimina el blob original ni se tocan guiones, estados de grabación o puntajes del POE.
+- El estado se refresca al volver a la pestaña y cada 30 segundos mientras esté visible, sin interrumpir un modal abierto.
+- Regresión real aislada: `node --env-file=.env.local scripts/prendas-lifecycle-check.mjs`. Verifica tarjeta sin markdown, propiedad, vencimiento, permisos, retirada, bloqueo de lectura y recuperación; limpia únicamente sus archivos de prueba.

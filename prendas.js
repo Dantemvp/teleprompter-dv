@@ -7,6 +7,12 @@
   const entrada = new URL(location.href);
   if (entrada.searchParams.get('c') === CLIENT && entrada.searchParams.get('prendas')) sessionStorage.setItem('prendas:' + CLIENT, entrada.searchParams.get('prendas'));
   let current;
+  const ownerStorage = 'prendas-owner:' + CLIENT;
+  let ownerKey = localStorage.getItem(ownerStorage);
+  if (!/^[a-f0-9]{64}$/.test(ownerKey || '')) {
+    ownerKey = [...crypto.getRandomValues(new Uint8Array(32))].map(x=>x.toString(16).padStart(2,'0')).join('');
+    localStorage.setItem(ownerStorage,ownerKey);
+  }
 
   async function imagenComprimida(file) {
     if (file.size > 25 * 1024 * 1024) throw new Error('La imagen supera 25 MB. Elige una foto o captura más pequeña.');
@@ -28,18 +34,19 @@
     document.body.classList.remove('prendas-dialog-open');
     const root = document.getElementById('prendas-root');
     if (!root || opts.client !== CLIENT || !opts.slug) return;
+    decorateLinks(opts.client);
     const access = sessionStorage.getItem('prendas:' + CLIENT);
     if (!opts.admin && !access) {
       root.innerHTML = '<aside class="prendas-locked">📷 <strong>Referencias de prendas</strong><p>Para aportar fotos, abre el enlace de Bianca o de la tienda que te compartió Dante. No necesitas crear una cuenta.</p></aside>';
       return;
     }
     const ctx = current = { ...opts, root, access, password: localStorage.getItem('dvpw'), abort: new AbortController(), state: { garments: [] }, role: '', dialog: null, busy: false };
-    ctx.originals = [...document.querySelectorAll('#v-conv .bubble, #v-conv .beat')].map(node => ({node, html:node.innerHTML, text:node.textContent}));
+    ctx.originals = [...document.querySelectorAll('#v-conv .bubble, #v-conv .beat, #v-conv .nota, #v-conv [data-prendas-text]')].map(node => ({node, html:node.innerHTML, text:node.textContent}));
     ctx.detected = (window.PrendasDetect?.identificar(ctx.originals.map(x => x.text).join('\n')) || []).map(name => ({id:window.PrendasDetect.idPara(opts.client,opts.slug,name),name,kind:'estilo',images:[],suggested:true}));
     root.innerHTML = '<details class="prendas-panel"><summary class="prendas-heading"><div><span class="prendas-eyebrow">FOTOS PARA LA EDICIÓN</span><h2>Prendas y referencias</h2><p>Toca una prenda marcada en el guion o abre este resumen.</p></div><span class="prendas-total" data-count>…</span></summary><div class="prendas-body"><div data-content>Cargando referencias…</div></div></details><p class="prendas-error" data-error role="status"></p>';
     ctx.error = mensaje => { if (ctx === current) root.querySelector('[data-error]').textContent = mensaje; };
     ctx.api = async (data = null) => {
-      const headers = {}; if (ctx.password && opts.admin) headers['X-Edit-Password'] = ctx.password; else if (access) headers.Authorization = 'Bearer ' + access;
+      const headers = { 'X-Prendas-Owner':ownerKey }; if (ctx.password && opts.admin) headers['X-Edit-Password'] = ctx.password; else if (access) headers.Authorization = 'Bearer ' + access;
       let url = ENDPOINT, init = { headers, signal: ctx.abort.signal };
       const payload = { client: opts.client, slug: opts.slug, ...data };
       if (data) { headers['Content-Type'] = 'application/json'; init.method = 'POST'; init.body = JSON.stringify(payload); }
@@ -48,6 +55,7 @@
       if (r.status === 401 && access && headers['X-Edit-Password']) { delete headers['X-Edit-Password']; headers.Authorization = 'Bearer ' + access; ctx.password = null; r = await fetch(url, init); }
       const result = await r.json();
       if (!r.ok) throw new Error(result.error || 'No se pudo guardar.');
+      if(result.serverNow) ctx.clockOffset=result.serverNow-Date.now();
       return result;
     };
     ctx.save = data => {
@@ -56,18 +64,24 @@
       });
       ctx.write=task;return task;
     };
-    ctx.refresh = async () => { if(ctx.busy) return; try { ctx.state = await ctx.api(); ctx.role = ctx.state.role; render(ctx); } catch(error) { if(error.name !== 'AbortError') ctx.error(error.message); } };
+    ctx.refresh = async () => { if(ctx.busy) return; try { const next=await ctx.api(); const changed=JSON.stringify(next.garments)!==JSON.stringify(ctx.state.garments)||ctx.role!==next.role;ctx.state=next;ctx.role=next.role;if(changed)render(ctx); } catch(error) { if(error.name !== 'AbortError') ctx.error(error.message); } };
     window.addEventListener('focus', () => { if (!ctx.dialog?.open) ctx.refresh(); }, { signal:ctx.abort.signal });
+    const refreshVisible=()=>{if(document.visibilityState==='visible' && !ctx.dialog?.open)ctx.refresh();};
+    document.addEventListener('visibilitychange',refreshVisible,{signal:ctx.abort.signal});
+    const refreshTimer=setInterval(refreshVisible,30000);
+    ctx.abort.signal.addEventListener('abort',()=>clearInterval(refreshTimer),{once:true});
     root.addEventListener('click', async e => {
       const b = e.target.closest('button'); if (!b) return;
       try {
         if (b.dataset.garment) return openGarment(ctx, b.dataset.garment);
         if (b.dataset.action === 'activate') {
           const password = await opts.askPassword(); if (!password) return;
-          ctx.password = password; ctx.state = await ctx.api(); localStorage.setItem('dvpw', password); ctx.role = ctx.state.role; render(ctx);
+          ctx.password = password; const state = await ctx.api();
+          if(state.role!=='admin')throw new Error('La contraseña de administrador no es correcta.');
+          ctx.state=state;localStorage.setItem('dvpw', password); ctx.role = ctx.state.role; render(ctx);
         }
         if (b.dataset.action === 'new') return newGarment(ctx);
-        if (b.dataset.action === 'refresh') { b.disabled = true; await ctx.refresh(); return; }
+        if (b.dataset.action === 'refresh') { b.disabled = true; try{await ctx.refresh();}finally{b.disabled=false;} return; }
         if (b.dataset.filter) { ctx.filter = b.dataset.filter; render(ctx); return; }
         if (b.dataset.share) {
           b.disabled = true;
@@ -90,7 +104,7 @@
   }
 
   function allGarments(ctx) {
-    const stored = ctx.state.garments;
+    const stored = ctx.state.garments.map(g=>({...g,images:g.images.filter(i=>!i.deletedAt),deletedImages:g.images.filter(i=>i.deletedAt)}));
     const normal = window.PrendasDetect.normal;
     return [...stored, ...ctx.detected.filter(g => !stored.some(s => normal(s.name) === normal(g.name)))].slice(0,40);
   }
@@ -111,13 +125,14 @@
       '<div class="prendas-list">' + visible.map(g => {
         const photo = g.images.find(i=>i.selected) || g.images[0];
         const status = g.images.some(i=>i.selected) ? '✓ Lista para edición' : g.images.length ? 'Fotos recibidas · falta elegir' : 'Sin foto todavía';
-        return '<button type="button" class="prenda-card ' + (g.images.some(i=>i.selected)?'lista':'') + '" data-garment="' + g.id + '">' +
+        return '<button type="button" class="prenda-card ' + (g.images.length?'foto-cargada':'foto-pendiente') + (g.images.some(i=>i.selected)?' lista':'') + '" data-garment="' + g.id + '">' +
           (photo ? '<img class="prenda-thumb" alt="" loading="lazy" src="' + esc(imageUrl(ctx,photo)) + '">' : '<span class="prenda-placeholder" aria-hidden="true">＋ 📷</span>') +
           '<span class="prenda-card-text"><strong>' + esc(g.name) + '</strong><span>' + status + '</span><small>' + g.images.length + (g.images.length===1?' foto':' fotos') + (g.suggested?' · Detectada en el guion':'') + '</small></span><span aria-hidden="true">↗</span></button>';
       }).join('') + '</div>' +
       (!visible.length ? '<p class="prendas-empty">' + (ctx.filter==='selected' ? 'Todavía no hay fotos elegidas para edición. Las propuestas no son una autorización.' : 'Agrega una prenda o referencia que necesite este guion.') + '</p>' : '') +
       (!editor ? '<button class="prendas-add" data-action="new">＋ Otra prenda o referencia</button>' : '') +
-      '<p class="prendas-help">' + (editor ? 'Usa las fotos seleccionadas. Si una prenda no tiene selección, consulta antes de elegir por tu cuenta.' : 'Las prendas detectadas son sugerencias del texto, no decisiones de moda. Puedes agregar otras. Las fotos se guardan automáticamente; Bianca o Dante eligen cuáles usar.') + '</p>' +
+      '<p class="prendas-help">Rojo: falta foto. Verde: foto cargada (no significa aprobada). ' + (editor ? 'Usa las fotos seleccionadas. Si una prenda no tiene selección, consulta antes de elegir por tu cuenta.' : 'Las prendas detectadas son sugerencias del texto, no decisiones de moda. Puedes agregar otras. Bianca o Dante eligen cuáles usar.') + '</p>' +
+      (ctx.admin && ctx.role!=='admin'?'<button data-action="activate">Abrir controles de administrador</button>':'')+
       (ctx.role==='admin' ? '<details class="prendas-share"><summary>Compartir con Bianca, tienda o editor</summary><div class="prendas-tools"><button data-share="bianca">Bianca · elegir fotos</button><button data-share="tienda">Tienda · aportar fotos</button><button data-share="editor">Editor · consultar</button></div></details>' : '');
     // Conservar las indicaciones y el marcado original del guion.
     ctx.originals.forEach(({node, html}) => {
@@ -140,6 +155,8 @@
           if(!g) continue;
           const button=document.createElement('button'); button.type='button'; button.className='prenda-inline';
           button.dataset.prendaInline=g.id; button.textContent=match[0]; button.setAttribute('aria-label','Referencias de '+g.name);
+          button.classList.add(g.images.length?'foto-cargada':'foto-pendiente');
+          button.title=g.images.length?'Foto cargada; toca para verla':'Falta foto; toca para subirla';
           if(g.images.length) {button.dataset.photos=String(g.images.length);button.classList.add('con-fotos');}
           if(g.images.some(i=>i.selected)) button.classList.add('elegida');
           fragment.append(button);last=match.index+match[0].length;
@@ -179,10 +196,11 @@
       '<div class="prendas-caption">'+(i.selected?'<span class="prendas-badge">✓ Elegida por '+esc(i.selectedBy)+'</span>':'<span class="prendas-proposal">Propuesta · no seleccionada</span>')+
       '<small>Compartió: '+esc(i.author)+'</small>'+
       (canChoose?'<label>Indicación para el editor<textarea data-image-note="'+i.id+'" maxlength="500" placeholder="Ej. usar esta prenda en blanco">'+esc(i.note)+'</textarea></label><span class="prendas-note-status" data-note-status="'+i.id+'" role="status"></span>':'<p>'+esc(i.note)+'</p>')+
-      (canChoose?'<button class="'+(i.selected?'':'primary')+'" data-select="'+i.id+'" data-selected="'+(!i.selected)+'">'+(i.selected?'Quitar de elegidas':'✓ Usar esta foto')+'</button>':'')+'</div></article>';
+      (canChoose?'<button class="'+(i.selected?'':'primary')+'" data-select="'+i.id+'" data-selected="'+(!i.selected)+'">'+(i.selected?'Quitar de elegidas':'✓ Usar esta foto')+'</button>':'')+
+      (i.canDelete?'<button class="prendas-delete" data-delete="'+i.id+'" '+(ctx.role!=='admin'?'data-until="'+esc(i.deleteUntil)+'"':'')+'>'+ (ctx.role==='admin'?'Borrar foto':'Borrar mi foto · 5:00')+'</button>':'<small>Solo el administrador puede borrar esta foto.</small>')+'</div></article>';
     const uploader = canUpload ?
       '<section class="prendas-upload"><div class="prendas-tools prendas-capture"><button class="primary" data-camera>📷 Tomar foto</button><button data-gallery>＋ Fotos / capturas</button></div>'+
-      '<p class="prendas-help">Elige una o varias: se guardan aquí automáticamente.</p>'+
+      '<p class="prendas-help">Se guardan automáticamente. Tienes 5 minutos para borrar tus fotos desde este navegador; después, solo el administrador.</p>'+
       '<details class="prendas-upload-options"><summary>Añadir tu nombre o una indicación (opcional)</summary><label>Tu nombre<input data-author maxlength="60" value="'+esc(localStorage.getItem('prendas-author')||(ctx.role==='bianca'?'Bianca':''))+'" placeholder="Ej. Rubí"></label><label>Qué debe saber el editor<textarea data-note maxlength="500" placeholder="Ej. esta prenda la tenemos en blanco"></textarea></label></details>'+
       '<input hidden data-camera-file type="file" accept="image/*" capture="environment"><input hidden data-gallery-file type="file" accept="image/*" multiple>'+
       '<p data-upload-status class="prendas-notice" role="status" aria-live="polite"></p><button hidden data-retry>Reintentar fotos pendientes</button></section>' : '';
@@ -192,7 +210,21 @@
       '<section class="prendas-selected-group"><h3>✓ Para usar en edición <span>'+selected.length+'</span></h3>'+
       (selected.length?'<div class="prendas-grid">'+selected.map(card).join('')+'</div>':'<p class="prendas-empty">Todavía no hay una foto elegida. '+(canChoose?'Cuando veas la correcta, toca «Usar esta foto».':'No elegir una prenda por cuenta propia.')+'</p>')+'</section>'+
       '<section class="prendas-proposals-group"><h3>Fotos propuestas <span>'+proposals.length+'</span></h3>'+
-      (proposals.length?'<div class="prendas-grid">'+proposals.map(card).join('')+'</div>':'<p class="prendas-empty">'+(canUpload?'Puedes aportar varias fotos de la tienda o capturas de Pinterest y redes. No se reemplazan las anteriores.':'No hay más fotos propuestas para esta prenda.')+'</p>')+'</section>');
+      (proposals.length?'<div class="prendas-grid">'+proposals.map(card).join('')+'</div>':'<p class="prendas-empty">'+(canUpload?'Puedes aportar varias fotos de la tienda o capturas de Pinterest y redes. No se reemplazan las anteriores.':'No hay más fotos propuestas para esta prenda.')+'</p>')+'</section>'+
+      (ctx.role==='admin' && g.deletedImages?.length?'<details class="prendas-trash"><summary>Fotos retiradas ('+g.deletedImages.length+')</summary>'+g.deletedImages.map(i=>'<p>'+esc(i.author)+' · '+esc(i.note||'Sin indicación')+' <button data-restore="'+i.id+'">Recuperar foto</button></p>').join('')+'</details>':''));
+    d.querySelectorAll('[data-delete],[data-restore]').forEach(b=>b.onclick=async()=>{
+      b.disabled=true;
+      try{await ctx.save({action:b.dataset.restore?'restore-image':'delete-image',garmentId:id,imageId:b.dataset.restore||b.dataset.delete});openGarment(ctx,id);}
+      catch(error){d.querySelector('[data-dialog-error]').textContent=error.message;b.disabled=false;}
+    });
+    const tick=()=>d.querySelectorAll('[data-until]').forEach(b=>{
+      const remaining=Math.max(0,Math.ceil((Date.parse(b.dataset.until)-Date.now()-(ctx.clockOffset||0))/1000));
+      b.textContent=remaining?'Borrar mi foto · '+Math.floor(remaining/60)+':'+String(remaining%60).padStart(2,'0'):'Tiempo terminado · solo administrador';
+      if(!remaining)b.disabled=true;
+    });
+    tick();const countdown=setInterval(tick,1000);
+    d.addEventListener('close',()=>clearInterval(countdown),{once:true});
+    ctx.abort.signal.addEventListener('abort',()=>clearInterval(countdown),{once:true});
     d.querySelectorAll('[data-select]').forEach(b=>b.onclick=async()=>{
       b.disabled=true;
       try {await ctx.save({action:'select',garmentId:id,imageId:b.dataset.select,selected:b.dataset.selected==='true'});openGarment(ctx,id);}
@@ -238,7 +270,7 @@
     const choose=e=>{
       const files=[...e.target.files];e.target.value='';if(!files.length)return;
       if(queue.length){d.querySelector('[data-dialog-error]').textContent='Primero reintenta las fotos pendientes para no perderlas.';return;}
-      const count=ctx.state.garments.find(x=>x.id===id)?.images.length||0;
+      const count=ctx.state.garments.find(x=>x.id===id)?.images.filter(i=>!i.deletedAt).length||0;
       if(files.length+count>12){d.querySelector('[data-dialog-error]').textContent='Máximo 12 fotos por prenda. Puedes elegir '+(12-count)+' más.';return;}
       queue=files.map(file=>({file,id:crypto.randomUUID()}));upload();
     };
@@ -246,5 +278,16 @@
     d.querySelector('[data-gallery-file]').onchange=choose;
     d.querySelector('[data-retry]').onclick=upload;
   }
-  window.Prendas = { mount };
+  function url(value, client) {
+    const access=sessionStorage.getItem('prendas:'+CLIENT);
+    if(client!==CLIENT || !access)return value;
+    const u=new URL(value,location.href);
+    if(u.origin===location.origin && u.searchParams.get('c')===CLIENT)u.searchParams.set('prendas',access);
+    return u.href;
+  }
+  function decorateLinks(client) {
+    if(client!==CLIENT)return;
+    document.querySelectorAll('a[href]').forEach(a=>a.href=url(a.href,client));
+  }
+  window.Prendas = { mount, url, decorateLinks };
 })();

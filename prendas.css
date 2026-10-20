@@ -63,6 +63,13 @@
 .prenda-inline::after{content:' ＋📷';font-size:.68em}
 .prenda-inline.con-fotos::after{content:' 📷 ' attr(data-photos)}
 .prenda-inline.elegida{background:#d2efdd;border-bottom-style:solid}
+.prenda-inline.foto-pendiente{color:#9f242b;background:#fff0f0;border-bottom:2px solid #d43d46}
+.prenda-inline.foto-cargada{color:#075e3d;background:#e0f4e6;border-bottom:2px solid #15834c}
+.prenda-card.foto-pendiente{border-color:#e8c1c3}
+.prenda-card.foto-cargada{border-color:#75bd91;background:#f1faf4}
+.prendas-caption .prendas-delete{color:#a62a32;border-color:#e0b5b8;background:#fff6f6;font-size:12px}
+.prendas-caption .prendas-delete:disabled{color:#666;background:#f4f4f4;border-color:#ddd;cursor:default;opacity:1}
+.prendas-trash{padding:12px;border:1px dashed var(--line);border-radius:12px;font-size:12px}
 .prendas-dialog-open{overflow:hidden}
 .prendas-modal{width:min(760px,calc(100% - 32px));max-height:92dvh;overscroll-behavior:contain;box-shadow:0 24px 90px #10261d30}
 .prendas-modal-head h2{margin:0;text-transform:none}

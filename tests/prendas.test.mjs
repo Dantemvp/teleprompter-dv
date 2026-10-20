@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { runInNewContext } from 'node:vm';
-import { CLIENT, crearAcceso, leerAcceso, cambiarEstado, tipoImagen } from '../lib/prendas-core.mjs';
+import { CLIENT, crearAcceso, leerAcceso, cambiarEstado, tipoImagen, puedeBorrar, BORRADO_PROPIO_MS } from '../lib/prendas-core.mjs';
 
 const secret = 'sólo-para-pruebas-locales';
 const id = '12345678-1234-1234-1234-123456789012';
@@ -48,8 +48,31 @@ test('detecta prendas en cualquier guion y conserva materiales sin inventar prod
   const names = [...detect.identificar('Un top de encaje forrado, chamarra de gamuza y bota coñac. Otra chamarra de gamuza. Clóset, autoestima y tendencia.')];
   assert.deepEqual(names, ['top de encaje forrado','chamarra de gamuza','bota coñac']);
   assert.equal(detect.identificar('Tenemos tops y faldas, no autopistas ni atascos.').length, 2);
+  assert.deepEqual([...detect.identificar('top rojo y blusa azul con pantalón verde')],['top rojo','blusa azul','pantalón verde']);
   assert.equal(detect.idPara(CLIENT,'g-151','Top de encaje'),detect.idPara(CLIENT,'g-151','TOP DE ENCAJE'));
   assert.notEqual(detect.idPara(CLIENT,'g-151','Top'),detect.idPara(CLIENT,'g-152','Top'));
+});
+
+test('solo quien subió la foto puede retirarla antes de cinco minutos, nunca después',()=>{
+  const created='2026-10-19T12:00:00.000Z',time=Date.parse(created),owner='a'.repeat(64);
+  const image={id:foto,ownerHash:owner,createdAt:created,selected:true};
+  assert.equal(puedeBorrar(image,'tienda',owner,time+BORRADO_PROPIO_MS-1),true);
+  assert.equal(puedeBorrar(image,'tienda',owner,time+BORRADO_PROPIO_MS),false);
+  assert.equal(puedeBorrar(image,'bianca','b'.repeat(64),time+1),false);
+  assert.equal(puedeBorrar(image,'editor',owner,time+1),false);
+  assert.equal(puedeBorrar(image,'tienda',owner,time-1),false);
+  assert.equal(puedeBorrar({...image,ownerHash:null},'tienda',owner,time+1),false);
+  assert.equal(puedeBorrar(image,'admin',null,time+86400000),true);
+  const state={garments:[{id,images:[image]}]},data={action:'delete-image',garmentId:id,imageId:foto};
+  assert.throws(()=>cambiarEstado(state,data,'tienda',new Date(time+BORRADO_PROPIO_MS).toISOString(),owner),{status:403});
+  assert.throws(()=>cambiarEstado(state,data,'bianca',created,'b'.repeat(64)),{status:403});
+  const removed=cambiarEstado(state,data,'tienda',new Date(time+1000).toISOString(),owner);
+  assert.equal(removed.garments[0].images[0].selected,false);
+  assert.ok(removed.garments[0].images[0].deletedAt);
+  assert.equal(state.garments[0].images[0].deletedAt,undefined);
+  const restore={action:'restore-image',garmentId:id,imageId:foto};
+  assert.throws(()=>cambiarEstado(removed,restore,'bianca'),{status:403});
+  assert.equal(cambiarEstado(removed,restore,'admin').garments[0].images[0].deletedAt,undefined);
 });
 
 test('guardar una indicación no cambia la selección ni elimina fotos', () => {

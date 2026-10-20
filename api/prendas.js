@@ -1,6 +1,7 @@
 import { get, put, BlobPreconditionFailedError } from '@vercel/blob';
 import { Readable } from 'node:stream';
-import { CLIENT, crearAcceso, leerAcceso, idValido, tipoImagen, cambiarEstado, fallo } from '../lib/prendas-core.mjs';
+import { createHash } from 'node:crypto';
+import { CLIENT, crearAcceso, leerAcceso, idValido, tipoImagen, cambiarEstado, fallo, puedeBorrar, BORRADO_PROPIO_MS } from '../lib/prendas-core.mjs';
 
 const opciones = { access: 'private', useCache: false };
 async function cargar(path) {
@@ -12,7 +13,18 @@ async function verificarGuion(client, slug) {
   const r = await fetch(`https://api.github.com/repos/${process.env.GH_REPO || 'Dantemvp/teleprompter-dv'}/contents/clientes/${client}/${slug}.md`, {
     headers: { ...(process.env.GH_TOKEN ? { Authorization: `Bearer ${process.env.GH_TOKEN}` } : {}), Accept: 'application/vnd.github+json', 'User-Agent': 'teleprompter-prendas' },
   });
-  if (!r.ok) throw fallo('No se encontró el guion original.', 404);
+  if (r.ok) return;
+  if (r.status !== 404) throw fallo('No se pudo verificar el guion. Inténtalo de nuevo.', 503);
+  const index = await fetch(`https://raw.githubusercontent.com/${process.env.GH_REPO || 'Dantemvp/teleprompter-dv'}/main/clientes/${client}/index.json`);
+  if (!index.ok) throw fallo('No se encontró la grabación original.', 404);
+  const data = await index.json();
+  if (!data.grabaciones?.some(rec=>rec.guiones?.some(it=>it.slug===slug))) throw fallo('No se encontró el guion o referencia original.', 404);
+}
+function respuesta(state, role, ownerHash) {
+  return { garments: state.garments.map(g=>({...g,images:g.images.filter(i=>!i.deletedAt || role==='admin').map(i=>{
+    const {ownerHash:privateOwner,...publicImage}=i;
+    return {...publicImage,canDelete:puedeBorrar(i,role,ownerHash),deleteUntil:ownerHash && ownerHash===privateOwner && !i.deletedAt ? new Date(Date.parse(i.createdAt)+BORRADO_PROPIO_MS).toISOString():null};
+  })})), role, serverNow:Date.now(), viewAccess:crearAcceso(CLIENT,'editor',process.env.PRENDAS_SECRET) };
 }
 export default async function handler(req, res) {
   const allowed = new Set(['https://dantemvp.github.io', 'https://teleprompter-dv.vercel.app', process.env.ALLOW_ORIGIN]);
@@ -20,7 +32,7 @@ export default async function handler(req, res) {
   if (req.headers.origin && !allowed.has(req.headers.origin)) return res.status(403).json({ error: 'Origen no permitido.' });
   if (req.headers.origin) res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Edit-Password');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Edit-Password, X-Prendas-Owner');
   res.setHeader('Vary', 'Origin');
   res.setHeader('Cache-Control', 'private, no-store');
   res.setHeader('Referrer-Policy', 'no-referrer');
@@ -36,6 +48,8 @@ export default async function handler(req, res) {
     const role = admin ? 'admin'
       : leerAcceso(String(req.headers.authorization || '').replace(/^Bearer /, '') || data.access, client, process.env.PRENDAS_SECRET);
     if (!role) throw fallo('Abre el enlace de referencias que te compartió Dante.', 401);
+    const owner = req.headers['x-prendas-owner'];
+    const ownerHash = typeof owner === 'string' && /^[a-f0-9]{64}$/.test(owner) ? createHash('sha256').update(owner).digest('hex') : null;
     if (!process.env.PRENDAS_SECRET) throw fallo('Falta configurar el acceso a referencias.', 503);
     if (data.action === 'share') {
       if (role !== 'admin') throw fallo('Sólo Dante puede generar accesos.', 403);
@@ -48,17 +62,17 @@ export default async function handler(req, res) {
     const actual = await cargar(path);
     if (req.method === 'GET') {
       if (data.image) {
-        if (!idValido(data.image) || !actual.state.garments.some(g => g.images.some(i => i.id === data.image))) throw fallo('Imagen no encontrada.', 404);
+        if (!idValido(data.image) || !actual.state.garments.some(g => g.images.some(i => i.id === data.image && (!i.deletedAt || role==='admin')))) throw fallo('Imagen no encontrada.', 404);
         const image = await get(`${prefix}/images/${data.image}`, { access: 'private' });
         if (!image) throw fallo('Imagen no encontrada.', 404);
         res.setHeader('Content-Type', image.blob.contentType);
         res.setHeader('X-Content-Type-Options', 'nosniff');
         return Readable.fromWeb(image.stream).pipe(res);
       }
-      return res.json({ ...actual.state, role, viewAccess: crearAcceso(client, 'editor', process.env.PRENDAS_SECRET) });
+      return res.json(respuesta(actual.state,role,ownerHash));
     }
     // Validamos antes de guardar archivos, incluso si la petición repite un ID.
-    cambiarEstado(actual.state, data, role);
+    cambiarEstado(actual.state, data, role, undefined, ownerHash);
     if (data.action === 'add-garment') await verificarGuion(client, slug);
     if (data.action === 'add-image') {
       if (typeof data.image !== 'string' || data.image.length > 1500000 || !/^[A-Za-z0-9+/]+={0,2}$/.test(data.image)) throw fallo('Imagen demasiado grande o inválida.');
@@ -72,10 +86,10 @@ export default async function handler(req, res) {
     }
     for (let intento = 0; intento < 4; intento++) {
       const { state, etag } = intento === 0 ? actual : await cargar(path);
-      const next = cambiarEstado(state, data, role);
+      const next = cambiarEstado(state, data, role, undefined, ownerHash);
       try {
         await put(path, JSON.stringify(next), { access: 'private', addRandomSuffix: false, contentType: 'application/json', allowOverwrite: Boolean(etag), ...(etag ? { ifMatch: etag } : {}), cacheControlMaxAge: 60 });
-        return res.json({ ...next, role, viewAccess: crearAcceso(client, 'editor', process.env.PRENDAS_SECRET) });
+        return res.json(respuesta(next,role,ownerHash));
       } catch (error) {
         if (!(error instanceof BlobPreconditionFailedError) && !/already exists/i.test(error.message)) throw error;
       }
