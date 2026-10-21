@@ -3,10 +3,10 @@
   "grabaciones": [
     {
       "rec": "R19",
-      "nombre": "Grabación 19 · conciertos desde el 24 de octubre",
+      "nombre": "Grabación 19 · conciertos y transiciones",
       "fecha": "23/10/2026",
       "locacion": "Por confirmar",
-      "ventana": "4 borradores · publicación desde el 24/10 · análisis hasta el 08/11/2026",
+      "ventana": "4 guiones · 4 transiciones · publicación desde el 24/10 · análisis hasta el 08/11/2026",
       "nota": "Fechas verificadas el 20/10; cotejo visual completado el 21/10. Estructura basada en los dos TikToks enviados por Dante: lista ágil con prendas, preferencia personal y pregunta final. Pinterest revisado; combinaciones documentadas en el expediente. Pendiente seleccionar fotos exactas con Bianca. No duplicar R18.",
       "timeline": [
         {
@@ -19,6 +19,17 @@
             "g-155"
           ],
           "nota": "Bad Gyal 24/10; Farruko/Turizo 25/10; Aitana 27/10; rock 30/10. Cada tarjeta abre el expediente de fuentes en «Ver referencia». La ropa se consulta y adjunta desde las prendas marcadas del guion."
+        },
+        {
+          "hora": "",
+          "titulo": "TRANSICIONES · REFERENCIAS DE ALMA",
+          "slugs": [
+            "g-156",
+            "g-157",
+            "g-158",
+            "g-159"
+          ],
+          "nota": "Cuatro referencias originales compartidas el 21/10. Sin guion hablado añadido."
         }
       ],
       "guiones": [
@@ -105,6 +116,50 @@
             ]
           },
           "thumb": "clientes/bianca-ald-7q2vd/refs/r19-formato.jpg"
+        },
+        {
+          "slug": "g-156",
+          "titulo": "Transición · lista para un cumpleaños",
+          "info": "13 seg · Referencia de @kuebracr · Cambio de look para una celebración. Compartida por Alma.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSgy2dcLG/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-156.jpg"
+        },
+        {
+          "slug": "g-157",
+          "titulo": "Transición · looks de oficina",
+          "info": "13 seg · Referencia de @viktoriaandwoods · Recap de looks de oficina. Adaptación propuesta: máximo dos looks. Compartida por Alma.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSgy2644t/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-157.jpg"
+        },
+        {
+          "slug": "g-158",
+          "titulo": "Transición · vestido rosa de fiesta",
+          "info": "12 seg · Referencia de @richelle_zh · Presentación de un vestido rosa de fiesta. Compartida por Alma.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSgy2r4kb/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-158.jpg"
+        },
+        {
+          "slug": "g-159",
+          "titulo": "Transición · cambio de outfit",
+          "info": "12 seg · Referencia de @valeriaveng · Transición visual de outfit. Compartida por Alma.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSgy21f3F/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-159.jpg"
         }
       ]
     },
