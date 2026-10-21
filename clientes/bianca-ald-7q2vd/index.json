@@ -6,7 +6,7 @@
       "nombre": "Grabación 19 · conciertos, estilo y transiciones",
       "fecha": "23/10/2026",
       "locacion": "Por confirmar",
-      "ventana": "6 guiones · 7 transiciones · publicación desde el 24/10 · análisis hasta el 08/11/2026",
+      "ventana": "6 guiones · 7 transiciones · 1 chusco · publicación desde el 24/10 · análisis hasta el 08/11/2026",
       "nota": "Fechas verificadas el 20/10; cotejo visual completado el 21/10. Estructura basada en los dos TikToks enviados por Dante: lista ágil con prendas, preferencia personal y pregunta final. Pinterest revisado; combinaciones documentadas en el expediente. Pendiente seleccionar fotos exactas con Bianca. No duplicar R18.",
       "timeline": [
         {
@@ -42,6 +42,14 @@
             "g-164"
           ],
           "nota": "Adaptaciones de las referencias de Marta Salerno compartidas por Alma."
+        },
+        {
+          "hora": "",
+          "titulo": "CHUSCOS · BOUTIQUE",
+          "slugs": [
+            "g-165"
+          ],
+          "nota": "Humor breve; referencia original en la tarjeta."
         }
       ],
       "guiones": [
@@ -227,6 +235,17 @@
           "locutor": "Bianca",
           "link": "https://vt.tiktok.com/ZSgyjGrbb/",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-164.jpg"
+        },
+        {
+          "slug": "g-165",
+          "titulo": "Solo compro ropa los días con ese",
+          "info": "10–15 seg · CHUSCO · Bianca · Remate de humor sobre comprar ropa de lunes a sábado.",
+          "categoria": "chusco",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://www.instagram.com/reel/DcjDjKNtrRE/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-165.jpg"
         }
       ]
     },
