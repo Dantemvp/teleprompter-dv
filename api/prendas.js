@@ -1,3 +1,4 @@
+import { canEdit } from '../lib/edit-auth.mjs';
 import { get, put, BlobPreconditionFailedError } from '@vercel/blob';
 import { Readable } from 'node:stream';
 import { createHash } from 'node:crypto';
@@ -56,7 +57,7 @@ export default async function handler(req, res) {
     if (client !== CLIENT) throw fallo('Referencias no habilitadas para ese cliente.', 404);
     if (!process.env.PRENDAS_SECRET) throw fallo('Falta configurar el acceso a referencias.', 503);
     const password = req.headers['x-edit-password'];
-    const admin = (process.env.EDIT_PASSWORD && password === process.env.EDIT_PASSWORD)
+    const admin = canEdit(password)
       || (process.env.PRENDAS_SECRET && req.headers['x-prendas-admin'] === process.env.PRENDAS_SECRET);
     const provided=String(req.headers.authorization || '').replace(/^Bearer /, '') || data.access;
     let role = admin ? 'admin' : leerAcceso(provided, client, process.env.PRENDAS_SECRET,Date.now(),slug);

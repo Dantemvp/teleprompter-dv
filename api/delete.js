@@ -1,3 +1,4 @@
+import { canEdit } from '../lib/edit-auth.mjs';
 // Vercel serverless function — elimina un guion: lo quita del index.json del cliente y borra su .md del repo.
 // Mismas env vars: GH_TOKEN, GH_REPO, EDIT_PASSWORD, (opcional) ALLOW_ORIGIN
 
@@ -14,7 +15,7 @@ export default async function handler(req, res){
   if (typeof body === 'string') { try { body = JSON.parse(body); } catch { body = {}; } }
   const { password, client, slug } = body || {};
 
-  if (!process.env.EDIT_PASSWORD || password !== process.env.EDIT_PASSWORD)
+  if (!canEdit(password))
     return res.status(401).send('Contraseña incorrecta');
   if (!/^[a-z0-9\-_]+$/i.test(client || '') || !/^[a-z0-9\-_]+$/i.test(slug || ''))
     return res.status(400).send('Parámetros inválidos');

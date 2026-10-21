@@ -1,3 +1,4 @@
+import { canEdit } from '../lib/edit-auth.mjs';
 // Vercel serverless function — organiza el index.json de un cliente.
 // Acciones: "add-rec", "move" y "delete-timeline" (quitar un bloque del orden de grabación).
 // Mismas env vars que save.js/status.js: GH_TOKEN, GH_REPO, EDIT_PASSWORD, (opcional) ALLOW_ORIGIN
@@ -15,7 +16,7 @@ export default async function handler(req, res){
   if (typeof body === 'string') { try { body = JSON.parse(body); } catch { body = {}; } }
   const { password, client, action, rec, nombre, slug, toRec, categoria, timelineIndex, timelineTitle } = body || {};
 
-  if (!process.env.EDIT_PASSWORD || password !== process.env.EDIT_PASSWORD)
+  if (!canEdit(password))
     return res.status(401).send('Contraseña incorrecta');
   if (!/^[a-z0-9\-_]+$/i.test(client || ''))
     return res.status(400).send('Cliente inválido');
