@@ -3,10 +3,10 @@
   "grabaciones": [
     {
       "rec": "R19",
-      "nombre": "Grabación 19 · conciertos y transiciones",
+      "nombre": "Grabación 19 · conciertos, estilo y transiciones",
       "fecha": "23/10/2026",
       "locacion": "Por confirmar",
-      "ventana": "4 guiones · 4 transiciones · publicación desde el 24/10 · análisis hasta el 08/11/2026",
+      "ventana": "6 guiones · 7 transiciones · publicación desde el 24/10 · análisis hasta el 08/11/2026",
       "nota": "Fechas verificadas el 20/10; cotejo visual completado el 21/10. Estructura basada en los dos TikToks enviados por Dante: lista ágil con prendas, preferencia personal y pregunta final. Pinterest revisado; combinaciones documentadas en el expediente. Pendiente seleccionar fotos exactas con Bianca. No duplicar R18.",
       "timeline": [
         {
@@ -27,9 +27,21 @@
             "g-156",
             "g-157",
             "g-158",
-            "g-159"
+            "g-159",
+            "g-160",
+            "g-161",
+            "g-162"
           ],
-          "nota": "Cuatro referencias originales compartidas el 21/10. Sin guion hablado añadido."
+          "nota": "Siete referencias originales compartidas por Alma el 21/10. Sin guion hablado añadido."
+        },
+        {
+          "hora": "",
+          "titulo": "GUIONES · ESTILO Y BOUTIQUE · REFERENCIAS DE ALMA",
+          "slugs": [
+            "g-163",
+            "g-164"
+          ],
+          "nota": "Adaptaciones de las referencias de Marta Salerno compartidas por Alma."
         }
       ],
       "guiones": [
@@ -160,6 +172,61 @@
           "locutor": "Bianca",
           "link": "https://vt.tiktok.com/ZSgy21f3F/",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-159.jpg"
+        },
+        {
+          "slug": "g-160",
+          "titulo": "Transición · vestido rojo de fiesta",
+          "info": "10 seg · Referencia de @adu.xoxo · Vestido rojo de fiesta. Compartida por Alma.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSgyjJmX5/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-160.jpg"
+        },
+        {
+          "slug": "g-161",
+          "titulo": "Transición · combinaciones con pantalón cargo",
+          "info": "20 seg · Referencia de @elorae.official · Adaptación propuesta: máximo dos combinaciones con cargo. Compartida por Alma.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSgyjF5XF/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-161.jpg"
+        },
+        {
+          "slug": "g-162",
+          "titulo": "Transición · vestido amarillo de fiesta",
+          "info": "9 seg · Referencia de @elizabeth.hinton1 · Vestido amarillo de fiesta. Compartida por Alma.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSgyjJoYN/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-162.jpg"
+        },
+        {
+          "slug": "g-163",
+          "titulo": "Esa tienda que siempre pasas de largo",
+          "info": "70–85 seg · Bianca · Adaptación de la referencia sobre descubrir tiendas locales, sin prometer prendas exclusivas.",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSgyjP38M/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-163.jpg"
+        },
+        {
+          "slug": "g-164",
+          "titulo": "Tres ideas que te limitan al vestir elegante",
+          "info": "70–85 seg · Bianca · Leopardo, elegancia sin aburrimiento y ropa ajustada. Conserva los tres temas de la referencia.",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSgyjGrbb/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-164.jpg"
         }
       ]
     },
