@@ -7,6 +7,7 @@ const endpoint='http://localhost:4173/api/prendas';
 const base={client:CLIENT,slug:'g-71'},id=randomUUID(),imageId=randomUUID();
 const root='prendas-qa/'+CLIENT+'/g-71',manifest=root+'/manifest.json';
 const owner='a'.repeat(64),other='b'.repeat(64);
+const replacementId=randomUUID();
 const extraImages=Array.from({length:3},()=>randomUUID());
 const bootstrap=await fetch(endpoint+'?'+new URLSearchParams(base));
 const publicState=await bootstrap.json();
@@ -49,12 +50,20 @@ try{
  assert.ok(state.garments[0].images.slice(1).every(i=>i.note==='Referencia concurrente '+i.id));
  state.garments[0].images[0].createdAt=new Date(Date.now()-6*60000).toISOString();
  await put(manifest,JSON.stringify(state),{access:'private',addRandomSuffix:false,allowOverwrite:true,ifMatch:saved.blob.etag,contentType:'application/json'});
- assert.equal((await request(null)).body.garments[0].images[0].canDelete,false);
- assert.equal((await request(remove)).status,403,'server rejects expired owner even if client is changed');
- assert.equal((await request(remove,owner,true)).status,200,'administrator can remove after deadline');
- console.log('PASS: compressed weak-ETag regression reproduced and fixed; four photos; three concurrent updates without loss; owner privacy; withdrawal; recovery; deletion permissions.');
+ assert.equal((await request(null)).body.garments[0].images[0].canDelete,true);
+ const replace={action:'replace-image',garmentId:id,imageId,id:replacementId,image:'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aX1sAAAAASUVORK5CYII='};
+ assert.equal((await request(replace,other)).status,403,'another person cannot replace it');
+ assert.equal((await request({...replace,image:'PHN2Zz4='})).status,400,'invalid file cannot withdraw original');
+ assert.equal((await request(null)).body.garments[0].images.length,4);
+ const replaced=await request(replace);assert.equal(replaced.status,200);
+ assert.equal(replaced.body.garments[0].images.length,4);
+ assert.equal(replaced.body.garments[0].images.find(i=>i.id===replacementId).selected,false);
+ assert.equal((await request(replace)).status,200,'retry must not duplicate replacement');
+ assert.equal((await fetch(endpoint+'?'+new URLSearchParams({...base,image:imageId}),{headers:{Authorization:'Bearer '+token}})).status,404);
+ assert.equal((await request({action:'delete-image',garmentId:id,imageId:replacementId})).status,200);
+ console.log('PASS: concurrent updates, ownership isolation, deletion without deadline, atomic replacement, invalid file protection, idempotent retries and withdrawn-media access blocked.');
 }finally{
  const existing=await get(manifest,{access:'private',useCache:false});
- if(existing){const state=await new Response(existing.stream).json();assert.ok(state.garments.every(g=>g.id===id),'Unexpected QA records; refusing cleanup');await del([manifest,...[imageId,...extraImages].map(i=>root+'/images/'+i)]);}
+ if(existing){const state=await new Response(existing.stream).json();assert.ok(state.garments.every(g=>g.id===id),'Unexpected QA records; refusing cleanup');await del([manifest,...[imageId,replacementId,...extraImages].map(i=>root+'/images/'+i)]);}
  console.log('QA fixtures cleaned; production records unchanged.');
 }

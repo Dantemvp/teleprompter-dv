@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { runInNewContext } from 'node:vm';
-import { CLIENT, crearAcceso, leerAcceso, cambiarEstado, tipoImagen, puedeBorrar, BORRADO_PROPIO_MS } from '../lib/prendas-core.mjs';
+import { CLIENT, crearAcceso, leerAcceso, cambiarEstado, tipoImagen, puedeBorrar } from '../lib/prendas-core.mjs';
 
 const secret = 'sólo-para-pruebas-locales';
 const id = '12345678-1234-1234-1234-123456789012';
@@ -76,18 +76,17 @@ test('detecta prendas en cualquier guion y conserva materiales sin inventar prod
   assert.notEqual(detect.idPara(CLIENT,'g-151','Top'),detect.idPara(CLIENT,'g-152','Top'));
 });
 
-test('solo quien subió la foto puede retirarla antes de cinco minutos, nunca después',()=>{
+test('solo quien subió la foto puede retirarla, incluso días después',()=>{
   const created='2026-10-19T12:00:00.000Z',time=Date.parse(created),owner='a'.repeat(64);
   const image={id:foto,ownerHash:owner,createdAt:created,selected:true};
-  assert.equal(puedeBorrar(image,'tienda',owner,time+BORRADO_PROPIO_MS-1),true);
-  assert.equal(puedeBorrar(image,'tienda',owner,time+BORRADO_PROPIO_MS),false);
+  assert.equal(puedeBorrar(image,'tienda',owner,time+300000),true);
+  assert.equal(puedeBorrar(image,'tienda',owner,time+30*86400000),true);
   assert.equal(puedeBorrar(image,'bianca','b'.repeat(64),time+1),false);
   assert.equal(puedeBorrar(image,'editor',owner,time+1),false);
-  assert.equal(puedeBorrar(image,'tienda',owner,time-1),false);
   assert.equal(puedeBorrar({...image,ownerHash:null},'tienda',owner,time+1),false);
   assert.equal(puedeBorrar(image,'admin',null,time+86400000),true);
   const state={garments:[{id,images:[image]}]},data={action:'delete-image',garmentId:id,imageId:foto};
-  assert.throws(()=>cambiarEstado(state,data,'tienda',new Date(time+BORRADO_PROPIO_MS).toISOString(),owner),{status:403});
+  assert.ok(cambiarEstado(state,data,'tienda',new Date(time+30*86400000).toISOString(),owner).garments[0].images[0].deletedAt);
   assert.throws(()=>cambiarEstado(state,data,'bianca',created,'b'.repeat(64)),{status:403});
   const removed=cambiarEstado(state,data,'tienda',new Date(time+1000).toISOString(),owner);
   assert.equal(removed.garments[0].images[0].selected,false);
@@ -96,6 +95,27 @@ test('solo quien subió la foto puede retirarla antes de cinco minutos, nunca de
   const restore={action:'restore-image',garmentId:id,imageId:foto};
   assert.throws(()=>cambiarEstado(removed,restore,'bianca'),{status:403});
   assert.equal(cambiarEstado(removed,restore,'admin').garments[0].images[0].deletedAt,undefined);
+});
+
+test('reemplazar es atómico, recuperable, idempotente y requiere elegir la nueva foto otra vez',()=>{
+  const owner='a'.repeat(64),newId='12345678-1234-1234-1234-123456789014';
+  const image={id:foto,ownerHash:owner,createdAt:'2026-10-01',selected:true,note:'Blanco',author:'Rubí'};
+  const original={garments:[{id,images:[image,...Array.from({length:11},(_,n)=>({id:'other-'+n}))]}]};
+  const data={action:'replace-image',garmentId:id,imageId:foto,id:newId};
+  assert.throws(()=>cambiarEstado(original,data,'tienda',undefined,'b'.repeat(64)),{status:403});
+  assert.throws(()=>cambiarEstado(original,data,'editor',undefined,owner),{status:403});
+  const next=cambiarEstado(original,data,'tienda',undefined,owner);
+  assert.equal(original.garments[0].images[0].deletedAt,undefined);
+  const images=next.garments[0].images;
+  assert.equal(images.filter(i=>!i.deletedAt).length,12);
+  assert.ok(images[0].deletedAt);assert.equal(images[0].selected,false);
+  assert.equal(images.at(-1).selected,false);assert.equal(images.at(-1).note,'Blanco');
+  assert.equal(images.at(-1).ownerHash,owner);
+  assert.deepEqual(cambiarEstado(next,data,'tienda',undefined,owner),next);
+  assert.throws(()=>cambiarEstado(next,data,'tienda',undefined,'b'.repeat(64)),{status:409});
+  assert.throws(()=>cambiarEstado(original,{...data,id:foto},'tienda',undefined,owner));
+  assert.throws(()=>cambiarEstado(next,{...data,id:'12345678-1234-1234-1234-123456789015'},'tienda',undefined,owner),{status:403});
+  assert.equal(cambiarEstado({garments:[{id,images:[{...image,ownerHash:null}]}]},data,'admin').garments[0].images.length,2);
 });
 
 test('guardar una indicación no cambia la selección ni elimina fotos', () => {

@@ -2,7 +2,7 @@ import { canEdit } from '../lib/edit-auth.mjs';
 import { get, put, BlobPreconditionFailedError } from '@vercel/blob';
 import { Readable } from 'node:stream';
 import { createHash } from 'node:crypto';
-import { CLIENT, crearAcceso, leerAcceso, idValido, tipoImagen, cambiarEstado, fallo, puedeBorrar, BORRADO_PROPIO_MS } from '../lib/prendas-core.mjs';
+import { CLIENT, crearAcceso, leerAcceso, idValido, tipoImagen, cambiarEstado, fallo, puedeBorrar } from '../lib/prendas-core.mjs';
 
 // Compressed responses carry a weak ETag (W/...), which cannot satisfy If-Match.
 // Read the original representation so the body and strong ETag stay atomic.
@@ -26,7 +26,7 @@ async function verificarGuion(client, slug) {
 function respuesta(state, role, ownerHash, slug) {
   return { garments: state.garments.map(g=>({...g,images:g.images.filter(i=>!i.deletedAt || role==='admin').map(i=>{
     const {ownerHash:privateOwner,...publicImage}=i;
-    return {...publicImage,canDelete:puedeBorrar(i,role,ownerHash),deleteUntil:ownerHash && ownerHash===privateOwner && !i.deletedAt ? new Date(Date.parse(i.createdAt)+BORRADO_PROPIO_MS).toISOString():null};
+    return {...publicImage,canDelete:puedeBorrar(i,role,ownerHash),canReplace:puedeBorrar(i,role,ownerHash)};
   })})), role, serverNow:Date.now(), viewAccess:crearAcceso(CLIENT,'editor',process.env.PRENDAS_SECRET,Date.now(),slug) };
 }
 async function verificarActivo(client, slug) {
@@ -94,7 +94,7 @@ export default async function handler(req, res) {
     // Validamos antes de guardar archivos, incluso si la petición repite un ID.
     cambiarEstado(actual.state, data, role, undefined, ownerHash);
     if (data.action === 'add-garment') await verificarGuion(client, slug);
-    if (data.action === 'add-image') {
+    if (data.action === 'add-image' || data.action === 'replace-image') {
       if (typeof data.image !== 'string' || data.image.length > 1500000 || !/^[A-Za-z0-9+/]+={0,2}$/.test(data.image)) throw fallo('Imagen demasiado grande o inválida.');
       const bytes = Buffer.from(data.image, 'base64');
       const contentType = tipoImagen(bytes);

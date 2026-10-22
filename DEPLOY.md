@@ -75,3 +75,10 @@ El token de GitHub vive en Vercel (servidor), nunca en el navegador.
 - Los accesos de contribución no pueden aprobar fotos, modificar indicaciones ajenas, generar accesos privilegiados ni borrar fotos de otras personas. Conservan el borrado propio por cinco minutos desde el navegador de subida. Los controles de Bianca y administrador mantienen su autenticación.
 - Los enlaces explícitos por rol conservan sus permisos. Un enlace normal no hereda por accidente un antiguo acceso de sólo lectura guardado en la sesión. Las URLs de medios nuevas también se firman para un único guion.
 - Pruebas de regresión de carga pública: el script de ciclo de vida ahora arranca sin credenciales y obtiene su acceso internamente como el navegador. Verificar además g-138, g-141 y g-140 sin `prendas=` en Vercel y Pages.
+
+### Corrección de fotos propias — 22 octubre 2026 (sustituye el plazo anterior)
+
+- El propietario puede borrar o reemplazar sus fotos sin límite de tiempo, desde el navegador de subida. La propiedad sigue verificándose en el servidor con el secreto local; no se concede por nombre ni por conocer el enlace. Fotos antiguas sin propietario o de otro navegador requieren al administrador.
+- Reemplazo: carga y valida la imagen nueva antes de publicar el cambio del manifiesto. Retira la anterior y añade la nueva en una sola escritura con ETag; reintentos con el mismo ID no duplican fotos. Una carga inválida deja la original activa. Se permite reemplazar incluso con las 12 plazas ocupadas.
+- Toda sustitución vuelve a ser propuesta, aunque la anterior estuviera elegida. La retirada sigue siendo recuperable por el administrador; no borra físicamente archivos ni afecta al POE o puntajes.
+- Los borradores locales conservan el destino del reemplazo para poder reintentar sin perder el archivo. El borrado pide confirmación.

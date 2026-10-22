@@ -220,12 +220,13 @@
       '<small>Compartió: '+esc(i.author)+'</small>'+
       (canChoose?'<label>Indicación para el editor<textarea data-image-note="'+i.id+'" maxlength="500" placeholder="Ej. usar esta prenda en blanco">'+esc(i.note)+'</textarea></label><span class="prendas-note-status" data-note-status="'+i.id+'" role="status"></span>':'<p>'+esc(i.note)+'</p>')+
       (canChoose?'<button class="'+(i.selected?'':'primary')+'" data-select="'+i.id+'" data-selected="'+(!i.selected)+'">'+(i.selected?'Quitar de elegidas':'✓ Usar esta foto')+'</button>':'')+
-      (i.canDelete?'<button class="prendas-delete" data-delete="'+i.id+'" '+(ctx.role!=='admin'?'data-until="'+esc(i.deleteUntil)+'"':'')+'>'+ (ctx.role==='admin'?'Borrar foto':'Borrar mi foto · 5:00')+'</button>':'<small>Solo el administrador puede borrar esta foto.</small>')+'</div></article>';
+      (i.canReplace?'<button data-replace="'+i.id+'">Reemplazar '+(ctx.role==='admin'?'foto':'mi foto')+'</button>':'')+
+      (i.canDelete?'<button class="prendas-delete" data-delete="'+i.id+'">'+ (ctx.role==='admin'?'Borrar foto':'Borrar mi foto')+'</button>':'<small>Solo quien subió esta foto desde este navegador o el administrador puede cambiarla.</small>')+'</div></article>';
     const uploader = canUpload ?
       '<section class="prendas-upload"><div class="prendas-tools prendas-capture"><button class="primary" data-camera>📷 Tomar foto</button><button data-gallery>＋ Fotos / capturas</button></div>'+
-      '<p class="prendas-help">Se guardan automáticamente. Tienes 5 minutos para borrar tus fotos desde este navegador; después, solo el administrador.</p>'+
+      '<p class="prendas-help">Se guardan automáticamente. Puedes borrar o reemplazar tus fotos desde este navegador, sin límite de tiempo. Los reemplazos necesitan aprobación de nuevo.</p>'+
       '<details class="prendas-upload-options"><summary>Añadir tu nombre o una indicación (opcional)</summary><label>Tu nombre<input data-author maxlength="60" value="'+esc(localGet('prendas-author')||(ctx.role==='bianca'?'Bianca':''))+'" placeholder="Ej. Rubí"></label><label>Qué debe saber el editor<textarea data-note maxlength="500" placeholder="Ej. esta prenda la tenemos en blanco"></textarea></label></details>'+
-      '<input hidden data-camera-file type="file" accept="image/*" capture="environment"><input hidden data-gallery-file type="file" accept="image/*" multiple>'+
+      '<input hidden data-camera-file type="file" accept="image/*" capture="environment"><input hidden data-gallery-file type="file" accept="image/*" multiple><input hidden data-replace-file type="file" accept="image/*">'+
       '<p data-upload-status class="prendas-notice" role="status" aria-live="polite"></p><button hidden data-retry>Reintentar fotos pendientes</button><div data-queue></div></section>' : '';
     const d=showDialog(ctx,g.name,
       '<div class="prendas-context">'+(g.kind==='exacta'?'Prenda exacta: usar la foto elegida, sin sustituirla.':selected.length?'Usa las referencias elegidas y respeta las indicaciones.':'Las propuestas todavía no están autorizadas para edición.')+'</div>'+
@@ -236,18 +237,12 @@
       (proposals.length?'<div class="prendas-grid">'+proposals.map(card).join('')+'</div>':'<p class="prendas-empty">'+(canUpload?'Puedes aportar varias fotos de la tienda o capturas de Pinterest y redes. No se reemplazan las anteriores.':'No hay más fotos propuestas para esta prenda.')+'</p>')+'</section>'+
       (ctx.role==='admin' && g.deletedImages?.length?'<details class="prendas-trash"><summary>Fotos retiradas ('+g.deletedImages.length+')</summary>'+g.deletedImages.map(i=>'<p>'+esc(i.author)+' · '+esc(i.note||'Sin indicación')+' <button data-restore="'+i.id+'">Recuperar foto</button></p>').join('')+'</details>':''));
     d.querySelectorAll('[data-delete],[data-restore]').forEach(b=>b.onclick=async()=>{
+      if(ctx.busy)return;
+      if(b.dataset.delete && !confirm('¿Retirar esta foto? Dejará de estar disponible para edición.'))return;
       b.disabled=true;
-      try{await ctx.save({action:b.dataset.restore?'restore-image':'delete-image',garmentId:id,imageId:b.dataset.restore||b.dataset.delete});openGarment(ctx,id);}
+      try{await ctx.flushNotes?.();await ctx.save({action:b.dataset.restore?'restore-image':'delete-image',garmentId:id,imageId:b.dataset.restore||b.dataset.delete});openGarment(ctx,id);}
       catch(error){d.querySelector('[data-dialog-error]').textContent=error.message;b.disabled=false;}
     });
-    const tick=()=>d.querySelectorAll('[data-until]').forEach(b=>{
-      const remaining=Math.max(0,Math.ceil((Date.parse(b.dataset.until)-Date.now()-(ctx.clockOffset||0))/1000));
-      b.textContent=remaining?'Borrar mi foto · '+Math.floor(remaining/60)+':'+String(remaining%60).padStart(2,'0'):'Tiempo terminado · solo administrador';
-      if(!remaining)b.disabled=true;
-    });
-    tick();const countdown=setInterval(tick,1000);
-    d.addEventListener('close',()=>clearInterval(countdown),{once:true});
-    ctx.abort.signal.addEventListener('abort',()=>clearInterval(countdown),{once:true});
     d.querySelectorAll('[data-select]').forEach(b=>b.onclick=async()=>{
       b.disabled=true;
       try {await ctx.flushNotes?.();await ctx.save({action:'select',garmentId:id,imageId:b.dataset.select,selected:b.dataset.selected==='true'});openGarment(ctx,id);}
@@ -300,30 +295,40 @@
         while(queue.length){
           d.querySelector('[data-upload-status]').textContent='Guardando foto '+(saved+1)+' de '+total+'… No cierres esta ventana.';
           const item=queue[0];item.image ||= await imagenComprimida(item.file);
-          await ctx.save({action:'add-image',garmentId:id,id:item.id,image:item.image,author:item.author||author,note:item.note??note});await drafts.remove(item.key);queue.shift();saved++;renderPending(ctx);
+          await ctx.save({action:item.replacesId?'replace-image':'add-image',...(item.replacesId?{imageId:item.replacesId}:{}),garmentId:id,id:item.id,image:item.image,author:item.author||author,note:item.note??note});await drafts.remove(item.key);queue.shift();saved++;renderPending(ctx);
         }
         ctx.busy=false;openGarment(ctx,id);ctx.dialog.querySelector('[data-upload-status]').textContent='✓ '+saved+' '+(saved===1?'foto guardada':'fotos guardadas')+'. Ya puedes salir; no hay que volver a guardar.';
       }catch(error){
         d.querySelector('[data-upload-status]').textContent=queue.length+' foto(s) pendientes de guardar. '+(queue.every(item=>item.persisted)?'Se conservan en este navegador para reintentar.':'No cierres esta página: no se pudo conservar una copia local de todas las fotos.');
         d.querySelector('[data-dialog-error]').textContent=(saved?saved+' fotos se guardaron. ':'')+error.message;
         renderQueue();
-      }finally{ctx.busy=false;d.querySelectorAll('button').forEach(b=>b.disabled=false);tick();}
+      }finally{ctx.busy=false;d.querySelectorAll('button').forEach(b=>b.disabled=false);}
     };
     const choose=async e=>{
       const files=[...e.target.files];e.target.value='';if(!files.length)return;
       if(queue.length){d.querySelector('[data-dialog-error]').textContent='Primero reintenta las fotos pendientes para no perderlas.';return;}
       const count=ctx.state.garments.find(x=>x.id===id)?.images.filter(i=>!i.deletedAt).length||0;
-      if(files.length+count>12){d.querySelector('[data-dialog-error]').textContent='Máximo 12 fotos por prenda. Puedes elegir '+(12-count)+' más.';return;}
+      const replacesId=e.target.dataset.replacesId || null;
+      if(files.length+count-(replacesId?1:0)>12){d.querySelector('[data-dialog-error]').textContent='Máximo 12 fotos por prenda. Puedes elegir '+(12-count)+' más.';return;}
       if(files.some(file=>file.size>25*1024*1024)){d.querySelector('[data-dialog-error]').textContent='Una imagen supera 25 MB. Selecciona fotos más pequeñas.';return;}
       ctx.busy=true;d.querySelectorAll('button').forEach(b=>b.disabled=true);
       try{
-        for(const file of files){const photoId=crypto.randomUUID();const item={file,id:photoId,key:ctx.client+':'+ctx.slug+':'+id+':'+photoId,garmentId:id,garmentName:g.name,kind:g.kind,author:d.querySelector('[data-author]').value.trim(),note:d.querySelector('[data-note]').value.trim()};item.persisted=await drafts.put(item);queue.push(item);}
+        await ctx.flushNotes?.();
+        for(const file of files){const photoId=crypto.randomUUID();const item={file,id:photoId,key:ctx.client+':'+ctx.slug+':'+id+':'+photoId,garmentId:id,garmentName:g.name,kind:g.kind,replacesId,author:d.querySelector('[data-author]').value.trim(),note:d.querySelector('[data-note]').value.trim()};item.persisted=await drafts.put(item);queue.push(item);}
         renderPending(ctx);renderQueue();
+      }catch(error){d.querySelector('[data-dialog-error]').textContent=error.message;return;
       }finally{ctx.busy=false;d.querySelectorAll('button').forEach(b=>b.disabled=false);}
       upload();
     };
     d.querySelector('[data-camera-file]').onchange=choose;
     d.querySelector('[data-gallery-file]').onchange=choose;
+    d.querySelector('[data-replace-file]').onchange=choose;
+    d.querySelectorAll('[data-replace]').forEach(b=>b.onclick=()=>{
+      if(ctx.busy)return;
+      if(queue.length){d.querySelector('[data-dialog-error]').textContent='Completa o retira las fotos pendientes antes de reemplazar otra.';return;}
+      // Keep the picker in the click gesture (required by mobile Safari).
+      const input=d.querySelector('[data-replace-file]');input.dataset.replacesId=b.dataset.replace;input.click();
+    });
     d.querySelector('[data-retry]').onclick=upload;
   }
   function url(value, client) {
