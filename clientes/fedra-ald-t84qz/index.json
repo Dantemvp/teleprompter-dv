@@ -9,42 +9,21 @@
       "guiones": [
         {
           "slug": "r14-01",
-          "titulo": "Método Fedra · 1 · Amárrate la boca",
-          "info": "75–85 seg · serie, capítulo 1 · su historia y qué es el método",
+          "titulo": "Método Fedra · Qué es",
+          "info": "~1:30 · su historia y las tres partes del método",
           "categoria": "guion",
           "grabado": false
         },
         {
           "slug": "r14-02",
-          "titulo": "Método Fedra · 2 · Las tres partes",
-          "info": "75–85 seg · serie, capítulo 2 · medicamento, comer, crisis",
-          "categoria": "guion",
-          "grabado": false
-        },
-        {
-          "slug": "r14-03",
-          "titulo": "Método Fedra · 3 · Lo que me preguntan",
-          "info": "85–95 seg · serie, capítulo 3 · mito y respuesta",
-          "categoria": "guion",
-          "grabado": false
-        },
-        {
-          "slug": "r14-04",
-          "titulo": "Las crisis de la enfermedad",
-          "info": "60–70 seg · suelto · lista para identificarse · va después de la serie",
-          "categoria": "guion",
-          "grabado": false
-        },
-        {
-          "slug": "r14-05",
-          "titulo": "Lo que dijo la OMS",
-          "info": "60–65 seg · suelto, opcional · guía OMS dic-2025 · cita en el caption",
+          "titulo": "Método Fedra · Lo que me preguntan",
+          "info": "~1:30 · mitos y preguntas · guía OMS dic-2025 en el caption",
           "categoria": "guion",
           "grabado": false
         }
       ],
       "ventana": "Por definir · la doctora sola · un solo look",
-      "nota": "Cinco orgánicos que la doctora graba sola en su consultorio, leyendo de corrido. Solo texto: lo que va nombrando lo pone el editor detrás de ella. Se publican en este orden, y los capítulos 1, 2 y 3 en días seguidos, sin nada en medio. Antes de grabar, la doctora confirma cuatro cosas: si el medicamento va siempre o solo si es candidata, la respuesta a por qué no está flaca, cómo hace el destete progresivo, y cómo trabaja lo psicológico.",
+      "nota": "Dos orgánicos que la doctora graba sola en su consultorio, leyendo de corrido. Solo texto: lo que va nombrando lo pone el editor detrás de ella. Cada uno se sostiene solo. Antes de grabar, la doctora confirma cuatro cosas: si el medicamento va siempre o solo si es candidata, la respuesta a por qué no está flaca, cómo hace el destete progresivo, y cómo trabaja las crisis.",
       "timeline": [
         {
           "hora": "Por definir",
@@ -52,12 +31,9 @@
           "titulo": "Bloque único · la doctora sola",
           "slugs": [
             "r14-01",
-            "r14-02",
-            "r14-03",
-            "r14-04",
-            "r14-05"
+            "r14-02"
           ],
-          "nota": "👗 UN SOLO LOOK · Bata.\n🎬 MATERIAL · Nada. Mesa limpia, ella a cámara.\nOrden de grabación igual al de publicación: serie 1, 2, 3, luego las crisis y al final la OMS."
+          "nota": "👗 UN SOLO LOOK · Bata.\n🎬 MATERIAL · Nada. Mesa limpia, ella a cámara."
         }
       ]
     },
