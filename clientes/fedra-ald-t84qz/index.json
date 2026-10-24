@@ -2,6 +2,58 @@
   "cliente": "Dra. Fedra Aldama",
   "grabaciones": [
     {
+      "rec": "R15",
+      "nombre": "Grabación 15 · orgánicos con fuente",
+      "fecha": "Por definir",
+      "locacion": "Consultorio",
+      "guiones": [
+        {
+          "slug": "r15-01",
+          "titulo": "Reganancia: lo que dice el BMJ",
+          "info": "~1:20 · caption: West S et al. BMJ 2026;392:e085304",
+          "categoria": "guion",
+          "grabado": false
+        },
+        {
+          "slug": "r15-02",
+          "titulo": "El medicamento pirata que venden en internet",
+          "info": "~1:20 · noticia de oct-2026, grabar pronto · caption: CBS News 13-oct-2026 · COFEPRIS alerta 9-feb-2026",
+          "categoria": "guion",
+          "grabado": false
+        },
+        {
+          "slug": "r15-03",
+          "titulo": "GLP-1 y músculo",
+          "info": "~1:15 · caption: STEP 1 (Wilding 2021) · ACLM/ASN/OMA/TOS, Obesity 2025;33(8)",
+          "categoria": "guion",
+          "grabado": false
+        },
+        {
+          "slug": "r15-04",
+          "titulo": "21 días para un hábito",
+          "info": "~1:20 · caption: Lally 2010, Eur J Soc Psychol 40:998 · Singh 2024, Healthcare 12(23):2488",
+          "categoria": "guion",
+          "grabado": false
+        }
+      ],
+      "ventana": "Por definir · la doctora sola · un solo look",
+      "nota": "Cuatro orgánicos con el formato del Dr. Mau: plática a cámara, un dato con su fuente, lo que el estudio no prueba y cierre con pregunta y firma \"Te lo dice tu doctora Fedra\". Solo texto; lo que nombra lo pone el editor detrás de ella. Las fuentes completas van en el caption (están en cada tarjeta), junto con el comenta VALORACIÓN y las dos líneas de Cofepris. El del medicamento pirata es noticia de octubre: conviene grabarlo y publicarlo pronto.",
+      "timeline": [
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque único · la doctora sola",
+          "slugs": [
+            "r15-01",
+            "r15-02",
+            "r15-03",
+            "r15-04"
+          ],
+          "nota": "👗 UN SOLO LOOK · Bata.\n🎬 MATERIAL · Nada. Mesa limpia, ella a cámara."
+        }
+      ]
+    },
+    {
       "rec": "R14",
       "nombre": "Grabación 14 · orgánicos en consultorio",
       "fecha": "Por definir",
