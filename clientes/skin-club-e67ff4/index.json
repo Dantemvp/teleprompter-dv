@@ -2,6 +2,85 @@
   "cliente": "The Skin Club",
   "grabaciones": [
     {
+      "rec": "R7",
+      "nombre": "Séptima grabación",
+      "fecha": "27 de octubre de 2026",
+      "locacion": "Laboratorio Skin Club",
+      "guiones": [
+        {
+          "slug": "r7-ganador",
+          "titulo": "Ganador · Tus poros no se cierran (Kaori)",
+          "info": "46 seg · 55K de alcance en IG, 3,540 guardados, 26K reproducciones en TikTok · el molde de esta grabación",
+          "categoria": "ganador",
+          "tipo": "ref",
+          "grabado": false,
+          "locutor": "Kaori",
+          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
+          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg"
+        },
+        {
+          "slug": "r7-01",
+          "titulo": "Oh Matcha: la mascarilla para el brillo",
+          "info": "30–35 seg · molde del reel de poros · un producto",
+          "grabado": false,
+          "locutor": "Paloma",
+          "categoria": "paloma",
+          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
+          "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
+          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
+          "miniatura": false
+        },
+        {
+          "slug": "r7-03",
+          "titulo": "Hydroglow Sérum: el sérum para piel deshidratada",
+          "info": "30–35 seg · molde del reel de poros · un producto",
+          "grabado": false,
+          "locutor": "Paloma",
+          "categoria": "paloma",
+          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
+          "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
+          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
+          "miniatura": false
+        },
+        {
+          "slug": "r7-02",
+          "titulo": "Hydroglow Crema de Noche: la crema para líneas finas",
+          "info": "30–35 seg · molde del reel de poros · un producto",
+          "grabado": false,
+          "locutor": "Camila",
+          "categoria": "camila",
+          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
+          "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
+          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
+          "miniatura": false
+        },
+        {
+          "slug": "r7-05",
+          "titulo": "Hydroderm: la crema para piel seca del cuerpo",
+          "info": "30–35 seg · molde del reel de poros · un producto",
+          "grabado": false,
+          "locutor": "Camila",
+          "categoria": "camila",
+          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
+          "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
+          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
+          "miniatura": false
+        },
+        {
+          "slug": "r7-04",
+          "titulo": "Dermaboost: la crema para textura en piel grasa",
+          "info": "30–35 seg · molde del reel de poros · un producto",
+          "grabado": false,
+          "locutor": "Diego",
+          "categoria": "diego",
+          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
+          "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
+          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
+          "miniatura": false
+        }
+      ]
+    },
+    {
       "rec": "R6",
       "nombre": "Sexta grabación",
       "fecha": "1 de septiembre de 2026",
