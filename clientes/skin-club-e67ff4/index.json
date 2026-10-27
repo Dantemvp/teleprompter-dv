@@ -125,6 +125,102 @@
           "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
           "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
           "miniatura": false
+        },
+        {
+          "slug": "r7-10",
+          "titulo": "El jabón de barra en tu cara",
+          "info": "25–30 seg · «¿por qué no debes…?» con tira de pH en cámara",
+          "grabado": false,
+          "locutor": "Diego",
+          "categoria": "diego",
+          "link": "https://www.instagram.com/reel/De9ctFFDeDX/",
+          "ref": "https://www.instagram.com/reel/De9ctFFDeDX/",
+          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ref-ph.jpg",
+          "miniatura": false
+        },
+        {
+          "slug": "r7-11",
+          "titulo": "¿Sirve para hombre también?",
+          "info": "30–33 seg · respuesta a comentario real + prueba de tipo de piel",
+          "grabado": false,
+          "locutor": "Diego",
+          "categoria": "diego",
+          "link": "https://www.instagram.com/reel/DdZgkjFPAN1/",
+          "ref": "https://www.instagram.com/reel/DdZgkjFPAN1/",
+          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ref-pregunta.jpg",
+          "miniatura": false
+        },
+        {
+          "slug": "r7-12",
+          "titulo": "Lo que vive en tus poros",
+          "info": "25–28 seg · dato microscópico (Demodex), sin producto",
+          "grabado": false,
+          "locutor": "Paloma",
+          "categoria": "paloma",
+          "link": "https://www.instagram.com/reel/De7D5AhiDDW/",
+          "ref": "https://www.instagram.com/reel/De7D5AhiDDW/",
+          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ref-demodex.jpg",
+          "miniatura": false
+        },
+        {
+          "slug": "r7-13",
+          "titulo": "¿Niacinamida o ácido salicílico?",
+          "info": "25–28 seg · ingrediente A o B",
+          "grabado": false,
+          "locutor": "Paloma",
+          "categoria": "paloma",
+          "link": "https://www.instagram.com/reel/DeSDLsUMb0_/",
+          "ref": "https://www.instagram.com/reel/DeSDLsUMb0_/",
+          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ref-ingredientes.jpg",
+          "miniatura": false
+        },
+        {
+          "slug": "r7-14",
+          "titulo": "¿Ácido hialurónico o ceramidas?",
+          "info": "28–32 seg · ingrediente A o B",
+          "grabado": false,
+          "locutor": "Camila",
+          "categoria": "camila",
+          "link": "https://www.instagram.com/reel/DeSDLsUMb0_/",
+          "ref": "https://www.instagram.com/reel/DeSDLsUMb0_/",
+          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ref-ingredientes.jpg",
+          "miniatura": false
+        },
+        {
+          "slug": "r7-15",
+          "titulo": "¿Ácido glicólico o mandélico?",
+          "info": "25–28 seg · ingrediente A o B",
+          "grabado": false,
+          "locutor": "Diego",
+          "categoria": "diego",
+          "link": "https://www.instagram.com/reel/DeSDLsUMb0_/",
+          "ref": "https://www.instagram.com/reel/DeSDLsUMb0_/",
+          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ref-ingredientes.jpg",
+          "miniatura": false
+        },
+        {
+          "slug": "r7-16",
+          "titulo": "¿Retinol o vigna aconitifolia?",
+          "info": "22–25 seg · ingrediente A o B",
+          "grabado": false,
+          "locutor": "Kaori",
+          "categoria": "kaori",
+          "link": "https://www.instagram.com/reel/DeSDLsUMb0_/",
+          "ref": "https://www.instagram.com/reel/DeSDLsUMb0_/",
+          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ref-ingredientes.jpg",
+          "miniatura": false
+        },
+        {
+          "slug": "r7-17",
+          "titulo": "¿Aloe o centella?",
+          "info": "22–25 seg · ingrediente A o B",
+          "grabado": false,
+          "locutor": "Nat",
+          "categoria": "nat",
+          "link": "https://www.instagram.com/reel/DeSDLsUMb0_/",
+          "ref": "https://www.instagram.com/reel/DeSDLsUMb0_/",
+          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ref-ingredientes.jpg",
+          "miniatura": false
         }
       ]
     },
