@@ -1,5 +1,13 @@
 # Backend de guardado en la nube (Vercel)
 
+## Edición de Fedra · R14 (27 octubre 2026)
+
+- Variable sensible de producción `FEDRA_R14_EDIT_PASSWORD`, administrada sólo en Vercel. Nunca añadir su valor al repositorio.
+- Permite guardar únicamente `fedra-ald-t84qz/r14-01` y `r14-02`. No habilita edición de otros guiones, organización, borrado ni estados de producción. Las claves del equipo mantienen su alcance anterior.
+- Fedra abre su enlace habitual, pulsa **Editar**, introduce su contraseña y guarda. El acceso se comprueba antes de abrir el formulario. La contraseña se recuerda en ese navegador con una clave de almacenamiento separada de la del equipo y no activa el modo estratega.
+- `POST /api/save` con `checkOnly:true` comprueba permisos sin acceder a GitHub. El guardado normal conserva el historial por commits.
+- Cambiar la variable y desplegar de nuevo revoca la clave anterior. No se requiere cambiar ni reenviar los enlaces de los guiones.
+
 El sitio vive en GitHub Pages (estático). Para que el botón "☁ Guardar en la nube"
 funcione, una función serverless en Vercel recibe la edición y la commitea al repo.
 El token de GitHub vive en Vercel (servidor), nunca en el navegador.

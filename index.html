@@ -338,6 +338,23 @@ async function unlock(title){
   localStorage.setItem('dvpw', pw);                        // si el servidor la rechaza (401) se borra y se vuelve a pedir
   return pw;
 }
+// Las claves de cliente se guardan aparte: no activan el modo estratega.
+function forgetScriptPw(client){ localStorage.removeItem('dvscriptpw:' + client); }
+async function unlockScript(title, client, slug){
+  if (client !== 'fedra-ald-t84qz' || !['r14-01','r14-02'].includes(slug)) return unlock(title);
+  let pw = localStorage.getItem('dvscriptpw:' + client) || (isAdmin() ? rememberedPw() : null);
+  if (!pw) pw = await askPassword(title || 'Contraseña para editar tus guiones');
+  if (!pw) return null;
+  try {
+    const r = await fetch(SAVE_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ password:pw, client, slug, checkOnly:true }) });
+    if (!r.ok){
+      if (r.status === 401){ forgetScriptPw(client); forgetPw(); }
+      throw new Error(r.status === 401 ? 'Contraseña incorrecta, intenta de nuevo' : 'No se pudo comprobar el acceso. Intenta de nuevo.');
+    }
+    localStorage.setItem('dvscriptpw:' + client, pw);
+    return pw;
+  } catch(e){ toast(e.message || 'No se pudo comprobar el acceso'); return null; }
+}
 // Activa el "modo edición": revela los controles del estratega. El PIN no viaja a ningún servidor.
 async function enableAdmin(){
   const p = await askPassword('PIN de edición (muestra los controles del estratega)');
@@ -630,7 +647,7 @@ function renderGuion(g, canonical, backHref, opts){
   };
 
   $('#editBtn').onclick = async () => {
-    const p = await unlock('Contraseña de edición');
+    const p = await unlockScript('Contraseña de edición', opts.client, opts.slug);
     if (!p) return;
     $('#v-edit').innerHTML = buildForm();
     document.querySelector('.tabs').style.display = 'none';
@@ -651,13 +668,13 @@ function renderGuion(g, canonical, backHref, opts){
     if (cloudBtn) cloudBtn.onclick = async () => {
       if (!SAVE_ENDPOINT || !opts.client || !opts.slug){ toast('Guardado en la nube no configurado'); return; }
       collectForm();
-      const pw = await unlock('Contraseña para publicar en la nube');
+      const pw = await unlockScript('Contraseña para publicar en la nube', opts.client, opts.slug);
       if (!pw) return;
       const md = toMarkdown(g);
       cloudBtn.disabled = true; cloudBtn.textContent = 'Publicando...';
       try {
         const r = await fetch(SAVE_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ password: pw, client: opts.client, slug: opts.slug, content: md }) });
-        if (r.status === 401){ forgetPw(); throw new Error('Contraseña incorrecta, intenta de nuevo'); }
+        if (r.status === 401){ forgetScriptPw(opts.client); forgetPw(); throw new Error('Contraseña incorrecta, intenta de nuevo'); }
         if (!r.ok) throw new Error(await r.text());
         if (opts.localKey){ localStorage.setItem(opts.localKey, md); localStorage.setItem(opts.localKey + ':t', Date.now()); }
         toast('Guardado ✓ Visible para todos en ~1 min');

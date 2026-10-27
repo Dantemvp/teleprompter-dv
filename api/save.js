@@ -1,4 +1,4 @@
-import { canEdit } from '../lib/edit-auth.mjs';
+import { canEditScript } from '../lib/edit-auth.mjs';
 // Vercel serverless function — guarda un guion editado commiteándolo al repo de GitHub.
 // El token de GitHub y la contraseña viven como variables de entorno en Vercel (nunca en el navegador).
 // Env vars requeridas: GH_TOKEN, GH_REPO (ej. "Dantemvp/teleprompter-dv"), EDIT_PASSWORD
@@ -17,10 +17,12 @@ export default async function handler(req, res){
   if (typeof body === 'string') { try { body = JSON.parse(body); } catch { body = {}; } }
   const { password, client, slug, content } = body || {};
 
-  if (!canEdit(password))
+  if (!canEditScript(password, client, slug))
     return res.status(401).send('Contraseña incorrecta');
   if (!/^[a-z0-9\-_]+$/i.test(client || '') || !/^[a-z0-9\-_]+$/i.test(slug || ''))
     return res.status(400).send('Cliente o guion inválido');
+  // Comprueba el acceso antes de abrir el editor, sin leer ni escribir en GitHub.
+  if (body.checkOnly === true) return res.status(200).json({ ok: true });
   if (typeof content !== 'string' || content.length > 100000)
     return res.status(400).send('Contenido inválido');
 
