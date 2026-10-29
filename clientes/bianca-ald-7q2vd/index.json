@@ -3,22 +3,38 @@
   "grabaciones": [
     {
       "rec": "R19",
-      "nombre": "Grabación 19 · conciertos, estilo y transiciones",
-      "fecha": "23/10/2026",
+      "nombre": "Grabación 19 · estilo, boutique y transiciones",
+      "fecha": "30/10/2026",
       "locacion": "Por confirmar",
-      "ventana": "6 guiones · 7 transiciones · 1 chusco · publicación desde el 24/10 · análisis hasta el 08/11/2026",
-      "nota": "Fechas verificadas el 20/10; cotejo visual completado el 21/10. Estructura basada en los dos TikToks enviados por Dante: lista ágil con prendas, preferencia personal y pregunta final. Pinterest revisado; combinaciones documentadas en el expediente. Pendiente seleccionar fotos exactas con Bianca. No duplicar R18.",
+      "ventana": "6 guiones · 7 transiciones · 1 chusco · contenido sin fechas de eventos",
+      "nota": "Reorganizada el 29/10 por posposición de una semana; fecha trasladada del 23 al 30/10. Se retira el bloque de conciertos. Las propuestas de prendas de los guiones se basan en las referencias enlazadas; no se presentan como tendencias 2027. Fotos exactas por aportar y seleccionar. Fuentes y decisiones: clientes/bianca-ald-7q2vd/refs/r19-reorganizacion.html",
       "timeline": [
         {
           "hora": "",
-          "titulo": "CONCIERTOS · PUBLICAR EN ESTE ORDEN",
+          "titulo": "GUIONES · ESTILO Y HÁBITOS",
           "slugs": [
-            "g-152",
-            "g-153",
-            "g-154",
-            "g-155"
+            "g-166",
+            "g-169",
+            "g-168",
+            "g-164"
           ],
-          "nota": "Carlos Rivera/Kapo/Bad Gyal 24/10; Farruko/Turizo 25/10; Aitana 27/10; rock 30/10. Cada tarjeta abre el expediente de fuentes en «Ver referencia». La ropa se consulta y adjunta desde las prendas marcadas del guion."
+          "nota": "Solo texto hablado. Cada tarjeta enlaza su referencia original."
+        },
+        {
+          "hora": "",
+          "titulo": "VISUAL CON VOZ · DOS BASES DE COLOR",
+          "slugs": [
+            "g-167"
+          ],
+          "nota": "Dos playeras y alternativas de pantalón; conservar las combinaciones de la referencia."
+        },
+        {
+          "hora": "",
+          "titulo": "GUION · DESCUBRIR BOUTIQUES",
+          "slugs": [
+            "g-163"
+          ],
+          "nota": "Referencia de tiendas locales; sin prometer exclusividad."
         },
         {
           "hora": "",
@@ -32,111 +48,18 @@
             "g-161",
             "g-162"
           ],
-          "nota": "Siete referencias originales compartidas por Alma el 21/10. Sin guion hablado añadido."
+          "nota": "Se conservan las siete referencias. Prendas concretas a elegir con sus fotos; máximo dos looks por pieza."
         },
         {
           "hora": "",
-          "titulo": "GUIONES · ESTILO Y BOUTIQUE · REFERENCIAS DE ALMA",
-          "slugs": [
-            "g-163",
-            "g-164"
-          ],
-          "nota": "Adaptaciones de las referencias de Marta Salerno compartidas por Alma."
-        },
-        {
-          "hora": "",
-          "titulo": "CHUSCOS · BOUTIQUE",
+          "titulo": "CHUSCO · BOUTIQUE",
           "slugs": [
             "g-165"
           ],
-          "nota": "Humor breve; referencia original en la tarjeta."
+          "nota": "Humor breve sobre los días para comprar ropa."
         }
       ],
       "guiones": [
-        {
-          "slug": "g-152",
-          "titulo": "Carlos Rivera, Kapo y Bad Gyal · qué ponerte para sus conciertos",
-          "info": "Bianca · publicar 24/10/2026 · tres conciertos, dos bases · fotos por seleccionar",
-          "categoria": "guion",
-          "tipo": "md",
-          "grabado": false,
-          "locutor": "Bianca",
-          "link": "clientes/bianca-ald-7q2vd/refs/r19-fuentes.html#g-152",
-          "outfit": {
-            "n": 1,
-            "estilo": "Una base de Bianca; alternativas como referencias de prendas",
-            "looks": [
-              {
-                "t": "Base de grabación por confirmar",
-                "p": "Prendas propuestas en el guion; fotos exactas pendientes de selección de Bianca."
-              }
-            ]
-          },
-          "thumb": "clientes/bianca-ald-7q2vd/refs/r19-formato.jpg"
-        },
-        {
-          "slug": "g-153",
-          "titulo": "Fiestas de Octubre · Farruko y Manuel Turizo",
-          "info": "BORRADOR · Bianca · publicar 25/10/2026 · lista de prendas · fotos por seleccionar",
-          "categoria": "guion",
-          "tipo": "md",
-          "grabado": false,
-          "locutor": "Bianca",
-          "link": "clientes/bianca-ald-7q2vd/refs/r19-fuentes.html#g-153",
-          "outfit": {
-            "n": 1,
-            "estilo": "Una base de Bianca; alternativas como referencias de prendas",
-            "looks": [
-              {
-                "t": "Base de grabación por confirmar",
-                "p": "Prendas propuestas en el guion; fotos exactas pendientes de selección de Bianca."
-              }
-            ]
-          },
-          "thumb": "clientes/bianca-ald-7q2vd/refs/r19-formato.jpg"
-        },
-        {
-          "slug": "g-154",
-          "titulo": "Aitana · azul y blanco para Cuarto Azul",
-          "info": "BORRADOR · Bianca · publicar 27/10/2026 · lista de prendas · fotos por seleccionar",
-          "categoria": "guion",
-          "tipo": "md",
-          "grabado": false,
-          "locutor": "Bianca",
-          "link": "clientes/bianca-ald-7q2vd/refs/r19-fuentes.html#g-154",
-          "outfit": {
-            "n": 1,
-            "estilo": "Una base de Bianca; alternativas como referencias de prendas",
-            "looks": [
-              {
-                "t": "Base de grabación por confirmar",
-                "p": "Prendas propuestas en el guion; fotos exactas pendientes de selección de Bianca."
-              }
-            ]
-          },
-          "thumb": "clientes/bianca-ald-7q2vd/refs/r19-formato.jpg"
-        },
-        {
-          "slug": "g-155",
-          "titulo": "El Tri y Mägo de Oz · dos bases para una noche de rock",
-          "info": "BORRADOR · Bianca · publicar 30/10/2026 · lista de prendas · fotos por seleccionar",
-          "categoria": "guion",
-          "tipo": "md",
-          "grabado": false,
-          "locutor": "Bianca",
-          "link": "clientes/bianca-ald-7q2vd/refs/r19-fuentes.html#g-155",
-          "outfit": {
-            "n": 1,
-            "estilo": "Una base de Bianca; alternativas como referencias de prendas",
-            "looks": [
-              {
-                "t": "Base de grabación por confirmar",
-                "p": "Prendas propuestas en el guion; fotos exactas pendientes de selección de Bianca."
-              }
-            ]
-          },
-          "thumb": "clientes/bianca-ald-7q2vd/refs/r19-formato.jpg"
-        },
         {
           "slug": "g-156",
           "titulo": "Transición · lista para un cumpleaños",
@@ -246,6 +169,50 @@
           "locutor": "Bianca",
           "link": "https://www.instagram.com/reel/DcjDjKNtrRE/",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-165.jpg"
+        },
+        {
+          "slug": "g-166",
+          "titulo": "Tu look básico puede cambiar con estos cuatro detalles",
+          "info": "75–90 seg · Bianca · Capas, pañuelo, cinturón y color de accesorios · basado en Sol Vargas",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSgGerm3B/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-166.jpg"
+        },
+        {
+          "slug": "g-167",
+          "titulo": "Dos playeras básicas y seis opciones de color",
+          "info": "25–35 seg · Bianca · Visual con voz · dos bases y alternativas de pantalón tomadas de Sol Vargas",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSgGeAJHm/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-167.jpg"
+        },
+        {
+          "slug": "g-168",
+          "titulo": "Tres hábitos para no vestirte siempre con prisas",
+          "info": "60–75 seg · Bianca · Tiempo, preparación y organización · basado en Isabel Marín",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSgGepDG7/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-168.jpg"
+        },
+        {
+          "slug": "g-169",
+          "titulo": "Te gusta tu ropa, pero el conjunto no te convence",
+          "info": "65–80 seg · Bianca · Proporción, accesorios y acabado · basado en BC·RELUXE",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Bianca",
+          "link": "https://vt.tiktok.com/ZSgGdbrGy/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-169.jpg"
         }
       ]
     },
