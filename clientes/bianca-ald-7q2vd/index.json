@@ -212,7 +212,8 @@
           "grabado": false,
           "locutor": "Bianca",
           "link": "https://vt.tiktok.com/ZSgGdbrGy/",
-          "thumb": "clientes/bianca-ald-7q2vd/refs/g-169.jpg"
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-169.jpg",
+          "miniatura": true
         }
       ]
     },
