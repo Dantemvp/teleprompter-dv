@@ -1,4 +1,151 @@
 {
   "cliente": "Mary Baltazar",
-  "grabaciones": []
+  "grabaciones": [
+    {
+      "rec": "R01",
+      "nombre": "Guiones existentes",
+      "fecha": "Por definir",
+      "locacion": "Por definir",
+      "guiones": [
+        {
+          "slug": "g-01",
+          "titulo": "El precio de un sueño",
+          "info": "8–15 seg · Referencia breve · Jordi Segués",
+          "categoria": "guion-corto",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Mary",
+          "link": "https://www.instagram.com/p/DdGddrWt2Z_/"
+        },
+        {
+          "slug": "g-02",
+          "titulo": "Elige a quien te elige",
+          "info": "8–15 seg · Referencia breve · Margarita Pasos",
+          "categoria": "guion-corto",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Mary",
+          "link": "https://www.instagram.com/p/DcrDZAuDdXm/"
+        },
+        {
+          "slug": "g-03",
+          "titulo": "Hábitos y futuro",
+          "info": "8–15 seg · Referencia breve · Jordi Segués",
+          "categoria": "guion-corto",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Mary",
+          "link": "https://www.instagram.com/p/DfEeUbCt53D/"
+        },
+        {
+          "slug": "g-04",
+          "titulo": "Que te vean empezando",
+          "info": "40–60 seg aprox. · Texto original DV",
+          "categoria": "guion-largo",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Mary",
+          "link": "https://www.instagram.com/p/DdVsRT1tDzi/"
+        },
+        {
+          "slug": "g-05",
+          "titulo": "Lo tuyo también necesita una fecha",
+          "info": "40–60 seg aprox. · Texto original DV",
+          "categoria": "guion-largo",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Mary",
+          "link": "https://www.penguin.co.uk/discover/articles/clarissa-pinkola-estes"
+        },
+        {
+          "slug": "g-06",
+          "titulo": "La discusión que sigue cuando te acuestas",
+          "info": "40–60 seg aprox. · Texto original DV",
+          "categoria": "guion-largo",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Mary",
+          "link": "https://www.instagram.com/p/DeWcpVsNpdL/"
+        }
+      ]
+    },
+    {
+      "rec": "R02",
+      "nombre": "Referencias de TikTok · versiones para Mary",
+      "fecha": "Por definir",
+      "locacion": "Por definir",
+      "guiones": [
+        {
+          "slug": "g-07",
+          "titulo": "Volver a empezar con lo que ya sabes",
+          "info": "40–60 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion-largo",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Mary",
+          "link": "https://vt.tiktok.com/ZSgoJ3sHC/"
+        },
+        {
+          "slug": "g-08",
+          "titulo": "Empieza por una cosa que puedas ordenar",
+          "info": "40–60 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion-largo",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Mary",
+          "link": "https://vt.tiktok.com/ZSgoJGjtM/"
+        },
+        {
+          "slug": "g-09",
+          "titulo": "Criar después de una separación",
+          "info": "40–60 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion-largo",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Mary",
+          "link": "https://vt.tiktok.com/ZSgoeWefq/"
+        },
+        {
+          "slug": "g-10",
+          "titulo": "La confianza también se practica",
+          "info": "40–60 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion-largo",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Mary",
+          "link": "https://vt.tiktok.com/ZSgoeQMJB/"
+        },
+        {
+          "slug": "g-11",
+          "titulo": "Cuando tu familia no entiende tu plan",
+          "info": "40–60 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion-largo",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Mary",
+          "link": "https://vt.tiktok.com/ZSgoeu9Gt/"
+        },
+        {
+          "slug": "g-12",
+          "titulo": "Reconoce lo que ya has construido",
+          "info": "40–60 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion-largo",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Mary",
+          "link": "https://vt.tiktok.com/ZSgod7jH7/"
+        },
+        {
+          "slug": "g-13",
+          "titulo": "Compartir algo sin esperar gustarle a todos",
+          "info": "40–60 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion-largo",
+          "tipo": "md",
+          "grabado": false,
+          "locutor": "Mary",
+          "link": "https://vt.tiktok.com/ZSgodvFWA/"
+        }
+      ]
+    }
+  ]
 }
