@@ -727,7 +727,7 @@ const CAT_LABELS = {
   '__otros':   'OTROS'
 };
 const CLIENT_CATS = {
-  'mary-bal-6n9xt': ['guion-corto', 'guion-largo'],
+  'mary-bal-6n9xt': ['guion'],
   'bianca-ald-7q2vd': ['ganador', 'guion', 'viral-organica', 'chusco', 'trans-int', 'trans-ext', 'caminadora', 'juntas', 'tienda'],
   'skin-club-e67ff4': ['ganador', 'guion', 'paloma', 'camila', 'kaori', 'diego', 'nat', 'juntos', 'tertulia', 'ugc', 'influencer'],
   'fedra-ald-t84qz': ['plan', 'xeomeen', 'idea', 'guion-corto', 'guion-largo', 'estetica', 'guion', 'chusco'],
@@ -784,8 +784,9 @@ function renderTimeline(rec, token, codeOf, gi){
       const esGuionItem = c.tipo !== 'ref' && !['trans-int','trans-ext','caminadora','juntas'].includes(c.categoria);
       const verRef = !REF_PRIVATE[token] || isAdmin();
       const thumb = (c.thumb && verRef)
-        ? `<a class="tlthumb" href="${attr(c.link || '#')}" target="_blank" rel="noopener"><img src="${attr(c.thumb)}" alt="preview" loading="lazy"></a>`
+        ? `<a class="tlthumb" href="${attr(c.link || '#')}" target="_blank" rel="noopener"><img src="${attr(c.thumb)}" alt="${attr(c.thumb_alt || 'preview')}" loading="lazy"></a>`
         : `<span class="tlthumb nothumb">🎬</span>`;
+      const info = c.orden_publicacion ? `<p class="tlnota" style="margin:5px 0 9px">${esc(c.info || '')}</p>` : '';
       const abrir = esGuionItem || token === 'bianca-ald-7q2vd'
         ? `<a href="?c=${token}&g=${attr(c.slug)}" target="_blank" rel="noopener"><button class="primary mini">${esGuionItem?'Abrir guion ↗':'Prendas y referencia ↗'}</button></a>` : '';
       const ref = (c.link && verRef)
@@ -803,6 +804,7 @@ function renderTimeline(rec, token, codeOf, gi){
         <div class="tlitemtop">${thumb}<div class="tlbody">
           <span class="tlcod">${esc(cod)}${c.grabado?' ✓':''}</span>${c.marca?`<span class="marca">${esc(c.marca)}</span>`:''}
           <p class="tlname">${esc(c.titulo)}</p>
+          ${info}
           <div class="tlacts">${mini}${abrir}${ref}${marcar}${del}</div>
         </div></div>
         ${renderOutfit(c)}
@@ -927,7 +929,7 @@ function renderClient(data, token){
       const codMap = {}; order.forEach(key => itemsForCat(g.guiones||[], key, known).forEach((it,idx) => { codMap[it.slug] = (CAT_PREFIX[key]||'') + (idx+1); }));
       const tlHtml = renderTimeline(g, token, sl => codMap[sl], gi);
       const body = (tlHtml + inner) || `<p class="hint" style="margin:6px 2px;">Grabación vacía. Mueve videos aquí con el botón "Mover ⇄" de cada tarjeta.</p>`;
-      return `<details class="recblock2"><summary><span class="recname">🎬 ${esc(g.rec)} · ${esc(g.nombre||'Grabación')}</span><span class="catcount" data-recsum="${gi}">${total} · ${tdone}/${total} grabados</span></summary>${body}</details>`;
+      return `<details class="recblock2"${g.abierta ? ' open' : ''}><summary><span class="recname">🎬 ${esc(g.rec)} · ${esc(g.nombre||'Grabación')}</span><span class="catcount" data-recsum="${gi}">${total} · ${tdone}/${total} grabados</span></summary>${body}</details>`;
     }).join('');
     if (admin) blocks = `<button class="primary mini" id="newRecBtn" style="margin:0 0 16px;">➕ Nueva grabación</button>` + blocks;
   } else if (cats){

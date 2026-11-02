@@ -3,187 +3,331 @@
   "grabaciones": [
     {
       "rec": "R01",
-      "nombre": "Guiones existentes",
+      "nombre": "Primera grabación",
       "fecha": "Por definir",
       "locacion": "Por definir",
+      "abierta": true,
+      "ventana": "17 videos · Orden de grabación y salida sugerido",
+      "nota": "Todos los guiones pertenecen a la primera sesión. Miniatura controla la portada de Mary, de forma independiente de la imagen de referencia.",
+      "timeline": [
+        {
+          "hora": "Preparar",
+          "titulo": "Audio, encuadre y luz",
+          "slugs": [],
+          "nota": "Probar una toma antes de empezar. El orden de abajo sirve para grabar y como propuesta de salida, sin fechas asignadas."
+        },
+        {
+          "hora": "01–04",
+          "titulo": "Aprender, hábitos y confianza",
+          "slugs": [
+            "g-04",
+            "g-03",
+            "g-10",
+            "g-05"
+          ],
+          "nota": "Grabar cada video y una toma limpia para su miniatura antes de pasar al siguiente."
+        },
+        {
+          "hora": "05–08",
+          "titulo": "Apoyo, autenticidad y volver a intentar",
+          "slugs": [
+            "g-17",
+            "g-13",
+            "g-07",
+            "g-01"
+          ]
+        },
+        {
+          "hora": "09–12",
+          "titulo": "Maternidad, atención propia y límites",
+          "slugs": [
+            "g-09",
+            "g-15",
+            "g-06",
+            "g-16"
+          ]
+        },
+        {
+          "hora": "13–17",
+          "titulo": "Relaciones, orden, gratitud y calma",
+          "slugs": [
+            "g-02",
+            "g-11",
+            "g-08",
+            "g-12",
+            "g-14"
+          ]
+        },
+        {
+          "hora": "Pausa",
+          "titulo": "Descanso antes de la tertulia",
+          "tipo": "pausa",
+          "slugs": [],
+          "nota": "Revisar audio y respaldo. Dar espacio para descansar antes de seguir conversando."
+        },
+        {
+          "hora": "Tertulia",
+          "titulo": "Conversación con Mary",
+          "tipo": "extra",
+          "slugs": [],
+          "nota": "Seguir la guía privada de conversación. Los recortes se eligen al revisar la entrevista."
+        }
+      ],
       "guiones": [
         {
           "slug": "g-01",
           "titulo": "El precio de un sueño",
-          "info": "8–15 seg · Referencia breve · Jordi Segués",
-          "categoria": "guion-corto",
+          "info": "Salida 08 · 8–15 seg · Referencia breve · Jordi Segués",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://www.instagram.com/p/DdGddrWt2Z_/"
+          "link": "https://www.instagram.com/p/DdGddrWt2Z_/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-01.webp",
+          "thumb_alt": "Referencia: El precio de un sueño · miniatura del video",
+          "orden_grabacion": 8,
+          "orden_publicacion": 8
         },
         {
           "slug": "g-02",
           "titulo": "Elige a quien te elige",
-          "info": "8–15 seg · Referencia breve · Margarita Pasos",
-          "categoria": "guion-corto",
+          "info": "Salida 13 · 8–15 seg · Referencia breve · Margarita Pasos",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://www.instagram.com/p/DcrDZAuDdXm/"
+          "link": "https://www.instagram.com/p/DcrDZAuDdXm/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-02.webp",
+          "thumb_alt": "Referencia: Elige a quien te elige · fotograma del video",
+          "orden_grabacion": 13,
+          "orden_publicacion": 13
         },
         {
           "slug": "g-03",
           "titulo": "Hábitos y futuro",
-          "info": "8–15 seg · Referencia breve · Jordi Segués",
-          "categoria": "guion-corto",
+          "info": "Salida 02 · 8–15 seg · Referencia breve · Jordi Segués",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://www.instagram.com/p/DfEeUbCt53D/"
+          "link": "https://www.instagram.com/p/DfEeUbCt53D/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-03.webp",
+          "thumb_alt": "Referencia: Hábitos y futuro · miniatura del video",
+          "orden_grabacion": 2,
+          "orden_publicacion": 2
         },
         {
           "slug": "g-04",
           "titulo": "Que te vean empezando",
-          "info": "40–60 seg aprox. · Texto original DV",
-          "categoria": "guion-largo",
+          "info": "Salida 01 · 40–60 seg aprox. · Texto original DV",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://www.instagram.com/p/DdVsRT1tDzi/"
+          "link": "https://www.instagram.com/p/DdVsRT1tDzi/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-04.webp",
+          "thumb_alt": "Referencia: Que te vean empezando · fotograma del video",
+          "orden_grabacion": 1,
+          "orden_publicacion": 1
         },
         {
           "slug": "g-05",
           "titulo": "Lo tuyo también necesita una fecha",
-          "info": "40–60 seg aprox. · Texto original DV",
-          "categoria": "guion-largo",
+          "info": "Salida 04 · 40–60 seg aprox. · Texto original DV · Fuente de lectura, sin video de referencia",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://www.penguin.co.uk/discover/articles/clarissa-pinkola-estes"
+          "link": "https://www.penguin.co.uk/discover/articles/clarissa-pinkola-estes",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-05.jpg",
+          "thumb_alt": "Referencia: Lo tuyo también necesita una fecha · imagen de la lectura, no referencia audiovisual",
+          "orden_grabacion": 4,
+          "orden_publicacion": 4
         },
         {
           "slug": "g-06",
           "titulo": "La discusión que sigue cuando te acuestas",
-          "info": "40–60 seg aprox. · Texto original DV",
-          "categoria": "guion-largo",
+          "info": "Salida 11 · 40–60 seg aprox. · Texto original DV",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://www.instagram.com/p/DeWcpVsNpdL/"
-        }
-      ]
-    },
-    {
-      "rec": "R02",
-      "nombre": "Referencias de TikTok · versiones para Mary",
-      "fecha": "Por definir",
-      "locacion": "Por definir",
-      "guiones": [
+          "link": "https://www.instagram.com/p/DeWcpVsNpdL/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-06.webp",
+          "thumb_alt": "Referencia: La discusión que sigue cuando te acuestas · fotograma del video",
+          "orden_grabacion": 11,
+          "orden_publicacion": 11
+        },
         {
           "slug": "g-07",
           "titulo": "Volver a empezar con lo que ya sabes",
-          "info": "40–60 seg aprox. · Versión original para Mary · referencia TikTok",
-          "categoria": "guion-largo",
+          "info": "Salida 07 · 40–60 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://vt.tiktok.com/ZSgoJ3sHC/"
+          "link": "https://vt.tiktok.com/ZSgoJ3sHC/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-07.jpg",
+          "thumb_alt": "Referencia: Volver a empezar con lo que ya sabes · miniatura del video",
+          "orden_grabacion": 7,
+          "orden_publicacion": 7
         },
         {
           "slug": "g-08",
           "titulo": "Empieza por una cosa que puedas ordenar",
-          "info": "40–60 seg aprox. · Versión original para Mary · referencia TikTok",
-          "categoria": "guion-largo",
+          "info": "Salida 15 · 40–60 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://vt.tiktok.com/ZSgoJGjtM/"
+          "link": "https://vt.tiktok.com/ZSgoJGjtM/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-08.jpg",
+          "thumb_alt": "Referencia: Empieza por una cosa que puedas ordenar · miniatura del video",
+          "orden_grabacion": 15,
+          "orden_publicacion": 15
         },
         {
           "slug": "g-09",
           "titulo": "Criar después de una separación",
-          "info": "40–60 seg aprox. · Versión original para Mary · referencia TikTok",
-          "categoria": "guion-largo",
+          "info": "Salida 09 · 40–60 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://vt.tiktok.com/ZSgoeWefq/"
+          "link": "https://vt.tiktok.com/ZSgoeWefq/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-09.jpg",
+          "thumb_alt": "Referencia: Criar después de una separación · miniatura del video",
+          "orden_grabacion": 9,
+          "orden_publicacion": 9
         },
         {
           "slug": "g-10",
           "titulo": "La confianza también se practica",
-          "info": "40–60 seg aprox. · Versión original para Mary · referencia TikTok",
-          "categoria": "guion-largo",
+          "info": "Salida 03 · 40–60 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://vt.tiktok.com/ZSgoeQMJB/"
+          "link": "https://vt.tiktok.com/ZSgoeQMJB/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-10.webp",
+          "thumb_alt": "Referencia: La confianza también se practica · miniatura del video",
+          "orden_grabacion": 3,
+          "orden_publicacion": 3
         },
         {
           "slug": "g-11",
           "titulo": "Cuando tu familia no entiende tu plan",
-          "info": "40–60 seg aprox. · Versión original para Mary · referencia TikTok",
-          "categoria": "guion-largo",
+          "info": "Salida 14 · 40–60 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://vt.tiktok.com/ZSgoeu9Gt/"
+          "link": "https://vt.tiktok.com/ZSgoeu9Gt/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-11.webp",
+          "thumb_alt": "Referencia: Cuando tu familia no entiende tu plan · miniatura del video",
+          "orden_grabacion": 14,
+          "orden_publicacion": 14
         },
         {
           "slug": "g-12",
           "titulo": "Reconoce lo que ya has construido",
-          "info": "40–60 seg aprox. · Versión original para Mary · referencia TikTok",
-          "categoria": "guion-largo",
+          "info": "Salida 16 · 40–60 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://vt.tiktok.com/ZSgod7jH7/"
+          "link": "https://vt.tiktok.com/ZSgod7jH7/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-12.jpg",
+          "thumb_alt": "Referencia: Reconoce lo que ya has construido · miniatura del video",
+          "orden_grabacion": 16,
+          "orden_publicacion": 16
         },
         {
           "slug": "g-13",
           "titulo": "Compartir algo sin esperar gustarle a todos",
-          "info": "40–60 seg aprox. · Versión original para Mary · referencia TikTok",
-          "categoria": "guion-largo",
+          "info": "Salida 06 · 40–60 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://vt.tiktok.com/ZSgodvFWA/"
+          "link": "https://vt.tiktok.com/ZSgodvFWA/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-13.jpg",
+          "thumb_alt": "Referencia: Compartir algo sin esperar gustarle a todos · miniatura del video",
+          "orden_grabacion": 6,
+          "orden_publicacion": 6
         },
         {
           "slug": "g-14",
           "titulo": "Soltar el deseo de devolver el daño",
-          "info": "60–85 seg aprox. · Versión original para Mary · referencia TikTok",
-          "categoria": "guion-largo",
+          "info": "Salida 17 · 60–85 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://vt.tiktok.com/ZSgoRcGYg/"
+          "link": "https://vt.tiktok.com/ZSgoRcGYg/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-14.jpg",
+          "thumb_alt": "Referencia: Soltar el deseo de devolver el daño · miniatura del video",
+          "orden_grabacion": 17,
+          "orden_publicacion": 17
         },
         {
           "slug": "g-15",
           "titulo": "La atención que también necesitas tú",
-          "info": "60–85 seg aprox. · Versión original para Mary · referencia TikTok",
-          "categoria": "guion-largo",
+          "info": "Salida 10 · 60–85 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://vt.tiktok.com/ZSgo82RK3/"
+          "link": "https://vt.tiktok.com/ZSgo82RK3/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-15.jpg",
+          "thumb_alt": "Referencia: La atención que también necesitas tú · miniatura del video",
+          "orden_grabacion": 10,
+          "orden_publicacion": 10
         },
         {
           "slug": "g-16",
           "titulo": "Cinco formas de darte tu lugar cada día",
-          "info": "90–120 seg aprox. · Versión original para Mary · referencia TikTok",
-          "categoria": "guion-largo",
+          "info": "Salida 12 · 90–120 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://vt.tiktok.com/ZSgo8fnur/"
+          "link": "https://vt.tiktok.com/ZSgo8fnur/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-16.jpg",
+          "thumb_alt": "Referencia: Cinco formas de darte tu lugar cada día · miniatura del video",
+          "orden_grabacion": 12,
+          "orden_publicacion": 12
         },
         {
           "slug": "g-17",
           "titulo": "La amiga que te ayuda a atreverte",
-          "info": "60–85 seg aprox. · Versión original para Mary · referencia TikTok",
-          "categoria": "guion-largo",
+          "info": "Salida 05 · 60–85 seg aprox. · Versión original para Mary · referencia TikTok",
+          "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "locutor": "Mary",
-          "link": "https://vt.tiktok.com/ZSgo8EPJT/"
+          "link": "https://vt.tiktok.com/ZSgo8EPJT/",
+          "miniatura": false,
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-17.jpg",
+          "thumb_alt": "Referencia: La amiga que te ayuda a atreverte · miniatura del video",
+          "orden_grabacion": 5,
+          "orden_publicacion": 5
         }
       ]
     }
