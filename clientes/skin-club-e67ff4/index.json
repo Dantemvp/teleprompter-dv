@@ -2,6 +2,51 @@
   "cliente": "The Skin Club",
   "grabaciones": [
     {
+      "rec": "R8",
+      "nombre": "Octava grabación · Paloma y Camila",
+      "fecha": "Por definir",
+      "locacion": "Por definir",
+      "abierta": true,
+      "guiones": [
+        {
+          "slug": "r8-01",
+          "titulo": "Si te gustan estos productos, conoce estas opciones de Skin Club",
+          "info": "45–60 seg · Paloma + Camila · Hyalu B5 / Hydroglow y Rare Earth / Oh Matcha",
+          "grabado": false,
+          "locutor": "Paloma",
+          "categoria": "juntos",
+          "link": "https://www.instagram.com/reel/Dd5Ej3GPM2U/",
+          "ref": "https://www.instagram.com/reel/Dd5Ej3GPM2U/",
+          "miniatura": false,
+          "thumb": "clientes/skin-club-e67ff4/refs/r8-ref-01.jpg"
+        },
+        {
+          "slug": "r8-02",
+          "titulo": "Las bolitas que se notan más con el maquillaje",
+          "info": "50–65 seg · Paloma explica, Camila demuestra · tres cosas que revisar",
+          "grabado": false,
+          "locutor": "Paloma",
+          "categoria": "paloma",
+          "link": "https://www.instagram.com/reel/DdltUX_Niec/",
+          "ref": "https://www.instagram.com/reel/DdltUX_Niec/",
+          "miniatura": false,
+          "thumb": "clientes/skin-club-e67ff4/refs/r8-ref-02.jpg"
+        },
+        {
+          "slug": "r8-03",
+          "titulo": "Compras de skincare que puedes ahorrarte",
+          "info": "45–60 seg · Camila + preguntas de Paloma · compras y rutina",
+          "grabado": false,
+          "locutor": "Camila",
+          "categoria": "camila",
+          "link": "https://www.instagram.com/reel/DbtYVPDRE48/",
+          "ref": "https://www.instagram.com/reel/DbtYVPDRE48/",
+          "miniatura": false,
+          "thumb": "clientes/skin-club-e67ff4/refs/r8-ref-03.jpg"
+        }
+      ]
+    },
+    {
       "rec": "R7",
       "nombre": "Séptima grabación",
       "fecha": "27 de octubre de 2026",
