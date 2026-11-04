@@ -53,7 +53,7 @@ test('private card decoration never mutates public data',()=>{
 test('static Skin files expose no inspiration URLs, previews or private notes',async()=>{
   const root=`clientes/${SKIN_CLIENT}`;
   const files=(await readdir(root)).filter(n=>n.endsWith('.md'));
-  const reports=(await readdir(`${root}/refs`)).filter(n=>n.endsWith('.html')).map(n=>'refs/'+n);
+  const reports=(await readdir(`${root}/refs`).catch(e=>{if(e.code==='ENOENT')return [];throw e;})).filter(n=>n.endsWith('.html')).map(n=>'refs/'+n);
   for(const name of [...files,'index.json',...reports]){
     const content=await readFile(`${root}/${name}`,'utf8');
     assert(!/https?:\/\/(?:[\w-]+\.)*(?:instagram\.com|tiktok\.com|youtu\.be|youtube\.com)\//i.test(content),name);
