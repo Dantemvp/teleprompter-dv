@@ -7,62 +7,7 @@
       "fecha": "Por definir",
       "locacion": "Por definir",
       "abierta": true,
-      "guiones": [
-        {
-          "slug": "r8-01",
-          "titulo": "Dos opciones mexicanas: hidratación o exceso de brillo",
-          "info": "Comparación visual · hidratación y suavidad / exceso de grasa · precios en edición",
-          "grabado": false,
-          "locutor": null,
-          "categoria": "guion",
-          "miniatura": false
-        },
-        {
-          "slug": "r8-02",
-          "titulo": "Me maquillo, veo las bolitas… ¿me exfolio otra vez?",
-          "info": "Maquillaje y textura · qué evitar antes de sumar exfoliación",
-          "grabado": false,
-          "locutor": null,
-          "categoria": "guion",
-          "miniatura": false
-        },
-        {
-          "slug": "r8-03",
-          "titulo": "Tres cosas que revisaría antes de pagar tu skincare",
-          "info": "Carrito y repisa · tres decisiones antes de comprar otro kit",
-          "grabado": false,
-          "locutor": null,
-          "categoria": "guion",
-          "miniatura": false
-        },
-        {
-          "slug": "r8-05",
-          "titulo": "Mascarillas: ¿la volverías a usar?",
-          "info": "Prueba a cuadro · aplicación, retiro y decisión real de cada participante",
-          "grabado": false,
-          "locutor": null,
-          "categoria": "guion",
-          "miniatura": false
-        },
-        {
-          "slug": "r8-06",
-          "titulo": "Vigna: ¿por qué le dicen «retinol vegetal»?",
-          "info": "Animación + VOZ · origen de «retinol vegetal» y alcance de la comparación",
-          "grabado": false,
-          "locutor": null,
-          "categoria": "guion",
-          "miniatura": false
-        },
-        {
-          "slug": "r8-07",
-          "titulo": "Hoy no me maquillé. ¿Sérum y a dormir?",
-          "info": "Diálogo a cuadro · limpieza antes del sérum · demostración y animación opcional",
-          "grabado": false,
-          "locutor": null,
-          "categoria": "guion",
-          "miniatura": false
-        }
-      ]
+      "guiones": []
     },
     {
       "rec": "R7",

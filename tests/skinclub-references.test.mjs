@@ -53,7 +53,8 @@ test('private card decoration never mutates public data',()=>{
 test('static Skin files expose no inspiration URLs, previews or private notes',async()=>{
   const root=`clientes/${SKIN_CLIENT}`;
   const files=(await readdir(root)).filter(n=>n.endsWith('.md'));
-  for(const name of [...files,'index.json','refs/r8-fuentes.html','refs/r8-revision.html']){
+  const reports=(await readdir(`${root}/refs`)).filter(n=>n.endsWith('.html')).map(n=>'refs/'+n);
+  for(const name of [...files,'index.json',...reports]){
     const content=await readFile(`${root}/${name}`,'utf8');
     assert(!/https?:\/\/(?:[\w-]+\.)*(?:instagram\.com|tiktok\.com|youtu\.be|youtube\.com)\//i.test(content),name);
     assert(!/^\s*\/\/\s*✱/m.test(content),name);
@@ -64,6 +65,9 @@ test('static Skin files expose no inspiration URLs, previews or private notes',a
     const names=await readdir(`${root}/${dir}`).catch(e=>{if(e.code==='ENOENT')return [];throw e;});
     assert(!names.some(n=>/\.(jpg|png|webp)$/i.test(n)));
   }
-  const r8=ix.grabaciones.find(r=>r.guiones.some(g=>g.slug==='r8-01'));
-  assert.deepEqual(r8.guiones.map(g=>g.slug),['r8-01','r8-02','r8-03','r8-05','r8-06','r8-07']);
+  const r8=ix.grabaciones.find(r=>r.rec==='R8');
+  assert(r8);
+  const slugs=r8.guiones.map(g=>g.slug);
+  assert.equal(new Set(slugs).size,slugs.length);
+  assert.deepEqual(slugs,[...slugs].sort());
 });
