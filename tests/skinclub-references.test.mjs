@@ -35,6 +35,8 @@ test('source splitting preserves dialogue and scientific citations',()=>{
   assert(split.publicContent.includes('VOZ: ¿Sientes tirantez?'));
   assert(split.publicContent.includes('pubmed.ncbi.nlm.nih.gov'));
   assert(split.publicContent.includes('VOZ: Revisa tu rutina.'));
+  assert(split.publicContent.includes('## Cierre'));
+  assert(splitSkinSource('## Hook\n\nVOZ: Hola.\n').publicContent.includes('## Hook'));
   assert(!/private|Nota interna|Hook original|Referencia desglosada/.test(split.publicContent));
   assert(split.privateContent.includes('Hook original'));
   assert.equal(splitSkinSource(split.publicContent).publicContent,split.publicContent);
