@@ -79,6 +79,15 @@
           "locutor": null,
           "categoria": "guion",
           "miniatura": false
+        },
+        {
+          "slug": "r8-09",
+          "titulo": "No cometas este error con los puntos negros",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
         }
       ]
     },
