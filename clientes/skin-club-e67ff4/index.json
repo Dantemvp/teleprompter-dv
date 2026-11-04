@@ -48,7 +48,7 @@
           "slug": "r8-05",
           "titulo": "¿Qué me pongo de día y qué va en la noche?",
           "info": "",
-          "grabado": false,
+          "grabado": true,
           "locutor": "Paloma",
           "categoria": "guion",
           "miniatura": false
