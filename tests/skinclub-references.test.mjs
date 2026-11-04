@@ -58,7 +58,10 @@ test('static Skin files expose no inspiration URLs, previews or private notes',a
   }
   const ix=JSON.parse(await readFile(`${root}/index.json`,'utf8'));
   for(const rec of ix.grabaciones)for(const g of rec.guiones){assert(!g.ref&&!g.link&&!g.thumb);assert.notEqual(g.tipo,'ref');}
-  for(const dir of ['refs','thumbs'])assert(!(await readdir(`${root}/${dir}`)).some(n=>/\.(jpg|png|webp)$/i.test(n)));
+  for(const dir of ['refs','thumbs']){
+    const names=await readdir(`${root}/${dir}`).catch(e=>{if(e.code==='ENOENT')return [];throw e;});
+    assert(!names.some(n=>/\.(jpg|png|webp)$/i.test(n)));
+  }
   const r8=ix.grabaciones.find(r=>r.guiones.some(g=>g.slug==='r8-01'));
   assert.deepEqual(r8.guiones.map(g=>g.slug),['r8-01','r8-02','r8-03','r8-05','r8-06','r8-07']);
 });
