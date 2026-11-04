@@ -43,6 +43,15 @@
           "locutor": null,
           "categoria": "guion",
           "miniatura": false
+        },
+        {
+          "slug": "r8-05",
+          "titulo": "¿Qué me pongo de día y qué va en la noche?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
         }
       ]
     },
