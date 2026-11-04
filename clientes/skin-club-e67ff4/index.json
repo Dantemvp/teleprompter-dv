@@ -10,8 +10,8 @@
       "guiones": [
         {
           "slug": "r8-01",
-          "titulo": "Si te gustan estos productos, conoce estas opciones de Skin Club",
-          "info": "Propuesta para revisión · 45–60 seg · comparación visual de productos",
+          "titulo": "Dos opciones mexicanas: hidratación o exceso de brillo",
+          "info": "Comparación visual · hidratación y suavidad / exceso de grasa · precios en edición",
           "grabado": false,
           "locutor": null,
           "categoria": "guion",
@@ -19,8 +19,8 @@
         },
         {
           "slug": "r8-02",
-          "titulo": "Las bolitas que se notan más con el maquillaje",
-          "info": "Propuesta para revisión · 50–65 seg · narración y demostración",
+          "titulo": "Me maquillo, veo las bolitas… ¿me exfolio otra vez?",
+          "info": "Maquillaje y textura · qué evitar antes de sumar exfoliación",
           "grabado": false,
           "locutor": null,
           "categoria": "guion",
@@ -28,8 +28,8 @@
         },
         {
           "slug": "r8-03",
-          "titulo": "Compras de skincare que puedes ahorrarte",
-          "info": "Propuesta para revisión · 45–60 seg · preguntas y respuestas sobre compras",
+          "titulo": "Tres cosas que revisaría antes de pagar tu skincare",
+          "info": "Carrito y repisa · tres decisiones antes de comprar otro kit",
           "grabado": false,
           "locutor": null,
           "categoria": "guion",
@@ -37,8 +37,8 @@
         },
         {
           "slug": "r8-05",
-          "titulo": "¿La verde o la azul? Probamos las mascarillas",
-          "info": "Propuesta para revisión · texturas, aplicación y reacciones reales de las mascarillas",
+          "titulo": "Mascarillas: ¿la volverías a usar?",
+          "info": "Prueba a cuadro · aplicación, retiro y decisión real de cada participante",
           "grabado": false,
           "locutor": null,
           "categoria": "guion",
@@ -46,8 +46,8 @@
         },
         {
           "slug": "r8-06",
-          "titulo": "Animación · ¿Por qué comparan la Vigna con el retinol?",
-          "info": "Propuesta para revisión · animación 2D + voz en off · guion y storyboard; audio/video por producir",
+          "titulo": "Vigna: ¿por qué le dicen «retinol vegetal»?",
+          "info": "Animación + VOZ · origen de «retinol vegetal» y alcance de la comparación",
           "grabado": false,
           "locutor": null,
           "categoria": "guion",
@@ -55,8 +55,8 @@
         },
         {
           "slug": "r8-07",
-          "titulo": "No me maquillé… ¿también me limpio antes del sérum?",
-          "info": "Propuesta para revisión · 50–65 seg · diálogo a cuadro, demostración y apoyos animados opcionales",
+          "titulo": "Hoy no me maquillé. ¿Sérum y a dormir?",
+          "info": "Diálogo a cuadro · limpieza antes del sérum · demostración y animación opcional",
           "grabado": false,
           "locutor": null,
           "categoria": "guion",
