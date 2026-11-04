@@ -7,7 +7,17 @@
       "fecha": "Por definir",
       "locacion": "Por definir",
       "abierta": true,
-      "guiones": []
+      "guiones": [
+        {
+          "slug": "r8-01",
+          "titulo": "¿Piel grasa? El activo importa, y cómo lo usas también",
+          "info": "Nueva adaptación · piel grasa · ingredientes, demostración y productos al final",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        }
+      ]
     },
     {
       "rec": "R7",
