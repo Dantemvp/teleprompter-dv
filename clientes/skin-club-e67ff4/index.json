@@ -70,6 +70,15 @@
           "locutor": null,
           "categoria": "guion",
           "miniatura": false
+        },
+        {
+          "slug": "r8-08",
+          "titulo": "Skincare: ingrediente y función",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
         }
       ]
     },
