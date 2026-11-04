@@ -1,6 +1,5 @@
 # Marian × esposo — hazle creer que él también la necesita
 > The Skin Club · INF-01 · Marian López · skit de pareja (Marian + esposo)
-> Referencia: https://www.instagram.com/reel/DXF_DbJivG_/
 
 ## Hook
 // 3 opciones (déjalas a elección de Marian):

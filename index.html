@@ -367,7 +367,8 @@ const lockHtml = () => isAdmin()
   ? ' · <a href="#" class="lockBtn">🔒 bloquear este equipo</a>'
   : ' · <a href="#" class="adminBtn">🔑 modo edición</a>';
 function wireLock(){
-  document.querySelectorAll('.lockBtn').forEach(b => b.onclick = e => { e.preventDefault(); forgetPw(); localStorage.removeItem('dvadmin'); toast('Equipo bloqueado · pedirá PIN y contraseña de nuevo'); boot(); });
+  document.querySelectorAll('.skinRefUnlock').forEach(b => b.onclick = async () => { if(await window.SkinClubRefs?.unlock()) boot(); });
+  document.querySelectorAll('.lockBtn').forEach(b => b.onclick = e => { e.preventDefault(); forgetPw(); window.SkinClubRefs?.clear(); localStorage.removeItem('dvadmin'); toast('Equipo bloqueado · pedirá PIN y contraseña de nuevo'); boot(); });
   document.querySelectorAll('.adminBtn').forEach(b => b.onclick = async e => { e.preventDefault(); if (await enableAdmin()){ toast('Modo edición activado'); boot(); } });
 }
 
@@ -532,7 +533,7 @@ function renderGuion(g, canonical, backHref, opts){
   const chips = g.meta.filter(m => adm || !m.trim().startsWith('✱')).map(m=>`<span class="chip g">${esc(m)}</span>`).join('');
   const banner = '';   // El guardado va directo a la nube; la copia local es solo un cache optimista que se actualiza solo (~1 min) y se auto-limpia al publicarse.
   const refPrivate = opts.client && REF_PRIVATE[opts.client];      // clientes donde la referencia es solo para el estratega
-  const canSeeRef = !refPrivate || isAdmin();       // logueado (equipo reconocido) la ve; lector público no
+  const canSeeRef = !refPrivate || Boolean(window.SkinClubRefs?.canView());       // logueado (equipo reconocido) la ve; lector público no
   const thumbBlock = (opts.thumb && canSeeRef) ? `<details class="refpreview"><summary>👁 Ver preview</summary><img src="${attr(opts.thumb)}" alt="preview de la referencia" loading="lazy"></details>` : '';
   // La referencia siempre va clickeable. Si el guion no la trae en su encabezado, la tomamos
   // del index.json — antes esos guiones solo mostraban la miniatura, sin liga para abrirla.
@@ -551,6 +552,8 @@ function renderGuion(g, canonical, backHref, opts){
     ${(adm || backHref)?`<div class="refbar">${adm?`<button class="mini" onclick="copy('${canonical.replace(/'/g,"\\'")}','Link copiado')">🔗 Copiar link del guion</button> `:''}${backHref?`<a href="${backHref}" style="font-size:12px;">← todos mis guiones</a>`:''}</div>`:''}
     ${verbar}
     ${refblock}
+    ${skinRefControls(opts.client)}
+    ${opts.privateNotes ? `<details class="refbar"><summary>Notas internas · edición</summary><pre style="white-space:pre-wrap">${esc(opts.privateNotes)}</pre></details>` : ''}
     ${locbar}
     ${(opts.client && CLIENT_NOTE[opts.client]) ? `<div class="globalnote">${esc(CLIENT_NOTE[opts.client])}</div>` : ''}
     ${banner}
@@ -570,6 +573,7 @@ function renderGuion(g, canonical, backHref, opts){
     </div>
     <div id="v-edit" style="display:none"></div>`;
 
+  wireLock();
   const fileName = (opts.slug || g.title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')) + '.md';
   TPCTX = { opts, canonical, backHref };   // contexto para editar/guardar desde el teleprompter
 
@@ -782,7 +786,7 @@ function renderTimeline(rec, token, codeOf, gi){
     const chips = cards.map(c => {
       const cod  = codeOf(c.slug) || c.slug.toUpperCase();
       const esGuionItem = c.tipo !== 'ref' && !['trans-int','trans-ext','caminadora','juntas'].includes(c.categoria);
-      const verRef = !REF_PRIVATE[token] || isAdmin();
+      const verRef = !REF_PRIVATE[token] || Boolean(window.SkinClubRefs?.canView());
       const thumb = (c.thumb && verRef)
         ? `<a class="tlthumb" href="${attr(c.link || '#')}" target="_blank" rel="noopener"><img src="${attr(c.thumb)}" alt="${attr(c.thumb_alt || 'preview')}" loading="lazy"></a>`
         : `<span class="tlthumb nothumb">🎬</span>`;
@@ -893,7 +897,7 @@ function renderCard(it, token, ri, codArg){
     ? `<div class="cardlocrow"><span class="cardloclbl">🎙️ Locutor:</span>${founders.map(n=>`<button class="mini cardloc${effLoc===n?' on':''}" data-slug="${attr(it.slug)}" data-loc="${attr(n)}">${esc(n)}</button>`).join('')}</div>`
     : '';
   const abrir = esGuion || token === 'bianca-ald-7q2vd' ? `<a href="${attr(url)}"><button class="primary mini">${esGuion?'Abrir guion':'Prendas y referencia'}</button></a>` : '';
-  const verRef = !REF_PRIVATE[token] || isAdmin();
+  const verRef = !REF_PRIVATE[token] || Boolean(window.SkinClubRefs?.canView());
   const ref = (it.link && verRef) ? `<a href="${attr(it.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
   const mover = (REC_NESTED[token] && isAdmin()) ? `<button class="mini btnMover" data-slug="${attr(it.slug)}">Mover ⇄</button>` : '';
   const preview = (it.thumb && verRef) ? `<details class="refpreview"><summary>👁 Ver preview</summary><img src="${attr(it.thumb)}" alt="preview de la referencia" loading="lazy"></details>` : '';
@@ -903,6 +907,7 @@ function renderCard(it, token, ri, codArg){
 }
 let CLIENT_DATA = null, CLIENT_TOKEN = null;
 function renderClient(data, token){
+  if (REF_PRIVATE[token]) data = window.SkinClubRefs?.decorate(data) || data;
   CLIENT_DATA = data; CLIENT_TOKEN = token;
   const all = (data.grabaciones||[]).flatMap(rec => rec.guiones||[]);
   const admin = isAdmin();
@@ -954,6 +959,7 @@ function renderClient(data, token){
     <header class="site"><div class="logo">DV</div><div><h1>${esc(data.cliente)}</h1><p>Tus guiones de grabación · Consultora DV</p></div></header>
     <p class="hint" style="margin:14px 0 26px;">Guarda este link: aquí aparecen tus contenidos por sección. Marca cada uno como grabado con la palomita.${lockHtml()}</p>
     ${CLIENT_NOTE[token] ? `<div class="globalnote">${esc(CLIENT_NOTE[token])}</div>` : ''}
+    ${skinRefControls(token)}
     ${blocks || '<p class="hint">Aún no hay contenido publicado para este cliente.</p>'}`;
   document.querySelectorAll('.btnGrabado').forEach(b => b.onclick = () => toggleGrabado(token, b));
   document.querySelectorAll('.btnMiniatura').forEach(b => b.onclick = () => toggleMiniatura(token, b));
@@ -1373,6 +1379,12 @@ function renderHome(){
   };
 }
 
+function skinRefControls(client){
+  if (!REF_PRIVATE[client] || !isAdmin()) return '';
+  return window.SkinClubRefs?.canView()
+    ? '<div class="refbar"><a href="references.html?doc=r8-fuentes" target="_blank" rel="noopener noreferrer">Referencias y producción · edición ↗</a> · <a href="#" class="lockBtn">Bloquear equipo</a></div>'
+    : '<div class="refbar"><button class="mini skinRefUnlock">Desbloquear referencias</button></div>';
+}
 async function boot(){
   const q = new URLSearchParams(location.search);
   if (location.hash.startsWith('#d=')){
@@ -1391,6 +1403,11 @@ async function boot(){
   let c = q.get('c') ? q.get('c').replace(/[^a-z0-9\-_]/gi,'') : null;
   let g = q.get('g') ? q.get('g').replace(/[^a-z0-9\-_]/gi,'') : null;
   if (!c && g && LEGACY[g]){ [c, g] = LEGACY[g]; }
+  if (REF_PRIVATE[c]) {
+    await import('./skinclub-references.js');
+    window.SkinClubRefs.configure({remembered:rememberedPw,forget:forgetPw,unlock,isEditorMode:isAdmin,toast});
+    await window.SkinClubRefs.auto();
+  }
   if (c && g){
     try{
       const r = await fetch('clientes/' + c + '/' + g + '.md?t=' + Date.now(), { cache:'no-store' });
@@ -1413,7 +1430,8 @@ async function boot(){
       }
       let locutor = null, thumb = null, ref = null, versiones = null;
       try{
-        const ix = await (await fetch('clientes/' + c + '/index.json?t=' + Date.now())).json();
+        let ix = await (await fetch('clientes/' + c + '/index.json?t=' + Date.now())).json();
+        if (REF_PRIVATE[c]) ix = window.SkinClubRefs.decorate(ix);
         // `versiones` en el index ([{t:'Propuesto', g:'g-113'}, {t:'Original', g:'g-113-original'}]) pinta un selector
         // arriba del guion. La versión alterna hereda la miniatura y la referencia de su pieza.
         (ix.grabaciones||[]).forEach(rec => (rec.guiones||[]).forEach(it => { const vs = it.versiones || []; if (it.slug === g || vs.some(v => v.g === g)){ if (it.locutor) locutor = it.locutor; if (it.thumb) thumb = it.thumb; if (it.link || it.ref) ref = it.link || it.ref; if (vs.length) versiones = vs; } }));
@@ -1422,7 +1440,9 @@ async function boot(){
         const local = localStorage.getItem('dvloc:' + c + '/' + g);
         if (local !== null) locutor = local || null;
       }
-      renderGuion(parseGuion(override || fetched, c), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: false, locutor, thumb, ref, versiones});
+      const source = REF_PRIVATE[c] ? window.SkinClubRefs.publicSource(override || fetched) : (override || fetched);
+      const privateNotes = REF_PRIVATE[c] ? await window.SkinClubRefs.script(g) : '';
+      renderGuion(parseGuion(source, c), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: false, locutor, thumb, ref, versiones, privateNotes});
       return;
     }catch(e){ $('#app').innerHTML = '<p style="padding:40px 0">Guion no encontrado. Revisa el link con tu estratega.</p>'; return; }
   }

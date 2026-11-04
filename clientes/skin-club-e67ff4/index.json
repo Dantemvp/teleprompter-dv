@@ -15,10 +15,7 @@
           "grabado": false,
           "locutor": null,
           "categoria": "guion",
-          "link": "https://www.instagram.com/reel/Dd5Ej3GPM2U/",
-          "ref": "https://www.instagram.com/reel/Dd5Ej3GPM2U/",
-          "miniatura": false,
-          "thumb": "clientes/skin-club-e67ff4/refs/r8-ref-01.jpg"
+          "miniatura": false
         },
         {
           "slug": "r8-02",
@@ -27,10 +24,7 @@
           "grabado": false,
           "locutor": null,
           "categoria": "guion",
-          "link": "https://www.instagram.com/reel/DdltUX_Niec/",
-          "ref": "https://www.instagram.com/reel/DdltUX_Niec/",
-          "miniatura": false,
-          "thumb": "clientes/skin-club-e67ff4/refs/r8-ref-02.jpg"
+          "miniatura": false
         },
         {
           "slug": "r8-03",
@@ -39,10 +33,7 @@
           "grabado": false,
           "locutor": null,
           "categoria": "guion",
-          "link": "https://www.instagram.com/reel/DbtYVPDRE48/",
-          "ref": "https://www.instagram.com/reel/DbtYVPDRE48/",
-          "miniatura": false,
-          "thumb": "clientes/skin-club-e67ff4/refs/r8-ref-03.jpg"
+          "miniatura": false
         },
         {
           "slug": "r8-05",
@@ -51,10 +42,7 @@
           "grabado": false,
           "locutor": null,
           "categoria": "guion",
-          "link": "https://www.instagram.com/reel/DZYbv0XOcpf/",
-          "ref": "https://www.instagram.com/reel/DZYbv0XOcpf/",
-          "miniatura": false,
-          "thumb": "clientes/skin-club-e67ff4/refs/r8-ref-05.jpg"
+          "miniatura": false
         },
         {
           "slug": "r8-06",
@@ -63,10 +51,7 @@
           "grabado": false,
           "locutor": null,
           "categoria": "guion",
-          "link": "https://www.instagram.com/reel/DfNOA3rDt-L/",
-          "ref": "https://www.instagram.com/reel/DfNOA3rDt-L/",
-          "miniatura": false,
-          "thumb": "clientes/skin-club-e67ff4/refs/r8-ref-06.jpg"
+          "miniatura": false
         },
         {
           "slug": "r8-07",
@@ -75,10 +60,7 @@
           "grabado": false,
           "locutor": null,
           "categoria": "guion",
-          "link": "https://www.instagram.com/reel/DfKUsUTD3Zu/",
-          "ref": "https://www.instagram.com/reel/DfKUsUTD3Zu/",
-          "miniatura": false,
-          "thumb": "clientes/skin-club-e67ff4/refs/r8-ref-07.jpg"
+          "miniatura": false
         }
       ]
     },
@@ -89,122 +71,84 @@
       "locacion": "Laboratorio Skin Club",
       "guiones": [
         {
-          "slug": "r7-ganador",
-          "titulo": "Ganador · Tus poros no se cierran (Kaori)",
-          "info": "46 seg · 55K de alcance en IG, 3,540 guardados, 26K reproducciones en TikTok · el molde de esta grabación",
-          "categoria": "ganador",
-          "tipo": "ref",
-          "grabado": false,
-          "locutor": "Kaori",
-          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg"
-        },
-        {
           "slug": "r7-01",
           "titulo": "Oh Matcha: la mascarilla para el brillo",
-          "info": "30–35 seg · molde del reel de poros · un producto",
+          "info": "30–35 seg · un producto",
           "grabado": true,
           "locutor": "Paloma",
           "categoria": "paloma",
-          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
           "miniatura": false
         },
         {
           "slug": "r7-03",
           "titulo": "Hydroglow Sérum: el sérum para piel deshidratada",
-          "info": "30–35 seg · molde del reel de poros · un producto",
+          "info": "30–35 seg · un producto",
           "grabado": false,
           "locutor": "Paloma",
           "categoria": "paloma",
-          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
           "miniatura": false
         },
         {
           "slug": "r7-02",
           "titulo": "Hydroglow Crema de Noche: la crema para líneas finas",
-          "info": "30–35 seg · molde del reel de poros · un producto",
+          "info": "30–35 seg · un producto",
           "grabado": true,
           "locutor": "Camila",
           "categoria": "camila",
-          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
           "miniatura": false
         },
         {
           "slug": "r7-05",
           "titulo": "Hydroderm: la crema para piel seca del cuerpo",
-          "info": "30–35 seg · molde del reel de poros · un producto",
+          "info": "30–35 seg · un producto",
           "grabado": true,
           "locutor": "Camila",
           "categoria": "camila",
-          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
           "miniatura": false
         },
         {
           "slug": "r7-04",
           "titulo": "Dermaboost: la crema para textura en piel grasa",
-          "info": "30–35 seg · molde del reel de poros · un producto",
+          "info": "30–35 seg · un producto",
           "grabado": false,
           "locutor": "Diego",
           "categoria": "diego",
-          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
           "miniatura": false
         },
         {
           "slug": "r7-06",
           "titulo": "El brillo de mediodía",
-          "info": "30–35 seg · síntoma por etapa · molde del reel de poros",
+          "info": "30–35 seg · síntoma por etapa",
           "grabado": true,
           "locutor": "Paloma",
           "categoria": "paloma",
-          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
           "miniatura": false
         },
         {
           "slug": "r7-09",
           "titulo": "La piel en frío",
-          "info": "30–35 seg · síntoma por etapa · molde del reel de poros",
+          "info": "30–35 seg · síntoma por etapa",
           "grabado": false,
           "locutor": "Camila",
           "categoria": "camila",
-          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
           "miniatura": false
         },
         {
           "slug": "r7-07",
           "titulo": "La piel adulta mixta",
-          "info": "30–35 seg · síntoma por etapa · molde del reel de poros",
+          "info": "30–35 seg · síntoma por etapa",
           "grabado": true,
           "locutor": "Kaori",
           "categoria": "kaori",
-          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
           "miniatura": false
         },
         {
           "slug": "r7-08",
           "titulo": "La nariz de la secu",
-          "info": "30–35 seg · síntoma por etapa · molde del reel de poros",
+          "info": "30–35 seg · síntoma por etapa",
           "grabado": false,
           "locutor": "Diego",
           "categoria": "diego",
-          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
           "miniatura": false
         },
         {
@@ -214,9 +158,6 @@
           "grabado": false,
           "locutor": "Diego",
           "categoria": "diego",
-          "link": "https://www.instagram.com/reel/De9ctFFDeDX/",
-          "ref": "https://www.instagram.com/reel/De9ctFFDeDX/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ref-ph.jpg",
           "miniatura": false
         },
         {
@@ -226,9 +167,6 @@
           "grabado": true,
           "locutor": "Diego",
           "categoria": "diego",
-          "link": "https://www.instagram.com/reel/DdZgkjFPAN1/",
-          "ref": "https://www.instagram.com/reel/DdZgkjFPAN1/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ref-pregunta.jpg",
           "miniatura": false
         },
         {
@@ -238,9 +176,6 @@
           "grabado": false,
           "locutor": "Paloma",
           "categoria": "paloma",
-          "link": "https://www.instagram.com/reel/DeSDLsUMb0_/",
-          "ref": "https://www.instagram.com/reel/DeSDLsUMb0_/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ref-ingredientes.jpg",
           "miniatura": false
         },
         {
@@ -250,9 +185,6 @@
           "grabado": true,
           "locutor": "Camila",
           "categoria": "camila",
-          "link": "https://www.instagram.com/reel/DeSDLsUMb0_/",
-          "ref": "https://www.instagram.com/reel/DeSDLsUMb0_/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ref-ingredientes.jpg",
           "miniatura": false
         },
         {
@@ -262,9 +194,6 @@
           "grabado": false,
           "locutor": "Diego",
           "categoria": "diego",
-          "link": "https://www.instagram.com/reel/DeSDLsUMb0_/",
-          "ref": "https://www.instagram.com/reel/DeSDLsUMb0_/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ref-ingredientes.jpg",
           "miniatura": false
         },
         {
@@ -274,21 +203,15 @@
           "grabado": false,
           "locutor": "Kaori",
           "categoria": "kaori",
-          "link": "https://www.instagram.com/reel/DeSDLsUMb0_/",
-          "ref": "https://www.instagram.com/reel/DeSDLsUMb0_/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ref-ingredientes.jpg",
           "miniatura": false
         },
         {
           "slug": "r7-17",
           "titulo": "Deep Cleanse: la espuma para piel normal",
-          "info": "53–67 seg de voz estimada · molde del reel ganador · un producto",
+          "info": "53–67 seg de voz estimada · un producto",
           "grabado": false,
           "locutor": "Nat",
           "categoria": "nat",
-          "link": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "ref": "https://www.instagram.com/reel/Dendh0VRqoe/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r7-ganador-poros.jpg",
           "miniatura": false
         }
       ]
@@ -305,8 +228,7 @@
           "info": "30–40 seg · rapid-fire de 8 preguntas · ingrediente héroe + modo de uso",
           "grabado": false,
           "locutor": "Kaori",
-          "categoria": "kaori",
-          "link": "https://www.instagram.com/reel/DbULFKnJvP5/?igsi=MWVodzFsazlnMzlzZg=="
+          "categoria": "kaori"
         },
         {
           "slug": "r3-01",
@@ -346,9 +268,7 @@
           "info": "35–50 seg · reel-carrusel actuado · cinco confesiones",
           "grabado": false,
           "locutor": "Kaori + Nat + Diego",
-          "categoria": "juntos",
-          "link": "https://www.instagram.com/p/DbHCsLOD51w/?img_index=5",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r5-05.jpg"
+          "categoria": "juntos"
         },
         {
           "slug": "r5-06",
@@ -356,9 +276,7 @@
           "info": "45–60 seg · mito del agua · grasa vs deshidratación",
           "grabado": false,
           "locutor": "Diego + Nat",
-          "categoria": "juntos",
-          "link": "https://www.instagram.com/reels/DawSEuyRVp6/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r5-06.jpg"
+          "categoria": "juntos"
         },
         {
           "slug": "r5-04",
@@ -366,9 +284,7 @@
           "info": "25–35 seg · rapid-fire · decisiones simples y consistencia",
           "grabado": false,
           "locutor": "Kaori",
-          "categoria": "diego",
-          "link": "https://www.instagram.com/reel/DY3YP4ts4y2/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r5-04.jpg"
+          "categoria": "diego"
         },
         {
           "slug": "r5-07",
@@ -376,9 +292,7 @@
           "info": "45–55 seg · formulación, escala y precio · autoridad de marca",
           "grabado": false,
           "locutor": "Diego",
-          "categoria": "diego",
-          "link": "https://www.instagram.com/reel/DaHIgHwx_es/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r5-07.jpg"
+          "categoria": "diego"
         },
         {
           "slug": "r6-05",
@@ -386,10 +300,7 @@
           "info": "30–40 seg · rapid-fire de activos · F-04",
           "grabado": false,
           "locutor": "Kaori",
-          "categoria": "kaori",
-          "link": "https://www.instagram.com/reel/DaeDRr3N0NL/",
-          "ref": "https://www.instagram.com/reel/DaeDRr3N0NL/",
-          "thumb": null
+          "categoria": "kaori"
         },
         {
           "slug": "r6-06",
@@ -397,10 +308,7 @@
           "info": "35–45 seg · personificación de productos · F-01",
           "grabado": false,
           "locutor": "Kaori + voces",
-          "categoria": "juntos",
-          "link": "https://www.instagram.com/reel/DUEgy5vgWS4/",
-          "ref": "https://www.instagram.com/reel/DUEgy5vgWS4/",
-          "thumb": null
+          "categoria": "juntos"
         },
         {
           "slug": "r6-07",
@@ -408,10 +316,7 @@
           "info": "45–55 seg · rutina por niveles con falso cierre · F-05",
           "grabado": false,
           "locutor": "Diego",
-          "categoria": "diego",
-          "link": "https://www.instagram.com/reel/Da76IBOC1GB/",
-          "ref": "https://www.instagram.com/reel/Da76IBOC1GB/",
-          "thumb": null
+          "categoria": "diego"
         },
         {
           "slug": "r6-08",
@@ -419,10 +324,7 @@
           "info": "30–40 seg · rutina de N minutos + update real · F-06",
           "grabado": false,
           "locutor": "Creadora UGC",
-          "categoria": "ugc",
-          "link": "https://www.instagram.com/reel/DW9y73UjsdW/",
-          "ref": "https://www.instagram.com/reel/DW9y73UjsdW/",
-          "thumb": null
+          "categoria": "ugc"
         },
         {
           "slug": "r6-09",
@@ -430,10 +332,7 @@
           "info": "40–50 seg · opinión de experto sin filtro · F-11",
           "grabado": false,
           "locutor": "Diego",
-          "categoria": "diego",
-          "link": "https://www.instagram.com/reel/Dbbmsx3BJl3/",
-          "ref": "https://www.instagram.com/reel/Dbbmsx3BJl3/",
-          "thumb": null
+          "categoria": "diego"
         },
         {
           "slug": "r6-10",
@@ -441,10 +340,7 @@
           "info": "40–50 seg · definición + menú por objetivo · F-10",
           "grabado": false,
           "locutor": "Kaori",
-          "categoria": "kaori",
-          "link": "https://www.instagram.com/reel/DcrgjSLBKzH/",
-          "ref": "https://www.instagram.com/reel/DcrgjSLBKzH/",
-          "thumb": null
+          "categoria": "kaori"
         },
         {
           "slug": "r6-11",
@@ -452,10 +348,7 @@
           "info": "30–40 seg · veredictos rápidos · F-03",
           "grabado": false,
           "locutor": "Diego",
-          "categoria": "diego",
-          "link": "https://www.instagram.com/reel/DcMh3ipBrjk/",
-          "ref": "https://www.instagram.com/reel/DcMh3ipBrjk/",
-          "thumb": null
+          "categoria": "diego"
         },
         {
           "slug": "r6-12",
@@ -463,10 +356,7 @@
           "info": "35–45 seg · escala numérica de hábitos · F-02 · OJO: mismo formato que r3-18",
           "grabado": false,
           "locutor": "Nat + voz fuera de cámara",
-          "categoria": "juntos",
-          "link": "https://www.instagram.com/reel/DcE5LJ8BR_3/",
-          "ref": "https://www.instagram.com/reel/DcE5LJ8BR_3/",
-          "thumb": null
+          "categoria": "juntos"
         },
         {
           "slug": "r6-13",
@@ -474,10 +364,7 @@
           "info": "45–55 seg · el espejo, barrera alterada · F-08",
           "grabado": false,
           "locutor": "Kaori",
-          "categoria": "kaori",
-          "link": "https://vt.tiktok.com/ZSVTbSHbQ/",
-          "ref": "https://vt.tiktok.com/ZSVTbSHbQ/",
-          "thumb": null
+          "categoria": "kaori"
         },
         {
           "slug": "r6-14",
@@ -485,10 +372,7 @@
           "info": "35–45 seg · mitos sí/no contundente · F-04",
           "grabado": false,
           "locutor": "Nat",
-          "categoria": "juntos",
-          "link": "https://www.instagram.com/reel/Dboj303DZZQ/",
-          "ref": "https://www.instagram.com/reel/Dboj303DZZQ/",
-          "thumb": null
+          "categoria": "juntos"
         },
         {
           "slug": "r6-15",
@@ -496,10 +380,7 @@
           "info": "90–120 seg · periodismo de belleza · F-07",
           "grabado": false,
           "locutor": "Nat",
-          "categoria": "juntos",
-          "link": "https://www.instagram.com/reel/Dcmh2sBBwBU/",
-          "ref": "https://www.instagram.com/reel/Dcmh2sBBwBU/",
-          "thumb": null
+          "categoria": "juntos"
         },
         {
           "slug": "r6-16",
@@ -507,10 +388,7 @@
           "info": "60–90 seg · periodismo de belleza, skinification · F-07",
           "grabado": false,
           "locutor": "Nat",
-          "categoria": "juntos",
-          "link": "https://www.instagram.com/reel/DatPwPBRJE3/",
-          "ref": "https://www.instagram.com/reel/DatPwPBRJE3/",
-          "thumb": null
+          "categoria": "juntos"
         },
         {
           "slug": "r6-17",
@@ -518,10 +396,7 @@
           "info": "60–75 seg · el mito caro con tres razones · F-09",
           "grabado": false,
           "locutor": "Diego",
-          "categoria": "diego",
-          "link": "https://www.instagram.com/reel/DZAqrxBxJL2/",
-          "ref": "https://www.instagram.com/reel/DZAqrxBxJL2/",
-          "thumb": null
+          "categoria": "diego"
         },
         {
           "slug": "r6-18",
@@ -529,10 +404,7 @@
           "info": "90–120 seg · periodismo de belleza, fragancia y etiquetado · F-07",
           "grabado": false,
           "locutor": "Nat",
-          "categoria": "juntos",
-          "link": "https://www.instagram.com/reel/Dcmh2sBBwBU/",
-          "ref": "https://www.instagram.com/reel/Dcmh2sBBwBU/",
-          "thumb": null
+          "categoria": "juntos"
         },
         {
           "slug": "r6-ugc-01",
@@ -540,10 +412,7 @@
           "info": "35–45 seg · testimonial · barrera alterada · 3 hooks",
           "grabado": false,
           "locutor": "Creadora UGC",
-          "categoria": "ugc",
-          "link": "https://vt.tiktok.com/ZSVTbSHbQ/",
-          "ref": "https://vt.tiktok.com/ZSVTbSHbQ/",
-          "thumb": null
+          "categoria": "ugc"
         },
         {
           "slug": "r6-ugc-02",
@@ -551,10 +420,7 @@
           "info": "35–45 seg · testimonial masculino · primera rutina · 3 hooks",
           "grabado": false,
           "locutor": "Creador UGC",
-          "categoria": "ugc",
-          "link": "https://www.instagram.com/reel/Da76IBOC1GB/",
-          "ref": "https://www.instagram.com/reel/Da76IBOC1GB/",
-          "thumb": null
+          "categoria": "ugc"
         },
         {
           "slug": "r6-ugc-03",
@@ -562,10 +428,7 @@
           "info": "30–40 seg · funcional · demostración de uso · 3 hooks",
           "grabado": false,
           "locutor": "Creadora UGC",
-          "categoria": "ugc",
-          "link": null,
-          "ref": null,
-          "thumb": null
+          "categoria": "ugc"
         },
         {
           "slug": "r6-ugc-04",
@@ -573,10 +436,7 @@
           "info": "25–35 seg · funcional · demostración de técnica · 3 hooks",
           "grabado": false,
           "locutor": "Creadora UGC",
-          "categoria": "ugc",
-          "link": null,
-          "ref": null,
-          "thumb": null
+          "categoria": "ugc"
         }
       ]
     },
@@ -592,9 +452,7 @@
           "info": "42–50 seg · rutina de 3 pasos · demostración visual de poros y textura",
           "grabado": true,
           "locutor": "Kaori",
-          "categoria": "kaori",
-          "link": "https://www.instagram.com/reels/DZo6s5PDoPf/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r5-01.jpg"
+          "categoria": "kaori"
         },
         {
           "slug": "r5-02",
@@ -602,9 +460,7 @@
           "info": "35–45 seg · bodycare · orden correcto HydroDerm y repelente",
           "grabado": true,
           "locutor": "Kaori",
-          "categoria": "kaori",
-          "link": "https://www.instagram.com/reels/DbrsrCUsIcf/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r5-02.jpg"
+          "categoria": "kaori"
         },
         {
           "slug": "r5-ugc-01",
@@ -612,9 +468,7 @@
           "info": "30–40 seg · experiencia de compra + unboxing · 3 hooks",
           "grabado": true,
           "locutor": "Creadora UGC 1",
-          "categoria": "ugc",
-          "link": "https://drive.google.com/drive/folders/1ImS_ixsQ6saAibtvQADoBBpnOIKUUJjw",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r5-ugc-01.jpg"
+          "categoria": "ugc"
         },
         {
           "slug": "r5-ugc-02",
@@ -622,9 +476,7 @@
           "info": "30–40 seg · reseña personal · pros y para quién sí",
           "grabado": true,
           "locutor": null,
-          "categoria": "ugc",
-          "link": "https://drive.google.com/drive/folders/1ImS_ixsQ6saAibtvQADoBBpnOIKUUJjw",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r5-ugc-02.jpg"
+          "categoria": "ugc"
         },
         {
           "slug": "r5-ugc-03",
@@ -632,9 +484,7 @@
           "info": "30–45 seg · testimonio problema-solución · 3 hooks",
           "grabado": true,
           "locutor": "Creadora UGC 1",
-          "categoria": "ugc",
-          "link": "https://drive.google.com/drive/folders/1ImS_ixsQ6saAibtvQADoBBpnOIKUUJjw",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r5-ugc-03.jpg"
+          "categoria": "ugc"
         },
         {
           "slug": "r5-ugc-04",
@@ -642,9 +492,7 @@
           "info": "25–35 seg · favorito inesperado · reseña corporal",
           "grabado": false,
           "locutor": "Creadora UGC 2",
-          "categoria": "ugc",
-          "link": "https://drive.google.com/drive/folders/1ImS_ixsQ6saAibtvQADoBBpnOIKUUJjw",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r5-ugc-04.jpg"
+          "categoria": "ugc"
         },
         {
           "slug": "r5-03",
@@ -652,9 +500,7 @@
           "info": "35–45 seg · tipos de ojera · elegir el activo correcto",
           "grabado": true,
           "locutor": "Kaori",
-          "categoria": "kaori",
-          "link": "https://www.instagram.com/reel/DbE2uciMV6s/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r5-03.jpg"
+          "categoria": "kaori"
         },
         {
           "slug": "r5-08",
@@ -662,9 +508,7 @@
           "info": "45–55 seg · collagen banking · prevención y constancia",
           "grabado": true,
           "locutor": "Kaori",
-          "categoria": "kaori",
-          "link": "https://www.instagram.com/reel/DW9gcCDEY87/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r5-08.jpg"
+          "categoria": "kaori"
         },
         {
           "slug": "r5-09",
@@ -672,9 +516,7 @@
           "info": "45–55 seg · regulación europea · concentración vs tolerancia",
           "grabado": true,
           "locutor": "Kaori",
-          "categoria": "kaori",
-          "link": "https://www.instagram.com/reel/DWXqAoYkV9K/",
-          "thumb": "clientes/skin-club-e67ff4/thumbs/r5-09.jpg"
+          "categoria": "kaori"
         }
       ]
     },
@@ -714,8 +556,7 @@
           "info": "30–40 seg · rapid-fire · activo fuerte TACHADO en pantalla + natural hablado",
           "grabado": true,
           "locutor": "Kaori",
-          "categoria": "kaori",
-          "link": "https://www.instagram.com/reel/DUl-sQvAYiW/"
+          "categoria": "kaori"
         },
         {
           "slug": "r4-05",
@@ -723,8 +564,7 @@
           "info": "20–30 seg · rapid-fire staccato problema→activo",
           "grabado": true,
           "locutor": "Diego",
-          "categoria": "diego",
-          "link": "https://www.instagram.com/reel/DZpaDZahSQv/"
+          "categoria": "diego"
         },
         {
           "slug": "r4-06",
@@ -732,8 +572,7 @@
           "info": "40–55 seg · un ingrediente héroe + lluvia de beneficios",
           "grabado": true,
           "locutor": "Nat",
-          "categoria": "nat",
-          "link": "https://www.instagram.com/reel/DYxszCrpNwP/"
+          "categoria": "nat"
         },
         {
           "slug": "r4-07",
@@ -741,8 +580,7 @@
           "info": "40–50 seg · talking head con personalidad · risueña",
           "grabado": true,
           "locutor": "Diego",
-          "categoria": "kaori",
-          "link": "https://vt.tiktok.com/ZS4YJvRDm/"
+          "categoria": "kaori"
         },
         {
           "slug": "r4-08",
@@ -750,8 +588,7 @@
           "info": "40–55 seg · lista de sí nocturnos · voz masculina directa",
           "grabado": true,
           "locutor": "Diego",
-          "categoria": "diego",
-          "link": "https://vt.tiktok.com/ZS4YerXoB/"
+          "categoria": "diego"
         },
         {
           "slug": "r4-09",
@@ -759,8 +596,7 @@
           "info": "30–40 seg · do/don't pairs · para principiantes",
           "grabado": true,
           "locutor": "Nat",
-          "categoria": "nat",
-          "link": "https://vt.tiktok.com/ZS4YecPyx/"
+          "categoria": "nat"
         },
         {
           "slug": "r4-10",
@@ -768,8 +604,7 @@
           "info": "40–50 seg · lista de errores · risueña",
           "grabado": true,
           "locutor": "Kaori",
-          "categoria": "kaori",
-          "link": "https://vt.tiktok.com/ZS4YdYCm9/"
+          "categoria": "kaori"
         },
         {
           "slug": "r4-11",
@@ -777,8 +612,7 @@
           "info": "40–55 seg · formato podcast · Diego escéptico + Kaori · VOLTEADO pro-UltraFresh",
           "grabado": true,
           "locutor": "Diego + Kaori",
-          "categoria": "juntos",
-          "link": "https://vt.tiktok.com/ZS4YdepE9/"
+          "categoria": "juntos"
         },
         {
           "slug": "r4-12",

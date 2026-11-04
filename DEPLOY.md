@@ -90,3 +90,11 @@ El token de GitHub vive en Vercel (servidor), nunca en el navegador.
 - Reemplazo: carga y valida la imagen nueva antes de publicar el cambio del manifiesto. Retira la anterior y añade la nueva en una sola escritura con ETag; reintentos con el mismo ID no duplican fotos. Una carga inválida deja la original activa. Se permite reemplazar incluso con las 12 plazas ocupadas.
 - Toda sustitución vuelve a ser propuesta, aunque la anterior estuviera elegida. La retirada sigue siendo recuperable por el administrador; no borra físicamente archivos ni afecta al POE o puntajes.
 - Los borradores locales conservan el destino del reemplazo para poder reintentar sin perder el archivo. El borrado pide confirmación.
+
+### Referencias privadas de Skin Club — 3 noviembre 2026
+
+- Los guiones y las fuentes científicas continúan públicos. Reels de inspiración, miniaturas y notas internas de Skin Club viven en Blob privado, prefijo `skinclub-references/`, y se entregan por `/api/skinclub-refs` únicamente tras validar una clave general de edición en el servidor. El PIN visual y la clave limitada de Fedra no dan acceso.
+- Para abrirlas: activar modo edición y pulsar **Desbloquear referencias**, con la contraseña de edición habitual. El documento de producción está en `references.html?doc=r8-fuentes`; el enlace antiguo dirige a ese acceso. El botón de bloqueo limpia la sesión y los datos privados en memoria.
+- No volver a añadir URLs de inspiración, previews ni notas internas a archivos públicos de Skin Club. La API de guardado separa esas partes antes de escribir el markdown en GitHub; si falla el almacén privado, rechaza la publicación. Las citas científicas permanecen en el guion.
+- Migración inicial: `node --env-file=.env.production.local scripts/skinclub-migrate.mjs`. No repetir sobre una bóveda existente. Se verificó la copia privada antes de retirar los archivos públicos y se dejó una copia de recuperación fuera del repositorio, bajo `~/.codex/private/`, con permisos 600.
+- Esta restricción cierra la publicación actual. El repositorio y su historial anterior son públicos; no se reescribió ese historial ni se cambió la visibilidad de otros clientes.

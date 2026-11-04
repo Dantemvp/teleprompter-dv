@@ -1,4 +1,6 @@
 import { canEditScript } from '../lib/edit-auth.mjs';
+import { SKIN_CLIENT, splitSkinSource } from '../lib/skinclub-policy.mjs';
+import { saveSkinPrivateParts } from '../lib/skinclub-store.mjs';
 // Vercel serverless function — guarda un guion editado commiteándolo al repo de GitHub.
 // El token de GitHub y la contraseña viven como variables de entorno en Vercel (nunca en el navegador).
 // Env vars requeridas: GH_TOKEN, GH_REPO (ej. "Dantemvp/teleprompter-dv"), EDIT_PASSWORD
@@ -37,6 +39,12 @@ export default async function handler(req, res){
   };
 
   try {
+    let publicContent = content;
+    if (client === SKIN_CLIENT) {
+      const split = splitSkinSource(content);
+      await saveSkinPrivateParts(slug, split);
+      publicContent = split.publicContent;
+    }
     let sha;
     const cur = await fetch(api, { headers: ghHeaders });
     if (cur.status === 200) sha = (await cur.json()).sha;
@@ -47,7 +55,7 @@ export default async function handler(req, res){
       headers: { ...ghHeaders, 'Content-Type': 'application/json' },
       body: JSON.stringify({
         message: `Editar ${client}/${slug} desde el editor web`,
-        content: Buffer.from(content, 'utf8').toString('base64'),
+        content: Buffer.from(publicContent, 'utf8').toString('base64'),
         sha
       })
     });
