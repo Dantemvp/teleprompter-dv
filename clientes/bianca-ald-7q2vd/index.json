@@ -2,6 +2,88 @@
   "cliente": "Bianca Aldama Boutique",
   "grabaciones": [
     {
+      "rec": "R20",
+      "nombre": "Grabación 20 · colores, estilo y transiciones",
+      "fecha": "Por definir",
+      "locacion": "",
+      "guiones": [
+        {
+          "slug": "g-170",
+          "titulo": "Jessie y los colores de otoño-invierno 2026",
+          "info": "20 seg · Jessie · Tres combinaciones de color",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/p/DemrUDggX6n/",
+          "locutor": "Jessie"
+        },
+        {
+          "slug": "g-171",
+          "titulo": "Jessie arma un look maximalista",
+          "info": "20 seg · Jessie · Cebra, encaje y bolsa roja",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/reels/Dd9c24otOvz/",
+          "locutor": "Jessie"
+        },
+        {
+          "slug": "g-172",
+          "titulo": "Chusco de los días con S",
+          "info": "8–10 seg · Chusco de perchero · Remate del domingo",
+          "categoria": "chusco",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/reels/DcjDjKNtrRE/"
+        },
+        {
+          "slug": "g-173",
+          "titulo": "Cortes mientras se cambia",
+          "info": "9–10 seg · Transición de vestido · Guía de tomas sin diálogo",
+          "categoria": "viral-organica",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/reels/DfHiT35DI2G/"
+        },
+        {
+          "slug": "g-174",
+          "titulo": "Seis ideas de otoño-invierno 2026–2027",
+          "info": "28–32 seg · Seis ideas de otoño-invierno · Orden revisado",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/reels/DfKIP45ooqI/"
+        },
+        {
+          "slug": "g-175",
+          "titulo": "Una falda de leopardo con cuatro colores",
+          "info": "18–22 seg · Una falda y cuatro combinaciones de color",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/p/Deq_lJcnOto/"
+        },
+        {
+          "slug": "g-176",
+          "titulo": "Cuatro zapatos para la misma bermuda",
+          "info": "18–22 seg · Una bermuda larga · Cuatro cambios de zapato",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/p/De2j0J0iWkR/?img_index=4"
+        },
+        {
+          "slug": "g-177",
+          "titulo": "Qué color ponerle a cada estampado",
+          "info": "25–30 seg · Seis combinaciones de estampado y color",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/p/DfVZ0kgAdGj/"
+        }
+      ]
+    },
+    {
       "rec": "R19",
       "nombre": "Grabación 19 · estilo, boutique y transiciones",
       "fecha": "30/10/2026",
