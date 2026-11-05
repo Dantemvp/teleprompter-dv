@@ -80,6 +80,174 @@
           "tipo": "md",
           "grabado": false,
           "link": "https://www.instagram.com/p/DfVZ0kgAdGj/"
+        },
+        {
+          "slug": "g-178",
+          "titulo": "Cuatro básicos que cambian con una capa",
+          "info": "25–30 seg · Cuatro antes y después",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@solvargas__/video/7700359302988451080"
+        },
+        {
+          "slug": "g-179",
+          "titulo": "El tercer color que cambia el look",
+          "info": "20–25 seg · Cinco combinaciones · Abre con vino, crema y verde olivo",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@solvargas__/video/7691807211026189576"
+        },
+        {
+          "slug": "g-180",
+          "titulo": "Cinco looks cuando no sabes qué ponerte",
+          "info": "25–30 seg · Cinco looks de lunes a viernes",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@solvargas__/video/7680681439855250696"
+        },
+        {
+          "slug": "g-181",
+          "titulo": "Transición de tres entradas",
+          "info": "12–14 seg · Tres looks · Entradas superpuestas",
+          "categoria": "trans-int",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@cindyprado28/video/7418658273680756010"
+        },
+        {
+          "slug": "g-182",
+          "titulo": "Transición en el sillón",
+          "info": "10–12 seg · Dos looks · Caída de prenda en el sillón",
+          "categoria": "trans-int",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@kelseyisclothed/video/7590509850749095223"
+        },
+        {
+          "slug": "g-183",
+          "titulo": "Transición con la bolsa",
+          "info": "10–12 seg · Dos looks · Corte al bajar la bolsa",
+          "categoria": "trans-int",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@denisse_aidee/video/7623984319966612757"
+        },
+        {
+          "slug": "g-184",
+          "titulo": "Transición al agacharse",
+          "info": "8–10 seg · Dos looks · Corte al incorporarse",
+          "categoria": "trans-int",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@angwitacho/video/7656244530936565005"
+        },
+        {
+          "slug": "g-185",
+          "titulo": "Cambiándose · capri de encaje blanco",
+          "info": "Cambio frente a cámara · Fashion Nova",
+          "categoria": "viral-organica",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfWBDddjNbA/"
+        },
+        {
+          "slug": "g-186",
+          "titulo": "Cambiándose · look de evento",
+          "info": "Cambio frente a cámara · Fashion Nova",
+          "categoria": "viral-organica",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfVKU56DSZB/"
+        },
+        {
+          "slug": "g-187",
+          "titulo": "Cambiándose · pantalón negro",
+          "info": "Cambio frente a cámara · Fashion Nova",
+          "categoria": "viral-organica",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfQHdBvgsAR/"
+        },
+        {
+          "slug": "g-188",
+          "titulo": "Cambiándose · conjunto a rayas",
+          "info": "Cambio frente a cámara · Fashion Nova",
+          "categoria": "viral-organica",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfDIpMTjRQB/"
+        }
+      ],
+      "timeline": [
+        {
+          "hora": "",
+          "titulo": "GUIONES",
+          "slugs": [
+            "g-170",
+            "g-171",
+            "g-178"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "CAMBIÁNDOSE FRENTE A CÁMARA",
+          "slugs": [
+            "g-185",
+            "g-186",
+            "g-187",
+            "g-188"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "TRANSICIONES",
+          "slugs": [
+            "g-181",
+            "g-182"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "GUIONES",
+          "slugs": [
+            "g-179",
+            "g-180"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "GUIONES",
+          "slugs": [
+            "g-174",
+            "g-175",
+            "g-176"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "CAMBIÁNDOSE FRENTE A CÁMARA",
+          "slugs": [
+            "g-173"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "TRANSICIONES",
+          "slugs": [
+            "g-183",
+            "g-184"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "GUION Y CHUSCO",
+          "slugs": [
+            "g-177",
+            "g-172"
+          ]
         }
       ]
     },
