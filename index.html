@@ -8,9 +8,9 @@
 <title>Guiones · Consultora DV</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
 <link rel="stylesheet" href="prendas.css?v=20261020-publico">
-<script src="prendas-detect.js?v=20261020-publico"></script>
+<script src="prendas-detect.js?v=20261105-r20"></script>
 <script src="prendas-runtime.js?v=20261020-auditoria"></script>
-<script src="prendas.js?v=20261022-reemplazar"></script>
+<script src="prendas.js?v=20261105-r20"></script>
 <style>
   :root{
     --teal:#1D9E75; --teal-dark:#0F6E56; --teal-darker:#04342C; --teal-bg:#E1F5EE; --teal-soft:#9FE1CB;
@@ -182,6 +182,8 @@
   .refpreview summary{cursor:pointer; font-size:13px; font-weight:600; color:var(--teal-darker); user-select:none; list-style:none; display:inline-block; padding:6px 0;}
   .refpreview summary::-webkit-details-marker{display:none;}
   .refpreview img{margin-top:8px; width:100%; max-width:260px; height:auto; border-radius:12px; display:block; box-shadow:0 2px 10px rgba(0,0,0,.12);}
+  .refpreview-visible{display:block; width:max-content; max-width:100%; margin:8px 0;}
+  .refpreview-visible img{display:block; width:112px; max-width:100%; max-height:160px; object-fit:contain; border-radius:8px;}
   @media (max-width:600px){ .refpreview img{max-width:min(100%, 320px);} .refpreview summary{font-size:14px; padding:8px 0;} }
   #v-edit .ein{width:100%; font:inherit; font-size:14px; padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:#fff; margin-bottom:6px;}
   #v-edit textarea.etext{min-height:62px; resize:vertical; line-height:1.5;}
@@ -505,6 +507,11 @@ function isAdmin(){ return localStorage.getItem('dvadmin') === ADMIN_PIN; }
 // Migración silenciosa: equipos que ya guardaron la contraseña de escritura siguen viendo los controles sin reconfigurar.
 if (localStorage.getItem('dvpw') && localStorage.getItem('dvadmin') !== ADMIN_PIN) localStorage.setItem('dvadmin', ADMIN_PIN);
 
+function visibleReferencePreview(thumb, link, alt){
+  if (!thumb || !/^https?:\/\//i.test(link || '')) return '';
+  return `<a class="refpreview-visible" href="${attr(link)}" target="_blank" rel="noopener"><img src="${attr(thumb)}" alt="${attr(alt || 'Abrir referencia original')}"></a>`;
+}
+
 function renderGuion(g, canonical, backHref, opts){
   opts = opts || {};
   canonical = window.Prendas?.url(canonical,opts.client) || canonical;
@@ -534,12 +541,14 @@ function renderGuion(g, canonical, backHref, opts){
   const banner = '';   // El guardado va directo a la nube; la copia local es solo un cache optimista que se actualiza solo (~1 min) y se auto-limpia al publicarse.
   const refPrivate = opts.client && REF_PRIVATE[opts.client];      // clientes donde la referencia es solo para el estratega
   const canSeeRef = !refPrivate || Boolean(window.SkinClubRefs?.canView());       // logueado (equipo reconocido) la ve; lector público no
-  const thumbBlock = (opts.thumb && canSeeRef) ? `<details class="refpreview"><summary>👁 Ver preview</summary><img src="${attr(opts.thumb)}" alt="preview de la referencia" loading="lazy"></details>` : '';
   // La referencia siempre va clickeable. Si el guion no la trae en su encabezado, la tomamos
   // del index.json — antes esos guiones solo mostraban la miniatura, sin liga para abrirla.
   const refUrl = g.ref || opts.ref || null;
+  const thumbBlock = (opts.thumb && canSeeRef) ? (opts.referenciasVisibles
+    ? visibleReferencePreview(opts.thumb, refUrl, opts.thumbAlt)
+    : `<details class="refpreview"><summary>👁 Ver preview</summary><img src="${attr(opts.thumb)}" alt="preview de la referencia" loading="lazy"></details>`) : '';
   const refblock = (refUrl && canSeeRef)
-    ? `<div class="refbar refreel"><span>🎬 Reel de referencia:</span> <a href="${attr(refUrl)}" target="_blank" rel="noopener">Ver inspiración ↗</a> <button class="mini" onclick="copy('${refUrl.replace(/'/g,"\\'")}','Link copiado')">Copiar</button>${thumbBlock}</div>`
+    ? `<div class="refbar refreel"><span>🎬 ${opts.referenciasVisibles?'Referencia original':'Reel de referencia:'}</span> <a href="${attr(refUrl)}" target="_blank" rel="noopener">${opts.referenciasVisibles?'Ver original ↗':'Ver inspiración ↗'}</a> <button class="mini" onclick="copy('${refUrl.replace(/'/g,"\\'")}','Link copiado')">Copiar</button>${thumbBlock}</div>`
     : (thumbBlock ? `<div class="refbar refreel"><span>🎬 Referencia:</span>${thumbBlock}</div>` : '');
   const verbar = (opts.versiones && opts.versiones.length > 1)
     ? `<div class="refbar verbar"><span>📄 Versión:</span> ${opts.versiones.map(v => `<a href="?c=${attr(opts.client)}&g=${attr(v.g)}"><button class="mini${v.g===opts.slug?' on':''}">${esc(v.t)}</button></a>`).join(' ')}</div>`
@@ -592,7 +601,7 @@ function renderGuion(g, canonical, backHref, opts){
   });
 
 
-  window.Prendas?.mount({ client: opts.client, slug: opts.slug, admin: adm, askPassword: () => askPassword('Abrir referencias de prendas') });
+  window.Prendas?.mount({ client: opts.client, slug: opts.slug, admin: adm, inlineOnly: opts.prendasEnTexto, askPassword: () => askPassword('Abrir referencias de prendas') });
 
   const editLineHtml = l => {
     const sp = l ? l.speaker : '';
@@ -788,11 +797,11 @@ function renderTimeline(rec, token, codeOf, gi){
       const esGuionItem = c.tipo !== 'ref' && !['trans-int','trans-ext','caminadora','juntas'].includes(c.categoria);
       const verRef = !REF_PRIVATE[token] || Boolean(window.SkinClubRefs?.canView());
       const thumb = (c.thumb && verRef)
-        ? `<a class="tlthumb" href="${attr(c.link || '#')}" target="_blank" rel="noopener"><img src="${attr(c.thumb)}" alt="${attr(c.thumb_alt || 'preview')}" loading="lazy"></a>`
+        ? `<a class="tlthumb" href="${attr(c.link || '#')}" target="_blank" rel="noopener"><img src="${attr(c.thumb)}" alt="${attr(c.thumb_alt || 'preview')}" loading="${rec.referenciasVisibles?'eager':'lazy'}"></a>`
         : `<span class="tlthumb nothumb">🎬</span>`;
       const info = c.orden_publicacion ? `<p class="tlnota" style="margin:5px 0 9px">${esc(c.info || '')}</p>` : '';
       const abrir = esGuionItem || token === 'bianca-ald-7q2vd'
-        ? `<a href="?c=${token}&g=${attr(c.slug)}" target="_blank" rel="noopener"><button class="primary mini">${esGuionItem?'Abrir guion ↗':'Prendas y referencia ↗'}</button></a>` : '';
+        ? `<a href="?c=${token}&g=${attr(c.slug)}" target="_blank" rel="noopener"><button class="primary mini">${esGuionItem?'Abrir guion ↗':rec.prendasEnTexto?'Abrir ficha ↗':'Prendas y referencia ↗'}</button></a>` : '';
       const ref = (c.link && verRef)
         ? `<a href="${attr(c.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
       // Se marca como grabado desde aquí mismo, sin bajar a la tarjeta de la categoría.
@@ -811,7 +820,7 @@ function renderTimeline(rec, token, codeOf, gi){
           ${info}
           <div class="tlacts">${mini}${abrir}${ref}${marcar}${del}</div>
         </div></div>
-        ${renderOutfit(c)}
+        ${rec.prendasEnTexto?'':renderOutfit(c)}
       </div>`;
     }).join('');
     const prog = cards.length > 1 ? `<span class="tlprog">${cards.filter(c=>c.grabado).length}/${cards.length}</span>` : '';
@@ -881,7 +890,7 @@ function refreshTimelines(){
     });
   });
 }
-function renderCard(it, token, ri, codArg){
+function renderCard(it, token, ri, codArg, rec = {}){
   const url = window.Prendas?.url(base() + '?c=' + token + '&g=' + it.slug, token) || base() + '?c=' + token + '&g=' + it.slug;
   const cod = codArg || it.slug.toUpperCase();
   const esGuion = it.tipo !== 'ref' && !['trans-int','trans-ext','caminadora','juntas'].includes(it.categoria);   // .md abrible; transiciones y tarjetas de referencia (tipo:ref) solo llevan link. Un chusco CON guion (tipo:'md') sí se abre.
@@ -896,14 +905,16 @@ function renderCard(it, token, ri, codArg){
   const cardLoc = (founders && isAdmin())
     ? `<div class="cardlocrow"><span class="cardloclbl">🎙️ Locutor:</span>${founders.map(n=>`<button class="mini cardloc${effLoc===n?' on':''}" data-slug="${attr(it.slug)}" data-loc="${attr(n)}">${esc(n)}</button>`).join('')}</div>`
     : '';
-  const abrir = esGuion || token === 'bianca-ald-7q2vd' ? `<a href="${attr(url)}"><button class="primary mini">${esGuion?'Abrir guion':'Prendas y referencia'}</button></a>` : '';
+  const abrir = esGuion || token === 'bianca-ald-7q2vd' ? `<a href="${attr(url)}"><button class="primary mini">${esGuion?'Abrir guion':rec.prendasEnTexto?'Abrir ficha':'Prendas y referencia'}</button></a>` : '';
   const verRef = !REF_PRIVATE[token] || Boolean(window.SkinClubRefs?.canView());
   const ref = (it.link && verRef) ? `<a href="${attr(it.link)}" target="_blank" rel="noopener"><button class="mini">Ver referencia ↗</button></a>` : '';
   const mover = (REC_NESTED[token] && isAdmin()) ? `<button class="mini btnMover" data-slug="${attr(it.slug)}">Mover ⇄</button>` : '';
-  const preview = (it.thumb && verRef) ? `<details class="refpreview"><summary>👁 Ver preview</summary><img src="${attr(it.thumb)}" alt="preview de la referencia" loading="lazy"></details>` : '';
+  const preview = (it.thumb && verRef) ? (rec.referenciasVisibles
+    ? visibleReferencePreview(it.thumb, it.link, it.thumb_alt)
+    : `<details class="refpreview"><summary>👁 Ver preview</summary><img src="${attr(it.thumb)}" alt="preview de la referencia" loading="lazy"></details>`) : '';
   return `<div class="card${it.grabado?' done':''}${it.miniatura?' hasmini':''}" data-card="${attr(it.slug)}" data-rec="${ri}">${del}<div class="cardmain" style="display:flex; gap:12px; align-items:flex-start;"><span class="codebadge">${esc(cod)}</span><div style="flex:1"><h3>${esc(it.titulo)}${it.marca?`<span class="marca">${esc(it.marca)}</span>`:''}${loc}</h3><p>${esc(it.info||'')}</p></div><span class="donechip">✓ Grabado</span></div>
     ${cardLoc}
-    <div class="actions">${mini}${abrir}${ref}<button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${mover}</div>${preview}${renderOutfit(it)}</div>`;
+    <div class="actions">${mini}${abrir}${ref}<button class="mini" onclick="copy('${url}','Link copiado')">Copiar link</button>${toggle}${mover}</div>${preview}${rec.prendasEnTexto?'':renderOutfit(it)}</div>`;
 }
 let CLIENT_DATA = null, CLIENT_TOKEN = null;
 function renderClient(data, token){
@@ -927,14 +938,14 @@ function renderClient(data, token){
         if (!items.length) return '';
         const myi = si++;
         const done = items.filter(x=>x.grabado).length;
-        return `<details class="catblock sub"><summary><span class="catname">${esc(CAT_LABELS[key]||key.toUpperCase())}</span><span class="catcount">${items.length} · <span class="donecount" data-rec="${myi}">${done}/${items.length} grabados</span></span></summary>${items.map((it,idx)=>renderCard(it,token,myi,(CAT_PREFIX[key]||'')+(idx+1))).join('')}</details>`;
+        return `<details class="catblock sub"><summary><span class="catname">${esc(CAT_LABELS[key]||key.toUpperCase())}</span><span class="catcount">${items.length} · <span class="donecount" data-rec="${myi}">${done}/${items.length} grabados</span></span></summary>${items.map((it,idx)=>renderCard(it,token,myi,(CAT_PREFIX[key]||'')+(idx+1),g)).join('')}</details>`;
       }).join('');
       const total = (g.guiones||[]).length, tdone = (g.guiones||[]).filter(x=>x.grabado).length;
       // Mapa slug -> código posicional (G1, C3, I2…), el mismo que se pinta en cada tarjeta.
       const codMap = {}; order.forEach(key => itemsForCat(g.guiones||[], key, known).forEach((it,idx) => { codMap[it.slug] = (CAT_PREFIX[key]||'') + (idx+1); }));
       const tlHtml = renderTimeline(g, token, sl => codMap[sl], gi);
       const body = (tlHtml + inner) || `<p class="hint" style="margin:6px 2px;">Grabación vacía. Mueve videos aquí con el botón "Mover ⇄" de cada tarjeta.</p>`;
-      return `<details class="recblock2"${g.abierta ? ' open' : ''}><summary><span class="recname">🎬 ${esc(g.rec)} · ${esc(g.nombre||'Grabación')}</span><span class="catcount" data-recsum="${gi}">${total} · ${tdone}/${total} grabados</span></summary>${body}</details>`;
+      return `<details class="recblock2"${g.abierta ? ' open' : ''}${g.referenciasVisibles ? ' data-default-open' : ''}><summary><span class="recname">🎬 ${esc(g.rec)} · ${esc(g.nombre||'Grabación')}</span><span class="catcount" data-recsum="${gi}">${total} · ${tdone}/${total} grabados</span></summary>${body}</details>`;
     }).join('');
     if (admin) blocks = `<button class="primary mini" id="newRecBtn" style="margin:0 0 16px;">➕ Nueva grabación</button>` + blocks;
   } else if (cats){
@@ -976,12 +987,14 @@ function renderClient(data, token){
 function renderReferenciaPrendas(item, cliente, rec){
   const link = item.link || item.ref;
   const safeLink = typeof link === 'string' && /^https?:\/\//i.test(link) ? link : null;
+  const description = rec.prendasEnTexto ? [item.titulo,item.info].filter(Boolean).join(' · ') : item.info || item.titulo || 'Sin descripción adicional.';
   $('#app').innerHTML = `<header class="site"><div class="logo">DV</div><div><h1>${esc(item.titulo || item.slug)}</h1><p>Bianca Aldama · ${esc(rec.rec)} · ${esc(item.slug)}</p></div></header>
     <p><a href="?c=${attr(cliente)}">← Todas las grabaciones</a></p>
-    <p class="globalnote">Referencia visual · esta pieza no tiene un guion escrito. Abre el video original y añade aquí las prendas que se usarán.</p>
+    <p class="globalnote">${rec.prendasEnTexto?'Referencia visual · toca una prenda marcada para subir su foto.':'Referencia visual · esta pieza no tiene un guion escrito. Abre el video original y añade aquí las prendas que se usarán.'}</p>
+    ${rec.referenciasVisibles?visibleReferencePreview(item.thumb,safeLink,item.thumb_alt):''}
     ${safeLink?`<p><a href="${attr(safeLink)}" target="_blank" rel="noopener"><button class="primary">Ver referencia original ↗</button></a></p>`:''}
-    <div id="v-conv"><div id="prendas-root"></div><h2>Descripción registrada</h2><p class="bubble">${esc(item.info || item.titulo || 'Sin descripción adicional.')}</p><div data-prendas-text>${renderOutfit(item)}</div></div>`;
-  window.Prendas?.mount({client:cliente,slug:item.slug,admin:isAdmin(),askPassword:()=>askPassword('Abrir referencias de prendas')});
+    <div id="v-conv"><div id="prendas-root"></div><h2>Descripción registrada</h2><p class="bubble">${esc(description)}</p>${rec.prendasEnTexto?'':`<div data-prendas-text>${renderOutfit(item)}</div>`}</div>`;
+  window.Prendas?.mount({client:cliente,slug:item.slug,admin:isAdmin(),inlineOnly:rec.prendasEnTexto,askPassword:()=>askPassword('Abrir referencias de prendas')});
 }
 
 function detKey(d){
@@ -990,7 +1003,7 @@ function detKey(d){
   return 'C:' + rn + '/' + (d.querySelector(':scope > summary .catname')?.textContent || '');
 }
 // Estado de los desplegables por cliente (caché de sesión):
-// al entrar o recargar el portal → todo cerrado; al regresar (botón atrás desde un guion) → como lo dejaste.
+// Al entrar o recargar se aplican los valores iniciales. Al regresar se restaura la selección.
 let RESTORE_OPEN = false;   // lo activa rerenderPreservingState para no perder lo abierto al mover/crear
 const openKey = token => 'dvopen:' + token;
 function loadOpenMap(token){ try { return JSON.parse(sessionStorage.getItem(openKey(token)) || '{}'); } catch(e){ return {}; } }
@@ -1001,9 +1014,9 @@ function applyOpenState(){
   const dets = document.querySelectorAll('.recblock2, .catblock');
   if (!dets.length) return;
   const restore = RESTORE_OPEN || navIsBack();   // restaurar solo al volver atrás o en un re-render interno
-  if (!restore) saveOpenMap(CLIENT_TOKEN, {});    // entrada o recarga: arrancar con todo cerrado
+  if (!restore) saveOpenMap(CLIENT_TOKEN, {});
   const map = restore ? loadOpenMap(CLIENT_TOKEN) : {};
-  dets.forEach(d => { d.open = map[detKey(d)] === true; });
+  dets.forEach(d => { d.open = map[detKey(d)] ?? d.hasAttribute('data-default-open'); });
 }
 function wireOpenPersist(){
   document.querySelectorAll('.recblock2, .catblock').forEach(d => {
@@ -1428,13 +1441,22 @@ async function boot(){
       if (override && (override.trim() === fetched.trim() || (Date.now() - ots) > 600000)){
         localStorage.removeItem(localKey); localStorage.removeItem(localKey + ':t'); override = null;
       }
-      let locutor = null, thumb = null, ref = null, versiones = null;
+      let locutor = null, thumb = null, thumbAlt = null, ref = null, versiones = null, recOptions = {};
       try{
         let ix = await (await fetch('clientes/' + c + '/index.json?t=' + Date.now())).json();
         if (REF_PRIVATE[c]) ix = window.SkinClubRefs.decorate(ix);
         // `versiones` en el index ([{t:'Propuesto', g:'g-113'}, {t:'Original', g:'g-113-original'}]) pinta un selector
         // arriba del guion. La versión alterna hereda la miniatura y la referencia de su pieza.
-        (ix.grabaciones||[]).forEach(rec => (rec.guiones||[]).forEach(it => { const vs = it.versiones || []; if (it.slug === g || vs.some(v => v.g === g)){ if (it.locutor) locutor = it.locutor; if (it.thumb) thumb = it.thumb; if (it.link || it.ref) ref = it.link || it.ref; if (vs.length) versiones = vs; } }));
+        (ix.grabaciones||[]).forEach(rec => (rec.guiones||[]).forEach(it => {
+          const vs = it.versiones || [];
+          if (it.slug === g || vs.some(v => v.g === g)){
+            if (it.locutor) locutor = it.locutor;
+            if (it.thumb) { thumb = it.thumb; thumbAlt = it.thumb_alt; }
+            if (it.link || it.ref) ref = it.link || it.ref;
+            if (vs.length) versiones = vs;
+            recOptions = { prendasEnTexto:rec.prendasEnTexto, referenciasVisibles:rec.referenciasVisibles };
+          }
+        }));
       }catch(e){}
       if (LOCUTORES[c]){
         const local = localStorage.getItem('dvloc:' + c + '/' + g);
@@ -1442,7 +1464,7 @@ async function boot(){
       }
       const source = REF_PRIVATE[c] ? window.SkinClubRefs.publicSource(override || fetched) : (override || fetched);
       const privateNotes = REF_PRIVATE[c] ? await window.SkinClubRefs.script(g) : '';
-      renderGuion(parseGuion(source, c), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: false, locutor, thumb, ref, versiones, privateNotes});
+      renderGuion(parseGuion(source, c), base() + '?c=' + c + '&g=' + g, '?c=' + c, {localKey, slug:g, client:c, edited: false, locutor, thumb, thumbAlt, ref, versiones, privateNotes, ...recOptions});
       return;
     }catch(e){ $('#app').innerHTML = '<p style="padding:40px 0">Guion no encontrado. Revisa el link con tu estratega.</p>'; return; }
   }

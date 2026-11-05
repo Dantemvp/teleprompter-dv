@@ -10,7 +10,7 @@
         {
           "slug": "g-170",
           "titulo": "Jessie y los colores de otoño-invierno 2026",
-          "info": "20 seg · Jessie · Tres combinaciones de color",
+          "info": "45–55 seg · Jessie · Seis combinaciones de color",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -67,7 +67,7 @@
         {
           "slug": "g-175",
           "titulo": "Una falda de leopardo con cuatro colores",
-          "info": "18–22 seg · Una falda y cuatro combinaciones de color",
+          "info": "40–48 seg · Una falda de leopardo y cuatro looks",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -78,7 +78,7 @@
         {
           "slug": "g-176",
           "titulo": "Cuatro zapatos para la misma bermuda",
-          "info": "18–22 seg · Una bermuda larga · Cuatro cambios de zapato",
+          "info": "45–55 seg · Una bermuda de pinzas y cuatro zapatos",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -89,7 +89,7 @@
         {
           "slug": "g-177",
           "titulo": "Qué color ponerle a cada estampado",
-          "info": "25–30 seg · Seis combinaciones de estampado y color",
+          "info": "50–60 seg · Seis parejas de estampado y color",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -287,7 +287,9 @@
             "g-172"
           ]
         }
-      ]
+      ],
+      "referenciasVisibles": true,
+      "prendasEnTexto": true
     },
     {
       "rec": "R19",

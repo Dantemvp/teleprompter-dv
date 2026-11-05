@@ -43,7 +43,8 @@
     const draftPrefix=opts.client+':'+opts.slug+':';
     ctx.originals = [...document.querySelectorAll('#v-conv .bubble, #v-conv .beat, #v-conv .nota, #v-conv [data-prendas-text]')].map(node => ({node, html:node.innerHTML, text:node.textContent}));
     ctx.detected = (window.PrendasDetect?.identificar(ctx.originals.map(x => x.text).join('\n')) || []).map(name => ({id:window.PrendasDetect.idPara(opts.client,opts.slug,name),name,kind:'estilo',images:[],suggested:true}));
-    root.innerHTML = '<div data-pending></div><details class="prendas-panel"><summary class="prendas-heading"><div><span class="prendas-eyebrow">FOTOS PARA LA EDICIÓN</span><h2>Prendas y referencias</h2><p>Toca una prenda marcada en el guion o abre este resumen.</p></div><span class="prendas-total" data-count>…</span></summary><div class="prendas-body"><div data-content>Cargando referencias…</div></div></details><p class="prendas-error" data-error role="status"></p>';
+    const panel = opts.inlineOnly ? '' : '<div data-pending></div><details class="prendas-panel"><summary class="prendas-heading"><div><span class="prendas-eyebrow">FOTOS PARA LA EDICIÓN</span><h2>Prendas y referencias</h2><p>Toca una prenda marcada en el guion o abre este resumen.</p></div><span class="prendas-total" data-count>…</span></summary><div class="prendas-body"><div data-content>Cargando referencias…</div></div></details>';
+    root.innerHTML = panel + '<p class="prendas-error" data-error role="status"></p>';
     ctx.error = mensaje => { if (ctx === current) root.querySelector('[data-error]').textContent = mensaje; };
     ctx.api = async (data = null) => {
       const headers = { 'X-Prendas-Owner':ownerKey }; if (ctx.password && opts.admin) headers['X-Edit-Password'] = ctx.password; else if (access || ctx.guestAccess) headers.Authorization = 'Bearer ' + (access || ctx.guestAccess);
@@ -115,7 +116,11 @@
       }
       if (current === ctx) render(ctx);
     }
-    catch (error) { if (error.name !== 'AbortError') { ctx.error(error.message); root.querySelector('[data-content]').innerHTML = opts.admin ? '<button data-action="activate">Abrir con contraseña de edición</button>' : ''; } }
+    catch (error) {
+      if (error.name === 'AbortError') return;
+      ctx.error(error.message);
+      if (!opts.inlineOnly) root.querySelector('[data-content]').innerHTML = opts.admin ? '<button data-action="activate">Abrir con contraseña de edición</button>' : '';
+    }
   }
 
   function allGarments(ctx) {
@@ -125,7 +130,7 @@
     return [...stored,...recovered,...ctx.detected.filter(g => ![...stored,...recovered].some(s => normal(s.name) === normal(g.name)))].slice(0,40);
   }
   function renderPending(ctx){
-    if(current!==ctx)return;
+    if(current!==ctx || ctx.inlineOnly)return;
     ctx.root.querySelector('[data-pending]').innerHTML=ctx.role==='editor'?'':[...ctx.pending.entries()].filter(([,items])=>items.length).map(([id,items])=>'<p class="prendas-notice">'+items.length+' foto(s) pendientes · '+esc(items[0].garmentName)+' <button data-resume="'+id+'">Continuar carga</button></p>').join('');
   }
   function imageUrl(ctx, image) {
@@ -134,27 +139,29 @@
   function render(ctx) {
     if (current !== ctx) return;
     renderPending(ctx);
-    ctx.filter ??= ctx.role === 'editor' ? 'selected' : 'all';
     const garments = allGarments(ctx);
-    const ready = garments.filter(g => g.images.some(i => i.selected)).length;
-    const photos = garments.reduce((n,g) => n + g.images.length, 0);
-    ctx.root.querySelector('[data-count]').textContent = photos + (photos===1?' foto · ':' fotos · ') + ready + (ready===1?' prenda lista':' prendas listas');
-    const visible = garments.filter(g => ctx.filter !== 'selected' || g.images.some(i => i.selected));
-    const editor = ctx.role === 'editor';
-    ctx.root.querySelector('[data-content]').innerHTML =
-      '<div class="prendas-toolbar"><div class="prendas-filters"><button data-filter="all" aria-pressed="' + (ctx.filter!=='selected') + '">Todas las prendas</button><button data-filter="selected" aria-pressed="' + (ctx.filter==='selected') + '">✓ Para editar (' + ready + ')</button></div><button data-action="refresh" aria-label="Actualizar referencias">↻ Actualizar</button></div>' +
-      '<div class="prendas-list">' + visible.map(g => {
-        const photo = g.images.find(i=>i.selected) || g.images[0];
-        const status = g.images.some(i=>i.selected) ? '✓ Lista para edición' : g.images.length ? 'Fotos recibidas · falta elegir' : 'Sin foto todavía';
-        return '<button type="button" class="prenda-card ' + (g.images.length?'foto-cargada':'foto-pendiente') + (g.images.some(i=>i.selected)?' lista':'') + '" data-garment="' + g.id + '">' +
-          (photo ? '<img class="prenda-thumb" alt="" loading="lazy" src="' + esc(imageUrl(ctx,photo)) + '">' : '<span class="prenda-placeholder" aria-hidden="true">＋ 📷</span>') +
-          '<span class="prenda-card-text"><strong>' + esc(g.name) + '</strong><span>' + status + '</span><small>' + g.images.length + (g.images.length===1?' foto':' fotos') + (g.suggested?' · Detectada en el guion':'') + '</small></span><span aria-hidden="true">↗</span></button>';
-      }).join('') + '</div>' +
-      (!visible.length ? '<p class="prendas-empty">' + (ctx.filter==='selected' ? 'Todavía no hay fotos elegidas para edición. Las propuestas no son una autorización.' : 'Agrega una prenda o referencia que necesite este guion.') + '</p>' : '') +
-      (!editor ? '<button class="prendas-add" data-action="new">＋ Otra prenda o referencia</button>' : '') +
-      '<p class="prendas-help">Rojo: falta foto. Verde: foto cargada (no significa aprobada). ' + (editor ? 'Usa las fotos seleccionadas. Si una prenda no tiene selección, consulta antes de elegir por tu cuenta.' : 'Las prendas detectadas son sugerencias del texto, no decisiones de moda. Puedes agregar otras. Bianca o Dante eligen cuáles usar.') + '</p>' +
-      (ctx.admin && ctx.role!=='admin'?'<button data-action="activate">Abrir controles de administrador</button>':'')+
-      (ctx.role==='admin' ? '<details class="prendas-share"><summary>Compartir con Bianca, tienda o editor</summary><div class="prendas-tools"><button data-share="bianca">Bianca · elegir fotos</button><button data-share="tienda">Tienda · aportar fotos</button><button data-share="editor">Editor · consultar</button></div></details>' : '');
+    if (!ctx.inlineOnly) {
+      ctx.filter ??= ctx.role === 'editor' ? 'selected' : 'all';
+      const ready = garments.filter(g => g.images.some(i => i.selected)).length;
+      const photos = garments.reduce((n,g) => n + g.images.length, 0);
+      ctx.root.querySelector('[data-count]').textContent = photos + (photos===1?' foto · ':' fotos · ') + ready + (ready===1?' prenda lista':' prendas listas');
+      const visible = garments.filter(g => ctx.filter !== 'selected' || g.images.some(i => i.selected));
+      const editor = ctx.role === 'editor';
+      ctx.root.querySelector('[data-content]').innerHTML =
+        '<div class="prendas-toolbar"><div class="prendas-filters"><button data-filter="all" aria-pressed="' + (ctx.filter!=='selected') + '">Todas las prendas</button><button data-filter="selected" aria-pressed="' + (ctx.filter==='selected') + '">✓ Para editar (' + ready + ')</button></div><button data-action="refresh" aria-label="Actualizar referencias">↻ Actualizar</button></div>' +
+        '<div class="prendas-list">' + visible.map(g => {
+          const photo = g.images.find(i=>i.selected) || g.images[0];
+          const status = g.images.some(i=>i.selected) ? '✓ Lista para edición' : g.images.length ? 'Fotos recibidas · falta elegir' : 'Sin foto todavía';
+          return '<button type="button" class="prenda-card ' + (g.images.length?'foto-cargada':'foto-pendiente') + (g.images.some(i=>i.selected)?' lista':'') + '" data-garment="' + g.id + '">' +
+            (photo ? '<img class="prenda-thumb" alt="" loading="lazy" src="' + esc(imageUrl(ctx,photo)) + '">' : '<span class="prenda-placeholder" aria-hidden="true">＋ 📷</span>') +
+            '<span class="prenda-card-text"><strong>' + esc(g.name) + '</strong><span>' + status + '</span><small>' + g.images.length + (g.images.length===1?' foto':' fotos') + (g.suggested?' · Detectada en el guion':'') + '</small></span><span aria-hidden="true">↗</span></button>';
+        }).join('') + '</div>' +
+        (!visible.length ? '<p class="prendas-empty">' + (ctx.filter==='selected' ? 'Todavía no hay fotos elegidas para edición. Las propuestas no son una autorización.' : 'Agrega una prenda o referencia que necesite este guion.') + '</p>' : '') +
+        (!editor ? '<button class="prendas-add" data-action="new">＋ Otra prenda o referencia</button>' : '') +
+        '<p class="prendas-help">Rojo: falta foto. Verde: foto cargada (no significa aprobada). ' + (editor ? 'Usa las fotos seleccionadas. Si una prenda no tiene selección, consulta antes de elegir por tu cuenta.' : 'Las prendas detectadas son sugerencias del texto, no decisiones de moda. Puedes agregar otras. Bianca o Dante eligen cuáles usar.') + '</p>' +
+        (ctx.admin && ctx.role!=='admin'?'<button data-action="activate">Abrir controles de administrador</button>':'')+
+        (ctx.role==='admin' ? '<details class="prendas-share"><summary>Compartir con Bianca, tienda o editor</summary><div class="prendas-tools"><button data-share="bianca">Bianca · elegir fotos</button><button data-share="tienda">Tienda · aportar fotos</button><button data-share="editor">Editor · consultar</button></div></details>' : '');
+    }
     // Conservar las indicaciones y el marcado original del guion.
     ctx.originals.forEach(({node, html}) => {
       if (!node.isConnected) return;

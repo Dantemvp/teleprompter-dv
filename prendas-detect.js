@@ -2,7 +2,7 @@
 (() => {
   const normal = s => s.trim().toLocaleLowerCase('es').replace(/\s+/g, ' ');
   function identificar(texto) {
-    const base = '(?:tops?|blusas?|camisas?|camisetas?|playeras?|pantal[oó]n(?:es)?|jeans?|vestidos?|faldas?|shorts?|sacos?|blazers?|chamarras?|chaquetas?|abrigos?|su[eé]teres?|chalecos?|cardigans?|kimonos?|bodys?|bodies|botas?|botines?|tenis|zapatos?|tac[oó]n(?:es)?|sandalias?|bolsas?|bolsos?|cintur[oó]n(?:es)?|aretes?|collares?|pa[ñn]uelos?|bufandas?)';
+    const base = '(?:tops?|blusas?|camisas?|camisetas?|playeras?|pantal[oó]n(?:es)?|jeans?|vestidos?|faldas?|shorts?|bermudas?|capris?|sacos?|blazers?|chamarras?|chaquetas?|abrigos?|gabardinas?|su[eé]ter(?:es)?|chalecos?|c[aá]rdigan(?:es|s)?|kimonos?|bodys?|bodies|botas?|botines?|tenis|mocas[ií]n(?:es)?|bailarinas?|calcetas?|zapatos?|tac[oó]n(?:es)?|sandalias?|bolsas?|bolsos?|cintur[oó]n(?:es)?|aretes?|collares?|pa[ñn]uelos?|bufandas?)';
     const material = '(?:(?:de|con|sin)\\s+(?:encaje|gamuza|piel|mezclilla|lino|algod[oó]n|seda|sat[ií]n|mangas?|tac[oó]n))';
     const adjetivo = '(?:satinad[oa]s?|forrad[oa]s?|estructurad[oa]s?|larg[oa]s?|cort[oa]s?|rect[oa]s?|anch[oa]s?|oversize|b[aá]sic[oa]s?|blanc[oa]s?|negr[oa]s?|roj[oa]s?|azul(?:es)?|verde?s?|caf[eé]s?|beige|co[ñn]ac|midi|maxi|plisad[oa]s?|met[aá]lic[oa]s?)';
     const rx = new RegExp('(?<![\\p{L}])' + base + '(?:\\s+(?:' + material + '|' + adjetivo + ')){0,3}(?![\\p{L}])', 'giu');
