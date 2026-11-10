@@ -593,7 +593,7 @@
           "categoria": "guion",
           "tipo": "md",
           "grabado": true,
-          "miniatura": false,
+          "miniatura": true,
           "locutor": "Mary",
           "link": "https://www.biblegateway.com/passage/?search=1%20Reyes%2019%3A1-18&version=NVI",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-26.svg",
