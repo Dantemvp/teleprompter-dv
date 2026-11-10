@@ -497,7 +497,7 @@
           "categoria": "guion",
           "tipo": "md",
           "grabado": true,
-          "miniatura": false,
+          "miniatura": true,
           "locutor": "Mary",
           "link": "https://www.biblegateway.com/passage/?search=Lucas%2010%3A38-42&version=NVI",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-25.svg",
