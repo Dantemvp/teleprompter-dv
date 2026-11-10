@@ -513,7 +513,7 @@
           "categoria": "guion",
           "tipo": "md",
           "grabado": true,
-          "miniatura": false,
+          "miniatura": true,
           "locutor": "Mary",
           "link": "https://www.youtube.com/watch?v=hxrj6pRHdf0",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-30.svg",
