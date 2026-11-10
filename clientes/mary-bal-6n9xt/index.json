@@ -657,7 +657,7 @@
           "categoria": "guion",
           "tipo": "md",
           "grabado": true,
-          "miniatura": false,
+          "miniatura": true,
           "locutor": "Mary",
           "link": "https://www.gutenberg.org/files/11339/11339-h/11339-h.htm",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-29.jpg",
