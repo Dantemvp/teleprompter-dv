@@ -481,7 +481,7 @@
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
-          "miniatura": false,
+          "miniatura": true,
           "locutor": "Mary",
           "link": "https://www.penguinrandomhouse.com/books/550168/educated-by-tara-westover/9780525528067/teachers-guide/",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-24.jpg",
