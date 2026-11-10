@@ -496,7 +496,7 @@
           "info": "Toma 06 · Inédita Mary/DV · Idea 06 · Fuente de lectura",
           "categoria": "guion",
           "tipo": "md",
-          "grabado": false,
+          "grabado": true,
           "miniatura": false,
           "locutor": "Mary",
           "link": "https://www.biblegateway.com/passage/?search=Lucas%2010%3A38-42&version=NVI",
