@@ -337,8 +337,8 @@
       "fecha": "Por definir",
       "locacion": "Por definir",
       "abierta": true,
-      "ventana": "5 videos · Primer bloque de R02",
-      "nota": "Adaptaciones cercanas con paráfrasis. Las imágenes son miniaturas de referencia; el control Miniatura corresponde a la portada de Mary.",
+      "ventana": "12 videos · 5 adaptaciones y 7 desarrollos propios",
+      "nota": "Primer bloque: cinco adaptaciones cercanas. Segundo bloque: siete guiones propios desde libros, Biblia y relatos. Las imágenes identifican las referencias o lecturas; Miniatura controla la portada de Mary.",
       "timeline": [
         {
           "hora": "Preparar",
@@ -370,11 +370,35 @@
           ]
         },
         {
-          "hora": "Después",
-          "titulo": "Ideas inéditas Mary/DV",
-          "tipo": "extra",
-          "slugs": [],
-          "nota": "Siguiente bloque de R02. Los guiones se incorporarán después de desarrollarlos."
+          "hora": "06–07",
+          "titulo": "Identidad, aprobación y confianza",
+          "slugs": [
+            "g-23",
+            "g-24"
+          ]
+        },
+        {
+          "hora": "08–09",
+          "titulo": "Fe, presencia y cuidado",
+          "slugs": [
+            "g-25",
+            "g-26"
+          ]
+        },
+        {
+          "hora": "10–11",
+          "titulo": "Volver a empezar y ocupar tu lugar",
+          "slugs": [
+            "g-27",
+            "g-28"
+          ]
+        },
+        {
+          "hora": "12",
+          "titulo": "Fábula: conservar tu criterio",
+          "slugs": [
+            "g-29"
+          ]
         }
       ],
       "guiones": [
@@ -447,6 +471,111 @@
           "thumb": "clientes/mary-bal-6n9xt/refs/g-22.jpg",
           "thumb_alt": "Referencia: Tu buen corazón también necesita límites · sararequenna_ · miniatura del video",
           "orden_grabacion": 5
+        },
+        {
+          "slug": "g-23",
+          "titulo": "La vida que todos te aplauden",
+          "marca": "Idea 02",
+          "info": "Toma 06 · Inédita Mary/DV · Idea 02 · Fuente de lectura",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.penguin.co.nz/books/untamed-9781785043352/extracts/2279-untamed",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-23.jpg",
+          "thumb_alt": "Fuente de lectura de la idea 02: La vida que todos te aplauden",
+          "orden_grabacion": 6
+        },
+        {
+          "slug": "g-24",
+          "titulo": "Te felicitan y piensas: si supieran",
+          "marca": "Idea 03",
+          "info": "Toma 07 · Inédita Mary/DV · Idea 03 · Fuente de lectura",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.penguinrandomhouse.com/books/550168/educated-by-tara-westover/9780525528067/teachers-guide/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-24.jpg",
+          "thumb_alt": "Fuente de lectura de la idea 03: Te felicitan y piensas: si supieran",
+          "orden_grabacion": 7
+        },
+        {
+          "slug": "g-25",
+          "titulo": "Sentarte sin sentir que estás fallando",
+          "marca": "Idea 06",
+          "info": "Toma 08 · Inédita Mary/DV · Idea 06 · Fuente de lectura",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.biblegateway.com/passage/?search=Lucas%2010%3A38-42&version=NVI",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-25.svg",
+          "thumb_alt": "Fuente de lectura de la idea 06: Sentarte sin sentir que estás fallando",
+          "orden_grabacion": 8
+        },
+        {
+          "slug": "g-26",
+          "titulo": "La fe también puede recibir cuidado",
+          "marca": "Idea 07",
+          "info": "Toma 09 · Inédita Mary/DV · Idea 07 · Fuente de lectura",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.biblegateway.com/passage/?search=1%20Reyes%2019%3A1-18&version=NVI",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-26.svg",
+          "thumb_alt": "Fuente de lectura de la idea 07: La fe también puede recibir cuidado",
+          "orden_grabacion": 9
+        },
+        {
+          "slug": "g-27",
+          "titulo": "¿A tu edad vas a empezar?",
+          "marca": "Idea 11",
+          "info": "Toma 10 · Inédita Mary/DV · Idea 11 · Fuente de lectura",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://nmwa.org/art/artists/grandma-moses-anna-mary-robertson-moses/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-27.jpg",
+          "thumb_alt": "Fuente de lectura de la idea 11: ¿A tu edad vas a empezar?",
+          "orden_grabacion": 10
+        },
+        {
+          "slug": "g-28",
+          "titulo": "La mujer del dorsal 261",
+          "marca": "Idea 12",
+          "info": "Toma 11 · Inédita Mary/DV · Idea 12 · Fuente de lectura",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://kathrineswitzer.com/1967-boston-marathon-the-real-story/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-28.jpg",
+          "thumb_alt": "Fuente de lectura de la idea 12: La mujer del dorsal 261",
+          "orden_grabacion": 11
+        },
+        {
+          "slug": "g-29",
+          "titulo": "Terminaste cargando al burro",
+          "marca": "Idea 14",
+          "info": "Toma 12 · Inédita Mary/DV · Idea 14 · Fuente de lectura",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.gutenberg.org/files/11339/11339-h/11339-h.htm",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-29.jpg",
+          "thumb_alt": "Fuente de lectura de la idea 14: Terminaste cargando al burro",
+          "orden_grabacion": 12
         }
       ]
     }
