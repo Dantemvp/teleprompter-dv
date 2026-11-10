@@ -576,7 +576,7 @@
           "categoria": "guion",
           "tipo": "md",
           "grabado": true,
-          "miniatura": false,
+          "miniatura": true,
           "locutor": "Mary",
           "link": "https://vt.tiktok.com/ZSpyWRY7v/",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-22.jpg",
