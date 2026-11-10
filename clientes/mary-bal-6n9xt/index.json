@@ -480,7 +480,7 @@
           "info": "Toma 05 · Inédita Mary/DV · Idea 03 · Fuente de lectura",
           "categoria": "guion",
           "tipo": "md",
-          "grabado": false,
+          "grabado": true,
           "miniatura": true,
           "locutor": "Mary",
           "link": "https://www.penguinrandomhouse.com/books/550168/educated-by-tara-westover/9780525528067/teachers-guide/",
