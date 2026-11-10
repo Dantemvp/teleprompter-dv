@@ -337,68 +337,75 @@
       "fecha": "Por definir",
       "locacion": "Por definir",
       "abierta": true,
-      "ventana": "12 videos · 5 adaptaciones y 7 desarrollos propios",
-      "nota": "Primer bloque: cinco adaptaciones cercanas. Segundo bloque: siete guiones propios desde libros, Biblia y relatos. Las imágenes identifican las referencias o lecturas; Miniatura controla la portada de Mary.",
+      "ventana": "16 videos · Referencias → Inéditos → Otro estilo · Bloques de hasta 3",
+      "nota": "Grabar hasta tres referencias, hasta tres inéditos y hasta tres de otro estilo; repetir el ciclo hasta terminar. Los bloques finales usan las piezas restantes de cada grupo. Las imágenes son referencias; Miniatura controla la portada final de Mary.",
       "timeline": [
         {
           "hora": "Preparar",
           "titulo": "Audio, encuadre y luz",
           "slugs": [],
-          "nota": "Probar voz y encuadre. Grabar una toma limpia para portada en cada pieza."
+          "nota": "Probar una toma y revisar audio. En cada guion, grabar también una toma limpia para su portada."
         },
         {
-          "hora": "01",
-          "titulo": "Soltar el control",
+          "hora": "01–03",
+          "titulo": "Referencias · Vuelta 1",
           "slugs": [
-            "g-18"
-          ]
-        },
-        {
-          "hora": "02–03",
-          "titulo": "Valor propio y una mirada al pasado",
-          "slugs": [
+            "g-18",
             "g-19",
             "g-20"
           ]
         },
         {
-          "hora": "04–05",
-          "titulo": "Expectativas y límites sin dejar de ser tú",
-          "slugs": [
-            "g-21",
-            "g-22"
-          ]
-        },
-        {
-          "hora": "06–07",
-          "titulo": "Identidad, aprobación y confianza",
+          "hora": "04–06",
+          "titulo": "Inéditos · Vuelta 1",
           "slugs": [
             "g-23",
-            "g-24"
+            "g-24",
+            "g-25"
           ]
         },
         {
-          "hora": "08–09",
-          "titulo": "Fe, presencia y cuidado",
+          "hora": "07–09",
+          "titulo": "Otro estilo · Vuelta 1",
           "slugs": [
-            "g-25",
-            "g-26"
+            "g-30",
+            "g-31",
+            "g-32"
           ]
         },
         {
           "hora": "10–11",
-          "titulo": "Volver a empezar y ocupar tu lugar",
+          "titulo": "Referencias · Vuelta 2",
           "slugs": [
+            "g-21",
+            "g-22"
+          ],
+          "nota": "Quedan 2 guiones de este grupo. Después sigue el siguiente grupo con piezas pendientes."
+        },
+        {
+          "hora": "12–14",
+          "titulo": "Inéditos · Vuelta 2",
+          "slugs": [
+            "g-26",
             "g-27",
             "g-28"
           ]
         },
         {
-          "hora": "12",
-          "titulo": "Fábula: conservar tu criterio",
+          "hora": "15",
+          "titulo": "Otro estilo · Vuelta 2",
+          "slugs": [
+            "g-33"
+          ],
+          "nota": "Quedan 1 guion de este grupo. Después sigue el siguiente grupo con piezas pendientes."
+        },
+        {
+          "hora": "16",
+          "titulo": "Inéditos · Vuelta 3",
           "slugs": [
             "g-29"
-          ]
+          ],
+          "nota": "Quedan 1 guion de este grupo. Después sigue el siguiente grupo con piezas pendientes."
         }
       ],
       "guiones": [
@@ -414,7 +421,9 @@
           "link": "https://vt.tiktok.com/ZSpytpUD8/",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-18.jpg",
           "thumb_alt": "Referencia: No todo se acomoda a la fuerza · Carla Cardona · miniatura del video",
-          "orden_grabacion": 1
+          "orden_grabacion": 1,
+          "grupo_r02": "referencias",
+          "marca": "Referencia"
         },
         {
           "slug": "g-19",
@@ -428,7 +437,9 @@
           "link": "https://vt.tiktok.com/ZSpynjrvx/",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-19.jpg",
           "thumb_alt": "Referencia: Lo que te dan no mide lo que mereces · edgarmoralesVF · miniatura del video",
-          "orden_grabacion": 2
+          "orden_grabacion": 2,
+          "grupo_r02": "referencias",
+          "marca": "Referencia"
         },
         {
           "slug": "g-20",
@@ -442,41 +453,15 @@
           "link": "https://vt.tiktok.com/ZSpynvTUS/",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-20.jpg",
           "thumb_alt": "Referencia: No te juzgues con lo que hoy sabes · sararequenna_ · miniatura del video",
-          "orden_grabacion": 3
-        },
-        {
-          "slug": "g-21",
-          "titulo": "No le pidas duraznos a un limonero",
-          "info": "Toma 04 · 50–65 seg aprox. · Adaptación cercana con paráfrasis · sararequenna_",
-          "categoria": "guion",
-          "tipo": "md",
-          "grabado": false,
-          "miniatura": false,
-          "locutor": "Mary",
-          "link": "https://vt.tiktok.com/ZSpynKuJs/",
-          "thumb": "clientes/mary-bal-6n9xt/refs/g-21.jpg",
-          "thumb_alt": "Referencia: No le pidas duraznos a un limonero · sararequenna_ · miniatura del video",
-          "orden_grabacion": 4
-        },
-        {
-          "slug": "g-22",
-          "titulo": "Tu buen corazón también necesita límites",
-          "info": "Toma 05 · 50–65 seg aprox. · Adaptación cercana con paráfrasis · sararequenna_",
-          "categoria": "guion",
-          "tipo": "md",
-          "grabado": false,
-          "miniatura": false,
-          "locutor": "Mary",
-          "link": "https://vt.tiktok.com/ZSpyWRY7v/",
-          "thumb": "clientes/mary-bal-6n9xt/refs/g-22.jpg",
-          "thumb_alt": "Referencia: Tu buen corazón también necesita límites · sararequenna_ · miniatura del video",
-          "orden_grabacion": 5
+          "orden_grabacion": 3,
+          "grupo_r02": "referencias",
+          "marca": "Referencia"
         },
         {
           "slug": "g-23",
           "titulo": "La vida que todos te aplauden",
-          "marca": "Idea 02",
-          "info": "Toma 06 · Inédita Mary/DV · Idea 02 · Fuente de lectura",
+          "marca": "Inédito · Idea 02",
+          "info": "Toma 04 · Inédita Mary/DV · Idea 02 · Fuente de lectura",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -485,13 +470,14 @@
           "link": "https://www.penguin.co.nz/books/untamed-9781785043352/extracts/2279-untamed",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-23.jpg",
           "thumb_alt": "Fuente de lectura de la idea 02: La vida que todos te aplauden",
-          "orden_grabacion": 6
+          "orden_grabacion": 4,
+          "grupo_r02": "ineditos"
         },
         {
           "slug": "g-24",
           "titulo": "Te felicitan y piensas: si supieran",
-          "marca": "Idea 03",
-          "info": "Toma 07 · Inédita Mary/DV · Idea 03 · Fuente de lectura",
+          "marca": "Inédito · Idea 03",
+          "info": "Toma 05 · Inédita Mary/DV · Idea 03 · Fuente de lectura",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -500,13 +486,14 @@
           "link": "https://www.penguinrandomhouse.com/books/550168/educated-by-tara-westover/9780525528067/teachers-guide/",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-24.jpg",
           "thumb_alt": "Fuente de lectura de la idea 03: Te felicitan y piensas: si supieran",
-          "orden_grabacion": 7
+          "orden_grabacion": 5,
+          "grupo_r02": "ineditos"
         },
         {
           "slug": "g-25",
           "titulo": "Sentarte sin sentir que estás fallando",
-          "marca": "Idea 06",
-          "info": "Toma 08 · Inédita Mary/DV · Idea 06 · Fuente de lectura",
+          "marca": "Inédito · Idea 06",
+          "info": "Toma 06 · Inédita Mary/DV · Idea 06 · Fuente de lectura",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -515,13 +502,94 @@
           "link": "https://www.biblegateway.com/passage/?search=Lucas%2010%3A38-42&version=NVI",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-25.svg",
           "thumb_alt": "Fuente de lectura de la idea 06: Sentarte sin sentir que estás fallando",
+          "orden_grabacion": 6,
+          "grupo_r02": "ineditos"
+        },
+        {
+          "slug": "g-30",
+          "titulo": "¿Para qué quieres ganar más?",
+          "marca": "Otro estilo · JV-01",
+          "info": "Toma 07 · Otro estilo · JV-01 · Original Mary/DV · Referencia: Javi Rodríguez",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.youtube.com/watch?v=hxrj6pRHdf0",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-30.svg",
+          "thumb_alt": "Ficha visual JV-01: ¿Para qué quieres ganar más? · Referencia de estilo: Javi Rodríguez",
+          "grupo_r02": "otro-estilo",
+          "orden_grabacion": 7
+        },
+        {
+          "slug": "g-31",
+          "titulo": "¿Yo soy así… o así he aprendido a responder?",
+          "marca": "Otro estilo · JV-02",
+          "info": "Toma 08 · Otro estilo · JV-02 · Original Mary/DV · Referencia: Javi Rodríguez",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.youtube.com/watch?v=hxrj6pRHdf0",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-31.svg",
+          "thumb_alt": "Ficha visual JV-02: ¿Yo soy así… o así he aprendido a responder? · Referencia de estilo: Javi Rodríguez",
+          "grupo_r02": "otro-estilo",
           "orden_grabacion": 8
+        },
+        {
+          "slug": "g-32",
+          "titulo": "Dijiste que no pasaba nada",
+          "marca": "Otro estilo · VO-01",
+          "info": "Toma 09 · Otro estilo · VO-01 · Original Mary/DV · Referencia: Valentina Ortiz",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.youtube.com/watch?v=wS42doD4icE",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-32.svg",
+          "thumb_alt": "Ficha visual VO-01: Dijiste que no pasaba nada · Referencia de estilo: Valentina Ortiz",
+          "grupo_r02": "otro-estilo",
+          "orden_grabacion": 9
+        },
+        {
+          "slug": "g-21",
+          "titulo": "No le pidas duraznos a un limonero",
+          "info": "Toma 10 · 50–65 seg aprox. · Adaptación cercana con paráfrasis · sararequenna_",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://vt.tiktok.com/ZSpynKuJs/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-21.jpg",
+          "thumb_alt": "Referencia: No le pidas duraznos a un limonero · sararequenna_ · miniatura del video",
+          "orden_grabacion": 10,
+          "grupo_r02": "referencias",
+          "marca": "Referencia"
+        },
+        {
+          "slug": "g-22",
+          "titulo": "Tu buen corazón también necesita límites",
+          "info": "Toma 11 · 50–65 seg aprox. · Adaptación cercana con paráfrasis · sararequenna_",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://vt.tiktok.com/ZSpyWRY7v/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-22.jpg",
+          "thumb_alt": "Referencia: Tu buen corazón también necesita límites · sararequenna_ · miniatura del video",
+          "orden_grabacion": 11,
+          "grupo_r02": "referencias",
+          "marca": "Referencia"
         },
         {
           "slug": "g-26",
           "titulo": "La fe también puede recibir cuidado",
-          "marca": "Idea 07",
-          "info": "Toma 09 · Inédita Mary/DV · Idea 07 · Fuente de lectura",
+          "marca": "Inédito · Idea 07",
+          "info": "Toma 12 · Inédita Mary/DV · Idea 07 · Fuente de lectura",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -530,13 +598,14 @@
           "link": "https://www.biblegateway.com/passage/?search=1%20Reyes%2019%3A1-18&version=NVI",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-26.svg",
           "thumb_alt": "Fuente de lectura de la idea 07: La fe también puede recibir cuidado",
-          "orden_grabacion": 9
+          "orden_grabacion": 12,
+          "grupo_r02": "ineditos"
         },
         {
           "slug": "g-27",
           "titulo": "¿A tu edad vas a empezar?",
-          "marca": "Idea 11",
-          "info": "Toma 10 · Inédita Mary/DV · Idea 11 · Fuente de lectura",
+          "marca": "Inédito · Idea 11",
+          "info": "Toma 13 · Inédita Mary/DV · Idea 11 · Fuente de lectura",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -545,13 +614,14 @@
           "link": "https://nmwa.org/art/artists/grandma-moses-anna-mary-robertson-moses/",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-27.jpg",
           "thumb_alt": "Fuente de lectura de la idea 11: ¿A tu edad vas a empezar?",
-          "orden_grabacion": 10
+          "orden_grabacion": 13,
+          "grupo_r02": "ineditos"
         },
         {
           "slug": "g-28",
           "titulo": "La mujer del dorsal 261",
-          "marca": "Idea 12",
-          "info": "Toma 11 · Inédita Mary/DV · Idea 12 · Fuente de lectura",
+          "marca": "Inédito · Idea 12",
+          "info": "Toma 14 · Inédita Mary/DV · Idea 12 · Fuente de lectura",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -560,13 +630,30 @@
           "link": "https://kathrineswitzer.com/1967-boston-marathon-the-real-story/",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-28.jpg",
           "thumb_alt": "Fuente de lectura de la idea 12: La mujer del dorsal 261",
-          "orden_grabacion": 11
+          "orden_grabacion": 14,
+          "grupo_r02": "ineditos"
+        },
+        {
+          "slug": "g-33",
+          "titulo": "También tú tienes que elegir",
+          "marca": "Otro estilo · VO-02",
+          "info": "Toma 15 · Otro estilo · VO-02 · Original Mary/DV · Referencia: Valentina Ortiz",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.youtube.com/watch?v=wS42doD4icE",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-33.svg",
+          "thumb_alt": "Ficha visual VO-02: También tú tienes que elegir · Referencia de estilo: Valentina Ortiz",
+          "grupo_r02": "otro-estilo",
+          "orden_grabacion": 15
         },
         {
           "slug": "g-29",
           "titulo": "Terminaste cargando al burro",
-          "marca": "Idea 14",
-          "info": "Toma 12 · Inédita Mary/DV · Idea 14 · Fuente de lectura",
+          "marca": "Inédito · Idea 14",
+          "info": "Toma 16 · Inédita Mary/DV · Idea 14 · Fuente de lectura",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -575,7 +662,8 @@
           "link": "https://www.gutenberg.org/files/11339/11339-h/11339-h.htm",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-29.jpg",
           "thumb_alt": "Fuente de lectura de la idea 14: Terminaste cargando al burro",
-          "orden_grabacion": 12
+          "orden_grabacion": 16,
+          "grupo_r02": "ineditos"
         }
       ]
     }
