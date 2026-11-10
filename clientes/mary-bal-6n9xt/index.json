@@ -609,7 +609,7 @@
           "categoria": "guion",
           "tipo": "md",
           "grabado": true,
-          "miniatura": false,
+          "miniatura": true,
           "locutor": "Mary",
           "link": "https://nmwa.org/art/artists/grandma-moses-anna-mary-robertson-moses/",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-27.jpg",
