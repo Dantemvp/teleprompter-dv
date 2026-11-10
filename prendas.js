@@ -20,8 +20,13 @@
     if (file.size > 25 * 1024 * 1024) throw new Error('La imagen supera 25 MB. Elige una foto o captura más pequeña.');
     const url = URL.createObjectURL(file);
     try {
-      const img = new Image(); img.src = url;
-      try { await img.decode(); } catch { throw new Error('No se pudo abrir «'+file.name+'». Prueba una captura JPG o PNG, o retírala de pendientes.'); }
+      const img = new Image();
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>{img.onload=img.onerror=null;reject(new Error('La foto tardó demasiado en abrirse. Reintenta o elige una captura JPG o PNG.'));},15000);
+        img.onload=()=>{clearTimeout(timer);resolve();};
+        img.onerror=()=>{clearTimeout(timer);reject(new Error('No se pudo abrir «'+file.name+'». Prueba una captura JPG o PNG, o retírala de pendientes.'));};
+        img.src=url;
+      });
       const scale = Math.min(1, 1280 / Math.max(img.width, img.height));
       const canvas = document.createElement('canvas'); canvas.width = Math.max(1, Math.round(img.width * scale)); canvas.height = Math.max(1, Math.round(img.height * scale));
       const ctx = canvas.getContext('2d'); ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, canvas.width, canvas.height); ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
@@ -108,13 +113,18 @@
       const b = e.target.closest('[data-prenda-inline]'); if (b) openGarment(ctx, b.dataset.prendaInline);
     }, { signal: ctx.abort.signal });
     try {
-      const [state,savedDrafts]=await Promise.all([ctx.api(),drafts.list(draftPrefix)]);
+      const recovering=drafts.list(draftPrefix);
+      const state=await ctx.api();
       ctx.state=state;ctx.role=state.role;
-      for(const item of savedDrafts){
-        if(state.garments.some(g=>g.images.some(i=>i.id===item.id))){await drafts.remove(item.key);continue;}
-        const queue=ctx.pending.get(item.garmentId)||[];queue.push(item);ctx.pending.set(item.garmentId,queue);
-      }
       if (current === ctx) render(ctx);
+      const savedDrafts=await recovering;
+      let restored=false;
+      for(const item of savedDrafts){
+        if(ctx.state.garments.some(g=>g.images.some(i=>i.id===item.id))){void drafts.remove(item.key);continue;}
+        if([...ctx.pending.values()].some(items=>items.some(i=>i.id===item.id)))continue;
+        const queue=ctx.pending.get(item.garmentId)||[];queue.push(item);ctx.pending.set(item.garmentId,queue);restored=true;
+      }
+      if (current === ctx && restored) render(ctx);
     }
     catch (error) {
       if (error.name === 'AbortError') return;
@@ -285,7 +295,7 @@
       d.querySelectorAll('[data-discard]').forEach(b=>b.onclick=async()=>{
         if(ctx.busy)return;b.disabled=true;
         const index=queue.findIndex(item=>item.id===b.dataset.discard);if(index<0)return;
-        await drafts.remove(queue[index].key);queue.splice(index,1);renderQueue();renderPending(ctx);
+        void drafts.remove(queue[index].key);queue.splice(index,1);renderQueue();renderPending(ctx);
         d.querySelector('[data-upload-status]').textContent=queue.length?'Puedes reintentar las fotos restantes.':'No hay fotos pendientes. Puedes elegir otra foto.';
         d.querySelector('[data-dialog-error]').textContent='';
       });
@@ -298,11 +308,12 @@
       const note=d.querySelector('[data-note]').value.trim();localSet('prendas-author',author);
       let saved=0;const total=queue.length;
       try{
+        d.querySelector('[data-upload-status]').textContent='Preparando '+total+' '+(total===1?'foto':'fotos')+'…';
         if(!ctx.state.garments.some(x=>x.id===id))await ctx.save({action:'add-garment',id,name:g.name,kind:g.kind});
         while(queue.length){
           d.querySelector('[data-upload-status]').textContent='Guardando foto '+(saved+1)+' de '+total+'… No cierres esta ventana.';
           const item=queue[0];item.image ||= await imagenComprimida(item.file);
-          await ctx.save({action:item.replacesId?'replace-image':'add-image',...(item.replacesId?{imageId:item.replacesId}:{}),garmentId:id,id:item.id,image:item.image,author:item.author||author,note:item.note??note});await drafts.remove(item.key);queue.shift();saved++;renderPending(ctx);
+          await ctx.save({action:item.replacesId?'replace-image':'add-image',...(item.replacesId?{imageId:item.replacesId}:{}),garmentId:id,id:item.id,image:item.image,author:item.author||author,note:item.note??note});void drafts.remove(item.key);queue.shift();saved++;renderPending(ctx);
         }
         ctx.busy=false;openGarment(ctx,id);ctx.dialog.querySelector('[data-upload-status]').textContent='✓ '+saved+' '+(saved===1?'foto guardada':'fotos guardadas')+'. Ya puedes salir; no hay que volver a guardar.';
       }catch(error){
@@ -319,9 +330,11 @@
       if(files.length+count-(replacesId?1:0)>12){d.querySelector('[data-dialog-error]').textContent='Máximo 12 fotos por prenda. Puedes elegir '+(12-count)+' más.';return;}
       if(files.some(file=>file.size>25*1024*1024)){d.querySelector('[data-dialog-error]').textContent='Una imagen supera 25 MB. Selecciona fotos más pequeñas.';return;}
       ctx.busy=true;d.querySelectorAll('button').forEach(b=>b.disabled=true);
+      d.querySelector('[data-dialog-error]').textContent='';
+      d.querySelector('[data-upload-status]').textContent='Preparando '+files.length+' '+(files.length===1?'foto':'fotos')+'…';
       try{
         await ctx.flushNotes?.();
-        for(const file of files){const photoId=crypto.randomUUID();const item={file,id:photoId,key:ctx.client+':'+ctx.slug+':'+id+':'+photoId,garmentId:id,garmentName:g.name,kind:g.kind,replacesId,author:d.querySelector('[data-author]').value.trim(),note:d.querySelector('[data-note]').value.trim()};item.persisted=await drafts.put(item);queue.push(item);}
+        for(const file of files){const photoId=crypto.randomUUID();const item={file,id:photoId,key:ctx.client+':'+ctx.slug+':'+id+':'+photoId,garmentId:id,garmentName:g.name,kind:g.kind,replacesId,author:d.querySelector('[data-author]').value.trim(),note:d.querySelector('[data-note]').value.trim(),persisted:false};queue.push(item);void drafts.put(item).then(persisted=>{item.persisted=persisted;});}
         renderPending(ctx);renderQueue();
       }catch(error){d.querySelector('[data-dialog-error]').textContent=error.message;return;
       }finally{ctx.busy=false;d.querySelectorAll('button').forEach(b=>b.disabled=false);}

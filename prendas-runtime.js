@@ -1,6 +1,15 @@
 /* Browser-only upload receipts. Never stores passwords or access tokens. */
 (() => {
   const memory = new Map();
+  const pending = new Map(), removed = new Set();
+  // A receipt may finish saving after its photo reaches the server. Serialize
+  // changes per key so that cleanup cannot race with that unfinished write.
+  function persist(key, operation) {
+    const task = (pending.get(key) || Promise.resolve()).catch(()=>{}).then(operation);
+    pending.set(key,task);
+    task.finally(()=>{if(pending.get(key)===task)pending.delete(key);}).catch(()=>{});
+    return task;
+  }
   const storage = {
     get(type,key) { try { return window[type].getItem(key); } catch { return null; } },
     set(type,key,value) { try { window[type].setItem(key,value); return true; } catch { return false; } }
@@ -29,18 +38,19 @@
   }
   const drafts={
     async list(prefix) {
-      try { for(const item of await transaction('readonly',store=>store.getAll()))memory.set(item.key,{...item,persisted:true}); }
+      try { for(const item of await transaction('readonly',store=>store.getAll()))if(!removed.has(item.key) && !memory.has(item.key))memory.set(item.key,{...item,persisted:true}); }
       catch { /* In-memory drafts still survive closing and reopening the modal. */ }
       return [...memory.values()].filter(item=>item.key.startsWith(prefix));
     },
     async put(item) {
-      memory.set(item.key,{...item,persisted:false});
-      try { await transaction('readwrite',store=>store.put(item));memory.get(item.key).persisted=true;return true; }
+      removed.delete(item.key);
+      const entry={...item,persisted:false};memory.set(item.key,entry);
+      try { await persist(item.key,()=>transaction('readwrite',store=>store.put(item)));if(memory.get(item.key)===entry)entry.persisted=true;return true; }
       catch { return false; }
     },
     async remove(key) {
-      try { await transaction('readwrite',store=>store.delete(key)); } catch { /* A stale receipt is safe: server writes are idempotent. */ }
-      memory.delete(key);
+      removed.add(key);memory.delete(key);
+      try { await persist(key,()=>transaction('readwrite',store=>store.delete(key))); } catch { /* A stale receipt is safe: server writes are idempotent. */ }
     }
   };
   async function request(url,init={},timeout=45000) {

@@ -98,3 +98,9 @@ El token de GitHub vive en Vercel (servidor), nunca en el navegador.
 - No volver a añadir URLs de inspiración, previews ni notas internas a archivos públicos de Skin Club. La API de guardado separa esas partes antes de escribir el markdown en GitHub; si falla el almacén privado, rechaza la publicación. Las citas científicas permanecen en el guion.
 - Migración inicial: `node --env-file=.env.production.local scripts/skinclub-migrate.mjs`. No repetir sobre una bóveda existente. Se verificó la copia privada antes de retirar los archivos públicos y se dejó una copia de recuperación fuera del repositorio, bajo `~/.codex/private/`, con permisos 600.
 - Esta restricción cierra la publicación actual. El repositorio y su historial anterior son públicos; no se reescribió ese historial ni se cambió la visibilidad de otros clientes.
+
+### Carga sin espera del almacenamiento local — 10 noviembre 2026
+
+- La lectura de referencias aparece al responder la API, sin esperar a IndexedDB. Las copias locales se conservan en segundo plano: ni su escritura ni su limpieza retrasan las subidas o la confirmación del servidor.
+- La preparación se muestra desde que se eligen las fotos. La apertura de una imagen tiene un límite de 15 segundos y utiliza los eventos nativos de carga del navegador.
+- Las operaciones de cada copia local se ordenan por ID para impedir que una escritura tardía vuelva a dejar una foto ya guardada entre los pendientes. Los permisos, límites y almacenamiento privado se conservan.
