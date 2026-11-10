@@ -625,7 +625,7 @@
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
-          "miniatura": false,
+          "miniatura": true,
           "locutor": "Mary",
           "link": "https://kathrineswitzer.com/1967-boston-marathon-the-real-story/",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-28.jpg",
