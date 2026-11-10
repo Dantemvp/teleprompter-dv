@@ -624,7 +624,7 @@
           "info": "Toma 14 · Inédita Mary/DV · Idea 12 · Fuente de lectura",
           "categoria": "guion",
           "tipo": "md",
-          "grabado": false,
+          "grabado": true,
           "miniatura": true,
           "locutor": "Mary",
           "link": "https://kathrineswitzer.com/1967-boston-marathon-the-real-story/",
