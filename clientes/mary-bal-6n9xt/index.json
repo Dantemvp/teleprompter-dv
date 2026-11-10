@@ -592,7 +592,7 @@
           "info": "Toma 12 · Inédita Mary/DV · Idea 07 · Fuente de lectura",
           "categoria": "guion",
           "tipo": "md",
-          "grabado": false,
+          "grabado": true,
           "miniatura": false,
           "locutor": "Mary",
           "link": "https://www.biblegateway.com/passage/?search=1%20Reyes%2019%3A1-18&version=NVI",
