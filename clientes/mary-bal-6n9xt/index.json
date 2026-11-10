@@ -330,6 +330,125 @@
           "orden_publicacion": 5
         }
       ]
+    },
+    {
+      "rec": "R02",
+      "nombre": "Segunda grabación",
+      "fecha": "Por definir",
+      "locacion": "Por definir",
+      "abierta": true,
+      "ventana": "5 videos · Primer bloque de R02",
+      "nota": "Adaptaciones cercanas con paráfrasis. Las imágenes son miniaturas de referencia; el control Miniatura corresponde a la portada de Mary.",
+      "timeline": [
+        {
+          "hora": "Preparar",
+          "titulo": "Audio, encuadre y luz",
+          "slugs": [],
+          "nota": "Probar voz y encuadre. Grabar una toma limpia para portada en cada pieza."
+        },
+        {
+          "hora": "01",
+          "titulo": "Soltar el control",
+          "slugs": [
+            "g-18"
+          ]
+        },
+        {
+          "hora": "02–03",
+          "titulo": "Valor propio y una mirada al pasado",
+          "slugs": [
+            "g-19",
+            "g-20"
+          ]
+        },
+        {
+          "hora": "04–05",
+          "titulo": "Expectativas y límites sin dejar de ser tú",
+          "slugs": [
+            "g-21",
+            "g-22"
+          ]
+        },
+        {
+          "hora": "Después",
+          "titulo": "Ideas inéditas Mary/DV",
+          "tipo": "extra",
+          "slugs": [],
+          "nota": "Siguiente bloque de R02. Los guiones se incorporarán después de desarrollarlos."
+        }
+      ],
+      "guiones": [
+        {
+          "slug": "g-18",
+          "titulo": "No todo se acomoda a la fuerza",
+          "info": "Toma 01 · 30–40 seg aprox. · Adaptación cercana con paráfrasis · Carla Cardona",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://vt.tiktok.com/ZSpytpUD8/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-18.jpg",
+          "thumb_alt": "Referencia: No todo se acomoda a la fuerza · Carla Cardona · miniatura del video",
+          "orden_grabacion": 1
+        },
+        {
+          "slug": "g-19",
+          "titulo": "Lo que te dan no mide lo que mereces",
+          "info": "Toma 02 · 45–60 seg aprox. · Adaptación cercana con paráfrasis · edgarmoralesVF",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://vt.tiktok.com/ZSpynjrvx/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-19.jpg",
+          "thumb_alt": "Referencia: Lo que te dan no mide lo que mereces · edgarmoralesVF · miniatura del video",
+          "orden_grabacion": 2
+        },
+        {
+          "slug": "g-20",
+          "titulo": "No te juzgues con lo que hoy sabes",
+          "info": "Toma 03 · 55–70 seg aprox. · Adaptación cercana con paráfrasis · sararequenna_",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://vt.tiktok.com/ZSpynvTUS/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-20.jpg",
+          "thumb_alt": "Referencia: No te juzgues con lo que hoy sabes · sararequenna_ · miniatura del video",
+          "orden_grabacion": 3
+        },
+        {
+          "slug": "g-21",
+          "titulo": "No le pidas duraznos a un limonero",
+          "info": "Toma 04 · 50–65 seg aprox. · Adaptación cercana con paráfrasis · sararequenna_",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://vt.tiktok.com/ZSpynKuJs/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-21.jpg",
+          "thumb_alt": "Referencia: No le pidas duraznos a un limonero · sararequenna_ · miniatura del video",
+          "orden_grabacion": 4
+        },
+        {
+          "slug": "g-22",
+          "titulo": "Tu buen corazón también necesita límites",
+          "info": "Toma 05 · 50–65 seg aprox. · Adaptación cercana con paráfrasis · sararequenna_",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://vt.tiktok.com/ZSpyWRY7v/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-22.jpg",
+          "thumb_alt": "Referencia: Tu buen corazón también necesita límites · sararequenna_ · miniatura del video",
+          "orden_grabacion": 5
+        }
+      ]
     }
   ]
 }
