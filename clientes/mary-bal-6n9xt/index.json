@@ -656,7 +656,7 @@
           "info": "Toma 16 · Inédita Mary/DV · Idea 14 · Fuente de lectura",
           "categoria": "guion",
           "tipo": "md",
-          "grabado": false,
+          "grabado": true,
           "miniatura": false,
           "locutor": "Mary",
           "link": "https://www.gutenberg.org/files/11339/11339-h/11339-h.htm",
