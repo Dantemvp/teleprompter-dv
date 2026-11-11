@@ -33,7 +33,7 @@
           "grabado": true,
           "locutor": null,
           "categoria": "guion",
-          "miniatura": false
+          "miniatura": true
         },
         {
           "slug": "r9-11",
