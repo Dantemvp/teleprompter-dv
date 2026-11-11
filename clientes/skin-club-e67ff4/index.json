@@ -69,7 +69,7 @@
           "grabado": true,
           "locutor": "Paloma",
           "categoria": "guion",
-          "miniatura": false
+          "miniatura": true
         },
         {
           "slug": "r9-15",
