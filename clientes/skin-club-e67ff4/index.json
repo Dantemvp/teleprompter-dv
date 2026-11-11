@@ -2,6 +2,114 @@
   "cliente": "The Skin Club",
   "grabaciones": [
     {
+      "rec": "R9",
+      "nombre": "Novena grabación",
+      "fecha": "Por definir",
+      "locacion": "Por definir",
+      "abierta": true,
+      "guiones": [
+        {
+          "slug": "r9-01",
+          "titulo": "Un fin de semana, una cosmetiquera",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-02",
+          "titulo": "Historias · ¿Suero o crema si la piel se siente tirante?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-03",
+          "titulo": "¿Se te marcan las rayitas debajo de los ojos?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-04",
+          "titulo": "Cuatro noches, cuatro tarjetas",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-05",
+          "titulo": "¿Qué compras si apenas vas a empezar?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-06",
+          "titulo": "Si los ingredientes se pudieran presentar",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-07",
+          "titulo": "¿Mañana o noche? Depende del frasco",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-08",
+          "titulo": "Acomoda tu skincare antes de salir",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-09",
+          "titulo": "Me brilla aquí y se me reseca acá",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-10",
+          "titulo": "¿Qué hábito cambiarías primero?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-11",
+          "titulo": "Historias · ¿Cuánto te dejas la mascarilla?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        }
+      ]
+    },
+    {
       "rec": "R8",
       "nombre": "Octava grabación",
       "fecha": "Por definir",
