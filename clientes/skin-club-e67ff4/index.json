@@ -70,6 +70,33 @@
           "locutor": "Paloma",
           "categoria": "guion",
           "miniatura": false
+        },
+        {
+          "slug": "r9-15",
+          "titulo": "Antes de apretarte un punto negro",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-16",
+          "titulo": "¿Se te sigue marcando la textura con corrector?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-17",
+          "titulo": "¿Te metes la cara en hielo por los poros?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
         }
       ]
     },
