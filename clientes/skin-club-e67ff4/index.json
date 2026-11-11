@@ -52,6 +52,24 @@
           "locutor": null,
           "categoria": "guion",
           "miniatura": false
+        },
+        {
+          "slug": "r9-13",
+          "titulo": "¿Se te marcan los poros cuando te maquillas?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-14",
+          "titulo": "Piel seca en el cuerpo · ¿Ayuda o reseca más?",
+          "info": "",
+          "grabado": false,
+          "locutor": "Paloma",
+          "categoria": "guion",
+          "miniatura": false
         }
       ]
     },
