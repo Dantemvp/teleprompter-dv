@@ -106,6 +106,42 @@
           "locutor": null,
           "categoria": "chusco",
           "miniatura": false
+        },
+        {
+          "slug": "r9-19",
+          "titulo": "Niacinamida · ¿Con qué la usas según lo que buscas?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-20",
+          "titulo": "Vigna aconitifolia · Líneas finas y rutina de noche",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-21",
+          "titulo": "Cómo lavarte la cara cuando te brilla la nariz",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r9-22",
+          "titulo": "¿Qué ingrediente buscarías para esto?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
         }
       ]
     },
