@@ -97,6 +97,15 @@
           "locutor": null,
           "categoria": "guion",
           "miniatura": false
+        },
+        {
+          "slug": "r9-18",
+          "titulo": "¿Entonces me llevo a los cuatro?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "chusco",
+          "miniatura": false
         }
       ]
     },
