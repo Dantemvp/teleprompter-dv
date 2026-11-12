@@ -50,6 +50,72 @@
           "link": "https://www.tiktok.com/@itsmillerev/video/7680419383788850452",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-192.jpg",
           "thumb_alt": "Vista previa original de transición · vestido amarillo frente a cámara"
+        },
+        {
+          "slug": "g-193",
+          "titulo": "Varios looks frente a cámara",
+          "info": "@juliadamon · Montaje de looks que pasa por un mono, falda caqui, suéter naranja y traje negro.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dfbg94EgNgL/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-193.jpg",
+          "thumb_alt": "Vista previa original de varios looks frente a cámara"
+        },
+        {
+          "slug": "g-194",
+          "titulo": "Combinaciones con berenjena",
+          "info": "@_conyjimenez · Ideas para combinar una prenda berenjena con otras paletas.",
+          "categoria": "viral-organica",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfYKqzMRdi8/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-194.jpg",
+          "thumb_alt": "Vista previa original de combinaciones con berenjena"
+        },
+        {
+          "slug": "g-195",
+          "titulo": "Cuatro looks para salir del jean de siempre",
+          "info": "55–65 seg · Guion a partir de las cuatro láminas de @axspen.co · Café con lunares, rayas claras, rosa pálido e índigo con dibujo.",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/p/DfXwJzUGc83/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-195.jpg",
+          "thumb_alt": "Vista previa original de cuatro looks para salir del jean de siempre"
+        },
+        {
+          "slug": "g-196",
+          "titulo": "Combinaciones con vino",
+          "info": "@styledbyblair3 · Quince combinaciones de referencia para elegir cuáles se pueden mostrar con prendas de Bianca.",
+          "categoria": "viral-organica",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfhZpzURhE_/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-196.jpg",
+          "thumb_alt": "Vista previa original de combinaciones con vino"
+        },
+        {
+          "slug": "g-197",
+          "titulo": "Chusco · la clienta de siempre",
+          "info": "@cafecorrecto · POV de clienta frecuente en el mostrador. Adaptación para boutique a partir del momento en que la reconocen.",
+          "categoria": "chusco",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfiWHL2AWj-/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-197.jpg",
+          "thumb_alt": "Vista previa original de chusco · la clienta de siempre"
+        },
+        {
+          "slug": "g-198",
+          "titulo": "Formato de promoción frente a tienda",
+          "info": "@thefancyystation · Presentación frente al local para comunicar una promoción. La oferta del original pertenece a esa tienda.",
+          "categoria": "tienda",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfneeFOPMR5/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-198.jpg",
+          "thumb_alt": "Vista previa original de formato de promoción frente a tienda"
         }
       ],
       "timeline": [
@@ -66,7 +132,31 @@
           "slugs": [
             "g-189",
             "g-191",
-            "g-192"
+            "g-192",
+            "g-193"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "GUION · JEANS",
+          "slugs": [
+            "g-195"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "REFERENCIAS · COMBINACIONES DE COLOR",
+          "slugs": [
+            "g-194",
+            "g-196"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "TIENDA · HUMOR Y PROMOCIÓN",
+          "slugs": [
+            "g-197",
+            "g-198"
           ]
         },
         {
