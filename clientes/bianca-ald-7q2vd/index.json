@@ -2,6 +2,85 @@
   "cliente": "Bianca Aldama Boutique",
   "grabaciones": [
     {
+      "rec": "R21",
+      "nombre": "Grabación 21 · referencias de Alma",
+      "fecha": "Por definir",
+      "locacion": "",
+      "guiones": [
+        {
+          "slug": "g-189",
+          "titulo": "Transición · manos al lente",
+          "info": "9 seg · @firkam727 · Cubre el lente con las manos y revela el cambio de pelo, maquillaje y look.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@firkam727/video/7693911893899005215",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-189.jpg",
+          "thumb_alt": "Vista previa original de transición · manos al lente"
+        },
+        {
+          "slug": "g-190",
+          "titulo": "Zapatería · zapatos para variar los tenis",
+          "info": "84 seg de referencia · @kaokadowaki · Zapatos de cordones, Mary Janes, mocasines, sandalias y zapatos planos tipo slipper.",
+          "categoria": "tienda",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@kaokadowaki/video/7692188516733717778",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-190.jpg",
+          "thumb_alt": "Vista previa original de zapatería · zapatos para variar los tenis"
+        },
+        {
+          "slug": "g-191",
+          "titulo": "Transición · vestido enrollado en el gancho",
+          "info": "12 seg · @richelle_zh · Girar el vestido rosa en el gancho, acercar la tela al lente y revelar el vestido puesto.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@richelle_zh/video/7648752530536598802",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-191.jpg",
+          "thumb_alt": "Vista previa original de transición · vestido enrollado en el gancho"
+        },
+        {
+          "slug": "g-192",
+          "titulo": "Transición · vestido amarillo frente a cámara",
+          "info": "8 seg · @itsmillerev · Levantar el vestido amarillo frente al cuerpo, cortar al vestido puesto y mostrar la caída con un giro.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@itsmillerev/video/7680419383788850452",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-192.jpg",
+          "thumb_alt": "Vista previa original de transición · vestido amarillo frente a cámara"
+        }
+      ],
+      "timeline": [
+        {
+          "hora": "",
+          "titulo": "ZAPATERÍA",
+          "slugs": [
+            "g-190"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "TRANSICIONES",
+          "slugs": [
+            "g-189",
+            "g-191",
+            "g-192"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "CÓMO ENCONTRAR LA TIENDA",
+          "slugs": [],
+          "nota": "Falta el video de referencia.",
+          "tipo": "extra"
+        }
+      ],
+      "referenciasVisibles": true,
+      "prendasEnTexto": true
+    },
+    {
       "rec": "R20",
       "nombre": "Grabación 20 · colores, estilo y transiciones",
       "fecha": "Por definir",
