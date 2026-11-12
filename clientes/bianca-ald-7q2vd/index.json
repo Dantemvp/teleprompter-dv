@@ -64,10 +64,10 @@
         },
         {
           "slug": "g-194",
-          "titulo": "Combinaciones con berenjena",
-          "info": "@_conyjimenez · Ideas para combinar una prenda berenjena con otras paletas.",
-          "categoria": "viral-organica",
-          "tipo": "ref",
+          "titulo": "Un pantalón berenjena, tres combinaciones",
+          "info": "35–45 seg · Un pantalón con gris claro, celeste y amarillo mantequilla.",
+          "categoria": "guion",
+          "tipo": "md",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DfYKqzMRdi8/",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-194.jpg",
@@ -86,10 +86,10 @@
         },
         {
           "slug": "g-196",
-          "titulo": "Combinaciones con vino",
-          "info": "@styledbyblair3 · Quince combinaciones de referencia para elegir cuáles se pueden mostrar con prendas de Bianca.",
-          "categoria": "viral-organica",
-          "tipo": "ref",
+          "titulo": "Cuánto color vino le pondrías al look",
+          "info": "35–45 seg · Tres looks con vino, de un toque en la bolsa al conjunto con verde lima.",
+          "categoria": "guion",
+          "tipo": "md",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DfhZpzURhE_/",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-196.jpg",
@@ -121,9 +121,19 @@
       "timeline": [
         {
           "hora": "",
-          "titulo": "ZAPATERÍA",
+          "titulo": "GUIONES",
           "slugs": [
-            "g-190"
+            "g-194",
+            "g-195",
+            "g-196"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "CAMBIÁNDOSE FRENTE A CÁMARA",
+          "slugs": [
+            "g-193",
+            "g-192"
           ]
         },
         {
@@ -131,24 +141,14 @@
           "titulo": "TRANSICIONES",
           "slugs": [
             "g-189",
-            "g-191",
-            "g-192",
-            "g-193"
+            "g-191"
           ]
         },
         {
           "hora": "",
-          "titulo": "GUION · JEANS",
+          "titulo": "ZAPATERÍA",
           "slugs": [
-            "g-195"
-          ]
-        },
-        {
-          "hora": "",
-          "titulo": "REFERENCIAS · COMBINACIONES DE COLOR",
-          "slugs": [
-            "g-194",
-            "g-196"
+            "g-190"
           ]
         },
         {
