@@ -20,7 +20,7 @@ async function withCredentials(run){
 
 test('checking Fedra access does not read or mutate GitHub',()=>withCredentials(async()=>{
   globalThis.fetch=()=>{throw new Error('checkOnly must not call GitHub');};
-  for(const slug of ['r14-01','r14-02']){
+  for(const slug of ['r14-01','r14-02','esp-01','esp-02','esp-03']){
     const res=response();
     await save({method:'POST',body:{password:'fedra-fixture',client:'fedra-ald-t84qz',slug,checkOnly:true}},res);
     assert.equal(res.code,200); assert.deepEqual(res.data,{ok:true});
@@ -29,7 +29,7 @@ test('checking Fedra access does not read or mutate GitHub',()=>withCredentials(
 
 test('Fedra access cannot escape its scripts or invoke team operations',()=>withCredentials(async()=>{
   globalThis.fetch=()=>{throw new Error('denied requests must not call GitHub');};
-  for(const [client,slug] of [['fedra-ald-t84qz','r15-01'],['bianca-ald-7q2vd','r14-01'],['fedra-ald-t84qz','r14-03']]){
+  for(const [client,slug] of [['fedra-ald-t84qz','r15-01'],['bianca-ald-7q2vd','r14-01'],['fedra-ald-t84qz','r14-03'],['bianca-ald-7q2vd','esp-01'],['fedra-ald-t84qz','esp-04']]){
     const res=response();
     await save({method:'POST',body:{password:'fedra-fixture',client,slug,content:'# Changed'}},res);
     assert.equal(res.code,401);

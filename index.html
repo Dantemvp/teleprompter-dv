@@ -343,7 +343,7 @@ async function unlock(title){
 // Las claves de cliente se guardan aparte: no activan el modo estratega.
 function forgetScriptPw(client){ localStorage.removeItem('dvscriptpw:' + client); }
 async function unlockScript(title, client, slug){
-  if (client !== 'fedra-ald-t84qz' || !['r14-01','r14-02'].includes(slug)) return unlock(title);
+  if (client !== 'fedra-ald-t84qz' || !['r14-01','r14-02','esp-01','esp-02','esp-03'].includes(slug)) return unlock(title);
   let pw = localStorage.getItem('dvscriptpw:' + client) || (isAdmin() ? rememberedPw() : null);
   if (!pw) pw = await askPassword(title || 'Contraseña para editar tus guiones');
   if (!pw) return null;

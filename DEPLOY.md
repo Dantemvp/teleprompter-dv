@@ -3,7 +3,7 @@
 ## Edición de Fedra · R14 (27 octubre 2026)
 
 - Variable sensible de producción `FEDRA_R14_EDIT_PASSWORD`, administrada sólo en Vercel. Nunca añadir su valor al repositorio.
-- Permite guardar únicamente `fedra-ald-t84qz/r14-01` y `r14-02`. No habilita edición de otros guiones, organización, borrado ni estados de producción. Las claves del equipo mantienen su alcance anterior.
+- Permite guardar únicamente `fedra-ald-t84qz/r14-01`, `r14-02` y, desde el 12 de noviembre de 2026, los tres guiones de la grabación especial `esp-01`, `esp-02` y `esp-03`. La lista vive en `FEDRA_EDITABLE` (`lib/edit-auth.mjs`) y se repite en `unlockScript` de `index.html`. No habilita edición de otros guiones, organización, borrado ni estados de producción. Las claves del equipo mantienen su alcance anterior.
 - Fedra abre su enlace habitual, pulsa **Editar**, introduce su contraseña y guarda. El acceso se comprueba antes de abrir el formulario. La contraseña se recuerda en ese navegador con una clave de almacenamiento separada de la del equipo y no activa el modo estratega.
 - `POST /api/save` con `checkOnly:true` comprueba permisos sin acceder a GitHub. El guardado normal conserva el historial por commits.
 - Cambiar la variable y desplegar de nuevo revoca la clave anterior. No se requiere cambiar ni reenviar los enlaces de los guiones.

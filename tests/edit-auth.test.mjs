@@ -14,10 +14,10 @@ test('unset credentials never grant access', () => {
   assert.equal(canEdit('primary-test', { EDIT_PASSWORD: 'primary-test' }), true);
 });
 
-test('Fedra can edit exactly the two R14 scripts, without team permissions', () => {
+test('Fedra can edit exactly her R14 and special scripts, without team permissions', () => {
   const env = { EDIT_PASSWORD:'team-test', FEDRA_R14_EDIT_PASSWORD:'fedra-test' };
-  for (const slug of ['r14-01','r14-02']) assert.equal(canEditScript('fedra-test','fedra-ald-t84qz',slug,env),true);
-  for (const slug of ['r14-03','r15-01','r13-01','r14-01/../r15-01','R14-01',null]) assert.equal(canEditScript('fedra-test','fedra-ald-t84qz',slug,env),false);
+  for (const slug of ['r14-01','r14-02','esp-01','esp-02','esp-03']) assert.equal(canEditScript('fedra-test','fedra-ald-t84qz',slug,env),true);
+  for (const slug of ['r14-03','r15-01','r13-01','esp-04','r14-01/../r15-01','R14-01','ESP-01',null]) assert.equal(canEditScript('fedra-test','fedra-ald-t84qz',slug,env),false);
   assert.equal(canEditScript('fedra-test','otro-cliente','r14-01',env),false);
   assert.equal(canEdit('fedra-test',env),false);
   assert.equal(canEditScript('team-test','otro-cliente','r15-01',env),true);
