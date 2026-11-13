@@ -3,16 +3,16 @@
   "grabaciones": [
     {
       "rec": "R21",
-      "nombre": "Grabación 21 · referencias de Alma",
+      "nombre": "Grabación 21 · guiones, looks y transiciones",
       "fecha": "Por definir",
       "locacion": "",
       "guiones": [
         {
           "slug": "g-189",
           "titulo": "Transición · manos al lente",
-          "info": "9 seg · @firkam727 · Cubre el lente con las manos y revela el cambio de pelo, maquillaje y look.",
+          "info": "8–10 seg estimados · sin diálogo · Plan de tomas y continuidad.",
           "categoria": "trans-int",
-          "tipo": "ref",
+          "tipo": "md",
           "grabado": false,
           "link": "https://www.tiktok.com/@firkam727/video/7693911893899005215",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-189.jpg",
@@ -20,10 +20,10 @@
         },
         {
           "slug": "g-190",
-          "titulo": "Zapatería · zapatos para variar los tenis",
-          "info": "84 seg de referencia · @kaokadowaki · Zapatos de cordones, Mary Janes, mocasines, sandalias y zapatos planos tipo slipper.",
+          "titulo": "Cinco zapatos para variar los tenis",
+          "info": "45–55 seg estimados · Guion y dirección de tomas.",
           "categoria": "tienda",
-          "tipo": "ref",
+          "tipo": "md",
           "grabado": false,
           "link": "https://www.tiktok.com/@kaokadowaki/video/7692188516733717778",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-190.jpg",
@@ -32,9 +32,9 @@
         {
           "slug": "g-191",
           "titulo": "Transición · vestido enrollado en el gancho",
-          "info": "12 seg · @richelle_zh · Girar el vestido rosa en el gancho, acercar la tela al lente y revelar el vestido puesto.",
+          "info": "10–12 seg estimados · sin diálogo · Plan de tomas y continuidad.",
           "categoria": "trans-int",
-          "tipo": "ref",
+          "tipo": "md",
           "grabado": false,
           "link": "https://www.tiktok.com/@richelle_zh/video/7648752530536598802",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-191.jpg",
@@ -42,10 +42,10 @@
         },
         {
           "slug": "g-192",
-          "titulo": "Transición · vestido amarillo frente a cámara",
-          "info": "8 seg · @itsmillerev · Levantar el vestido amarillo frente al cuerpo, cortar al vestido puesto y mostrar la caída con un giro.",
+          "titulo": "Transición · vestido frente a cámara",
+          "info": "8–10 seg estimados · sin diálogo · Plan de tomas y continuidad.",
           "categoria": "trans-int",
-          "tipo": "ref",
+          "tipo": "md",
           "grabado": false,
           "link": "https://www.tiktok.com/@itsmillerev/video/7680419383788850452",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-192.jpg",
@@ -54,9 +54,9 @@
         {
           "slug": "g-193",
           "titulo": "Varios looks frente a cámara",
-          "info": "@juliadamon · Montaje de looks que pasa por un mono, falda caqui, suéter naranja y traje negro.",
+          "info": "18–22 seg estimados · sin diálogo · Plan de tomas y continuidad.",
           "categoria": "trans-int",
-          "tipo": "ref",
+          "tipo": "md",
           "grabado": false,
           "link": "https://www.instagram.com/reel/Dfbg94EgNgL/",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-193.jpg",
@@ -65,7 +65,7 @@
         {
           "slug": "g-194",
           "titulo": "Un pantalón berenjena, tres combinaciones",
-          "info": "35–45 seg · Un pantalón con gris claro, celeste y amarillo mantequilla.",
+          "info": "40–50 seg estimados · Mismo pantalón: gris claro, celeste y amarillo mantequilla.",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -76,7 +76,7 @@
         {
           "slug": "g-195",
           "titulo": "Cuatro looks para salir del jean de siempre",
-          "info": "55–65 seg · Guion a partir de las cuatro láminas de @axspen.co · Café con lunares, rayas claras, rosa pálido e índigo con dibujo.",
+          "info": "50–60 seg estimados · Cuatro jeans, cuatro looks: rosa, lunares, índigo y rayas.",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -87,7 +87,7 @@
         {
           "slug": "g-196",
           "titulo": "Cuánto color vino le pondrías al look",
-          "info": "35–45 seg · Tres looks con vino, de un toque en la bolsa al conjunto con verde lima.",
+          "info": "45–55 seg estimados · Tres looks: bolsa vino, pantalón con rosa claro y conjunto con verde lima.",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -98,9 +98,9 @@
         {
           "slug": "g-197",
           "titulo": "Chusco · la clienta de siempre",
-          "info": "@cafecorrecto · POV de clienta frecuente en el mostrador. Adaptación para boutique a partir del momento en que la reconocen.",
+          "info": "12–15 seg estimados · tres roles · Guion y dirección de tomas.",
           "categoria": "chusco",
-          "tipo": "ref",
+          "tipo": "md",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DfiWHL2AWj-/",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-197.jpg",
@@ -109,13 +109,79 @@
         {
           "slug": "g-198",
           "titulo": "Formato de promoción frente a tienda",
-          "info": "@thefancyystation · Presentación frente al local para comunicar una promoción. La oferta del original pertenece a esa tienda.",
+          "info": "Alzado a cargo de Dante, indicado el 13/11/2026 · Presentación frente al local. La oferta original pertenece a otra tienda.",
           "categoria": "tienda",
           "tipo": "ref",
           "grabado": false,
           "link": "https://www.instagram.com/reel/DfneeFOPMR5/",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-198.jpg",
           "thumb_alt": "Vista previa original de formato de promoción frente a tienda"
+        },
+        {
+          "slug": "g-199",
+          "titulo": "Cambiándose · conjunto beige y abrigo café",
+          "info": "12–15 seg estimados · sin diálogo · @fashionnova · Un look por capas: camisa blanca, conjunto beige, gorra y abrigo café.",
+          "categoria": "viral-organica",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dfe7CnGFSkV/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-199.jpg",
+          "thumb_alt": "Vista previa original de cambiándose · conjunto beige y abrigo café"
+        },
+        {
+          "slug": "g-200",
+          "titulo": "Cambiándose · capri negro y chamarra efecto piel",
+          "info": "10–12 seg estimados · sin diálogo · @fashionnova · Capri, chamarra corta, sandalias y bolsa negra.",
+          "categoria": "viral-organica",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfYDe5JEn3V/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-200.jpg",
+          "thumb_alt": "Vista previa original de cambiándose · capri negro y chamarra efecto piel"
+        },
+        {
+          "slug": "g-201",
+          "titulo": "Cambiándose · falda café y camisa celeste",
+          "info": "14–17 seg estimados · sin diálogo · @fashionnova · Falda midi efecto piel, camisa y bolsa celestes. Un solo conjunto.",
+          "categoria": "viral-organica",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfYe_ESkSzr/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-201.jpg",
+          "thumb_alt": "Vista previa original de cambiándose · falda café y camisa celeste"
+        },
+        {
+          "slug": "g-202",
+          "titulo": "Cambiándose · falda negra con flecos",
+          "info": "10–12 seg estimados · sin diálogo · @fashionnova · Falda de flecos y blusa blanca; prioridad al movimiento.",
+          "categoria": "viral-organica",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfNion4EQPH/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-202.jpg",
+          "thumb_alt": "Vista previa original de cambiándose · falda negra con flecos"
+        },
+        {
+          "slug": "g-203",
+          "titulo": "Styling · corbata como cinturón",
+          "info": "10–12 seg estimados · demostración visual · @fashionnova · Corbata a la cintura sobre blusa blanca y pantalón negro.",
+          "categoria": "viral-organica",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfmbqpBlBVp/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-203.jpg",
+          "thumb_alt": "Vista previa original de styling · corbata como cinturón"
+        },
+        {
+          "slug": "g-204",
+          "titulo": "Me pruebo tres vestidos para salir",
+          "info": "25–35 seg estimados · frente a cámara · @fashionnova · Tres vestidos y comentarios mientras modela; guion frente a cámara.",
+          "categoria": "viral-organica",
+          "tipo": "md",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DffWc34gqT7/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-204.jpg",
+          "thumb_alt": "Vista previa original de me pruebo tres vestidos para salir"
         }
       ],
       "timeline": [
@@ -133,7 +199,12 @@
           "titulo": "CAMBIÁNDOSE FRENTE A CÁMARA",
           "slugs": [
             "g-193",
-            "g-192"
+            "g-192",
+            "g-199",
+            "g-200",
+            "g-201",
+            "g-202",
+            "g-203"
           ]
         },
         {
@@ -142,6 +213,13 @@
           "slugs": [
             "g-189",
             "g-191"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "PROBÁNDOSE VESTIDOS FRENTE A CÁMARA",
+          "slugs": [
+            "g-204"
           ]
         },
         {
@@ -157,7 +235,8 @@
           "slugs": [
             "g-197",
             "g-198"
-          ]
+          ],
+          "nota": "Promoción g-198: alzado a cargo de Dante."
         },
         {
           "hora": "",
