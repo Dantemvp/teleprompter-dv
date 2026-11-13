@@ -2,9 +2,9 @@
 
 DRA: "Doctora, ¿es cierto que el medicamento me puede dejar sin vista?"
 
-DRA: Ese mensaje me llegó hoy temprano, antes de empezar mi día. Y eran tres personas distintas preguntándome lo mismo, pues. Ayer otras dos.
+DRA: Ese mensaje me llegó hoy temprano, antes de empezar mi día. Y eran tres personas distintas preguntándome lo mismo. Ayer otras dos.
 
-DRA: Y te entiendo. Llevas meses cuidándote, por fin te sientes mejor, y de repente la noticia. Pues claro que te da miedo ponerte la siguiente dosis.
+DRA: Y te entiendo. Llevas meses cuidándote, por fin te sientes mejor, y de repente la noticia. Claro que te da miedo ponerte la siguiente dosis.
 
 DRA: Pero bueno, vamos a ver qué dijo la FDA. El 9 de noviembre ordenó advertir en todos los GLP-1 sobre algo que se llama NAION. Al nervio del ojo de repente le llega menos sangre, como un infarto chiquito en el nervio. Es serio, porque el daño en la vista se puede quedar, pero es muy raro.
 // DATO: Fuente || FUENTE: FDA, 9-nov-2026 || LINK: https://www.fda.gov/drugs/drug-safety-communications/fda-requires-safety-labeling-changes-glucagon-peptide-1-receptor-agonists-glp-1-ras-due-potential

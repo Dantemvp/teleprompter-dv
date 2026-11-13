@@ -2,7 +2,7 @@
 
 DRA: El titular dice que te puedes quedar sin vista de repente. Y si estás usando uno de estos medicamentos y te dio miedo, te entiendo. Nada más hoy me escribieron tres personas preguntándome lo mismo.
 
-DRA: Pues yo me leí completo el documento de la FDA y lo que dicen los oftalmólogos, y hay cuatro cosas que el titular no te contó.
+DRA: Yo me leí completo el documento de la FDA y lo que dicen los oftalmólogos, y hay cuatro cosas que el titular no te contó.
 
 DRA: Ahora sí, por partes. Se llama NAION: al nervio del ojo de repente le llega menos sangre, como un infarto chiquito. Es serio, porque el daño en la vista se puede quedar, pero es muy raro. Y el 9 de noviembre la FDA ordenó advertirlo en todos los GLP-1, inyectados o en pastilla.
 // DATO: Fuente || FUENTE: FDA, 9-nov-2026 || LINK: https://www.fda.gov/drugs/drug-safety-communications/fda-requires-safety-labeling-changes-glucagon-peptide-1-receptor-agonists-glp-1-ras-due-potential
