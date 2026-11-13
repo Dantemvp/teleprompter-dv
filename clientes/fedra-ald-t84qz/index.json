@@ -2,6 +2,50 @@
   "cliente": "Dra. Fedra Aldama",
   "grabaciones": [
     {
+      "rec": "ESP",
+      "nombre": "Especial · GLP-1 y la vista",
+      "fecha": "Por definir",
+      "locacion": "Consultorio",
+      "ventana": "Por definir · la doctora sola · un solo look",
+      "nota": "Tres versiones del mismo tema: la advertencia de la FDA sobre los GLP-1 y la vista. Se graba la que ella prefiera, o las tres. Solo texto, de corrido. Las fuentes van en el enlace debajo de cada línea.",
+      "timeline": [
+        {
+          "hora": "Por definir",
+          "dur": "—",
+          "titulo": "Bloque único · la doctora sola",
+          "slugs": [
+            "esp-01",
+            "esp-02",
+            "esp-03"
+          ],
+          "nota": "👗 UN SOLO LOOK · Bata.\n🎬 MATERIAL · Nada. Mesa limpia, ella a cámara."
+        }
+      ],
+      "guiones": [
+        {
+          "slug": "esp-01",
+          "titulo": "¿Me puede dejar sin vista?",
+          "info": "~2:05 · storytime con los mensajes de la mañana",
+          "categoria": "guion",
+          "grabado": false
+        },
+        {
+          "slug": "esp-02",
+          "titulo": "La pregunta completa",
+          "info": "~2:10 · qué pesa más, el riesgo o el beneficio",
+          "categoria": "guion",
+          "grabado": false
+        },
+        {
+          "slug": "esp-03",
+          "titulo": "Lo que el titular no te contó",
+          "info": "~2:05 · cuatro cosas, dichas de corrido",
+          "categoria": "guion",
+          "grabado": false
+        }
+      ]
+    },
+    {
       "rec": "R15",
       "nombre": "Grabación 15 · orgánicos con fuente",
       "fecha": "Por definir",
