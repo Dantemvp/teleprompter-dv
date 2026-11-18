@@ -2,8 +2,8 @@
   "cliente": "The Skin Club",
   "grabaciones": [
     {
-      "rec": "R11",
-      "nombre": "Onceava grabación",
+      "rec": "R10",
+      "nombre": "Décima grabación",
       "fecha": "Por definir",
       "locacion": "Por definir",
       "abierta": true,
@@ -42,6 +42,114 @@
           "grabado": false,
           "locutor": null,
           "categoria": "ingredientes",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-05",
+          "titulo": "Orden correcto de tu noche de mascarilla · piel grasa",
+          "info": "≈30 s · orden correcto paso a paso (Sylvia Ruiz) · Deep Cleanse, Oh Matcha, Hydroglow",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-06",
+          "titulo": "Las tres Ultrafresh · ¿Cuál es la tuya?",
+          "info": "≈1:30 · comparador de tres versiones (Ross Bracho + TEIA) · Ultrafresh",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-07",
+          "titulo": "El dúo Hydroglow · uno de día, otro de noche",
+          "info": "≈1:20 · dúo complementario (Luisa Muñoz) · Hydroglow Sérum + Crema de Noche",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-08",
+          "titulo": "La piel del hombre produce más grasa y pierde más agua",
+          "info": "≈45 s · dato que sorprende + envíaselo (Valeria DQ) · Dermaboost piel grasa",
+          "grabado": false,
+          "locutor": "Diego",
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-09",
+          "titulo": "Si te rechina la cara de limpia",
+          "info": "≈1:00 · «estás cometiendo este error» (Aina García) · Deep Cleanse piel grasa",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-10",
+          "titulo": "Mañana estrenas short",
+          "info": "15–20 s · situación en texto, sin voz (Mandarine Rose) · Hydroderm",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-11",
+          "titulo": "Ácido hialurónico · ¿Ácido y no pica?",
+          "info": "≈1:55 de lectura · masterclass de ingrediente · Hydroglow Sérum",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "ingredientes",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-12",
+          "titulo": "Niacinamida · ¿Solo para el brillo?",
+          "info": "≈1:40 de lectura · masterclass de ingrediente · Hydroglow Sérum",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "ingredientes",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-13",
+          "titulo": "Tetrapéptidos · ¿Y eso con qué se come?",
+          "info": "≈1:40 de lectura · masterclass de ingrediente · Crema de Noche Hydroglow",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "ingredientes",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-14",
+          "titulo": "Vigna aconitifolia · Sí, es un frijol",
+          "info": "≈1:45 de lectura · masterclass de ingrediente · Crema de Noche Hydroglow",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "ingredientes",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-15",
+          "titulo": "Tengo [EDAD] años y estos son mis tres básicos",
+          "info": "≈1:15 · tres básicos en primera persona (Ross Bracho) · Deep Cleanse, Hydroglow Sérum y Crema de Noche",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-16",
+          "titulo": "¿Con qué te secas la cara?",
+          "info": "≈1:15 · revelación demorada (Aina García, toalla) · Deep Cleanse",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "guion",
           "miniatura": false
         }
       ]
