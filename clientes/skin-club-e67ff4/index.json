@@ -87,7 +87,7 @@
           "grabado": false,
           "locutor": null,
           "categoria": "guion",
-          "miniatura": false
+          "miniatura": true
         },
         {
           "slug": "r11-10",
