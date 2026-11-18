@@ -2,6 +2,51 @@
   "cliente": "The Skin Club",
   "grabaciones": [
     {
+      "rec": "R10",
+      "nombre": "Décima grabación",
+      "fecha": "Por definir",
+      "locacion": "Por definir",
+      "abierta": true,
+      "guiones": [
+        {
+          "slug": "r10-01",
+          "titulo": "Vitamina C · ¿Dónde dice que sí la trae?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "ingredientes",
+          "miniatura": false
+        },
+        {
+          "slug": "r10-02",
+          "titulo": "Caolín · La pregunta del matcha",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "ingredientes",
+          "miniatura": false
+        },
+        {
+          "slug": "r10-03",
+          "titulo": "Ácido salicílico · ¿Se me fue por el lavabo?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "ingredientes",
+          "miniatura": false
+        },
+        {
+          "slug": "r10-04",
+          "titulo": "Jojoba · Una cera que se puede servir a gotas",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "ingredientes",
+          "miniatura": false
+        }
+      ]
+    },
+    {
       "rec": "R9",
       "nombre": "Novena grabación",
       "fecha": "Por definir",
