@@ -150,7 +150,7 @@
           "grabado": true,
           "locutor": "Paloma",
           "categoria": "formato-clinica",
-          "miniatura": false
+          "miniatura": true
         },
         {
           "slug": "r11-17",
