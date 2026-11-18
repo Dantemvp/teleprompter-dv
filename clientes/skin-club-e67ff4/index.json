@@ -2,6 +2,51 @@
   "cliente": "The Skin Club",
   "grabaciones": [
     {
+      "rec": "R11",
+      "nombre": "Onceava grabación",
+      "fecha": "Por definir",
+      "locacion": "Por definir",
+      "abierta": true,
+      "guiones": [
+        {
+          "slug": "r11-01",
+          "titulo": "Vitamina C · ¿5% es poquito?",
+          "info": "≈1:50 de lectura · masterclass de ingrediente · Suero de vitamina C",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "ingredientes",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-02",
+          "titulo": "Caolín · Lo que viene después del agua en Oh Matcha",
+          "info": "≈1:55 de lectura · masterclass de ingrediente · Oh Matcha",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "ingredientes",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-03",
+          "titulo": "Ácido salicílico · ¿Tres productos con lo mismo?",
+          "info": "≈1:55 de lectura · masterclass de ingrediente · Deep Cleanse piel grasa",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "ingredientes",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-04",
+          "titulo": "Jojoba · El aceite que es cera",
+          "info": "≈2:00 de lectura · masterclass de ingrediente · Hydroderm",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "ingredientes",
+          "miniatura": false
+        }
+      ]
+    },
+    {
       "rec": "R10",
       "nombre": "Décima grabación",
       "fecha": "Por definir",
