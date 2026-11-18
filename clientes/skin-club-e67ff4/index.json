@@ -135,21 +135,57 @@
           "miniatura": false
         },
         {
-          "slug": "r11-15",
-          "titulo": "Tengo [EDAD] años y uso tres productos. Tres.",
-          "info": "≈1:15 · tres básicos en primera persona (Ross Bracho) · Deep Cleanse, Hydroglow Sérum y Crema de Noche",
-          "grabado": false,
-          "locutor": null,
-          "categoria": "guion",
-          "miniatura": false
-        },
-        {
           "slug": "r11-16",
           "titulo": "Usas protector y te siguen saliendo manchas",
           "info": "≈1:40 · «¿por qué te pasa?» (estructura de Aina García) · luz visible + Suero Vitamina C",
           "grabado": false,
           "locutor": null,
           "categoria": "guion",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-18",
+          "titulo": "Piel de naranja y corrector",
+          "info": "≈55 s · viral de CM 220k (5.9x) · revisor 43/50",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "formato-clinica",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-17",
+          "titulo": "Estos puntitos de tu nariz tienen nombre",
+          "info": "≈50 s · viral de CM 560k (12.9x) · revisor 42/50",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "formato-clinica",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-19",
+          "titulo": "Si te aprietas así los puntos negros",
+          "info": "≈45 s · viral de Morales Raya 209k (2.4x) · revisor 41/50",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "formato-clinica",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-21",
+          "titulo": "¿Tienes estos granitos en los brazos?",
+          "info": "≈45 s · explicativo corto, un producto · revisor 37→~39/50",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "formato-clinica",
+          "miniatura": false
+        },
+        {
+          "slug": "r11-20",
+          "titulo": "El granito se fue, la manchita no",
+          "info": "≈55 s · viral de Morales Raya 133k (1.5x) · revisor 34→~39/50",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "formato-clinica",
           "miniatura": false
         }
       ]
