@@ -43,6 +43,60 @@
           "locutor": null,
           "categoria": "ingredientes",
           "miniatura": false
+        },
+        {
+          "slug": "r10-05",
+          "titulo": "Te encargaron la espuma de Skin Club. ¿Cuál de las tres?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "referencias-alma",
+          "miniatura": false
+        },
+        {
+          "slug": "r10-06",
+          "titulo": "El maquillaje que apareció en la toalla",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "referencias-alma",
+          "miniatura": false
+        },
+        {
+          "slug": "r10-07",
+          "titulo": "Se me acabó el tónico. ¿Hoy qué hago?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "referencias-alma",
+          "miniatura": false
+        },
+        {
+          "slug": "r10-08",
+          "titulo": "Las dos dicen Hydroglow. ¿Cuál te pusiste anoche?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "referencias-alma",
+          "miniatura": false
+        },
+        {
+          "slug": "r10-09",
+          "titulo": "«Sí me lavé la cara. Me cayó shampoo». ¿Eso cuenta?",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "referencias-alma",
+          "miniatura": false
+        },
+        {
+          "slug": "r10-10",
+          "titulo": "Me lavé la cara a las ocho. Son las dos y ya me brilló la frente.",
+          "info": "",
+          "grabado": false,
+          "locutor": null,
+          "categoria": "referencias-alma",
+          "miniatura": false
         }
       ]
     },
