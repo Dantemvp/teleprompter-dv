@@ -2,6 +2,285 @@
   "cliente": "Mary Baltazar",
   "grabaciones": [
     {
+      "rec": "R03",
+      "nombre": "Tercera grabación",
+      "fecha": "Por confirmar",
+      "locacion": "Por definir",
+      "abierta": true,
+      "ventana": "13 videos · Curiosidades verificadas · Bloques temáticos + tertulia",
+      "nota": "Cada guion abre con un dato comprobable y termina con una acción posible. Las imágenes son fichas de la fuente; Miniatura controla la portada final de Mary.",
+      "timeline": [
+        {
+          "hora": "Preparar",
+          "titulo": "Audio, encuadre y luz",
+          "slugs": [],
+          "nota": "Probar una toma y revisar audio. En cada guion, grabar también una toma limpia para su portada."
+        },
+        {
+          "hora": "01–03",
+          "titulo": "Estoicos y curiosidades",
+          "slugs": [
+            "g-34",
+            "g-36",
+            "g-37"
+          ]
+        },
+        {
+          "hora": "04–06",
+          "titulo": "Felicidad y pareja",
+          "slugs": [
+            "g-39",
+            "g-40",
+            "g-41"
+          ]
+        },
+        {
+          "hora": "07–09",
+          "titulo": "Mujeres que se apoyan",
+          "slugs": [
+            "g-42",
+            "g-43",
+            "g-44"
+          ]
+        },
+        {
+          "hora": "10–13",
+          "titulo": "Fe, libertad y actitud",
+          "slugs": [
+            "g-38",
+            "g-46",
+            "g-35",
+            "g-45"
+          ],
+          "nota": "Cierre de los guiones de R03."
+        },
+        {
+          "hora": "Pausa",
+          "titulo": "Descanso antes de la tertulia",
+          "tipo": "pausa",
+          "slugs": [],
+          "nota": "Revisar audio y respaldo. Acomodar dos sillas y las dos cámaras."
+        },
+        {
+          "hora": "Tertulia",
+          "titulo": "Conversación con su amiga",
+          "tipo": "extra",
+          "slugs": [],
+          "nota": "Seguir la guía privada de tertulia. Los recortes se eligen al revisar la conversación."
+        }
+      ],
+      "guiones": [
+        {
+          "slug": "g-34",
+          "titulo": "El emperador que no quería levantarse",
+          "marca": "R03 · Curiosidad verificada",
+          "info": "Toma 01 · 55–65 seg aprox. · Superación · disciplina · Original Mary/DV",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://classics.mit.edu/Antoninus/meditations.5.five.html",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-34.svg",
+          "thumb_alt": "Ficha de la fuente: El emperador que no quería levantarse",
+          "orden_grabacion": 1,
+          "grupo_r03": "curiosidades"
+        },
+        {
+          "slug": "g-36",
+          "titulo": "Nueve de cada diez preocupaciones",
+          "marca": "R03 · Curiosidad verificada",
+          "info": "Toma 02 · 55–65 seg aprox. · Miedos · ansiedad anticipada · Original Mary/DV",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://doi.org/10.1016/j.beth.2019.07.003",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-36.svg",
+          "thumb_alt": "Ficha de la fuente: Nueve de cada diez preocupaciones",
+          "orden_grabacion": 2,
+          "grupo_r03": "curiosidades"
+        },
+        {
+          "slug": "g-37",
+          "titulo": "Pegar lo roto con oro",
+          "marca": "R03 · Curiosidad verificada",
+          "info": "Toma 03 · 60–70 seg aprox. · Errores · segundas oportunidades · Original Mary/DV",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://noma.org/kintsugi-reflects-beauty-in-flaws-strength-in-healing/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-37.svg",
+          "thumb_alt": "Ficha de la fuente: Pegar lo roto con oro",
+          "orden_grabacion": 3,
+          "grupo_r03": "curiosidades"
+        },
+        {
+          "slug": "g-39",
+          "titulo": "El estudio más largo sobre felicidad",
+          "marca": "R03 · Curiosidad verificada",
+          "info": "Toma 04 · 50–60 seg aprox. · Felicidad · vínculos · Original Mary/DV",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://news.harvard.edu/gazette/story/2023/02/work-out-daily-ok-but-how-socially-fit-are-you/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-39.svg",
+          "thumb_alt": "Ficha de la fuente: El estudio más largo sobre felicidad",
+          "orden_grabacion": 4,
+          "grupo_r03": "curiosidades"
+        },
+        {
+          "slug": "g-40",
+          "titulo": "El gesto de dos segundos",
+          "marca": "R03 · Curiosidad verificada",
+          "info": "Toma 05 · 50–60 seg aprox. · Pareja · conexión · Original Mary/DV",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.gottman.com/blog/turn-toward-instead-of-away/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-40.svg",
+          "thumb_alt": "Ficha de la fuente: El gesto de dos segundos",
+          "orden_grabacion": 5,
+          "grupo_r03": "curiosidades"
+        },
+        {
+          "slug": "g-41",
+          "titulo": "36 preguntas para volverse cercanos",
+          "marca": "R03 · Curiosidad verificada",
+          "info": "Toma 06 · 55–65 seg aprox. · Pareja · intimidad · Original Mary/DV",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://doi.org/10.1177/0146167297234003",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-41.svg",
+          "thumb_alt": "Ficha de la fuente: 36 preguntas para volverse cercanos",
+          "orden_grabacion": 6,
+          "grupo_r03": "curiosidades"
+        },
+        {
+          "slug": "g-42",
+          "titulo": "El truco de las mujeres de la Casa Blanca",
+          "marca": "R03 · Curiosidad verificada",
+          "info": "Toma 07 · 55–65 seg aprox. · Apoyo entre mujeres · Original Mary/DV",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://qz.com/781404/women-at-the-white-house-have-started-using-the-simple-trick-of-amplification-to-get-heard-not-interrupted",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-42.svg",
+          "thumb_alt": "Ficha de la fuente: El truco de las mujeres de la Casa Blanca",
+          "orden_grabacion": 7,
+          "grupo_r03": "curiosidades"
+        },
+        {
+          "slug": "g-43",
+          "titulo": "El trabajo de acordarte",
+          "marca": "R03 · Curiosidad verificada",
+          "info": "Toma 08 · 55–65 seg aprox. · Corresponsabilidad · Original Mary/DV",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://doi.org/10.1177/0003122419859007",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-43.svg",
+          "thumb_alt": "Ficha de la fuente: El trabajo de acordarte",
+          "orden_grabacion": 8,
+          "grupo_r03": "curiosidades"
+        },
+        {
+          "slug": "g-44",
+          "titulo": "Tu abuela nació sin poder votar",
+          "marca": "R03 · Curiosidad verificada",
+          "info": "Toma 09 · 45–55 seg aprox. · Feminismo de apoyo · historia · Original Mary/DV",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.gaceta.unam.mx/sufragio-femenino-derecho-a-tener-derechos/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-44.svg",
+          "thumb_alt": "Ficha de la fuente: Tu abuela nació sin poder votar",
+          "orden_grabacion": 9,
+          "grupo_r03": "curiosidades"
+        },
+        {
+          "slug": "g-38",
+          "titulo": "Entusiasmo quería decir tener un dios adentro",
+          "marca": "R03 · Curiosidad verificada",
+          "info": "Toma 10 · 50–60 seg aprox. · Espiritualidad · energía · Original Mary/DV",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://en.wiktionary.org/wiki/enthusiasm",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-38.svg",
+          "thumb_alt": "Ficha de la fuente: Entusiasmo quería decir tener un dios adentro",
+          "orden_grabacion": 10,
+          "grupo_r03": "curiosidades"
+        },
+        {
+          "slug": "g-46",
+          "titulo": "Una frase de boda que nació entre suegra y nuera",
+          "marca": "R03 · Curiosidad verificada",
+          "info": "Toma 11 · 60–70 seg aprox. · Espiritualidad · apoyo entre mujeres · Original Mary/DV",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.biblegateway.com/passage/?search=Rut%201&version=NVI",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-46.svg",
+          "thumb_alt": "Ficha de la fuente: Una frase de boda que nació entre suegra y nuera",
+          "orden_grabacion": 11,
+          "grupo_r03": "curiosidades"
+        },
+        {
+          "slug": "g-35",
+          "titulo": "Nació esclavo y enseñó libertad",
+          "marca": "R03 · Curiosidad verificada",
+          "info": "Toma 12 · 65–75 seg aprox. · Temores · lo que depende de ti · Original Mary/DV",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://plato.stanford.edu/entries/epictetus/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-35.svg",
+          "thumb_alt": "Ficha de la fuente: Nació esclavo y enseñó libertad",
+          "orden_grabacion": 12,
+          "grupo_r03": "curiosidades"
+        },
+        {
+          "slug": "g-45",
+          "titulo": "La frase de Viktor Frankl que no es suya",
+          "marca": "R03 · Curiosidad verificada",
+          "info": "Toma 13 · 60–70 seg aprox. · Superación · actitud · Original Mary/DV",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://viktorfrankl.org/quote_stimulus.html",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-45.svg",
+          "thumb_alt": "Ficha de la fuente: La frase de Viktor Frankl que no es suya",
+          "orden_grabacion": 13,
+          "grupo_r03": "curiosidades"
+        }
+      ]
+    },
+    {
       "rec": "R01",
       "nombre": "Primera grabación",
       "fecha": "Por definir",
