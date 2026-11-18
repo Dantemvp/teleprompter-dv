@@ -7,7 +7,7 @@
       "fecha": "Por confirmar",
       "locacion": "Por definir",
       "abierta": true,
-      "ventana": "13 videos · Curiosidades verificadas · Bloques temáticos + tertulia",
+      "ventana": "16 videos · Curiosidades verificadas + Referenciados · Bloques temáticos + tertulia",
       "nota": "Cada guion abre con un dato comprobable y termina con una acción posible. Las imágenes son fichas de la fuente; Miniatura controla la portada final de Mary.",
       "timeline": [
         {
@@ -53,6 +53,16 @@
             "g-45"
           ],
           "nota": "Cierre de los guiones de R03."
+        },
+        {
+          "hora": "14–16",
+          "titulo": "Referenciados",
+          "slugs": [
+            "g-47",
+            "g-48",
+            "g-49"
+          ],
+          "nota": "Adaptaciones cercanas de videos de Andrea Vera (@lifewithandreav)."
         },
         {
           "hora": "Pausa",
@@ -277,6 +287,54 @@
           "thumb_alt": "Ficha de la fuente: La frase de Viktor Frankl que no es suya",
           "orden_grabacion": 13,
           "grupo_r03": "curiosidades"
+        },
+        {
+          "slug": "g-47",
+          "titulo": "Primero ser, después tener",
+          "marca": "Referenciado",
+          "info": "Toma 14 · 55–75 seg aprox. · Adaptación cercana con paráfrasis · Andrea Vera",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.tiktok.com/@lifewithandreav/video/7695142216049741078",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-47.jpg",
+          "thumb_alt": "Referencia: Primero ser, después tener · Andrea Vera · miniatura del video",
+          "orden_grabacion": 14,
+          "grupo_r03": "referenciados"
+        },
+        {
+          "slug": "g-48",
+          "titulo": "La primera vez ya te lo dijo",
+          "marca": "Referenciado",
+          "info": "Toma 15 · 70–90 seg aprox. · Adaptación cercana con paráfrasis · Andrea Vera",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.tiktok.com/@lifewithandreav/video/7704373842935811351",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-48.jpg",
+          "thumb_alt": "Referencia: La primera vez ya te lo dijo · Andrea Vera · miniatura del video",
+          "orden_grabacion": 15,
+          "grupo_r03": "referenciados"
+        },
+        {
+          "slug": "g-49",
+          "titulo": "Entrégaselo",
+          "marca": "Referenciado",
+          "info": "Toma 16 · 45–60 seg aprox. · Adaptación cercana con paráfrasis · Andrea Vera",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.tiktok.com/@lifewithandreav/video/7702494878214753558",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-49.jpg",
+          "thumb_alt": "Referencia: Entrégaselo · Andrea Vera · miniatura del video",
+          "orden_grabacion": 16,
+          "grupo_r03": "referenciados"
         }
       ]
     },
