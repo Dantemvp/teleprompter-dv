@@ -159,7 +159,7 @@
           "grabado": true,
           "locutor": null,
           "categoria": "formato-clinica",
-          "miniatura": false
+          "miniatura": true
         },
         {
           "slug": "r11-19",
