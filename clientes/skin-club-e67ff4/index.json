@@ -15,7 +15,7 @@
           "grabado": true,
           "locutor": "Paloma",
           "categoria": "ingredientes",
-          "miniatura": false
+          "miniatura": true
         },
         {
           "slug": "r11-02",
