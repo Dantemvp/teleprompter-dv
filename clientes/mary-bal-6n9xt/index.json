@@ -7,8 +7,8 @@
       "fecha": "Por confirmar",
       "locacion": "Por definir",
       "abierta": true,
-      "ventana": "16 videos · Curiosidades verificadas + Referenciados · Bloques temáticos + tertulia",
-      "nota": "Cada guion abre con un dato comprobable y termina con una acción posible. Las imágenes son fichas de la fuente; Miniatura controla la portada final de Mary.",
+      "ventana": "16 videos · Curiosidades + referencias outlier + Referenciados · Bloques de hasta 3 + tertulia",
+      "nota": "Se alternan curiosidades verificadas y adaptaciones de videos que fueron outliers en su cuenta. Las imágenes son referencias; Miniatura controla la portada final de Mary.",
       "timeline": [
         {
           "hora": "Preparar",
@@ -18,41 +18,46 @@
         },
         {
           "hora": "01–03",
-          "titulo": "Estoicos y curiosidades",
+          "titulo": "Curiosidades · vuelta 1",
           "slugs": [
             "g-34",
-            "g-36",
-            "g-37"
+            "g-37",
+            "g-35"
           ]
         },
         {
           "hora": "04–06",
-          "titulo": "Felicidad y pareja",
+          "titulo": "Referencias outlier · vuelta 1",
           "slugs": [
+            "g-36",
             "g-39",
-            "g-40",
-            "g-41"
+            "g-40"
           ]
         },
         {
           "hora": "07–09",
-          "titulo": "Mujeres que se apoyan",
+          "titulo": "Curiosidades · vuelta 2",
           "slugs": [
             "g-42",
-            "g-43",
-            "g-44"
+            "g-44",
+            "g-46"
           ]
         },
         {
-          "hora": "10–13",
-          "titulo": "Fe, libertad y actitud",
+          "hora": "10–11",
+          "titulo": "Referencias outlier · vuelta 2",
+          "slugs": [
+            "g-41",
+            "g-43"
+          ]
+        },
+        {
+          "hora": "12–13",
+          "titulo": "Curiosidades · vuelta 3",
           "slugs": [
             "g-38",
-            "g-46",
-            "g-35",
             "g-45"
-          ],
-          "nota": "Cierre de los guiones de R03."
+          ]
         },
         {
           "hora": "14–16",
@@ -97,26 +102,10 @@
           "grupo_r03": "curiosidades"
         },
         {
-          "slug": "g-36",
-          "titulo": "Nueve de cada diez preocupaciones",
-          "marca": "R03 · Curiosidad verificada",
-          "info": "Toma 02 · 55–65 seg aprox. · Miedos · ansiedad anticipada · Original Mary/DV",
-          "categoria": "guion",
-          "tipo": "md",
-          "grabado": false,
-          "miniatura": false,
-          "locutor": "Mary",
-          "link": "https://doi.org/10.1016/j.beth.2019.07.003",
-          "thumb": "clientes/mary-bal-6n9xt/refs/g-36.svg",
-          "thumb_alt": "Ficha de la fuente: Nueve de cada diez preocupaciones",
-          "orden_grabacion": 2,
-          "grupo_r03": "curiosidades"
-        },
-        {
           "slug": "g-37",
           "titulo": "Pegar lo roto con oro",
           "marca": "R03 · Curiosidad verificada",
-          "info": "Toma 03 · 60–70 seg aprox. · Errores · segundas oportunidades · Original Mary/DV",
+          "info": "Toma 02 · 60–70 seg aprox. · Errores · segundas oportunidades · Original Mary/DV",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -125,56 +114,72 @@
           "link": "https://noma.org/kintsugi-reflects-beauty-in-flaws-strength-in-healing/",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-37.svg",
           "thumb_alt": "Ficha de la fuente: Pegar lo roto con oro",
+          "orden_grabacion": 2,
+          "grupo_r03": "curiosidades"
+        },
+        {
+          "slug": "g-35",
+          "titulo": "Nació esclavo y enseñó libertad",
+          "marca": "R03 · Curiosidad verificada",
+          "info": "Toma 03 · 65–75 seg aprox. · Temores · lo que depende de ti · Original Mary/DV",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://plato.stanford.edu/entries/epictetus/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-35.svg",
+          "thumb_alt": "Ficha de la fuente: Nació esclavo y enseñó libertad",
           "orden_grabacion": 3,
           "grupo_r03": "curiosidades"
         },
         {
-          "slug": "g-39",
-          "titulo": "El estudio más largo sobre felicidad",
-          "marca": "R03 · Curiosidad verificada",
-          "info": "Toma 04 · 50–60 seg aprox. · Felicidad · vínculos · Original Mary/DV",
+          "slug": "g-36",
+          "titulo": "El búfalo corre hacia la tormenta",
+          "marca": "Referencia outlier",
+          "info": "Toma 04 · 55–65 seg aprox. · Adaptación cercana con paráfrasis · Margarita Pasos (6,5× su media)",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "miniatura": false,
           "locutor": "Mary",
-          "link": "https://news.harvard.edu/gazette/story/2023/02/work-out-daily-ok-but-how-socially-fit-are-you/",
-          "thumb": "clientes/mary-bal-6n9xt/refs/g-39.svg",
-          "thumb_alt": "Ficha de la fuente: El estudio más largo sobre felicidad",
+          "link": "https://www.instagram.com/p/Dec6FmWDifs/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-36.jpg",
+          "thumb_alt": "Referencia: El búfalo corre hacia la tormenta · Margarita Pasos",
           "orden_grabacion": 4,
-          "grupo_r03": "curiosidades"
+          "grupo_r03": "referencias-outlier"
+        },
+        {
+          "slug": "g-39",
+          "titulo": "Sabes que estás creciendo cuando…",
+          "marca": "Referencia outlier",
+          "info": "Toma 05 · 90–110 seg aprox. · Adaptación cercana con paráfrasis · Andrea Vera (2,7× su media)",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.tiktok.com/@lifewithandreav/video/7702492326521818371",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-39.jpg",
+          "thumb_alt": "Referencia: Sabes que estás creciendo cuando… · Andrea Vera",
+          "orden_grabacion": 5,
+          "grupo_r03": "referencias-outlier"
         },
         {
           "slug": "g-40",
-          "titulo": "El gesto de dos segundos",
-          "marca": "R03 · Curiosidad verificada",
-          "info": "Toma 05 · 50–60 seg aprox. · Pareja · conexión · Original Mary/DV",
+          "titulo": "El león ruge después",
+          "marca": "Referencia outlier",
+          "info": "Toma 06 · 10–20 seg aprox. · Adaptación cercana con paráfrasis · Jordi Segués (4,4× su media)",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "miniatura": false,
           "locutor": "Mary",
-          "link": "https://www.gottman.com/blog/turn-toward-instead-of-away/",
-          "thumb": "clientes/mary-bal-6n9xt/refs/g-40.svg",
-          "thumb_alt": "Ficha de la fuente: El gesto de dos segundos",
-          "orden_grabacion": 5,
-          "grupo_r03": "curiosidades"
-        },
-        {
-          "slug": "g-41",
-          "titulo": "36 preguntas para volverse cercanos",
-          "marca": "R03 · Curiosidad verificada",
-          "info": "Toma 06 · 55–65 seg aprox. · Pareja · intimidad · Original Mary/DV",
-          "categoria": "guion",
-          "tipo": "md",
-          "grabado": false,
-          "miniatura": false,
-          "locutor": "Mary",
-          "link": "https://doi.org/10.1177/0146167297234003",
-          "thumb": "clientes/mary-bal-6n9xt/refs/g-41.svg",
-          "thumb_alt": "Ficha de la fuente: 36 preguntas para volverse cercanos",
+          "link": "https://www.instagram.com/p/Dc8LuCHNcDM/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-40.jpg",
+          "thumb_alt": "Referencia: El león ruge después · Jordi Segués",
           "orden_grabacion": 6,
-          "grupo_r03": "curiosidades"
+          "grupo_r03": "referencias-outlier"
         },
         {
           "slug": "g-42",
@@ -193,26 +198,10 @@
           "grupo_r03": "curiosidades"
         },
         {
-          "slug": "g-43",
-          "titulo": "El trabajo de acordarte",
-          "marca": "R03 · Curiosidad verificada",
-          "info": "Toma 08 · 55–65 seg aprox. · Corresponsabilidad · Original Mary/DV",
-          "categoria": "guion",
-          "tipo": "md",
-          "grabado": false,
-          "miniatura": false,
-          "locutor": "Mary",
-          "link": "https://doi.org/10.1177/0003122419859007",
-          "thumb": "clientes/mary-bal-6n9xt/refs/g-43.svg",
-          "thumb_alt": "Ficha de la fuente: El trabajo de acordarte",
-          "orden_grabacion": 8,
-          "grupo_r03": "curiosidades"
-        },
-        {
           "slug": "g-44",
           "titulo": "Tu abuela nació sin poder votar",
           "marca": "R03 · Curiosidad verificada",
-          "info": "Toma 09 · 45–55 seg aprox. · Feminismo de apoyo · historia · Original Mary/DV",
+          "info": "Toma 08 · 45–55 seg aprox. · Feminismo de apoyo · historia · Original Mary/DV",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -221,30 +210,14 @@
           "link": "https://www.gaceta.unam.mx/sufragio-femenino-derecho-a-tener-derechos/",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-44.svg",
           "thumb_alt": "Ficha de la fuente: Tu abuela nació sin poder votar",
-          "orden_grabacion": 9,
-          "grupo_r03": "curiosidades"
-        },
-        {
-          "slug": "g-38",
-          "titulo": "Entusiasmo quería decir tener un dios adentro",
-          "marca": "R03 · Curiosidad verificada",
-          "info": "Toma 10 · 50–60 seg aprox. · Espiritualidad · energía · Original Mary/DV",
-          "categoria": "guion",
-          "tipo": "md",
-          "grabado": false,
-          "miniatura": false,
-          "locutor": "Mary",
-          "link": "https://en.wiktionary.org/wiki/enthusiasm",
-          "thumb": "clientes/mary-bal-6n9xt/refs/g-38.svg",
-          "thumb_alt": "Ficha de la fuente: Entusiasmo quería decir tener un dios adentro",
-          "orden_grabacion": 10,
+          "orden_grabacion": 8,
           "grupo_r03": "curiosidades"
         },
         {
           "slug": "g-46",
           "titulo": "Una frase de boda que nació entre suegra y nuera",
           "marca": "R03 · Curiosidad verificada",
-          "info": "Toma 11 · 60–70 seg aprox. · Espiritualidad · apoyo entre mujeres · Original Mary/DV",
+          "info": "Toma 09 · 60–70 seg aprox. · Espiritualidad · apoyo entre mujeres · Original Mary/DV",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
@@ -253,22 +226,54 @@
           "link": "https://www.biblegateway.com/passage/?search=Rut%201&version=NVI",
           "thumb": "clientes/mary-bal-6n9xt/refs/g-46.svg",
           "thumb_alt": "Ficha de la fuente: Una frase de boda que nació entre suegra y nuera",
-          "orden_grabacion": 11,
+          "orden_grabacion": 9,
           "grupo_r03": "curiosidades"
         },
         {
-          "slug": "g-35",
-          "titulo": "Nació esclavo y enseñó libertad",
-          "marca": "R03 · Curiosidad verificada",
-          "info": "Toma 12 · 65–75 seg aprox. · Temores · lo que depende de ti · Original Mary/DV",
+          "slug": "g-41",
+          "titulo": "Dios está contigo",
+          "marca": "Referencia outlier",
+          "info": "Toma 10 · 10–20 seg aprox. · Adaptación cercana con paráfrasis · Andrea Vera (9,2× su media)",
           "categoria": "guion",
           "tipo": "md",
           "grabado": false,
           "miniatura": false,
           "locutor": "Mary",
-          "link": "https://plato.stanford.edu/entries/epictetus/",
-          "thumb": "clientes/mary-bal-6n9xt/refs/g-35.svg",
-          "thumb_alt": "Ficha de la fuente: Nació esclavo y enseñó libertad",
+          "link": "https://www.tiktok.com/@lifewithandreav/video/7702896983903636758",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-41.jpg",
+          "thumb_alt": "Referencia: Dios está contigo · Andrea Vera",
+          "orden_grabacion": 10,
+          "grupo_r03": "referencias-outlier"
+        },
+        {
+          "slug": "g-43",
+          "titulo": "Cuándo se van los buenos de un equipo",
+          "marca": "Referencia outlier",
+          "info": "Toma 11 · 40–50 seg aprox. · Adaptación cercana con paráfrasis · Margarita Pasos (3,7× su media)",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://www.instagram.com/p/DdovHYHlGDM/",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-43.jpg",
+          "thumb_alt": "Referencia: Cuándo se van los buenos de un equipo · Margarita Pasos",
+          "orden_grabacion": 11,
+          "grupo_r03": "referencias-outlier"
+        },
+        {
+          "slug": "g-38",
+          "titulo": "Entusiasmo quería decir tener un dios adentro",
+          "marca": "R03 · Curiosidad verificada",
+          "info": "Toma 12 · 50–60 seg aprox. · Espiritualidad · energía · Original Mary/DV",
+          "categoria": "guion",
+          "tipo": "md",
+          "grabado": false,
+          "miniatura": false,
+          "locutor": "Mary",
+          "link": "https://en.wiktionary.org/wiki/enthusiasm",
+          "thumb": "clientes/mary-bal-6n9xt/refs/g-38.svg",
+          "thumb_alt": "Ficha de la fuente: Entusiasmo quería decir tener un dios adentro",
           "orden_grabacion": 12,
           "grupo_r03": "curiosidades"
         },
