@@ -78,7 +78,7 @@
           "grabado": true,
           "locutor": "Camila",
           "categoria": "guion",
-          "miniatura": false
+          "miniatura": true
         },
         {
           "slug": "r11-09",
