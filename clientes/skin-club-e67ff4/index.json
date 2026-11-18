@@ -105,7 +105,7 @@
           "grabado": false,
           "locutor": null,
           "categoria": "ingredientes",
-          "miniatura": false
+          "miniatura": true
         },
         {
           "slug": "r11-12",
