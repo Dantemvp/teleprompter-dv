@@ -13,7 +13,7 @@ Redacción: 19-nov-2026. De cada referencia se tomó solo la arquitectura (forma
 - Max Mara OI2026 tono sobre tono con peluche y gamuza en grises: https://runwaymagazines.com/max-mara-fall-winter-2026-2027/
 - Pinterest Predicts 2026 (encaje, broches, cinturones ochenteros, azul frío): https://www.harpersbazaar.com.sg/fashion/news-trends/pinterest-predicts-2026-trends
 
-Lo que la referencia de texturas (g-217) atribuía a Chanel y Prada con polipiel y encaje no se pudo verificar; se cambió por Saint Laurent, Prada/Miu Miu y Max Mara, que sí están documentados.
+g-217 conserva lo que dice la referencia: Chanel y Prada con polipiel y encaje (indicación de Dante, 19-nov).
 
 ## Ganchos alternos (el principal es el del teleprompter)
 - g-214: «Cinco estampados y el color con el que se miran increíbles.» · «Si el animal print te da miedo, empieza por aquí.»
