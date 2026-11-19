@@ -2,6 +2,110 @@
   "cliente": "Dra. Alejandra Paz",
   "grabaciones": [
     {
+      "rec": "R4",
+      "nombre": "Cuarta grabación",
+      "fecha": "Por definir",
+      "locacion": "Consultorio",
+      "guiones": [
+        {
+          "slug": "r4-01",
+          "titulo": "La limonada que te dura toda la mañana",
+          "info": "30–40 s · demostración con dos vasos",
+          "link": "https://www.tiktok.com/@dra.verovzz/video/7374071306037382406",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-01.jpg",
+          "grabado": false
+        },
+        {
+          "slug": "r4-02",
+          "titulo": "¿Una caries si ni siquiera me duele?",
+          "info": "30–40 s · conversación con modelo dental",
+          "link": "https://www.tiktok.com/@odontologacamila/video/7483654534884068613",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-02.jpg",
+          "grabado": false
+        },
+        {
+          "slug": "r4-03",
+          "titulo": "La palabra que oyes cuando te pido que muerdas",
+          "info": "25–35 s · demostración de mordida",
+          "link": "https://www.tiktok.com/@dra.susyvelasco/video/7585274379550903560",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-03.jpg",
+          "grabado": false
+        },
+        {
+          "slug": "r4-04",
+          "titulo": "La muela del lunes",
+          "info": "15–22 s · escena con paciente fuera de cuadro",
+          "link": "https://www.tiktok.com/@drrodrigolopez/video/7407528154367053062",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-04.jpg",
+          "grabado": false
+        },
+        {
+          "slug": "r4-05",
+          "titulo": "El hilo dental de los domingos",
+          "info": "18–26 s · comedia de consultorio",
+          "link": "https://www.tiktok.com/@adamarilopeztorres/video/7325481306769444139",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-05.jpg",
+          "grabado": false
+        },
+        {
+          "slug": "r4-06",
+          "titulo": "¿Por qué vuelve esa capita que sientes con la lengua?",
+          "info": "30–40 s · explicación con modelo de brackets",
+          "link": "https://www.tiktok.com/@dra.verovzz/video/7709582423712926983",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-06.jpg",
+          "grabado": false
+        },
+        {
+          "slug": "r4-07",
+          "titulo": "Hace años que no voy. ¿Pido una limpieza?",
+          "info": "25–35 s · conversación de confianza",
+          "link": "https://www.tiktok.com/@dra.verovzz/video/7707052226400750856",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-07.jpg",
+          "grabado": false
+        },
+        {
+          "slug": "r4-08",
+          "titulo": "¿Entonces ya no puedo pedir elote?",
+          "info": "13–20 s · comedia visual con elote y vaso",
+          "link": "https://www.tiktok.com/@dra.verovzz/video/7699578619978435848",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-08.jpg",
+          "grabado": false
+        },
+        {
+          "slug": "r4-09",
+          "titulo": "Hilo, cepillo y enjuague en tres preguntas",
+          "info": "22–30 s · ronda rápida a dos voces",
+          "link": "https://www.tiktok.com/@dra.verovzz/video/7697320657222192392",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-09.jpg",
+          "grabado": false
+        },
+        {
+          "slug": "r4-10",
+          "titulo": "¿Qué son esos puntitos debajo del alineador?",
+          "info": "30–40 s · demostración de Aliwell",
+          "link": "https://www.tiktok.com/@ortodoncista.andreag/video/7659953361348840722",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-10.jpg",
+          "grabado": false
+        },
+        {
+          "slug": "r4-11",
+          "titulo": "El alineador salió con la servilleta",
+          "info": "25–35 s · escena de sobremesa",
+          "link": "https://www.tiktok.com/@almuherraizortodoncia/video/7314313477949099296",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-11.jpg",
+          "grabado": false
+        },
+        {
+          "slug": "r4-12",
+          "titulo": "El cepillo que ya se jubiló",
+          "info": "20–28 s · humor visual con dos cepillos",
+          "link": "https://www.tiktok.com/@dra.erikasoria/video/7647006847991287048",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-12.jpg",
+          "grabado": false
+        }
+      ]
+    },
+    {
       "rec": "R2",
       "nombre": "Segunda grabación",
       "fecha": "16/06/2026",
