@@ -102,6 +102,78 @@
           "link": "https://www.tiktok.com/@dra.erikasoria/video/7647006847991287048",
           "thumb": "clientes/ale-paz-mx27k/thumbs/r4-12.jpg",
           "grabado": false
+        },
+        {
+          "slug": "r4-13",
+          "titulo": "El bracket que seguía en su lugar",
+          "info": "Ale en cámara con modelo · dos versiones",
+          "link": "https://www.instagram.com/reel/Df3CZSdvt49/",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-reel-aliwell.jpg",
+          "versiones": [
+            {
+              "t": "Codex",
+              "g": "r4-13"
+            },
+            {
+              "t": "Claude Opus 5.5",
+              "g": "r4-13-claude"
+            }
+          ],
+          "grabado": false
+        },
+        {
+          "slug": "r4-14",
+          "titulo": "El último instante de la mordida",
+          "info": "Ale en cámara con modelo · dos versiones",
+          "link": "https://www.instagram.com/reel/Df3CZSdvt49/",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-reel-aliwell.jpg",
+          "versiones": [
+            {
+              "t": "Codex",
+              "g": "r4-14"
+            },
+            {
+              "t": "Claude Opus 5.5",
+              "g": "r4-14-claude"
+            }
+          ],
+          "grabado": false
+        },
+        {
+          "slug": "r4-15",
+          "titulo": "¿Dónde quedó la raíz del diente de leche?",
+          "info": "Solo voz de Ale · animación del equipo · dos versiones",
+          "link": "https://www.instagram.com/reel/Df3CZSdvt49/",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-reel-aliwell.jpg",
+          "versiones": [
+            {
+              "t": "Codex",
+              "g": "r4-15"
+            },
+            {
+              "t": "Claude Opus 5.5",
+              "g": "r4-15-claude"
+            }
+          ],
+          "grabado": false
+        },
+        {
+          "slug": "r4-16",
+          "titulo": "El día que apareció la manchita blanca",
+          "info": "Solo voz de Ale · animación del equipo · dos versiones",
+          "link": "https://www.instagram.com/reel/Df3CZSdvt49/",
+          "thumb": "clientes/ale-paz-mx27k/thumbs/r4-reel-aliwell.jpg",
+          "versiones": [
+            {
+              "t": "Codex",
+              "g": "r4-16"
+            },
+            {
+              "t": "Claude Opus 5.5",
+              "g": "r4-16-claude"
+            }
+          ],
+          "grabado": false
         }
       ]
     },
