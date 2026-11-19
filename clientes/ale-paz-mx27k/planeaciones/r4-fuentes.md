@@ -8,7 +8,7 @@ Firma de cierre en los talking head: «Soy tu doctora Ale Paz. Por una sonrisa e
 
 | Guion | Codex | Ahora | Qué cambió |
 |---|---|---|---|
-| R4-01 | 68 | 92 (9·9·9·10·9) | Vuelve al listicle con objeción y firma. Tema nuevo: enjuague, porque "cuándo no cepillarte" ya está en R3-04 y R3-05 |
+| R4-01 | 68 | 90 | Calca de la referencia: cinco momentos en los que no cepillarte, mismo orden, objeción y firma. Dante pidió volver al tema original (19-nov) |
 | R4-02 | 72 | 90 (9·8·9·10·9) | Vuelve a "3 cosas que no sabías". Mal aliento cambia por dientes que se mueven (choque con R3-01) |
 | R4-03 | 74 | 88 (8·8·9·10·9) | Vuelve al glosario con los cuatro términos de la referencia, un plano por término |
 | R4-04 | 68 | 92 (9·9·9·9·10) | Vuelve al chiste de la referencia (zapatos Dolce & Gabbana) en una toma de 7–10 s |
@@ -42,20 +42,17 @@ R4-06 y R4-10 quedan en 86: el primero por ser el más largo de la grabación; e
 R4-06, R4-07 y R4-08 tienen menos de mil vistas (R4-06 se publicó el 18-nov). Todavía no son referencias probadas.
 
 ## Choques revisados
-- R4-01 · la referencia (no cepillarte después de vomitar, café, cítricos, refresco, dulces) es el mismo tema de R3-04 y R3-05, ya grabados. Se conservó la arquitectura con otro tema. La idea de Codex (limonada a sorbitos toda la mañana) queda libre para otra grabación.
+- R4-01 · vómito, cítricos y refresco repiten R3-04 (ya grabado); café y gomitas/chilitos/dulces son nuevos. Dante prefirió el guion igual a la referencia. La versión de enjuague (flúor, alcohol, clorhexidina) queda libre para otra grabación.
 - R4-02 · el mal aliento por bacterias en la lengua ya está en R3-01. Se cambió ese dato. "Caries sin dolor" toca de lado R2-18 ("diente picado chiquito"), sin repetir frase.
 - R4-03 · gingivitis aparece en R2-16 como señal; aquí es definición. Sin choque de fondo.
 - R4-08 · R2-05 ya dice "elote en mazorca, prohibido" con brackets. Aquí es meme sin explicación; misma idea, otro formato.
 - R4-09 · se quitó el "espera 30 minutos después de comer" de la referencia porque es R3-04. Lengua (R3-09) y cambio de cepillo (R3-01) aparecen de pasada.
 - R4-10 · 20–22 horas ya salió en R2-05, R2-06, R2-22 y R3-03. Aquí va en una sola línea. Ver nota de casos complejos abajo.
 - R4-11 · el tip de la servilleta ya está en R2-22 y R3-03; se quitó.
-- Dentro de R4: R4-01 (enjuagarte después de cepillarte) y R4-09 (enjuague en lugar del cepillo) hablan de enjuague desde ángulos distintos.
 
 ## Fuentes por guion
 **R4-01**
-- Escupe y no enjuagues; el enjuague bucal a otra hora porque quita el flúor de la pasta (NHS): https://www.nhs.uk/live-well/healthy-teeth-and-gums/how-to-keep-your-teeth-clean/
-- Boca seca: evitar enjuagues con alcohol (ADA, xerostomía): https://www.ada.org/en/resources/research/science-and-research-institute/oral-health-topics/xerostomia — la evidencia directa es débil; es la recomendación habitual.
-- Clorhexidina: manchas extrínsecas con uso de 4 semanas o más, evidencia moderada (Cochrane, James et al. 2017): https://pmc.ncbi.nlm.nih.gov/articles/PMC6464488
+- Datos de la referencia, conservados. Esperar 30–60 min tras algo ácido antes de cepillar (ADA, erosión): https://www.ada.org/resources/ada-library/oral-health-topics/dental-erosion
 
 **R4-02**
 - Diferencias medibles en dientes y paladar de gemelos idénticos (BMC Oral Health 2020): https://pmc.ncbi.nlm.nih.gov/articles/PMC7532102 — la unicidad estadística de la dentadura todavía se estudia; el dato viene de la referencia y se conserva.
@@ -90,9 +87,9 @@ R4-06, R4-07 y R4-08 tienen menos de mil vistas (R4-06 se publicó el 18-nov). T
 R4-04, R4-05, R4-08 y R4-12 son humor sin dato de salud.
 
 ## Ganchos (el principal es el del teleprompter)
-**R4-01** · Principal: «Cuatro veces en las que yo no te recomiendo enjuagarte la boca.»
-- «Cuatro momentos en los que no te recomiendo enjuagarte.» · «Hay cuatro veces en las que yo no me enjuagaría la boca.» · «Cuatro veces en las que tu dentista prefiere que no te enjuagues.»
-- Disruptivos: «Ese buche de agua después de cepillarte se lleva lo mejor de la pasta.» · «Deja de enjuagarte después de cepillarte.»
+**R4-01** · Principal: «Cinco veces en las que yo no te recomiendo cepillarte los dientes.»
+- «Hay cinco momentos en los que yo no me cepillaría.» · «Cinco veces en las que tu dentista prefiere que no te cepilles.» · «No te cepilles en estos cinco momentos.»
+- Disruptivos: «Después del café, suelta el cepillo.» · «Cepillarte a veces le hace daño a tus dientes.»
 
 **R4-02** · Principal: «Tres cosas de tus dientes que seguramente no sabías.»
 - «Tres datos de tus dientes que seguro no sabías.» · «Tres cosas que quizás no sabías de tus dientes.» · «Tres cosas de tu boca que nadie te había contado.»
