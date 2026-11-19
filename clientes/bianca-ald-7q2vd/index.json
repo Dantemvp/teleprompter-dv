@@ -2,6 +2,115 @@
   "cliente": "Bianca Aldama Boutique",
   "grabaciones": [
     {
+      "rec": "R22",
+      "nombre": "Grabación 22 · referencias de Alma",
+      "fecha": "Por definir",
+      "locacion": "",
+      "guiones": [
+        {
+          "slug": "g-205",
+          "titulo": "Transición · cambio de look por franjas",
+          "info": "12 seg de referencia · @jennifergiron_ · Cambio de bata a look completo mediante franjas horizontales; la autora indica que usa dos videos.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DT21P-kjtlu/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-205.jpg",
+          "thumb_alt": "Vista previa original de transición · cambio de look por franjas"
+        },
+        {
+          "slug": "g-206",
+          "titulo": "Transición · una base, tres outfits",
+          "info": "8 seg de referencia · @solangeeferreira · Jeans y playera como base; tres versiones con prendas de abrigo, alternando con el fondo vacío.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DRfQlR-CBDk/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-206.jpg",
+          "thumb_alt": "Vista previa original de transición · una base, tres outfits"
+        },
+        {
+          "slug": "g-207",
+          "titulo": "Referencia · tres reglas para elevar tus outfits",
+          "info": "35 seg de referencia · @domenialessi · Explicación frente a cámara con apoyos visuales: básico con prenda elegante, tres colores y cambio de complementos. Pendiente de guion.",
+          "categoria": "guion",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DYVVobLRIfZ/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-207.jpg",
+          "thumb_alt": "Vista previa original de referencia · tres reglas para elevar tus outfits"
+        },
+        {
+          "slug": "g-208",
+          "titulo": "Referencia · test de estilo personal",
+          "info": "47 seg de referencia · @barbarasanzs · Test frente a cámara con opciones visuales de looks, prendas, zapatos y accesorios; resultados en la descripción. Pendiente de guion.",
+          "categoria": "guion",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DdB-sy6RcyK/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-208.jpg",
+          "thumb_alt": "Vista previa original de referencia · test de estilo personal"
+        },
+        {
+          "slug": "g-209",
+          "titulo": "Referencia · colores inspirados en la naturaleza",
+          "info": "21 seg de referencia · @ittanogueira · Apertura hablada y montaje de imágenes de naturaleza con conjuntos que retoman sus colores. Pendiente de guion.",
+          "categoria": "guion",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DYiwobjOMZt/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-209.jpg",
+          "thumb_alt": "Vista previa original de referencia · colores inspirados en la naturaleza"
+        },
+        {
+          "slug": "g-210",
+          "titulo": "Zapatería · zapatos para variar los tenis",
+          "info": "84 seg de referencia · 123 seg de referencia · @kaokadowaki · Cordones, Mary Janes, mocasines, sandalias y planos tipo slipper. Referencia repetida de R21 (g-190), incluida nuevamente por Dante; se conserva la ficha anterior.",
+          "categoria": "tienda",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@kaokadowaki/video/7692188516733717778",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-210.jpg",
+          "thumb_alt": "Vista previa original de zapatería · zapatos para variar los tenis"
+        },
+        {
+          "slug": "g-211",
+          "titulo": "Transición · manos al lente",
+          "info": "9 seg de referencia · @firkam727 · Manos hacia el lente antes del cambio de pelo, maquillaje y look. Referencia repetida de R21 (g-189), incluida nuevamente por Dante; se conserva la ficha anterior.",
+          "categoria": "trans-int",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@firkam727/video/7693911893899005215",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-211.jpg",
+          "thumb_alt": "Vista previa original de transición · manos al lente"
+        },
+        {
+          "slug": "g-212",
+          "titulo": "Referencia · estilo casual elegante",
+          "info": "87 seg de referencia · @apxline.o · Explicación frente a cámara y ejemplos de colores, camisa y playera blancas, suéter con cuello en V, jeans rectos, faldas midi, calzado y accesorios. Pendiente de guion.",
+          "categoria": "guion",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@apxline.o/video/7685356186006293767",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-212.jpg",
+          "thumb_alt": "Vista previa original de referencia · estilo casual elegante"
+        },
+        {
+          "slug": "g-213",
+          "titulo": "Referencia · cinco consejos para un look más pulido",
+          "info": "89 seg de referencia · @anapao.jimenez · Joyería, calzado, mezclilla oscura, monocromáticos y detalles; añade un consejo extra sobre cuidado de la ropa. Pendiente de guion.",
+          "categoria": "guion",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.tiktok.com/@anapao.jimenez/video/7704878635953523975",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-213.jpg",
+          "thumb_alt": "Vista previa original de referencia · cinco consejos para un look más pulido"
+        }
+      ],
+      "referenciasVisibles": true,
+      "prendasEnTexto": true
+    },
+    {
       "rec": "R21",
       "nombre": "Grabación 21 · guiones, looks y transiciones",
       "fecha": "Por definir",
