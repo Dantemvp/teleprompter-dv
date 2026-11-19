@@ -3,7 +3,7 @@
   "grabaciones": [
     {
       "rec": "R22",
-      "nombre": "Grabación 22 · referencias de Alma",
+      "nombre": "Grabación 22 · guiones, transiciones y cambios",
       "fecha": "Por definir",
       "locacion": "",
       "guiones": [
@@ -217,10 +217,217 @@
           "link": "https://www.tiktok.com/@anapao.jimenez/video/7704878635953523975",
           "thumb": "clientes/bianca-ald-7q2vd/refs/g-213.jpg",
           "thumb_alt": "Vista previa original de referencia · cinco consejos para un look más pulido"
+        },
+        {
+          "slug": "g-222",
+          "titulo": "Cambio 1 · look por capas",
+          "info": "Referencia anterior de Fashion Nova (R21/g-199) para ubicar el formato de cambio frente a cámara. Nuevo look de REC 22; vestuario y dirección a cargo de Dante. No se fija la prenda, el color ni el estilismo del original.",
+          "categoria": "viral-organica",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/Dfe7CnGFSkV/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-222.jpg",
+          "thumb_alt": "Referencia anterior de Fashion Nova · Cambiándose · conjunto beige y abrigo café",
+          "referencia_reutilizada_de": {
+            "rec": "R21",
+            "slug": "g-199"
+          },
+          "direccion": "Dante",
+          "vestuario": "Por definir para REC 22"
+        },
+        {
+          "slug": "g-223",
+          "titulo": "Cambio 2 · look negro",
+          "info": "Referencia anterior de Fashion Nova (R21/g-200) para ubicar el formato de cambio frente a cámara. Nuevo look de REC 22; vestuario y dirección a cargo de Dante. No se fija la prenda, el color ni el estilismo del original.",
+          "categoria": "viral-organica",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfYDe5JEn3V/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-223.jpg",
+          "thumb_alt": "Referencia anterior de Fashion Nova · Cambiándose · capri negro y chamarra efecto piel",
+          "referencia_reutilizada_de": {
+            "rec": "R21",
+            "slug": "g-200"
+          },
+          "direccion": "Dante",
+          "vestuario": "Por definir para REC 22"
+        },
+        {
+          "slug": "g-224",
+          "titulo": "Cambio 3 · falda y camisa",
+          "info": "Referencia anterior de Fashion Nova (R21/g-201) para ubicar el formato de cambio frente a cámara. Nuevo look de REC 22; vestuario y dirección a cargo de Dante. No se fija la prenda, el color ni el estilismo del original.",
+          "categoria": "viral-organica",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfYe_ESkSzr/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-224.jpg",
+          "thumb_alt": "Referencia anterior de Fashion Nova · Cambiándose · falda café y camisa celeste",
+          "referencia_reutilizada_de": {
+            "rec": "R21",
+            "slug": "g-201"
+          },
+          "direccion": "Dante",
+          "vestuario": "Por definir para REC 22"
+        },
+        {
+          "slug": "g-225",
+          "titulo": "Cambio 4 · prenda con movimiento",
+          "info": "Referencia anterior de Fashion Nova (R21/g-202) para ubicar el formato de cambio frente a cámara. Nuevo look de REC 22; vestuario y dirección a cargo de Dante. No se fija la prenda, el color ni el estilismo del original.",
+          "categoria": "viral-organica",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfNion4EQPH/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-225.jpg",
+          "thumb_alt": "Referencia anterior de Fashion Nova · Cambiándose · falda negra con flecos",
+          "referencia_reutilizada_de": {
+            "rec": "R21",
+            "slug": "g-202"
+          },
+          "direccion": "Dante",
+          "vestuario": "Por definir para REC 22"
+        },
+        {
+          "slug": "g-226",
+          "titulo": "Cambio 5 · pantalón",
+          "info": "Referencia anterior de Fashion Nova (R20/g-187) para ubicar el formato de cambio frente a cámara. Nuevo look de REC 22; vestuario y dirección a cargo de Dante. No se fija la prenda, el color ni el estilismo del original.",
+          "categoria": "viral-organica",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfQHdBvgsAR/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-226.jpg",
+          "thumb_alt": "Referencia anterior de Fashion Nova · Cambiándose · pantalón negro",
+          "referencia_reutilizada_de": {
+            "rec": "R20",
+            "slug": "g-187"
+          },
+          "direccion": "Dante",
+          "vestuario": "Por definir para REC 22"
+        },
+        {
+          "slug": "g-227",
+          "titulo": "Cambio 6 · conjunto de dos piezas",
+          "info": "Referencia anterior de Fashion Nova (R20/g-188) para ubicar el formato de cambio frente a cámara. Nuevo look de REC 22; vestuario y dirección a cargo de Dante. No se fija la prenda, el color ni el estilismo del original.",
+          "categoria": "viral-organica",
+          "tipo": "ref",
+          "grabado": false,
+          "link": "https://www.instagram.com/reel/DfDIpMTjRQB/",
+          "thumb": "clientes/bianca-ald-7q2vd/refs/g-227.jpg",
+          "thumb_alt": "Referencia anterior de Fashion Nova · Cambiándose · conjunto a rayas",
+          "referencia_reutilizada_de": {
+            "rec": "R20",
+            "slug": "g-188"
+          },
+          "direccion": "Dante",
+          "vestuario": "Por definir para REC 22"
         }
       ],
       "referenciasVisibles": true,
-      "prendasEnTexto": true
+      "prendasEnTexto": true,
+      "timeline": [
+        {
+          "hora": "",
+          "titulo": "VUELTA 1 · 2 GUIONES",
+          "slugs": [
+            "g-214",
+            "g-215"
+          ],
+          "nota": "Prioridad Bianca · estampados y colores; leggings."
+        },
+        {
+          "hora": "",
+          "titulo": "VUELTA 1 · 2 TRANSICIONES",
+          "slugs": [
+            "g-219",
+            "g-220"
+          ],
+          "nota": "Prioridad Bianca."
+        },
+        {
+          "hora": "",
+          "titulo": "VUELTA 1 · 2 CAMBIOS",
+          "slugs": [
+            "g-222",
+            "g-223"
+          ],
+          "nota": "Referencias anteriores de Fashion Nova. Looks nuevos y dirección de Dante."
+        },
+        {
+          "hora": "",
+          "titulo": "VUELTA 2 · 2 GUIONES",
+          "slugs": [
+            "g-216",
+            "g-217"
+          ],
+          "nota": "Prioridad Bianca · estilo personal; combinaciones de texturas."
+        },
+        {
+          "hora": "",
+          "titulo": "VUELTA 2 · 2 TRANSICIONES",
+          "slugs": [
+            "g-205",
+            "g-206"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "VUELTA 2 · 2 CAMBIOS",
+          "slugs": [
+            "g-224",
+            "g-225"
+          ],
+          "nota": "Referencias anteriores de Fashion Nova. Looks nuevos y dirección de Dante."
+        },
+        {
+          "hora": "",
+          "titulo": "VUELTA 3 · 2 GUIONES",
+          "slugs": [
+            "g-207",
+            "g-208"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "VUELTA 3 · 1 TRANSICIÓN",
+          "slugs": [
+            "g-211"
+          ],
+          "nota": "Quedan cinco transiciones en total: esta vuelta contiene la última."
+        },
+        {
+          "hora": "",
+          "titulo": "VUELTA 3 · 2 CAMBIOS",
+          "slugs": [
+            "g-226",
+            "g-227"
+          ],
+          "nota": "Referencias anteriores de Fashion Nova. Looks nuevos y dirección de Dante."
+        },
+        {
+          "hora": "",
+          "titulo": "CIERRE · 2 GUIONES",
+          "slugs": [
+            "g-209",
+            "g-212"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "CIERRE · GUION Y ZAPATERÍA",
+          "slugs": [
+            "g-213",
+            "g-210"
+          ]
+        },
+        {
+          "hora": "",
+          "titulo": "CIERRE · 2 CHUSCOS",
+          "slugs": [
+            "g-218",
+            "g-221"
+          ],
+          "nota": "Prioridad Bianca · reservar a las personas que participen en los sketches."
+        }
+      ]
     },
     {
       "rec": "R21",
