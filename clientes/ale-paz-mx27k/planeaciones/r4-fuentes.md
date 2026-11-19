@@ -4,6 +4,14 @@ Redacción: 19-nov-2026 (Claude). Los doce guiones que dejó Codex se reescribie
 
 Firma de cierre en los talking head: «Soy tu doctora Ale Paz. Por una sonrisa en paz.» Sale de la frase que la doctora agregó por su cuenta en R2-06.
 
+## 19-nov · Cambio de criterio: calcar la referencia
+Dante pidió que cada guion quede igual a su referencia: mismo tema, mismos puntos, mismo orden y mismos datos, solo con la voz de Ale. R4-01 a R4-12 se rehicieron así. Lo que ya estaba grabado y se repite:
+- R4-01: vómito, cítricos y refresco (R3-04).
+- R4-02: mal aliento por bacterias en la lengua (R3-01).
+- R4-11: no guardar el alineador en papel (R2-22, R3-03).
+- R4-10: "también pueden con casos complejos" contradice lo dicho en R2-06 y R3-06.
+Las tablas y ganchos de abajo son de la versión anterior (arquitectura de la referencia con temas cambiados).
+
 ## Puntajes (rúbrica guionista-core: Hook · Retención · Humano · Compliance · Ritmo, ×2)
 
 | Guion | Codex | Ahora | Qué cambió |
