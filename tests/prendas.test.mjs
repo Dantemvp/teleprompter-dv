@@ -72,6 +72,8 @@ test('detecta prendas en cualquier guion y conserva materiales sin inventar prod
   assert.deepEqual(names, ['top de encaje forrado','chamarra de gamuza','bota coñac']);
   assert.equal(detect.identificar('Tenemos tops y faldas, no autopistas ni atascos.').length, 2);
   assert.deepEqual([...detect.identificar('top rojo y blusa azul con pantalón verde')],['top rojo','blusa azul','pantalón verde']);
+  assert.deepEqual([...detect.identificar('leggings negros, minifalda gris, medias, sudadera, flats, broche y lentes')],['leggings negros','minifalda gris','medias','sudadera','flats','broche','lentes']);
+  assert.deepEqual([...detect.identificar('falda de serpiente, falda bambi, suéter vino y botas de punta')],['falda de serpiente','falda bambi','suéter vino','botas de punta']);
   assert.equal(detect.idPara(CLIENT,'g-151','Top de encaje'),detect.idPara(CLIENT,'g-151','TOP DE ENCAJE'));
   assert.notEqual(detect.idPara(CLIENT,'g-151','Top'),detect.idPara(CLIENT,'g-152','Top'));
 });
