@@ -10,6 +10,29 @@
       "ventana": "Selección de referencias · fecha por definir",
       "timeline": [
         {
+          "titulo": "Educativos para desarrollar",
+          "slugs": [
+            "r16-ref-03",
+            "r16-ref-02"
+          ],
+          "nota": "InBody: comparar dos reportes y explicar qué vuelve útil esa comparación. Fuerza: una demostración de progreso con el mismo ejercicio."
+        },
+        {
+          "titulo": "Chuscos de consultorio",
+          "slugs": [
+            "r16-ref-01",
+            "r16-ref-05"
+          ],
+          "nota": "Vestuario y lentes. El segundo se puede resolver con una toma fija en el escritorio."
+        },
+        {
+          "titulo": "En reserva · especial de la vista",
+          "slugs": [
+            "r16-ref-04"
+          ],
+          "nota": "El portal ya tiene tres versiones. Elegir la pieza del especial antes de sumar otra grabación."
+        },
+        {
           "titulo": "Sostener los cambios después de bajar de peso",
           "slugs": [],
           "nota": "Antecedente de Fedra: ya contó qué le costó mantener después de bajar 40 kilos. Para una segunda parte, buscar una referencia que aporte una situación concreta de su vida diaria que ella quiera contar."
@@ -18,14 +41,55 @@
           "titulo": "Alimentación que se pueda mostrar en cámara",
           "slugs": [],
           "nota": "Antecedente de Fedra: ya mostró cuánta proteína aporta un plato y habló de porciones. Buscar otra decisión cotidiana que pueda demostrarse con comida a cuadro."
-        },
-        {
-          "titulo": "Referencias de la próxima grabación",
-          "slugs": [],
-          "nota": "En selección. Cada propuesta reunirá el enlace original, qué interesa de la referencia, el antecedente más cercano de Fedra y qué haría falta para grabarla."
         }
       ],
-      "guiones": []
+      "guiones": [
+        {
+          "slug": "r16-ref-01",
+          "titulo": "El outfit de consultorio",
+          "info": "@optiaprende · Chusco de vestuario con «Pump It». Se ve el uniforme desde arriba. Revisar el remate antes de decidir las tomas y los cambios de ropa.",
+          "tipo": "ref",
+          "categoria": "chusco",
+          "link": "https://www.instagram.com/reel/Dd9umLqvONI/",
+          "grabado": false
+        },
+        {
+          "slug": "r16-ref-02",
+          "titulo": "Cómo ver el progreso cuando entrenas fuerza",
+          "info": "@dr.mauriciogonzalez · Carrusel de seis láminas. Para video: mostrar el mismo ejercicio en dos sesiones y anotar cómo cambia el esfuerzo. Una mancuerna y un registro de entrenamiento.",
+          "tipo": "ref",
+          "categoria": "idea",
+          "link": "https://www.instagram.com/p/De-TqjZGzcX/",
+          "grabado": false
+        },
+        {
+          "slug": "r16-ref-03",
+          "titulo": "Por qué cambió mi resultado del InBody",
+          "info": "@nutriologamaite · Fedra ya habló de perder músculo. Aquí puede mostrar qué revisa antes de comparar dos mediciones. Preparar el equipo y dos reportes ilustrativos. Confirmar el protocolo del modelo.",
+          "tipo": "ref",
+          "categoria": "idea",
+          "link": "https://www.instagram.com/reel/Decedq7guuV/",
+          "grabado": false
+        },
+        {
+          "slug": "r16-ref-04",
+          "titulo": "GLP-1 y la vista · referencia para el especial",
+          "info": "@hambreyhormonas y @drroi · Contrastar con las tres versiones del especial. Conservar en reserva. Si Fedra retoma el tema, centrar un video breve en qué hacer ante un cambio súbito de visión.",
+          "tipo": "ref",
+          "categoria": "idea",
+          "link": "https://www.instagram.com/reel/Dfk3IkgK_Gr/",
+          "grabado": false
+        },
+        {
+          "slug": "r16-ref-05",
+          "titulo": "Por qué los pacientes siempre te buscan",
+          "info": "@drasuhailluna · Pregunta en pantalla, gesto a cámara y cambio a lentes de sol al remate del audio. Fedra sola, sentada al escritorio. Preparar los dos pares de lentes.",
+          "tipo": "ref",
+          "categoria": "chusco",
+          "link": "https://www.instagram.com/reel/DfxKOEXhN-W/",
+          "grabado": false
+        }
+      ]
     },
     {
       "rec": "ESP",
