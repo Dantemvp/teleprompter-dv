@@ -2,6 +2,32 @@
   "cliente": "Dra. Fedra Aldama",
   "grabaciones": [
     {
+      "rec": "R16",
+      "nombre": "Planeación de la próxima grabación",
+      "fecha": "Por definir",
+      "locacion": "Por definir",
+      "abierta": true,
+      "ventana": "Selección de referencias · fecha por definir",
+      "timeline": [
+        {
+          "titulo": "Sostener los cambios después de bajar de peso",
+          "slugs": [],
+          "nota": "Antecedente de Fedra: ya contó qué le costó mantener después de bajar 40 kilos. Para una segunda parte, buscar una referencia que aporte una situación concreta de su vida diaria que ella quiera contar."
+        },
+        {
+          "titulo": "Alimentación que se pueda mostrar en cámara",
+          "slugs": [],
+          "nota": "Antecedente de Fedra: ya mostró cuánta proteína aporta un plato y habló de porciones. Buscar otra decisión cotidiana que pueda demostrarse con comida a cuadro."
+        },
+        {
+          "titulo": "Referencias de la próxima grabación",
+          "slugs": [],
+          "nota": "En selección. Cada propuesta reunirá el enlace original, qué interesa de la referencia, el antecedente más cercano de Fedra y qué haría falta para grabarla."
+        }
+      ],
+      "guiones": []
+    },
+    {
       "rec": "ESP",
       "nombre": "Especial · GLP-1 y la vista",
       "fecha": "Por definir",
