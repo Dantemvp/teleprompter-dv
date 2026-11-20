@@ -739,6 +739,7 @@ const CAT_LABELS = {
   'idea':      'IDEAS FEDRA',
   'chusco':    'CHUSCO',
   'ganador':   '🏆 GANADORES (inspiración)',
+  'pauta':     '📣 PAUTA',
   '__otros':   'OTROS'
 };
 const CLIENT_CATS = {
@@ -746,10 +747,10 @@ const CLIENT_CATS = {
   'bianca-ald-7q2vd': ['ganador', 'guion', 'viral-organica', 'chusco', 'trans-int', 'trans-ext', 'caminadora', 'juntas', 'tienda'],
   'skin-club-e67ff4': ['ganador', 'formato-clinica', 'ingredientes', 'guion', 'chusco', 'paloma', 'camila', 'kaori', 'diego', 'nat', 'juntos', 'tertulia', 'ugc', 'influencer'],
   'fedra-ald-t84qz': ['plan', 'xeomeen', 'idea', 'guion-corto', 'guion-largo', 'estetica', 'guion', 'chusco'],
-  'ale-paz-mx27k': ['guion']
+  'ale-paz-mx27k': ['guion', 'pauta']
 };
 // Prefijo del código visible (numeración posicional automática por grabación/categoría).
-const CAT_PREFIX = { 'plan':'RM', 'guion':'G', 'ingredientes':'ING', 'guion-corto':'GC', 'guion-largo':'GL', 'estetica':'ME', 'kaori':'K', 'diego':'D', 'nat':'N', 'paloma':'P', 'camila':'CA', 'juntos':'J', 'tertulia':'TE', 'trans-int':'I', 'trans-ext':'E', 'caminadora':'CM', 'juntas':'JU', 'viral-organica':'VO', 'tienda':'T', 'ugc':'U', 'xeomeen':'XE', 'influencer':'INF', 'idea':'ID', 'chusco':'C', 'ganador':'W', '__otros':'X' };
+const CAT_PREFIX = { 'plan':'RM', 'guion':'G', 'ingredientes':'ING', 'guion-corto':'GC', 'guion-largo':'GL', 'estetica':'ME', 'kaori':'K', 'diego':'D', 'nat':'N', 'paloma':'P', 'camila':'CA', 'juntos':'J', 'tertulia':'TE', 'trans-int':'I', 'trans-ext':'E', 'caminadora':'CM', 'juntas':'JU', 'viral-organica':'VO', 'tienda':'T', 'ugc':'U', 'xeomeen':'XE', 'influencer':'INF', 'idea':'ID', 'chusco':'C', 'ganador':'W', 'pauta':'PA', '__otros':'X' };
 // Devuelve los items de una grabación/lista que caen en una categoría; '__otros' captura todo lo que no esté en la lista conocida (para que nada desaparezca).
 function itemsForCat(list, key, known){
   return key === '__otros'
