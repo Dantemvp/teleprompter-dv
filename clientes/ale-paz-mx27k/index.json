@@ -150,7 +150,7 @@
               "g": "r4-15-claude"
             }
           ],
-          "grabado": false
+          "grabado": true
         },
         {
           "slug": "r4-16",
