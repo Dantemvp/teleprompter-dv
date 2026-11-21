@@ -70,7 +70,8 @@
           "info": "25–30 s · talking head · ronda rápida de sí o no",
           "link": "https://www.tiktok.com/@dra.verovzz/video/7697320657222192392",
           "thumb": "clientes/ale-paz-mx27k/thumbs/r4-09.jpg",
-          "grabado": true
+          "grabado": true,
+          "miniatura": true
         },
         {
           "slug": "r4-10",
