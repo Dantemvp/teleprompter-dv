@@ -14,9 +14,11 @@
           "slugs": [
             "r16-ref-09",
             "r16-ref-03",
+            "r16-ref-14",
             "r16-ref-02",
             "r16-ref-11",
             "r16-ref-12",
+            "r16-ref-15",
             "r16-ref-13"
           ],
           "nota": "Primero, cómo conservar músculo durante la pérdida de peso. Para las demostraciones: dos reportes de ejemplo de InBody, una mancuerna, un calendario semanal y un plato. Retatrutida requiere actualizar las fuentes antes de grabar."
@@ -194,6 +196,28 @@
           "grabado": false,
           "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-13.jpg",
           "thumb_alt": "Portada de la referencia · Retatrutida · qué sabemos de los viales que se ofrecen en redes"
+        },
+        {
+          "slug": "r16-ref-14",
+          "titulo": "La báscula marca lo mismo y la ropa queda más suelta",
+          "info": "@concienciaysalud · Referencia para el bloque de InBody. La autora compara modelos de grasa y músculo del mismo peso. Para Fedra: partir de cómo queda un pantalón y mostrar qué datos de dos visitas compararía. Una foto o la firmeza al tacto por sí solas no acreditan ganancia muscular.",
+          "tipo": "ref",
+          "categoria": "idea",
+          "link": "https://www.instagram.com/reel/DfW3snBuAv9/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-14.jpg",
+          "thumb_alt": "Carmen Ramírez muestra dos modelos de tejido en el consultorio"
+        },
+        {
+          "slug": "r16-ref-15",
+          "titulo": "Molestias con GLP-1 · formato de tarjetas en pantalla",
+          "info": "@dramariavega · La doctora señala rótulos que aparecen al ritmo de la música. Fedra ya publicó sobre náusea. Para una continuación: elegir una molestia pendiente, como el estreñimiento, y mostrar qué preguntaría en consulta. Plano fijo, espacio a los lados y texto en edición.",
+          "tipo": "ref",
+          "categoria": "idea",
+          "link": "https://www.instagram.com/reel/DdXDZI7R2Ha/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-15.jpg",
+          "thumb_alt": "La Dra. Vega presenta las molestias con GLP-1 mediante rótulos en pantalla"
         }
       ],
       "referenciasVisibles": true
