@@ -51,7 +51,9 @@
           "tipo": "ref",
           "categoria": "chusco",
           "link": "https://www.instagram.com/reel/Dd9umLqvONI/",
-          "grabado": false
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-01.jpg",
+          "thumb_alt": "Uniforme visto desde arriba en el reel de optiaprende"
         },
         {
           "slug": "r16-ref-02",
@@ -60,7 +62,9 @@
           "tipo": "ref",
           "categoria": "idea",
           "link": "https://www.instagram.com/p/De-TqjZGzcX/",
-          "grabado": false
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-02.jpg",
+          "thumb_alt": "Portada del carrusel sobre músculo y fuerza del Dr. Mauricio González"
         },
         {
           "slug": "r16-ref-03",
@@ -69,7 +73,9 @@
           "tipo": "ref",
           "categoria": "idea",
           "link": "https://www.instagram.com/reel/Decedq7guuV/",
-          "grabado": false
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-03.jpg",
+          "thumb_alt": "Maite Martínez presenta el tema del InBody"
         },
         {
           "slug": "r16-ref-04",
@@ -78,7 +84,9 @@
           "tipo": "ref",
           "categoria": "idea",
           "link": "https://www.instagram.com/reel/Dfk3IkgK_Gr/",
-          "grabado": false
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-04.jpg",
+          "thumb_alt": "Portada del reel sobre la vista y los GLP-1"
         },
         {
           "slug": "r16-ref-05",
@@ -87,9 +95,12 @@
           "tipo": "ref",
           "categoria": "chusco",
           "link": "https://www.instagram.com/reel/DfxKOEXhN-W/",
-          "grabado": false
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-05.jpg",
+          "thumb_alt": "Dra. Suhail Luna sentada en su consultorio"
         }
-      ]
+      ],
+      "referenciasVisibles": true
     },
     {
       "rec": "ESP",
