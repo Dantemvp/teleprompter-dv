@@ -12,23 +12,31 @@
         {
           "titulo": "Educativos para desarrollar",
           "slugs": [
+            "r16-ref-09",
             "r16-ref-03",
-            "r16-ref-02"
+            "r16-ref-02",
+            "r16-ref-11",
+            "r16-ref-12",
+            "r16-ref-13"
           ],
-          "nota": "InBody: comparar dos reportes y explicar qué vuelve útil esa comparación. Fuerza: una demostración de progreso con el mismo ejercicio."
+          "nota": "Primero, cómo conservar músculo durante la pérdida de peso. Para las demostraciones: dos reportes de ejemplo de InBody, una mancuerna, un calendario semanal y un plato. Retatrutida requiere actualizar las fuentes antes de grabar."
         },
         {
           "titulo": "Chuscos de consultorio",
           "slugs": [
             "r16-ref-01",
-            "r16-ref-05"
+            "r16-ref-05",
+            "r16-ref-06",
+            "r16-ref-07"
           ],
           "nota": "Vestuario y lentes. El segundo se puede resolver con una toma fija en el escritorio."
         },
         {
           "titulo": "En reserva · especial de la vista",
           "slugs": [
-            "r16-ref-04"
+            "r16-ref-04",
+            "r16-ref-08",
+            "r16-ref-10"
           ],
           "nota": "El portal ya tiene tres versiones. Elegir la pieza del especial antes de sumar otra grabación."
         },
@@ -98,6 +106,94 @@
           "grabado": false,
           "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-05.jpg",
           "thumb_alt": "Dra. Suhail Luna sentada en su consultorio"
+        },
+        {
+          "slug": "r16-ref-06",
+          "titulo": "Chusco · Cuando te preguntan qué quieres de Navidad",
+          "info": "@dra_giacchi · La portada responde a la pregunta del regalo con una imagen de consultorio. El original promociona una tarjeta de regalo. Para Fedra, trabajar el chiste con un objeto que elegiría ella. Pendiente cotejar el remate del video.",
+          "tipo": "ref",
+          "categoria": "chusco",
+          "link": "https://www.instagram.com/reel/Df8HLwPpmae/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-06.jpg",
+          "thumb_alt": "Portada de la referencia · Chusco · Cuando te preguntan qué quieres de Navidad"
+        },
+        {
+          "slug": "r16-ref-07",
+          "titulo": "Chusco · ¿En qué se te va el dinero?",
+          "info": "@por_saramachado · Cámara fija sobre una bandeja. Una mano pasa una tarjeta por distintos objetos del consultorio como si estuviera pagando. Para grabar: bandeja, material de utilería y tarjeta sin datos visibles.",
+          "tipo": "ref",
+          "categoria": "chusco",
+          "link": "https://www.instagram.com/reel/DfrlsTqvJSa/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-07.jpg",
+          "thumb_alt": "Portada de la referencia · Chusco · ¿En qué se te va el dinero?"
+        },
+        {
+          "slug": "r16-ref-08",
+          "titulo": "GLP-1 y la vista · el aviso de la FDA explicado por el Dr. Mau",
+          "info": "Referencia adicional para el especial. El aviso de noviembre y el riesgo absoluto ya aparecen en los tres textos de Fedra. Útil para comparar cómo cada médico responde a la preocupación inicial.",
+          "tipo": "ref",
+          "categoria": "idea",
+          "link": "https://www.tiktok.com/@drmauriciogonzalez/video/7706646072621305101",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-08.jpg",
+          "thumb_alt": "Portada de la referencia · GLP-1 y la vista · el aviso de la FDA explicado por el Dr. Mau"
+        },
+        {
+          "slug": "r16-ref-09",
+          "titulo": "Cómo cuidar el músculo mientras bajas de peso",
+          "info": "Prioridad de esta tanda. El Dr. Mau organiza cinco consejos sobre el ritmo de pérdida, fuerza, alimentación y expectativas. Fedra puede enseñar qué revisa cuando baja el peso y la persona siente que también perdió fuerza. Consultar R15 y la referencia de InBody.",
+          "tipo": "ref",
+          "categoria": "idea",
+          "link": "https://www.tiktok.com/@drmauriciogonzalez/video/7699138583998909710",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-09.jpg",
+          "thumb_alt": "Portada de la referencia · Cómo cuidar el músculo mientras bajas de peso"
+        },
+        {
+          "slug": "r16-ref-10",
+          "titulo": "GLP-1 y la vista · qué se sabía antes del aviso",
+          "info": "Segunda fuente del Dr. Mau para el mismo especial. Explica por qué los estudios observacionales son difíciles de interpretar. Si se recupera su explicación, incorporar el aviso de la FDA del 9 de noviembre de 2026.",
+          "tipo": "ref",
+          "categoria": "idea",
+          "link": "https://www.tiktok.com/@drmauriciogonzalez/video/7689842387346001166",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-10.jpg",
+          "thumb_alt": "Portada de la referencia · GLP-1 y la vista · qué se sabía antes del aviso"
+        },
+        {
+          "slug": "r16-ref-11",
+          "titulo": "Cardio y pesas · cómo caben los dos en la semana",
+          "info": "El Dr. Mau parte de una disyuntiva frecuente y comenta una cohorte sobre ejercicio y mortalidad. Para Fedra: usar un calendario para mostrar cómo se complementan caminar y trabajar la fuerza. Las cifras del estudio describen asociaciones poblacionales.",
+          "tipo": "ref",
+          "categoria": "idea",
+          "link": "https://www.tiktok.com/@drmauriciogonzalez/video/7687619492599303438",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-11.jpg",
+          "thumb_alt": "Portada de la referencia · Cardio y pesas · cómo caben los dos en la semana"
+        },
+        {
+          "slug": "r16-ref-12",
+          "titulo": "Qué comer cuando baja el apetito con el tratamiento",
+          "info": "El Dr. Mau habla del ritmo al comer, hidratación, fibra, proteína y apoyo nutricional. Para Fedra: mostrar con un plato qué revisa si una persona se llena en los primeros bocados. Individualizar las cantidades y cualquier suplemento.",
+          "tipo": "ref",
+          "categoria": "idea",
+          "link": "https://www.tiktok.com/@drmauriciogonzalez/video/7674293088545705230",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-12.jpg",
+          "thumb_alt": "Portada de la referencia · Qué comer cuando baja el apetito con el tratamiento"
+        },
+        {
+          "slug": "r16-ref-13",
+          "titulo": "Retatrutida · qué sabemos de los viales que se ofrecen en redes",
+          "info": "Revisión del 25 de noviembre de 2026. La FDA sigue describiendo la retatrutida como no aprobada. Ya hay resultados de fase 3 y el desarrollo clínico continúa. Para México, actualizar el registro de Cofepris antes de grabar. Antecedente en R15: El medicamento pirata que venden en internet.",
+          "tipo": "ref",
+          "categoria": "idea",
+          "link": "https://www.tiktok.com/@drmauriciogonzalez/video/7663627962654231822",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-13.jpg",
+          "thumb_alt": "Portada de la referencia · Retatrutida · qué sabemos de los viales que se ofrecen en redes"
         }
       ],
       "referenciasVisibles": true
