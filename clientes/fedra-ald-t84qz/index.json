@@ -7,59 +7,70 @@
       "fecha": "Por definir",
       "locacion": "Por definir",
       "abierta": true,
-      "ventana": "14 guiones educativos · 4 chuscos · fecha por definir",
+      "ventana": "29 guiones · 4 chuscos · hooks nuevos pendientes de elección · fecha por definir",
       "timeline": [
         {
-          "titulo": "Idea de Fedra · así es atenderse conmigo",
+          "titulo": "Bloque 1 · A cámara · temas alternados",
           "slugs": [
-            "r16-idea-fedra-01",
-            "r16-idea-fedra-02",
-            "r16-idea-fedra-03"
-          ],
-          "nota": "Propuestas del audio de Fedra. Objetivo: enseñar la experiencia de cada servicio para ayudar a decidir una cita. Mostrar llegada, valoración, procedimiento y salida. Fer confirma el paso a paso y quién participa antes de grabar."
-        },
-        {
-          "titulo": "Educativos · guiones para grabar",
-          "slugs": [
-            "r16-ref-09",
+            "r16-ref-05",
+            "r16-ref-26",
+            "r16-ref-13",
             "r16-ref-03",
-            "r16-ref-14",
-            "r16-ref-02",
-            "r16-ref-11",
-            "r16-ref-12",
-            "r16-ref-15",
-            "r16-ref-13"
+            "r16-ref-16",
+            "r16-ref-04"
           ],
-          "nota": "Ocho guiones. Abrir cada pieza para leer el texto de Fedra, consultar las fuentes y ver la referencia original."
+          "nota": "Inicios nuevos pendientes de elección de Dante. Orden variado dentro del mismo montaje."
         },
         {
-          "titulo": "Chuscos de consultorio",
+          "titulo": "Bloque 2 · Mesa con alimentos y cantidades",
+          "slugs": [
+            "r16-ref-24",
+            "r16-ref-19",
+            "r16-ref-02",
+            "r16-ref-29",
+            "r16-ref-27",
+            "r16-ref-30"
+          ],
+          "nota": "Preparar los alimentos elegidos y sus etiquetas, báscula de cocina y mancuerna. Dos posiciones fijas para grabar los clones por turnos. No usar equivalencias sin cotejar cantidades."
+        },
+        {
+          "titulo": "Bloque 3 · Conversación tipo podcast",
+          "slugs": [
+            "r16-ref-18",
+            "r16-ref-25",
+            "r16-ref-21",
+            "r16-ref-08",
+            "r16-ref-06",
+            "r16-ref-14"
+          ],
+          "nota": "Alternar conversación, explicación y chusco. Confirmar los hooks seleccionados antes de grabar. Los frascos o pantallas mostrados serán utilería sin datos de pacientes."
+        },
+        {
+          "titulo": "Bloque 4 · Recorrido y procedimientos",
+          "slugs": [
+            "r16-ref-15",
+            "r16-idea-fedra-03",
+            "r16-idea-fedra-02",
+            "r16-ref-07",
+            "r16-idea-fedra-01"
+          ],
+          "nota": "Fer confirma el recorrido y los pasos actuales. Mantener juntos los montajes que requieren camilla, recepción y materiales. Las tres ideas de Fedra conservan sus opciones de inicio ya aprobadas."
+        },
+        {
+          "titulo": "Bloque 5 · Explicaciones y apoyos visuales",
           "slugs": [
             "r16-ref-01",
-            "r16-ref-05",
-            "r16-ref-06",
-            "r16-ref-07"
+            "r16-ref-22",
+            "r16-ref-09",
+            "r16-ref-23",
+            "r16-ref-11",
+            "r16-ref-10",
+            "r16-ref-28",
+            "r16-ref-20",
+            "r16-ref-17",
+            "r16-ref-12"
           ],
-          "nota": "Vestuario y lentes. El segundo se puede resolver con una toma fija en el escritorio."
-        },
-        {
-          "titulo": "GLP-1 y la vista · tres guiones",
-          "slugs": [
-            "r16-ref-04",
-            "r16-ref-08",
-            "r16-ref-10"
-          ],
-          "nota": "Tres preguntas distintas: cuándo ir a urgencias, cuánto riesgo observó la FDA y cómo se investiga la causa."
-        },
-        {
-          "titulo": "Sostener los cambios después de bajar de peso",
-          "slugs": [],
-          "nota": "Antecedente de Fedra: ya contó qué le costó mantener después de bajar 40 kilos. Para una segunda parte, buscar una referencia que aporte una situación concreta de su vida diaria que ella quiera contar."
-        },
-        {
-          "titulo": "Alimentación que se pueda mostrar en cámara",
-          "slugs": [],
-          "nota": "Antecedente de Fedra: ya mostró cuánta proteína aporta un plato y habló de porciones. Buscar otra decisión cotidiana que pueda demostrarse con comida a cuadro."
+          "nota": "Variar temas dentro del montaje. La referencia del alcohol se adapta en azúcar, grasa abdominal y lectura de proteína. Apoyos previstos: recorrido de la grasa, señales del intestino, dos compartimentos de grasa y contador de cantidades. Indicaciones de edición fuera del texto de la doctora."
         }
       ],
       "guiones": [
@@ -160,7 +171,11 @@
           "link": "https://www.tiktok.com/@drmauriciogonzalez/video/7699138583998909710",
           "grabado": false,
           "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-09.jpg",
-          "thumb_alt": "Portada de la referencia · Cómo cuidar el músculo mientras bajas de peso"
+          "thumb_alt": "Portada de la referencia · Cómo cuidar el músculo mientras bajas de peso",
+          "hooks": [
+            "Aquí te van cinco reglas médicas para lograrlo.",
+            "Si estás bajando de peso y cada día puedes hacer menos cosas, no te voy a felicitar, ocupamos revisar! mira"
+          ]
         },
         {
           "slug": "r16-ref-10",
@@ -262,6 +277,171 @@
             "Voy a lastimarte la piel a propósito. La parte interesante es lo que tu cuerpo hace después.",
             "Acércate. Más. ¿Ya viste todo lo que hay en esta puntita? Ahora imagínate estas agujitas trabajando sobre esas marquitas que te molestan."
           ]
+        },
+        {
+          "slug": "r16-ref-16",
+          "titulo": "Gracias por confiarme esta parte de tu vida",
+          "info": "Propuesta para revisión de Fedra · Reflexión breve · inicio pendiente de elección",
+          "tipo": "md",
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/Df-105ENeV-/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-16.jpg",
+          "thumb_alt": "Referencia original · Gracias por confiarme esta parte de tu vida"
+        },
+        {
+          "slug": "r16-ref-17",
+          "titulo": "¿Caminar en subida o correr?",
+          "info": "Propuesta para revisión de Fedra · Comparación de dos pruebas · inicio pendiente de elección",
+          "tipo": "md",
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/DfxbHuIsm7A/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-17.jpg",
+          "thumb_alt": "Referencia original · ¿Caminar en subida o correr?"
+        },
+        {
+          "slug": "r16-ref-18",
+          "titulo": "Antes de comprar otro suplemento",
+          "info": "Propuesta para revisión de Fedra · Suplementos con criterio · inicio pendiente de elección",
+          "tipo": "md",
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/DgNY-RNBy5q/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-18.jpg",
+          "thumb_alt": "Referencia original · Antes de comprar otro suplemento"
+        },
+        {
+          "slug": "r16-ref-19",
+          "titulo": "Qué comer cuando al rato ya tienes hambre",
+          "info": "Propuesta para revisión de Fedra · Formato ágil con alimentos · inicio pendiente de elección",
+          "tipo": "md",
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/Dfz_YUTRhHe/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-19.jpg",
+          "thumb_alt": "Referencia original · Qué comer cuando al rato ya tienes hambre"
+        },
+        {
+          "slug": "r16-ref-20",
+          "titulo": "¿Por dónde sale la grasa que pierdes?",
+          "info": "Propuesta para revisión de Fedra · Explicación con motion · inicio pendiente de elección",
+          "tipo": "md",
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/DgA4kOrityD/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-20.jpg",
+          "thumb_alt": "Referencia original · ¿Por dónde sale la grasa que pierdes?"
+        },
+        {
+          "slug": "r16-ref-21",
+          "titulo": "¿Por qué todavía hay trabajo aunque uses GLP-1?",
+          "info": "Propuesta para revisión de Fedra · Conversación tipo podcast · inicio pendiente de elección",
+          "tipo": "md",
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/DfsK_wcBZp0/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-21.jpg",
+          "thumb_alt": "Referencia original · ¿Por qué todavía hay trabajo aunque uses GLP-1?"
+        },
+        {
+          "slug": "r16-ref-22",
+          "titulo": "El lagarto que ayudó a abrir el camino de los GLP-1",
+          "info": "Propuesta para revisión de Fedra · Historia y mecanismo · inicio pendiente de elección",
+          "tipo": "md",
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/DgBwfwZoWya/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-22.jpg",
+          "thumb_alt": "Referencia original · El lagarto que ayudó a abrir el camino de los GLP-1"
+        },
+        {
+          "slug": "r16-ref-23",
+          "titulo": "Dos señales del intestino y una pregunta sobre la vista",
+          "info": "Propuesta para revisión de Fedra · Mecanismo y riesgo ocular · inicio pendiente de elección",
+          "tipo": "md",
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/DfTZ5PqO2Fd/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-23.jpg",
+          "thumb_alt": "Referencia original · Dos señales del intestino y una pregunta sobre la vista"
+        },
+        {
+          "slug": "r16-ref-24",
+          "titulo": "Colaciones cuando usas GLP-1 y comes poquito",
+          "info": "Propuesta para revisión de Fedra · Snacks según tolerancia · inicio pendiente de elección",
+          "tipo": "md",
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/DeZ7uz7pds_/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-24.jpg",
+          "thumb_alt": "Referencia original · Colaciones cuando usas GLP-1 y comes poquito"
+        },
+        {
+          "slug": "r16-ref-25",
+          "titulo": "¿Qué significa que algo sea un péptido?",
+          "info": "Propuesta para revisión de Fedra · Conversación tipo podcast · inicio pendiente de elección",
+          "tipo": "md",
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/Dclvm-tAbvP/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-25.jpg",
+          "thumb_alt": "Referencia original · ¿Qué significa que algo sea un péptido?"
+        },
+        {
+          "slug": "r16-ref-26",
+          "titulo": "La cintura cambió en la menopausia. ¿GLP-1?",
+          "info": "Propuesta para revisión de Fedra · Conversación y límites de la evidencia · inicio pendiente de elección",
+          "tipo": "md",
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/De8LXOkhS60/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-26.jpg",
+          "thumb_alt": "Referencia original · La cintura cambió en la menopausia. ¿GLP-1?"
+        },
+        {
+          "slug": "r16-ref-27",
+          "titulo": "El azúcar que no cuentas porque te la tomas",
+          "info": "Propuesta para revisión de Fedra · Comparación visual inspirada en la referencia del alcohol · inicio pendiente de elección",
+          "tipo": "md",
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/De-JgY7tqYk/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-27.jpg",
+          "thumb_alt": "Referencia original · El azúcar que no cuentas porque te la tomas"
+        },
+        {
+          "slug": "r16-ref-28",
+          "titulo": "La grasa que pellizcas y la que está más adentro",
+          "info": "Propuesta para revisión de Fedra · Contraste visual inspirado en la referencia del alcohol · inicio pendiente de elección",
+          "tipo": "md",
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/De-JgY7tqYk/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-28.jpg",
+          "thumb_alt": "Referencia original · La grasa que pellizcas y la que está más adentro"
+        },
+        {
+          "slug": "r16-ref-29",
+          "titulo": "Lo que pesa tu comida y cuánta proteína tiene",
+          "info": "Propuesta para revisión de Fedra · Demostración de cantidades inspirada en la referencia del alcohol · inicio pendiente de elección",
+          "tipo": "md",
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/De-JgY7tqYk/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-29.jpg",
+          "thumb_alt": "Referencia original · Lo que pesa tu comida y cuánta proteína tiene"
+        },
+        {
+          "slug": "r16-ref-30",
+          "titulo": "Las dos Fedras que dicen «estoy a dieta»",
+          "info": "Propuesta para revisión de Fedra · Diálogo de clones · inicio pendiente de elección",
+          "tipo": "md",
+          "categoria": "guion",
+          "link": "https://www.instagram.com/reel/DfIC-w-g_dn/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-30.jpg",
+          "thumb_alt": "Referencia original · Las dos Fedras que dicen «estoy a dieta»"
         }
       ],
       "referenciasVisibles": true
