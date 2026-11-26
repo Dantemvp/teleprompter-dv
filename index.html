@@ -508,8 +508,10 @@ function isAdmin(){ return localStorage.getItem('dvadmin') === ADMIN_PIN; }
 if (localStorage.getItem('dvpw') && localStorage.getItem('dvadmin') !== ADMIN_PIN) localStorage.setItem('dvadmin', ADMIN_PIN);
 
 function visibleReferencePreview(thumb, link, alt){
-  if (!thumb || !/^https?:\/\//i.test(link || '')) return '';
-  return `<a class="refpreview-visible" href="${attr(link)}" target="_blank" rel="noopener"><img src="${attr(thumb)}" alt="${attr(alt || 'Abrir referencia original')}"></a>`;
+  if (!thumb) return '';
+  const img = `<img src="${attr(thumb)}" alt="${attr(alt || 'Vista previa')}">`;
+  if (!/^https?:\/\//i.test(link || '')) return `<span class="refpreview-visible">${img}</span>`;
+  return `<a class="refpreview-visible" href="${attr(link)}" target="_blank" rel="noopener">${img}</a>`;
 }
 
 function renderGuion(g, canonical, backHref, opts){

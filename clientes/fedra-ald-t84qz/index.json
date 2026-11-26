@@ -234,7 +234,9 @@
           "tipo": "md",
           "categoria": "guion",
           "grabado": false,
-          "info": "Idea de Fedra · audio de la doctora · Propuesta para revisión. Recorrido de primera consulta. Recepción, valoración y conversación con Fedra."
+          "info": "Idea de Fedra · audio de la doctora · Propuesta para revisión. Recorrido de primera consulta. Recepción, valoración y conversación con Fedra.",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-idea-fedra-01.jpg",
+          "thumb_alt": "Fedra presenta su consulta presencial de control de peso"
         },
         {
           "slug": "r16-idea-fedra-02",
@@ -242,7 +244,9 @@
           "tipo": "md",
           "categoria": "guion",
           "grabado": false,
-          "info": "Idea de Fedra · audio de la doctora · Propuesta para revisión. La doctora explica el marcado antes de aplicar toxina. Modelo y marcador."
+          "info": "Idea de Fedra · audio de la doctora · Propuesta para revisión. La doctora explica el marcado antes de aplicar toxina. Modelo y marcador.",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-idea-fedra-02.jpg",
+          "thumb_alt": "Fedra en el área de aplicación de toxina"
         },
         {
           "slug": "r16-idea-fedra-03",
@@ -250,7 +254,9 @@
           "tipo": "md",
           "categoria": "guion",
           "grabado": false,
-          "info": "Idea de Fedra · audio de la doctora · Propuesta para revisión. Qué ocurre antes, durante y después del Dermapen. Confirmar la secuencia con Fer."
+          "info": "Idea de Fedra · audio de la doctora · Propuesta para revisión. Qué ocurre antes, durante y después del Dermapen. Confirmar la secuencia con Fer.",
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-idea-fedra-03.jpg",
+          "thumb_alt": "Portada de Dermapen publicada por la Dra. Fedra"
         }
       ],
       "referenciasVisibles": true
