@@ -7,8 +7,17 @@
       "fecha": "Por definir",
       "locacion": "Por definir",
       "abierta": true,
-      "ventana": "11 guiones educativos · 4 chuscos · fecha por definir",
+      "ventana": "14 guiones educativos · 4 chuscos · fecha por definir",
       "timeline": [
+        {
+          "titulo": "Idea de Fedra · así es atenderse conmigo",
+          "slugs": [
+            "r16-idea-fedra-01",
+            "r16-idea-fedra-02",
+            "r16-idea-fedra-03"
+          ],
+          "nota": "Tres propuestas basadas en el audio de la doctora. Fer confirma el orden actual de cada servicio y el personal que participa antes de grabar. Preparar recepción, consultorio, área de procedimientos y modelo."
+        },
         {
           "titulo": "Educativos · guiones para grabar",
           "slugs": [
@@ -218,6 +227,30 @@
           "grabado": false,
           "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-15.jpg",
           "thumb_alt": "La Dra. Vega presenta las molestias con GLP-1 mediante rótulos en pantalla"
+        },
+        {
+          "slug": "r16-idea-fedra-01",
+          "titulo": "¿Qué pasa cuando vienes a consulta conmigo?",
+          "tipo": "md",
+          "categoria": "guion",
+          "grabado": false,
+          "info": "Idea de Fedra · audio de la doctora · Propuesta para revisión. Recorrido de primera consulta. Recepción, valoración y conversación con Fedra."
+        },
+        {
+          "slug": "r16-idea-fedra-02",
+          "titulo": "¿Y todos esos puntitos para qué?",
+          "tipo": "md",
+          "categoria": "guion",
+          "grabado": false,
+          "info": "Idea de Fedra · audio de la doctora · Propuesta para revisión. La doctora explica el marcado antes de aplicar toxina. Modelo y marcador."
+        },
+        {
+          "slug": "r16-idea-fedra-03",
+          "titulo": "¿Cómo te queda la cara después del Dermapen?",
+          "tipo": "md",
+          "categoria": "guion",
+          "grabado": false,
+          "info": "Idea de Fedra · audio de la doctora · Propuesta para revisión. Qué ocurre antes, durante y después del Dermapen. Confirmar la secuencia con Fer."
         }
       ],
       "referenciasVisibles": true
