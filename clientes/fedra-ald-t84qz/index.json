@@ -192,18 +192,22 @@
         {
           "slug": "r16-ref-11",
           "titulo": "Ya camino todos los días. ¿Dónde meto las pesas?",
-          "info": "Guion para revisión de Fedra · Un calendario y dos colores para acomodar caminatas y fuerza.",
+          "info": "Propuesta para revisión de Fedra · Inicio original y opción A elegidos por Dante. Calendario para acomodar caminatas y fuerza.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.tiktok.com/@drmauriciogonzalez/video/7687619492599303438",
           "grabado": false,
           "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-11.jpg",
-          "thumb_alt": "Portada de la referencia · Cardio y pesas · cómo caben los dos en la semana"
+          "thumb_alt": "Portada de la referencia · Cardio y pesas · cómo caben los dos en la semana",
+          "hooks": [
+            "Elegir entre pesas o cardio es uno de los errores más comunes que vemos en la consulta.",
+            "Te echa a correr el perro, te gana el garrafón y tú quieres escoger entre cardio o pesas. A ver, ocupamos los dos."
+          ]
         },
         {
           "slug": "r16-ref-12",
-          "titulo": "Me lleno a los tres bocados. ¿Y ahora qué como?",
-          "info": "Guion para revisión de Fedra · Un plato pequeño de pollo, arroz y verduras. Foto antes y después.",
+          "titulo": "Cinco ajustes al empezar tu tratamiento con GLP-1",
+          "info": "Propuesta para revisión de Fedra · Inicio original elegido por Dante. Cinco recomendaciones en el orden de la referencia, adaptadas a la voz de Fedra.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.tiktok.com/@drmauriciogonzalez/video/7674293088545705230",
