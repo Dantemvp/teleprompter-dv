@@ -7,7 +7,7 @@
       "fecha": "Por definir",
       "locacion": "Por definir",
       "abierta": true,
-      "ventana": "29 guiones · 4 chuscos · hooks nuevos pendientes de elección · fecha por definir",
+      "ventana": "29 guiones · 5 chuscos · hooks nuevos pendientes de elección · fecha por definir",
       "timeline": [
         {
           "titulo": "Bloque 1 · A cámara · temas alternados",
@@ -50,6 +50,7 @@
           "slugs": [
             "r16-ref-15",
             "r16-idea-fedra-03",
+            "r16-ref-31",
             "r16-idea-fedra-02",
             "r16-ref-07",
             "r16-idea-fedra-01"
@@ -442,6 +443,17 @@
           "grabado": false,
           "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-30.jpg",
           "thumb_alt": "Referencia original · Las dos Fedras que dicen «estoy a dieta»"
+        },
+        {
+          "slug": "r16-ref-31",
+          "titulo": "Chusco · Reaccionando a la edad a la que te pones toxina",
+          "info": "Sugerencia de la Dra. Fedra · @dra.liahsophia · Referencia de reacción, sin guion.",
+          "tipo": "ref",
+          "categoria": "chusco",
+          "link": "https://www.instagram.com/reel/DgL7tr_yBwT/",
+          "grabado": false,
+          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-31.jpg",
+          "thumb_alt": "Dra. Liah Sophia reacciona a la edad a la que te pones toxina"
         }
       ],
       "referenciasVisibles": true
