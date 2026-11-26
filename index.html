@@ -253,6 +253,7 @@
   .pwactions{display:flex; gap:8px; justify-content:flex-end;}
   @media(max-width:520px){ .bubblewrap{max-width:88%;} .wrap{padding-top:18px;} }
 </style>
+<link rel="stylesheet" href="fedra-notes.css">
 </head>
 <body>
 <div class="wrap" id="app"></div>
@@ -526,17 +527,16 @@ function renderGuion(g, canonical, backHref, opts){
       const bt = adm ? l.beat : l.beat.replace(/\s*✱\s*$/,'');
       // Un guion mudo (b-roll + texto) no tiene línea hablada: sus tarjetas y
       // direcciones cuelgan de la escena. Sin esto el guion se ve en blanco.
-      const bn = l.nota && (adm || !l.nota.trim().startsWith('✱'));
+      const bn = opts.client !== 'fedra-ald-t84qz' && l.nota && (adm || !l.nota.trim().startsWith('✱'));
       conv += `<p class="beat" data-li="${i}">${esc(bt)}</p>`
            + (bn ? `<p class="nota beatnota">${esc(l.nota)}</p>` : '')
-           + (l.datos||[]).map(datoHtml).join('')
-           + imgsHtml(l);
+           + (opts.client === 'fedra-ald-t84qz' ? '' : (l.datos||[]).map(datoHtml).join('') + imgsHtml(l));
       return;
     }
     const idx = spk.indexOf(l.speaker);
     const cls = solo ? 'solo' : (idx===1 ? 'right' : '');
-    const showNota = l.nota && (adm || !l.nota.trim().startsWith('✱'));   // notas que empiezan con ✱ son solo para el admin
-    const datos = (l.datos || []).map(datoHtml).join('') + imgsHtml(l);
+    const showNota = opts.client !== 'fedra-ald-t84qz' && l.nota && (adm || !l.nota.trim().startsWith('✱'));   // notas que empiezan con ✱ son solo para el admin
+    const datos = opts.client === 'fedra-ald-t84qz' ? '' : (l.datos || []).map(datoHtml).join('') + imgsHtml(l);
     conv += `<div class="row ${cls}"><div class="avatar">${esc(l.speaker.slice(0,3))}</div><div class="bubblewrap"><div class="bubble" data-li="${i}">${esc(l.text)}</div>${showNota?`<p class="nota" data-li="${i}">${esc(l.nota)}</p>`:''}${datos}</div></div>`;
   });
   const chips = g.meta.filter(m => adm || !m.trim().startsWith('✱')).map(m=>`<span class="chip g">${esc(m)}</span>`).join('');
@@ -574,7 +574,7 @@ function renderGuion(g, canonical, backHref, opts){
       <button data-v="tp">Teleprompter</button>
     </div>
     <div id="v-conv">
-      <div class="toolrow"><button class="mini" id="toggleNotas">Ocultar indicaciones</button><button class="mini" id="editBtn">✎ Editar</button></div>
+      <div class="toolrow"><button class="mini" id="toggleNotas"${opts.client==='fedra-ald-t84qz'?' hidden':''}>Ocultar indicaciones</button><button class="mini" id="editBtn">✎ Editar</button></div>
       <div id="prendas-root"></div>
       ${conv}
     </div>
@@ -604,6 +604,17 @@ function renderGuion(g, canonical, backHref, opts){
 
 
   window.Prendas?.mount({ client: opts.client, slug: opts.slug, admin: adm, inlineOnly: opts.prendasEnTexto, askPassword: () => askPassword('Abrir referencias de prendas') });
+  if (opts.client === 'fedra-ald-t84qz') {
+    import('./fedra-notes.js').then(({mount}) => mount({g,opts,onHook(text){
+      const line=g.lines.find(l=>l.text);
+      if(line)line.text=text;
+      const first=document.querySelector('#v-conv .bubble');
+      if(first)first.textContent=text;
+      const plain=document.querySelector('#v-plain pre');
+      if(plain)plain.textContent=plainText(g);
+    }}));
+  }
+
 
   const editLineHtml = l => {
     const sp = l ? l.speaker : '';
@@ -1459,7 +1470,7 @@ async function boot(){
             if (it.thumb) { thumb = it.thumb; thumbAlt = it.thumb_alt; }
             if (it.link || it.ref) ref = it.link || it.ref;
             if (vs.length) versiones = vs;
-            recOptions = { prendasEnTexto:rec.prendasEnTexto, referenciasVisibles:rec.referenciasVisibles };
+            recOptions = { prendasEnTexto:rec.prendasEnTexto, referenciasVisibles:rec.referenciasVisibles, hooks:it.hooks };
           }
         }));
       }catch(e){}

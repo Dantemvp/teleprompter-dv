@@ -1,0 +1,23 @@
+.fedra-note-row .bubblewrap{flex:1;min-width:0;max-width:none!important}
+.fedra-note-row>.avatar{display:none}
+.dra-note-button{flex:0 0 42px;align-self:flex-start;min-height:44px;padding:8px 3px;background:#fff;border:1px solid #d9ddd4;border-radius:12px;color:#354b40;font-size:11px;line-height:1.25;cursor:pointer}
+.dra-note-button.has-notes{background:#e6eddc;border-color:#647947;font-weight:700}
+.dra-hook-options{margin:16px 0;border:1px solid #d9ddd4;border-radius:12px;padding:12px}
+.dra-hook-options summary{cursor:pointer;font-weight:600}
+.dra-hook-options label{display:flex;align-items:flex-start;gap:10px;padding:12px 0;line-height:1.5;font-size:15px}
+.dra-hook-options input{margin-top:5px;flex:0 0 auto}
+.dra-notes-dialog{width:min(440px,calc(100% - 24px));max-height:88dvh;border:0;border-radius:18px;padding:0;box-shadow:0 10px 50px #0004;color:#26352d;background:#fcfcf9}
+.dra-notes-dialog::backdrop{background:#15241c66}
+.dra-notes-header{position:sticky;top:0;background:#fcfcf9;display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid #e1e4dc;z-index:1}
+.dra-notes-header h2{font-size:18px;margin:0}.dra-notes-header button{min-width:44px;min-height:44px;padding:4px;border:0;background:transparent;font-size:25px;cursor:pointer}
+.dra-notes-body{padding:16px 18px;overflow-wrap:anywhere}.dra-notes-quote{font-size:14px;line-height:1.5;margin:0 0 18px;padding:12px;border-left:3px solid #a1ad90;background:#f0f2eb}
+.dra-notes-dialog label{display:block;font-size:14px;margin-bottom:6px}
+.dra-notes-dialog textarea,.dra-notes-dialog input[type=password]{box-sizing:border-box;width:100%;font:inherit;font-size:16px;border:1px solid #bcc6b7;border-radius:10px;padding:12px;background:#fff;color:#26352d}
+.dra-notes-dialog textarea{min-height:115px;resize:vertical}.dra-notes-actions{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 18px}
+.dra-notes-dialog .dra-action{min-height:44px;border:1px solid #52674b;border-radius:10px;padding:10px 14px;background:#fff;color:#354b32;font-size:14px;cursor:pointer}
+.dra-notes-dialog .dra-action.primary{background:#425c3f;color:white}.dra-notes-dialog button:disabled{opacity:.5;cursor:wait}
+.dra-notes-status{font-size:13px;line-height:1.4;margin:10px 0;min-height:18px}.dra-notes-status.error{color:#9d3028}
+.dra-note-entry{padding:16px 0;border-top:1px solid #e1e4dc}.dra-note-entry p{white-space:pre-wrap;line-height:1.5;font-size:15px;margin:6px 0}.dra-note-entry small{color:#6c7368;font-size:12px}.dra-note-entry audio{width:100%;margin-top:8px}.dra-note-entry .dra-delete{font-size:12px;border:0;background:transparent;color:#6c7368;padding:10px 0;cursor:pointer}
+.dra-note-entry blockquote{margin:8px 0;font-size:13px;color:#687160;line-height:1.5}.dra-notes-dialog [hidden]{display:none!important}
+.dra-notes-dialog .dra-recording{background:#f9e4df;border-color:#c35b4d;color:#8a3027}.dra-notes-attachment audio{width:100%}
+@media(min-width:850px){.dra-notes-dialog{margin:20px 20px 20px auto;width:380px;height:calc(100dvh - 40px);max-height:none}.dra-note-button{flex-basis:58px}}

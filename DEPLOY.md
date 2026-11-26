@@ -104,3 +104,7 @@ El token de GitHub vive en Vercel (servidor), nunca en el navegador.
 - La lectura de referencias aparece al responder la API, sin esperar a IndexedDB. Las copias locales se conservan en segundo plano: ni su escritura ni su limpieza retrasan las subidas o la confirmación del servidor.
 - La preparación se muestra desde que se eligen las fotos. La apertura de una imagen tiene un límite de 15 segundos y utiliza los eventos nativos de carga del navegador.
 - Las operaciones de cada copia local se ordenan por ID para impedir que una escritura tardía vuelva a dejar una foto ya guardada entre los pendientes. Los permisos, límites y almacenamiento privado se conservan.
+
+## Notas de Fedra por párrafo
+
+`POST /api/fedra-notes` guarda texto y audios en el prefijo privado `fedra-notes/v1/` del Blob existente. Acepta las claves del equipo y la clave de Fedra para comentar sus guiones registrados. Esa autorización no modifica los permisos de edición de los textos. El audio se entrega por la API autenticada. Los identificadores de párrafo se calculan a partir del texto, y el botón general «Notas Dra» permite consultar también comentarios sobre versiones anteriores.

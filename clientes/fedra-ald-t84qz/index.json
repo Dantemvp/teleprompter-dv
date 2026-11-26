@@ -256,7 +256,12 @@
           "grabado": false,
           "info": "Idea de Fedra · audio de la doctora · Propuesta para revisión · 2:10–2:45 estimados. Valoración de la piel, preparación, cartucho, tratamiento por zonas, recuperación y cuidados.",
           "thumb": "clientes/fedra-ald-t84qz/refs/r16-idea-fedra-03.jpg",
-          "thumb_alt": "Portada de Dermapen publicada por la Dra. Fedra"
+          "thumb_alt": "Portada de Dermapen publicada por la Dra. Fedra",
+          "hooks": [
+            "Vas a pagar para que te haga agujeritos en la cara. Y ahorita vas a entender por qué.",
+            "Voy a lastimarte la piel a propósito. La parte interesante es lo que tu cuerpo hace después.",
+            "Acércate. Más. ¿Ya viste todo lo que hay en esta puntita? Ahora imagínate estas agujitas trabajando sobre esas marquitas que te molestan."
+          ]
         }
       ],
       "referenciasVisibles": true
