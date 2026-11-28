@@ -70,7 +70,7 @@
             "r16-ref-17",
             "r16-ref-12"
           ],
-          "nota": "Variar temas dentro del montaje. La referencia del alcohol se adapta en azúcar, grasa abdominal y lectura de proteína. Apoyos previstos: recorrido de la grasa, señales del intestino, dos compartimentos de grasa y contador de cantidades. Indicaciones de edición fuera del texto de la doctora."
+          "nota": "Variar temas dentro del montaje. La referencia del alcohol se adapta en azúcar y grasa abdominal. Apoyos previstos: recorrido de la grasa, señales del intestino, dos compartimentos de grasa y contador de cantidades. Indicaciones de edición fuera del texto de la doctora."
         }
       ],
       "guiones": [
@@ -153,8 +153,8 @@
         },
         {
           "slug": "r16-ref-08",
-          "titulo": "Leí la advertencia sobre la vista. ¿Qué tan frecuente es?",
-          "info": "Guion para revisión de Fedra · La advertencia de la FDA y el riesgo absoluto. Dos cifras en pantalla.",
+          "titulo": "La advertencia de la FDA sobre la vista, con cifras",
+          "info": "Guion para revisión de Fedra · Advertencia de la FDA, casos y frecuencia absoluta. Se conserva el inicio elegido por Dante.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.tiktok.com/@drmauriciogonzalez/video/7706646072621305101",
@@ -164,8 +164,8 @@
         },
         {
           "slug": "r16-ref-09",
-          "titulo": "Bajé de peso y ahora me cuesta cargar el mandado",
-          "info": "Guion para revisión de Fedra · Una bolsa de mandado para hablar de pérdida de fuerza.",
+          "titulo": "Cinco reglas para perder grasa conservando músculo",
+          "info": "Guion para revisión de Fedra · Las cinco reglas de la referencia en su orden. Se conservan el inicio original y la opción B elegidos.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.tiktok.com/@drmauriciogonzalez/video/7699138583998909710",
@@ -179,8 +179,8 @@
         },
         {
           "slug": "r16-ref-10",
-          "titulo": "¿Cómo saben si el medicamento tuvo que ver con la vista?",
-          "info": "Guion para revisión de Fedra · Dos tarjetas para explicar cómo se compara el riesgo ocular.",
+          "titulo": "Vista y GLP-1 · qué demuestra un estudio y qué demuestra una demanda",
+          "info": "Guion para revisión de Fedra · Lesión, factores de riesgo, estudios y diferencia entre acusación y evidencia clínica. Actualizado a noviembre de 2026.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.tiktok.com/@drmauriciogonzalez/video/7689842387346001166",
@@ -190,14 +190,14 @@
         },
         {
           "slug": "r16-ref-11",
-          "titulo": "Ya camino todos los días. ¿Dónde meto las pesas?",
-          "info": "Propuesta para revisión de Fedra · Inicio original y opción A elegidos por Dante. Calendario para acomodar caminatas y fuerza.",
+          "titulo": "Pesas y cardio · qué encontró el estudio de treinta años",
+          "info": "Guion para revisión de Fedra · Cohorte de casi 150 mil personas, cifras de mortalidad y combinación de fuerza con cardio. Original y opción A elegidos.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.tiktok.com/@drmauriciogonzalez/video/7687619492599303438",
           "grabado": false,
           "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-11.jpg",
-          "thumb_alt": "Portada de la referencia · Cardio y pesas · cómo caben los dos en la semana",
+          "thumb_alt": "Referencia original · Pesas y cardio · qué encontró el estudio de treinta años",
           "hooks": [
             "Elegir entre pesas o cardio es uno de los errores más comunes que vemos en la consulta.",
             "Te echa a correr el perro, te gana el garrafón y tú quieres escoger entre cardio o pesas. A ver, ocupamos los dos."
@@ -206,7 +206,7 @@
         {
           "slug": "r16-ref-12",
           "titulo": "Cinco ajustes al empezar tu tratamiento con GLP-1",
-          "info": "Propuesta para revisión de Fedra · Inicio original elegido por Dante. Cinco recomendaciones en el orden de la referencia, adaptadas a la voz de Fedra.",
+          "info": "Guion para revisión de Fedra · Cinco consejos en el orden de la referencia, una intervención por consejo.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.tiktok.com/@drmauriciogonzalez/video/7674293088545705230",
@@ -227,8 +227,8 @@
         },
         {
           "slug": "r16-ref-14",
-          "titulo": "Peso lo mismo y el pantalón ya me queda flojo",
-          "info": "Guion para revisión de Fedra · Un pantalón y una cinta métrica para hablar del cambio de talla.",
+          "titulo": "Cuatro cambios que la báscula puede pasar por alto",
+          "info": "Guion para revisión de Fedra · Cuatro señales en el orden de la referencia: ropa, medidas, firmeza y fotos.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.instagram.com/reel/DfW3snBuAv9/",
@@ -238,8 +238,8 @@
         },
         {
           "slug": "r16-ref-15",
-          "titulo": "Desde que subí la dosis me cuesta ir al baño",
-          "info": "Guion para revisión de Fedra · Plano fijo con espacio para tres rótulos sobre estreñimiento.",
+          "titulo": "Tips rápidos para las molestias con GLP-1",
+          "info": "Guion para revisión de Fedra · Mismo formato breve por molestia: náusea, estreñimiento, reflujo, gases y cansancio.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.instagram.com/reel/DdXDZI7R2Ha/",
@@ -296,7 +296,7 @@
         {
           "slug": "r16-ref-17",
           "titulo": "¿Caminar en subida o correr?",
-          "info": "Propuesta para revisión de Fedra · Comparación de dos pruebas · inicio pendiente de elección",
+          "info": "Guion para revisión de Fedra · Se conserva la comparación del estudio, el giro de correr frente a caminar y la explicación del combustible.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.instagram.com/reel/DfxbHuIsm7A/",
@@ -306,14 +306,14 @@
         },
         {
           "slug": "r16-ref-18",
-          "titulo": "Antes de comprar otro suplemento",
-          "info": "Propuesta para revisión de Fedra · Suplementos con criterio · inicio pendiente de elección",
+          "titulo": "Los suplementos que uso y cómo los tomo",
+          "info": "Propuesta para revisión de Fedra · Lista personal, hidratación y remate. Fedra completa los espacios antes de grabar.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.instagram.com/reel/DgNY-RNBy5q/",
           "grabado": false,
           "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-18.jpg",
-          "thumb_alt": "Referencia original · Antes de comprar otro suplemento"
+          "thumb_alt": "Referencia original · Lista de suplementos, hidratación y remate personal"
         },
         {
           "slug": "r16-ref-19",
@@ -329,7 +329,7 @@
         {
           "slug": "r16-ref-20",
           "titulo": "¿Por dónde sale la grasa que pierdes?",
-          "info": "Propuesta para revisión de Fedra · Explicación con motion · inicio pendiente de elección",
+          "info": "Guion para revisión de Fedra · Recorrido completo: triglicéridos, lipólisis, sangre, mitocondrias, pulmones y célula que se encoge.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.instagram.com/reel/DgA4kOrityD/",
@@ -339,8 +339,8 @@
         },
         {
           "slug": "r16-ref-21",
-          "titulo": "¿Por qué todavía hay trabajo aunque uses GLP-1?",
-          "info": "Propuesta para revisión de Fedra · Conversación tipo podcast · inicio pendiente de elección",
+          "titulo": "GLP-1 y GIP · qué hacen y para quiénes son",
+          "info": "Propuesta para revisión de Fedra · Podcast: mecanismo, indicaciones y hábitos, en el orden de la referencia.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.instagram.com/reel/DfsK_wcBZp0/",
@@ -350,25 +350,25 @@
         },
         {
           "slug": "r16-ref-22",
-          "titulo": "El lagarto que ayudó a abrir el camino de los GLP-1",
-          "info": "Propuesta para revisión de Fedra · Historia y mecanismo · inicio pendiente de elección",
+          "titulo": "Cómo actúan las inyecciones y qué tiene que ver un lagarto",
+          "info": "Propuesta para revisión de Fedra · Historia del Gila, duración de la señal, estómago, cerebro y resultado. Inicio de la referencia.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.instagram.com/reel/DgBwfwZoWya/",
           "grabado": false,
           "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-22.jpg",
-          "thumb_alt": "Referencia original · El lagarto que ayudó a abrir el camino de los GLP-1"
+          "thumb_alt": "Referencia original · Cómo actúan las inyecciones y qué tiene que ver un lagarto"
         },
         {
           "slug": "r16-ref-23",
-          "titulo": "Dos señales del intestino y una pregunta sobre la vista",
-          "info": "Propuesta para revisión de Fedra · Mecanismo y riesgo ocular · inicio pendiente de elección",
+          "titulo": "Tirzepatida · dos señales, duración y resultados",
+          "info": "Propuesta para revisión de Fedra · Dos señales, duración, estudio y equivalencia visual. Incluye la actualización ocular solicitada. Inicio pendiente de elección.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.instagram.com/reel/DfTZ5PqO2Fd/",
           "grabado": false,
           "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-23.jpg",
-          "thumb_alt": "Referencia original · Dos señales del intestino y una pregunta sobre la vista"
+          "thumb_alt": "Referencia original · Tirzepatida · dos señales, duración y resultados"
         },
         {
           "slug": "r16-ref-24",
@@ -383,8 +383,8 @@
         },
         {
           "slug": "r16-ref-25",
-          "titulo": "¿Qué significa que algo sea un péptido?",
-          "info": "Propuesta para revisión de Fedra · Conversación tipo podcast · inicio pendiente de elección",
+          "titulo": "¿Qué son los péptidos y cómo funcionan?",
+          "info": "Propuesta para revisión de Fedra · Explicación tipo podcast: aminoácidos, señales, llave y receptor.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.instagram.com/reel/Dclvm-tAbvP/",
@@ -417,7 +417,7 @@
         {
           "slug": "r16-ref-28",
           "titulo": "La grasa que pellizcas y la que está más adentro",
-          "info": "Propuesta para revisión de Fedra · Contraste visual inspirado en la referencia del alcohol · inicio pendiente de elección",
+          "info": "Propuesta para revisión de Fedra · Adaptación a grasa abdominal: contraste visual, consecuencias breves y regreso a los dos depósitos. Inicio pendiente de elección.",
           "tipo": "md",
           "categoria": "guion",
           "link": "https://www.instagram.com/reel/De-JgY7tqYk/",
