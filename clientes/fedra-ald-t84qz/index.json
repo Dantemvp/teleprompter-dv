@@ -27,7 +27,6 @@
             "r16-ref-24",
             "r16-ref-19",
             "r16-ref-02",
-            "r16-ref-29",
             "r16-ref-27",
             "r16-ref-30"
           ],
@@ -425,17 +424,6 @@
           "grabado": false,
           "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-28.jpg",
           "thumb_alt": "Referencia original · La grasa que pellizcas y la que está más adentro"
-        },
-        {
-          "slug": "r16-ref-29",
-          "titulo": "Lo que pesa tu comida y cuánta proteína tiene",
-          "info": "Propuesta para revisión de Fedra · Demostración de cantidades inspirada en la referencia del alcohol · inicio pendiente de elección",
-          "tipo": "md",
-          "categoria": "guion",
-          "link": "https://www.instagram.com/reel/De-JgY7tqYk/",
-          "grabado": false,
-          "thumb": "clientes/fedra-ald-t84qz/refs/r16-ref-29.jpg",
-          "thumb_alt": "Referencia original · Lo que pesa tu comida y cuánta proteína tiene"
         },
         {
           "slug": "r16-ref-30",
